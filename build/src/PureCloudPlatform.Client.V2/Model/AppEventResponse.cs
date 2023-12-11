@@ -28,7 +28,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScreenName">The name of the screen in the app that the event took place..</param>
         /// <param name="App">Application that the customer is interacting with..</param>
         /// <param name="Device">Customer's device..</param>
-        /// <param name="IpAddress">Customer's IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
         /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
         /// <param name="Geolocation">Customer's geolocation..</param>
         /// <param name="SdkLibrary">SDK library used to generate the event..</param>
@@ -39,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Attributes">User-defined attributes associated with a particular event..</param>
         /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone)..</param>
         /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public AppEventResponse(string Id = null, string CustomerId = null, string CustomerIdType = null, string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpAddress = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, AppEventResponseSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, DateTime? CreatedDate = null)
+        public AppEventResponse(string Id = null, string CustomerId = null, string CustomerIdType = null, string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, AppEventResponseSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, DateTime? CreatedDate = null)
         {
             this.Id = Id;
             this.CustomerId = CustomerId;
@@ -48,7 +47,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ScreenName = ScreenName;
             this.App = App;
             this.Device = Device;
-            this.IpAddress = IpAddress;
             this.IpOrganization = IpOrganization;
             this.Geolocation = Geolocation;
             this.SdkLibrary = SdkLibrary;
@@ -124,15 +122,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Customer's device.</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public Device Device { get; set; }
-
-
-
-        /// <summary>
-        /// Customer's IP address. May be null if the business configures the tracker to not collect IP addresses.
-        /// </summary>
-        /// <value>Customer's IP address. May be null if the business configures the tracker to not collect IP addresses.</value>
-        [DataMember(Name="ipAddress", EmitDefaultValue=false)]
-        public string IpAddress { get; set; }
 
 
 
@@ -225,15 +214,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? CreatedDate { get; set; }
 
 
-
-        /// <summary>
-        /// The external contact associated with this app event.
-        /// </summary>
-        /// <value>The external contact associated with this app event.</value>
-        [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public AddressableEntityRef ExternalContact { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -250,7 +230,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScreenName: ").Append(ScreenName).Append("\n");
             sb.Append("  App: ").Append(App).Append("\n");
             sb.Append("  Device: ").Append(Device).Append("\n");
-            sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("  IpOrganization: ").Append(IpOrganization).Append("\n");
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  SdkLibrary: ").Append(SdkLibrary).Append("\n");
@@ -261,7 +240,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Traits: ").Append(Traits).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -338,11 +316,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Device.Equals(other.Device)
                 ) &&
                 (
-                    this.IpAddress == other.IpAddress ||
-                    this.IpAddress != null &&
-                    this.IpAddress.Equals(other.IpAddress)
-                ) &&
-                (
                     this.IpOrganization == other.IpOrganization ||
                     this.IpOrganization != null &&
                     this.IpOrganization.Equals(other.IpOrganization)
@@ -391,11 +364,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) &&
-                (
-                    this.ExternalContact == other.ExternalContact ||
-                    this.ExternalContact != null &&
-                    this.ExternalContact.Equals(other.ExternalContact)
                 );
         }
 
@@ -431,9 +399,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Device != null)
                     hash = hash * 59 + this.Device.GetHashCode();
 
-                if (this.IpAddress != null)
-                    hash = hash * 59 + this.IpAddress.GetHashCode();
-
                 if (this.IpOrganization != null)
                     hash = hash * 59 + this.IpOrganization.GetHashCode();
 
@@ -463,9 +428,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
-
-                if (this.ExternalContact != null)
-                    hash = hash * 59 + this.ExternalContact.GetHashCode();
 
                 return hash;
             }

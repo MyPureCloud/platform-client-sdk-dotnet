@@ -13,29 +13,29 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Utilization
+    /// UserInsightsTrendTotalItem
     /// </summary>
     [DataContract]
-    public partial class Utilization :  IEquatable<Utilization>
+    public partial class UserInsightsTrendTotalItem :  IEquatable<UserInsightsTrendTotalItem>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Utilization" /> class.
+        /// Initializes a new instance of the <see cref="UserInsightsTrendTotalItem" /> class.
         /// </summary>
-        /// <param name="_Utilization">Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message..</param>
-        public Utilization(Dictionary<string, MediaUtilization> _Utilization = null)
+        /// <param name="Trends">Trends for the metric.</param>
+        public UserInsightsTrendTotalItem(UserInsightsTrends Trends = null)
         {
-            this._Utilization = _Utilization;
+            this.Trends = Trends;
             
         }
         
 
 
         /// <summary>
-        /// Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.
+        /// Trends for the metric
         /// </summary>
-        /// <value>Map of media type to utilization settings.  Valid media types include call, callback, chat, email, and message.</value>
-        [DataMember(Name="utilization", EmitDefaultValue=false)]
-        public Dictionary<string, MediaUtilization> _Utilization { get; set; }
+        /// <value>Trends for the metric</value>
+        [DataMember(Name="trends", EmitDefaultValue=false)]
+        public UserInsightsTrends Trends { get; set; }
 
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Utilization {\n");
+            sb.Append("class UserInsightsTrendTotalItem {\n");
 
-            sb.Append("  _Utilization: ").Append(_Utilization).Append("\n");
+            sb.Append("  Trends: ").Append(Trends).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,15 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Utilization);
+            return this.Equals(obj as UserInsightsTrendTotalItem);
         }
 
         /// <summary>
-        /// Returns true if Utilization instances are equal
+        /// Returns true if UserInsightsTrendTotalItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of Utilization to be compared</param>
+        /// <param name="other">Instance of UserInsightsTrendTotalItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Utilization other)
+        public bool Equals(UserInsightsTrendTotalItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this._Utilization == other._Utilization ||
-                    this._Utilization != null &&
-                    this._Utilization.SequenceEqual(other._Utilization)
+                    this.Trends == other.Trends ||
+                    this.Trends != null &&
+                    this.Trends.Equals(other.Trends)
                 );
         }
 
@@ -106,8 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this._Utilization != null)
-                    hash = hash * 59 + this._Utilization.GetHashCode();
+                if (this.Trends != null)
+                    hash = hash * 59 + this.Trends.GetHashCode();
 
                 return hash;
             }

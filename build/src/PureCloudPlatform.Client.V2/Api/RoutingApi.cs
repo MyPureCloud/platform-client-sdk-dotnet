@@ -1904,9 +1904,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>AgentMaxUtilization</returns>
+        /// <returns>AgentMaxUtilizationResponse</returns>
         
-        AgentMaxUtilization GetRoutingUserUtilization (string userId);
+        AgentMaxUtilizationResponse GetRoutingUserUtilization (string userId);
 
         /// <summary>
         /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
@@ -1916,9 +1916,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        /// <returns>ApiResponse of AgentMaxUtilizationResponse</returns>
         
-        ApiResponse<AgentMaxUtilization> GetRoutingUserUtilizationWithHttpInfo (string userId);
+        ApiResponse<AgentMaxUtilizationResponse> GetRoutingUserUtilizationWithHttpInfo (string userId);
 
         /// <summary>
         /// Get the organization-wide max utilization settings.
@@ -1927,9 +1927,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Utilization</returns>
+        /// <returns>UtilizationResponse</returns>
         
-        Utilization GetRoutingUtilization ();
+        UtilizationResponse GetRoutingUtilization ();
 
         /// <summary>
         /// Get the organization-wide max utilization settings.
@@ -1938,9 +1938,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Utilization</returns>
+        /// <returns>ApiResponse of UtilizationResponse</returns>
         
-        ApiResponse<Utilization> GetRoutingUtilizationWithHttpInfo ();
+        ApiResponse<UtilizationResponse> GetRoutingUtilizationWithHttpInfo ();
 
         /// <summary>
         /// Get details about this utilization tag
@@ -3423,9 +3423,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>AgentMaxUtilization</returns>
+        /// <returns>AgentMaxUtilizationResponse</returns>
         
-        AgentMaxUtilization PutRoutingUserUtilization (string userId, Utilization body);
+        AgentMaxUtilizationResponse PutRoutingUserUtilization (string userId, UtilizationRequest body);
 
         /// <summary>
         /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
@@ -3436,9 +3436,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        /// <returns>ApiResponse of AgentMaxUtilizationResponse</returns>
         
-        ApiResponse<AgentMaxUtilization> PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body);
+        ApiResponse<AgentMaxUtilizationResponse> PutRoutingUserUtilizationWithHttpInfo (string userId, UtilizationRequest body);
 
         /// <summary>
         /// Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
@@ -3448,9 +3448,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>Utilization</returns>
+        /// <returns>UtilizationResponse</returns>
         
-        Utilization PutRoutingUtilization (Utilization body);
+        UtilizationResponse PutRoutingUtilization (UtilizationRequest body);
 
         /// <summary>
         /// Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
@@ -3460,9 +3460,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>ApiResponse of Utilization</returns>
+        /// <returns>ApiResponse of UtilizationResponse</returns>
         
-        ApiResponse<Utilization> PutRoutingUtilizationWithHttpInfo (Utilization body);
+        ApiResponse<UtilizationResponse> PutRoutingUtilizationWithHttpInfo (UtilizationRequest body);
 
         /// <summary>
         /// Update wrap-up code
@@ -5436,9 +5436,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>Task of AgentMaxUtilization</returns>
+        /// <returns>Task of AgentMaxUtilizationResponse</returns>
         
-        System.Threading.Tasks.Task<AgentMaxUtilization> GetRoutingUserUtilizationAsync (string userId);
+        System.Threading.Tasks.Task<AgentMaxUtilizationResponse> GetRoutingUserUtilizationAsync (string userId);
 
         /// <summary>
         /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
@@ -5448,9 +5448,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        /// <returns>Task of ApiResponse (AgentMaxUtilizationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilizationResponse>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId);
 
         /// <summary>
         /// Get the organization-wide max utilization settings.
@@ -5459,9 +5459,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Utilization</returns>
+        /// <returns>Task of UtilizationResponse</returns>
         
-        System.Threading.Tasks.Task<Utilization> GetRoutingUtilizationAsync ();
+        System.Threading.Tasks.Task<UtilizationResponse> GetRoutingUtilizationAsync ();
 
         /// <summary>
         /// Get the organization-wide max utilization settings.
@@ -5470,9 +5470,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Utilization)</returns>
+        /// <returns>Task of ApiResponse (UtilizationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Utilization>> GetRoutingUtilizationAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<UtilizationResponse>> GetRoutingUtilizationAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get details about this utilization tag
@@ -6955,9 +6955,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>Task of AgentMaxUtilization</returns>
+        /// <returns>Task of AgentMaxUtilizationResponse</returns>
         
-        System.Threading.Tasks.Task<AgentMaxUtilization> PutRoutingUserUtilizationAsync (string userId, Utilization body);
+        System.Threading.Tasks.Task<AgentMaxUtilizationResponse> PutRoutingUserUtilizationAsync (string userId, UtilizationRequest body);
 
         /// <summary>
         /// Update the user's max utilization settings.  Include only those media types requiring custom configuration.
@@ -6968,9 +6968,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        /// <returns>Task of ApiResponse (AgentMaxUtilizationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body);
+        System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilizationResponse>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, UtilizationRequest body);
 
         /// <summary>
         /// Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
@@ -6980,9 +6980,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>Task of Utilization</returns>
+        /// <returns>Task of UtilizationResponse</returns>
         
-        System.Threading.Tasks.Task<Utilization> PutRoutingUtilizationAsync (Utilization body);
+        System.Threading.Tasks.Task<UtilizationResponse> PutRoutingUtilizationAsync (UtilizationRequest body);
 
         /// <summary>
         /// Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
@@ -6992,9 +6992,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>Task of ApiResponse (Utilization)</returns>
+        /// <returns>Task of ApiResponse (UtilizationResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Utilization>> PutRoutingUtilizationAsyncWithHttpInfo (Utilization body);
+        System.Threading.Tasks.Task<ApiResponse<UtilizationResponse>> PutRoutingUtilizationAsyncWithHttpInfo (UtilizationRequest body);
 
         /// <summary>
         /// Update wrap-up code
@@ -22416,11 +22416,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>AgentMaxUtilization</returns>
+        /// <returns>AgentMaxUtilizationResponse</returns>
         
-        public AgentMaxUtilization GetRoutingUserUtilization (string userId)
+        public AgentMaxUtilizationResponse GetRoutingUserUtilization (string userId)
         {
-             ApiResponse<AgentMaxUtilization> localVarResponse = GetRoutingUserUtilizationWithHttpInfo(userId);
+             ApiResponse<AgentMaxUtilizationResponse> localVarResponse = GetRoutingUserUtilizationWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -22430,9 +22430,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        /// <returns>ApiResponse of AgentMaxUtilizationResponse</returns>
         
-        public ApiResponse< AgentMaxUtilization > GetRoutingUserUtilizationWithHttpInfo (string userId)
+        public ApiResponse< AgentMaxUtilizationResponse > GetRoutingUserUtilizationWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -22506,9 +22506,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AgentMaxUtilization>(localVarStatusCode,
+            return new ApiResponse<AgentMaxUtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AgentMaxUtilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilization)),
+                (AgentMaxUtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22520,11 +22520,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>Task of AgentMaxUtilization</returns>
+        /// <returns>Task of AgentMaxUtilizationResponse</returns>
         
-        public async System.Threading.Tasks.Task<AgentMaxUtilization> GetRoutingUserUtilizationAsync (string userId)
+        public async System.Threading.Tasks.Task<AgentMaxUtilizationResponse> GetRoutingUserUtilizationAsync (string userId)
         {
-             ApiResponse<AgentMaxUtilization> localVarResponse = await GetRoutingUserUtilizationAsyncWithHttpInfo(userId);
+             ApiResponse<AgentMaxUtilizationResponse> localVarResponse = await GetRoutingUserUtilizationAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -22535,9 +22535,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        /// <returns>Task of ApiResponse (AgentMaxUtilizationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilizationResponse>> GetRoutingUserUtilizationAsyncWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -22612,9 +22612,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AgentMaxUtilization>(localVarStatusCode,
+            return new ApiResponse<AgentMaxUtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AgentMaxUtilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilization)),
+                (AgentMaxUtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22626,11 +22626,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Utilization</returns>
+        /// <returns>UtilizationResponse</returns>
         
-        public Utilization GetRoutingUtilization ()
+        public UtilizationResponse GetRoutingUtilization ()
         {
-             ApiResponse<Utilization> localVarResponse = GetRoutingUtilizationWithHttpInfo();
+             ApiResponse<UtilizationResponse> localVarResponse = GetRoutingUtilizationWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -22639,9 +22639,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Utilization</returns>
+        /// <returns>ApiResponse of UtilizationResponse</returns>
         
-        public ApiResponse< Utilization > GetRoutingUtilizationWithHttpInfo ()
+        public ApiResponse< UtilizationResponse > GetRoutingUtilizationWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/routing/utilization";
@@ -22711,9 +22711,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Utilization>(localVarStatusCode,
+            return new ApiResponse<UtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
+                (UtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22724,11 +22724,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Utilization</returns>
+        /// <returns>Task of UtilizationResponse</returns>
         
-        public async System.Threading.Tasks.Task<Utilization> GetRoutingUtilizationAsync ()
+        public async System.Threading.Tasks.Task<UtilizationResponse> GetRoutingUtilizationAsync ()
         {
-             ApiResponse<Utilization> localVarResponse = await GetRoutingUtilizationAsyncWithHttpInfo();
+             ApiResponse<UtilizationResponse> localVarResponse = await GetRoutingUtilizationAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -22738,9 +22738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Utilization)</returns>
+        /// <returns>Task of ApiResponse (UtilizationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> GetRoutingUtilizationAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationResponse>> GetRoutingUtilizationAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/routing/utilization";
@@ -22810,9 +22810,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Utilization>(localVarStatusCode,
+            return new ApiResponse<UtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
+                (UtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35623,11 +35623,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>AgentMaxUtilization</returns>
+        /// <returns>AgentMaxUtilizationResponse</returns>
         
-        public AgentMaxUtilization PutRoutingUserUtilization (string userId, Utilization body)
+        public AgentMaxUtilizationResponse PutRoutingUserUtilization (string userId, UtilizationRequest body)
         {
-             ApiResponse<AgentMaxUtilization> localVarResponse = PutRoutingUserUtilizationWithHttpInfo(userId, body);
+             ApiResponse<AgentMaxUtilizationResponse> localVarResponse = PutRoutingUserUtilizationWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -35638,9 +35638,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>ApiResponse of AgentMaxUtilization</returns>
+        /// <returns>ApiResponse of AgentMaxUtilizationResponse</returns>
         
-        public ApiResponse< AgentMaxUtilization > PutRoutingUserUtilizationWithHttpInfo (string userId, Utilization body)
+        public ApiResponse< AgentMaxUtilizationResponse > PutRoutingUserUtilizationWithHttpInfo (string userId, UtilizationRequest body)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -35723,9 +35723,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AgentMaxUtilization>(localVarStatusCode,
+            return new ApiResponse<AgentMaxUtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AgentMaxUtilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilization)),
+                (AgentMaxUtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35738,11 +35738,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>Task of AgentMaxUtilization</returns>
+        /// <returns>Task of AgentMaxUtilizationResponse</returns>
         
-        public async System.Threading.Tasks.Task<AgentMaxUtilization> PutRoutingUserUtilizationAsync (string userId, Utilization body)
+        public async System.Threading.Tasks.Task<AgentMaxUtilizationResponse> PutRoutingUserUtilizationAsync (string userId, UtilizationRequest body)
         {
-             ApiResponse<AgentMaxUtilization> localVarResponse = await PutRoutingUserUtilizationAsyncWithHttpInfo(userId, body);
+             ApiResponse<AgentMaxUtilizationResponse> localVarResponse = await PutRoutingUserUtilizationAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -35754,9 +35754,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">utilization</param>
-        /// <returns>Task of ApiResponse (AgentMaxUtilization)</returns>
+        /// <returns>Task of ApiResponse (AgentMaxUtilizationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilization>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, Utilization body)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentMaxUtilizationResponse>> PutRoutingUserUtilizationAsyncWithHttpInfo (string userId, UtilizationRequest body)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -35841,9 +35841,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingUserUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AgentMaxUtilization>(localVarStatusCode,
+            return new ApiResponse<AgentMaxUtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (AgentMaxUtilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilization)),
+                (AgentMaxUtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentMaxUtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35856,11 +35856,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>Utilization</returns>
+        /// <returns>UtilizationResponse</returns>
         
-        public Utilization PutRoutingUtilization (Utilization body)
+        public UtilizationResponse PutRoutingUtilization (UtilizationRequest body)
         {
-             ApiResponse<Utilization> localVarResponse = PutRoutingUtilizationWithHttpInfo(body);
+             ApiResponse<UtilizationResponse> localVarResponse = PutRoutingUtilizationWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -35870,9 +35870,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>ApiResponse of Utilization</returns>
+        /// <returns>ApiResponse of UtilizationResponse</returns>
         
-        public ApiResponse< Utilization > PutRoutingUtilizationWithHttpInfo (Utilization body)
+        public ApiResponse< UtilizationResponse > PutRoutingUtilizationWithHttpInfo (UtilizationRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -35951,9 +35951,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Utilization>(localVarStatusCode,
+            return new ApiResponse<UtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
+                (UtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -35965,11 +35965,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>Task of Utilization</returns>
+        /// <returns>Task of UtilizationResponse</returns>
         
-        public async System.Threading.Tasks.Task<Utilization> PutRoutingUtilizationAsync (Utilization body)
+        public async System.Threading.Tasks.Task<UtilizationResponse> PutRoutingUtilizationAsync (UtilizationRequest body)
         {
-             ApiResponse<Utilization> localVarResponse = await PutRoutingUtilizationAsyncWithHttpInfo(body);
+             ApiResponse<UtilizationResponse> localVarResponse = await PutRoutingUtilizationAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -35980,9 +35980,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">utilization</param>
-        /// <returns>Task of ApiResponse (Utilization)</returns>
+        /// <returns>Task of ApiResponse (UtilizationResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> PutRoutingUtilizationAsyncWithHttpInfo (Utilization body)
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationResponse>> PutRoutingUtilizationAsyncWithHttpInfo (UtilizationRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -36062,9 +36062,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Utilization>(localVarStatusCode,
+            return new ApiResponse<UtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
-                (Utilization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Utilization)),
+                (UtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

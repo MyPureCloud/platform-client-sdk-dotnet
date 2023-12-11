@@ -19,6 +19,33 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ContactListFilter :  IEquatable<ContactListFilter>
     {
         /// <summary>
+        /// The source type the filter is based on.
+        /// </summary>
+        /// <value>The source type the filter is based on.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SourceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Contactlist for "ContactList"
+            /// </summary>
+            [EnumMember(Value = "ContactList")]
+            Contactlist,
+            
+            /// <summary>
+            /// Enum Contactlisttemplate for "ContactListTemplate"
+            /// </summary>
+            [EnumMember(Value = "ContactListTemplate")]
+            Contactlisttemplate
+        }
+        /// <summary>
         /// How to join clauses together.
         /// </summary>
         /// <value>How to join clauses together.</value>
@@ -46,6 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Or
         }
         /// <summary>
+        /// The source type the filter is based on.
+        /// </summary>
+        /// <value>The source type the filter is based on.</value>
+        [DataMember(Name="sourceType", EmitDefaultValue=false)]
+        public SourceTypeEnum? SourceType { get; set; }
+        /// <summary>
         /// How to join clauses together.
         /// </summary>
         /// <value>How to join clauses together.</value>
@@ -63,13 +96,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the list. (required).</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="ContactList">The contact list the filter is based on. Required if sourceType is ContactList.</param>
+        /// <param name="ContactListTemplate">The contact list template the filter is based on. Required if sourceType is ContactListTemplate.</param>
+        /// <param name="SourceType">The source type the filter is based on..</param>
         /// <param name="Clauses">Groups of conditions to filter the contacts by..</param>
         /// <param name="FilterType">How to join clauses together..</param>
-        public ContactListFilter(string Name = null, int? Version = null, DomainEntityRef ContactList = null, List<ContactListFilterClause> Clauses = null, FilterTypeEnum? FilterType = null)
+        public ContactListFilter(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef ContactListTemplate = null, SourceTypeEnum? SourceType = null, List<ContactListFilterClause> Clauses = null, FilterTypeEnum? FilterType = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.ContactList = ContactList;
+            this.ContactListTemplate = ContactListTemplate;
+            this.SourceType = SourceType;
             this.Clauses = Clauses;
             this.FilterType = FilterType;
             
@@ -132,6 +169,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The contact list template the filter is based on. Required if sourceType is ContactListTemplate
+        /// </summary>
+        /// <value>The contact list template the filter is based on. Required if sourceType is ContactListTemplate</value>
+        [DataMember(Name="contactListTemplate", EmitDefaultValue=false)]
+        public DomainEntityRef ContactListTemplate { get; set; }
+
+
+
+
+
+        /// <summary>
         /// Groups of conditions to filter the contacts by.
         /// </summary>
         /// <value>Groups of conditions to filter the contacts by.</value>
@@ -165,6 +213,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            sb.Append("  ContactListTemplate: ").Append(ContactListTemplate).Append("\n");
+            sb.Append("  SourceType: ").Append(SourceType).Append("\n");
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -239,6 +289,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactList.Equals(other.ContactList)
                 ) &&
                 (
+                    this.ContactListTemplate == other.ContactListTemplate ||
+                    this.ContactListTemplate != null &&
+                    this.ContactListTemplate.Equals(other.ContactListTemplate)
+                ) &&
+                (
+                    this.SourceType == other.SourceType ||
+                    this.SourceType != null &&
+                    this.SourceType.Equals(other.SourceType)
+                ) &&
+                (
                     this.Clauses == other.Clauses ||
                     this.Clauses != null &&
                     this.Clauses.SequenceEqual(other.Clauses)
@@ -283,6 +343,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
+
+                if (this.ContactListTemplate != null)
+                    hash = hash * 59 + this.ContactListTemplate.GetHashCode();
+
+                if (this.SourceType != null)
+                    hash = hash * 59 + this.SourceType.GetHashCode();
 
                 if (this.Clauses != null)
                     hash = hash * 59 + this.Clauses.GetHashCode();

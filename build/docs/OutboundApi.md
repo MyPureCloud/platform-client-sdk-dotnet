@@ -18,11 +18,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlistContacts**](OutboundApi.html#deleteoutboundcontactlistcontacts) | **Delete** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
 | [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **Delete** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
 | [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **Delete** /api/v2/outbound/contactlists | Delete multiple contact lists. |
+| [**DeleteOutboundContactlisttemplate**](OutboundApi.html#deleteoutboundcontactlisttemplate) | **Delete** /api/v2/outbound/contactlisttemplates/{contactListTemplateId} | Delete Contact List Template |
+| [**DeleteOutboundContactlisttemplates**](OutboundApi.html#deleteoutboundcontactlisttemplates) | **Delete** /api/v2/outbound/contactlisttemplates | Delete multiple contact list templates. |
 | [**DeleteOutboundDigitalruleset**](OutboundApi.html#deleteoutbounddigitalruleset) | **Delete** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Delete an Outbound Digital Rule Set |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **Delete** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
 | [**DeleteOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#deleteoutbounddnclistcustomexclusioncolumns) | **Delete** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Deletes all or expired custom exclusion column entries from a DNC list. |
 | [**DeleteOutboundDnclistEmailaddresses**](OutboundApi.html#deleteoutbounddnclistemailaddresses) | **Delete** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Deletes all or expired email addresses from a DNC list. |
 | [**DeleteOutboundDnclistPhonenumbers**](OutboundApi.html#deleteoutbounddnclistphonenumbers) | **Delete** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Deletes all or expired phone numbers from a DNC list. |
+| [**DeleteOutboundImporttemplate**](OutboundApi.html#deleteoutboundimporttemplate) | **Delete** /api/v2/outbound/importtemplates/{importTemplateId} | Delete Import Template |
+| [**DeleteOutboundImporttemplates**](OutboundApi.html#deleteoutboundimporttemplates) | **Delete** /api/v2/outbound/importtemplates | Delete multiple import templates. |
 | [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **Delete** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
 | [**DeleteOutboundMessagingcampaignProgress**](OutboundApi.html#deleteoutboundmessagingcampaignprogress) | **Delete** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Reset messaging campaign progress and recycle the messaging campaign |
 | [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **Delete** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule Set. |
@@ -60,6 +64,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **Get** /api/v2/outbound/contactlists | Query a list of contact lists. |
 | [**GetOutboundContactlistsDivisionview**](OutboundApi.html#getoutboundcontactlistsdivisionview) | **Get** /api/v2/outbound/contactlists/divisionviews/{contactListId} | Get a basic ContactList information object |
 | [**GetOutboundContactlistsDivisionviews**](OutboundApi.html#getoutboundcontactlistsdivisionviews) | **Get** /api/v2/outbound/contactlists/divisionviews | Query a list of simplified contact list objects. |
+| [**GetOutboundContactlisttemplate**](OutboundApi.html#getoutboundcontactlisttemplate) | **Get** /api/v2/outbound/contactlisttemplates/{contactListTemplateId} | Get Contact List Template |
+| [**GetOutboundContactlisttemplates**](OutboundApi.html#getoutboundcontactlisttemplates) | **Get** /api/v2/outbound/contactlisttemplates | Query a list of contact list templates |
 | [**GetOutboundDigitalruleset**](OutboundApi.html#getoutbounddigitalruleset) | **Get** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Get an Outbound Digital Rule Set |
 | [**GetOutboundDigitalrulesets**](OutboundApi.html#getoutbounddigitalrulesets) | **Get** /api/v2/outbound/digitalrulesets | Query a list of Outbound Digital Rule Sets |
 | [**GetOutboundDnclist**](OutboundApi.html#getoutbounddnclist) | **Get** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
@@ -70,6 +76,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundDnclistsDivisionviews**](OutboundApi.html#getoutbounddnclistsdivisionviews) | **Get** /api/v2/outbound/dnclists/divisionviews | Query a list of simplified dnc list objects. |
 | [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **Get** /api/v2/outbound/events/{eventId} | Get Dialer Event |
 | [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **Get** /api/v2/outbound/events | Query Event Logs |
+| [**GetOutboundImporttemplate**](OutboundApi.html#getoutboundimporttemplate) | **Get** /api/v2/outbound/importtemplates/{importTemplateId} | Get Import Template |
+| [**GetOutboundImporttemplateImportstatus**](OutboundApi.html#getoutboundimporttemplateimportstatus) | **Get** /api/v2/outbound/importtemplates/{importTemplateId}/importstatus | Get the import status for an import template. |
+| [**GetOutboundImporttemplates**](OutboundApi.html#getoutboundimporttemplates) | **Get** /api/v2/outbound/importtemplates | Query Import Templates |
 | [**GetOutboundMessagingcampaign**](OutboundApi.html#getoutboundmessagingcampaign) | **Get** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Get an Outbound Messaging Campaign |
 | [**GetOutboundMessagingcampaignDiagnostics**](OutboundApi.html#getoutboundmessagingcampaigndiagnostics) | **Get** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics | Get messaging campaign diagnostics |
 | [**GetOutboundMessagingcampaignProgress**](OutboundApi.html#getoutboundmessagingcampaignprogress) | **Get** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Get messaging campaign&#39;s progress |
@@ -110,12 +119,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **Post** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
 | [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **Post** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **Post** /api/v2/outbound/contactlists | Create a contact List. |
+| [**PostOutboundContactlisttemplates**](OutboundApi.html#postoutboundcontactlisttemplates) | **Post** /api/v2/outbound/contactlisttemplates | Create Contact List Template |
+| [**PostOutboundContactlisttemplatesBulkAdd**](OutboundApi.html#postoutboundcontactlisttemplatesbulkadd) | **Post** /api/v2/outbound/contactlisttemplates/bulk/add | Add multiple contact list templates |
 | [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **Post** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
 | [**PostOutboundDigitalrulesets**](OutboundApi.html#postoutbounddigitalrulesets) | **Post** /api/v2/outbound/digitalrulesets | Create an Outbound Digital Rule Set |
 | [**PostOutboundDnclistEmailaddresses**](OutboundApi.html#postoutbounddnclistemailaddresses) | **Post** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add email addresses to a DNC list. |
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **Post** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
 | [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **Post** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **Post** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostOutboundImporttemplates**](OutboundApi.html#postoutboundimporttemplates) | **Post** /api/v2/outbound/importtemplates | Create Import Template |
+| [**PostOutboundImporttemplatesBulkAdd**](OutboundApi.html#postoutboundimporttemplatesbulkadd) | **Post** /api/v2/outbound/importtemplates/bulk/add | Add multiple import templates |
 | [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **Post** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
 | [**PostOutboundMessagingcampaignsProgress**](OutboundApi.html#postoutboundmessagingcampaignsprogress) | **Post** /api/v2/outbound/messagingcampaigns/progress | Get progress for a list of messaging campaigns |
 | [**PostOutboundRulesets**](OutboundApi.html#postoutboundrulesets) | **Post** /api/v2/outbound/rulesets | Create a Rule Set. |
@@ -129,8 +142,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundContactlist**](OutboundApi.html#putoutboundcontactlist) | **Put** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
 | [**PutOutboundContactlistContact**](OutboundApi.html#putoutboundcontactlistcontact) | **Put** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
 | [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **Put** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
+| [**PutOutboundContactlisttemplate**](OutboundApi.html#putoutboundcontactlisttemplate) | **Put** /api/v2/outbound/contactlisttemplates/{contactListTemplateId} | Update a contact list template. |
 | [**PutOutboundDigitalruleset**](OutboundApi.html#putoutbounddigitalruleset) | **Put** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Update an Outbound Digital Rule Set |
 | [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **Put** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
+| [**PutOutboundImporttemplate**](OutboundApi.html#putoutboundimporttemplate) | **Put** /api/v2/outbound/importtemplates/{importTemplateId} | Update Import Template |
 | [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **Put** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
 | [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **Put** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
 | [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **Put** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
@@ -828,6 +843,130 @@ namespace Example
 
 void (empty response body)
 
+<a name="deleteoutboundcontactlisttemplate"></a>
+
+## void DeleteOutboundContactlisttemplate (string contactListTemplateId)
+
+
+
+Delete Contact List Template
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundContactlisttemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListTemplateId = contactListTemplateId_example;  // string | ContactListTemplate ID
+
+            try
+            { 
+                // Delete Contact List Template
+                apiInstance.DeleteOutboundContactlisttemplate(contactListTemplateId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundContactlisttemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListTemplateId** | **string**| ContactListTemplate ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundcontactlisttemplates"></a>
+
+## void DeleteOutboundContactlisttemplates (List<string> id)
+
+
+
+Delete multiple contact list templates.
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundContactlisttemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var id = new List<string>(); // List<string> | contact list template id(s) to delete
+
+            try
+            { 
+                // Delete multiple contact list templates.
+                apiInstance.DeleteOutboundContactlisttemplates(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundContactlisttemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| contact list template id(s) to delete |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="deleteoutbounddigitalruleset"></a>
 
 ## void DeleteOutboundDigitalruleset (string digitalRuleSetId)
@@ -1144,6 +1283,130 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundimporttemplate"></a>
+
+## void DeleteOutboundImporttemplate (string importTemplateId)
+
+
+
+Delete Import Template
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundImporttemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var importTemplateId = importTemplateId_example;  // string | Import Template ID
+
+            try
+            { 
+                // Delete Import Template
+                apiInstance.DeleteOutboundImporttemplate(importTemplateId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundImporttemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **importTemplateId** | **string**| Import Template ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundimporttemplates"></a>
+
+## void DeleteOutboundImporttemplates (List<string> id)
+
+
+
+Delete multiple import templates.
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundImporttemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var id = new List<string>(); // List<string> | import template id(s) to delete
+
+            try
+            { 
+                // Delete multiple import templates.
+                apiInstance.DeleteOutboundImporttemplates(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundImporttemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| import template id(s) to delete |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3661,6 +3924,144 @@ namespace Example
 
 [**ContactListDivisionViewListing**](ContactListDivisionViewListing.html)
 
+<a name="getoutboundcontactlisttemplate"></a>
+
+## [**ContactListTemplate**](ContactListTemplate.html) GetOutboundContactlisttemplate (string contactListTemplateId)
+
+
+
+Get Contact List Template
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlisttemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListTemplateId = contactListTemplateId_example;  // string | ContactListTemplate ID
+
+            try
+            { 
+                // Get Contact List Template
+                ContactListTemplate result = apiInstance.GetOutboundContactlisttemplate(contactListTemplateId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlisttemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListTemplateId** | **string**| ContactListTemplate ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListTemplate**](ContactListTemplate.html)
+
+<a name="getoutboundcontactlisttemplates"></a>
+
+## [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html) GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+
+
+
+Query a list of contact list templates
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlisttemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            { 
+                // Query a list of contact list templates
+                ContactListTemplateEntityListing result = apiInstance.GetOutboundContactlisttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlisttemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
+
 <a name="getoutbounddigitalruleset"></a>
 
 ## [**DigitalRuleSet**](DigitalRuleSet.html) GetOutboundDigitalruleset (string digitalRuleSetId)
@@ -4365,6 +4766,211 @@ namespace Example
 ### Return type
 
 [**DialerEventEntityListing**](DialerEventEntityListing.html)
+
+<a name="getoutboundimporttemplate"></a>
+
+## [**ImportTemplate**](ImportTemplate.html) GetOutboundImporttemplate (string importTemplateId)
+
+
+
+Get Import Template
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundImporttemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var importTemplateId = importTemplateId_example;  // string | Import Template ID
+
+            try
+            { 
+                // Get Import Template
+                ImportTemplate result = apiInstance.GetOutboundImporttemplate(importTemplateId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundImporttemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **importTemplateId** | **string**| Import Template ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportTemplate**](ImportTemplate.html)
+
+<a name="getoutboundimporttemplateimportstatus"></a>
+
+## [**ImportStatus**](ImportStatus.html) GetOutboundImporttemplateImportstatus (string importTemplateId, string listNamePrefix = null)
+
+
+
+Get the import status for an import template.
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundImporttemplateImportstatusExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var importTemplateId = importTemplateId_example;  // string | importTemplateId
+            var listNamePrefix = listNamePrefix_example;  // string | listNamePrefix (optional) 
+
+            try
+            { 
+                // Get the import status for an import template.
+                ImportStatus result = apiInstance.GetOutboundImporttemplateImportstatus(importTemplateId, listNamePrefix);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundImporttemplateImportstatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **importTemplateId** | **string**| importTemplateId |  |
+| **listNamePrefix** | **string**| listNamePrefix | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportStatus**](ImportStatus.html)
+
+<a name="getoutboundimporttemplates"></a>
+
+## [**ImportTemplateEntityListing**](ImportTemplateEntityListing.html) GetOutboundImporttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
+
+
+
+Query Import Templates
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundImporttemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+            var contactListTemplateId = contactListTemplateId_example;  // string | Contact List Template ID (optional) 
+
+            try
+            { 
+                // Query Import Templates
+                ImportTemplateEntityListing result = apiInstance.GetOutboundImporttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundImporttemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+| **contactListTemplateId** | **string**| Contact List Template ID | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportTemplateEntityListing**](ImportTemplateEntityListing.html)
 
 <a name="getoutboundmessagingcampaign"></a>
 
@@ -6955,6 +7561,132 @@ namespace Example
 
 [**ContactList**](ContactList.html)
 
+<a name="postoutboundcontactlisttemplates"></a>
+
+## [**ContactListTemplate**](ContactListTemplate.html) PostOutboundContactlisttemplates (ContactListTemplate body)
+
+
+
+Create Contact List Template
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlisttemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListTemplate(); // ContactListTemplate | ContactListTemplate
+
+            try
+            { 
+                // Create Contact List Template
+                ContactListTemplate result = apiInstance.PostOutboundContactlisttemplates(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlisttemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListTemplate**](ContactListTemplate.html)| ContactListTemplate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListTemplate**](ContactListTemplate.html)
+
+<a name="postoutboundcontactlisttemplatesbulkadd"></a>
+
+## [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html) PostOutboundContactlisttemplatesBulkAdd (List<ContactListTemplate> body)
+
+
+
+Add multiple contact list templates
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlisttemplatesBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new List<ContactListTemplate>(); // List<ContactListTemplate> | contact list template(s) to add
+
+            try
+            { 
+                // Add multiple contact list templates
+                ContactListTemplateEntityListing result = apiInstance.PostOutboundContactlisttemplatesBulkAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlisttemplatesBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<ContactListTemplate>**](ContactListTemplate.html)| contact list template(s) to add |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
+
 <a name="postoutboundconversationdnc"></a>
 
 ## void PostOutboundConversationDnc (string conversationId)
@@ -7342,6 +8074,132 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="postoutboundimporttemplates"></a>
+
+## [**ImportTemplate**](ImportTemplate.html) PostOutboundImporttemplates (ImportTemplate body)
+
+
+
+Create Import Template
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundImporttemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new ImportTemplate(); // ImportTemplate | ImportTemplate
+
+            try
+            { 
+                // Create Import Template
+                ImportTemplate result = apiInstance.PostOutboundImporttemplates(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundImporttemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ImportTemplate**](ImportTemplate.html)| ImportTemplate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportTemplate**](ImportTemplate.html)
+
+<a name="postoutboundimporttemplatesbulkadd"></a>
+
+## [**ImportTemplateEntityListing**](ImportTemplateEntityListing.html) PostOutboundImporttemplatesBulkAdd (List<ImportTemplate> body)
+
+
+
+Add multiple import templates
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundImporttemplatesBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new List<ImportTemplate>(); // List<ImportTemplate> | import template(s) to add
+
+            try
+            { 
+                // Add multiple import templates
+                ImportTemplateEntityListing result = apiInstance.PostOutboundImporttemplatesBulkAdd(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundImporttemplatesBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<ImportTemplate>**](ImportTemplate.html)| import template(s) to add |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportTemplateEntityListing**](ImportTemplateEntityListing.html)
 
 <a name="postoutboundmessagingcampaigns"></a>
 
@@ -8187,6 +9045,71 @@ namespace Example
 
 [**ContactListFilter**](ContactListFilter.html)
 
+<a name="putoutboundcontactlisttemplate"></a>
+
+## [**ContactListTemplate**](ContactListTemplate.html) PutOutboundContactlisttemplate (string contactListTemplateId, ContactListTemplate body)
+
+
+
+Update a contact list template.
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundContactlisttemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListTemplateId = contactListTemplateId_example;  // string | ContactListTemplate ID
+            var body = new ContactListTemplate(); // ContactListTemplate | ContactListTemplate
+
+            try
+            { 
+                // Update a contact list template.
+                ContactListTemplate result = apiInstance.PutOutboundContactlisttemplate(contactListTemplateId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundContactlisttemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListTemplateId** | **string**| ContactListTemplate ID |  |
+| **body** | [**ContactListTemplate**](ContactListTemplate.html)| ContactListTemplate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListTemplate**](ContactListTemplate.html)
+
 <a name="putoutbounddigitalruleset"></a>
 
 ## [**DigitalRuleSet**](DigitalRuleSet.html) PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body)
@@ -8316,6 +9239,71 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="putoutboundimporttemplate"></a>
+
+## [**ImportTemplate**](ImportTemplate.html) PutOutboundImporttemplate (string importTemplateId, ImportTemplate body)
+
+
+
+Update Import Template
+
+Requires ANY permissions: 
+
+* outbound:importTemplate:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundImporttemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var importTemplateId = importTemplateId_example;  // string | Import Template ID
+            var body = new ImportTemplate(); // ImportTemplate | importTemplate
+
+            try
+            { 
+                // Update Import Template
+                ImportTemplate result = apiInstance.PutOutboundImporttemplate(importTemplateId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundImporttemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **importTemplateId** | **string**| Import Template ID |  |
+| **body** | [**ImportTemplate**](ImportTemplate.html)| importTemplate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportTemplate**](ImportTemplate.html)
 
 <a name="putoutboundmessagingcampaign"></a>
 

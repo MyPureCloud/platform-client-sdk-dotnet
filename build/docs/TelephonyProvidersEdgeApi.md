@@ -514,7 +514,7 @@ Delete an extension pool by ID
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -2780,7 +2780,7 @@ Get an extension by ID.
 
 Requires ANY permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2843,7 +2843,7 @@ Get an extension pool by ID
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2906,7 +2906,7 @@ Get a listing of extension pools
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3054,7 +3054,7 @@ Get a listing of extensions
 
 Requires ANY permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:view
 
 ### Example
 ```{"language":"csharp"}
@@ -6705,7 +6705,7 @@ Create a new extension pool
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:add
 
 ### Example
 ```{"language":"csharp"}
@@ -7603,7 +7603,7 @@ Update an extension pool by ID
 
 Requires ALL permissions: 
 
-* telephony:plugin:all
+* telephony:extensionPool:edit
 
 ### Example
 ```{"language":"csharp"}

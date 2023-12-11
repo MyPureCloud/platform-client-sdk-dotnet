@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The id of the execution requested.</param>
         /// <param name="DownloadUri">A downloadable link to the execution data file..</param>
         /// <param name="Failed">If the retrieval failed (not found, no permission, etc;), this will be set true..</param>
-        public ExecutionDataEntity(string Id = null, string DownloadUri = null, bool? Failed = null)
+        /// <param name="StatusCode">This will contain the http status code for the failure.</param>
+        public ExecutionDataEntity(string Id = null, string DownloadUri = null, bool? Failed = null, string StatusCode = null)
         {
             this.Id = Id;
             this.DownloadUri = DownloadUri;
             this.Failed = Failed;
+            this.StatusCode = StatusCode;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Failed { get; set; }
 
 
+
+        /// <summary>
+        /// This will contain the http status code for the failure
+        /// </summary>
+        /// <value>This will contain the http status code for the failure</value>
+        [DataMember(Name="statusCode", EmitDefaultValue=false)]
+        public string StatusCode { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadUri: ").Append(DownloadUri).Append("\n");
             sb.Append("  Failed: ").Append(Failed).Append("\n");
+            sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Failed == other.Failed ||
                     this.Failed != null &&
                     this.Failed.Equals(other.Failed)
+                ) &&
+                (
+                    this.StatusCode == other.StatusCode ||
+                    this.StatusCode != null &&
+                    this.StatusCode.Equals(other.StatusCode)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Failed != null)
                     hash = hash * 59 + this.Failed.GetHashCode();
+
+                if (this.StatusCode != null)
+                    hash = hash * 59 + this.StatusCode.GetHashCode();
 
                 return hash;
             }

@@ -1453,7 +1453,7 @@ namespace Example
 
 <a name="getroutinguserutilization"></a>
 
-## [**AgentMaxUtilization**](AgentMaxUtilization.html) GetRoutingUserUtilization (string userId)
+## [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse.html) GetRoutingUserUtilization (string userId)
 
 
 
@@ -1491,7 +1491,7 @@ namespace Example
             try
             { 
                 // Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
-                AgentMaxUtilization result = apiInstance.GetRoutingUserUtilization(userId);
+                AgentMaxUtilizationResponse result = apiInstance.GetRoutingUserUtilization(userId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1513,7 +1513,7 @@ namespace Example
 
 ### Return type
 
-[**AgentMaxUtilization**](AgentMaxUtilization.html)
+[**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse.html)
 
 <a name="getuser"></a>
 
@@ -5300,7 +5300,7 @@ namespace Example
 
 <a name="putroutinguserutilization"></a>
 
-## [**AgentMaxUtilization**](AgentMaxUtilization.html) PutRoutingUserUtilization (string userId, Utilization body)
+## [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse.html) PutRoutingUserUtilization (string userId, UtilizationRequest body)
 
 
 
@@ -5333,12 +5333,12 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new Utilization(); // Utilization | utilization
+            var body = new UtilizationRequest(); // UtilizationRequest | utilization
 
             try
             { 
                 // Update the user's max utilization settings.  Include only those media types requiring custom configuration.
-                AgentMaxUtilization result = apiInstance.PutRoutingUserUtilization(userId, body);
+                AgentMaxUtilizationResponse result = apiInstance.PutRoutingUserUtilization(userId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5356,12 +5356,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**Utilization**](Utilization.html)| utilization |  |
+| **body** | [**UtilizationRequest**](UtilizationRequest.html)| utilization |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**AgentMaxUtilization**](AgentMaxUtilization.html)
+[**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse.html)
 
 <a name="putusercallforwarding"></a>
 

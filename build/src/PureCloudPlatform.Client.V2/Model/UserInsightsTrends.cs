@@ -13,40 +13,40 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// LabelUtilization
+    /// UserInsightsTrends
     /// </summary>
     [DataContract]
-    public partial class LabelUtilization :  IEquatable<LabelUtilization>
+    public partial class UserInsightsTrends :  IEquatable<UserInsightsTrends>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LabelUtilization" /> class.
+        /// Initializes a new instance of the <see cref="UserInsightsTrends" /> class.
         /// </summary>
-        /// <param name="MaximumCapacity">Defines the maximum number of interactions with this label that an agent can handle at one time..</param>
-        /// <param name="InterruptingLabelIds">Defines other labels that can interrupt an interaction with this label..</param>
-        public LabelUtilization(int? MaximumCapacity = null, List<string> InterruptingLabelIds = null)
+        /// <param name="ComparativePeriod">List of trend data in the comparative period.</param>
+        /// <param name="PrimaryPeriod">List of trend data in the primary period.</param>
+        public UserInsightsTrends(List<UserTrendData> ComparativePeriod = null, List<UserTrendData> PrimaryPeriod = null)
         {
-            this.MaximumCapacity = MaximumCapacity;
-            this.InterruptingLabelIds = InterruptingLabelIds;
+            this.ComparativePeriod = ComparativePeriod;
+            this.PrimaryPeriod = PrimaryPeriod;
             
         }
         
 
 
         /// <summary>
-        /// Defines the maximum number of interactions with this label that an agent can handle at one time.
+        /// List of trend data in the comparative period
         /// </summary>
-        /// <value>Defines the maximum number of interactions with this label that an agent can handle at one time.</value>
-        [DataMember(Name="maximumCapacity", EmitDefaultValue=false)]
-        public int? MaximumCapacity { get; set; }
+        /// <value>List of trend data in the comparative period</value>
+        [DataMember(Name="comparativePeriod", EmitDefaultValue=false)]
+        public List<UserTrendData> ComparativePeriod { get; set; }
 
 
 
         /// <summary>
-        /// Defines other labels that can interrupt an interaction with this label.
+        /// List of trend data in the primary period
         /// </summary>
-        /// <value>Defines other labels that can interrupt an interaction with this label.</value>
-        [DataMember(Name="interruptingLabelIds", EmitDefaultValue=false)]
-        public List<string> InterruptingLabelIds { get; set; }
+        /// <value>List of trend data in the primary period</value>
+        [DataMember(Name="primaryPeriod", EmitDefaultValue=false)]
+        public List<UserTrendData> PrimaryPeriod { get; set; }
 
 
         /// <summary>
@@ -56,10 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LabelUtilization {\n");
+            sb.Append("class UserInsightsTrends {\n");
 
-            sb.Append("  MaximumCapacity: ").Append(MaximumCapacity).Append("\n");
-            sb.Append("  InterruptingLabelIds: ").Append(InterruptingLabelIds).Append("\n");
+            sb.Append("  ComparativePeriod: ").Append(ComparativePeriod).Append("\n");
+            sb.Append("  PrimaryPeriod: ").Append(PrimaryPeriod).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as LabelUtilization);
+            return this.Equals(obj as UserInsightsTrends);
         }
 
         /// <summary>
-        /// Returns true if LabelUtilization instances are equal
+        /// Returns true if UserInsightsTrends instances are equal
         /// </summary>
-        /// <param name="other">Instance of LabelUtilization to be compared</param>
+        /// <param name="other">Instance of UserInsightsTrends to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LabelUtilization other)
+        public bool Equals(UserInsightsTrends other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -101,14 +101,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.MaximumCapacity == other.MaximumCapacity ||
-                    this.MaximumCapacity != null &&
-                    this.MaximumCapacity.Equals(other.MaximumCapacity)
+                    this.ComparativePeriod == other.ComparativePeriod ||
+                    this.ComparativePeriod != null &&
+                    this.ComparativePeriod.SequenceEqual(other.ComparativePeriod)
                 ) &&
                 (
-                    this.InterruptingLabelIds == other.InterruptingLabelIds ||
-                    this.InterruptingLabelIds != null &&
-                    this.InterruptingLabelIds.SequenceEqual(other.InterruptingLabelIds)
+                    this.PrimaryPeriod == other.PrimaryPeriod ||
+                    this.PrimaryPeriod != null &&
+                    this.PrimaryPeriod.SequenceEqual(other.PrimaryPeriod)
                 );
         }
 
@@ -123,11 +123,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.MaximumCapacity != null)
-                    hash = hash * 59 + this.MaximumCapacity.GetHashCode();
+                if (this.ComparativePeriod != null)
+                    hash = hash * 59 + this.ComparativePeriod.GetHashCode();
 
-                if (this.InterruptingLabelIds != null)
-                    hash = hash * 59 + this.InterruptingLabelIds.GetHashCode();
+                if (this.PrimaryPeriod != null)
+                    hash = hash * 59 + this.PrimaryPeriod.GetHashCode();
 
                 return hash;
             }

@@ -33,48 +33,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Agentassistant for "agent.assistant"
-            /// </summary>
-            [EnumMember(Value = "agent.assistant")]
-            Agentassistant,
-            
-            /// <summary>
-            /// Enum Analyticsalerting for "analytics.alerting"
-            /// </summary>
-            [EnumMember(Value = "analytics.alerting")]
-            Analyticsalerting,
-            
-            /// <summary>
-            /// Enum Analytics for "analytics"
-            /// </summary>
-            [EnumMember(Value = "analytics")]
-            Analytics,
-            
-            /// <summary>
-            /// Enum Analyticsrealtime for "analytics.realtime"
-            /// </summary>
-            [EnumMember(Value = "analytics.realtime")]
-            Analyticsrealtime,
-            
-            /// <summary>
-            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
-            /// </summary>
-            [EnumMember(Value = "analytics.reporting.settings")]
-            Analyticsreportingsettings,
-            
-            /// <summary>
-            /// Enum Architect for "architect"
-            /// </summary>
-            [EnumMember(Value = "architect")]
-            Architect,
-            
-            /// <summary>
-            /// Enum Audiohook for "audiohook"
-            /// </summary>
-            [EnumMember(Value = "audiohook")]
-            Audiohook,
-            
-            /// <summary>
             /// Enum Audit for "audit"
             /// </summary>
             [EnumMember(Value = "audit")]
@@ -157,6 +115,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "email")]
             Email,
+            
+            /// <summary>
+            /// Enum Employeeengagement for "employee.engagement"
+            /// </summary>
+            [EnumMember(Value = "employee.engagement")]
+            Employeeengagement,
             
             /// <summary>
             /// Enum Eventorchestration for "event.orchestration"
@@ -414,7 +378,49 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workforcemanagement for "workforce.management"
             /// </summary>
             [EnumMember(Value = "workforce.management")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Agentassistant for "agent.assistant"
+            /// </summary>
+            [EnumMember(Value = "agent.assistant")]
+            Agentassistant,
+            
+            /// <summary>
+            /// Enum Analyticsalerting for "analytics.alerting"
+            /// </summary>
+            [EnumMember(Value = "analytics.alerting")]
+            Analyticsalerting,
+            
+            /// <summary>
+            /// Enum Analytics for "analytics"
+            /// </summary>
+            [EnumMember(Value = "analytics")]
+            Analytics,
+            
+            /// <summary>
+            /// Enum Analyticsrealtime for "analytics.realtime"
+            /// </summary>
+            [EnumMember(Value = "analytics.realtime")]
+            Analyticsrealtime,
+            
+            /// <summary>
+            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
+            /// </summary>
+            [EnumMember(Value = "analytics.reporting.settings")]
+            Analyticsreportingsettings,
+            
+            /// <summary>
+            /// Enum Architect for "architect"
+            /// </summary>
+            [EnumMember(Value = "architect")]
+            Architect,
+            
+            /// <summary>
+            /// Enum Audiohook for "audiohook"
+            /// </summary>
+            [EnumMember(Value = "audiohook")]
+            Audiohook
         }
         /// <summary>
         /// Gets or Sets Namespace

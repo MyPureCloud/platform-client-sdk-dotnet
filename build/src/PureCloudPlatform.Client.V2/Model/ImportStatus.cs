@@ -98,6 +98,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string FailureReason { get; private set; }
 
 
+
+        /// <summary>
+        /// The contact list Ids for target contact lists.
+        /// </summary>
+        /// <value>The contact list Ids for target contact lists.</value>
+        [DataMember(Name="targetContactListIds", EmitDefaultValue=false)]
+        public List<string> TargetContactListIds { get; private set; }
+
+
+
+        /// <summary>
+        /// The prefix for the contact list name
+        /// </summary>
+        /// <value>The prefix for the contact list name</value>
+        [DataMember(Name="listNamePrefix", EmitDefaultValue=false)]
+        public string ListNamePrefix { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,6 +130,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
             sb.Append("  PercentComplete: ").Append(PercentComplete).Append("\n");
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
+            sb.Append("  TargetContactListIds: ").Append(TargetContactListIds).Append("\n");
+            sb.Append("  ListNamePrefix: ").Append(ListNamePrefix).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,6 +196,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FailureReason == other.FailureReason ||
                     this.FailureReason != null &&
                     this.FailureReason.Equals(other.FailureReason)
+                ) &&
+                (
+                    this.TargetContactListIds == other.TargetContactListIds ||
+                    this.TargetContactListIds != null &&
+                    this.TargetContactListIds.SequenceEqual(other.TargetContactListIds)
+                ) &&
+                (
+                    this.ListNamePrefix == other.ListNamePrefix ||
+                    this.ListNamePrefix != null &&
+                    this.ListNamePrefix.Equals(other.ListNamePrefix)
                 );
         }
 
@@ -204,6 +234,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
+
+                if (this.TargetContactListIds != null)
+                    hash = hash * 59 + this.TargetContactListIds.GetHashCode();
+
+                if (this.ListNamePrefix != null)
+                    hash = hash * 59 + this.ListNamePrefix.GetHashCode();
 
                 return hash;
             }

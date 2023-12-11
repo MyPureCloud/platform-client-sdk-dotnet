@@ -65,19 +65,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Granularity">Granularity.</param>
         /// <param name="ComparativePeriod">The comparative period work day date range.</param>
         /// <param name="PrimaryPeriod">The primary period work day date range.</param>
+        /// <param name="User">The query user.</param>
         /// <param name="Entities">The list of insights trend for each metric.</param>
         /// <param name="Total">The insights trend in total.</param>
-        /// <param name="User">The query user.</param>
-        public UserInsightsTrend(AddressableEntityRef PerformanceProfile = null, DivisionReference Division = null, GranularityEnum? Granularity = null, WorkdayPeriod ComparativePeriod = null, WorkdayPeriod PrimaryPeriod = null, List<InsightsTrendMetricItem> Entities = null, InsightsTrendTotalItem Total = null, UserReference User = null)
+        public UserInsightsTrend(AddressableEntityRef PerformanceProfile = null, DivisionReference Division = null, GranularityEnum? Granularity = null, WorkdayPeriod ComparativePeriod = null, WorkdayPeriod PrimaryPeriod = null, UserReference User = null, List<UserInsightsTrendMetricItem> Entities = null, UserInsightsTrendTotalItem Total = null)
         {
             this.PerformanceProfile = PerformanceProfile;
             this.Division = Division;
             this.Granularity = Granularity;
             this.ComparativePeriod = ComparativePeriod;
             this.PrimaryPeriod = PrimaryPeriod;
+            this.User = User;
             this.Entities = Entities;
             this.Total = Total;
-            this.User = User;
             
         }
         
@@ -122,11 +122,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The query user
+        /// </summary>
+        /// <value>The query user</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public UserReference User { get; set; }
+
+
+
+        /// <summary>
         /// The list of insights trend for each metric
         /// </summary>
         /// <value>The list of insights trend for each metric</value>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<InsightsTrendMetricItem> Entities { get; set; }
+        public List<UserInsightsTrendMetricItem> Entities { get; set; }
 
 
 
@@ -135,16 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The insights trend in total</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
-        public InsightsTrendTotalItem Total { get; set; }
-
-
-
-        /// <summary>
-        /// The query user
-        /// </summary>
-        /// <value>The query user</value>
-        [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserReference User { get; set; }
+        public UserInsightsTrendTotalItem Total { get; set; }
 
 
         /// <summary>
@@ -161,9 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
             sb.Append("  ComparativePeriod: ").Append(ComparativePeriod).Append("\n");
             sb.Append("  PrimaryPeriod: ").Append(PrimaryPeriod).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -230,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PrimaryPeriod.Equals(other.PrimaryPeriod)
                 ) &&
                 (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
+                ) &&
+                (
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
@@ -238,11 +243,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) &&
-                (
-                    this.User == other.User ||
-                    this.User != null &&
-                    this.User.Equals(other.User)
                 );
         }
 
@@ -272,14 +272,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PrimaryPeriod != null)
                     hash = hash * 59 + this.PrimaryPeriod.GetHashCode();
 
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
+
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
 
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
-
-                if (this.User != null)
-                    hash = hash * 59 + this.User.GetHashCode();
 
                 return hash;
             }

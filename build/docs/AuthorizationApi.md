@@ -1774,7 +1774,7 @@ void (empty response body)
 
 <a name="postauthorizationdivisionrestore"></a>
 
-## [**AuthzDivision**](AuthzDivision.html) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
+## [**AuthzDivision**](AuthzDivision.html) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body = null)
 
 
 
@@ -1807,7 +1807,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var divisionId = divisionId_example;  // string | Division ID
-            var body = new AuthzDivision(); // AuthzDivision | Recreated division data
+            var body = new AuthzDivision(); // AuthzDivision | Recreated division data (optional) 
 
             try
             { 
@@ -1830,7 +1830,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data |  |
+| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

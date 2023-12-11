@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="User">User information associated media endpoint.</param>
         /// <param name="Ice">The ICE protocol statistics and details. Reference: https://www.rfc-editor.org/rfc/rfc5245.</param>
         /// <param name="Rtp">Statistics of sent and received RTP. Reference: https://www.rfc-editor.org/rfc/rfc3550.</param>
-        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null)
+        /// <param name="ReconnectAttemptCount">Media reconnect attempt count.</param>
+        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null, int? ReconnectAttemptCount = null)
         {
             this.Trunk = Trunk;
             this.Station = Station;
             this.User = User;
             this.Ice = Ice;
             this.Rtp = Rtp;
+            this.ReconnectAttemptCount = ReconnectAttemptCount;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public MediaRtpStatistics Rtp { get; set; }
 
 
+
+        /// <summary>
+        /// Media reconnect attempt count
+        /// </summary>
+        /// <value>Media reconnect attempt count</value>
+        [DataMember(Name="reconnectAttemptCount", EmitDefaultValue=false)]
+        public int? ReconnectAttemptCount { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Ice: ").Append(Ice).Append("\n");
             sb.Append("  Rtp: ").Append(Rtp).Append("\n");
+            sb.Append("  ReconnectAttemptCount: ").Append(ReconnectAttemptCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Rtp == other.Rtp ||
                     this.Rtp != null &&
                     this.Rtp.Equals(other.Rtp)
+                ) &&
+                (
+                    this.ReconnectAttemptCount == other.ReconnectAttemptCount ||
+                    this.ReconnectAttemptCount != null &&
+                    this.ReconnectAttemptCount.Equals(other.ReconnectAttemptCount)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Rtp != null)
                     hash = hash * 59 + this.Rtp.GetHashCode();
+
+                if (this.ReconnectAttemptCount != null)
+                    hash = hash * 59 + this.ReconnectAttemptCount.GetHashCode();
 
                 return hash;
             }

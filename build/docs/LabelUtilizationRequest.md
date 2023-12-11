@@ -1,7 +1,7 @@
 ---
-title: LabelUtilization
+title: LabelUtilizationRequest
 ---
-## ININ.PureCloudApi.Model.LabelUtilization
+## ININ.PureCloudApi.Model.LabelUtilizationRequest
 
 ## Properties
 

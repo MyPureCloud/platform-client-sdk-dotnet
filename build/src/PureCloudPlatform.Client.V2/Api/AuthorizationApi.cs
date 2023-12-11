@@ -732,10 +732,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>AuthzDivision</returns>
         
-        AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body);
+        AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body = null);
 
         /// <summary>
         /// Recreate a previously deleted division.
@@ -745,10 +745,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
         
-        ApiResponse<AuthzDivision> PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body);
+        ApiResponse<AuthzDivision> PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body = null);
 
         /// <summary>
         /// Create a division.
@@ -1864,10 +1864,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>Task of AuthzDivision</returns>
         
-        System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body);
+        System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body = null);
 
         /// <summary>
         /// Recreate a previously deleted division.
@@ -1877,10 +1877,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body);
+        System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body = null);
 
         /// <summary>
         /// Create a division.
@@ -8120,10 +8120,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>AuthzDivision</returns>
         
-        public AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
+        public AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body = null)
         {
              ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionRestoreWithHttpInfo(divisionId, body);
              return localVarResponse.Data;
@@ -8135,17 +8135,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
         
-        public ApiResponse< AuthzDivision > PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body)
+        public ApiResponse< AuthzDivision > PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body = null)
         { 
             // verify the required parameter 'divisionId' is set
             if (divisionId == null)
                 throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PostAuthorizationDivisionRestore");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionRestore");
 
             var localVarPath = "/api/v2/authorization/divisions/{divisionId}/restore";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8235,10 +8232,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>Task of AuthzDivision</returns>
         
-        public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body)
+        public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body = null)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionRestoreAsyncWithHttpInfo(divisionId, body);
              return localVarResponse.Data;
@@ -8251,18 +8248,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="divisionId">Division ID</param>
-        /// <param name="body">Recreated division data</param>
+        /// <param name="body">Recreated division data (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body = null)
         { 
             // verify the required parameter 'divisionId' is set
             if (divisionId == null)
                 throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->PostAuthorizationDivisionRestore");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionRestore");
             
 
             var localVarPath = "/api/v2/authorization/divisions/{divisionId}/restore";
