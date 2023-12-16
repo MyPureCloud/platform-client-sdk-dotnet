@@ -40,7 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Thread">The id for a thread this message corresponds to (required).</param>
         /// <param name="User">The user who sent the message.</param>
         /// <param name="ToUser">The receiving user of the message.</param>
-        public ChatMessageResponse(string Id = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ToJid = null, string Jid = null, string Body = null, Dictionary<string, string> Mentions = null, bool? Edited = null, bool? AttachmentDeleted = null, string FileUri = null, Entity Thread = null, AddressableEntityRef User = null, AddressableEntityRef ToUser = null)
+        /// <param name="Reactions">The emoji reactions to this message.</param>
+        public ChatMessageResponse(string Id = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ToJid = null, string Jid = null, string Body = null, Dictionary<string, string> Mentions = null, bool? Edited = null, bool? AttachmentDeleted = null, string FileUri = null, Entity Thread = null, AddressableEntityRef User = null, AddressableEntityRef ToUser = null, List<ChatReaction> Reactions = null)
         {
             this.Id = Id;
             this.DateCreated = DateCreated;
@@ -55,6 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Thread = Thread;
             this.User = User;
             this.ToUser = ToUser;
+            this.Reactions = Reactions;
             
         }
         
@@ -176,6 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AddressableEntityRef ToUser { get; set; }
 
 
+
+        /// <summary>
+        /// The emoji reactions to this message
+        /// </summary>
+        /// <value>The emoji reactions to this message</value>
+        [DataMember(Name="reactions", EmitDefaultValue=false)]
+        public List<ChatReaction> Reactions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Thread: ").Append(Thread).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ToUser: ").Append(ToUser).Append("\n");
+            sb.Append("  Reactions: ").Append(Reactions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -302,6 +314,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ToUser == other.ToUser ||
                     this.ToUser != null &&
                     this.ToUser.Equals(other.ToUser)
+                ) &&
+                (
+                    this.Reactions == other.Reactions ||
+                    this.Reactions != null &&
+                    this.Reactions.SequenceEqual(other.Reactions)
                 );
         }
 
@@ -354,6 +371,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ToUser != null)
                     hash = hash * 59 + this.ToUser.GetHashCode();
+
+                if (this.Reactions != null)
+                    hash = hash * 59 + this.Reactions.GetHashCode();
 
                 return hash;
             }

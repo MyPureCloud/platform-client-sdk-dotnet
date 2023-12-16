@@ -45,12 +45,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekschedulegenerationresults) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults | Get the generation results for a generated schedule |
 | [**GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekscheduleheadcountforecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast | Get the headcount forecast by planning group for the schedule |
 | [**GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekschedulehistoryagent) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId} | Loads agent&#39;s schedule history. |
+| [**GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekscheduleperformancepredictions) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions | Get the performance prediction for the associated schedule |
+| [**GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculation) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId} | Get recalculated performance prediction result |
 | [**GetWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekschedules) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules | Get the list of week schedules for the specified week |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Get a short term forecast |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecastData**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecastdata) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data | Get the result of a short term forecast calculation |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecastgenerationresults) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults | Gets the forecast generation results |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecastlongtermforecastdata) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata | Get the result of a long term forecast calculation |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecastplanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups | Gets the forecast planning group snapshot |
+| [**GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement | Get the staffing requirement by planning group for a forecast |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecasts) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts | Get short term forecasts |
 | [**GetWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunits) | **Get** /api/v2/workforcemanagement/businessunits | Get business units |
 | [**GetWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitsdivisionviews) | **Get** /api/v2/workforcemanagement/businessunits/divisionviews | Get business units across divisions |
@@ -99,6 +102,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitschedulingrun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitservicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
 | [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Update the requested management unit |
+| [**PatchWorkforcemanagementManagementunitAgents**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitagents) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents | Update agent configurations |
 | [**PatchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeofflimit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Updates a time off limit object. |
 | [**PatchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeoffplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId} | Updates a time off plan |
 | [**PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeoffrequestuserintegrationstatus) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus | Set integration status for a time off request. |
@@ -125,6 +129,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitservicegoaltemplates) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Adds a new service goal template |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleagentschedulesquery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query | Loads agent schedule data from the schedule. Used in combination with the metadata route |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleCopy**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekschedulecopy) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy | Copy a schedule |
+| [**PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculations) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations | Request a daily recalculation of the performance prediction for the associated schedule |
+| [**PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculationsuploadurl) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl | Upload daily activity changes to be able to request a performance prediction recalculation |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleReschedule**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekschedulereschedule) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule | Start a rescheduling run |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleUpdate**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleupdate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update | Starts processing a schedule update |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleupdateuploadurl) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl | Creates a signed upload URL for updating a schedule |
@@ -2841,6 +2847,144 @@ namespace Example
 
 [**BuAgentScheduleHistoryResponse**](BuAgentScheduleHistoryResponse.html)
 
+<a name="getworkforcemanagementbusinessunitweekscheduleperformancepredictions"></a>
+
+## [**PerformancePredictionResponse**](PerformancePredictionResponse.html) GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions (string businessUnitId, string weekId, string scheduleId)
+
+
+
+Get the performance prediction for the associated schedule
+
+Requires ANY permissions: 
+
+* wfm:schedule:view
+* wfm:publishedSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the performance prediction belongs
+            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format
+            var scheduleId = scheduleId_example;  // string | The ID of the schedule the performance prediction belongs to
+
+            try
+            { 
+                // Get the performance prediction for the associated schedule
+                PerformancePredictionResponse result = apiInstance.GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions(businessUnitId, weekId, scheduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit to which the performance prediction belongs |  |
+| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format |  |
+| **scheduleId** | **string**| The ID of the schedule the performance prediction belongs to |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformancePredictionResponse**](PerformancePredictionResponse.html)
+
+<a name="getworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculation"></a>
+
+## [**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse.html) GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation (string businessUnitId, string weekId, string scheduleId, string recalculationId)
+
+
+
+Get recalculated performance prediction result
+
+Requires ANY permissions: 
+
+* wfm:schedule:view
+* wfm:publishedSchedule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the performance prediction belongs
+            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format
+            var scheduleId = scheduleId_example;  // string | The ID of the schedule the recalculation belongs to
+            var recalculationId = recalculationId_example;  // string | The ID of the recalculation request
+
+            try
+            { 
+                // Get recalculated performance prediction result
+                PerformancePredictionRecalculationResponse result = apiInstance.GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation(businessUnitId, weekId, scheduleId, recalculationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit to which the performance prediction belongs |  |
+| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format |  |
+| **scheduleId** | **string**| The ID of the schedule the recalculation belongs to |  |
+| **recalculationId** | **string**| The ID of the recalculation request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse.html)
+
 <a name="getworkforcemanagementbusinessunitweekschedules"></a>
 
 ## [**BuScheduleListing**](BuScheduleListing.html) GetWorkforcemanagementBusinessunitWeekSchedules (string businessUnitId, string weekId, bool? includeOnlyPublished = null, string expand = null)
@@ -3261,6 +3405,75 @@ namespace Example
 ### Return type
 
 [**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse.html)
+
+<a name="getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement"></a>
+
+## [**BuForecastStaffingRequirementsResultResponse**](BuForecastStaffingRequirementsResultResponse.html) GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+
+
+
+Get the staffing requirement by planning group for a forecast
+
+Requires ANY permissions: 
+
+* wfm:staffingRequirement:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
+            var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var forecastId = forecastId_example;  // string | The ID of the forecast
+            var weekNumbers = new List<string>(); // List<string> | The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional) 
+
+            try
+            { 
+                // Get the staffing requirement by planning group for a forecast
+                BuForecastStaffingRequirementsResultResponse result = apiInstance.GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
+| **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **forecastId** | **string**| The ID of the forecast |  |
+| **weekNumbers** | [**List<string>**](string.html)| The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuForecastStaffingRequirementsResultResponse**](BuForecastStaffingRequirementsResultResponse.html)
 
 <a name="getworkforcemanagementbusinessunitweekshorttermforecasts"></a>
 
@@ -6479,6 +6692,70 @@ namespace Example
 
 [**ManagementUnit**](ManagementUnit.html)
 
+<a name="patchworkforcemanagementmanagementunitagents"></a>
+
+## void PatchWorkforcemanagementManagementunitAgents (string managementUnitId, UpdateMuAgentsRequest body = null)
+
+
+
+Update agent configurations
+
+Requires ANY permissions: 
+
+* wfm:agent:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitAgentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var body = new UpdateMuAgentsRequest(); // UpdateMuAgentsRequest | body (optional) 
+
+            try
+            { 
+                // Update agent configurations
+                apiInstance.PatchWorkforcemanagementManagementunitAgents(managementUnitId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunitAgents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="patchworkforcemanagementmanagementunittimeofflimit"></a>
 
 ## [**TimeOffLimit**](TimeOffLimit.html) PatchWorkforcemanagementManagementunitTimeofflimit (string managementUnitId, string timeOffLimitId, UpdateTimeOffLimitRequest body = null)
@@ -8208,6 +8485,144 @@ namespace Example
 ### Return type
 
 [**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html)
+
+<a name="postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculations"></a>
+
+## [**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse.html) PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null)
+
+
+
+Request a daily recalculation of the performance prediction for the associated schedule
+
+Requires ANY permissions: 
+
+* wfm:schedule:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the performance prediction belongs
+            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format
+            var scheduleId = scheduleId_example;  // string | The ID of the schedule the performance prediction belongs to
+            var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | body (optional) 
+
+            try
+            { 
+                // Request a daily recalculation of the performance prediction for the associated schedule
+                PerformancePredictionRecalculationResponse result = apiInstance.PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId, weekId, scheduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit to which the performance prediction belongs |  |
+| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format |  |
+| **scheduleId** | **string**| The ID of the schedule the performance prediction belongs to |  |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse.html)
+
+<a name="postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculationsuploadurl"></a>
+
+## [**PerformancePredictionRecalculationUploadResponse**](PerformancePredictionRecalculationUploadResponse.html) PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null)
+
+
+
+Upload daily activity changes to be able to request a performance prediction recalculation
+
+Requires ANY permissions: 
+
+* wfm:schedule:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the performance prediction belongs
+            var weekId = weekId_example;  // string | First day of schedule week in yyyy-MM-dd format
+            var scheduleId = scheduleId_example;  // string | The ID of the schedule the performance prediction belongs to
+            var body = new UploadUrlRequestBody(); // UploadUrlRequestBody | body (optional) 
+
+            try
+            { 
+                // Upload daily activity changes to be able to request a performance prediction recalculation
+                PerformancePredictionRecalculationUploadResponse result = apiInstance.PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId, weekId, scheduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit to which the performance prediction belongs |  |
+| **weekId** | **string**| First day of schedule week in yyyy-MM-dd format |  |
+| **scheduleId** | **string**| The ID of the schedule the performance prediction belongs to |  |
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PerformancePredictionRecalculationUploadResponse**](PerformancePredictionRecalculationUploadResponse.html)
 
 <a name="postworkforcemanagementbusinessunitweekschedulereschedule"></a>
 

@@ -35,6 +35,12 @@ namespace PureCloudPlatform.Client.V2.Client
         us_east_2,
         [Description("https://api.sae1.pure.cloud")]
         sa_east_1,
+        [Description("https://api.mec1.pure.cloud")]
+        me_central_1,
+        [Description("https://api.apne3.pure.cloud")]
+        ap_northeast_3,
+        [Description("https://api.euc2.pure.cloud")]
+        eu_central_2,
 
     }
 

@@ -22,7 +22,6 @@ title: EvaluationResponse
 | **ReleaseDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **AssignedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ChangedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **RevisionCreatedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Queue** | [**Queue**](Queue.html) |  | [optional] |
 | **MediaType** | **List&lt;string&gt;** | List of different communication types used in conversation. | [optional] |
 | **Rescore** | **bool?** | Is only true when evaluation is re-scored. | [optional] |
@@ -34,7 +33,6 @@ title: EvaluationResponse
 | **ResourceId** | **string** | Only used for email evaluations. Will be null for all other evaluations. | [optional] |
 | **ResourceType** | **string** | The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources. | [optional] |
 | **Redacted** | **bool?** | Is only true when the user making the request does not have sufficient permissions to see evaluation | [optional] |
-| **AgentTeam** | [**Team**](Team.html) | Team of the evaluation agent | [optional] |
 | **IsScoringIndex** | **bool?** |  | [optional] |
 | **AuthorizedActions** | **List&lt;string&gt;** | List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit | [optional] |
 | **HasAssistanceFailed** | **bool?** | Is true when evaluation assistance didn&#39;t execute successfully | [optional] |

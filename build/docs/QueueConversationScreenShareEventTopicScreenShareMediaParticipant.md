@@ -43,6 +43,7 @@ title: QueueConversationScreenShareEventTopicScreenShareMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
+| **QueueMediaSettings** | [**QueueConversationScreenShareEventTopicQueueMediaSettings**](QueueConversationScreenShareEventTopicQueueMediaSettings.html) |  | [optional] |
 | **Context** | **string** |  | [optional] |
 | **PeerCount** | **int?** |  | [optional] |
 | **Sharing** | **bool?** |  | [optional] |

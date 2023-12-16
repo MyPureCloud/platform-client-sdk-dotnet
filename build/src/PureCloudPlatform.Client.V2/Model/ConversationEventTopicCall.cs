@@ -409,7 +409,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public ConversationEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, ConversationEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationEventTopicAddress Self = null, ConversationEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationEventTopicDisconnectReason> DisconnectReasons = null, ConversationEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
+        public ConversationEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, ConversationEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationEventTopicAddress Self = null, ConversationEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationEventTopicDisconnectReason> DisconnectReasons = null, ConversationEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, ConversationEventTopicQueueMediaSettings QueueMediaSettings = null)
         {
             this.Id = Id;
             this.State = State;
@@ -440,6 +441,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AgentAssistantId = AgentAssistantId;
+            this.QueueMediaSettings = QueueMediaSettings;
             
         }
         
@@ -666,6 +668,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AgentAssistantId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets QueueMediaSettings
+        /// </summary>
+        [DataMember(Name="queueMediaSettings", EmitDefaultValue=false)]
+        public ConversationEventTopicQueueMediaSettings QueueMediaSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -704,6 +714,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -888,6 +899,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentAssistantId == other.AgentAssistantId ||
                     this.AgentAssistantId != null &&
                     this.AgentAssistantId.Equals(other.AgentAssistantId)
+                ) &&
+                (
+                    this.QueueMediaSettings == other.QueueMediaSettings ||
+                    this.QueueMediaSettings != null &&
+                    this.QueueMediaSettings.Equals(other.QueueMediaSettings)
                 );
         }
 
@@ -988,6 +1004,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
+
+                if (this.QueueMediaSettings != null)
+                    hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
 
                 return hash;
             }

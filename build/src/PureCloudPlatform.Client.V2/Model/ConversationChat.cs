@@ -306,7 +306,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        public ConversationChat(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, string AvatarImageUrl = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
+        /// <param name="QueueMediaSettings">Represents the queue settings for this media type..</param>
+        public ConversationChat(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, string AvatarImageUrl = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, ConversationQueueMediaSettings QueueMediaSettings = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -329,6 +330,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
+            this.QueueMediaSettings = QueueMediaSettings;
             
         }
         
@@ -494,6 +496,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AfterCallWorkRequired { get; set; }
 
 
+
+        /// <summary>
+        /// Represents the queue settings for this media type.
+        /// </summary>
+        /// <value>Represents the queue settings for this media type.</value>
+        [DataMember(Name="queueMediaSettings", EmitDefaultValue=false)]
+        public ConversationQueueMediaSettings QueueMediaSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -524,6 +535,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
+            sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -668,6 +680,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
+                ) &&
+                (
+                    this.QueueMediaSettings == other.QueueMediaSettings ||
+                    this.QueueMediaSettings != null &&
+                    this.QueueMediaSettings.Equals(other.QueueMediaSettings)
                 );
         }
 
@@ -744,6 +761,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
+
+                if (this.QueueMediaSettings != null)
+                    hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
 
                 return hash;
             }

@@ -43,6 +43,7 @@ title: ConversationCallbackEventTopicCallbackMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
+| **QueueMediaSettings** | [**ConversationCallbackEventTopicQueueMediaSettings**](ConversationCallbackEventTopicQueueMediaSettings.html) |  | [optional] |
 | **OutboundPreview** | [**ConversationCallbackEventTopicDialerPreview**](ConversationCallbackEventTopicDialerPreview.html) |  | [optional] |
 | **Voicemail** | [**ConversationCallbackEventTopicVoicemail**](ConversationCallbackEventTopicVoicemail.html) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |

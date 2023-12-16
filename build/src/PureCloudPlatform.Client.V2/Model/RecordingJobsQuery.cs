@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class RecordingJobsQuery :  IEquatable<RecordingJobsQuery>
     {
         /// <summary>
-        /// Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported
+        /// Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date.
         /// </summary>
-        /// <value>Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported</value>
+        /// <value>Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActionEnum
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Export
         }
         /// <summary>
-        /// Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported
+        /// Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date.
         /// </summary>
-        /// <value>Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported</value>
+        /// <value>Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date.</value>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
 
@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingJobsQuery" /> class.
         /// </summary>
-        /// <param name="Action">Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported (required).</param>
+        /// <param name="Action">Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. (required).</param>
         /// <param name="ActionDate">The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ActionAge">The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings..</param>
         /// <param name="ScreenRecordingActionDate">The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -75,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value = false .</param>
         /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value = true .</param>
         /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false.</param>
-        /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability (required).</param>
+        /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years..</param>
         public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null)
         {
             this.Action = Action;
@@ -168,9 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability
+        /// Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years.
         /// </summary>
-        /// <value>Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability</value>
+        /// <value>Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years.</value>
         [DataMember(Name="conversationQuery", EmitDefaultValue=false)]
         public AsyncConversationQuery ConversationQuery { get; set; }
 

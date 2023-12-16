@@ -1001,6 +1001,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BuAgentScheduleHistoryResponse> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
+        /// Get the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>PerformancePredictionResponse</returns>
+        
+        PerformancePredictionResponse GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions (string businessUnitId, string weekId, string scheduleId);
+
+        /// <summary>
+        /// Get the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>ApiResponse of PerformancePredictionResponse</returns>
+        
+        ApiResponse<PerformancePredictionResponse> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsWithHttpInfo (string businessUnitId, string weekId, string scheduleId);
+
+        /// <summary>
+        /// Get recalculated performance prediction result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>PerformancePredictionRecalculationResponse</returns>
+        
+        PerformancePredictionRecalculationResponse GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation (string businessUnitId, string weekId, string scheduleId, string recalculationId);
+
+        /// <summary>
+        /// Get recalculated performance prediction result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>ApiResponse of PerformancePredictionRecalculationResponse</returns>
+        
+        ApiResponse<PerformancePredictionRecalculationResponse> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationWithHttpInfo (string businessUnitId, string weekId, string scheduleId, string recalculationId);
+
+        /// <summary>
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
@@ -1177,6 +1235,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ForecastPlanningGroupsResponse</returns>
         
         ApiResponse<ForecastPlanningGroupsResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>BuForecastStaffingRequirementsResultResponse</returns>
+        
+        BuForecastStaffingRequirementsResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>ApiResponse of BuForecastStaffingRequirementsResultResponse</returns>
+        
+        ApiResponse<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
 
         /// <summary>
         /// Get short term forecasts
@@ -2413,6 +2501,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ManagementUnit> PatchWorkforcemanagementManagementunitWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
 
         /// <summary>
+        /// Update agent configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns></returns>
+        
+        void PatchWorkforcemanagementManagementunitAgents (string managementUnitId, UpdateMuAgentsRequest body = null);
+
+        /// <summary>
+        /// Update agent configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PatchWorkforcemanagementManagementunitAgentsWithHttpInfo (string managementUnitId, UpdateMuAgentsRequest body = null);
+
+        /// <summary>
         /// Updates a time off limit object.
         /// </summary>
         /// <remarks>
@@ -3123,6 +3237,66 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BuAsyncScheduleResponse</returns>
         
         ApiResponse<BuAsyncScheduleResponse> PostWorkforcemanagementBusinessunitWeekScheduleCopyWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>PerformancePredictionRecalculationResponse</returns>
+        
+        PerformancePredictionRecalculationResponse PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null);
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of PerformancePredictionRecalculationResponse</returns>
+        
+        ApiResponse<PerformancePredictionRecalculationResponse> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithHttpInfo (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null);
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>PerformancePredictionRecalculationUploadResponse</returns>
+        
+        PerformancePredictionRecalculationUploadResponse PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null);
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of PerformancePredictionRecalculationUploadResponse</returns>
+        
+        ApiResponse<PerformancePredictionRecalculationUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithHttpInfo (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null);
 
         /// <summary>
         /// Start a rescheduling run
@@ -5509,6 +5683,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BuAgentScheduleHistoryResponse>> GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgentAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, string agentId);
 
         /// <summary>
+        /// Get the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>Task of PerformancePredictionResponse</returns>
+        
+        System.Threading.Tasks.Task<PerformancePredictionResponse> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsAsync (string businessUnitId, string weekId, string scheduleId);
+
+        /// <summary>
+        /// Get the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PerformancePredictionResponse>> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId);
+
+        /// <summary>
+        /// Get recalculated performance prediction result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>Task of PerformancePredictionRecalculationResponse</returns>
+        
+        System.Threading.Tasks.Task<PerformancePredictionRecalculationResponse> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationAsync (string businessUnitId, string weekId, string scheduleId, string recalculationId);
+
+        /// <summary>
+        /// Get recalculated performance prediction result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionRecalculationResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PerformancePredictionRecalculationResponse>> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId, string recalculationId);
+
+        /// <summary>
         /// Get the list of week schedules for the specified week
         /// </summary>
         /// <remarks>
@@ -5685,6 +5917,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ForecastPlanningGroupsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ForecastPlanningGroupsResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroupsAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId);
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>Task of BuForecastStaffingRequirementsResultResponse</returns>
+        
+        System.Threading.Tasks.Task<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsync (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>Task of ApiResponse (BuForecastStaffingRequirementsResultResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BuForecastStaffingRequirementsResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
 
         /// <summary>
         /// Get short term forecasts
@@ -6921,6 +7183,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> PatchWorkforcemanagementManagementunitAsyncWithHttpInfo (string managementUnitId, UpdateManagementUnitRequest body = null);
 
         /// <summary>
+        /// Update agent configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitAgentsAsync (string managementUnitId, UpdateMuAgentsRequest body = null);
+
+        /// <summary>
+        /// Update agent configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitAgentsAsyncWithHttpInfo (string managementUnitId, UpdateMuAgentsRequest body = null);
+
+        /// <summary>
         /// Updates a time off limit object.
         /// </summary>
         /// <remarks>
@@ -7631,6 +7919,66 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BuAsyncScheduleResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BuAsyncScheduleResponse>> PostWorkforcemanagementBusinessunitWeekScheduleCopyAsyncWithHttpInfo (string businessUnitId, String weekId, string scheduleId, BuCopyScheduleRequest body);
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of PerformancePredictionRecalculationResponse</returns>
+        
+        System.Threading.Tasks.Task<PerformancePredictionRecalculationResponse> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsAsync (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null);
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionRecalculationResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PerformancePredictionRecalculationResponse>> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null);
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of PerformancePredictionRecalculationUploadResponse</returns>
+        
+        System.Threading.Tasks.Task<PerformancePredictionRecalculationUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlAsync (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null);
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionRecalculationUploadResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<PerformancePredictionRecalculationUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null);
 
         /// <summary>
         /// Start a rescheduling run
@@ -17527,6 +17875,493 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>PerformancePredictionResponse</returns>
+        
+        public PerformancePredictionResponse GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions (string businessUnitId, string weekId, string scheduleId)
+        {
+             ApiResponse<PerformancePredictionResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsWithHttpInfo(businessUnitId, weekId, scheduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>ApiResponse of PerformancePredictionResponse</returns>
+        
+        public ApiResponse< PerformancePredictionResponse > GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsWithHttpInfo (string businessUnitId, string weekId, string scheduleId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>Task of PerformancePredictionResponse</returns>
+        
+        public async System.Threading.Tasks.Task<PerformancePredictionResponse> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsAsync (string businessUnitId, string weekId, string scheduleId)
+        {
+             ApiResponse<PerformancePredictionResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsAsyncWithHttpInfo(businessUnitId, weekId, scheduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PerformancePredictionResponse>> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get recalculated performance prediction result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>PerformancePredictionRecalculationResponse</returns>
+        
+        public PerformancePredictionRecalculationResponse GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation (string businessUnitId, string weekId, string scheduleId, string recalculationId)
+        {
+             ApiResponse<PerformancePredictionRecalculationResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationWithHttpInfo(businessUnitId, weekId, scheduleId, recalculationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recalculated performance prediction result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>ApiResponse of PerformancePredictionRecalculationResponse</returns>
+        
+        public ApiResponse< PerformancePredictionRecalculationResponse > GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationWithHttpInfo (string businessUnitId, string weekId, string scheduleId, string recalculationId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            // verify the required parameter 'recalculationId' is set
+            if (recalculationId == null)
+                throw new ApiException(400, "Missing required parameter 'recalculationId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+            if (recalculationId != null) localVarPathParams.Add("recalculationId", this.Configuration.ApiClient.ParameterToString(recalculationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionRecalculationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionRecalculationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionRecalculationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get recalculated performance prediction result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>Task of PerformancePredictionRecalculationResponse</returns>
+        
+        public async System.Threading.Tasks.Task<PerformancePredictionRecalculationResponse> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationAsync (string businessUnitId, string weekId, string scheduleId, string recalculationId)
+        {
+             ApiResponse<PerformancePredictionRecalculationResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, recalculationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recalculated performance prediction result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the recalculation belongs to</param>
+        /// <param name="recalculationId">The ID of the recalculation request</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionRecalculationResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PerformancePredictionRecalculationResponse>> GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId, string recalculationId)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            
+            // verify the required parameter 'recalculationId' is set
+            if (recalculationId == null)
+                throw new ApiException(400, "Missing required parameter 'recalculationId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+            if (recalculationId != null) localVarPathParams.Add("recalculationId", this.Configuration.ApiClient.ParameterToString(recalculationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionRecalculationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionRecalculationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionRecalculationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the list of week schedules for the specified week 
         /// Use \"recent\" (without quotes) for the `weekId` path parameter to fetch all forecasts for +/- 26 weeks from the current date. Response will include any schedule which spans the specified week
         /// </summary>
@@ -18965,6 +19800,249 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ForecastPlanningGroupsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ForecastPlanningGroupsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForecastPlanningGroupsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>BuForecastStaffingRequirementsResultResponse</returns>
+        
+        public BuForecastStaffingRequirementsResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        {
+             ApiResponse<BuForecastStaffingRequirementsResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumbers);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>ApiResponse of BuForecastStaffingRequirementsResultResponse</returns>
+        
+        public ApiResponse< BuForecastStaffingRequirementsResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
+            // verify the required parameter 'forecastId' is set
+            if (forecastId == null)
+                throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
+
+            // Query params
+            if (weekNumbers != null) weekNumbers.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("weekNumbers", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuForecastStaffingRequirementsResultResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BuForecastStaffingRequirementsResultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuForecastStaffingRequirementsResultResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>Task of BuForecastStaffingRequirementsResultResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsync (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        {
+             ApiResponse<BuForecastStaffingRequirementsResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumbers);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the staffing requirement by planning group for a forecast 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the forecast belongs</param>
+        /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="forecastId">The ID of the forecast</param>
+        /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <returns>Task of ApiResponse (BuForecastStaffingRequirementsResultResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BuForecastStaffingRequirementsResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
+            
+            // verify the required parameter 'weekDateId' is set
+            if (weekDateId == null)
+                throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
+            
+            // verify the required parameter 'forecastId' is set
+            if (forecastId == null)
+                throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekDateId != null) localVarPathParams.Add("weekDateId", this.Configuration.ApiClient.ParameterToString(weekDateId));
+            if (forecastId != null) localVarPathParams.Add("forecastId", this.Configuration.ApiClient.ParameterToString(forecastId));
+
+            // Query params
+            if (weekNumbers != null) weekNumbers.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("weekNumbers", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BuForecastStaffingRequirementsResultResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BuForecastStaffingRequirementsResultResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuForecastStaffingRequirementsResultResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29477,6 +30555,231 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update agent configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns></returns>
+        
+        public void PatchWorkforcemanagementManagementunitAgents (string managementUnitId, UpdateMuAgentsRequest body = null)
+        {
+             PatchWorkforcemanagementManagementunitAgentsWithHttpInfo(managementUnitId, body);
+        }
+
+        /// <summary>
+        /// Update agent configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PatchWorkforcemanagementManagementunitAgentsWithHttpInfo (string managementUnitId, UpdateMuAgentsRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgents");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update agent configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PatchWorkforcemanagementManagementunitAgentsAsync (string managementUnitId, UpdateMuAgentsRequest body = null)
+        {
+             await PatchWorkforcemanagementManagementunitAgentsAsyncWithHttpInfo(managementUnitId, body);
+
+        }
+
+        /// <summary>
+        /// Update agent configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementManagementunitAgentsAsyncWithHttpInfo (string managementUnitId, UpdateMuAgentsRequest body = null)
+        { 
+            // verify the required parameter 'managementUnitId' is set
+            if (managementUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgents");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (managementUnitId != null) localVarPathParams.Add("managementUnitId", this.Configuration.ApiClient.ParameterToString(managementUnitId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementManagementunitAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Updates a time off limit object. 
         /// Updates time off limit object properties, but not daily values.
         /// </summary>
@@ -35585,6 +36888,512 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BuAsyncScheduleResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BuAsyncScheduleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BuAsyncScheduleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>PerformancePredictionRecalculationResponse</returns>
+        
+        public PerformancePredictionRecalculationResponse PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null)
+        {
+             ApiResponse<PerformancePredictionRecalculationResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of PerformancePredictionRecalculationResponse</returns>
+        
+        public ApiResponse< PerformancePredictionRecalculationResponse > PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsWithHttpInfo (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionRecalculationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionRecalculationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionRecalculationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of PerformancePredictionRecalculationResponse</returns>
+        
+        public async System.Threading.Tasks.Task<PerformancePredictionRecalculationResponse> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsAsync (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null)
+        {
+             ApiResponse<PerformancePredictionRecalculationResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request a daily recalculation of the performance prediction for the associated schedule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionRecalculationResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PerformancePredictionRecalculationResponse>> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId, WfmProcessUploadRequest body = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionRecalculationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionRecalculationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionRecalculationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>PerformancePredictionRecalculationUploadResponse</returns>
+        
+        public PerformancePredictionRecalculationUploadResponse PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null)
+        {
+             ApiResponse<PerformancePredictionRecalculationUploadResponse> localVarResponse = PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of PerformancePredictionRecalculationUploadResponse</returns>
+        
+        public ApiResponse< PerformancePredictionRecalculationUploadResponse > PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlWithHttpInfo (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionRecalculationUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionRecalculationUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionRecalculationUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of PerformancePredictionRecalculationUploadResponse</returns>
+        
+        public async System.Threading.Tasks.Task<PerformancePredictionRecalculationUploadResponse> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlAsync (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null)
+        {
+             ApiResponse<PerformancePredictionRecalculationUploadResponse> localVarResponse = await PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlAsyncWithHttpInfo(businessUnitId, weekId, scheduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Upload daily activity changes to be able to request a performance prediction recalculation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="businessUnitId">The ID of the business unit to which the performance prediction belongs</param>
+        /// <param name="weekId">First day of schedule week in yyyy-MM-dd format</param>
+        /// <param name="scheduleId">The ID of the schedule the performance prediction belongs to</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (PerformancePredictionRecalculationUploadResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<PerformancePredictionRecalculationUploadResponse>> PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurlAsyncWithHttpInfo (string businessUnitId, string weekId, string scheduleId, UploadUrlRequestBody body = null)
+        { 
+            // verify the required parameter 'businessUnitId' is set
+            if (businessUnitId == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
+            
+            // verify the required parameter 'weekId' is set
+            if (weekId == null)
+                throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
+            
+            // verify the required parameter 'scheduleId' is set
+            if (scheduleId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (businessUnitId != null) localVarPathParams.Add("businessUnitId", this.Configuration.ApiClient.ParameterToString(businessUnitId));
+            if (weekId != null) localVarPathParams.Add("weekId", this.Configuration.ApiClient.ParameterToString(weekId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PerformancePredictionRecalculationUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (PerformancePredictionRecalculationUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PerformancePredictionRecalculationUploadResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

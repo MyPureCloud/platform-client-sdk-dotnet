@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Deleted for "DELETED"
             /// </summary>
             [EnumMember(Value = "DELETED")]
-            Deleted
+            Deleted,
+            
+            /// <summary>
+            /// Enum Restored for "RESTORED"
+            /// </summary>
+            [EnumMember(Value = "RESTORED")]
+            Restored
         }
         /// <summary>
         /// Configured state of the integration.

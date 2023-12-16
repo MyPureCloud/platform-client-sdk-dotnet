@@ -33,6 +33,7 @@ title: ConversationEventTopicMessage
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
 | **ByoSmsIntegrationId** | **string** |  | [optional] |
+| **QueueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
 {: class="table table-striped"}
 
 

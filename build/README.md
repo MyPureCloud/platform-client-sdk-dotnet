@@ -123,9 +123,37 @@ using PureCloudPlatform.Client.V2.Extensions;
 Then call the _PostTokenSaml2Bearer_ extension method of _ApiClient_ with your orgName and encodedSamlAssertion
 
 ```csharp
-var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+var accessTokenInfo = Configuration.Default.ApiClient.PostTokenSaml2Bearer("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",orgName, encodedSamlAssertion);
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
+```
+
+#### PKCE Grant
+
+**Use when...**
+
+* The app is authenticating as a human user, the [PKCE Grant](https://developer.genesys.cloud/authorization/platform-auth/use-pkce) can be used via the AuthExtensions extension methods.
+
+First, use the following namespaces:
+
+```csharp
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Extensions;
+```
+
+Then call the _PostTokenPKCE_ extension method of _ApiClient_ with your orgName and encodedSamlAssertion
+
+```csharp
+var accessTokenInfo = Configuration.Default.ApiClient.PostTokenPKCE(clientId, redirectUri, codeVerifier, authCode);
+Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
+```
+
+The SDK provides methods to generate a PKCE Code Verifier and to compute PKCE Code Challenge.
+
+```csharp
+codeVerifier = Configuration.Default.ApiClient.GeneratePKCECodeVerifier(128);
+codeChallenge = Configuration.Default.ApiClient.ComputePKCECodeChallenge(codeVerifier);
 ```
 
 #### Client Credentials Grant

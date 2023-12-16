@@ -594,9 +594,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        EvaluationForm GetQualityForm (string formId);
+        EvaluationFormResponse GetQualityForm (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -606,9 +606,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        ApiResponse<EvaluationForm> GetQualityFormWithHttpInfo (string formId);
+        ApiResponse<EvaluationFormResponse> GetQualityFormWithHttpInfo (string formId);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -620,9 +620,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        EvaluationFormEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
+        EvaluationFormResponseEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -634,9 +634,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -653,9 +653,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        EvaluationFormResponseEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -672,9 +672,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluation form
@@ -684,9 +684,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        EvaluationForm GetQualityFormsEvaluation (string formId);
+        EvaluationFormResponse GetQualityFormsEvaluation (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -696,9 +696,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        ApiResponse<EvaluationForm> GetQualityFormsEvaluationWithHttpInfo (string formId);
+        ApiResponse<EvaluationFormResponse> GetQualityFormsEvaluationWithHttpInfo (string formId);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -711,9 +711,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         
-        EvaluationFormEntityListing GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        EvaluationFormResponseEntityListing GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -726,9 +726,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormsEvaluationVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -745,9 +745,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         
-        EvaluationFormEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        EvaluationFormResponseEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -764,9 +764,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids
@@ -776,9 +776,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>List&lt;EvaluationForm&gt;</returns>
+        /// <returns>List&lt;EvaluationFormResponse&gt;</returns>
         
-        List<EvaluationForm> GetQualityFormsEvaluationsBulkContexts (List<string> contextId);
+        List<EvaluationFormResponse> GetQualityFormsEvaluationsBulkContexts (List<string> contextId);
 
         /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids
@@ -788,9 +788,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>ApiResponse of List&lt;EvaluationForm&gt;</returns>
+        /// <returns>ApiResponse of List&lt;EvaluationFormResponse&gt;</returns>
         
-        ApiResponse<List<EvaluationForm>> GetQualityFormsEvaluationsBulkContextsWithHttpInfo (List<string> contextId);
+        ApiResponse<List<EvaluationFormResponse>> GetQualityFormsEvaluationsBulkContextsWithHttpInfo (List<string> contextId);
 
         /// <summary>
         /// Get a survey form
@@ -940,9 +940,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        EvaluationForm GetQualityPublishedform (string formId);
+        EvaluationFormResponse GetQualityPublishedform (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -952,9 +952,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        ApiResponse<EvaluationForm> GetQualityPublishedformWithHttpInfo (string formId);
+        ApiResponse<EvaluationFormResponse> GetQualityPublishedformWithHttpInfo (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -967,9 +967,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        EvaluationFormResponseEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -982,9 +982,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the most recent published version of an evaluation form.
@@ -994,9 +994,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        EvaluationForm GetQualityPublishedformsEvaluation (string formId);
+        EvaluationFormResponse GetQualityPublishedformsEvaluation (string formId);
 
         /// <summary>
         /// Get the most recent published version of an evaluation form.
@@ -1006,9 +1006,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        ApiResponse<EvaluationForm> GetQualityPublishedformsEvaluationWithHttpInfo (string formId);
+        ApiResponse<EvaluationFormResponse> GetQualityPublishedformsEvaluationWithHttpInfo (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -1021,9 +1021,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         
-        EvaluationFormEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        EvaluationFormResponseEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -1036,9 +1036,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         
-        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the most recent published version of a survey form.
@@ -1402,9 +1402,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        EvaluationForm PostQualityForms (EvaluationForm body);
+        EvaluationFormResponse PostQualityForms (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -1414,9 +1414,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        ApiResponse<EvaluationForm> PostQualityFormsWithHttpInfo (EvaluationForm body);
+        ApiResponse<EvaluationFormResponse> PostQualityFormsWithHttpInfo (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -1426,9 +1426,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        EvaluationForm PostQualityFormsEvaluations (EvaluationForm body);
+        EvaluationFormResponse PostQualityFormsEvaluations (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -1438,9 +1438,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        ApiResponse<EvaluationForm> PostQualityFormsEvaluationsWithHttpInfo (EvaluationForm body);
+        ApiResponse<EvaluationFormResponse> PostQualityFormsEvaluationsWithHttpInfo (EvaluationForm body);
 
         /// <summary>
         /// Create a survey form.
@@ -1474,9 +1474,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        EvaluationForm PostQualityPublishedforms (PublishForm body);
+        EvaluationFormResponse PostQualityPublishedforms (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -1486,9 +1486,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        ApiResponse<EvaluationForm> PostQualityPublishedformsWithHttpInfo (PublishForm body);
+        ApiResponse<EvaluationFormResponse> PostQualityPublishedformsWithHttpInfo (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -1498,9 +1498,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        EvaluationForm PostQualityPublishedformsEvaluations (PublishForm body);
+        EvaluationFormResponse PostQualityPublishedformsEvaluations (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -1510,9 +1510,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        ApiResponse<EvaluationForm> PostQualityPublishedformsEvaluationsWithHttpInfo (PublishForm body);
+        ApiResponse<EvaluationFormResponse> PostQualityPublishedformsEvaluationsWithHttpInfo (PublishForm body);
 
         /// <summary>
         /// Publish a survey form.
@@ -1627,9 +1627,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        EvaluationForm PutQualityForm (string formId, EvaluationForm body);
+        EvaluationFormResponse PutQualityForm (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -1640,9 +1640,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        ApiResponse<EvaluationForm> PutQualityFormWithHttpInfo (string formId, EvaluationForm body);
+        ApiResponse<EvaluationFormResponse> PutQualityFormWithHttpInfo (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -1653,9 +1653,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        EvaluationForm PutQualityFormsEvaluation (string formId, EvaluationForm body);
+        EvaluationFormResponse PutQualityFormsEvaluation (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -1666,9 +1666,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        ApiResponse<EvaluationForm> PutQualityFormsEvaluationWithHttpInfo (string formId, EvaluationForm body);
+        ApiResponse<EvaluationFormResponse> PutQualityFormsEvaluationWithHttpInfo (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update a survey form.
@@ -2304,9 +2304,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationForm> GetQualityFormAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityFormAsync (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -2316,9 +2316,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityFormAsyncWithHttpInfo (string formId);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -2330,9 +2330,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -2344,9 +2344,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -2363,9 +2363,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -2382,9 +2382,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluation form
@@ -2394,9 +2394,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        System.Threading.Tasks.Task<EvaluationForm> GetQualityFormsEvaluationAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityFormsEvaluationAsync (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -2406,9 +2406,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormsEvaluationAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityFormsEvaluationAsyncWithHttpInfo (string formId);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -2421,9 +2421,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -2436,9 +2436,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -2455,9 +2455,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -2474,9 +2474,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids
@@ -2486,9 +2486,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>Task of List&lt;EvaluationForm&gt;</returns>
+        /// <returns>Task of List&lt;EvaluationFormResponse&gt;</returns>
         
-        System.Threading.Tasks.Task<List<EvaluationForm>> GetQualityFormsEvaluationsBulkContextsAsync (List<string> contextId);
+        System.Threading.Tasks.Task<List<EvaluationFormResponse>> GetQualityFormsEvaluationsBulkContextsAsync (List<string> contextId);
 
         /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids
@@ -2498,9 +2498,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>Task of ApiResponse (List&lt;EvaluationForm&gt;)</returns>
+        /// <returns>Task of ApiResponse (List&lt;EvaluationFormResponse&gt;)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<List<EvaluationForm>>> GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo (List<string> contextId);
+        System.Threading.Tasks.Task<ApiResponse<List<EvaluationFormResponse>>> GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo (List<string> contextId);
 
         /// <summary>
         /// Get a survey form
@@ -2650,9 +2650,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityPublishedformAsync (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2662,9 +2662,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityPublishedformAsyncWithHttpInfo (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2677,9 +2677,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2692,9 +2692,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the most recent published version of an evaluation form.
@@ -2704,9 +2704,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformsEvaluationAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityPublishedformsEvaluationAsync (string formId);
 
         /// <summary>
         /// Get the most recent published version of an evaluation form.
@@ -2716,9 +2716,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformsEvaluationAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityPublishedformsEvaluationAsyncWithHttpInfo (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2731,9 +2731,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -2746,9 +2746,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null);
 
         /// <summary>
         /// Get the most recent published version of a survey form.
@@ -3112,9 +3112,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsAsync (EvaluationForm body);
+        System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityFormsAsync (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -3124,9 +3124,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -3136,9 +3136,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsEvaluationsAsync (EvaluationForm body);
+        System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityFormsEvaluationsAsync (EvaluationForm body);
 
         /// <summary>
         /// Create an evaluation form.
@@ -3148,9 +3148,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsEvaluationsAsyncWithHttpInfo (EvaluationForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityFormsEvaluationsAsyncWithHttpInfo (EvaluationForm body);
 
         /// <summary>
         /// Create a survey form.
@@ -3184,9 +3184,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (PublishForm body);
+        System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityPublishedformsAsync (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -3196,9 +3196,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (PublishForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityPublishedformsAsyncWithHttpInfo (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -3208,9 +3208,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsEvaluationsAsync (PublishForm body);
+        System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityPublishedformsEvaluationsAsync (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -3220,9 +3220,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsEvaluationsAsyncWithHttpInfo (PublishForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityPublishedformsEvaluationsAsyncWithHttpInfo (PublishForm body);
 
         /// <summary>
         /// Publish a survey form.
@@ -3337,9 +3337,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationForm> PutQualityFormAsync (string formId, EvaluationForm body);
+        System.Threading.Tasks.Task<EvaluationFormResponse> PutQualityFormAsync (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -3350,9 +3350,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -3363,9 +3363,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        System.Threading.Tasks.Task<EvaluationForm> PutQualityFormsEvaluationAsync (string formId, EvaluationForm body);
+        System.Threading.Tasks.Task<EvaluationFormResponse> PutQualityFormsEvaluationAsync (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update an evaluation form.
@@ -3376,9 +3376,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormsEvaluationAsyncWithHttpInfo (string formId, EvaluationForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PutQualityFormsEvaluationAsyncWithHttpInfo (string formId, EvaluationForm body);
 
         /// <summary>
         /// Update a survey form.
@@ -7728,11 +7728,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        public EvaluationForm GetQualityForm (string formId)
+        public EvaluationFormResponse GetQualityForm (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = GetQualityFormWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = GetQualityFormWithHttpInfo(formId);
              return localVarResponse.Data;
         }
 
@@ -7742,9 +7742,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        public ApiResponse< EvaluationForm > GetQualityFormWithHttpInfo (string formId)
+        public ApiResponse< EvaluationFormResponse > GetQualityFormWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -7818,9 +7818,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7832,11 +7832,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityFormAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityFormAsync (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await GetQualityFormAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await GetQualityFormAsyncWithHttpInfo(formId);
              return localVarResponse.Data;
 
         }
@@ -7847,9 +7847,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityFormAsyncWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -7924,9 +7924,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7941,11 +7941,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public EvaluationFormEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+        public EvaluationFormResponseEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -7957,9 +7957,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8035,9 +8035,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8051,11 +8051,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -8068,9 +8068,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8147,9 +8147,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8169,11 +8169,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public EvaluationFormResponseEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -8190,9 +8190,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms";
@@ -8270,9 +8270,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8291,11 +8291,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -8313,9 +8313,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms";
@@ -8393,9 +8393,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8408,11 +8408,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        public EvaluationForm GetQualityFormsEvaluation (string formId)
+        public EvaluationFormResponse GetQualityFormsEvaluation (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = GetQualityFormsEvaluationWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = GetQualityFormsEvaluationWithHttpInfo(formId);
              return localVarResponse.Data;
         }
 
@@ -8422,9 +8422,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        public ApiResponse< EvaluationForm > GetQualityFormsEvaluationWithHttpInfo (string formId)
+        public ApiResponse< EvaluationFormResponse > GetQualityFormsEvaluationWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8498,9 +8498,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8512,11 +8512,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityFormsEvaluationAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityFormsEvaluationAsync (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await GetQualityFormsEvaluationAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await GetQualityFormsEvaluationAsyncWithHttpInfo(formId);
              return localVarResponse.Data;
 
         }
@@ -8527,9 +8527,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormsEvaluationAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityFormsEvaluationAsyncWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8604,9 +8604,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8622,11 +8622,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         
-        public EvaluationFormEntityListing GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public EvaluationFormResponseEntityListing GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsEvaluationVersionsWithHttpInfo(formId, pageSize, pageNumber, sortOrder);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormsEvaluationVersionsWithHttpInfo(formId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -8639,9 +8639,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsEvaluationVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormsEvaluationVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8718,9 +8718,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8735,11 +8735,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsEvaluationVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber, sortOrder);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormsEvaluationVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -8753,9 +8753,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8833,9 +8833,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8855,11 +8855,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         
-        public EvaluationFormEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public EvaluationFormResponseEntityListing GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityFormsEvaluationsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormsEvaluationsWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -8876,9 +8876,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms/evaluations";
@@ -8956,9 +8956,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8977,11 +8977,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityFormsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -8999,9 +8999,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/forms/evaluations";
@@ -9079,9 +9079,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -9094,11 +9094,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>List&lt;EvaluationForm&gt;</returns>
+        /// <returns>List&lt;EvaluationFormResponse&gt;</returns>
         
-        public List<EvaluationForm> GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
+        public List<EvaluationFormResponse> GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
         {
-             ApiResponse<List<EvaluationForm>> localVarResponse = GetQualityFormsEvaluationsBulkContextsWithHttpInfo(contextId);
+             ApiResponse<List<EvaluationFormResponse>> localVarResponse = GetQualityFormsEvaluationsBulkContextsWithHttpInfo(contextId);
              return localVarResponse.Data;
         }
 
@@ -9108,9 +9108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>ApiResponse of List&lt;EvaluationForm&gt;</returns>
+        /// <returns>ApiResponse of List&lt;EvaluationFormResponse&gt;</returns>
         
-        public ApiResponse< List<EvaluationForm> > GetQualityFormsEvaluationsBulkContextsWithHttpInfo (List<string> contextId)
+        public ApiResponse< List<EvaluationFormResponse> > GetQualityFormsEvaluationsBulkContextsWithHttpInfo (List<string> contextId)
         { 
             // verify the required parameter 'contextId' is set
             if (contextId == null)
@@ -9184,9 +9184,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<EvaluationForm>>(localVarStatusCode,
+            return new ApiResponse<List<EvaluationFormResponse>>(localVarStatusCode,
                 localVarHeaders,
-                (List<EvaluationForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EvaluationForm>)),
+                (List<EvaluationFormResponse>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EvaluationFormResponse>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -9198,11 +9198,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>Task of List&lt;EvaluationForm&gt;</returns>
+        /// <returns>Task of List&lt;EvaluationFormResponse&gt;</returns>
         
-        public async System.Threading.Tasks.Task<List<EvaluationForm>> GetQualityFormsEvaluationsBulkContextsAsync (List<string> contextId)
+        public async System.Threading.Tasks.Task<List<EvaluationFormResponse>> GetQualityFormsEvaluationsBulkContextsAsync (List<string> contextId)
         {
-             ApiResponse<List<EvaluationForm>> localVarResponse = await GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo(contextId);
+             ApiResponse<List<EvaluationFormResponse>> localVarResponse = await GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo(contextId);
              return localVarResponse.Data;
 
         }
@@ -9213,9 +9213,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contextId">A comma-delimited list of valid evaluation form context ids</param>
-        /// <returns>Task of ApiResponse (List&lt;EvaluationForm&gt;)</returns>
+        /// <returns>Task of ApiResponse (List&lt;EvaluationFormResponse&gt;)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<List<EvaluationForm>>> GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo (List<string> contextId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<EvaluationFormResponse>>> GetQualityFormsEvaluationsBulkContextsAsyncWithHttpInfo (List<string> contextId)
         { 
             // verify the required parameter 'contextId' is set
             if (contextId == null)
@@ -9290,9 +9290,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulkContexts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<EvaluationForm>>(localVarStatusCode,
+            return new ApiResponse<List<EvaluationFormResponse>>(localVarStatusCode,
                 localVarHeaders,
-                (List<EvaluationForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EvaluationForm>)),
+                (List<EvaluationFormResponse>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EvaluationFormResponse>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10413,11 +10413,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        public EvaluationForm GetQualityPublishedform (string formId)
+        public EvaluationFormResponse GetQualityPublishedform (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = GetQualityPublishedformWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = GetQualityPublishedformWithHttpInfo(formId);
              return localVarResponse.Data;
         }
 
@@ -10427,9 +10427,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        public ApiResponse< EvaluationForm > GetQualityPublishedformWithHttpInfo (string formId)
+        public ApiResponse< EvaluationFormResponse > GetQualityPublishedformWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -10503,9 +10503,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedform: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10517,11 +10517,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityPublishedformAsync (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await GetQualityPublishedformAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await GetQualityPublishedformAsyncWithHttpInfo(formId);
              return localVarResponse.Data;
 
         }
@@ -10532,9 +10532,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityPublishedformAsyncWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -10609,9 +10609,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedform: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10627,11 +10627,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public EvaluationFormResponseEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityPublishedformsWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityPublishedformsWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
         }
 
@@ -10644,9 +10644,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms";
@@ -10720,9 +10720,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10737,11 +10737,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
 
         }
@@ -10755,9 +10755,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms";
@@ -10831,9 +10831,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10846,11 +10846,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        public EvaluationForm GetQualityPublishedformsEvaluation (string formId)
+        public EvaluationFormResponse GetQualityPublishedformsEvaluation (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = GetQualityPublishedformsEvaluationWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = GetQualityPublishedformsEvaluationWithHttpInfo(formId);
              return localVarResponse.Data;
         }
 
@@ -10860,9 +10860,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        public ApiResponse< EvaluationForm > GetQualityPublishedformsEvaluationWithHttpInfo (string formId)
+        public ApiResponse< EvaluationFormResponse > GetQualityPublishedformsEvaluationWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -10936,9 +10936,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10950,11 +10950,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformsEvaluationAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> GetQualityPublishedformsEvaluationAsync (string formId)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await GetQualityPublishedformsEvaluationAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await GetQualityPublishedformsEvaluationAsyncWithHttpInfo(formId);
              return localVarResponse.Data;
 
         }
@@ -10965,9 +10965,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformsEvaluationAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> GetQualityPublishedformsEvaluationAsyncWithHttpInfo (string formId)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -11042,9 +11042,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -11060,11 +11060,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>EvaluationFormEntityListing</returns>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
         
-        public EvaluationFormEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public EvaluationFormResponseEntityListing GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = GetQualityPublishedformsEvaluationsWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityPublishedformsEvaluationsWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
         }
 
@@ -11077,9 +11077,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         
-        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityPublishedformsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms/evaluations";
@@ -11153,9 +11153,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -11170,11 +11170,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of EvaluationFormEntityListing</returns>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityPublishedformsEvaluationsAsync (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         {
-             ApiResponse<EvaluationFormEntityListing> localVarResponse = await GetQualityPublishedformsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityPublishedformsEvaluationsAsyncWithHttpInfo(pageSize, pageNumber, name, onlyLatestPerContext);
              return localVarResponse.Data;
 
         }
@@ -11188,9 +11188,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="onlyLatestPerContext">onlyLatestPerContext (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
         { 
 
             var localVarPath = "/api/v2/quality/publishedforms/evaluations";
@@ -11264,9 +11264,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetQualityPublishedformsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationFormEntityListing>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationFormEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormEntityListing)),
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14376,11 +14376,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        public EvaluationForm PostQualityForms (EvaluationForm body)
+        public EvaluationFormResponse PostQualityForms (EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PostQualityFormsWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = PostQualityFormsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -14390,9 +14390,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        public ApiResponse< EvaluationForm > PostQualityFormsWithHttpInfo (EvaluationForm body)
+        public ApiResponse< EvaluationFormResponse > PostQualityFormsWithHttpInfo (EvaluationForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -14471,9 +14471,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14485,11 +14485,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsAsync (EvaluationForm body)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityFormsAsync (EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PostQualityFormsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await PostQualityFormsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -14500,9 +14500,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -14582,9 +14582,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityForms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14597,11 +14597,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        public EvaluationForm PostQualityFormsEvaluations (EvaluationForm body)
+        public EvaluationFormResponse PostQualityFormsEvaluations (EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PostQualityFormsEvaluationsWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = PostQualityFormsEvaluationsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -14611,9 +14611,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        public ApiResponse< EvaluationForm > PostQualityFormsEvaluationsWithHttpInfo (EvaluationForm body)
+        public ApiResponse< EvaluationFormResponse > PostQualityFormsEvaluationsWithHttpInfo (EvaluationForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -14692,9 +14692,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityFormsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14706,11 +14706,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsEvaluationsAsync (EvaluationForm body)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityFormsEvaluationsAsync (EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PostQualityFormsEvaluationsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await PostQualityFormsEvaluationsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -14721,9 +14721,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsEvaluationsAsyncWithHttpInfo (EvaluationForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityFormsEvaluationsAsyncWithHttpInfo (EvaluationForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -14803,9 +14803,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityFormsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15039,11 +15039,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        public EvaluationForm PostQualityPublishedforms (PublishForm body)
+        public EvaluationFormResponse PostQualityPublishedforms (PublishForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PostQualityPublishedformsWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = PostQualityPublishedformsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -15053,9 +15053,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        public ApiResponse< EvaluationForm > PostQualityPublishedformsWithHttpInfo (PublishForm body)
+        public ApiResponse< EvaluationFormResponse > PostQualityPublishedformsWithHttpInfo (PublishForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15134,9 +15134,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15148,11 +15148,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (PublishForm body)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityPublishedformsAsync (PublishForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PostQualityPublishedformsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await PostQualityPublishedformsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -15163,9 +15163,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (PublishForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityPublishedformsAsyncWithHttpInfo (PublishForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15245,9 +15245,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityPublishedforms: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15260,11 +15260,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        public EvaluationForm PostQualityPublishedformsEvaluations (PublishForm body)
+        public EvaluationFormResponse PostQualityPublishedformsEvaluations (PublishForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PostQualityPublishedformsEvaluationsWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = PostQualityPublishedformsEvaluationsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -15274,9 +15274,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        public ApiResponse< EvaluationForm > PostQualityPublishedformsEvaluationsWithHttpInfo (PublishForm body)
+        public ApiResponse< EvaluationFormResponse > PostQualityPublishedformsEvaluationsWithHttpInfo (PublishForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15355,9 +15355,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityPublishedformsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15369,11 +15369,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsEvaluationsAsync (PublishForm body)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> PostQualityPublishedformsEvaluationsAsync (PublishForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PostQualityPublishedformsEvaluationsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await PostQualityPublishedformsEvaluationsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -15384,9 +15384,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Publish request containing id of form to publish</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsEvaluationsAsyncWithHttpInfo (PublishForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PostQualityPublishedformsEvaluationsAsyncWithHttpInfo (PublishForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15466,9 +15466,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualityPublishedformsEvaluations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16411,11 +16411,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         [Obsolete]
-        public EvaluationForm PutQualityForm (string formId, EvaluationForm body)
+        public EvaluationFormResponse PutQualityForm (string formId, EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PutQualityFormWithHttpInfo(formId, body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = PutQualityFormWithHttpInfo(formId, body);
              return localVarResponse.Data;
         }
 
@@ -16426,9 +16426,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         [Obsolete]
-        public ApiResponse< EvaluationForm > PutQualityFormWithHttpInfo (string formId, EvaluationForm body)
+        public ApiResponse< EvaluationFormResponse > PutQualityFormWithHttpInfo (string formId, EvaluationForm body)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -16511,9 +16511,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutQualityForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16526,11 +16526,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationForm> PutQualityFormAsync (string formId, EvaluationForm body)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> PutQualityFormAsync (string formId, EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PutQualityFormAsyncWithHttpInfo(formId, body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await PutQualityFormAsyncWithHttpInfo(formId, body);
              return localVarResponse.Data;
 
         }
@@ -16542,9 +16542,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -16629,9 +16629,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutQualityForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16645,11 +16645,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>EvaluationForm</returns>
+        /// <returns>EvaluationFormResponse</returns>
         
-        public EvaluationForm PutQualityFormsEvaluation (string formId, EvaluationForm body)
+        public EvaluationFormResponse PutQualityFormsEvaluation (string formId, EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = PutQualityFormsEvaluationWithHttpInfo(formId, body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = PutQualityFormsEvaluationWithHttpInfo(formId, body);
              return localVarResponse.Data;
         }
 
@@ -16660,9 +16660,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>ApiResponse of EvaluationForm</returns>
+        /// <returns>ApiResponse of EvaluationFormResponse</returns>
         
-        public ApiResponse< EvaluationForm > PutQualityFormsEvaluationWithHttpInfo (string formId, EvaluationForm body)
+        public ApiResponse< EvaluationFormResponse > PutQualityFormsEvaluationWithHttpInfo (string formId, EvaluationForm body)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -16745,9 +16745,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16760,11 +16760,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of EvaluationForm</returns>
+        /// <returns>Task of EvaluationFormResponse</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationForm> PutQualityFormsEvaluationAsync (string formId, EvaluationForm body)
+        public async System.Threading.Tasks.Task<EvaluationFormResponse> PutQualityFormsEvaluationAsync (string formId, EvaluationForm body)
         {
-             ApiResponse<EvaluationForm> localVarResponse = await PutQualityFormsEvaluationAsyncWithHttpInfo(formId, body);
+             ApiResponse<EvaluationFormResponse> localVarResponse = await PutQualityFormsEvaluationAsyncWithHttpInfo(formId, body);
              return localVarResponse.Data;
 
         }
@@ -16776,9 +16776,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
         /// <param name="body">Evaluation form</param>
-        /// <returns>Task of ApiResponse (EvaluationForm)</returns>
+        /// <returns>Task of ApiResponse (EvaluationFormResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormsEvaluationAsyncWithHttpInfo (string formId, EvaluationForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PutQualityFormsEvaluationAsyncWithHttpInfo (string formId, EvaluationForm body)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -16863,9 +16863,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EvaluationForm>(localVarStatusCode,
+            return new ApiResponse<EvaluationFormResponse>(localVarStatusCode,
                 localVarHeaders,
-                (EvaluationForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)),
+                (EvaluationFormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// EvaluationFormEntityListing
+    /// EvaluationFormResponseEntityListing
     /// </summary>
     [DataContract]
-    public partial class EvaluationFormEntityListing :  IEquatable<EvaluationFormEntityListing>, IPagedResource<EvaluationForm>
+    public partial class EvaluationFormResponseEntityListing :  IEquatable<EvaluationFormResponseEntityListing>, IPagedResource<EvaluationFormResponse>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationFormEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationFormResponseEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUri">LastUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public EvaluationFormEntityListing(List<EvaluationForm> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
+        public EvaluationFormResponseEntityListing(List<EvaluationFormResponse> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<EvaluationForm> Entities { get; set; }
+        public List<EvaluationFormResponse> Entities { get; set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EvaluationFormEntityListing {\n");
+            sb.Append("class EvaluationFormResponseEntityListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -171,15 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EvaluationFormEntityListing);
+            return this.Equals(obj as EvaluationFormResponseEntityListing);
         }
 
         /// <summary>
-        /// Returns true if EvaluationFormEntityListing instances are equal
+        /// Returns true if EvaluationFormResponseEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of EvaluationFormEntityListing to be compared</param>
+        /// <param name="other">Instance of EvaluationFormResponseEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EvaluationFormEntityListing other)
+        public bool Equals(EvaluationFormResponseEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

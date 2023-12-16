@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority of the conversation to use for routing decisions.</param>
         /// <param name="Skills">The skills to use for routing decisions.</param>
         /// <param name="ScoredAgents">A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents.</param>
-        public ConversationRoutingData(AddressableEntityRef Queue = null, AddressableEntityRef Language = null, int? Priority = null, List<AddressableEntityRef> Skills = null, List<ScoredAgent> ScoredAgents = null)
+        /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
+        public ConversationRoutingData(AddressableEntityRef Queue = null, AddressableEntityRef Language = null, int? Priority = null, List<AddressableEntityRef> Skills = null, List<ScoredAgent> ScoredAgents = null, string Label = null)
         {
             this.Queue = Queue;
             this.Language = Language;
             this.Priority = Priority;
             this.Skills = Skills;
             this.ScoredAgents = ScoredAgents;
+            this.Label = Label;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScoredAgent> ScoredAgents { get; set; }
 
 
+
+        /// <summary>
+        /// An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level
+        /// </summary>
+        /// <value>An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level</value>
+        [DataMember(Name="label", EmitDefaultValue=false)]
+        public string Label { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScoredAgents == other.ScoredAgents ||
                     this.ScoredAgents != null &&
                     this.ScoredAgents.SequenceEqual(other.ScoredAgents)
+                ) &&
+                (
+                    this.Label == other.Label ||
+                    this.Label != null &&
+                    this.Label.Equals(other.Label)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScoredAgents != null)
                     hash = hash * 59 + this.ScoredAgents.GetHashCode();
+
+                if (this.Label != null)
+                    hash = hash * 59 + this.Label.GetHashCode();
 
                 return hash;
             }

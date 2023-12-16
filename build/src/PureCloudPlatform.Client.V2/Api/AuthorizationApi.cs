@@ -376,7 +376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
         
@@ -390,7 +390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         
@@ -1508,7 +1508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
@@ -1522,7 +1522,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         
@@ -5217,7 +5217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
         
@@ -5233,7 +5233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         
@@ -5327,7 +5327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
         
@@ -5344,7 +5344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
-        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         

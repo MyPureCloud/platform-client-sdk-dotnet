@@ -92,8 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultObjective">A predefined default objective for this metric.</param>
         /// <param name="LockTemplateId">An optional field to specify if this metric definition is locked to certain template. e.g. punctuality.</param>
         /// <param name="MediaTypeFilteringAllowed">Flag to indicate if this metricDefinition allows filter based on media types.</param>
+        /// <param name="InitialDirectionFilteringAllowed">Flag to indicate if this metricDefinition allows filter based on initial direction.</param>
         /// <param name="QueueFilteringAllowed">Flag to indicate if this metricDefinition allows filter based on queues.</param>
-        public MetricDefinition(string Name = null, UnitTypeEnum? UnitType = null, string ShortName = null, List<string> DividendMetrics = null, List<string> DivisorMetrics = null, DefaultObjective DefaultObjective = null, string LockTemplateId = null, bool? MediaTypeFilteringAllowed = null, bool? QueueFilteringAllowed = null)
+        public MetricDefinition(string Name = null, UnitTypeEnum? UnitType = null, string ShortName = null, List<string> DividendMetrics = null, List<string> DivisorMetrics = null, DefaultObjective DefaultObjective = null, string LockTemplateId = null, bool? MediaTypeFilteringAllowed = null, bool? InitialDirectionFilteringAllowed = null, bool? QueueFilteringAllowed = null)
         {
             this.Name = Name;
             this.UnitType = UnitType;
@@ -103,6 +104,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultObjective = DefaultObjective;
             this.LockTemplateId = LockTemplateId;
             this.MediaTypeFilteringAllowed = MediaTypeFilteringAllowed;
+            this.InitialDirectionFilteringAllowed = InitialDirectionFilteringAllowed;
             this.QueueFilteringAllowed = QueueFilteringAllowed;
             
         }
@@ -183,6 +185,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag to indicate if this metricDefinition allows filter based on initial direction
+        /// </summary>
+        /// <value>Flag to indicate if this metricDefinition allows filter based on initial direction</value>
+        [DataMember(Name="initialDirectionFilteringAllowed", EmitDefaultValue=false)]
+        public bool? InitialDirectionFilteringAllowed { get; set; }
+
+
+
+        /// <summary>
         /// Flag to indicate if this metricDefinition allows filter based on queues
         /// </summary>
         /// <value>Flag to indicate if this metricDefinition allows filter based on queues</value>
@@ -217,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultObjective: ").Append(DefaultObjective).Append("\n");
             sb.Append("  LockTemplateId: ").Append(LockTemplateId).Append("\n");
             sb.Append("  MediaTypeFilteringAllowed: ").Append(MediaTypeFilteringAllowed).Append("\n");
+            sb.Append("  InitialDirectionFilteringAllowed: ").Append(InitialDirectionFilteringAllowed).Append("\n");
             sb.Append("  QueueFilteringAllowed: ").Append(QueueFilteringAllowed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -305,6 +317,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaTypeFilteringAllowed.Equals(other.MediaTypeFilteringAllowed)
                 ) &&
                 (
+                    this.InitialDirectionFilteringAllowed == other.InitialDirectionFilteringAllowed ||
+                    this.InitialDirectionFilteringAllowed != null &&
+                    this.InitialDirectionFilteringAllowed.Equals(other.InitialDirectionFilteringAllowed)
+                ) &&
+                (
                     this.QueueFilteringAllowed == other.QueueFilteringAllowed ||
                     this.QueueFilteringAllowed != null &&
                     this.QueueFilteringAllowed.Equals(other.QueueFilteringAllowed)
@@ -353,6 +370,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaTypeFilteringAllowed != null)
                     hash = hash * 59 + this.MediaTypeFilteringAllowed.GetHashCode();
+
+                if (this.InitialDirectionFilteringAllowed != null)
+                    hash = hash * 59 + this.InitialDirectionFilteringAllowed.GetHashCode();
 
                 if (this.QueueFilteringAllowed != null)
                     hash = hash * 59 + this.QueueFilteringAllowed.GetHashCode();

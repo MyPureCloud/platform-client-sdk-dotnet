@@ -7,7 +7,7 @@ title: RecordingJobsQuery
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Action** | **string** | Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. Archive action is currently not supported | |
+| **Action** | **string** | Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. | |
 | **ActionDate** | **DateTime?** | The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ActionAge** | **int?** | The number of days after each recording&#39;s creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. | [optional] |
 | **ScreenRecordingActionDate** | **DateTime?** | The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -16,7 +16,7 @@ title: RecordingJobsQuery
 | **IncludeRecordingsWithSensitiveData** | **bool?** | Whether to include recordings with PCI DSS and/or PII data, default value &#x3D; false  | [optional] |
 | **IncludeScreenRecordings** | **bool?** | Whether to include Screen recordings for the action, default value &#x3D; true  | [optional] |
 | **ClearExport** | **bool?** | For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false | [optional] |
-| **ConversationQuery** | [**AsyncConversationQuery**](AsyncConversationQuery.html) | Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability | |
+| **ConversationQuery** | [**AsyncConversationQuery**](AsyncConversationQuery.html) | Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years. | [optional] |
 {: class="table table-striped"}
 
 

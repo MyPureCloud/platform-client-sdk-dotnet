@@ -36,6 +36,7 @@ title: Message
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
 | **ByoSmsIntegrationId** | **string** | The internal id representing the customer supplied sms integration message. | [optional] |
+| **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings.html) | Represents the queue settings for this media type. | [optional] |
 {: class="table table-striped"}
 
 

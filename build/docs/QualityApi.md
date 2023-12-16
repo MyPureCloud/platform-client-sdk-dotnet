@@ -1347,7 +1347,7 @@ namespace Example
 
 <a name="getqualityform"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) GetQualityForm (string formId)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityForm (string formId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1384,7 +1384,7 @@ namespace Example
             try
             { 
                 // Get an evaluation form
-                EvaluationForm result = apiInstance.GetQualityForm(formId);
+                EvaluationFormResponse result = apiInstance.GetQualityForm(formId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1406,11 +1406,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getqualityformversions"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1449,7 +1449,7 @@ namespace Example
             try
             { 
                 // Gets all the revisions for a specific evaluation.
-                EvaluationFormEntityListing result = apiInstance.GetQualityFormVersions(formId, pageSize, pageNumber);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityFormVersions(formId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1473,11 +1473,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getqualityforms"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -1521,7 +1521,7 @@ namespace Example
             try
             { 
                 // Get the list of evaluation forms
-                EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1550,11 +1550,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getqualityformsevaluation"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) GetQualityFormsEvaluation (string formId)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityFormsEvaluation (string formId)
 
 
 
@@ -1591,7 +1591,7 @@ namespace Example
             try
             { 
                 // Get an evaluation form
-                EvaluationForm result = apiInstance.GetQualityFormsEvaluation(formId);
+                EvaluationFormResponse result = apiInstance.GetQualityFormsEvaluation(formId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1613,11 +1613,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getqualityformsevaluationversions"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 
 
@@ -1657,7 +1657,7 @@ namespace Example
             try
             { 
                 // Gets all the revisions for a specific evaluation.
-                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1682,11 +1682,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getqualityformsevaluations"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
+## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 
 
 
@@ -1732,7 +1732,7 @@ namespace Example
             try
             { 
                 // Get the list of evaluation forms
-                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1761,11 +1761,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getqualityformsevaluationsbulkcontexts"></a>
 
-## [**List&lt;EvaluationForm&gt;**](EvaluationForm.html) GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
+## [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse.html) GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
 
 
 
@@ -1802,7 +1802,7 @@ namespace Example
             try
             { 
                 // Retrieve a list of the latest published evaluation form versions by context ids
-                List<EvaluationForm> result = apiInstance.GetQualityFormsEvaluationsBulkContexts(contextId);
+                List<EvaluationFormResponse> result = apiInstance.GetQualityFormsEvaluationsBulkContexts(contextId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1824,7 +1824,7 @@ namespace Example
 
 ### Return type
 
-[**List<EvaluationForm>**](EvaluationForm.html)
+[**List<EvaluationFormResponse>**](EvaluationFormResponse.html)
 
 <a name="getqualityformssurvey"></a>
 
@@ -2163,7 +2163,7 @@ namespace Example
 
 <a name="getqualitypublishedform"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) GetQualityPublishedform (string formId)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityPublishedform (string formId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2200,7 +2200,7 @@ namespace Example
             try
             { 
                 // Get the published evaluation forms.
-                EvaluationForm result = apiInstance.GetQualityPublishedform(formId);
+                EvaluationFormResponse result = apiInstance.GetQualityPublishedform(formId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2222,11 +2222,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getqualitypublishedforms"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -2266,7 +2266,7 @@ namespace Example
             try
             { 
                 // Get the published evaluation forms.
-                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2291,11 +2291,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getqualitypublishedformsevaluation"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) GetQualityPublishedformsEvaluation (string formId)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) GetQualityPublishedformsEvaluation (string formId)
 
 
 
@@ -2332,7 +2332,7 @@ namespace Example
             try
             { 
                 // Get the most recent published version of an evaluation form.
-                EvaluationForm result = apiInstance.GetQualityPublishedformsEvaluation(formId);
+                EvaluationFormResponse result = apiInstance.GetQualityPublishedformsEvaluation(formId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2354,11 +2354,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="getqualitypublishedformsevaluations"></a>
 
-## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
+## [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 
 
 
@@ -2398,7 +2398,7 @@ namespace Example
             try
             { 
                 // Get the published evaluation forms.
-                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2423,7 +2423,7 @@ namespace Example
 
 ### Return type
 
-[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
 
 <a name="getqualitypublishedformssurvey"></a>
 
@@ -3318,7 +3318,7 @@ namespace Example
 
 <a name="postqualityforms"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostQualityForms (EvaluationForm body)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityForms (EvaluationForm body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3355,7 +3355,7 @@ namespace Example
             try
             { 
                 // Create an evaluation form.
-                EvaluationForm result = apiInstance.PostQualityForms(body);
+                EvaluationFormResponse result = apiInstance.PostQualityForms(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3377,11 +3377,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postqualityformsevaluations"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostQualityFormsEvaluations (EvaluationForm body)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityFormsEvaluations (EvaluationForm body)
 
 
 
@@ -3418,7 +3418,7 @@ namespace Example
             try
             { 
                 // Create an evaluation form.
-                EvaluationForm result = apiInstance.PostQualityFormsEvaluations(body);
+                EvaluationFormResponse result = apiInstance.PostQualityFormsEvaluations(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3440,7 +3440,7 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postqualityformssurveys"></a>
 
@@ -3507,7 +3507,7 @@ namespace Example
 
 <a name="postqualitypublishedforms"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedforms (PublishForm body)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityPublishedforms (PublishForm body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3544,7 +3544,7 @@ namespace Example
             try
             { 
                 // Publish an evaluation form.
-                EvaluationForm result = apiInstance.PostQualityPublishedforms(body);
+                EvaluationFormResponse result = apiInstance.PostQualityPublishedforms(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3566,11 +3566,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postqualitypublishedformsevaluations"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedformsEvaluations (PublishForm body)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) PostQualityPublishedformsEvaluations (PublishForm body)
 
 
 
@@ -3607,7 +3607,7 @@ namespace Example
             try
             { 
                 // Publish an evaluation form.
-                EvaluationForm result = apiInstance.PostQualityPublishedformsEvaluations(body);
+                EvaluationFormResponse result = apiInstance.PostQualityPublishedformsEvaluations(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3629,7 +3629,7 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="postqualitypublishedformssurveys"></a>
 
@@ -3896,7 +3896,7 @@ namespace Example
 
 <a name="putqualityform"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PutQualityForm (string formId, EvaluationForm body)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) PutQualityForm (string formId, EvaluationForm body)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
@@ -3934,7 +3934,7 @@ namespace Example
             try
             { 
                 // Update an evaluation form.
-                EvaluationForm result = apiInstance.PutQualityForm(formId, body);
+                EvaluationFormResponse result = apiInstance.PutQualityForm(formId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3957,11 +3957,11 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="putqualityformsevaluation"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PutQualityFormsEvaluation (string formId, EvaluationForm body)
+## [**EvaluationFormResponse**](EvaluationFormResponse.html) PutQualityFormsEvaluation (string formId, EvaluationForm body)
 
 
 
@@ -3999,7 +3999,7 @@ namespace Example
             try
             { 
                 // Update an evaluation form.
-                EvaluationForm result = apiInstance.PutQualityFormsEvaluation(formId, body);
+                EvaluationFormResponse result = apiInstance.PutQualityFormsEvaluation(formId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4022,7 +4022,7 @@ namespace Example
 
 ### Return type
 
-[**EvaluationForm**](EvaluationForm.html)
+[**EvaluationFormResponse**](EvaluationFormResponse.html)
 
 <a name="putqualityformssurvey"></a>
 

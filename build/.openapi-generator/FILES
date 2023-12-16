@@ -109,6 +109,7 @@ docs/AgentPossibleWorkShiftsRequest.md
 docs/AgentPossibleWorkShiftsResponse.md
 docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
+docs/AgentQueueTimeRequest.md
 docs/AgentTimeOffRequestPatch.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
@@ -370,6 +371,8 @@ docs/BuForecastGenerationResult.md
 docs/BuForecastModificationResponse.md
 docs/BuForecastResult.md
 docs/BuForecastResultResponse.md
+docs/BuForecastStaffingRequirementsResult.md
+docs/BuForecastStaffingRequirementsResultResponse.md
 docs/BuForecastTimeSeriesResult.md
 docs/BuFullDayTimeOffMarker.md
 docs/BuGenerateScheduleRequest.md
@@ -557,6 +560,7 @@ docs/ChatMessage.md
 docs/ChatMessageEntityListing.md
 docs/ChatMessageResponse.md
 docs/ChatMessageUser.md
+docs/ChatReaction.md
 docs/ChatSendMessageResponse.md
 docs/ChatSettings.md
 docs/Check.md
@@ -743,6 +747,7 @@ docs/ConversationCallEventTopicJourneyActionMap.md
 docs/ConversationCallEventTopicJourneyContext.md
 docs/ConversationCallEventTopicJourneyCustomer.md
 docs/ConversationCallEventTopicJourneyCustomerSession.md
+docs/ConversationCallEventTopicQueueMediaSettings.md
 docs/ConversationCallEventTopicScoredAgent.md
 docs/ConversationCallEventTopicUriReference.md
 docs/ConversationCallEventTopicWrapup.md
@@ -758,6 +763,7 @@ docs/ConversationCallbackEventTopicJourneyContext.md
 docs/ConversationCallbackEventTopicJourneyCustomer.md
 docs/ConversationCallbackEventTopicJourneyCustomerSession.md
 docs/ConversationCallbackEventTopicPhoneNumberColumn.md
+docs/ConversationCallbackEventTopicQueueMediaSettings.md
 docs/ConversationCallbackEventTopicScoredAgent.md
 docs/ConversationCallbackEventTopicUriReference.md
 docs/ConversationCallbackEventTopicVoicemail.md
@@ -775,6 +781,7 @@ docs/ConversationChatEventTopicJourneyActionMap.md
 docs/ConversationChatEventTopicJourneyContext.md
 docs/ConversationChatEventTopicJourneyCustomer.md
 docs/ConversationChatEventTopicJourneyCustomerSession.md
+docs/ConversationChatEventTopicQueueMediaSettings.md
 docs/ConversationChatEventTopicScoredAgent.md
 docs/ConversationChatEventTopicUriReference.md
 docs/ConversationChatEventTopicWrapup.md
@@ -789,6 +796,7 @@ docs/ConversationCobrowseEventTopicJourneyActionMap.md
 docs/ConversationCobrowseEventTopicJourneyContext.md
 docs/ConversationCobrowseEventTopicJourneyCustomer.md
 docs/ConversationCobrowseEventTopicJourneyCustomerSession.md
+docs/ConversationCobrowseEventTopicQueueMediaSettings.md
 docs/ConversationCobrowseEventTopicScoredAgent.md
 docs/ConversationCobrowseEventTopicUriReference.md
 docs/ConversationCobrowseEventTopicWrapup.md
@@ -821,6 +829,7 @@ docs/ConversationEmailEventTopicJourneyActionMap.md
 docs/ConversationEmailEventTopicJourneyContext.md
 docs/ConversationEmailEventTopicJourneyCustomer.md
 docs/ConversationEmailEventTopicJourneyCustomerSession.md
+docs/ConversationEmailEventTopicQueueMediaSettings.md
 docs/ConversationEmailEventTopicScoredAgent.md
 docs/ConversationEmailEventTopicUriReference.md
 docs/ConversationEmailEventTopicWrapup.md
@@ -861,6 +870,7 @@ docs/ConversationEventTopicModifiedBy.md
 docs/ConversationEventTopicObject.md
 docs/ConversationEventTopicParticipant.md
 docs/ConversationEventTopicPhoneNumberColumn.md
+docs/ConversationEventTopicQueueMediaSettings.md
 docs/ConversationEventTopicRecentTransfer.md
 docs/ConversationEventTopicScoredAgent.md
 docs/ConversationEventTopicScreenshare.md
@@ -890,6 +900,7 @@ docs/ConversationMessageEventTopicMessageMetadata.md
 docs/ConversationMessageEventTopicMessageMetadataContent.md
 docs/ConversationMessageEventTopicMessageMetadataEvent.md
 docs/ConversationMessageEventTopicMessageSticker.md
+docs/ConversationMessageEventTopicQueueMediaSettings.md
 docs/ConversationMessageEventTopicScoredAgent.md
 docs/ConversationMessageEventTopicUriReference.md
 docs/ConversationMessageEventTopicWrapup.md
@@ -912,6 +923,7 @@ docs/ConversationParticipantSearchCriteria.md
 docs/ConversationParticipantSearchRequest.md
 docs/ConversationProperties.md
 docs/ConversationQuery.md
+docs/ConversationQueueMediaSettings.md
 docs/ConversationReason.md
 docs/ConversationRecipientAdditionalIdentifier.md
 docs/ConversationReference.md
@@ -924,6 +936,7 @@ docs/ConversationScreenShareEventTopicJourneyActionMap.md
 docs/ConversationScreenShareEventTopicJourneyContext.md
 docs/ConversationScreenShareEventTopicJourneyCustomer.md
 docs/ConversationScreenShareEventTopicJourneyCustomerSession.md
+docs/ConversationScreenShareEventTopicQueueMediaSettings.md
 docs/ConversationScreenShareEventTopicScoredAgent.md
 docs/ConversationScreenShareEventTopicScreenShareConversation.md
 docs/ConversationScreenShareEventTopicScreenShareMediaParticipant.md
@@ -938,6 +951,7 @@ docs/ConversationSocialExpressionEventTopicJourneyActionMap.md
 docs/ConversationSocialExpressionEventTopicJourneyContext.md
 docs/ConversationSocialExpressionEventTopicJourneyCustomer.md
 docs/ConversationSocialExpressionEventTopicJourneyCustomerSession.md
+docs/ConversationSocialExpressionEventTopicQueueMediaSettings.md
 docs/ConversationSocialExpressionEventTopicScoredAgent.md
 docs/ConversationSocialExpressionEventTopicSocialConversation.md
 docs/ConversationSocialExpressionEventTopicSocialMediaParticipant.md
@@ -956,6 +970,7 @@ docs/ConversationVideoEventTopicJourneyActionMap.md
 docs/ConversationVideoEventTopicJourneyContext.md
 docs/ConversationVideoEventTopicJourneyCustomer.md
 docs/ConversationVideoEventTopicJourneyCustomerSession.md
+docs/ConversationVideoEventTopicQueueMediaSettings.md
 docs/ConversationVideoEventTopicScoredAgent.md
 docs/ConversationVideoEventTopicUriReference.md
 docs/ConversationVideoEventTopicVideoConversation.md
@@ -1009,6 +1024,7 @@ docs/CreateTimeOffLimitRequest.md
 docs/CreateTimeOffPlanRequest.md
 docs/CreateTriggerRequest.md
 docs/CreateUser.md
+docs/CreateUtilizationLabelRequest.md
 docs/CreateUtilizationTagRequest.md
 docs/CreateWebChatConversationRequest.md
 docs/CreateWebChatConversationResponse.md
@@ -1272,6 +1288,7 @@ docs/DeleteRoutingSmsPhonenumber-example.txt
 docs/DeleteRoutingUserUtilization-example.txt
 docs/DeleteRoutingUserUtilization-example.txt
 docs/DeleteRoutingUtilization-example.txt
+docs/DeleteRoutingUtilizationLabel-example.txt
 docs/DeleteRoutingUtilizationTag-example.txt
 docs/DeleteRoutingWrapupcode-example.txt
 docs/DeleteScimUser-example.txt
@@ -1688,8 +1705,8 @@ docs/EvaluationDetailQueryPredicate.md
 docs/EvaluationEntityListing.md
 docs/EvaluationForm.md
 docs/EvaluationFormAndScoringSet.md
-docs/EvaluationFormEntityListing.md
 docs/EvaluationFormResponse.md
+docs/EvaluationFormResponseEntityListing.md
 docs/EvaluationQualityV2TopicCalibration.md
 docs/EvaluationQualityV2TopicEvaluationReference.md
 docs/EvaluationQualityV2TopicEvaluationScoringSet.md
@@ -2745,6 +2762,9 @@ docs/GetRoutingSmsPhonenumbers-example.txt
 docs/GetRoutingUserUtilization-example.txt
 docs/GetRoutingUserUtilization-example.txt
 docs/GetRoutingUtilization-example.txt
+docs/GetRoutingUtilizationLabel-example.txt
+docs/GetRoutingUtilizationLabelAgents-example.txt
+docs/GetRoutingUtilizationLabels-example.txt
 docs/GetRoutingUtilizationTag-example.txt
 docs/GetRoutingUtilizationTagAgents-example.txt
 docs/GetRoutingUtilizationTags-example.txt
@@ -3021,12 +3041,15 @@ docs/GetWorkforcemanagementBusinessunitWeekSchedule-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent-example.txt
+docs/GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions-example.txt
+docs/GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekSchedules-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekShorttermforecast-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekShorttermforecastData-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups-example.txt
+docs/GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement-example.txt
 docs/GetWorkforcemanagementBusinessunitWeekShorttermforecasts-example.txt
 docs/GetWorkforcemanagementBusinessunits-example.txt
 docs/GetWorkforcemanagementBusinessunitsDivisionviews-example.txt
@@ -3712,6 +3735,7 @@ docs/MoveAgentsRequest.md
 docs/MoveAgentsResponse.md
 docs/MoveManagementUnitRequest.md
 docs/MoveManagementUnitResponse.md
+docs/MuAgentQueueTimeRequest.md
 docs/MuRescheduleResultWrapper.md
 docs/MutableUserPresence.md
 docs/MuteSnoozeFields.md
@@ -4089,6 +4113,7 @@ docs/PatchWorkforcemanagementBusinessunitPlanninggroup-example.txt
 docs/PatchWorkforcemanagementBusinessunitSchedulingRun-example.txt
 docs/PatchWorkforcemanagementBusinessunitServicegoaltemplate-example.txt
 docs/PatchWorkforcemanagementManagementunit-example.txt
+docs/PatchWorkforcemanagementManagementunitAgents-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeofflimit-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeoffplan-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus-example.txt
@@ -4097,6 +4122,15 @@ docs/PatchWorkforcemanagementManagementunitWeekShifttrade-example.txt
 docs/PatchWorkforcemanagementManagementunitWorkplan-example.txt
 docs/PatchWorkforcemanagementManagementunitWorkplanrotation-example.txt
 docs/PatchWorkforcemanagementTimeoffrequest-example.txt
+docs/PerformancePredictionCompleteEventTopicErrorBody.md
+docs/PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification.md
+docs/PerformancePredictionOutputs.md
+docs/PerformancePredictionRecalculationCompleteEventTopicErrorBody.md
+docs/PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification.md
+docs/PerformancePredictionRecalculationResponse.md
+docs/PerformancePredictionRecalculationUploadResponse.md
+docs/PerformancePredictionResponse.md
+docs/PerformancePredictionUploadSchema.md
 docs/PerformanceProfile.md
 docs/PermissionCollectionEntityListing.md
 docs/PermissionDetails.md
@@ -4129,6 +4163,7 @@ docs/PingIdentity.md
 docs/PinnedMessageRequest.md
 docs/PlanningGroup.md
 docs/PlanningGroupList.md
+docs/PlanningGroupOutputs.md
 docs/PlanningGroupReference.md
 docs/PlanningPeriodSettings.md
 docs/Policy.md
@@ -4599,6 +4634,7 @@ docs/PostRoutingSkills-example.txt
 docs/PostRoutingSmsAddresses-example.txt
 docs/PostRoutingSmsPhonenumbers-example.txt
 docs/PostRoutingSmsPhonenumbersImport-example.txt
+docs/PostRoutingUtilizationLabels-example.txt
 docs/PostRoutingUtilizationTags-example.txt
 docs/PostRoutingWrapupcodes-example.txt
 docs/PostScimUsers-example.txt
@@ -4720,6 +4756,8 @@ docs/PostWorkforcemanagementBusinessunitPlanninggroups-example.txt
 docs/PostWorkforcemanagementBusinessunitServicegoaltemplates-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleCopy-example.txt
+docs/PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations-example.txt
+docs/PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleReschedule-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleUpdate-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl-example.txt
@@ -4980,6 +5018,7 @@ docs/PutRoutingSmsPhonenumber-example.txt
 docs/PutRoutingUserUtilization-example.txt
 docs/PutRoutingUserUtilization-example.txt
 docs/PutRoutingUtilization-example.txt
+docs/PutRoutingUtilizationLabel-example.txt
 docs/PutRoutingWrapupcode-example.txt
 docs/PutScimGroup-example.txt
 docs/PutScimUser-example.txt
@@ -5073,6 +5112,7 @@ docs/QueueConversationCallEventTopicJourneyActionMap.md
 docs/QueueConversationCallEventTopicJourneyContext.md
 docs/QueueConversationCallEventTopicJourneyCustomer.md
 docs/QueueConversationCallEventTopicJourneyCustomerSession.md
+docs/QueueConversationCallEventTopicQueueMediaSettings.md
 docs/QueueConversationCallEventTopicScoredAgent.md
 docs/QueueConversationCallEventTopicUriReference.md
 docs/QueueConversationCallEventTopicWrapup.md
@@ -5088,6 +5128,7 @@ docs/QueueConversationCallbackEventTopicJourneyContext.md
 docs/QueueConversationCallbackEventTopicJourneyCustomer.md
 docs/QueueConversationCallbackEventTopicJourneyCustomerSession.md
 docs/QueueConversationCallbackEventTopicPhoneNumberColumn.md
+docs/QueueConversationCallbackEventTopicQueueMediaSettings.md
 docs/QueueConversationCallbackEventTopicScoredAgent.md
 docs/QueueConversationCallbackEventTopicUriReference.md
 docs/QueueConversationCallbackEventTopicVoicemail.md
@@ -5102,6 +5143,7 @@ docs/QueueConversationChatEventTopicJourneyActionMap.md
 docs/QueueConversationChatEventTopicJourneyContext.md
 docs/QueueConversationChatEventTopicJourneyCustomer.md
 docs/QueueConversationChatEventTopicJourneyCustomerSession.md
+docs/QueueConversationChatEventTopicQueueMediaSettings.md
 docs/QueueConversationChatEventTopicScoredAgent.md
 docs/QueueConversationChatEventTopicUriReference.md
 docs/QueueConversationChatEventTopicWrapup.md
@@ -5115,6 +5157,7 @@ docs/QueueConversationCobrowseEventTopicJourneyActionMap.md
 docs/QueueConversationCobrowseEventTopicJourneyContext.md
 docs/QueueConversationCobrowseEventTopicJourneyCustomer.md
 docs/QueueConversationCobrowseEventTopicJourneyCustomerSession.md
+docs/QueueConversationCobrowseEventTopicQueueMediaSettings.md
 docs/QueueConversationCobrowseEventTopicScoredAgent.md
 docs/QueueConversationCobrowseEventTopicUriReference.md
 docs/QueueConversationCobrowseEventTopicWrapup.md
@@ -5129,6 +5172,7 @@ docs/QueueConversationEmailEventTopicJourneyActionMap.md
 docs/QueueConversationEmailEventTopicJourneyContext.md
 docs/QueueConversationEmailEventTopicJourneyCustomer.md
 docs/QueueConversationEmailEventTopicJourneyCustomerSession.md
+docs/QueueConversationEmailEventTopicQueueMediaSettings.md
 docs/QueueConversationEmailEventTopicScoredAgent.md
 docs/QueueConversationEmailEventTopicUriReference.md
 docs/QueueConversationEmailEventTopicWrapup.md
@@ -5164,6 +5208,7 @@ docs/QueueConversationEventTopicModifiedBy.md
 docs/QueueConversationEventTopicObject.md
 docs/QueueConversationEventTopicParticipant.md
 docs/QueueConversationEventTopicPhoneNumberColumn.md
+docs/QueueConversationEventTopicQueueMediaSettings.md
 docs/QueueConversationEventTopicRecentTransfer.md
 docs/QueueConversationEventTopicScoredAgent.md
 docs/QueueConversationEventTopicScreenshare.md
@@ -5190,6 +5235,7 @@ docs/QueueConversationMessageEventTopicMessageMetadata.md
 docs/QueueConversationMessageEventTopicMessageMetadataContent.md
 docs/QueueConversationMessageEventTopicMessageMetadataEvent.md
 docs/QueueConversationMessageEventTopicMessageSticker.md
+docs/QueueConversationMessageEventTopicQueueMediaSettings.md
 docs/QueueConversationMessageEventTopicScoredAgent.md
 docs/QueueConversationMessageEventTopicUriReference.md
 docs/QueueConversationMessageEventTopicWrapup.md
@@ -5201,6 +5247,7 @@ docs/QueueConversationScreenShareEventTopicJourneyActionMap.md
 docs/QueueConversationScreenShareEventTopicJourneyContext.md
 docs/QueueConversationScreenShareEventTopicJourneyCustomer.md
 docs/QueueConversationScreenShareEventTopicJourneyCustomerSession.md
+docs/QueueConversationScreenShareEventTopicQueueMediaSettings.md
 docs/QueueConversationScreenShareEventTopicScoredAgent.md
 docs/QueueConversationScreenShareEventTopicScreenShareConversation.md
 docs/QueueConversationScreenShareEventTopicScreenShareMediaParticipant.md
@@ -5238,6 +5285,7 @@ docs/QueueConversationSocialExpressionEventTopicModifiedBy.md
 docs/QueueConversationSocialExpressionEventTopicObject.md
 docs/QueueConversationSocialExpressionEventTopicParticipant.md
 docs/QueueConversationSocialExpressionEventTopicPhoneNumberColumn.md
+docs/QueueConversationSocialExpressionEventTopicQueueMediaSettings.md
 docs/QueueConversationSocialExpressionEventTopicRecentTransfer.md
 docs/QueueConversationSocialExpressionEventTopicScoredAgent.md
 docs/QueueConversationSocialExpressionEventTopicScreenshare.md
@@ -5279,6 +5327,7 @@ docs/QueueConversationVideoEventTopicModifiedBy.md
 docs/QueueConversationVideoEventTopicObject.md
 docs/QueueConversationVideoEventTopicParticipant.md
 docs/QueueConversationVideoEventTopicPhoneNumberColumn.md
+docs/QueueConversationVideoEventTopicQueueMediaSettings.md
 docs/QueueConversationVideoEventTopicRecentTransfer.md
 docs/QueueConversationVideoEventTopicScoredAgent.md
 docs/QueueConversationVideoEventTopicScreenshare.md
@@ -5663,6 +5712,7 @@ docs/SpeechTextAnalyticsApi.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
 docs/SplittingInformation.md
+docs/StaffingRequirementsPlanningGroupData.md
 docs/StarrableDivision.md
 docs/StatEventCampaignTopicIntervalMetrics.md
 docs/StatEventCampaignTopicMetricStats.md
@@ -5998,6 +6048,8 @@ docs/UpdateCoachingAppointmentRequest.md
 docs/UpdateContactColumnActionSettings.md
 docs/UpdateDraftInput.md
 docs/UpdateManagementUnitRequest.md
+docs/UpdateMuAgentRequest.md
+docs/UpdateMuAgentsRequest.md
 docs/UpdateNotificationResponse.md
 docs/UpdateNotificationsRequest.md
 docs/UpdateNotificationsResponse.md
@@ -6009,6 +6061,7 @@ docs/UpdateTimeOffLimitRequest.md
 docs/UpdateTimeOffPlanRequest.md
 docs/UpdateTriggerRequest.md
 docs/UpdateUser.md
+docs/UpdateUtilizationLabelRequest.md
 docs/UpdateVerifierRequest.md
 docs/UpdateWorkPlanRotationAgentRequest.md
 docs/UpdateWorkPlanRotationRequest.md
@@ -6142,6 +6195,7 @@ docs/UsersSearchResponse.md
 docs/UtilitiesApi.json
 docs/UtilitiesApi.md
 docs/UtilizationLabel.md
+docs/UtilizationLabelEntityListing.md
 docs/UtilizationRequest.md
 docs/UtilizationResponse.md
 docs/UtilizationTag.md
@@ -6197,6 +6251,14 @@ docs/V2ConversationMessageTypingEventForWorkflowTopicConversationNotificationTem
 docs/V2ConversationMessageTypingEventForWorkflowTopicConversationReason.md
 docs/V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.md
 docs/V2ConversationMessageTypingEventForWorkflowTopicMessageData.md
+docs/V2FlowExecutionDataFlowidTopicExecution.md
+docs/V2FlowExecutionDataFlowidTopicFlow.md
+docs/V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo.md
+docs/V2FlowExecutionDataFlowidTopicFlowExecutionHistory.md
+docs/V2FlowExecutionDataFlowidTopicInvokingContext.md
+docs/V2FlowExecutionDataFlowidTopicJourneyActionMap.md
+docs/V2FlowExecutionDataFlowidTopicProcessAutomation.md
+docs/V2FlowExecutionDataFlowidTopicQuality.md
 docs/V2MobiusAlertsTopicAddressableEntityRef.md
 docs/V2MobiusAlertsTopicAlert.md
 docs/V2MobiusAlertsTopicAlertNotification.md
@@ -6366,6 +6428,9 @@ docs/WfmBuShortTermForecastImportCompleteTopicForecastSourceDayPointer.md
 docs/WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue.md
 docs/WfmBuShortTermForecastImportCompleteTopicUserReference.md
 docs/WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata.md
+docs/WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification.md
+docs/WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults.md
+docs/WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference.md
 docs/WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification.md
 docs/WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast.md
 docs/WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotification.md
@@ -6558,16 +6623,22 @@ docs/WorkitemsAttributeChangeWorkitemStatusCategory.md
 docs/WorkitemsChangeWorkbinDelta.md
 docs/WorkitemsChangeWorkitemDelta.md
 docs/WorkitemsChangeWorktypeDelta.md
+docs/WorkitemsEventsNotificationAssignmentSegment.md
 docs/WorkitemsEventsNotificationCustomAttribute.md
 docs/WorkitemsEventsNotificationDelta.md
+docs/WorkitemsEventsNotificationSession.md
 docs/WorkitemsEventsNotificationWorkitem.md
 docs/WorkitemsEventsNotificationWrapup.md
+docs/WorkitemsQueueEventsNotificationAssignmentSegment.md
 docs/WorkitemsQueueEventsNotificationCustomAttribute.md
 docs/WorkitemsQueueEventsNotificationDelta.md
+docs/WorkitemsQueueEventsNotificationSession.md
 docs/WorkitemsQueueEventsNotificationWorkitem.md
 docs/WorkitemsQueueEventsNotificationWrapup.md
+docs/WorkitemsUserEventsNotificationAssignmentSegment.md
 docs/WorkitemsUserEventsNotificationCustomAttribute.md
 docs/WorkitemsUserEventsNotificationDelta.md
+docs/WorkitemsUserEventsNotificationSession.md
 docs/WorkitemsUserEventsNotificationWorkitem.md
 docs/WorkitemsUserEventsNotificationWrapup.md
 docs/Workspace.md
@@ -6791,6 +6862,7 @@ src/PureCloudPlatform.Client.V2/Model/AgentPossibleWorkShiftsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentPossibleWorkShiftsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AgentQueueTimeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentTimeOffRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/AgentlessEmailSendRequestDto.cs
 src/PureCloudPlatform.Client.V2/Model/AgentlessEmailSendResponseDto.cs
@@ -7040,6 +7112,8 @@ src/PureCloudPlatform.Client.V2/Model/BuForecastGenerationResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastModificationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastResultResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BuForecastStaffingRequirementsResult.cs
+src/PureCloudPlatform.Client.V2/Model/BuForecastStaffingRequirementsResultResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuForecastTimeSeriesResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuFullDayTimeOffMarker.cs
 src/PureCloudPlatform.Client.V2/Model/BuGenerateScheduleRequest.cs
@@ -7223,6 +7297,7 @@ src/PureCloudPlatform.Client.V2/Model/ChatMessage.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChatMessageUser.cs
+src/PureCloudPlatform.Client.V2/Model/ChatReaction.cs
 src/PureCloudPlatform.Client.V2/Model/ChatSendMessageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChatSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Check.cs
@@ -7405,6 +7480,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicJourneyActionMap
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicWrapup.cs
@@ -7420,6 +7496,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicJourneyConte
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicJourneyCustomerSession.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicVoicemail.cs
@@ -7437,6 +7514,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicJourneyActionMap
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicWrapup.cs
@@ -7451,6 +7529,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicJourneyActio
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicWrapup.cs
@@ -7483,6 +7562,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicJourneyActionMa
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicWrapup.cs
@@ -7523,6 +7603,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicModifiedBy.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicRecentTransfer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScreenshare.cs
@@ -7552,6 +7633,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMetada
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMetadataContent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicMessageSticker.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageEventTopicWrapup.cs
@@ -7574,6 +7656,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationParticipantSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationParticipantSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationProperties.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationReason.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationRecipientAdditionalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationReference.cs
@@ -7586,6 +7669,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicJourneyAc
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicScreenShareConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicScreenShareMediaParticipant.cs
@@ -7600,6 +7684,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicJour
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicSocialConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicSocialMediaParticipant.cs
@@ -7618,6 +7703,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicJourneyActionMa
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicVideoConversation.cs
@@ -7669,6 +7755,7 @@ src/PureCloudPlatform.Client.V2/Model/CreateTimeOffLimitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTimeOffPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTriggerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateUser.cs
+src/PureCloudPlatform.Client.V2/Model/CreateUtilizationLabelRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateUtilizationTagRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateWebChatConversationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateWebChatConversationResponse.cs
@@ -8086,8 +8173,8 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationDetailQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationForm.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormAndScoringSet.cs
-src/PureCloudPlatform.Client.V2/Model/EvaluationFormEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponse.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicCalibration.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationReference.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationScoringSet.cs
@@ -8947,6 +9034,7 @@ src/PureCloudPlatform.Client.V2/Model/MoveAgentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MoveAgentsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitResponse.cs
+src/PureCloudPlatform.Client.V2/Model/MuAgentQueueTimeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MuRescheduleResultWrapper.cs
 src/PureCloudPlatform.Client.V2/Model/MutableUserPresence.cs
 src/PureCloudPlatform.Client.V2/Model/MuteSnoozeFields.cs
@@ -9157,6 +9245,15 @@ src/PureCloudPlatform.Client.V2/Model/PatchSurveyQuestion.cs
 src/PureCloudPlatform.Client.V2/Model/PatchTextStyleProperties.cs
 src/PureCloudPlatform.Client.V2/Model/PatchUser.cs
 src/PureCloudPlatform.Client.V2/Model/PatchWebMessagingOfferFields.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionCompleteEventTopicErrorBody.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionOutputs.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionRecalculationCompleteEventTopicErrorBody.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionRecalculationResponse.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionRecalculationUploadResponse.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionResponse.cs
+src/PureCloudPlatform.Client.V2/Model/PerformancePredictionUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/PerformanceProfile.cs
 src/PureCloudPlatform.Client.V2/Model/PermissionCollectionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/PermissionDetails.cs
@@ -9189,6 +9286,7 @@ src/PureCloudPlatform.Client.V2/Model/PingIdentity.cs
 src/PureCloudPlatform.Client.V2/Model/PinnedMessageRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningGroup.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningGroupList.cs
+src/PureCloudPlatform.Client.V2/Model/PlanningGroupOutputs.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningGroupReference.cs
 src/PureCloudPlatform.Client.V2/Model/PlanningPeriodSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Policy.cs
@@ -9293,6 +9391,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicJourneyActi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallEventTopicWrapup.cs
@@ -9308,6 +9407,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicJourney
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicJourneyCustomerSession.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCallbackEventTopicVoicemail.cs
@@ -9322,6 +9422,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicJourneyActi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationChatEventTopicWrapup.cs
@@ -9335,6 +9436,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicJourney
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationCobrowseEventTopicWrapup.cs
@@ -9349,6 +9451,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicJourneyAct
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEmailEventTopicWrapup.cs
@@ -9384,6 +9487,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicModifiedBy.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicRecentTransfer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScreenshare.cs
@@ -9410,6 +9514,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageM
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMetadataContent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicMessageSticker.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicWrapup.cs
@@ -9421,6 +9526,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicJour
 src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicJourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicJourneyCustomerSession.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicScreenShareConversation.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationScreenShareEventTopicScreenShareMediaParticipant.cs
@@ -9458,6 +9564,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicRecentTransfer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScreenshare.cs
@@ -9499,6 +9606,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicModifiedBy
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicObject.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicPhoneNumberColumn.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicRecentTransfer.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScreenshare.cs
@@ -9867,6 +9975,7 @@ src/PureCloudPlatform.Client.V2/Model/SourcePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SplittingInformation.cs
+src/PureCloudPlatform.Client.V2/Model/StaffingRequirementsPlanningGroupData.cs
 src/PureCloudPlatform.Client.V2/Model/StarrableDivision.cs
 src/PureCloudPlatform.Client.V2/Model/StatEventCampaignTopicIntervalMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/StatEventCampaignTopicMetricStats.cs
@@ -10186,6 +10295,8 @@ src/PureCloudPlatform.Client.V2/Model/UpdateCoachingAppointmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateContactColumnActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDraftInput.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateManagementUnitRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateNotificationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateNotificationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateNotificationsResponse.cs
@@ -10197,6 +10308,7 @@ src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffLimitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTriggerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateUser.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateUtilizationLabelRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateVerifierRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateWorkPlanRotationAgentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateWorkPlanRotationRequest.cs
@@ -10320,6 +10432,7 @@ src/PureCloudPlatform.Client.V2/Model/UserTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/UserTrendData.cs
 src/PureCloudPlatform.Client.V2/Model/UsersSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UtilizationLabel.cs
+src/PureCloudPlatform.Client.V2/Model/UtilizationLabelEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UtilizationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UtilizationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UtilizationTag.cs
@@ -10375,6 +10488,14 @@ src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflo
 src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflowTopicConversationReason.cs
 src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/V2ConversationMessageTypingEventForWorkflowTopicMessageData.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicExecution.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicFlow.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicFlowErrorWarningInfo.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicFlowExecutionHistory.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicInvokingContext.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicJourneyActionMap.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicProcessAutomation.cs
+src/PureCloudPlatform.Client.V2/Model/V2FlowExecutionDataFlowidTopicQuality.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlert.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertNotification.cs
@@ -10536,6 +10657,9 @@ src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastImportCompleteTopicF
 src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue.cs
 src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastImportCompleteTopicUserReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastImportCompleteTopicWfmVersionedEntityMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults.cs
+src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuShortTermForecastReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast.cs
 src/PureCloudPlatform.Client.V2/Model/WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotification.cs
@@ -10724,16 +10848,22 @@ src/PureCloudPlatform.Client.V2/Model/WorkitemsAttributeChangeWorkitemStatusCate
 src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorkbinDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorkitemDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsChangeWorktypeDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationAssignmentSegment.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWorkitem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWrapup.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationAssignmentSegment.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationWorkitem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationWrapup.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationAssignmentSegment.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWorkitem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/Workspace.cs

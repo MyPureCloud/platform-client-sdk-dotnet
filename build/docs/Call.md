@@ -38,6 +38,7 @@ title: Call
 | **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
+| **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings.html) | Represents the queue settings for this media type. | [optional] |
 | **Disposition** | [**Disposition**](Disposition.html) | Call resolution data for Dialer bulk make calls commands. | [optional] |
 {: class="table table-striped"}
 

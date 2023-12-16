@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Extensions;
 using RestSharp;
+using System.Security.Cryptography;
 
 namespace PureCloudPlatform.Client.V2.Extensions
 {
@@ -108,7 +109,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
                 response.Content,
                 response.StatusDescription);
         }
-         /// <summary>
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="apiClient"></param>
@@ -178,10 +180,136 @@ namespace PureCloudPlatform.Client.V2.Extensions
                 throw new ApiException(statusCode, "Error calling PostToken: " + response.ErrorMessage,
                     response.ErrorMessage);
 
+            var authTokenInfo = (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo));
+            apiClient.Configuration.AuthTokenInfo = authTokenInfo;
+
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
                                     .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
-                (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo)),
+                authTokenInfo,
+                response.Content,
+                response.StatusDescription);
+        }
+
+        /// <summary>
+        /// Generate a random string used as PKCE Code Verifier - length = 43 to 128.
+        /// </summary>
+        /// <param name="apiClient"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static string GeneratePKCECodeVerifier(this ApiClient apiClient, int length)
+        {
+            if (length < 43 || length > 128)
+                throw new ArgumentException("Error calling GeneratePKCECodeVerifier: PKCE Code Verifier (length) must be between 43 and 128 characters");
+
+            // String that contain both alphabets and numbers
+            String unreservedCharacters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-._~";
+            // Initializing the empty string
+            Random res = new Random();
+            String randomString = "";
+            for (int i = 0; i < length; i++) {
+                // Selecting an index randomly
+                int x = res.Next(unreservedCharacters.Length);
+                // Appending the character at the index to the random alphanumeric string.
+                randomString = randomString + unreservedCharacters[x];
+            }
+            return randomString;
+        }
+
+        /// <summary>
+        /// Compute Base64Url PKCE Code Challenge from Code Verifier.
+        /// </summary>
+        /// <param name="apiClient"></param>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public static string ComputePKCECodeChallenge(this ApiClient apiClient, string code)
+        {
+            if (code.Length < 43 || code.Length > 128)
+                throw new ArgumentException("Error calling ComputePKCECodeChallenge: PKCE Code Verifier (length) must be between 43 and 128 characters");
+
+            var hashBase64Url = "";
+            using (var sha256hash = SHA256.Create()) {
+                byte[] payloadBytes = sha256hash.ComputeHash(Encoding.UTF8.GetBytes(code));
+                hashBase64Url = Convert.ToBase64String(payloadBytes);
+                hashBase64Url = hashBase64Url.Replace('+', '-').Replace('/', '_');
+                hashBase64Url = hashBase64Url.Split('=')[0];
+            }
+            return hashBase64Url;
+        }
+
+        /// <summary>
+        /// Completes the PKCE Code Authorization.
+        /// </summary>
+        /// <param name="apiClient"></param>
+        /// <param name="clientId"></param>
+        /// <param name="redirectUri"></param>
+        /// <param name="codeVerifier"></param>
+        /// <param name="authorizationCode"></param>
+        /// <returns></returns>
+        public static AuthTokenInfo PostTokenPKCE(this ApiClient apiClient, string clientId, string redirectUri, string codeVerifier, string authorizationCode)
+        {
+            var response = apiClient.PostTokenWithHttpInfoPKCE(clientId, redirectUri, codeVerifier, authorizationCode);
+            return response.Data;
+        }
+
+        public static ApiResponse<AuthTokenInfo> PostTokenWithHttpInfoPKCE(this ApiClient apiClient, string clientId, string redirectUri, string codeVerifier, string authorizationCode)
+        {
+            var path_ = "/token";
+
+            // This may be uninitialized if no API classes have been constructed yet
+            if (apiClient.Configuration == null)
+                apiClient.Configuration = new Configuration(apiClient);
+
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(apiClient.Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[]
+            {
+                "application/x-www-form-urlencoded"
+            };
+            String httpContentType = apiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[]
+            {
+                "application/json"
+            };
+            String httpHeaderAccept = apiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // Add form params
+            formParams.Add("grant_type","authorization_code");
+            formParams.Add("code", apiClient.ParameterToString(authorizationCode));
+            formParams.Add("code_verifier", apiClient.ParameterToString(codeVerifier));
+            formParams.Add("client_id", apiClient.ParameterToString(clientId));
+            formParams.Add("redirect_uri", apiClient.ParameterToString(redirectUri));
+
+            // make the HTTP request
+            RestResponse response = (RestResponse)CallTokenApi(apiClient, path_,
+                Method.Post, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+
+            if (statusCode >= 400)
+                throw new ApiException(statusCode, "Error calling PostToken: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException(statusCode, "Error calling PostToken: " + response.ErrorMessage,
+                    response.ErrorMessage);
+
+            var authTokenInfo = (AuthTokenInfo) apiClient.Deserialize(response, typeof (AuthTokenInfo));
+            apiClient.Configuration.AuthTokenInfo = authTokenInfo;
+
+            return new ApiResponse<AuthTokenInfo>(statusCode,
+                response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
+                authTokenInfo,
                 response.Content,
                 response.StatusDescription);
         }

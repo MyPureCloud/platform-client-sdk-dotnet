@@ -1,13 +1,13 @@
 ---
-title: EvaluationFormEntityListing
+title: EvaluationFormResponseEntityListing
 ---
-## ININ.PureCloudApi.Model.EvaluationFormEntityListing
+## ININ.PureCloudApi.Model.EvaluationFormResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;EvaluationForm&gt;**](EvaluationForm.html) |  | [optional] |
+| **Entities** | [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |

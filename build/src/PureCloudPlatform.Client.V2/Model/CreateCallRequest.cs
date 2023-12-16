@@ -34,7 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         /// <param name="ExternalContactId">The external contact with which to associate the call..</param>
-        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null)
+        /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
+        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null, string Label = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.CallerId = CallerId;
@@ -49,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Participants = Participants;
             this.UuiData = UuiData;
             this.ExternalContactId = ExternalContactId;
+            this.Label = Label;
             
         }
         
@@ -170,6 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExternalContactId { get; set; }
 
 
+
+        /// <summary>
+        /// An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level
+        /// </summary>
+        /// <value>An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level</value>
+        [DataMember(Name="label", EmitDefaultValue=false)]
+        public string Label { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -296,6 +308,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalContactId == other.ExternalContactId ||
                     this.ExternalContactId != null &&
                     this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
+                    this.Label == other.Label ||
+                    this.Label != null &&
+                    this.Label.Equals(other.Label)
                 );
         }
 
@@ -348,6 +365,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+
+                if (this.Label != null)
+                    hash = hash * 59 + this.Label.GetHashCode();
 
                 return hash;
             }

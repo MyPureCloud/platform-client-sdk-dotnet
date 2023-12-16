@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationFormResponse :  IEquatable<EvaluationFormResponse>
     {
+        /// <summary>
+        /// Mode for evaluation form weight
+        /// </summary>
+        /// <value>Mode for evaluation form weight</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum WeightModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Scaled for "SCALED"
+            /// </summary>
+            [EnumMember(Value = "SCALED")]
+            Scaled,
+            
+            /// <summary>
+            /// Enum Off for "OFF"
+            /// </summary>
+            [EnumMember(Value = "OFF")]
+            Off
+        }
+        /// <summary>
+        /// Mode for evaluation form weight
+        /// </summary>
+        /// <value>Mode for evaluation form weight</value>
+        [DataMember(Name="weightMode", EmitDefaultValue=false)]
+        public WeightModeEnum? WeightMode { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationFormResponse" /> class.
@@ -32,15 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Published">Published.</param>
         /// <param name="ContextId">ContextId.</param>
         /// <param name="QuestionGroups">A list of question groups.</param>
-        /// <param name="PublishedVersions">PublishedVersions.</param>
-        public EvaluationFormResponse(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
+        /// <param name="WeightMode">Mode for evaluation form weight.</param>
+        public EvaluationFormResponse(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, WeightModeEnum? WeightMode = null)
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
             this.Published = Published;
             this.ContextId = ContextId;
             this.QuestionGroups = QuestionGroups;
-            this.PublishedVersions = PublishedVersions;
+            this.WeightMode = WeightMode;
             
         }
         
@@ -98,12 +131,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-        /// <summary>
-        /// Gets or Sets PublishedVersions
-        /// </summary>
-        [DataMember(Name="publishedVersions", EmitDefaultValue=false)]
-        public DomainEntityListingEvaluationForm PublishedVersions { get; set; }
-
 
 
         /// <summary>
@@ -129,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
-            sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
+            sb.Append("  WeightMode: ").Append(WeightMode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -202,9 +229,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QuestionGroups.SequenceEqual(other.QuestionGroups)
                 ) &&
                 (
-                    this.PublishedVersions == other.PublishedVersions ||
-                    this.PublishedVersions != null &&
-                    this.PublishedVersions.Equals(other.PublishedVersions)
+                    this.WeightMode == other.WeightMode ||
+                    this.WeightMode != null &&
+                    this.WeightMode.Equals(other.WeightMode)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -242,8 +269,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.QuestionGroups != null)
                     hash = hash * 59 + this.QuestionGroups.GetHashCode();
 
-                if (this.PublishedVersions != null)
-                    hash = hash * 59 + this.PublishedVersions.GetHashCode();
+                if (this.WeightMode != null)
+                    hash = hash * 59 + this.WeightMode.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

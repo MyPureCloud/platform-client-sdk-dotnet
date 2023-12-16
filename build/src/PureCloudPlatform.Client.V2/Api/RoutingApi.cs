@@ -431,6 +431,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingUtilizationWithHttpInfo ();
 
         /// <summary>
+        /// Delete a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns></returns>
+        
+        void DeleteRoutingUtilizationLabel (string labelId, bool? forceDelete = null);
+
+        /// <summary>
+        /// Delete a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteRoutingUtilizationLabelWithHttpInfo (string labelId, bool? forceDelete = null);
+
+        /// <summary>
         /// Delete an utilization tag
         /// </summary>
         /// <remarks>
@@ -1943,6 +1971,90 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UtilizationResponse> GetRoutingUtilizationWithHttpInfo ();
 
         /// <summary>
+        /// Get details about this utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>UtilizationLabel</returns>
+        
+        UtilizationLabel GetRoutingUtilizationLabel (string labelId);
+
+        /// <summary>
+        /// Get details about this utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>ApiResponse of UtilizationLabel</returns>
+        
+        ApiResponse<UtilizationLabel> GetRoutingUtilizationLabelWithHttpInfo (string labelId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>List&lt;Object&gt;</returns>
+        
+        List<Object> GetRoutingUtilizationLabelAgents (string labelId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        
+        ApiResponse<List<Object>> GetRoutingUtilizationLabelAgentsWithHttpInfo (string labelId);
+
+        /// <summary>
+        /// Get list of utilization labels
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>UtilizationLabelEntityListing</returns>
+        
+        UtilizationLabelEntityListing GetRoutingUtilizationLabels (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get list of utilization labels
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>ApiResponse of UtilizationLabelEntityListing</returns>
+        
+        ApiResponse<UtilizationLabelEntityListing> GetRoutingUtilizationLabelsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
         /// Get details about this utilization tag
         /// </summary>
         /// <remarks>
@@ -3135,6 +3247,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersImportWithHttpInfo (SmsPhoneNumberImport body);
 
         /// <summary>
+        /// Create a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>UtilizationLabel</returns>
+        
+        UtilizationLabel PostRoutingUtilizationLabels (CreateUtilizationLabelRequest body);
+
+        /// <summary>
+        /// Create a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>ApiResponse of UtilizationLabel</returns>
+        
+        ApiResponse<UtilizationLabel> PostRoutingUtilizationLabelsWithHttpInfo (CreateUtilizationLabelRequest body);
+
+        /// <summary>
         /// Create an utilization tag
         /// </summary>
         /// <remarks>
@@ -3463,6 +3601,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UtilizationResponse</returns>
         
         ApiResponse<UtilizationResponse> PutRoutingUtilizationWithHttpInfo (UtilizationRequest body);
+
+        /// <summary>
+        /// Update a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>UtilizationLabel</returns>
+        
+        UtilizationLabel PutRoutingUtilizationLabel (string labelId, UpdateUtilizationLabelRequest body);
+
+        /// <summary>
+        /// Update a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>ApiResponse of UtilizationLabel</returns>
+        
+        ApiResponse<UtilizationLabel> PutRoutingUtilizationLabelWithHttpInfo (string labelId, UpdateUtilizationLabelRequest body);
 
         /// <summary>
         /// Update wrap-up code
@@ -3961,6 +4127,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Delete a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteRoutingUtilizationLabelAsync (string labelId, bool? forceDelete = null);
+
+        /// <summary>
+        /// Delete a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationLabelAsyncWithHttpInfo (string labelId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete an utilization tag
@@ -5475,6 +5669,90 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UtilizationResponse>> GetRoutingUtilizationAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get details about this utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of UtilizationLabel</returns>
+        
+        System.Threading.Tasks.Task<UtilizationLabel> GetRoutingUtilizationLabelAsync (string labelId);
+
+        /// <summary>
+        /// Get details about this utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> GetRoutingUtilizationLabelAsyncWithHttpInfo (string labelId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<Object>> GetRoutingUtilizationLabelAgentsAsync (string labelId);
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetRoutingUtilizationLabelAgentsAsyncWithHttpInfo (string labelId);
+
+        /// <summary>
+        /// Get list of utilization labels
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>Task of UtilizationLabelEntityListing</returns>
+        
+        System.Threading.Tasks.Task<UtilizationLabelEntityListing> GetRoutingUtilizationLabelsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get list of utilization labels
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>Task of ApiResponse (UtilizationLabelEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UtilizationLabelEntityListing>> GetRoutingUtilizationLabelsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
         /// Get details about this utilization tag
         /// </summary>
         /// <remarks>
@@ -6667,6 +6945,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersImportAsyncWithHttpInfo (SmsPhoneNumberImport body);
 
         /// <summary>
+        /// Create a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of UtilizationLabel</returns>
+        
+        System.Threading.Tasks.Task<UtilizationLabel> PostRoutingUtilizationLabelsAsync (CreateUtilizationLabelRequest body);
+
+        /// <summary>
+        /// Create a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> PostRoutingUtilizationLabelsAsyncWithHttpInfo (CreateUtilizationLabelRequest body);
+
+        /// <summary>
         /// Create an utilization tag
         /// </summary>
         /// <remarks>
@@ -6995,6 +7299,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UtilizationResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UtilizationResponse>> PutRoutingUtilizationAsyncWithHttpInfo (UtilizationRequest body);
+
+        /// <summary>
+        /// Update a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of UtilizationLabel</returns>
+        
+        System.Threading.Tasks.Task<UtilizationLabel> PutRoutingUtilizationLabelAsync (string labelId, UpdateUtilizationLabelRequest body);
+
+        /// <summary>
+        /// Update a utilization label
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> PutRoutingUtilizationLabelAsyncWithHttpInfo (string labelId, UpdateUtilizationLabelRequest body);
 
         /// <summary>
         /// Update wrap-up code
@@ -10743,6 +11075,225 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilization: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a utilization label 
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns></returns>
+        
+        public void DeleteRoutingUtilizationLabel (string labelId, bool? forceDelete = null)
+        {
+             DeleteRoutingUtilizationLabelWithHttpInfo(labelId, forceDelete);
+        }
+
+        /// <summary>
+        /// Delete a utilization label 
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteRoutingUtilizationLabelWithHttpInfo (string labelId, bool? forceDelete = null)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->DeleteRoutingUtilizationLabel");
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+            if (forceDelete != null) localVarQueryParams.Add(new Tuple<string, string>("forceDelete", this.Configuration.ApiClient.ParameterToString(forceDelete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a utilization label 
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteRoutingUtilizationLabelAsync (string labelId, bool? forceDelete = null)
+        {
+             await DeleteRoutingUtilizationLabelAsyncWithHttpInfo(labelId, forceDelete);
+
+        }
+
+        /// <summary>
+        /// Delete a utilization label 
+        /// 
+        /// DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="forceDelete">Remove all label usages (if found) without warning (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationLabelAsyncWithHttpInfo (string labelId, bool? forceDelete = null)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->DeleteRoutingUtilizationLabel");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+            if (forceDelete != null) localVarQueryParams.Add(new Tuple<string, string>("forceDelete", this.Configuration.ApiClient.ParameterToString(forceDelete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -22820,6 +23371,662 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get details about this utilization label 
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>UtilizationLabel</returns>
+        
+        public UtilizationLabel GetRoutingUtilizationLabel (string labelId)
+        {
+             ApiResponse<UtilizationLabel> localVarResponse = GetRoutingUtilizationLabelWithHttpInfo(labelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about this utilization label 
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>ApiResponse of UtilizationLabel</returns>
+        
+        public ApiResponse< UtilizationLabel > GetRoutingUtilizationLabelWithHttpInfo (string labelId)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->GetRoutingUtilizationLabel");
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabel>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about this utilization label 
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of UtilizationLabel</returns>
+        
+        public async System.Threading.Tasks.Task<UtilizationLabel> GetRoutingUtilizationLabelAsync (string labelId)
+        {
+             ApiResponse<UtilizationLabel> localVarResponse = await GetRoutingUtilizationLabelAsyncWithHttpInfo(labelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about this utilization label 
+        /// 
+        /// GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> GetRoutingUtilizationLabelAsyncWithHttpInfo (string labelId)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->GetRoutingUtilizationLabel");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabel>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label 
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>List&lt;Object&gt;</returns>
+        
+        public List<Object> GetRoutingUtilizationLabelAgents (string labelId)
+        {
+             ApiResponse<List<Object>> localVarResponse = GetRoutingUtilizationLabelAgentsWithHttpInfo(labelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label 
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        
+        public ApiResponse< List<Object> > GetRoutingUtilizationLabelAgentsWithHttpInfo (string labelId)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->GetRoutingUtilizationLabelAgents");
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabelAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabelAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label 
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<Object>> GetRoutingUtilizationLabelAgentsAsync (string labelId)
+        {
+             ApiResponse<List<Object>> localVarResponse = await GetRoutingUtilizationLabelAgentsAsyncWithHttpInfo(labelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of agent ids associated with a utilization label 
+        /// 
+        /// GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetRoutingUtilizationLabelAgentsAsyncWithHttpInfo (string labelId)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->GetRoutingUtilizationLabelAgents");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabelAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabelAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of utilization labels 
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>UtilizationLabelEntityListing</returns>
+        
+        public UtilizationLabelEntityListing GetRoutingUtilizationLabels (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<UtilizationLabelEntityListing> localVarResponse = GetRoutingUtilizationLabelsWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of utilization labels 
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>ApiResponse of UtilizationLabelEntityListing</returns>
+        
+        public ApiResponse< UtilizationLabelEntityListing > GetRoutingUtilizationLabelsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/utilization/labels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabelEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabelEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabelEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of utilization labels 
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>Task of UtilizationLabelEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<UtilizationLabelEntityListing> GetRoutingUtilizationLabelsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<UtilizationLabelEntityListing> localVarResponse = await GetRoutingUtilizationLabelsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of utilization labels 
+        /// 
+        /// GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order by name (optional, default to ascending)</param>
+        /// <param name="name">Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)</param>
+        /// <returns>Task of ApiResponse (UtilizationLabelEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationLabelEntityListing>> GetRoutingUtilizationLabelsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/utilization/labels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingUtilizationLabels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabelEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabelEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabelEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get details about this utilization tag 
         /// 
         /// GetRoutingUtilizationTag is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -33101,6 +34308,231 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create a utilization label 
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>UtilizationLabel</returns>
+        
+        public UtilizationLabel PostRoutingUtilizationLabels (CreateUtilizationLabelRequest body)
+        {
+             ApiResponse<UtilizationLabel> localVarResponse = PostRoutingUtilizationLabelsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a utilization label 
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>ApiResponse of UtilizationLabel</returns>
+        
+        public ApiResponse< UtilizationLabel > PostRoutingUtilizationLabelsWithHttpInfo (CreateUtilizationLabelRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingUtilizationLabels");
+
+            var localVarPath = "/api/v2/routing/utilization/labels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationLabels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabel>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a utilization label 
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of UtilizationLabel</returns>
+        
+        public async System.Threading.Tasks.Task<UtilizationLabel> PostRoutingUtilizationLabelsAsync (CreateUtilizationLabelRequest body)
+        {
+             ApiResponse<UtilizationLabel> localVarResponse = await PostRoutingUtilizationLabelsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a utilization label 
+        /// 
+        /// PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> PostRoutingUtilizationLabelsAsyncWithHttpInfo (CreateUtilizationLabelRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingUtilizationLabels");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/labels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationLabels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingUtilizationLabels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabel>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create an utilization tag 
         /// 
         /// PostRoutingUtilizationTags is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -36065,6 +37497,244 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UtilizationResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UtilizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a utilization label 
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>UtilizationLabel</returns>
+        
+        public UtilizationLabel PutRoutingUtilizationLabel (string labelId, UpdateUtilizationLabelRequest body)
+        {
+             ApiResponse<UtilizationLabel> localVarResponse = PutRoutingUtilizationLabelWithHttpInfo(labelId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a utilization label 
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>ApiResponse of UtilizationLabel</returns>
+        
+        public ApiResponse< UtilizationLabel > PutRoutingUtilizationLabelWithHttpInfo (string labelId, UpdateUtilizationLabelRequest body)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->PutRoutingUtilizationLabel");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingUtilizationLabel");
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabel>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a utilization label 
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of UtilizationLabel</returns>
+        
+        public async System.Threading.Tasks.Task<UtilizationLabel> PutRoutingUtilizationLabelAsync (string labelId, UpdateUtilizationLabelRequest body)
+        {
+             ApiResponse<UtilizationLabel> localVarResponse = await PutRoutingUtilizationLabelAsyncWithHttpInfo(labelId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a utilization label 
+        /// 
+        /// PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="labelId">Utilization Label ID</param>
+        /// <param name="body">UtilizationLabel</param>
+        /// <returns>Task of ApiResponse (UtilizationLabel)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UtilizationLabel>> PutRoutingUtilizationLabelAsyncWithHttpInfo (string labelId, UpdateUtilizationLabelRequest body)
+        { 
+            // verify the required parameter 'labelId' is set
+            if (labelId == null)
+                throw new ApiException(400, "Missing required parameter 'labelId' when calling RoutingApi->PutRoutingUtilizationLabel");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PutRoutingUtilizationLabel");
+            
+
+            var localVarPath = "/api/v2/routing/utilization/labels/{labelId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (labelId != null) localVarPathParams.Add("labelId", this.Configuration.ApiClient.ParameterToString(labelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUtilizationLabel: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutRoutingUtilizationLabel: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UtilizationLabel>(localVarStatusCode,
+                localVarHeaders,
+                (UtilizationLabel) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UtilizationLabel)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

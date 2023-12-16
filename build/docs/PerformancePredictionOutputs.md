@@ -1,0 +1,15 @@
+---
+title: PerformancePredictionOutputs
+---
+## ININ.PureCloudApi.Model.PerformancePredictionOutputs
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **CalculationStartDate** | **DateTime?** | Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results | |
+| **CalculationIntervalLengthMinutes** | **int?** | Interval length of the response metrics | |
+| **PlanningGroupResults** | [**List&lt;PlanningGroupOutputs&gt;**](PlanningGroupOutputs.html) | List of planning group level performance prediction results | |
+{: class="table table-striped"}
+
+

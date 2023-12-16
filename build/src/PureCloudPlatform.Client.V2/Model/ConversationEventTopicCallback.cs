@@ -355,7 +355,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="CallerId">The phone number displayed to recipients of the phone call. The value should conform to the E164 format..</param>
         /// <param name="CallerIdName">The name displayed to recipients of the phone call..</param>
-        public ConversationEventTopicCallback(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationEventTopicDialerPreview DialerPreview = null, ConversationEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null)
+        /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
+        public ConversationEventTopicCallback(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationEventTopicDialerPreview DialerPreview = null, ConversationEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, ConversationEventTopicWrapup Wrapup = null, ConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, ConversationEventTopicQueueMediaSettings QueueMediaSettings = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -383,6 +384,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.CallerId = CallerId;
             this.CallerIdName = CallerIdName;
+            this.QueueMediaSettings = QueueMediaSettings;
             
         }
         
@@ -591,6 +593,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CallerIdName { get; set; }
 
 
+
+        /// <summary>
+        /// Represents the queue setting for this media.
+        /// </summary>
+        /// <value>Represents the queue setting for this media.</value>
+        [DataMember(Name="queueMediaSettings", EmitDefaultValue=false)]
+        public ConversationEventTopicQueueMediaSettings QueueMediaSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -626,6 +637,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
+            sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -795,6 +807,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallerIdName == other.CallerIdName ||
                     this.CallerIdName != null &&
                     this.CallerIdName.Equals(other.CallerIdName)
+                ) &&
+                (
+                    this.QueueMediaSettings == other.QueueMediaSettings ||
+                    this.QueueMediaSettings != null &&
+                    this.QueueMediaSettings.Equals(other.QueueMediaSettings)
                 );
         }
 
@@ -886,6 +903,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
+
+                if (this.QueueMediaSettings != null)
+                    hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
 
                 return hash;
             }

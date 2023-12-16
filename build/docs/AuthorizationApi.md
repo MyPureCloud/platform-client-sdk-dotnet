@@ -940,7 +940,7 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var roleId = roleId_example;  // string | Role ID
-            var userCount = userCount_example;  // bool? | Fetch the count of users who have this role granted in at least one division (optional)  (default to true)
+            var userCount = userCount_example;  // bool? | Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to 'true' can lead to slower load times or timeouts for role queries with large member counts. (optional)  (default to true)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role (optional) 
 
             try
@@ -964,7 +964,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-| **userCount** | **bool?**| Fetch the count of users who have this role granted in at least one division | [optional] [default to true]<br />**Values**: true, false |
+| **userCount** | **bool?**| Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. | [optional] [default to true]<br />**Values**: true, false |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role | [optional] <br />**Values**: unusedPermissions |
 {: class="table table-striped"}
 

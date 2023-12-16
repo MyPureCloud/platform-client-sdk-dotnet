@@ -179,7 +179,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="RevisionCreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="MediaType">List of different communication types used in conversation..</param>
         /// <param name="Rescore">Is only true when evaluation is re-scored..</param>
@@ -191,11 +190,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
-        /// <param name="AgentTeam">Team of the evaluation agent.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
-        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, Team AgentTeam = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -211,7 +209,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ReleaseDate = ReleaseDate;
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
-            this.RevisionCreatedDate = RevisionCreatedDate;
             this.Queue = Queue;
             this.MediaType = MediaType;
             this.Rescore = Rescore;
@@ -223,7 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
             this.Redacted = Redacted;
-            this.AgentTeam = AgentTeam;
             this.IsScoringIndex = IsScoringIndex;
             this.AuthorizedActions = AuthorizedActions;
             this.HasAssistanceFailed = HasAssistanceFailed;
@@ -353,15 +349,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="revisionCreatedDate", EmitDefaultValue=false)]
-        public DateTime? RevisionCreatedDate { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
@@ -453,15 +440,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Team of the evaluation agent
-        /// </summary>
-        /// <value>Team of the evaluation agent</value>
-        [DataMember(Name="agentTeam", EmitDefaultValue=false)]
-        public Team AgentTeam { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets IsScoringIndex
         /// </summary>
         [DataMember(Name="isScoringIndex", EmitDefaultValue=false)]
@@ -528,7 +506,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReleaseDate: ").Append(ReleaseDate).Append("\n");
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
-            sb.Append("  RevisionCreatedDate: ").Append(RevisionCreatedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Rescore: ").Append(Rescore).Append("\n");
@@ -540,7 +517,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
-            sb.Append("  AgentTeam: ").Append(AgentTeam).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  AuthorizedActions: ").Append(AuthorizedActions).Append("\n");
             sb.Append("  HasAssistanceFailed: ").Append(HasAssistanceFailed).Append("\n");
@@ -662,11 +638,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ChangedDate.Equals(other.ChangedDate)
                 ) &&
                 (
-                    this.RevisionCreatedDate == other.RevisionCreatedDate ||
-                    this.RevisionCreatedDate != null &&
-                    this.RevisionCreatedDate.Equals(other.RevisionCreatedDate)
-                ) &&
-                (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
@@ -720,11 +691,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Redacted == other.Redacted ||
                     this.Redacted != null &&
                     this.Redacted.Equals(other.Redacted)
-                ) &&
-                (
-                    this.AgentTeam == other.AgentTeam ||
-                    this.AgentTeam != null &&
-                    this.AgentTeam.Equals(other.AgentTeam)
                 ) &&
                 (
                     this.IsScoringIndex == other.IsScoringIndex ||
@@ -809,9 +775,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ChangedDate != null)
                     hash = hash * 59 + this.ChangedDate.GetHashCode();
 
-                if (this.RevisionCreatedDate != null)
-                    hash = hash * 59 + this.RevisionCreatedDate.GetHashCode();
-
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
 
@@ -844,9 +807,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Redacted != null)
                     hash = hash * 59 + this.Redacted.GetHashCode();
-
-                if (this.AgentTeam != null)
-                    hash = hash * 59 + this.AgentTeam.GetHashCode();
 
                 if (this.IsScoringIndex != null)
                     hash = hash * 59 + this.IsScoringIndex.GetHashCode();

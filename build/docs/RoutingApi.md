@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **Delete** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **Delete** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **Delete** /api/v2/routing/utilization | Delete the organization-wide max utilization settings and revert to the system default. |
+| [**DeleteRoutingUtilizationLabel**](RoutingApi.html#deleteroutingutilizationlabel) | **Delete** /api/v2/routing/utilization/labels/{labelId} | Delete a utilization label |
 | [**DeleteRoutingUtilizationTag**](RoutingApi.html#deleteroutingutilizationtag) | **Delete** /api/v2/routing/utilization/tags/{tagId} | Delete an utilization tag |
 | [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **Delete** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
 | [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **Delete** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
@@ -79,6 +80,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSmsPhonenumbers**](RoutingApi.html#getroutingsmsphonenumbers) | **Get** /api/v2/routing/sms/phonenumbers | Get a list of provisioned phone numbers. |
 | [**GetRoutingUserUtilization**](RoutingApi.html#getroutinguserutilization) | **Get** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**GetRoutingUtilization**](RoutingApi.html#getroutingutilization) | **Get** /api/v2/routing/utilization | Get the organization-wide max utilization settings. |
+| [**GetRoutingUtilizationLabel**](RoutingApi.html#getroutingutilizationlabel) | **Get** /api/v2/routing/utilization/labels/{labelId} | Get details about this utilization label |
+| [**GetRoutingUtilizationLabelAgents**](RoutingApi.html#getroutingutilizationlabelagents) | **Get** /api/v2/routing/utilization/labels/{labelId}/agents | Get list of agent ids associated with a utilization label |
+| [**GetRoutingUtilizationLabels**](RoutingApi.html#getroutingutilizationlabels) | **Get** /api/v2/routing/utilization/labels | Get list of utilization labels |
 | [**GetRoutingUtilizationTag**](RoutingApi.html#getroutingutilizationtag) | **Get** /api/v2/routing/utilization/tags/{tagId} | Get details about this utilization tag |
 | [**GetRoutingUtilizationTagAgents**](RoutingApi.html#getroutingutilizationtagagents) | **Get** /api/v2/routing/utilization/tags/{tagId}/agents | Get list of agent ids associated with a utilization tag |
 | [**GetRoutingUtilizationTags**](RoutingApi.html#getroutingutilizationtags) | **Get** /api/v2/routing/utilization/tags | Get list of utilization tags |
@@ -124,6 +128,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **Post** /api/v2/routing/sms/addresses | Provision an Address for SMS |
 | [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **Post** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
 | [**PostRoutingSmsPhonenumbersImport**](RoutingApi.html#postroutingsmsphonenumbersimport) | **Post** /api/v2/routing/sms/phonenumbers/import | Imports a phone number for SMS |
+| [**PostRoutingUtilizationLabels**](RoutingApi.html#postroutingutilizationlabels) | **Post** /api/v2/routing/utilization/labels | Create a utilization label |
 | [**PostRoutingUtilizationTags**](RoutingApi.html#postroutingutilizationtags) | **Post** /api/v2/routing/utilization/tags | Create an utilization tag |
 | [**PostRoutingWrapupcodes**](RoutingApi.html#postroutingwrapupcodes) | **Post** /api/v2/routing/wrapupcodes | Create a wrap-up code |
 | [**PostUserRoutinglanguages**](RoutingApi.html#postuserroutinglanguages) | **Post** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
@@ -137,6 +142,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingSmsPhonenumber**](RoutingApi.html#putroutingsmsphonenumber) | **Put** /api/v2/routing/sms/phonenumbers/{addressId} | Update a phone number provisioned for SMS. |
 | [**PutRoutingUserUtilization**](RoutingApi.html#putroutinguserutilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutRoutingUtilization**](RoutingApi.html#putroutingutilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
+| [**PutRoutingUtilizationLabel**](RoutingApi.html#putroutingutilizationlabel) | **Put** /api/v2/routing/utilization/labels/{labelId} | Update a utilization label |
 | [**PutRoutingWrapupcode**](RoutingApi.html#putroutingwrapupcode) | **Put** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 | [**PutUserRoutingskill**](RoutingApi.html#putuserroutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUserRoutingskillsBulk**](RoutingApi.html#putuserroutingskillsbulk) | **Put** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
@@ -1194,6 +1200,72 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingutilizationlabel"></a>
+
+## void DeleteRoutingUtilizationLabel (string labelId, bool? forceDelete = null)
+
+
+
+Delete a utilization label
+
+DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingUtilizationLabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var labelId = labelId_example;  // string | Utilization Label ID
+            var forceDelete = true;  // bool? | Remove all label usages (if found) without warning (optional)  (default to false)
+
+            try
+            { 
+                // Delete a utilization label
+                apiInstance.DeleteRoutingUtilizationLabel(labelId, forceDelete);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingUtilizationLabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **labelId** | **string**| Utilization Label ID |  |
+| **forceDelete** | **bool?**| Remove all label usages (if found) without warning | [optional] [default to false] |
+{: class="table table-striped"}
 
 ### Return type
 
@@ -4839,6 +4911,207 @@ This endpoint does require any parameters.
 
 [**UtilizationResponse**](UtilizationResponse.html)
 
+<a name="getroutingutilizationlabel"></a>
+
+## [**UtilizationLabel**](UtilizationLabel.html) GetRoutingUtilizationLabel (string labelId)
+
+
+
+Get details about this utilization label
+
+GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUtilizationLabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var labelId = labelId_example;  // string | Utilization Label ID
+
+            try
+            { 
+                // Get details about this utilization label
+                UtilizationLabel result = apiInstance.GetRoutingUtilizationLabel(labelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUtilizationLabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **labelId** | **string**| Utilization Label ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationLabel**](UtilizationLabel.html)
+
+<a name="getroutingutilizationlabelagents"></a>
+
+## **List&lt;Object&gt;** GetRoutingUtilizationLabelAgents (string labelId)
+
+
+
+Get list of agent ids associated with a utilization label
+
+GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUtilizationLabelAgentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var labelId = labelId_example;  // string | Utilization Label ID
+
+            try
+            { 
+                // Get list of agent ids associated with a utilization label
+                List<Object> result = apiInstance.GetRoutingUtilizationLabelAgents(labelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUtilizationLabelAgents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **labelId** | **string**| Utilization Label ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**List<Object>**
+
+<a name="getroutingutilizationlabels"></a>
+
+## [**UtilizationLabelEntityListing**](UtilizationLabelEntityListing.html) GetRoutingUtilizationLabels (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+
+
+
+Get list of utilization labels
+
+GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUtilizationLabelsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Sort order by name (optional)  (default to ascending)
+            var name = name_example;  // string | Utilization label's name (Wildcard is supported, e.g., 'label1*', '*label*' (optional) 
+
+            try
+            { 
+                // Get list of utilization labels
+                UtilizationLabelEntityListing result = apiInstance.GetRoutingUtilizationLabels(pageSize, pageNumber, sortOrder, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingUtilizationLabels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Sort order by name | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **name** | **string**| Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationLabelEntityListing**](UtilizationLabelEntityListing.html)
+
 <a name="getroutingutilizationtag"></a>
 
 ## [**UtilizationTag**](UtilizationTag.html) GetRoutingUtilizationTag (string tagId)
@@ -7797,6 +8070,71 @@ namespace Example
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
 
+<a name="postroutingutilizationlabels"></a>
+
+## [**UtilizationLabel**](UtilizationLabel.html) PostRoutingUtilizationLabels (CreateUtilizationLabelRequest body)
+
+
+
+Create a utilization label
+
+PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingUtilizationLabelsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new CreateUtilizationLabelRequest(); // CreateUtilizationLabelRequest | UtilizationLabel
+
+            try
+            { 
+                // Create a utilization label
+                UtilizationLabel result = apiInstance.PostRoutingUtilizationLabels(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingUtilizationLabels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateUtilizationLabelRequest**](CreateUtilizationLabelRequest.html)| UtilizationLabel |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationLabel**](UtilizationLabel.html)
+
 <a name="postroutingutilizationtags"></a>
 
 ## [**UtilizationTag**](UtilizationTag.html) PostRoutingUtilizationTags (CreateUtilizationTagRequest body)
@@ -8634,6 +8972,73 @@ namespace Example
 ### Return type
 
 [**UtilizationResponse**](UtilizationResponse.html)
+
+<a name="putroutingutilizationlabel"></a>
+
+## [**UtilizationLabel**](UtilizationLabel.html) PutRoutingUtilizationLabel (string labelId, UpdateUtilizationLabelRequest body)
+
+
+
+Update a utilization label
+
+PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingUtilizationLabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var labelId = labelId_example;  // string | Utilization Label ID
+            var body = new UpdateUtilizationLabelRequest(); // UpdateUtilizationLabelRequest | UtilizationLabel
+
+            try
+            { 
+                // Update a utilization label
+                UtilizationLabel result = apiInstance.PutRoutingUtilizationLabel(labelId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingUtilizationLabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **labelId** | **string**| Utilization Label ID |  |
+| **body** | [**UpdateUtilizationLabelRequest**](UpdateUtilizationLabelRequest.html)| UtilizationLabel |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UtilizationLabel**](UtilizationLabel.html)
 
 <a name="putroutingwrapupcode"></a>
 

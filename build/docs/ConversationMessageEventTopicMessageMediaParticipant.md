@@ -43,6 +43,7 @@ title: ConversationMessageEventTopicMessageMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
+| **QueueMediaSettings** | [**ConversationMessageEventTopicQueueMediaSettings**](ConversationMessageEventTopicQueueMediaSettings.html) |  | [optional] |
 | **Messages** | [**List&lt;ConversationMessageEventTopicMessageDetails&gt;**](ConversationMessageEventTopicMessageDetails.html) |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **RecipientCountry** | **string** |  | [optional] |

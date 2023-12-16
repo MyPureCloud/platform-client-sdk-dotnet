@@ -721,7 +721,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueueRoutingPerformanceView for "QUEUE_ROUTING_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "QUEUE_ROUTING_PERFORMANCE_VIEW")]
-            QueueRoutingPerformanceView
+            QueueRoutingPerformanceView,
+            
+            /// <summary>
+            /// Enum AgentWorkitemPerformanceSummaryView for "AGENT_WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
+            AgentWorkitemPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentWorkitemPerformanceDetailView for "AGENT_WORKITEM_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_WORKITEM_PERFORMANCE_DETAIL_VIEW")]
+            AgentWorkitemPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum QueueWorkitemPerformanceSummaryView for "QUEUE_WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
+            QueueWorkitemPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum QueueWorkitemPerformanceDetailView for "QUEUE_WORKITEM_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_WORKITEM_PERFORMANCE_DETAIL_VIEW")]
+            QueueWorkitemPerformanceDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

@@ -43,6 +43,7 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
+| **QueueMediaSettings** | [**ConversationVideoEventTopicQueueMediaSettings**](ConversationVideoEventTopicQueueMediaSettings.html) |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |

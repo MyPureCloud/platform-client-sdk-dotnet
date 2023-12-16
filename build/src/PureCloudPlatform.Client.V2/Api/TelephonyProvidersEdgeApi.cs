@@ -731,25 +731,25 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
-        /// Get the list of available languages.
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableLanguageList</returns>
-        
+        [Obsolete]
         AvailableLanguageList GetTelephonyProvidersEdgesAvailablelanguages ();
 
         /// <summary>
-        /// Get the list of available languages.
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableLanguageList</returns>
-        
+        [Obsolete]
         ApiResponse<AvailableLanguageList> GetTelephonyProvidersEdgesAvailablelanguagesWithHttpInfo ();
 
         /// <summary>
@@ -3969,25 +3969,25 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
-        /// Get the list of available languages.
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableLanguageList</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AvailableLanguageList> GetTelephonyProvidersEdgesAvailablelanguagesAsync ();
 
         /// <summary>
-        /// Get the list of available languages.
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableLanguageList)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AvailableLanguageList>> GetTelephonyProvidersEdgesAvailablelanguagesAsyncWithHttpInfo ();
 
         /// <summary>
@@ -12619,12 +12619,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of available languages. 
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AvailableLanguageList</returns>
-        
+        [Obsolete]
         public AvailableLanguageList GetTelephonyProvidersEdgesAvailablelanguages ()
         {
              ApiResponse<AvailableLanguageList> localVarResponse = GetTelephonyProvidersEdgesAvailablelanguagesWithHttpInfo();
@@ -12632,12 +12632,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of available languages. 
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AvailableLanguageList</returns>
-        
+        [Obsolete]
         public ApiResponse< AvailableLanguageList > GetTelephonyProvidersEdgesAvailablelanguagesWithHttpInfo ()
         { 
 
@@ -12717,12 +12717,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of available languages. 
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AvailableLanguageList</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AvailableLanguageList> GetTelephonyProvidersEdgesAvailablelanguagesAsync ()
         {
              ApiResponse<AvailableLanguageList> localVarResponse = await GetTelephonyProvidersEdgesAvailablelanguagesAsyncWithHttpInfo();
@@ -12731,12 +12731,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of available languages. 
+        /// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AvailableLanguageList)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AvailableLanguageList>> GetTelephonyProvidersEdgesAvailablelanguagesAsyncWithHttpInfo ()
         { 
 

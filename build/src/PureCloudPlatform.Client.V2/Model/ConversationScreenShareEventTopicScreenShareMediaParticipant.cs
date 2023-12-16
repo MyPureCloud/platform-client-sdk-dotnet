@@ -410,10 +410,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartAcwTime">StartAcwTime.</param>
         /// <param name="EndAcwTime">EndAcwTime.</param>
         /// <param name="MediaRoles">MediaRoles.</param>
+        /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public ConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationScreenShareEventTopicUriReference User = null, ConversationScreenShareEventTopicUriReference Queue = null, ConversationScreenShareEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationScreenShareEventTopicErrorBody ErrorInfo = null, ConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationScreenShareEventTopicUriReference ExternalContact = null, ConversationScreenShareEventTopicUriReference ExternalOrganization = null, ConversationScreenShareEventTopicWrapup Wrapup = null, ConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public ConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationScreenShareEventTopicUriReference User = null, ConversationScreenShareEventTopicUriReference Queue = null, ConversationScreenShareEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationScreenShareEventTopicErrorBody ErrorInfo = null, ConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationScreenShareEventTopicUriReference ExternalContact = null, ConversationScreenShareEventTopicUriReference ExternalOrganization = null, ConversationScreenShareEventTopicWrapup Wrapup = null, ConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, ConversationScreenShareEventTopicQueueMediaSettings QueueMediaSettings = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -451,6 +452,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
             this.MediaRoles = MediaRoles;
+            this.QueueMediaSettings = QueueMediaSettings;
             this.Context = Context;
             this.PeerCount = PeerCount;
             this.Sharing = Sharing;
@@ -718,6 +720,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets QueueMediaSettings
+        /// </summary>
+        [DataMember(Name="queueMediaSettings", EmitDefaultValue=false)]
+        public ConversationScreenShareEventTopicQueueMediaSettings QueueMediaSettings { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
@@ -785,6 +795,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
+            sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
@@ -1009,6 +1020,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaRoles.SequenceEqual(other.MediaRoles)
                 ) &&
                 (
+                    this.QueueMediaSettings == other.QueueMediaSettings ||
+                    this.QueueMediaSettings != null &&
+                    this.QueueMediaSettings.Equals(other.QueueMediaSettings)
+                ) &&
+                (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
@@ -1143,6 +1159,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaRoles != null)
                     hash = hash * 59 + this.MediaRoles.GetHashCode();
+
+                if (this.QueueMediaSettings != null)
+                    hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
 
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();

@@ -35,7 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgeSoftwareversions**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoftwareversions) | **Get** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
 | [**GetTelephonyProvidersEdgeTrunks**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgetrunks) | **Get** /api/v2/telephony/providers/edges/{edgeId}/trunks | Get the list of available trunks for the given Edge. |
 | [**GetTelephonyProvidersEdges**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedges) | **Get** /api/v2/telephony/providers/edges | Get the list of edges. |
-| [**GetTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesavailablelanguages) | **Get** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. |
+| [**GetTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesavailablelanguages) | **Get** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. |
 | [**GetTelephonyProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgescertificateauthorities) | **Get** /api/v2/telephony/providers/edges/certificateauthorities | Get the list of certificate authorities. |
 | [**GetTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgescertificateauthority) | **Get** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Get a certificate authority. |
 | [**GetTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdid) | **Get** /api/v2/telephony/providers/edges/dids/{didId} | Get a DID by ID. |
@@ -1932,9 +1932,9 @@ namespace Example
 
 ## [**AvailableLanguageList**](AvailableLanguageList.html) GetTelephonyProvidersEdgesAvailablelanguages ()
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get the list of available languages.
+Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
 
 Requires NO permissions: 
 
@@ -1964,7 +1964,7 @@ namespace Example
 
             try
             { 
-                // Get the list of available languages.
+                // Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
                 AvailableLanguageList result = apiInstance.GetTelephonyProvidersEdgesAvailablelanguages();
                 Debug.WriteLine(result);
             }

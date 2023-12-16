@@ -29,15 +29,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QueueId">The identifier of the routing queue (required).</param>
         /// <param name="LanguageId">The identifier of a language to be considered in routing.</param>
+        /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
         /// <param name="Priority">The priority for routing.</param>
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
         /// <param name="ScoredAgents">A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100..</param>
         /// <param name="RoutingFlags">An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback..</param>
-        public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null, List<string> RoutingFlags = null)
+        public RoutingData(string QueueId = null, string LanguageId = null, string Label = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null, List<string> RoutingFlags = null)
         {
             this.QueueId = QueueId;
             this.LanguageId = LanguageId;
+            this.Label = Label;
             this.Priority = Priority;
             this.SkillIds = SkillIds;
             this.PreferredAgentIds = PreferredAgentIds;
@@ -63,6 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The identifier of a language to be considered in routing</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
+
+
+
+        /// <summary>
+        /// An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level
+        /// </summary>
+        /// <value>An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level</value>
+        [DataMember(Name="label", EmitDefaultValue=false)]
+        public string Label { get; set; }
 
 
 
@@ -121,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguageId.Equals(other.LanguageId)
                 ) &&
                 (
+                    this.Label == other.Label ||
+                    this.Label != null &&
+                    this.Label.Equals(other.Label)
+                ) &&
+                (
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
@@ -219,6 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
+
+                if (this.Label != null)
+                    hash = hash * 59 + this.Label.GetHashCode();
 
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();

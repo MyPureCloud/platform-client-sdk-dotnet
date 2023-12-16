@@ -209,6 +209,45 @@ namespace PureCloudPlatform.Client.V2.Model
             Invalid
         }
         /// <summary>
+        /// The type of certificate used to communicate with edge-proxy.
+        /// </summary>
+        /// <value>The type of certificate used to communicate with edge-proxy.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CertTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Purecloud for "PureCloud"
+            /// </summary>
+            [EnumMember(Value = "PureCloud")]
+            Purecloud,
+            
+            /// <summary>
+            /// Enum Public for "Public"
+            /// </summary>
+            [EnumMember(Value = "Public")]
+            Public,
+            
+            /// <summary>
+            /// Enum China for "China"
+            /// </summary>
+            [EnumMember(Value = "China")]
+            China,
+            
+            /// <summary>
+            /// Enum Notrequested for "NotRequested"
+            /// </summary>
+            [EnumMember(Value = "NotRequested")]
+            Notrequested
+        }
+        /// <summary>
         /// The current state of the Edge's call draining process before it can be safely rebooted or updated.
         /// </summary>
         /// <value>The current state of the Edge's call draining process before it can be safely rebooted or updated.</value>
@@ -276,6 +315,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="edgeDeploymentType", EmitDefaultValue=false)]
         public EdgeDeploymentTypeEnum? EdgeDeploymentType { get; set; }
         /// <summary>
+        /// The type of certificate used to communicate with edge-proxy.
+        /// </summary>
+        /// <value>The type of certificate used to communicate with edge-proxy.</value>
+        [DataMember(Name="certType", EmitDefaultValue=false)]
+        public CertTypeEnum? CertType { get; set; }
+        /// <summary>
         /// The current state of the Edge's call draining process before it can be safely rebooted or updated.
         /// </summary>
         /// <value>The current state of the Edge's call draining process before it can be safely rebooted or updated.</value>
@@ -318,8 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhysicalEdge">PhysicalEdge.</param>
         /// <param name="Managed">Managed.</param>
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
+        /// <param name="CertType">The type of certificate used to communicate with edge-proxy..</param>
         /// <param name="Proxy">Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed..</param>
-        public Edge(string Name = null, Division Division = null, string Description = null, int? Version = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, string Proxy = null)
+        public Edge(string Name = null, Division Division = null, string Description = null, int? Version = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CertTypeEnum? CertType = null, string Proxy = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -349,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PhysicalEdge = PhysicalEdge;
             this.Managed = Managed;
             this.EdgeDeploymentType = EdgeDeploymentType;
+            this.CertType = CertType;
             this.Proxy = Proxy;
             
         }
@@ -636,6 +683,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The remaining number of conversations the Edge has to drain before it can be safely rebooted or updated. When an Edge is not draining conversations, this will be NULL or 0.
         /// </summary>
@@ -725,6 +774,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PhysicalEdge: ").Append(PhysicalEdge).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  EdgeDeploymentType: ").Append(EdgeDeploymentType).Append("\n");
+            sb.Append("  CertType: ").Append(CertType).Append("\n");
             sb.Append("  CallDrainingState: ").Append(CallDrainingState).Append("\n");
             sb.Append("  ConversationCount: ").Append(ConversationCount).Append("\n");
             sb.Append("  Proxy: ").Append(Proxy).Append("\n");
@@ -952,6 +1002,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EdgeDeploymentType.Equals(other.EdgeDeploymentType)
                 ) &&
                 (
+                    this.CertType == other.CertType ||
+                    this.CertType != null &&
+                    this.CertType.Equals(other.CertType)
+                ) &&
+                (
                     this.CallDrainingState == other.CallDrainingState ||
                     this.CallDrainingState != null &&
                     this.CallDrainingState.Equals(other.CallDrainingState)
@@ -1101,6 +1156,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EdgeDeploymentType != null)
                     hash = hash * 59 + this.EdgeDeploymentType.GetHashCode();
+
+                if (this.CertType != null)
+                    hash = hash * 59 + this.CertType.GetHashCode();
 
                 if (this.CallDrainingState != null)
                     hash = hash * 59 + this.CallDrainingState.GetHashCode();
