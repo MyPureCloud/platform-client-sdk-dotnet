@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterHeroStyle :  IEquatable<SupportCenterHeroStyle>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterHeroStyle" /> class.
         /// </summary>
-        /// <param name="BackgroundColor">Background color for hero section, in hexadecimal format, eg #ffffff.</param>
-        /// <param name="TextColor">Text color for hero section, in hexadecimal format, eg #ffffff.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterHeroStyle() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterHeroStyle" /> class.
+        /// </summary>
+        /// <param name="BackgroundColor">Background color for hero section, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="TextColor">Text color for hero section, in hexadecimal format, eg #ffffff (required).</param>
         /// <param name="Image">Background image for hero section.</param>
         public SupportCenterHeroStyle(string BackgroundColor = null, string TextColor = null, SupportCenterImage Image = null)
         {

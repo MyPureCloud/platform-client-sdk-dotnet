@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteIdentityprovider**](IdentityProviderApi.html#deleteidentityprovider) | **Delete** /api/v2/identityproviders/{providerId} | Delete Identity Provider |
 | [**DeleteIdentityprovidersAdfs**](IdentityProviderApi.html#deleteidentityprovidersadfs) | **Delete** /api/v2/identityproviders/adfs | Delete ADFS Identity Provider |
 | [**DeleteIdentityprovidersCic**](IdentityProviderApi.html#deleteidentityproviderscic) | **Delete** /api/v2/identityproviders/cic | Delete Customer Interaction Center (CIC) Identity Provider |
 | [**DeleteIdentityprovidersGeneric**](IdentityProviderApi.html#deleteidentityprovidersgeneric) | **Delete** /api/v2/identityproviders/generic | Delete Generic SAML Identity Provider |
@@ -18,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteIdentityprovidersPurecloud**](IdentityProviderApi.html#deleteidentityproviderspurecloud) | **Delete** /api/v2/identityproviders/purecloud | Delete PureCloud Identity Provider |
 | [**DeleteIdentityprovidersPureengage**](IdentityProviderApi.html#deleteidentityproviderspureengage) | **Delete** /api/v2/identityproviders/pureengage | Delete PureEngage Identity Provider |
 | [**DeleteIdentityprovidersSalesforce**](IdentityProviderApi.html#deleteidentityproviderssalesforce) | **Delete** /api/v2/identityproviders/salesforce | Delete Salesforce Identity Provider |
+| [**GetIdentityprovider**](IdentityProviderApi.html#getidentityprovider) | **Get** /api/v2/identityproviders/{providerId} | Get Identity Provider |
 | [**GetIdentityproviders**](IdentityProviderApi.html#getidentityproviders) | **Get** /api/v2/identityproviders | The list of identity providers |
 | [**GetIdentityprovidersAdfs**](IdentityProviderApi.html#getidentityprovidersadfs) | **Get** /api/v2/identityproviders/adfs | Get ADFS Identity Provider |
 | [**GetIdentityprovidersCic**](IdentityProviderApi.html#getidentityproviderscic) | **Get** /api/v2/identityproviders/cic | Get Customer Interaction Center (CIC) Identity Provider |
@@ -30,6 +32,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIdentityprovidersPurecloud**](IdentityProviderApi.html#getidentityproviderspurecloud) | **Get** /api/v2/identityproviders/purecloud | Get PureCloud Identity Provider |
 | [**GetIdentityprovidersPureengage**](IdentityProviderApi.html#getidentityproviderspureengage) | **Get** /api/v2/identityproviders/pureengage | Get PureEngage Identity Provider |
 | [**GetIdentityprovidersSalesforce**](IdentityProviderApi.html#getidentityproviderssalesforce) | **Get** /api/v2/identityproviders/salesforce | Get Salesforce Identity Provider |
+| [**PostIdentityproviders**](IdentityProviderApi.html#postidentityproviders) | **Post** /api/v2/identityproviders | Create Identity Provider |
+| [**PutIdentityprovider**](IdentityProviderApi.html#putidentityprovider) | **Put** /api/v2/identityproviders/{providerId} | Update Identity Provider |
 | [**PutIdentityprovidersAdfs**](IdentityProviderApi.html#putidentityprovidersadfs) | **Put** /api/v2/identityproviders/adfs | Update/Create ADFS Identity Provider |
 | [**PutIdentityprovidersCic**](IdentityProviderApi.html#putidentityproviderscic) | **Put** /api/v2/identityproviders/cic | Update/Create Customer Interaction Center (CIC) Identity Provider |
 | [**PutIdentityprovidersGeneric**](IdentityProviderApi.html#putidentityprovidersgeneric) | **Put** /api/v2/identityproviders/generic | Update/Create Generic SAML Identity Provider |
@@ -42,6 +46,68 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutIdentityprovidersPureengage**](IdentityProviderApi.html#putidentityproviderspureengage) | **Put** /api/v2/identityproviders/pureengage | Update/Create PureEngage Identity Provider |
 | [**PutIdentityprovidersSalesforce**](IdentityProviderApi.html#putidentityproviderssalesforce) | **Put** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
 {: class="table table-striped"}
+
+<a name="deleteidentityprovider"></a>
+
+## void DeleteIdentityprovider (string providerId)
+
+
+
+Delete Identity Provider
+
+Requires ANY permissions: 
+
+* sso:provider:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteIdentityproviderExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IdentityProviderApi();
+            var providerId = providerId_example;  // string | Provider ID
+
+            try
+            { 
+                // Delete Identity Provider
+                apiInstance.DeleteIdentityprovider(providerId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.DeleteIdentityprovider: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **providerId** | **string**| Provider ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deleteidentityprovidersadfs"></a>
 
@@ -681,9 +747,72 @@ This endpoint does require any parameters.
 
 **Object**
 
+<a name="getidentityprovider"></a>
+
+## [**CustomProvider**](CustomProvider.html) GetIdentityprovider (string providerId)
+
+
+
+Get Identity Provider
+
+Requires ANY permissions: 
+
+* sso:provider:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIdentityproviderExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IdentityProviderApi();
+            var providerId = providerId_example;  // string | Provider ID
+
+            try
+            { 
+                // Get Identity Provider
+                CustomProvider result = apiInstance.GetIdentityprovider(providerId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.GetIdentityprovider: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **providerId** | **string**| Provider ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CustomProvider**](CustomProvider.html)
+
 <a name="getidentityproviders"></a>
 
-## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) GetIdentityproviders ()
+## [**IdentityProviderEntityListing**](IdentityProviderEntityListing.html) GetIdentityproviders ()
 
 
 
@@ -719,7 +848,7 @@ namespace Example
             try
             { 
                 // The list of identity providers
-                OAuthProviderEntityListing result = apiInstance.GetIdentityproviders();
+                IdentityProviderEntityListing result = apiInstance.GetIdentityproviders();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -737,7 +866,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**OAuthProviderEntityListing**](OAuthProviderEntityListing.html)
+[**IdentityProviderEntityListing**](IdentityProviderEntityListing.html)
 
 <a name="getidentityprovidersadfs"></a>
 
@@ -1377,9 +1506,137 @@ This endpoint does require any parameters.
 
 [**Salesforce**](Salesforce.html)
 
+<a name="postidentityproviders"></a>
+
+## [**CustomProvider**](CustomProvider.html) PostIdentityproviders (CustomProvider body)
+
+
+
+Create Identity Provider
+
+Requires ANY permissions: 
+
+* sso:provider:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIdentityprovidersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IdentityProviderApi();
+            var body = new CustomProvider(); // CustomProvider | Provider
+
+            try
+            { 
+                // Create Identity Provider
+                CustomProvider result = apiInstance.PostIdentityproviders(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.PostIdentityproviders: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CustomProvider**](CustomProvider.html)| Provider |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CustomProvider**](CustomProvider.html)
+
+<a name="putidentityprovider"></a>
+
+## [**CustomProvider**](CustomProvider.html) PutIdentityprovider (string providerId, CustomProvider body)
+
+
+
+Update Identity Provider
+
+Requires ANY permissions: 
+
+* sso:provider:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIdentityproviderExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IdentityProviderApi();
+            var providerId = providerId_example;  // string | Provider ID
+            var body = new CustomProvider(); // CustomProvider | Provider
+
+            try
+            { 
+                // Update Identity Provider
+                CustomProvider result = apiInstance.PutIdentityprovider(providerId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IdentityProviderApi.PutIdentityprovider: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **providerId** | **string**| Provider ID |  |
+| **body** | [**CustomProvider**](CustomProvider.html)| Provider |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CustomProvider**](CustomProvider.html)
+
 <a name="putidentityprovidersadfs"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersAdfs (ADFS body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersAdfs (ADFS body)
 
 
 
@@ -1417,7 +1674,7 @@ namespace Example
             try
             { 
                 // Update/Create ADFS Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersAdfs(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersAdfs(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1439,11 +1696,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityproviderscic"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersCic (CustomerInteractionCenter body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersCic (CustomerInteractionCenter body)
 
 
 
@@ -1481,7 +1738,7 @@ namespace Example
             try
             { 
                 // Update/Create Customer Interaction Center (CIC) Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersCic(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersCic(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1503,11 +1760,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityprovidersgeneric"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersGeneric (GenericSAML body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersGeneric (GenericSAML body)
 
 
 
@@ -1545,7 +1802,7 @@ namespace Example
             try
             { 
                 // Update/Create Generic SAML Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersGeneric(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersGeneric(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1567,11 +1824,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityprovidersgsuite"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersGsuite (GSuite body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersGsuite (GSuite body)
 
 
 
@@ -1609,7 +1866,7 @@ namespace Example
             try
             { 
                 // Update/Create G Suite Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersGsuite(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersGsuite(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1631,7 +1888,7 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityprovidersidentitynow"></a>
 
@@ -1699,7 +1956,7 @@ namespace Example
 
 <a name="putidentityprovidersokta"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersOkta (Okta body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersOkta (Okta body)
 
 
 
@@ -1737,7 +1994,7 @@ namespace Example
             try
             { 
                 // Update/Create Okta Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersOkta(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersOkta(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1759,11 +2016,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityprovidersonelogin"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersOnelogin (OneLogin body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersOnelogin (OneLogin body)
 
 
 
@@ -1801,7 +2058,7 @@ namespace Example
             try
             { 
                 // Update/Create OneLogin Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersOnelogin(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersOnelogin(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1823,11 +2080,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityprovidersping"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPing (PingIdentity body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersPing (PingIdentity body)
 
 
 
@@ -1865,7 +2122,7 @@ namespace Example
             try
             { 
                 // Update/Create Ping Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersPing(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersPing(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1887,11 +2144,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityproviderspurecloud"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPurecloud (PureCloud body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersPurecloud (PureCloud body)
 
 
 
@@ -1929,7 +2186,7 @@ namespace Example
             try
             { 
                 // Update/Create PureCloud Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersPurecloud(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersPurecloud(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1951,11 +2208,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityproviderspureengage"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPureengage (PureEngage body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersPureengage (PureEngage body)
 
 
 
@@ -1993,7 +2250,7 @@ namespace Example
             try
             { 
                 // Update/Create PureEngage Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersPureengage(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersPureengage(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2015,11 +2272,11 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 
 <a name="putidentityproviderssalesforce"></a>
 
-## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersSalesforce (Salesforce body)
+## [**IdentityProvider**](IdentityProvider.html) PutIdentityprovidersSalesforce (Salesforce body)
 
 
 
@@ -2057,7 +2314,7 @@ namespace Example
             try
             { 
                 // Update/Create Salesforce Identity Provider
-                OAuthProvider result = apiInstance.PutIdentityprovidersSalesforce(body);
+                IdentityProvider result = apiInstance.PutIdentityprovidersSalesforce(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2079,5 +2336,5 @@ namespace Example
 
 ### Return type
 
-[**OAuthProvider**](OAuthProvider.html)
+[**IdentityProvider**](IdentityProvider.html)
 

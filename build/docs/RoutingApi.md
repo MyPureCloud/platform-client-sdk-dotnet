@@ -88,6 +88,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingUtilizationTags**](RoutingApi.html#getroutingutilizationtags) | **Get** /api/v2/routing/utilization/tags | Get list of utilization tags |
 | [**GetRoutingWrapupcode**](RoutingApi.html#getroutingwrapupcode) | **Get** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
 | [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **Get** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
+| [**GetRoutingWrapupcodesDivisionview**](RoutingApi.html#getroutingwrapupcodesdivisionview) | **Get** /api/v2/routing/wrapupcodes/divisionviews/{codeId} | Get a simplified wrap-up code. |
+| [**GetRoutingWrapupcodesDivisionviews**](RoutingApi.html#getroutingwrapupcodesdivisionviews) | **Get** /api/v2/routing/wrapupcodes/divisionviews | Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). |
 | [**GetUserQueues**](RoutingApi.html#getuserqueues) | **Get** /api/v2/users/{userId}/queues | Get queues for user |
 | [**GetUserRoutinglanguages**](RoutingApi.html#getuserroutinglanguages) | **Get** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **Get** /api/v2/users/{userId}/routingskills | List routing skills for user |
@@ -101,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **Patch** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
 | [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **Patch** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**PatchRoutingSettingsContactcenter**](RoutingApi.html#patchroutingsettingscontactcenter) | **Patch** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
+| [**PatchRoutingSettingsTranscription**](RoutingApi.html#patchroutingsettingstranscription) | **Patch** /api/v2/routing/settings/transcription | Patch Transcription Settings |
 | [**PatchRoutingSkillgroup**](RoutingApi.html#patchroutingskillgroup) | **Patch** /api/v2/routing/skillgroups/{skillGroupId} | Update skill group definition |
 | [**PatchUserQueue**](RoutingApi.html#patchuserqueue) | **Patch** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PatchUserQueues**](RoutingApi.html#patchuserqueues) | **Patch** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
@@ -3412,7 +3415,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **name** | **string**| Filter by queue member name (contains-style search) | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill (contains-style search) | [optional]  |
 | **skills** | [**List<string>**](string.html)| Filter by skill (contains-style search) | [optional]  |
@@ -3499,7 +3502,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -5451,6 +5454,144 @@ namespace Example
 
 [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
+<a name="getroutingwrapupcodesdivisionview"></a>
+
+## [**WrapupCode**](WrapupCode.html) GetRoutingWrapupcodesDivisionview (string codeId)
+
+
+
+Get a simplified wrap-up code.
+
+Requires ALL permissions: 
+
+* routing:wrapupCode:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingWrapupcodesDivisionviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var codeId = codeId_example;  // string | Wrapup Code ID
+
+            try
+            { 
+                // Get a simplified wrap-up code.
+                WrapupCode result = apiInstance.GetRoutingWrapupcodesDivisionview(codeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingWrapupcodesDivisionview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **codeId** | **string**| Wrapup Code ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WrapupCode**](WrapupCode.html)
+
+<a name="getroutingwrapupcodesdivisionviews"></a>
+
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodesDivisionviews (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null)
+
+
+
+Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+
+Specifying both name and ID parameters is not supported.
+
+Requires ALL permissions: 
+
+* routing:wrapupCode:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingWrapupcodesDivisionviewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var name = name_example;  // string | Name (trailing asterisks allowed) (optional) 
+            var id = new List<string>(); // List<string> | Wrapup code ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var includeState = includeState_example;  // string | Wrapup code state(s) to include (optional) 
+
+            try
+            { 
+                // Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodesDivisionviews(pageSize, pageNumber, name, id, divisionId, includeState);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingWrapupcodesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Name (trailing asterisks allowed) | [optional]  |
+| **id** | [**List<string>**](string.html)| Wrapup code ID(s) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+| **includeState** | **string**| Wrapup code state(s) to include | [optional] <br />**Values**: Active, Deleted, ActiveAndDeleted |
+{: class="table table-striped"}
+
+### Return type
+
+[**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
+
 <a name="getuserqueues"></a>
 
 ## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
@@ -6319,6 +6460,69 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="patchroutingsettingstranscription"></a>
+
+## [**TranscriptionSettings**](TranscriptionSettings.html) PatchRoutingSettingsTranscription (TranscriptionSettings body)
+
+
+
+Patch Transcription Settings
+
+Requires ANY permissions: 
+
+* routing:transcriptionSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingSettingsTranscriptionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new TranscriptionSettings(); // TranscriptionSettings | Organization Settings
+
+            try
+            { 
+                // Patch Transcription Settings
+                TranscriptionSettings result = apiInstance.PatchRoutingSettingsTranscription(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingSettingsTranscription: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TranscriptionSettings**](TranscriptionSettings.html)| Organization Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TranscriptionSettings**](TranscriptionSettings.html)
 
 <a name="patchroutingskillgroup"></a>
 
@@ -8012,8 +8216,6 @@ namespace Example
 
 
 Imports a phone number for SMS
-
-PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 

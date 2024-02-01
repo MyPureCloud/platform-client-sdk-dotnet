@@ -145,8 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Addresses">Addresses.</param>
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (required).</param>
         /// <param name="Visibility">Who can view this group (required).</param>
+        /// <param name="RolesEnabled">Allow roles to be assigned to this group.</param>
         /// <param name="OwnerIds">Owners of the group.</param>
-        public GroupCreate(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<string> OwnerIds = null)
+        public GroupCreate(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, bool? RolesEnabled = null, List<string> OwnerIds = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -155,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Addresses = Addresses;
             this.RulesVisible = RulesVisible;
             this.Visibility = Visibility;
+            this.RolesEnabled = RolesEnabled;
             this.OwnerIds = OwnerIds;
             
         }
@@ -246,6 +248,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Allow roles to be assigned to this group
+        /// </summary>
+        /// <value>Allow roles to be assigned to this group</value>
+        [DataMember(Name="rolesEnabled", EmitDefaultValue=false)]
+        public bool? RolesEnabled { get; set; }
+
+
+
+        /// <summary>
         /// Owners of the group
         /// </summary>
         /// <value>Owners of the group</value>
@@ -283,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
+            sb.Append("  RolesEnabled: ").Append(RolesEnabled).Append("\n");
             sb.Append("  OwnerIds: ").Append(OwnerIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -386,6 +398,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Visibility.Equals(other.Visibility)
                 ) &&
                 (
+                    this.RolesEnabled == other.RolesEnabled ||
+                    this.RolesEnabled != null &&
+                    this.RolesEnabled.Equals(other.RolesEnabled)
+                ) &&
+                (
                     this.OwnerIds == other.OwnerIds ||
                     this.OwnerIds != null &&
                     this.OwnerIds.SequenceEqual(other.OwnerIds)
@@ -443,6 +460,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
+
+                if (this.RolesEnabled != null)
+                    hash = hash * 59 + this.RolesEnabled.GetHashCode();
 
                 if (this.OwnerIds != null)
                     hash = hash * 59 + this.OwnerIds.GetHashCode();

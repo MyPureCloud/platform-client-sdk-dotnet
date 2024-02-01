@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The status of the alerts the query will return.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ActiveStatusEnum
+        public enum AlertStatusEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -214,8 +214,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The status of the alerts the query will return.
         /// </summary>
         /// <value>The status of the alerts the query will return.</value>
-        [DataMember(Name="activeStatus", EmitDefaultValue=false)]
-        public ActiveStatusEnum? ActiveStatus { get; set; }
+        [DataMember(Name="alertStatus", EmitDefaultValue=false)]
+        public AlertStatusEnum? AlertStatus { get; set; }
         /// <summary>
         /// The view status of the alerts the query will return.
         /// </summary>
@@ -245,17 +245,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RuleType">The rule type of the alerts the query will return (required).</param>
         /// <param name="QueryType">The type of query being performed. (required).</param>
-        /// <param name="ActiveStatus">The status of the alerts the query will return..</param>
+        /// <param name="AlertStatus">The status of the alerts the query will return..</param>
         /// <param name="ViewedStatus">The view status of the alerts the query will return..</param>
         /// <param name="PageNumber">The page number of the queried response.</param>
         /// <param name="PageSize">The number of entities to return of the queried response.  The max is 25.</param>
         /// <param name="SortBy">The field to sort responses by.  The accepted choices are Name and DateStart.</param>
         /// <param name="SortOrder">The order in which response will be sorted.  The accepted choices are Asc and Desc.</param>
-        public GetAlertQuery(RuleTypeEnum? RuleType = null, QueryTypeEnum? QueryType = null, ActiveStatusEnum? ActiveStatus = null, ViewedStatusEnum? ViewedStatus = null, int? PageNumber = null, int? PageSize = null, SortByEnum? SortBy = null, SortOrderEnum? SortOrder = null)
+        public GetAlertQuery(RuleTypeEnum? RuleType = null, QueryTypeEnum? QueryType = null, AlertStatusEnum? AlertStatus = null, ViewedStatusEnum? ViewedStatus = null, int? PageNumber = null, int? PageSize = null, SortByEnum? SortBy = null, SortOrderEnum? SortOrder = null)
         {
             this.RuleType = RuleType;
             this.QueryType = QueryType;
-            this.ActiveStatus = ActiveStatus;
+            this.AlertStatus = AlertStatus;
             this.ViewedStatus = ViewedStatus;
             this.PageNumber = PageNumber;
             this.PageSize = PageSize;
@@ -306,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  RuleType: ").Append(RuleType).Append("\n");
             sb.Append("  QueryType: ").Append(QueryType).Append("\n");
-            sb.Append("  ActiveStatus: ").Append(ActiveStatus).Append("\n");
+            sb.Append("  AlertStatus: ").Append(AlertStatus).Append("\n");
             sb.Append("  ViewedStatus: ").Append(ViewedStatus).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -363,9 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryType.Equals(other.QueryType)
                 ) &&
                 (
-                    this.ActiveStatus == other.ActiveStatus ||
-                    this.ActiveStatus != null &&
-                    this.ActiveStatus.Equals(other.ActiveStatus)
+                    this.AlertStatus == other.AlertStatus ||
+                    this.AlertStatus != null &&
+                    this.AlertStatus.Equals(other.AlertStatus)
                 ) &&
                 (
                     this.ViewedStatus == other.ViewedStatus ||
@@ -411,8 +411,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.QueryType != null)
                     hash = hash * 59 + this.QueryType.GetHashCode();
 
-                if (this.ActiveStatus != null)
-                    hash = hash * 59 + this.ActiveStatus.GetHashCode();
+                if (this.AlertStatus != null)
+                    hash = hash * 59 + this.AlertStatus.GetHashCode();
 
                 if (this.ViewedStatus != null)
                     hash = hash * 59 + this.ViewedStatus.GetHashCode();

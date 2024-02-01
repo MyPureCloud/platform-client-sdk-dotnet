@@ -51,16 +51,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Router type for knowledge portal (previously support center)</value>
         [DataMember(Name="routerType", EmitDefaultValue=false)]
         public RouterTypeEnum? RouterType { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
         /// </summary>
-        /// <param name="Enabled">Whether or not knowledge portal (previously support center) is enabled.</param>
-        /// <param name="KnowledgeBase">The knowledge base for knowledge portal (previously support center).</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterSettings() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterSettings" /> class.
+        /// </summary>
+        /// <param name="Enabled">Whether or not knowledge portal (previously support center) is enabled (required).</param>
+        /// <param name="KnowledgeBase">The knowledge base for knowledge portal (previously support center) (required).</param>
         /// <param name="CustomMessages">Customizable display texts for knowledge portal (previously support center).</param>
         /// <param name="RouterType">Router type for knowledge portal (previously support center).</param>
-        /// <param name="Screens">Available screens for the knowledge portal (previously support center) with its modules.</param>
-        /// <param name="EnabledCategories">Featured categories for knowledge portal (previously support center) home screen.</param>
-        /// <param name="StyleSetting">Style attributes for knowledge portal (previously support center).</param>
+        /// <param name="Screens">Available screens for the knowledge portal (previously support center) with its modules (required).</param>
+        /// <param name="EnabledCategories">Featured categories for knowledge portal (previously support center) home screen (required).</param>
+        /// <param name="StyleSetting">Style attributes for knowledge portal (previously support center) (required).</param>
         /// <param name="Feedback">Customer feedback settings.</param>
         public SupportCenterSettings(bool? Enabled = null, AddressableEntityRef KnowledgeBase = null, List<SupportCenterCustomMessage> CustomMessages = null, RouterTypeEnum? RouterType = null, List<SupportCenterScreen> Screens = null, List<SupportCenterCategory> EnabledCategories = null, SupportCenterStyleSetting StyleSetting = null, SupportCenterFeedbackSettings Feedback = null)
         {

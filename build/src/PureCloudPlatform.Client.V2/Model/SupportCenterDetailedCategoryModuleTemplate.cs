@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterDetailedCategoryModuleTemplate :  IEquatable<SupportCenterDetailedCategoryModuleTemplate>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleTemplate" /> class.
         /// </summary>
-        /// <param name="Active">Whether this template is active or not.</param>
-        /// <param name="Sidebar">Sidebar settings for the template.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterDetailedCategoryModuleTemplate() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleTemplate" /> class.
+        /// </summary>
+        /// <param name="Active">Whether this template is active or not (required).</param>
+        /// <param name="Sidebar">Sidebar settings for the template (required).</param>
         public SupportCenterDetailedCategoryModuleTemplate(bool? Active = null, SupportCenterDetailedCategoryModuleSidebar Sidebar = null)
         {
             this.Active = Active;

@@ -104,7 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateSnoozedUntil">DateSnoozedUntil.</param>
         /// <param name="Action">Action.</param>
         /// <param name="AlertSummary">AlertSummary.</param>
-        public V2MobiusAlertsTopicAlert(V2MobiusAlertsTopicAlertRuleProperties Rule = null, Guid? Id = null, Guid? UserId = null, List<V2MobiusAlertsTopicAlertNotification> Notifications = null, DateTime? DateStart = null, DateTime? DateEnd = null, V2MobiusAlertsTopicCondition Conditions = null, Dictionary<string, string> AdditionalProperties = null, bool? Active = null, bool? Unread = null, bool? Muted = null, bool? Snoozed = null, DateTime? DateMutedUntil = null, DateTime? DateSnoozedUntil = null, ActionEnum? Action = null, V2MobiusAlertsTopicAlertSummary AlertSummary = null)
+        /// <param name="SendExitingAlarmNotification">SendExitingAlarmNotification.</param>
+        public V2MobiusAlertsTopicAlert(V2MobiusAlertsTopicAlertRuleProperties Rule = null, Guid? Id = null, Guid? UserId = null, List<V2MobiusAlertsTopicAlertNotification> Notifications = null, DateTime? DateStart = null, DateTime? DateEnd = null, V2MobiusAlertsTopicCondition Conditions = null, Dictionary<string, string> AdditionalProperties = null, bool? Active = null, bool? Unread = null, bool? Muted = null, bool? Snoozed = null, DateTime? DateMutedUntil = null, DateTime? DateSnoozedUntil = null, ActionEnum? Action = null, V2MobiusAlertsTopicAlertSummary AlertSummary = null, bool? SendExitingAlarmNotification = null)
         {
             this.Rule = Rule;
             this.Id = Id;
@@ -122,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateSnoozedUntil = DateSnoozedUntil;
             this.Action = Action;
             this.AlertSummary = AlertSummary;
+            this.SendExitingAlarmNotification = SendExitingAlarmNotification;
             
         }
         
@@ -248,6 +250,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public V2MobiusAlertsTopicAlertSummary AlertSummary { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SendExitingAlarmNotification
+        /// </summary>
+        [DataMember(Name="sendExitingAlarmNotification", EmitDefaultValue=false)]
+        public bool? SendExitingAlarmNotification { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -273,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateSnoozedUntil: ").Append(DateSnoozedUntil).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  AlertSummary: ").Append(AlertSummary).Append("\n");
+            sb.Append("  SendExitingAlarmNotification: ").Append(SendExitingAlarmNotification).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -392,6 +403,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AlertSummary == other.AlertSummary ||
                     this.AlertSummary != null &&
                     this.AlertSummary.Equals(other.AlertSummary)
+                ) &&
+                (
+                    this.SendExitingAlarmNotification == other.SendExitingAlarmNotification ||
+                    this.SendExitingAlarmNotification != null &&
+                    this.SendExitingAlarmNotification.Equals(other.SendExitingAlarmNotification)
                 );
         }
 
@@ -453,6 +469,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AlertSummary != null)
                     hash = hash * 59 + this.AlertSummary.GetHashCode();
+
+                if (this.SendExitingAlarmNotification != null)
+                    hash = hash * 59 + this.SendExitingAlarmNotification.GetHashCode();
 
                 return hash;
             }

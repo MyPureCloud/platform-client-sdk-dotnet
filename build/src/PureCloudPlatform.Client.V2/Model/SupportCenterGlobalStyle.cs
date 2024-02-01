@@ -18,15 +18,21 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterGlobalStyle :  IEquatable<SupportCenterGlobalStyle>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterGlobalStyle" /> class.
         /// </summary>
-        /// <param name="BackgroundColor">Global background color, in hexadecimal format, eg #ffffff.</param>
-        /// <param name="PrimaryColor">Global primary color, in hexadecimal format, eg #ffffff.</param>
-        /// <param name="PrimaryColorDark">Global dark primary color, in hexadecimal format, eg #ffffff.</param>
-        /// <param name="PrimaryColorLight">Global light primary color, in hexadecimal format, eg #ffffff.</param>
-        /// <param name="TextColor">Global text color, in hexadecimal format, eg #ffffff.</param>
-        /// <param name="FontFamily">Global font family.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterGlobalStyle() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterGlobalStyle" /> class.
+        /// </summary>
+        /// <param name="BackgroundColor">Global background color, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="PrimaryColor">Global primary color, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="PrimaryColorDark">Global dark primary color, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="PrimaryColorLight">Global light primary color, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="TextColor">Global text color, in hexadecimal format, eg #ffffff (required).</param>
+        /// <param name="FontFamily">Global font family (required).</param>
         public SupportCenterGlobalStyle(string BackgroundColor = null, string PrimaryColor = null, string PrimaryColorDark = null, string PrimaryColorLight = null, string TextColor = null, string FontFamily = null)
         {
             this.BackgroundColor = BackgroundColor;

@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Enabled">Indicate if these auth is required for this deployment. If, for example, this flag is set to true then webmessaging sessions can not send messages unless the end-user is authenticated. (required).</param>
         /// <param name="IntegrationId">The integration identifier which contains the auth settings required on the deployment. (required).</param>
-        public AuthenticationSettings(bool? Enabled = null, string IntegrationId = null)
+        /// <param name="AllowSessionUpgrade">Allow end-users to upgrade an anonymous session to authenticated conversation..</param>
+        public AuthenticationSettings(bool? Enabled = null, string IntegrationId = null, bool? AllowSessionUpgrade = null)
         {
             this.Enabled = Enabled;
             this.IntegrationId = IntegrationId;
+            this.AllowSessionUpgrade = AllowSessionUpgrade;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string IntegrationId { get; set; }
 
 
+
+        /// <summary>
+        /// Allow end-users to upgrade an anonymous session to authenticated conversation.
+        /// </summary>
+        /// <value>Allow end-users to upgrade an anonymous session to authenticated conversation.</value>
+        [DataMember(Name="allowSessionUpgrade", EmitDefaultValue=false)]
+        public bool? AllowSessionUpgrade { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
+            sb.Append("  AllowSessionUpgrade: ").Append(AllowSessionUpgrade).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IntegrationId == other.IntegrationId ||
                     this.IntegrationId != null &&
                     this.IntegrationId.Equals(other.IntegrationId)
+                ) &&
+                (
+                    this.AllowSessionUpgrade == other.AllowSessionUpgrade ||
+                    this.AllowSessionUpgrade != null &&
+                    this.AllowSessionUpgrade.Equals(other.AllowSessionUpgrade)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
+
+                if (this.AllowSessionUpgrade != null)
+                    hash = hash * 59 + this.AllowSessionUpgrade.GetHashCode();
 
                 return hash;
             }

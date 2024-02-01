@@ -19,6 +19,7 @@ title: GroupCreate
 | **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
 | **Visibility** | **string** | Who can view this group | |
+| **RolesEnabled** | **bool?** | Allow roles to be assigned to this group | [optional] |
 | **OwnerIds** | **List&lt;string&gt;** | Owners of the group | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

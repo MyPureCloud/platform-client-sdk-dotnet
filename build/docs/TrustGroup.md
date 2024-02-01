@@ -19,6 +19,7 @@ title: TrustGroup
 | **Addresses** | [**List&lt;GroupContact&gt;**](GroupContact.html) |  | [optional] |
 | **RulesVisible** | **bool?** | Are membership rules visible to the person requesting to view the group | |
 | **Visibility** | **string** | Who can view this group | |
+| **RolesEnabled** | **bool?** | Allow roles to be assigned to this group | [optional] |
 | **Owners** | [**List&lt;User&gt;**](User.html) | Owners of the group | [optional] |
 | **DateCreated** | **DateTime?** | The date on which the trusted group was added. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | [**OrgUser**](OrgUser.html) | The user that added trusted group. | [optional] |

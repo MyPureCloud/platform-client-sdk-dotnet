@@ -39,6 +39,7 @@ title: WorkitemsQueueEventsNotificationWorkitem
 | **CustomFields** | [**Dictionary&lt;string, WorkitemsQueueEventsNotificationCustomAttribute&gt;**](WorkitemsQueueEventsNotificationCustomAttribute.html) |  | [optional] |
 | **Wrapup** | [**WorkitemsQueueEventsNotificationWrapup**](WorkitemsQueueEventsNotificationWrapup.html) |  | [optional] |
 | **Sessions** | [**List&lt;WorkitemsQueueEventsNotificationSession&gt;**](WorkitemsQueueEventsNotificationSession.html) |  | [optional] |
+| **SkillIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

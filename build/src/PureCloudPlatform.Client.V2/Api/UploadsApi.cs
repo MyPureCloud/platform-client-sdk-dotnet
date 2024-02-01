@@ -17,6 +17,34 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>FunctionUploadResponse</returns>
+        
+        FunctionUploadResponse PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>ApiResponse of FunctionUploadResponse</returns>
+        
+        ApiResponse<FunctionUploadResponse> PostIntegrationsActionDraftFunctionUploadWithHttpInfo (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents
         /// </summary>
         /// <remarks>
@@ -165,6 +193,34 @@ namespace PureCloudPlatform.Client.V2.Api
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of FunctionUploadResponse</returns>
+        
+        System.Threading.Tasks.Task<FunctionUploadResponse> PostIntegrationsActionDraftFunctionUploadAsync (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of ApiResponse (FunctionUploadResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FunctionUploadResponse>> PostIntegrationsActionDraftFunctionUploadAsyncWithHttpInfo (string actionId, FunctionUploadRequest body);
 
         /// <summary>
         /// Creates a presigned URL for uploading a knowledge import file with a set of documents
@@ -402,6 +458,244 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>FunctionUploadResponse</returns>
+        
+        public FunctionUploadResponse PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
+        {
+             ApiResponse<FunctionUploadResponse> localVarResponse = PostIntegrationsActionDraftFunctionUploadWithHttpInfo(actionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>ApiResponse of FunctionUploadResponse</returns>
+        
+        public ApiResponse< FunctionUploadResponse > PostIntegrationsActionDraftFunctionUploadWithHttpInfo (string actionId, FunctionUploadRequest body)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling UploadsApi->PostIntegrationsActionDraftFunctionUpload");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostIntegrationsActionDraftFunctionUpload");
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of FunctionUploadResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FunctionUploadResponse> PostIntegrationsActionDraftFunctionUploadAsync (string actionId, FunctionUploadRequest body)
+        {
+             ApiResponse<FunctionUploadResponse> localVarResponse = await PostIntegrationsActionDraftFunctionUploadAsyncWithHttpInfo(actionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of ApiResponse (FunctionUploadResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FunctionUploadResponse>> PostIntegrationsActionDraftFunctionUploadAsyncWithHttpInfo (string actionId, FunctionUploadRequest body)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling UploadsApi->PostIntegrationsActionDraftFunctionUpload");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostIntegrationsActionDraftFunctionUpload");
+            
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>

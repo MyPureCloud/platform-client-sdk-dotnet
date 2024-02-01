@@ -157,7 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Site">The identifier of the site to be used for dialing; can be set in place of an edge group..</param>
         /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates..</param>
         /// <param name="PhoneColumns">The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. (required).</param>
-        /// <param name="AbandonRate">The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns..</param>
+        /// <param name="AbandonRate">The targeted compliance abandon rate percentage. Required for power and predictive campaigns..</param>
         /// <param name="DncLists">DncLists for this Campaign to check before placing a call..</param>
         /// <param name="CallableTimeSet">The callable time set for this campaign to check before placing a call..</param>
         /// <param name="CallAnalysisResponseSet">The call analysis response set to handle call analysis results from the edge. Required for all dialing modes except preview..</param>
@@ -316,9 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns.
+        /// The targeted compliance abandon rate percentage. Required for power and predictive campaigns.
         /// </summary>
-        /// <value>The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns.</value>
+        /// <value>The targeted compliance abandon rate percentage. Required for power and predictive campaigns.</value>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public double? AbandonRate { get; set; }
 

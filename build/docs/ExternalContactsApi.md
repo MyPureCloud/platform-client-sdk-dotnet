@@ -825,7 +825,7 @@ namespace Example
             var contactId = contactId_example;  // string | ExternalContact Id
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var sortOrder = sortOrder_example;  // string | The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\" (optional) 
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
@@ -851,7 +851,7 @@ namespace Example
 | **contactId** | **string**| ExternalContact Id |  |
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
 
@@ -961,7 +961,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
             var q = q_example;  // string | User supplied search keywords (no special syntax is currently supported) (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var sortOrder = sortOrder_example;  // string | The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" (optional) 
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
@@ -987,7 +987,7 @@ namespace Example
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
@@ -1350,7 +1350,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
             var q = q_example;  // string | User supplied search keywords (no special syntax is currently supported) (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var sortOrder = sortOrder_example;  // string | The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" (optional) 
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
@@ -1377,7 +1377,7 @@ namespace Example
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
@@ -1490,7 +1490,7 @@ namespace Example
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization Id
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var sortOrder = sortOrder_example;  // string | The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"createDate:desc\" (optional) 
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
@@ -1516,7 +1516,7 @@ namespace Example
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
 {: class="table table-striped"}
 
@@ -1563,7 +1563,7 @@ namespace Example
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
             var expand = expand_example;  // string | which fields, if any, to expand (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var sortOrder = sortOrder_example;  // string | The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\" (optional) 
 
             try
             { 
@@ -1589,7 +1589,7 @@ namespace Example
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **expand** | **string**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1635,7 +1635,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
             var q = q_example;  // string | Search query (optional) 
             var trustorId = new List<string>(); // List<string> | Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            var sortOrder = sortOrder_example;  // string | The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\" (optional) 
             var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
             var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
 
@@ -1663,7 +1663,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| Search query | [optional]  |
 | **trustorId** | [**List<string>**](string.html)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional]  |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 {: class="table table-striped"}
@@ -4305,6 +4305,7 @@ To associate, supply a value for the externalContactId.  To disassociate, do not
 
 Requires ANY permissions: 
 
+* relate:conversation:associate
 * externalContacts:conversation:associate
 
 ### Example

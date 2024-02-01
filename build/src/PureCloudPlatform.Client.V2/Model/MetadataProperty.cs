@@ -38,6 +38,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// user-friendly name of the input property
+        /// </summary>
+        /// <value>user-friendly name of the input property</value>
+        [DataMember(Name="displayname", EmitDefaultValue=false)]
+        public string Displayname { get; private set; }
+
+
+
+        /// <summary>
         /// brief description of the input property
         /// </summary>
         /// <value>brief description of the input property</value>
@@ -91,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class MetadataProperty {\n");
 
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Displayname: ").Append(Displayname).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Sensitive: ").Append(Sensitive).Append("\n");
             sb.Append("  Help: ").Append(Help).Append("\n");
@@ -142,6 +152,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.Displayname == other.Displayname ||
+                    this.Displayname != null &&
+                    this.Displayname.Equals(other.Displayname)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -181,6 +196,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.Displayname != null)
+                    hash = hash * 59 + this.Displayname.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

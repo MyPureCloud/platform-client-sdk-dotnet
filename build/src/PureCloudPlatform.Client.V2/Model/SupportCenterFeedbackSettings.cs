@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterFeedbackSettings :  IEquatable<SupportCenterFeedbackSettings>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterFeedbackSettings" /> class.
         /// </summary>
-        /// <param name="Enabled">Whether or not requesting customer feedback on article content and article search results is enabled.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterFeedbackSettings() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterFeedbackSettings" /> class.
+        /// </summary>
+        /// <param name="Enabled">Whether or not requesting customer feedback on article content and article search results is enabled (required).</param>
         public SupportCenterFeedbackSettings(bool? Enabled = null)
         {
             this.Enabled = Enabled;

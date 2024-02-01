@@ -11,6 +11,7 @@ title: PhoneBaseEntityListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
+| **TotalNumberOfEntities** | **long?** | The total organization-wide number of entities. | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

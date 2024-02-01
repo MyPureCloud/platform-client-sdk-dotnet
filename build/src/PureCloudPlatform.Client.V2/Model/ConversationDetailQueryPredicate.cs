@@ -322,18 +322,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Tbarging,
             
             /// <summary>
-            /// Enum Tcallback for "tCallback"
-            /// </summary>
-            [EnumMember(Value = "tCallback")]
-            Tcallback,
-            
-            /// <summary>
-            /// Enum Tcallbackcomplete for "tCallbackComplete"
-            /// </summary>
-            [EnumMember(Value = "tCallbackComplete")]
-            Tcallbackcomplete,
-            
-            /// <summary>
             /// Enum Tcoaching for "tCoaching"
             /// </summary>
             [EnumMember(Value = "tCoaching")]

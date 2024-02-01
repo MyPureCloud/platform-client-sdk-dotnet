@@ -83,6 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Autoapproved,
             
             /// <summary>
+            /// Enum Insufficientbalance for "InsufficientBalance"
+            /// </summary>
+            [EnumMember(Value = "InsufficientBalance")]
+            Insufficientbalance,
+            
+            /// <summary>
             /// Enum Invaliddailyduration for "InvalidDailyDuration"
             /// </summary>
             [EnumMember(Value = "InvalidDailyDuration")]

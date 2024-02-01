@@ -35,7 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneySession**](JourneyApi.html#getjourneysession) | **Get** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
 | [**GetJourneySessionEvents**](JourneyApi.html#getjourneysessionevents) | **Get** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
 | [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
-| [**GetJourneySessionSegments**](JourneyApi.html#getjourneysessionsegments) | **Get** /api/v2/journey/sessions/{sessionId}/segments | Retrieve segment assignments by session ID. |
 | [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
@@ -1887,79 +1886,6 @@ namespace Example
 ### Return type
 
 [**OutcomeScoresResult**](OutcomeScoresResult.html)
-
-<a name="getjourneysessionsegments"></a>
-
-## [**SegmentAssignmentListing**](SegmentAssignmentListing.html) GetJourneySessionSegments (string sessionId, string pageSize = null, string after = null, string segmentScope = null, string assignmentState = null)
-
-
-
-Retrieve segment assignments by session ID.
-
-GetJourneySessionSegments is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
-Requires ANY permissions: 
-
-* journey:segmentassignment:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetJourneySessionSegmentsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new JourneyApi();
-            var sessionId = sessionId_example;  // string | ID of the session to query for segment assignments.
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
-            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var segmentScope = segmentScope_example;  // string | Scope to filter on. If not specified, both session-scoped and customer-scoped assignments are returned. (optional) 
-            var assignmentState = assignmentState_example;  // string | Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. (optional) 
-
-            try
-            { 
-                // Retrieve segment assignments by session ID.
-                SegmentAssignmentListing result = apiInstance.GetJourneySessionSegments(sessionId, pageSize, after, segmentScope, assignmentState);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling JourneyApi.GetJourneySessionSegments: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **sessionId** | **string**| ID of the session to query for segment assignments. |  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **segmentScope** | **string**| Scope to filter on. If not specified, both session-scoped and customer-scoped assignments are returned. | [optional] <br />**Values**: Session, Customer |
-| **assignmentState** | **string**| Assignment state to filter on. If not specified, both assigned and unassigned assignments are returned. | [optional] <br />**Values**: Assigned, Unassigned |
-{: class="table table-striped"}
-
-### Return type
-
-[**SegmentAssignmentListing**](SegmentAssignmentListing.html)
 
 <a name="patchjourneyactionmap"></a>
 

@@ -21,24 +21,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchConversationEventRequest" /> class.
         /// </summary>
-        /// <param name="EndTransferEvents">EndTransfer events for this batch.</param>
-        /// <param name="PhoneTransferEvents">PhoneTransfer events for this batch.</param>
-        /// <param name="ProgressTransferEvents">ProgressTransfer events for this batch.</param>
-        /// <param name="RoutingTransferEvents">RoutingTransfer events for this batch.</param>
-        /// <param name="UserTransferEvents">UserTransfer events for this batch.</param>
-        /// <param name="CommunicationAnsweredEvents">CommunicationAnswered events for this batch.</param>
-        /// <param name="CommunicationDispositionAppliedEvents">CommunicationDispositionApplied events for this batch.</param>
-        /// <param name="HoldUpdatedEvents">HoldUpdated events for this batch.</param>
-        /// <param name="ExternalEstablishedEvents">ExternalEstablished events for this batch.</param>
-        /// <param name="IvrEstablishedEvents">IvrEstablished events for this batch.</param>
-        /// <param name="PhoneEstablishedEvents">PhoneEstablished events for this batch.</param>
-        /// <param name="RoutingEstablishedEvents">RoutingEstablished events for this batch.</param>
-        /// <param name="UserEstablishedEvents">UserEstablished events for this batch.</param>
-        /// <param name="AudioUpdatedEvents">AudioUpdated events for this batch.</param>
-        /// <param name="CommunicationEndedEvents">CommunicationEnded events for this batch.</param>
-        /// <param name="ConsultTransferEvents">ConsultTransfer events for this batch.</param>
-        /// <param name="ProgressConsultTransferEvents">ProgressConsultTransfer events for this batch.</param>
-        /// <param name="EndConsultTransferEvents">EndConsultTransfer events for this batch.</param>
+        /// <param name="EndTransferEvents">Voice - EndTransfer events for this batch.</param>
+        /// <param name="PhoneTransferEvents">Voice - PhoneTransfer events for this batch.</param>
+        /// <param name="ProgressTransferEvents">Voice - ProgressTransfer events for this batch.</param>
+        /// <param name="RoutingTransferEvents">Voice - RoutingTransfer events for this batch.</param>
+        /// <param name="UserTransferEvents">Voice - UserTransfer events for this batch.</param>
+        /// <param name="CommunicationAnsweredEvents">Voice - CommunicationAnswered events for this batch.</param>
+        /// <param name="CommunicationDispositionAppliedEvents">Voice - CommunicationDispositionApplied events for this batch.</param>
+        /// <param name="HoldUpdatedEvents">Voice - HoldUpdated events for this batch.</param>
+        /// <param name="ExternalEstablishedEvents">Voice - ExternalEstablished events for this batch.</param>
+        /// <param name="IvrEstablishedEvents">Voice - IvrEstablished events for this batch.</param>
+        /// <param name="PhoneEstablishedEvents">Voice - PhoneEstablished events for this batch.</param>
+        /// <param name="RoutingEstablishedEvents">Voice - RoutingEstablished events for this batch.</param>
+        /// <param name="UserEstablishedEvents">Voice - UserEstablished events for this batch.</param>
+        /// <param name="AudioUpdatedEvents">Voice - AudioUpdated events for this batch.</param>
+        /// <param name="CommunicationEndedEvents">Voice - CommunicationEnded events for this batch.</param>
+        /// <param name="ConsultTransferEvents">Voice - ConsultTransfer events for this batch.</param>
+        /// <param name="ProgressConsultTransferEvents">Voice - ProgressConsultTransfer events for this batch.</param>
+        /// <param name="EndConsultTransferEvents">Voice - EndConsultTransfer events for this batch.</param>
         public BatchConversationEventRequest(List<EndTransferEvent> EndTransferEvents = null, List<PhoneTransferEvent> PhoneTransferEvents = null, List<ProgressTransferEvent> ProgressTransferEvents = null, List<RoutingTransferEvent> RoutingTransferEvents = null, List<UserTransferEvent> UserTransferEvents = null, List<CommunicationAnsweredEvent> CommunicationAnsweredEvents = null, List<CommunicationDispositionAppliedEvent> CommunicationDispositionAppliedEvents = null, List<HoldUpdatedEvent> HoldUpdatedEvents = null, List<ExternalEstablishedEvent> ExternalEstablishedEvents = null, List<IvrEstablishedEvent> IvrEstablishedEvents = null, List<PhoneEstablishedEvent> PhoneEstablishedEvents = null, List<RoutingEstablishedEvent> RoutingEstablishedEvents = null, List<UserEstablishedEvent> UserEstablishedEvents = null, List<AudioUpdatedEvent> AudioUpdatedEvents = null, List<CommunicationEndedEvent> CommunicationEndedEvents = null, List<ConsultTransferEvent> ConsultTransferEvents = null, List<ProgressConsultTransferEvent> ProgressConsultTransferEvents = null, List<EndConsultTransferEvent> EndConsultTransferEvents = null)
         {
             this.EndTransferEvents = EndTransferEvents;
@@ -65,162 +65,162 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// EndTransfer events for this batch
+        /// Voice - EndTransfer events for this batch
         /// </summary>
-        /// <value>EndTransfer events for this batch</value>
+        /// <value>Voice - EndTransfer events for this batch</value>
         [DataMember(Name="endTransferEvents", EmitDefaultValue=false)]
         public List<EndTransferEvent> EndTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// PhoneTransfer events for this batch
+        /// Voice - PhoneTransfer events for this batch
         /// </summary>
-        /// <value>PhoneTransfer events for this batch</value>
+        /// <value>Voice - PhoneTransfer events for this batch</value>
         [DataMember(Name="phoneTransferEvents", EmitDefaultValue=false)]
         public List<PhoneTransferEvent> PhoneTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// ProgressTransfer events for this batch
+        /// Voice - ProgressTransfer events for this batch
         /// </summary>
-        /// <value>ProgressTransfer events for this batch</value>
+        /// <value>Voice - ProgressTransfer events for this batch</value>
         [DataMember(Name="progressTransferEvents", EmitDefaultValue=false)]
         public List<ProgressTransferEvent> ProgressTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// RoutingTransfer events for this batch
+        /// Voice - RoutingTransfer events for this batch
         /// </summary>
-        /// <value>RoutingTransfer events for this batch</value>
+        /// <value>Voice - RoutingTransfer events for this batch</value>
         [DataMember(Name="routingTransferEvents", EmitDefaultValue=false)]
         public List<RoutingTransferEvent> RoutingTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// UserTransfer events for this batch
+        /// Voice - UserTransfer events for this batch
         /// </summary>
-        /// <value>UserTransfer events for this batch</value>
+        /// <value>Voice - UserTransfer events for this batch</value>
         [DataMember(Name="userTransferEvents", EmitDefaultValue=false)]
         public List<UserTransferEvent> UserTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// CommunicationAnswered events for this batch
+        /// Voice - CommunicationAnswered events for this batch
         /// </summary>
-        /// <value>CommunicationAnswered events for this batch</value>
+        /// <value>Voice - CommunicationAnswered events for this batch</value>
         [DataMember(Name="communicationAnsweredEvents", EmitDefaultValue=false)]
         public List<CommunicationAnsweredEvent> CommunicationAnsweredEvents { get; set; }
 
 
 
         /// <summary>
-        /// CommunicationDispositionApplied events for this batch
+        /// Voice - CommunicationDispositionApplied events for this batch
         /// </summary>
-        /// <value>CommunicationDispositionApplied events for this batch</value>
+        /// <value>Voice - CommunicationDispositionApplied events for this batch</value>
         [DataMember(Name="communicationDispositionAppliedEvents", EmitDefaultValue=false)]
         public List<CommunicationDispositionAppliedEvent> CommunicationDispositionAppliedEvents { get; set; }
 
 
 
         /// <summary>
-        /// HoldUpdated events for this batch
+        /// Voice - HoldUpdated events for this batch
         /// </summary>
-        /// <value>HoldUpdated events for this batch</value>
+        /// <value>Voice - HoldUpdated events for this batch</value>
         [DataMember(Name="holdUpdatedEvents", EmitDefaultValue=false)]
         public List<HoldUpdatedEvent> HoldUpdatedEvents { get; set; }
 
 
 
         /// <summary>
-        /// ExternalEstablished events for this batch
+        /// Voice - ExternalEstablished events for this batch
         /// </summary>
-        /// <value>ExternalEstablished events for this batch</value>
+        /// <value>Voice - ExternalEstablished events for this batch</value>
         [DataMember(Name="externalEstablishedEvents", EmitDefaultValue=false)]
         public List<ExternalEstablishedEvent> ExternalEstablishedEvents { get; set; }
 
 
 
         /// <summary>
-        /// IvrEstablished events for this batch
+        /// Voice - IvrEstablished events for this batch
         /// </summary>
-        /// <value>IvrEstablished events for this batch</value>
+        /// <value>Voice - IvrEstablished events for this batch</value>
         [DataMember(Name="ivrEstablishedEvents", EmitDefaultValue=false)]
         public List<IvrEstablishedEvent> IvrEstablishedEvents { get; set; }
 
 
 
         /// <summary>
-        /// PhoneEstablished events for this batch
+        /// Voice - PhoneEstablished events for this batch
         /// </summary>
-        /// <value>PhoneEstablished events for this batch</value>
+        /// <value>Voice - PhoneEstablished events for this batch</value>
         [DataMember(Name="phoneEstablishedEvents", EmitDefaultValue=false)]
         public List<PhoneEstablishedEvent> PhoneEstablishedEvents { get; set; }
 
 
 
         /// <summary>
-        /// RoutingEstablished events for this batch
+        /// Voice - RoutingEstablished events for this batch
         /// </summary>
-        /// <value>RoutingEstablished events for this batch</value>
+        /// <value>Voice - RoutingEstablished events for this batch</value>
         [DataMember(Name="routingEstablishedEvents", EmitDefaultValue=false)]
         public List<RoutingEstablishedEvent> RoutingEstablishedEvents { get; set; }
 
 
 
         /// <summary>
-        /// UserEstablished events for this batch
+        /// Voice - UserEstablished events for this batch
         /// </summary>
-        /// <value>UserEstablished events for this batch</value>
+        /// <value>Voice - UserEstablished events for this batch</value>
         [DataMember(Name="userEstablishedEvents", EmitDefaultValue=false)]
         public List<UserEstablishedEvent> UserEstablishedEvents { get; set; }
 
 
 
         /// <summary>
-        /// AudioUpdated events for this batch
+        /// Voice - AudioUpdated events for this batch
         /// </summary>
-        /// <value>AudioUpdated events for this batch</value>
+        /// <value>Voice - AudioUpdated events for this batch</value>
         [DataMember(Name="audioUpdatedEvents", EmitDefaultValue=false)]
         public List<AudioUpdatedEvent> AudioUpdatedEvents { get; set; }
 
 
 
         /// <summary>
-        /// CommunicationEnded events for this batch
+        /// Voice - CommunicationEnded events for this batch
         /// </summary>
-        /// <value>CommunicationEnded events for this batch</value>
+        /// <value>Voice - CommunicationEnded events for this batch</value>
         [DataMember(Name="communicationEndedEvents", EmitDefaultValue=false)]
         public List<CommunicationEndedEvent> CommunicationEndedEvents { get; set; }
 
 
 
         /// <summary>
-        /// ConsultTransfer events for this batch
+        /// Voice - ConsultTransfer events for this batch
         /// </summary>
-        /// <value>ConsultTransfer events for this batch</value>
+        /// <value>Voice - ConsultTransfer events for this batch</value>
         [DataMember(Name="consultTransferEvents", EmitDefaultValue=false)]
         public List<ConsultTransferEvent> ConsultTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// ProgressConsultTransfer events for this batch
+        /// Voice - ProgressConsultTransfer events for this batch
         /// </summary>
-        /// <value>ProgressConsultTransfer events for this batch</value>
+        /// <value>Voice - ProgressConsultTransfer events for this batch</value>
         [DataMember(Name="progressConsultTransferEvents", EmitDefaultValue=false)]
         public List<ProgressConsultTransferEvent> ProgressConsultTransferEvents { get; set; }
 
 
 
         /// <summary>
-        /// EndConsultTransfer events for this batch
+        /// Voice - EndConsultTransfer events for this batch
         /// </summary>
-        /// <value>EndConsultTransfer events for this batch</value>
+        /// <value>Voice - EndConsultTransfer events for this batch</value>
         [DataMember(Name="endConsultTransferEvents", EmitDefaultValue=false)]
         public List<EndConsultTransferEvent> EndConsultTransferEvents { get; set; }
 

@@ -306,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
         
@@ -322,7 +322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         
@@ -364,7 +364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         
@@ -380,7 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         
@@ -521,7 +521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         
@@ -538,7 +538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         
@@ -582,7 +582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
         
@@ -598,7 +598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         
@@ -615,7 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>RelationshipListing</returns>
         
         RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
@@ -631,7 +631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         
         ApiResponse<RelationshipListing> GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
@@ -647,7 +647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
@@ -665,7 +665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
@@ -2134,7 +2134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
         
@@ -2150,7 +2150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         
@@ -2192,7 +2192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         
@@ -2208,7 +2208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         
@@ -2349,7 +2349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         
@@ -2366,7 +2366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         
@@ -2410,7 +2410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
         
@@ -2426,7 +2426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         
@@ -2443,7 +2443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
         
         System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
@@ -2459,7 +2459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
@@ -2475,7 +2475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
@@ -2493,7 +2493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
@@ -6154,7 +6154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
         
@@ -6172,7 +6172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         
@@ -6270,7 +6270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
         
@@ -6289,7 +6289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         
@@ -6606,7 +6606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         
@@ -6624,7 +6624,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         
@@ -6719,7 +6719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         
@@ -6738,7 +6738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         
@@ -7902,7 +7902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         
@@ -7921,7 +7921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         
@@ -8021,7 +8021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         
@@ -8041,7 +8041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         
@@ -8372,7 +8372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
         
@@ -8390,7 +8390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         
@@ -8488,7 +8488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
         
@@ -8507,7 +8507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         
@@ -8608,7 +8608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>RelationshipListing</returns>
         
         public RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
@@ -8626,7 +8626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         
         public ApiResponse< RelationshipListing > GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
@@ -8724,7 +8724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
         
         public async System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
@@ -8743,7 +8743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
@@ -8843,7 +8843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
@@ -8863,7 +8863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
@@ -8962,7 +8962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
@@ -8983,7 +8983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
-        /// <param name="sortOrder">Sort order (optional)</param>
+        /// <param name="sortOrder">The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>

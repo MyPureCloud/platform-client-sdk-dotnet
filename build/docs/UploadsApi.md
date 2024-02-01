@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**PostIntegrationsActionDraftFunctionUpload**](UploadsApi.html#postintegrationsactiondraftfunctionupload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
 | [**PostKnowledgeDocumentuploads**](UploadsApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostLanguageunderstandingMinerUploads**](UploadsApi.html#postlanguageunderstandingmineruploads) | **Post** /api/v2/languageunderstanding/miners/{minerId}/uploads | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
 | [**PostUploadsLearningCoverart**](UploadsApi.html#postuploadslearningcoverart) | **Post** /api/v2/uploads/learning/coverart | Generates pre-signed URL to upload cover art for learning modules |
@@ -14,6 +15,73 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUploadsRecordings**](UploadsApi.html#postuploadsrecordings) | **Post** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
 | [**PostUploadsWorkforcemanagementHistoricaldataCsv**](UploadsApi.html#postuploadsworkforcemanagementhistoricaldatacsv) | **Post** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
 {: class="table table-striped"}
+
+<a name="postintegrationsactiondraftfunctionupload"></a>
+
+## [**FunctionUploadResponse**](FunctionUploadResponse.html) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
+
+
+
+Create upload presigned URL for draft function package file.
+
+PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsActionDraftFunctionUploadExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UploadsApi();
+            var actionId = actionId_example;  // string | actionId
+            var body = new FunctionUploadRequest(); // FunctionUploadRequest | Input used to request URL upload.
+
+            try
+            { 
+                // Create upload presigned URL for draft function package file.
+                FunctionUploadResponse result = apiInstance.PostIntegrationsActionDraftFunctionUpload(actionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UploadsApi.PostIntegrationsActionDraftFunctionUpload: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **actionId** | **string**| actionId |  |
+| **body** | [**FunctionUploadRequest**](FunctionUploadRequest.html)| Input used to request URL upload. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FunctionUploadResponse**](FunctionUploadResponse.html)
 
 <a name="postknowledgedocumentuploads"></a>
 

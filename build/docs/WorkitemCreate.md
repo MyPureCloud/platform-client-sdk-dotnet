@@ -24,6 +24,7 @@ title: WorkitemCreate
 | **WrapupCode** | **string** | The ID of the wrapup. Must be a valid UUID. | [optional] |
 | **ScoredAgents** | [**List&lt;WorkitemScoredAgentRequest&gt;**](WorkitemScoredAgentRequest.html) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
 | **LanguageId** | **string** | The ID of language of the Workitem. Must be a valid UUID. | [optional] |
+| **UtilizationLabelId** | **string** | The ID of utilization label of the Workitem. Must be a valid UUID. | [optional] |
 | **ExternalContactId** | **string** | The ID of the external contact of the Workitem. Must be a valid UUID. | [optional] |
 | **ExternalTag** | **string** | The external tag of the Workitem. | [optional] |
 | **SkillIds** | **List&lt;string&gt;** | The skill IDs of the Workitem. Must be valid UUIDs. | [optional] |

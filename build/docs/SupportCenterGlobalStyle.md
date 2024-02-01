@@ -7,12 +7,12 @@ title: SupportCenterGlobalStyle
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **BackgroundColor** | **string** | Global background color, in hexadecimal format, eg #ffffff | [optional] |
-| **PrimaryColor** | **string** | Global primary color, in hexadecimal format, eg #ffffff | [optional] |
-| **PrimaryColorDark** | **string** | Global dark primary color, in hexadecimal format, eg #ffffff | [optional] |
-| **PrimaryColorLight** | **string** | Global light primary color, in hexadecimal format, eg #ffffff | [optional] |
-| **TextColor** | **string** | Global text color, in hexadecimal format, eg #ffffff | [optional] |
-| **FontFamily** | **string** | Global font family | [optional] |
+| **BackgroundColor** | **string** | Global background color, in hexadecimal format, eg #ffffff | |
+| **PrimaryColor** | **string** | Global primary color, in hexadecimal format, eg #ffffff | |
+| **PrimaryColorDark** | **string** | Global dark primary color, in hexadecimal format, eg #ffffff | |
+| **PrimaryColorLight** | **string** | Global light primary color, in hexadecimal format, eg #ffffff | |
+| **TextColor** | **string** | Global text color, in hexadecimal format, eg #ffffff | |
+| **FontFamily** | **string** | Global font family | |
 {: class="table table-striped"}
 
 

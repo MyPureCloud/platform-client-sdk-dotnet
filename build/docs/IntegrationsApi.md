@@ -16,14 +16,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrations**](IntegrationsApi.html#getintegrations) | **Get** /api/v2/integrations | List integrations |
 | [**GetIntegrationsAction**](IntegrationsApi.html#getintegrationsaction) | **Get** /api/v2/integrations/actions/{actionId} | Retrieves a single Action matching id. |
 | [**GetIntegrationsActionDraft**](IntegrationsApi.html#getintegrationsactiondraft) | **Get** /api/v2/integrations/actions/{actionId}/draft | Retrieve a Draft |
+| [**GetIntegrationsActionDraftFunction**](IntegrationsApi.html#getintegrationsactiondraftfunction) | **Get** /api/v2/integrations/actions/{actionId}/draft/function | Get draft function settings for Action |
 | [**GetIntegrationsActionDraftSchema**](IntegrationsApi.html#getintegrationsactiondraftschema) | **Get** /api/v2/integrations/actions/{actionId}/draft/schemas/{fileName} | Retrieve schema for a Draft based on filename. |
 | [**GetIntegrationsActionDraftTemplate**](IntegrationsApi.html#getintegrationsactiondrafttemplate) | **Get** /api/v2/integrations/actions/{actionId}/draft/templates/{fileName} | Retrieve templates for a Draft based on filename. |
 | [**GetIntegrationsActionDraftValidation**](IntegrationsApi.html#getintegrationsactiondraftvalidation) | **Get** /api/v2/integrations/actions/{actionId}/draft/validation | Validate current Draft configuration. |
+| [**GetIntegrationsActionFunction**](IntegrationsApi.html#getintegrationsactionfunction) | **Get** /api/v2/integrations/actions/{actionId}/function | Get published function settings for Action |
 | [**GetIntegrationsActionSchema**](IntegrationsApi.html#getintegrationsactionschema) | **Get** /api/v2/integrations/actions/{actionId}/schemas/{fileName} | Retrieve schema for an action based on filename. |
 | [**GetIntegrationsActionTemplate**](IntegrationsApi.html#getintegrationsactiontemplate) | **Get** /api/v2/integrations/actions/{actionId}/templates/{fileName} | Retrieve text of templates for an action based on filename. |
 | [**GetIntegrationsActions**](IntegrationsApi.html#getintegrationsactions) | **Get** /api/v2/integrations/actions | Retrieves all actions associated with filters passed in via query param. |
 | [**GetIntegrationsActionsCategories**](IntegrationsApi.html#getintegrationsactionscategories) | **Get** /api/v2/integrations/actions/categories | Retrieves all categories of available Actions |
+| [**GetIntegrationsActionsCertificates**](IntegrationsApi.html#getintegrationsactionscertificates) | **Get** /api/v2/integrations/actions/certificates | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
 | [**GetIntegrationsActionsDrafts**](IntegrationsApi.html#getintegrationsactionsdrafts) | **Get** /api/v2/integrations/actions/drafts | Retrieves all action drafts associated with the filters passed in via query param. |
+| [**GetIntegrationsActionsFunctionsRuntimes**](IntegrationsApi.html#getintegrationsactionsfunctionsruntimes) | **Get** /api/v2/integrations/actions/functions/runtimes | Get action function settings for Action |
 | [**GetIntegrationsBotconnectorIntegrationIdBot**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbot) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId} | Get a specific botConnector bot, plus versions, for this integration |
 | [**GetIntegrationsBotconnectorIntegrationIdBotVersions**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbotversions) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions | Get a list of bot versions for a bot |
 | [**GetIntegrationsBotconnectorIntegrationIdBots**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbots) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots | Get a list of botConnector bots for this integration |
@@ -58,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchIntegrationsActionDraft**](IntegrationsApi.html#patchintegrationsactiondraft) | **Patch** /api/v2/integrations/actions/{actionId}/draft | Update an existing Draft |
 | [**PostIntegrations**](IntegrationsApi.html#postintegrations) | **Post** /api/v2/integrations | Create an integration. |
 | [**PostIntegrationsActionDraft**](IntegrationsApi.html#postintegrationsactiondraft) | **Post** /api/v2/integrations/actions/{actionId}/draft | Create a new Draft from existing Action |
+| [**PostIntegrationsActionDraftFunctionUpload**](IntegrationsApi.html#postintegrationsactiondraftfunctionupload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
 | [**PostIntegrationsActionDraftPublish**](IntegrationsApi.html#postintegrationsactiondraftpublish) | **Post** /api/v2/integrations/actions/{actionId}/draft/publish | Publish a Draft and make it the active Action configuration |
 | [**PostIntegrationsActionDraftTest**](IntegrationsApi.html#postintegrationsactiondrafttest) | **Post** /api/v2/integrations/actions/{actionId}/draft/test | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. |
 | [**PostIntegrationsActionExecute**](IntegrationsApi.html#postintegrationsactionexecute) | **Post** /api/v2/integrations/actions/{actionId}/execute | Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. |
@@ -69,6 +74,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotsjobs) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs | Get a list of Nuance bots in the specified Integration asynchronously |
 | [**PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](IntegrationsApi.html#postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate) | **Post** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate | Try out a single credential for a Nuance bot to know if the secret is correct |
 | [**PutIntegrationConfigCurrent**](IntegrationsApi.html#putintegrationconfigcurrent) | **Put** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
+| [**PutIntegrationsActionDraftFunction**](IntegrationsApi.html#putintegrationsactiondraftfunction) | **Put** /api/v2/integrations/actions/{actionId}/draft/function | Update draft function settings. |
 | [**PutIntegrationsBotconnectorIntegrationIdBots**](IntegrationsApi.html#putintegrationsbotconnectorintegrationidbots) | **Put** /api/v2/integrations/botconnector/{integrationId}/bots | Set a list of botConnector bots plus versions for this integration |
 | [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **Put** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
 | [**PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](IntegrationsApi.html#putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings) | **Put** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
@@ -671,6 +677,71 @@ namespace Example
 
 [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
+<a name="getintegrationsactiondraftfunction"></a>
+
+## [**FunctionConfig**](FunctionConfig.html) GetIntegrationsActionDraftFunction (string actionId)
+
+
+
+Get draft function settings for Action
+
+GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsActionDraftFunctionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var actionId = actionId_example;  // string | actionId
+
+            try
+            { 
+                // Get draft function settings for Action
+                FunctionConfig result = apiInstance.GetIntegrationsActionDraftFunction(actionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsActionDraftFunction: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **actionId** | **string**| actionId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FunctionConfig**](FunctionConfig.html)
+
 <a name="getintegrationsactiondraftschema"></a>
 
 ## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsActionDraftSchema (string actionId, string fileName)
@@ -865,6 +936,71 @@ namespace Example
 ### Return type
 
 [**DraftValidationResult**](DraftValidationResult.html)
+
+<a name="getintegrationsactionfunction"></a>
+
+## [**FunctionConfig**](FunctionConfig.html) GetIntegrationsActionFunction (string actionId)
+
+
+
+Get published function settings for Action
+
+GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsActionFunctionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var actionId = actionId_example;  // string | actionId
+
+            try
+            { 
+                // Get published function settings for Action
+                FunctionConfig result = apiInstance.GetIntegrationsActionFunction(actionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsActionFunction: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **actionId** | **string**| actionId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FunctionConfig**](FunctionConfig.html)
 
 <a name="getintegrationsactionschema"></a>
 
@@ -1158,6 +1294,71 @@ namespace Example
 
 [**CategoryEntityListing**](CategoryEntityListing.html)
 
+<a name="getintegrationsactionscertificates"></a>
+
+## [**ActionCertificateListing**](ActionCertificateListing.html) GetIntegrationsActionsCertificates (string status = null, string type = null)
+
+
+
+Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+
+Requires ANY permissions: 
+
+* integrations:actionCertificate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsActionsCertificatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var status = status_example;  // string | Indicates the validity of the certificate in question. (optional) 
+            var type = type_example;  // string | Indicates the type of the certificate. (optional) 
+
+            try
+            { 
+                // Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+                ActionCertificateListing result = apiInstance.GetIntegrationsActionsCertificates(status, type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsActionsCertificates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **status** | **string**| Indicates the validity of the certificate in question. | [optional] <br />**Values**: Current, Upcoming |
+| **type** | **string**| Indicates the type of the certificate. | [optional] <br />**Values**: Client |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActionCertificateListing**](ActionCertificateListing.html)
+
 <a name="getintegrationsactionsdrafts"></a>
 
 ## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
@@ -1241,6 +1442,66 @@ namespace Example
 ### Return type
 
 [**ActionEntityListing**](ActionEntityListing.html)
+
+<a name="getintegrationsactionsfunctionsruntimes"></a>
+
+## [**List&lt;FunctionRuntime&gt;**](FunctionRuntime.html) GetIntegrationsActionsFunctionsRuntimes ()
+
+
+
+Get action function settings for Action
+
+GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsActionsFunctionsRuntimesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+
+            try
+            { 
+                // Get action function settings for Action
+                List<FunctionRuntime> result = apiInstance.GetIntegrationsActionsFunctionsRuntimes();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsActionsFunctionsRuntimes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**List<FunctionRuntime>**](FunctionRuntime.html)
 
 <a name="getintegrationsbotconnectorintegrationidbot"></a>
 
@@ -3519,6 +3780,73 @@ namespace Example
 
 [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html)
 
+<a name="postintegrationsactiondraftfunctionupload"></a>
+
+## [**FunctionUploadResponse**](FunctionUploadResponse.html) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
+
+
+
+Create upload presigned URL for draft function package file.
+
+PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsActionDraftFunctionUploadExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var actionId = actionId_example;  // string | actionId
+            var body = new FunctionUploadRequest(); // FunctionUploadRequest | Input used to request URL upload.
+
+            try
+            { 
+                // Create upload presigned URL for draft function package file.
+                FunctionUploadResponse result = apiInstance.PostIntegrationsActionDraftFunctionUpload(actionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsActionDraftFunctionUpload: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **actionId** | **string**| actionId |  |
+| **body** | [**FunctionUploadRequest**](FunctionUploadRequest.html)| Input used to request URL upload. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FunctionUploadResponse**](FunctionUploadResponse.html)
+
 <a name="postintegrationsactiondraftpublish"></a>
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action.html) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
@@ -4241,6 +4569,73 @@ namespace Example
 ### Return type
 
 [**IntegrationConfiguration**](IntegrationConfiguration.html)
+
+<a name="putintegrationsactiondraftfunction"></a>
+
+## [**FunctionConfig**](FunctionConfig.html) PutIntegrationsActionDraftFunction (string actionId, Function body)
+
+
+
+Update draft function settings.
+
+PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIntegrationsActionDraftFunctionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var actionId = actionId_example;  // string | actionId
+            var body = new Function(); // Function | Input used to update function settings.
+
+            try
+            { 
+                // Update draft function settings.
+                FunctionConfig result = apiInstance.PutIntegrationsActionDraftFunction(actionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PutIntegrationsActionDraftFunction: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **actionId** | **string**| actionId |  |
+| **body** | [**Function**](Function.html)| Input used to update function settings. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FunctionConfig**](FunctionConfig.html)
 
 <a name="putintegrationsbotconnectorintegrationidbots"></a>
 

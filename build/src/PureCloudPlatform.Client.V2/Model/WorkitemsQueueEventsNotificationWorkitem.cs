@@ -338,7 +338,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomFields">CustomFields.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="Sessions">Sessions.</param>
-        public WorkitemsQueueEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsQueueEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsQueueEventsNotificationCustomAttribute> CustomFields = null, WorkitemsQueueEventsNotificationWrapup Wrapup = null, List<WorkitemsQueueEventsNotificationSession> Sessions = null)
+        /// <param name="SkillIds">SkillIds.</param>
+        public WorkitemsQueueEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsQueueEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsQueueEventsNotificationCustomAttribute> CustomFields = null, WorkitemsQueueEventsNotificationWrapup Wrapup = null, List<WorkitemsQueueEventsNotificationSession> Sessions = null, List<string> SkillIds = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -372,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomFields = CustomFields;
             this.Wrapup = Wrapup;
             this.Sessions = Sessions;
+            this.SkillIds = SkillIds;
             
         }
         
@@ -614,6 +616,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<WorkitemsQueueEventsNotificationSession> Sessions { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SkillIds
+        /// </summary>
+        [DataMember(Name="skillIds", EmitDefaultValue=false)]
+        public List<string> SkillIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -655,6 +665,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
+            sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -854,6 +865,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
+                ) &&
+                (
+                    this.SkillIds == other.SkillIds ||
+                    this.SkillIds != null &&
+                    this.SkillIds.SequenceEqual(other.SkillIds)
                 );
         }
 
@@ -963,6 +979,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
+
+                if (this.SkillIds != null)
+                    hash = hash * 59 + this.SkillIds.GetHashCode();
 
                 return hash;
             }

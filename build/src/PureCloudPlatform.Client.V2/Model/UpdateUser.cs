@@ -73,6 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Addresses">Email address, phone number, and/or extension for this user. One entry is allowed per media type.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Username">Username.</param>
+        /// <param name="PreferredName">Preferred full name of agent.</param>
         /// <param name="Manager">Manager.</param>
         /// <param name="Images">Images.</param>
         /// <param name="Version">This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
@@ -84,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Certifications">Certifications.</param>
         /// <param name="Biography">Biography.</param>
         /// <param name="EmployerInfo">EmployerInfo.</param>
-        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
+        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, string PreferredName = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null)
         {
             this.Name = Name;
             this.Chat = Chat;
@@ -93,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Addresses = Addresses;
             this.Title = Title;
             this.Username = Username;
+            this.PreferredName = PreferredName;
             this.Manager = Manager;
             this.Images = Images;
             this.Version = Version;
@@ -181,6 +183,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
+
+
+
+        /// <summary>
+        /// Preferred full name of agent
+        /// </summary>
+        /// <value>Preferred full name of agent</value>
+        [DataMember(Name="preferredName", EmitDefaultValue=false)]
+        public string PreferredName { get; set; }
 
 
 
@@ -297,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  PreferredName: ").Append(PreferredName).Append("\n");
             sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -393,6 +405,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Username == other.Username ||
                     this.Username != null &&
                     this.Username.Equals(other.Username)
+                ) &&
+                (
+                    this.PreferredName == other.PreferredName ||
+                    this.PreferredName != null &&
+                    this.PreferredName.Equals(other.PreferredName)
                 ) &&
                 (
                     this.Manager == other.Manager ||
@@ -493,6 +510,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Username != null)
                     hash = hash * 59 + this.Username.GetHashCode();
+
+                if (this.PreferredName != null)
+                    hash = hash * 59 + this.PreferredName.GetHashCode();
 
                 if (this.Manager != null)
                     hash = hash * 59 + this.Manager.GetHashCode();

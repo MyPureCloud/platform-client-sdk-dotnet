@@ -81,6 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Clearslotaction,
             
             /// <summary>
+            /// Enum Clearutilizationlabelaction for "ClearUtilizationLabelAction"
+            /// </summary>
+            [EnumMember(Value = "ClearUtilizationLabelAction")]
+            Clearutilizationlabelaction,
+            
+            /// <summary>
             /// Enum Disconnectaction for "DisconnectAction"
             /// </summary>
             [EnumMember(Value = "DisconnectAction")]
@@ -121,6 +127,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "FindGrammarAction")]
             Findgrammaraction,
+            
+            /// <summary>
+            /// Enum Findgrammarbyidaction for "FindGrammarByIdAction"
+            /// </summary>
+            [EnumMember(Value = "FindGrammarByIdAction")]
+            Findgrammarbyidaction,
             
             /// <summary>
             /// Enum Findgroupaction for "FindGroupAction"
@@ -181,6 +193,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "FindUserPromptAction")]
             Finduserpromptaction,
+            
+            /// <summary>
+            /// Enum Findutilizationlabelaction for "FindUtilizationLabelAction"
+            /// </summary>
+            [EnumMember(Value = "FindUtilizationLabelAction")]
+            Findutilizationlabelaction,
             
             /// <summary>
             /// Enum Switchaction for "SwitchAction"
@@ -313,6 +331,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SetLocaleAction")]
             Setlocaleaction,
+            
+            /// <summary>
+            /// Enum Setutilizationlabelaction for "SetUtilizationLabelAction"
+            /// </summary>
+            [EnumMember(Value = "SetUtilizationLabelAction")]
+            Setutilizationlabelaction,
             
             /// <summary>
             /// Enum Transferpurematchaction for "TransferPureMatchAction"

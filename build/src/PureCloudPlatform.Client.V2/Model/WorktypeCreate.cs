@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="SchemaId">The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="Description">The description of the Worktype. Maximum length of 4096 characters..</param>
-        /// <param name="DivisionId">The ID of the division the Worktype belongs to. Defaults to home division ID. The Worktype must be in the same division as its default Workbin..</param>
+        /// <param name="DivisionId">The ID of the division the Worktype belongs to. Defaults to the default Workbin division ID. The Worktype must be in the same division as its default Workbin..</param>
         /// <param name="DisableDefaultStatusCreation">Set to true to disable default status creation. Default statuses are created with the Worktype by default.</param>
         /// <param name="SchemaVersion">The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set..</param>
         /// <param name="DefaultQueueId">The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID..</param>
@@ -157,9 +157,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the division the Worktype belongs to. Defaults to home division ID. The Worktype must be in the same division as its default Workbin.
+        /// The ID of the division the Worktype belongs to. Defaults to the default Workbin division ID. The Worktype must be in the same division as its default Workbin.
         /// </summary>
-        /// <value>The ID of the division the Worktype belongs to. Defaults to home division ID. The Worktype must be in the same division as its default Workbin.</value>
+        /// <value>The ID of the division the Worktype belongs to. Defaults to the default Workbin division ID. The Worktype must be in the same division as its default Workbin.</value>
         [DataMember(Name="divisionId", EmitDefaultValue=false)]
         public string DivisionId { get; set; }
 

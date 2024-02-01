@@ -2199,6 +2199,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
+        /// Get a simplified wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>WrapupCode</returns>
+        
+        WrapupCode GetRoutingWrapupcodesDivisionview (string codeId);
+
+        /// <summary>
+        /// Get a simplified wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        
+        ApiResponse<WrapupCode> GetRoutingWrapupcodesDivisionviewWithHttpInfo (string codeId);
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+        /// </summary>
+        /// <remarks>
+        /// Specifying both name and ID parameters is not supported.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>WrapupCodeEntityListing</returns>
+        
+        WrapupCodeEntityListing GetRoutingWrapupcodesDivisionviews (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null);
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+        /// </summary>
+        /// <remarks>
+        /// Specifying both name and ID parameters is not supported.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        
+        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null);
+
+        /// <summary>
         /// Get queues for user
         /// </summary>
         /// <remarks>
@@ -2555,6 +2613,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> PatchRoutingSettingsContactcenterWithHttpInfo (ContactCenterSettings body);
+
+        /// <summary>
+        /// Patch Transcription Settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>TranscriptionSettings</returns>
+        
+        TranscriptionSettings PatchRoutingSettingsTranscription (TranscriptionSettings body);
+
+        /// <summary>
+        /// Patch Transcription Settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>ApiResponse of TranscriptionSettings</returns>
+        
+        ApiResponse<TranscriptionSettings> PatchRoutingSettingsTranscriptionWithHttpInfo (TranscriptionSettings body);
 
         /// <summary>
         /// Update skill group definition
@@ -3225,7 +3307,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -3238,7 +3319,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -5897,6 +5977,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
 
         /// <summary>
+        /// Get a simplified wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of WrapupCode</returns>
+        
+        System.Threading.Tasks.Task<WrapupCode> GetRoutingWrapupcodesDivisionviewAsync (string codeId);
+
+        /// <summary>
+        /// Get a simplified wrap-up code.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetRoutingWrapupcodesDivisionviewAsyncWithHttpInfo (string codeId);
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+        /// </summary>
+        /// <remarks>
+        /// Specifying both name and ID parameters is not supported.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>Task of WrapupCodeEntityListing</returns>
+        
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null);
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+        /// </summary>
+        /// <remarks>
+        /// Specifying both name and ID parameters is not supported.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null);
+
+        /// <summary>
         /// Get queues for user
         /// </summary>
         /// <remarks>
@@ -6253,6 +6391,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRoutingSettingsContactcenterAsyncWithHttpInfo (ContactCenterSettings body);
+
+        /// <summary>
+        /// Patch Transcription Settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>Task of TranscriptionSettings</returns>
+        
+        System.Threading.Tasks.Task<TranscriptionSettings> PatchRoutingSettingsTranscriptionAsync (TranscriptionSettings body);
+
+        /// <summary>
+        /// Patch Transcription Settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>Task of ApiResponse (TranscriptionSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> PatchRoutingSettingsTranscriptionAsyncWithHttpInfo (TranscriptionSettings body);
 
         /// <summary>
         /// Update skill group definition
@@ -6923,7 +7085,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -6936,7 +7097,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -25134,6 +25294,451 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a simplified wrap-up code. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>WrapupCode</returns>
+        
+        public WrapupCode GetRoutingWrapupcodesDivisionview (string codeId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = GetRoutingWrapupcodesDivisionviewWithHttpInfo(codeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a simplified wrap-up code. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>ApiResponse of WrapupCode</returns>
+        
+        public ApiResponse< WrapupCode > GetRoutingWrapupcodesDivisionviewWithHttpInfo (string codeId)
+        { 
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetRoutingWrapupcodesDivisionview");
+
+            var localVarPath = "/api/v2/routing/wrapupcodes/divisionviews/{codeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (codeId != null) localVarPathParams.Add("codeId", this.Configuration.ApiClient.ParameterToString(codeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarHeaders,
+                (WrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a simplified wrap-up code. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of WrapupCode</returns>
+        
+        public async System.Threading.Tasks.Task<WrapupCode> GetRoutingWrapupcodesDivisionviewAsync (string codeId)
+        {
+             ApiResponse<WrapupCode> localVarResponse = await GetRoutingWrapupcodesDivisionviewAsyncWithHttpInfo(codeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a simplified wrap-up code. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="codeId">Wrapup Code ID</param>
+        /// <returns>Task of ApiResponse (WrapupCode)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetRoutingWrapupcodesDivisionviewAsyncWithHttpInfo (string codeId)
+        { 
+            // verify the required parameter 'codeId' is set
+            if (codeId == null)
+                throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetRoutingWrapupcodesDivisionview");
+            
+
+            var localVarPath = "/api/v2/routing/wrapupcodes/divisionviews/{codeId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (codeId != null) localVarPathParams.Add("codeId", this.Configuration.ApiClient.ParameterToString(codeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCode>(localVarStatusCode,
+                localVarHeaders,
+                (WrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). 
+        /// Specifying both name and ID parameters is not supported.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>WrapupCodeEntityListing</returns>
+        
+        public WrapupCodeEntityListing GetRoutingWrapupcodesDivisionviews (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null)
+        {
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesDivisionviewsWithHttpInfo(pageSize, pageNumber, name, id, divisionId, includeState);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). 
+        /// Specifying both name and ID parameters is not supported.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
+        
+        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/wrapupcodes/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (includeState != null) localVarQueryParams.Add(new Tuple<string, string>("includeState", this.Configuration.ApiClient.ParameterToString(includeState)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WrapupCodeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). 
+        /// Specifying both name and ID parameters is not supported.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>Task of WrapupCodeEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null)
+        {
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, name, id, divisionId, includeState);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s). 
+        /// Specifying both name and ID parameters is not supported.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (trailing asterisks allowed) (optional)</param>
+        /// <param name="id">Wrapup code ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <param name="includeState">Wrapup code state(s) to include (optional)</param>
+        /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/wrapupcodes/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (includeState != null) localVarQueryParams.Add(new Tuple<string, string>("includeState", this.Configuration.ApiClient.ParameterToString(includeState)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingWrapupcodesDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WrapupCodeEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WrapupCodeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCodeEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get queues for user 
         /// 
         /// </summary>
@@ -28155,6 +28760,227 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Patch Transcription Settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>TranscriptionSettings</returns>
+        
+        public TranscriptionSettings PatchRoutingSettingsTranscription (TranscriptionSettings body)
+        {
+             ApiResponse<TranscriptionSettings> localVarResponse = PatchRoutingSettingsTranscriptionWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch Transcription Settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>ApiResponse of TranscriptionSettings</returns>
+        
+        public ApiResponse< TranscriptionSettings > PatchRoutingSettingsTranscriptionWithHttpInfo (TranscriptionSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingSettingsTranscription");
+
+            var localVarPath = "/api/v2/routing/settings/transcription";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSettingsTranscription: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSettingsTranscription: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TranscriptionSettings>(localVarStatusCode,
+                localVarHeaders,
+                (TranscriptionSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranscriptionSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Patch Transcription Settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>Task of TranscriptionSettings</returns>
+        
+        public async System.Threading.Tasks.Task<TranscriptionSettings> PatchRoutingSettingsTranscriptionAsync (TranscriptionSettings body)
+        {
+             ApiResponse<TranscriptionSettings> localVarResponse = await PatchRoutingSettingsTranscriptionAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Patch Transcription Settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Organization Settings</param>
+        /// <returns>Task of ApiResponse (TranscriptionSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TranscriptionSettings>> PatchRoutingSettingsTranscriptionAsyncWithHttpInfo (TranscriptionSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingSettingsTranscription");
+            
+
+            var localVarPath = "/api/v2/routing/settings/transcription";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSettingsTranscription: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingSettingsTranscription: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TranscriptionSettings>(localVarStatusCode,
+                localVarHeaders,
+                (TranscriptionSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranscriptionSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -34085,7 +34911,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Imports a phone number for SMS 
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -34100,7 +34925,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Imports a phone number for SMS 
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -34196,7 +35020,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Imports a phone number for SMS 
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -34212,7 +35035,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Imports a phone number for SMS 
         /// 
-        /// PostRoutingSmsPhonenumbersImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>

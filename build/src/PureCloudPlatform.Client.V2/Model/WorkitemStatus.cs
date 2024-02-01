@@ -78,9 +78,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the Status..</param>
         /// <param name="DefaultDestinationStatus">Default destination status to which this Status will transition to if auto status transition enabled..</param>
         /// <param name="StatusTransitionDelaySeconds">Delay in seconds for auto status transition.</param>
-        /// <param name="StatusTransitionTime">Time in HH:MM:SS format at which auto status transition will occur after statusTransitionDelaySeconds delay. To set Time, the statusTransitionDelaySeconds must be equal to or greater than 86400 i.e. a day.</param>
+        /// <param name="StatusTransitionTime">Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS.</param>
         /// <param name="Worktype">The Worktype containing the Status..</param>
-        public WorkitemStatus(string Name = null, CategoryEnum? Category = null, List<WorkitemStatusReference> DestinationStatuses = null, string Description = null, WorkitemStatusReference DefaultDestinationStatus = null, int? StatusTransitionDelaySeconds = null, DateTime? StatusTransitionTime = null, WorktypeReference Worktype = null)
+        public WorkitemStatus(string Name = null, CategoryEnum? Category = null, List<WorkitemStatusReference> DestinationStatuses = null, string Description = null, WorkitemStatusReference DefaultDestinationStatus = null, int? StatusTransitionDelaySeconds = null, string StatusTransitionTime = null, WorktypeReference Worktype = null)
         {
             this.Name = Name;
             this.Category = Category;
@@ -151,11 +151,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Time in HH:MM:SS format at which auto status transition will occur after statusTransitionDelaySeconds delay. To set Time, the statusTransitionDelaySeconds must be equal to or greater than 86400 i.e. a day
+        /// Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS
         /// </summary>
-        /// <value>Time in HH:MM:SS format at which auto status transition will occur after statusTransitionDelaySeconds delay. To set Time, the statusTransitionDelaySeconds must be equal to or greater than 86400 i.e. a day</value>
+        /// <value>Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS</value>
         [DataMember(Name="statusTransitionTime", EmitDefaultValue=false)]
-        public DateTime? StatusTransitionTime { get; set; }
+        public string StatusTransitionTime { get; set; }
 
 
 

@@ -25,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#deleteoutbounddnclistcustomexclusioncolumns) | **Delete** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Deletes all or expired custom exclusion column entries from a DNC list. |
 | [**DeleteOutboundDnclistEmailaddresses**](OutboundApi.html#deleteoutbounddnclistemailaddresses) | **Delete** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Deletes all or expired email addresses from a DNC list. |
 | [**DeleteOutboundDnclistPhonenumbers**](OutboundApi.html#deleteoutbounddnclistphonenumbers) | **Delete** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Deletes all or expired phone numbers from a DNC list. |
+| [**DeleteOutboundFilespecificationtemplate**](OutboundApi.html#deleteoutboundfilespecificationtemplate) | **Delete** /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId} | Delete File Specification Template |
+| [**DeleteOutboundFilespecificationtemplatesBulk**](OutboundApi.html#deleteoutboundfilespecificationtemplatesbulk) | **Delete** /api/v2/outbound/filespecificationtemplates/bulk | Delete multiple file specification templates. |
 | [**DeleteOutboundImporttemplate**](OutboundApi.html#deleteoutboundimporttemplate) | **Delete** /api/v2/outbound/importtemplates/{importTemplateId} | Delete Import Template |
 | [**DeleteOutboundImporttemplates**](OutboundApi.html#deleteoutboundimporttemplates) | **Delete** /api/v2/outbound/importtemplates | Delete multiple import templates. |
 | [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **Delete** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
@@ -76,6 +78,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundDnclistsDivisionviews**](OutboundApi.html#getoutbounddnclistsdivisionviews) | **Get** /api/v2/outbound/dnclists/divisionviews | Query a list of simplified dnc list objects. |
 | [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **Get** /api/v2/outbound/events/{eventId} | Get Dialer Event |
 | [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **Get** /api/v2/outbound/events | Query Event Logs |
+| [**GetOutboundFilespecificationtemplate**](OutboundApi.html#getoutboundfilespecificationtemplate) | **Get** /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId} | Get File Specification Template |
+| [**GetOutboundFilespecificationtemplates**](OutboundApi.html#getoutboundfilespecificationtemplates) | **Get** /api/v2/outbound/filespecificationtemplates | Query File Specification Templates |
 | [**GetOutboundImporttemplate**](OutboundApi.html#getoutboundimporttemplate) | **Get** /api/v2/outbound/importtemplates/{importTemplateId} | Get Import Template |
 | [**GetOutboundImporttemplateImportstatus**](OutboundApi.html#getoutboundimporttemplateimportstatus) | **Get** /api/v2/outbound/importtemplates/{importTemplateId}/importstatus | Get the import status for an import template. |
 | [**GetOutboundImporttemplates**](OutboundApi.html#getoutboundimporttemplates) | **Get** /api/v2/outbound/importtemplates | Query Import Templates |
@@ -121,12 +125,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **Post** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostOutboundContactlisttemplates**](OutboundApi.html#postoutboundcontactlisttemplates) | **Post** /api/v2/outbound/contactlisttemplates | Create Contact List Template |
 | [**PostOutboundContactlisttemplatesBulkAdd**](OutboundApi.html#postoutboundcontactlisttemplatesbulkadd) | **Post** /api/v2/outbound/contactlisttemplates/bulk/add | Add multiple contact list templates |
+| [**PostOutboundContactlisttemplatesBulkRetrieve**](OutboundApi.html#postoutboundcontactlisttemplatesbulkretrieve) | **Post** /api/v2/outbound/contactlisttemplates/bulk/retrieve | Get multiple contact list templates |
 | [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **Post** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
 | [**PostOutboundDigitalrulesets**](OutboundApi.html#postoutbounddigitalrulesets) | **Post** /api/v2/outbound/digitalrulesets | Create an Outbound Digital Rule Set |
 | [**PostOutboundDnclistEmailaddresses**](OutboundApi.html#postoutbounddnclistemailaddresses) | **Post** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add email addresses to a DNC list. |
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **Post** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
 | [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **Post** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **Post** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostOutboundFilespecificationtemplates**](OutboundApi.html#postoutboundfilespecificationtemplates) | **Post** /api/v2/outbound/filespecificationtemplates | Create File Specification Template |
 | [**PostOutboundImporttemplates**](OutboundApi.html#postoutboundimporttemplates) | **Post** /api/v2/outbound/importtemplates | Create Import Template |
 | [**PostOutboundImporttemplatesBulkAdd**](OutboundApi.html#postoutboundimporttemplatesbulkadd) | **Post** /api/v2/outbound/importtemplates/bulk/add | Add multiple import templates |
 | [**PostOutboundMessagingcampaigns**](OutboundApi.html#postoutboundmessagingcampaigns) | **Post** /api/v2/outbound/messagingcampaigns | Create a Messaging Campaign |
@@ -145,6 +151,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundContactlisttemplate**](OutboundApi.html#putoutboundcontactlisttemplate) | **Put** /api/v2/outbound/contactlisttemplates/{contactListTemplateId} | Update a contact list template. |
 | [**PutOutboundDigitalruleset**](OutboundApi.html#putoutbounddigitalruleset) | **Put** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Update an Outbound Digital Rule Set |
 | [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **Put** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
+| [**PutOutboundFilespecificationtemplate**](OutboundApi.html#putoutboundfilespecificationtemplate) | **Put** /api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId} | Update File Specification Template |
 | [**PutOutboundImporttemplate**](OutboundApi.html#putoutboundimporttemplate) | **Put** /api/v2/outbound/importtemplates/{importTemplateId} | Update Import Template |
 | [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **Put** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
 | [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **Put** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
@@ -1283,6 +1290,130 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundfilespecificationtemplate"></a>
+
+## void DeleteOutboundFilespecificationtemplate (string fileSpecificationTemplateId)
+
+
+
+Delete File Specification Template
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundFilespecificationtemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var fileSpecificationTemplateId = fileSpecificationTemplateId_example;  // string | File Specification Template ID
+
+            try
+            { 
+                // Delete File Specification Template
+                apiInstance.DeleteOutboundFilespecificationtemplate(fileSpecificationTemplateId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundFilespecificationtemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileSpecificationTemplateId** | **string**| File Specification Template ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundfilespecificationtemplatesbulk"></a>
+
+## void DeleteOutboundFilespecificationtemplatesBulk (List<string> id)
+
+
+
+Delete multiple file specification templates.
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundFilespecificationtemplatesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var id = new List<string>(); // List<string> | File Specification template id(s) to delete
+
+            try
+            { 
+                // Delete multiple file specification templates.
+                apiInstance.DeleteOutboundFilespecificationtemplatesBulk(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundFilespecificationtemplatesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| File Specification template id(s) to delete |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4767,6 +4898,144 @@ namespace Example
 
 [**DialerEventEntityListing**](DialerEventEntityListing.html)
 
+<a name="getoutboundfilespecificationtemplate"></a>
+
+## [**FileSpecificationTemplate**](FileSpecificationTemplate.html) GetOutboundFilespecificationtemplate (string fileSpecificationTemplateId)
+
+
+
+Get File Specification Template
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundFilespecificationtemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var fileSpecificationTemplateId = fileSpecificationTemplateId_example;  // string | File Specification Template ID
+
+            try
+            { 
+                // Get File Specification Template
+                FileSpecificationTemplate result = apiInstance.GetOutboundFilespecificationtemplate(fileSpecificationTemplateId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundFilespecificationtemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileSpecificationTemplateId** | **string**| File Specification Template ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FileSpecificationTemplate**](FileSpecificationTemplate.html)
+
+<a name="getoutboundfilespecificationtemplates"></a>
+
+## [**FileSpecificationTemplateEntityListing**](FileSpecificationTemplateEntityListing.html) GetOutboundFilespecificationtemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+
+
+
+Query File Specification Templates
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundFilespecificationtemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            { 
+                // Query File Specification Templates
+                FileSpecificationTemplateEntityListing result = apiInstance.GetOutboundFilespecificationtemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundFilespecificationtemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**FileSpecificationTemplateEntityListing**](FileSpecificationTemplateEntityListing.html)
+
 <a name="getoutboundimporttemplate"></a>
 
 ## [**ImportTemplate**](ImportTemplate.html) GetOutboundImporttemplate (string importTemplateId)
@@ -7687,6 +7956,69 @@ namespace Example
 
 [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
 
+<a name="postoutboundcontactlisttemplatesbulkretrieve"></a>
+
+## [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html) PostOutboundContactlisttemplatesBulkRetrieve (ContactListTemplateBulkRetrieveBody body)
+
+
+
+Get multiple contact list templates
+
+Requires ANY permissions: 
+
+* outbound:contactListTemplate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlisttemplatesBulkRetrieveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListTemplateBulkRetrieveBody(); // ContactListTemplateBulkRetrieveBody | contact list templates to get
+
+            try
+            { 
+                // Get multiple contact list templates
+                ContactListTemplateEntityListing result = apiInstance.PostOutboundContactlisttemplatesBulkRetrieve(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlisttemplatesBulkRetrieve: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListTemplateBulkRetrieveBody**](ContactListTemplateBulkRetrieveBody.html)| contact list templates to get |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListTemplateEntityListing**](ContactListTemplateEntityListing.html)
+
 <a name="postoutboundconversationdnc"></a>
 
 ## void PostOutboundConversationDnc (string conversationId)
@@ -8074,6 +8406,69 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="postoutboundfilespecificationtemplates"></a>
+
+## [**FileSpecificationTemplate**](FileSpecificationTemplate.html) PostOutboundFilespecificationtemplates (FileSpecificationTemplate body)
+
+
+
+Create File Specification Template
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundFilespecificationtemplatesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new FileSpecificationTemplate(); // FileSpecificationTemplate | FileSpecificationTemplate
+
+            try
+            { 
+                // Create File Specification Template
+                FileSpecificationTemplate result = apiInstance.PostOutboundFilespecificationtemplates(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundFilespecificationtemplates: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**FileSpecificationTemplate**](FileSpecificationTemplate.html)| FileSpecificationTemplate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FileSpecificationTemplate**](FileSpecificationTemplate.html)
 
 <a name="postoutboundimporttemplates"></a>
 
@@ -9239,6 +9634,71 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList.html)
+
+<a name="putoutboundfilespecificationtemplate"></a>
+
+## [**FileSpecificationTemplate**](FileSpecificationTemplate.html) PutOutboundFilespecificationtemplate (string fileSpecificationTemplateId, FileSpecificationTemplate body)
+
+
+
+Update File Specification Template
+
+Requires ANY permissions: 
+
+* outbound:fileSpecificationTemplate:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundFilespecificationtemplateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var fileSpecificationTemplateId = fileSpecificationTemplateId_example;  // string | File Specification Template ID
+            var body = new FileSpecificationTemplate(); // FileSpecificationTemplate | fileSpecificationTemplate
+
+            try
+            { 
+                // Update File Specification Template
+                FileSpecificationTemplate result = apiInstance.PutOutboundFilespecificationtemplate(fileSpecificationTemplateId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundFilespecificationtemplate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **fileSpecificationTemplateId** | **string**| File Specification Template ID |  |
+| **body** | [**FileSpecificationTemplate**](FileSpecificationTemplate.html)| fileSpecificationTemplate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FileSpecificationTemplate**](FileSpecificationTemplate.html)
 
 <a name="putoutboundimporttemplate"></a>
 

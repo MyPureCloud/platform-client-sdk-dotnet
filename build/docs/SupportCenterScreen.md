@@ -7,8 +7,8 @@ title: SupportCenterScreen
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Type** | **string** | The type of the screen | [optional] |
-| **ModuleSettings** | [**List&lt;SupportCenterModuleSetting&gt;**](SupportCenterModuleSetting.html) | Module settings for the screen | [optional] |
+| **Type** | **string** | The type of the screen | |
+| **ModuleSettings** | [**List&lt;SupportCenterModuleSetting&gt;**](SupportCenterModuleSetting.html) | Module settings for the screen, valid modules for each screenType: Home: Search, Categories, TopViewedArticles; Category: Search, Categories; SearchResults: Search, Results; Article: Search, Article; | |
 {: class="table table-striped"}
 
 

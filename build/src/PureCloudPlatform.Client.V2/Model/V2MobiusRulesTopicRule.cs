@@ -117,7 +117,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InAlarm">InAlarm.</param>
         /// <param name="Action">Action.</param>
         /// <param name="DateCreated">DateCreated.</param>
-        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null)
+        /// <param name="SendExitingAlarmNotification">SendExitingAlarmNotification.</param>
+        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null, bool? SendExitingAlarmNotification = null)
         {
             this.Id = Id;
             this.UserId = UserId;
@@ -129,6 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InAlarm = InAlarm;
             this.Action = Action;
             this.DateCreated = DateCreated;
+            this.SendExitingAlarmNotification = SendExitingAlarmNotification;
             
         }
         
@@ -201,6 +203,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateCreated { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SendExitingAlarmNotification
+        /// </summary>
+        [DataMember(Name="sendExitingAlarmNotification", EmitDefaultValue=false)]
+        public bool? SendExitingAlarmNotification { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -220,6 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  SendExitingAlarmNotification: ").Append(SendExitingAlarmNotification).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -309,6 +320,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.SendExitingAlarmNotification == other.SendExitingAlarmNotification ||
+                    this.SendExitingAlarmNotification != null &&
+                    this.SendExitingAlarmNotification.Equals(other.SendExitingAlarmNotification)
                 );
         }
 
@@ -352,6 +368,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.SendExitingAlarmNotification != null)
+                    hash = hash * 59 + this.SendExitingAlarmNotification.GetHashCode();
 
                 return hash;
             }

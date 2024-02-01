@@ -207,6 +207,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessionid,
             
             /// <summary>
+            /// Enum Surfacingmethod for "surfacingMethod"
+            /// </summary>
+            [EnumMember(Value = "surfacingMethod")]
+            Surfacingmethod,
+            
+            /// <summary>
             /// Enum Userid for "userId"
             /// </summary>
             [EnumMember(Value = "userId")]

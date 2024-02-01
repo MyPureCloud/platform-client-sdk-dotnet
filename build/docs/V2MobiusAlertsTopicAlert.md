@@ -23,6 +23,7 @@ title: V2MobiusAlertsTopicAlert
 | **DateSnoozedUntil** | **DateTime?** |  | [optional] |
 | **Action** | **string** |  | [optional] |
 | **AlertSummary** | [**V2MobiusAlertsTopicAlertSummary**](V2MobiusAlertsTopicAlertSummary.html) |  | [optional] |
+| **SendExitingAlarmNotification** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

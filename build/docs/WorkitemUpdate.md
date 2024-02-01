@@ -28,6 +28,7 @@ title: WorkitemUpdate
 | **ExternalTag** | **string** | The external tag of the Workitem. | [optional] |
 | **SkillIds** | **List&lt;string&gt;** | The skill IDs of the Workitem. Must be valid UUIDs. | [optional] |
 | **LanguageId** | **string** | The ID of language of the Workitem. Must be a valid UUID. | [optional] |
+| **UtilizationLabelId** | **string** | The ID of the utilization label of the Workitem. Must be a valid UUID. | [optional] |
 | **PreferredAgentIds** | **List&lt;string&gt;** | The preferred agent IDs of the Workitem. Must be valid UUIDs. | [optional] |
 {: class="table table-striped"}
 

@@ -148,7 +148,7 @@ namespace Example
 
 <a name="getauthorizationdivisions"></a>
 
-## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
+## [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, string name = null)
 
 
 
@@ -188,13 +188,12 @@ namespace Example
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var objectCount = true;  // bool? | Include the count of objects contained in the division (optional)  (default to false)
-            var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
             var name = name_example;  // string | Search term to filter by division name (optional) 
 
             try
             { 
                 // Retrieve a list of all divisions defined for the organization
-                AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
+                AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -218,7 +217,6 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **objectCount** | **bool?**| Include the count of objects contained in the division | [optional] [default to false] |
-| **id** | [**List<string>**](string.html)| Optionally request specific divisions by their IDs | [optional]  |
 | **name** | **string**| Search term to filter by division name | [optional]  |
 {: class="table table-striped"}
 

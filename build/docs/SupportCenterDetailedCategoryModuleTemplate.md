@@ -7,8 +7,8 @@ title: SupportCenterDetailedCategoryModuleTemplate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Active** | **bool?** | Whether this template is active or not | [optional] |
-| **Sidebar** | [**SupportCenterDetailedCategoryModuleSidebar**](SupportCenterDetailedCategoryModuleSidebar.html) | Sidebar settings for the template | [optional] |
+| **Active** | **bool?** | Whether this template is active or not | |
+| **Sidebar** | [**SupportCenterDetailedCategoryModuleSidebar**](SupportCenterDetailedCategoryModuleSidebar.html) | Sidebar settings for the template | |
 {: class="table table-striped"}
 
 

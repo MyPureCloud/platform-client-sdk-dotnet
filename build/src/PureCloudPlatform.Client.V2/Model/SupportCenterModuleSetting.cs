@@ -81,11 +81,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Screen module type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterModuleSetting" /> class.
         /// </summary>
-        /// <param name="Type">Screen module type.</param>
-        /// <param name="Enabled">Whether or not knowledge portal (previously support center) screen module is enabled.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterModuleSetting() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterModuleSetting" /> class.
+        /// </summary>
+        /// <param name="Type">Screen module type (required).</param>
+        /// <param name="Enabled">Whether or not knowledge portal (previously support center) screen module is enabled (required).</param>
         /// <param name="CompactCategoryModuleTemplate">Compact category module template.</param>
         /// <param name="DetailedCategoryModuleTemplate">Detailed category module template.</param>
         public SupportCenterModuleSetting(TypeEnum? Type = null, bool? Enabled = null, SupportCenterCompactCategoryModuleTemplate CompactCategoryModuleTemplate = null, SupportCenterDetailedCategoryModuleTemplate DetailedCategoryModuleTemplate = null)

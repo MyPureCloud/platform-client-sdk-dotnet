@@ -80,10 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Certifications">Certifications.</param>
         /// <param name="Biography">Biography.</param>
         /// <param name="EmployerInfo">EmployerInfo.</param>
+        /// <param name="PreferredName">Preferred full name of the agent.</param>
         /// <param name="AcdAutoAnswer">acd auto answer.</param>
         /// <param name="LastTokenIssued">LastTokenIssued.</param>
         /// <param name="TrustUserDetails">TrustUserDetails.</param>
-        public TrustUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null, TrustUserDetails TrustUserDetails = null)
+        public TrustUser(string Name = null, Division Division = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, List<string> Certifications = null, Biography Biography = null, EmployerInfo EmployerInfo = null, string PreferredName = null, bool? AcdAutoAnswer = null, OAuthLastTokenIssued LastTokenIssued = null, TrustUserDetails TrustUserDetails = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -99,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Certifications = Certifications;
             this.Biography = Biography;
             this.EmployerInfo = EmployerInfo;
+            this.PreferredName = PreferredName;
             this.AcdAutoAnswer = AcdAutoAnswer;
             this.LastTokenIssued = LastTokenIssued;
             this.TrustUserDetails = TrustUserDetails;
@@ -239,6 +241,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="employerInfo", EmitDefaultValue=false)]
         public EmployerInfo EmployerInfo { get; set; }
+
+
+
+        /// <summary>
+        /// Preferred full name of the agent
+        /// </summary>
+        /// <value>Preferred full name of the agent</value>
+        [DataMember(Name="preferredName", EmitDefaultValue=false)]
+        public string PreferredName { get; set; }
 
 
 
@@ -436,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Certifications: ").Append(Certifications).Append("\n");
             sb.Append("  Biography: ").Append(Biography).Append("\n");
             sb.Append("  EmployerInfo: ").Append(EmployerInfo).Append("\n");
+            sb.Append("  PreferredName: ").Append(PreferredName).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("  IntegrationPresence: ").Append(IntegrationPresence).Append("\n");
@@ -579,6 +591,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmployerInfo == other.EmployerInfo ||
                     this.EmployerInfo != null &&
                     this.EmployerInfo.Equals(other.EmployerInfo)
+                ) &&
+                (
+                    this.PreferredName == other.PreferredName ||
+                    this.PreferredName != null &&
+                    this.PreferredName.Equals(other.PreferredName)
                 ) &&
                 (
                     this.RoutingStatus == other.RoutingStatus ||
@@ -738,6 +755,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmployerInfo != null)
                     hash = hash * 59 + this.EmployerInfo.GetHashCode();
+
+                if (this.PreferredName != null)
+                    hash = hash * 59 + this.PreferredName.GetHashCode();
 
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();

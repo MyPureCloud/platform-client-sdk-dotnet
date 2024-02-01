@@ -23,15 +23,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="UserId">User ID of the associated Genesys Cloud user..</param>
-        /// <param name="Source">Represents the source where the Presence was set. Some examples are: PURECLOUD, MICROSOFTTEAMS, ZOOMPHONE, etc..</param>
+        /// <param name="Source">Deprecated - The sourceID field should be used as a replacement..</param>
+        /// <param name="SourceId">The registered source ID from where the presence was set.</param>
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public UcUserPresence(string Name = null, string UserId = null, string Source = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
+        public UcUserPresence(string Name = null, string UserId = null, string Source = null, string SourceId = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.UserId = UserId;
             this.Source = Source;
+            this.SourceId = SourceId;
             this.PresenceDefinition = PresenceDefinition;
             this.Message = Message;
             this.ModifiedDate = ModifiedDate;
@@ -67,11 +69,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Represents the source where the Presence was set. Some examples are: PURECLOUD, MICROSOFTTEAMS, ZOOMPHONE, etc.
+        /// Deprecated - The sourceID field should be used as a replacement.
         /// </summary>
-        /// <value>Represents the source where the Presence was set. Some examples are: PURECLOUD, MICROSOFTTEAMS, ZOOMPHONE, etc.</value>
+        /// <value>Deprecated - The sourceID field should be used as a replacement.</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
+
+
+
+        /// <summary>
+        /// The registered source ID from where the presence was set
+        /// </summary>
+        /// <value>The registered source ID from where the presence was set</value>
+        [DataMember(Name="sourceId", EmitDefaultValue=false)]
+        public string SourceId { get; set; }
 
 
 
@@ -121,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  SourceId: ").Append(SourceId).Append("\n");
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Source.Equals(other.Source)
                 ) &&
                 (
+                    this.SourceId == other.SourceId ||
+                    this.SourceId != null &&
+                    this.SourceId.Equals(other.SourceId)
+                ) &&
+                (
                     this.PresenceDefinition == other.PresenceDefinition ||
                     this.PresenceDefinition != null &&
                     this.PresenceDefinition.Equals(other.PresenceDefinition)
@@ -229,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
+
+                if (this.SourceId != null)
+                    hash = hash * 59 + this.SourceId.GetHashCode();
 
                 if (this.PresenceDefinition != null)
                     hash = hash * 59 + this.PresenceDefinition.GetHashCode();

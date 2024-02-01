@@ -1159,7 +1159,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1178,7 +1177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -1463,30 +1461,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;EdgeMetrics&gt;</returns>
         
         ApiResponse<List<EdgeMetrics>> GetTelephonyProvidersEdgesMetricsWithHttpInfo (string edgeIds);
-
-        /// <summary>
-        /// Get outbound route
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>OutboundRoute</returns>
-        [Obsolete]
-        OutboundRoute GetTelephonyProvidersEdgesOutboundroute (string outboundRouteId);
-
-        /// <summary>
-        /// Get outbound route
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>ApiResponse of OutboundRoute</returns>
-        [Obsolete]
-        ApiResponse<OutboundRoute> GetTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId);
 
         /// <summary>
         /// Get outbound routes
@@ -1956,9 +1930,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>SiteEntityListing</returns>
         
-        SiteEntityListing GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
+        SiteEntityListing GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of Sites.
@@ -1974,9 +1949,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of SiteEntityListing</returns>
         
-        ApiResponse<SiteEntityListing> GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
+        ApiResponse<SiteEntityListing> GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Edge-compatible time zones
@@ -4397,7 +4373,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4416,7 +4391,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -4701,30 +4675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;EdgeMetrics&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<EdgeMetrics>>> GetTelephonyProvidersEdgesMetricsAsyncWithHttpInfo (string edgeIds);
-
-        /// <summary>
-        /// Get outbound route
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of OutboundRoute</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<OutboundRoute> GetTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId);
-
-        /// <summary>
-        /// Get outbound route
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId);
 
         /// <summary>
         /// Get outbound routes
@@ -5194,9 +5144,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of SiteEntityListing</returns>
         
-        System.Threading.Tasks.Task<SiteEntityListing> GetTelephonyProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
+        System.Threading.Tasks.Task<SiteEntityListing> GetTelephonyProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
         /// Get the list of Sites.
@@ -5212,9 +5163,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null);
+        System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Edge-compatible time zones
@@ -16068,7 +16020,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -16089,7 +16040,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -16189,7 +16139,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -16211,7 +16160,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a pageable list of basic extension pool objects filterable by query parameters. 
         /// This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
-        /// GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -18491,217 +18439,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<EdgeMetrics>>(localVarStatusCode,
                 localVarHeaders,
                 (List<EdgeMetrics>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EdgeMetrics>)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get outbound route 
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>OutboundRoute</returns>
-        [Obsolete]
-        public OutboundRoute GetTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
-        {
-             ApiResponse<OutboundRoute> localVarResponse = GetTelephonyProvidersEdgesOutboundrouteWithHttpInfo(outboundRouteId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get outbound route 
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>ApiResponse of OutboundRoute</returns>
-        [Obsolete]
-        public ApiResponse< OutboundRoute > GetTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId)
-        { 
-            // verify the required parameter 'outboundRouteId' is set
-            if (outboundRouteId == null)
-                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesOutboundroute");
-
-            var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", this.Configuration.ApiClient.ParameterToString(outboundRouteId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesOutboundroute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesOutboundroute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<OutboundRoute>(localVarStatusCode,
-                localVarHeaders,
-                (OutboundRoute) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRoute)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get outbound route 
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of OutboundRoute</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<OutboundRoute> GetTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId)
-        {
-             ApiResponse<OutboundRoute> localVarResponse = await GetTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo(outboundRouteId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get outbound route 
-        /// This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId)
-        { 
-            // verify the required parameter 'outboundRouteId' is set
-            if (outboundRouteId == null)
-                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesOutboundroute");
-            
-
-            var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (outboundRouteId != null) localVarPathParams.Add("outboundRouteId", this.Configuration.ApiClient.ParameterToString(outboundRouteId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesOutboundroute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesOutboundroute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<OutboundRoute>(localVarStatusCode,
-                localVarHeaders,
-                (OutboundRoute) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundRoute)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22292,11 +22029,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>SiteEntityListing</returns>
         
-        public SiteEntityListing GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
+        public SiteEntityListing GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
         {
-             ApiResponse<SiteEntityListing> localVarResponse = GetTelephonyProvidersEdgesSitesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
+             ApiResponse<SiteEntityListing> localVarResponse = GetTelephonyProvidersEdgesSitesWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed, expand);
              return localVarResponse.Data;
         }
 
@@ -22312,9 +22050,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>ApiResponse of SiteEntityListing</returns>
         
-        public ApiResponse< SiteEntityListing > GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
+        public ApiResponse< SiteEntityListing > GetTelephonyProvidersEdgesSitesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites";
@@ -22356,6 +22095,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (locationId != null) localVarQueryParams.Add(new Tuple<string, string>("location.id", this.Configuration.ApiClient.ParameterToString(locationId)));
             if (managed != null) localVarQueryParams.Add(new Tuple<string, string>("managed", this.Configuration.ApiClient.ParameterToString(managed)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -22411,11 +22151,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of SiteEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<SiteEntityListing> GetTelephonyProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
+        public async System.Threading.Tasks.Task<SiteEntityListing> GetTelephonyProvidersEdgesSitesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
         {
-             ApiResponse<SiteEntityListing> localVarResponse = await GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
+             ApiResponse<SiteEntityListing> localVarResponse = await GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed, expand);
              return localVarResponse.Data;
 
         }
@@ -22432,9 +22173,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="locationId">Location Id (optional)</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <returns>Task of ApiResponse (SiteEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges/sites";
@@ -22476,6 +22218,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (locationId != null) localVarQueryParams.Add(new Tuple<string, string>("location.id", this.Configuration.ApiClient.ParameterToString(locationId)));
             if (managed != null) localVarQueryParams.Add(new Tuple<string, string>("managed", this.Configuration.ApiClient.ParameterToString(managed)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

@@ -29,11 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QuestionGroupId">The ID of the question group (required).</param>
         /// <param name="MarkedNA">True if this question group is marked NA.</param>
+        /// <param name="SystemMarkedNA">If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false..</param>
         /// <param name="QuestionScores">The individual question scores.</param>
-        public AssessmentQuestionGroupScore(string QuestionGroupId = null, bool? MarkedNA = null, List<AssessmentQuestionScore> QuestionScores = null)
+        public AssessmentQuestionGroupScore(string QuestionGroupId = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, List<AssessmentQuestionScore> QuestionScores = null)
         {
             this.QuestionGroupId = QuestionGroupId;
             this.MarkedNA = MarkedNA;
+            this.SystemMarkedNA = SystemMarkedNA;
             this.QuestionScores = QuestionScores;
             
         }
@@ -73,6 +75,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if this question group is marked NA</value>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
+
+
+
+        /// <summary>
+        /// If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.
+        /// </summary>
+        /// <value>If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.</value>
+        [DataMember(Name="systemMarkedNA", EmitDefaultValue=false)]
+        public bool? SystemMarkedNA { get; set; }
 
 
 
@@ -187,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  MaxTotalScore: ").Append(MaxTotalScore).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  SystemMarkedNA: ").Append(SystemMarkedNA).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
             sb.Append("  MaxTotalCriticalScore: ").Append(MaxTotalCriticalScore).Append("\n");
             sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
@@ -257,6 +269,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA == other.MarkedNA ||
                     this.MarkedNA != null &&
                     this.MarkedNA.Equals(other.MarkedNA)
+                ) &&
+                (
+                    this.SystemMarkedNA == other.SystemMarkedNA ||
+                    this.SystemMarkedNA != null &&
+                    this.SystemMarkedNA.Equals(other.SystemMarkedNA)
                 ) &&
                 (
                     this.TotalCriticalScore == other.TotalCriticalScore ||
@@ -337,6 +354,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+
+                if (this.SystemMarkedNA != null)
+                    hash = hash * 59 + this.SystemMarkedNA.GetHashCode();
 
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();

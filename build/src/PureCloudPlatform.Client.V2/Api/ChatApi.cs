@@ -217,18 +217,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        ChatMessageEntityListing GetChatsRoomMessages (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get a room's message history
@@ -239,18 +233,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        ApiResponse<ChatMessageEntityListing> GetChatsRoomMessagesWithHttpInfo (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        ApiResponse<ChatMessageEntityListing> GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get Chat Settings.
@@ -283,18 +271,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        ChatMessageEntityListing GetChatsThreadMessages (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        ChatMessageEntityListing GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get history by thread
@@ -305,18 +287,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        ApiResponse<ChatMessageEntityListing> GetChatsThreadMessagesWithHttpInfo (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        ApiResponse<ChatMessageEntityListing> GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get messages by id(s) from a 1on1
@@ -355,18 +331,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ChatMessageResponse</returns>
         
-        ChatMessageResponse GetChatsUserMessages (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        ChatMessageResponse GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get 1on1 History between a user
@@ -377,18 +347,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ApiResponse of ChatMessageResponse</returns>
         
-        ApiResponse<ChatMessageResponse> GetChatsUserMessagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        ApiResponse<ChatMessageResponse> GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null);
+
+        /// <summary>
+        /// Get a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ChatUserSettings</returns>
+        
+        ChatUserSettings GetChatsUserSettings (string userId);
+
+        /// <summary>
+        /// Get a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of ChatUserSettings</returns>
+        
+        ApiResponse<ChatUserSettings> GetChatsUserSettingsWithHttpInfo (string userId);
 
         /// <summary>
         /// Set properties for a room
@@ -501,6 +491,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChatSendMessageResponse</returns>
         
         ApiResponse<ChatSendMessageResponse> PatchChatsUserMessageWithHttpInfo (string userId, string messageId, SendMessageBody body);
+
+        /// <summary>
+        /// Update a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>ChatUserSettings</returns>
+        
+        ChatUserSettings PatchChatsUserSettings (string userId, ChatUserSettings body);
+
+        /// <summary>
+        /// Update a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ChatUserSettings</returns>
+        
+        ApiResponse<ChatUserSettings> PatchChatsUserSettingsWithHttpInfo (string userId, ChatUserSettings body);
 
         /// <summary>
         /// Send a message to a room
@@ -869,18 +887,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get a room's message history
@@ -891,18 +903,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get Chat Settings.
@@ -935,18 +941,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get history by thread
@@ -957,18 +957,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get messages by id(s) from a 1on1
@@ -1007,18 +1001,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ChatMessageResponse</returns>
         
-        System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, string limit = null, string before = null, string after = null);
 
         /// <summary>
         /// Get 1on1 History between a user
@@ -1029,18 +1017,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null);
+
+        /// <summary>
+        /// Get a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ChatUserSettings</returns>
+        
+        System.Threading.Tasks.Task<ChatUserSettings> GetChatsUserSettingsAsync (string userId);
+
+        /// <summary>
+        /// Get a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (ChatUserSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ChatUserSettings>> GetChatsUserSettingsAsyncWithHttpInfo (string userId);
 
         /// <summary>
         /// Set properties for a room
@@ -1153,6 +1161,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChatSendMessageResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ChatSendMessageResponse>> PatchChatsUserMessageAsyncWithHttpInfo (string userId, string messageId, SendMessageBody body);
+
+        /// <summary>
+        /// Update a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ChatUserSettings</returns>
+        
+        System.Threading.Tasks.Task<ChatUserSettings> PatchChatsUserSettingsAsync (string userId, ChatUserSettings body);
+
+        /// <summary>
+        /// Update a user's chat settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ChatUserSettings)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ChatUserSettings>> PatchChatsUserSettingsAsyncWithHttpInfo (string userId, ChatUserSettings body);
 
         /// <summary>
         /// Send a message to a room
@@ -2977,20 +3013,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        public ChatMessageEntityListing GetChatsRoomMessages (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsRoomMessagesWithHttpInfo(roomJid, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsRoomMessagesWithHttpInfo(roomJid, limit, before, after);
              return localVarResponse.Data;
         }
 
@@ -3001,18 +3031,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        public ApiResponse< ChatMessageEntityListing > GetChatsRoomMessagesWithHttpInfo (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public ApiResponse< ChatMessageEntityListing > GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null)
         { 
             // verify the required parameter 'roomJid' is set
             if (roomJid == null)
@@ -3051,12 +3075,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
 
             // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
-            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
@@ -3110,20 +3128,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsRoomMessagesAsyncWithHttpInfo(roomJid, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsRoomMessagesAsyncWithHttpInfo(roomJid, limit, before, after);
              return localVarResponse.Data;
 
         }
@@ -3135,18 +3147,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null)
         { 
             // verify the required parameter 'roomJid' is set
             if (roomJid == null)
@@ -3186,12 +3192,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
 
             // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
-            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
@@ -3444,20 +3444,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        public ChatMessageEntityListing GetChatsThreadMessages (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public ChatMessageEntityListing GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsThreadMessagesWithHttpInfo(threadId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsThreadMessagesWithHttpInfo(threadId, limit, before, after);
              return localVarResponse.Data;
         }
 
@@ -3468,18 +3462,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        public ApiResponse< ChatMessageEntityListing > GetChatsThreadMessagesWithHttpInfo (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public ApiResponse< ChatMessageEntityListing > GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null)
         { 
             // verify the required parameter 'threadId' is set
             if (threadId == null)
@@ -3518,12 +3506,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (threadId != null) localVarPathParams.Add("threadId", this.Configuration.ApiClient.ParameterToString(threadId));
 
             // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
-            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
@@ -3577,20 +3559,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, string limit = null, string before = null, string after = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsThreadMessagesAsyncWithHttpInfo(threadId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsThreadMessagesAsyncWithHttpInfo(threadId, limit, before, after);
              return localVarResponse.Data;
 
         }
@@ -3602,18 +3578,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null)
         { 
             // verify the required parameter 'threadId' is set
             if (threadId == null)
@@ -3653,12 +3623,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (threadId != null) localVarPathParams.Add("threadId", this.Configuration.ApiClient.ParameterToString(threadId));
 
             // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
-            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
@@ -3941,20 +3905,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ChatMessageResponse</returns>
         
-        public ChatMessageResponse GetChatsUserMessages (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public ChatMessageResponse GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null)
         {
-             ApiResponse<ChatMessageResponse> localVarResponse = GetChatsUserMessagesWithHttpInfo(userId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+             ApiResponse<ChatMessageResponse> localVarResponse = GetChatsUserMessagesWithHttpInfo(userId, limit, before, after);
              return localVarResponse.Data;
         }
 
@@ -3965,18 +3923,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>ApiResponse of ChatMessageResponse</returns>
         
-        public ApiResponse< ChatMessageResponse > GetChatsUserMessagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public ApiResponse< ChatMessageResponse > GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -4015,12 +3967,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
-            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
@@ -4074,20 +4020,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ChatMessageResponse</returns>
         
-        public async System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, string limit = null, string before = null, string after = null)
         {
-             ApiResponse<ChatMessageResponse> localVarResponse = await GetChatsUserMessagesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+             ApiResponse<ChatMessageResponse> localVarResponse = await GetChatsUserMessagesAsyncWithHttpInfo(userId, limit, before, after);
              return localVarResponse.Data;
 
         }
@@ -4099,18 +4039,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
-        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
-        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">variable name requested to sort by (optional)</param>
-        /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">next page token (optional)</param>
-        /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -4150,12 +4084,6 @@ namespace PureCloudPlatform.Client.V2.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
-            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
-            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
@@ -4197,6 +4125,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatMessageResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ChatMessageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatMessageResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a user's chat settings 
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ChatUserSettings</returns>
+        
+        public ChatUserSettings GetChatsUserSettings (string userId)
+        {
+             ApiResponse<ChatUserSettings> localVarResponse = GetChatsUserSettingsWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a user's chat settings 
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of ChatUserSettings</returns>
+        
+        public ApiResponse< ChatUserSettings > GetChatsUserSettingsWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUserSettings");
+
+            var localVarPath = "/api/v2/chats/users/{userId}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUserSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUserSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatUserSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatUserSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatUserSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a user's chat settings 
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ChatUserSettings</returns>
+        
+        public async System.Threading.Tasks.Task<ChatUserSettings> GetChatsUserSettingsAsync (string userId)
+        {
+             ApiResponse<ChatUserSettings> localVarResponse = await GetChatsUserSettingsAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a user's chat settings 
+        /// 
+        /// GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (ChatUserSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ChatUserSettings>> GetChatsUserSettingsAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUserSettings");
+            
+
+            var localVarPath = "/api/v2/chats/users/{userId}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUserSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUserSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatUserSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatUserSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatUserSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5156,6 +5299,244 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatSendMessageResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ChatSendMessageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSendMessageResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a user's chat settings 
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>ChatUserSettings</returns>
+        
+        public ChatUserSettings PatchChatsUserSettings (string userId, ChatUserSettings body)
+        {
+             ApiResponse<ChatUserSettings> localVarResponse = PatchChatsUserSettingsWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a user's chat settings 
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ChatUserSettings</returns>
+        
+        public ApiResponse< ChatUserSettings > PatchChatsUserSettingsWithHttpInfo (string userId, ChatUserSettings body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->PatchChatsUserSettings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUserSettings");
+
+            var localVarPath = "/api/v2/chats/users/{userId}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsUserSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsUserSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatUserSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatUserSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatUserSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a user's chat settings 
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ChatUserSettings</returns>
+        
+        public async System.Threading.Tasks.Task<ChatUserSettings> PatchChatsUserSettingsAsync (string userId, ChatUserSettings body)
+        {
+             ApiResponse<ChatUserSettings> localVarResponse = await PatchChatsUserSettingsAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a user's chat settings 
+        /// 
+        /// PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ChatUserSettings)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ChatUserSettings>> PatchChatsUserSettingsAsyncWithHttpInfo (string userId, ChatUserSettings body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->PatchChatsUserSettings");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUserSettings");
+            
+
+            var localVarPath = "/api/v2/chats/users/{userId}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsUserSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsUserSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatUserSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatUserSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatUserSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

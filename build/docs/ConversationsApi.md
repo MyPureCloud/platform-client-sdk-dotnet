@@ -166,6 +166,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationParticipantReplaceExternal**](ConversationsApi.html#postconversationparticipantreplaceexternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
 | [**PostConversationParticipantReplaceQueue**](ConversationsApi.html#postconversationparticipantreplacequeue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
 | [**PostConversationParticipantSecureivrsessions**](ConversationsApi.html#postconversationparticipantsecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
+| [**PostConversationSummaryFeedback**](ConversationsApi.html#postconversationsummaryfeedback) | **Post** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Submit feedback for the summary. |
 | [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **Post** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantBarge**](ConversationsApi.html#postconversationscallparticipantbarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
 | [**PostConversationsCallParticipantCoach**](ConversationsApi.html#postconversationscallparticipantcoach) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
@@ -215,7 +216,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagesInboundOpen**](ConversationsApi.html#postconversationsmessagesinboundopen) | **Post** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
 | [**PostConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#postconversationsmessagingintegrationsfacebook) | **Post** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
 | [**PostConversationsMessagingIntegrationsInstagram**](ConversationsApi.html#postconversationsmessagingintegrationsinstagram) | **Post** /api/v2/conversations/messaging/integrations/instagram | Create Instagram Integration |
-| [**PostConversationsMessagingIntegrationsLine**](ConversationsApi.html#postconversationsmessagingintegrationsline) | **Post** /api/v2/conversations/messaging/integrations/line | Create a LINE messenger Integration |
+| [**PostConversationsMessagingIntegrationsLine**](ConversationsApi.html#postconversationsmessagingintegrationsline) | **Post** /api/v2/conversations/messaging/integrations/line | Create a LINE messenger Integration (Deprecated) |
 | [**PostConversationsMessagingIntegrationsOpen**](ConversationsApi.html#postconversationsmessagingintegrationsopen) | **Post** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **Post** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **Post** /api/v2/conversations/messaging/integrations/whatsapp | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
@@ -10564,6 +10565,72 @@ namespace Example
 
 [**SecureSession**](SecureSession.html)
 
+<a name="postconversationsummaryfeedback"></a>
+
+## void PostConversationSummaryFeedback (string conversationId, string summaryId, FeedbackAddRequest body = null)
+
+
+
+Submit feedback for the summary.
+
+Requires ALL permissions: 
+
+* conversation:summaryFeedback:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationSummaryFeedbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var summaryId = summaryId_example;  // string | Summary ID
+            var body = new FeedbackAddRequest(); // FeedbackAddRequest |  (optional) 
+
+            try
+            { 
+                // Submit feedback for the summary.
+                apiInstance.PostConversationSummaryFeedback(conversationId, summaryId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationSummaryFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **summaryId** | **string**| Summary ID |  |
+| **body** | [**FeedbackAddRequest**](FeedbackAddRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postconversationscall"></a>
 
 ## [**Conversation**](Conversation.html) PostConversationsCall (string conversationId, CallCommand body)
@@ -13791,9 +13858,11 @@ namespace Example
 
 ## [**LineIntegration**](LineIntegration.html) PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
+Create a LINE messenger Integration (Deprecated)
 
-Create a LINE messenger Integration
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 Requires ALL permissions: 
 
@@ -13825,7 +13894,7 @@ namespace Example
 
             try
             { 
-                // Create a LINE messenger Integration
+                // Create a LINE messenger Integration (Deprecated)
                 LineIntegration result = apiInstance.PostConversationsMessagingIntegrationsLine(body);
                 Debug.WriteLine(result);
             }

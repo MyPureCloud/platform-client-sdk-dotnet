@@ -51,11 +51,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Type of the message</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterCustomMessage" /> class.
         /// </summary>
-        /// <param name="DefaultValue">Default value for the message.</param>
-        /// <param name="Type">Type of the message.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterCustomMessage() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterCustomMessage" /> class.
+        /// </summary>
+        /// <param name="DefaultValue">Default value for the message (required).</param>
+        /// <param name="Type">Type of the message (required).</param>
         public SupportCenterCustomMessage(string DefaultValue = null, TypeEnum? Type = null)
         {
             this.DefaultValue = DefaultValue;

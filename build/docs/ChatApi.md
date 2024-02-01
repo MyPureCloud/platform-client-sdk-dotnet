@@ -19,10 +19,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetChatsThreadMessages**](ChatApi.html#getchatsthreadmessages) | **Get** /api/v2/chats/threads/{threadId}/messages | Get history by thread |
 | [**GetChatsUserMessage**](ChatApi.html#getchatsusermessage) | **Get** /api/v2/chats/users/{userId}/messages/{messageIds} | Get messages by id(s) from a 1on1 |
 | [**GetChatsUserMessages**](ChatApi.html#getchatsusermessages) | **Get** /api/v2/chats/users/{userId}/messages | Get 1on1 History between a user |
+| [**GetChatsUserSettings**](ChatApi.html#getchatsusersettings) | **Get** /api/v2/chats/users/{userId}/settings | Get a user&#39;s chat settings |
 | [**PatchChatsRoom**](ChatApi.html#patchchatsroom) | **Patch** /api/v2/chats/rooms/{roomJid} | Set properties for a room |
 | [**PatchChatsRoomMessage**](ChatApi.html#patchchatsroommessage) | **Patch** /api/v2/chats/rooms/{roomJid}/messages/{messageId} | Edit a message in a room |
 | [**PatchChatsSettings**](ChatApi.html#patchchatssettings) | **Patch** /api/v2/chats/settings | Patch Chat Settings. |
 | [**PatchChatsUserMessage**](ChatApi.html#patchchatsusermessage) | **Patch** /api/v2/chats/users/{userId}/messages/{messageId} | Edit a message to a user |
+| [**PatchChatsUserSettings**](ChatApi.html#patchchatsusersettings) | **Patch** /api/v2/chats/users/{userId}/settings | Update a user&#39;s chat settings |
 | [**PostChatsRoomMessages**](ChatApi.html#postchatsroommessages) | **Post** /api/v2/chats/rooms/{roomJid}/messages | Send a message to a room |
 | [**PostChatsRoomParticipant**](ChatApi.html#postchatsroomparticipant) | **Post** /api/v2/chats/rooms/{roomJid}/participants/{userId} | Join a room |
 | [**PostChatsRoomPinnedmessages**](ChatApi.html#postchatsroompinnedmessages) | **Post** /api/v2/chats/rooms/{roomJid}/pinnedmessages | Add pinned messages for a room, up to a maximum of 5 pinned messages |
@@ -502,7 +504,7 @@ namespace Example
 
 <a name="getchatsroommessages"></a>
 
-## [**ChatMessageEntityListing**](ChatMessageEntityListing.html) GetChatsRoomMessages (string roomJid, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+## [**ChatMessageEntityListing**](ChatMessageEntityListing.html) GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null)
 
 
 
@@ -538,12 +540,6 @@ namespace Example
 
             var apiInstance = new ChatApi();
             var roomJid = roomJid_example;  // string | roomJid
-            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            var nextPage = nextPage_example;  // string | next page token (optional) 
-            var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var limit = limit_example;  // string | The maximum number of messages to retrieve (optional) 
             var before = before_example;  // string | The cutoff date for messages to retrieve (optional) 
             var after = after_example;  // string | The beginning date for messages to retrieve (optional) 
@@ -551,7 +547,7 @@ namespace Example
             try
             { 
                 // Get a room's message history
-                ChatMessageEntityListing result = apiInstance.GetChatsRoomMessages(roomJid, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+                ChatMessageEntityListing result = apiInstance.GetChatsRoomMessages(roomJid, limit, before, after);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -569,12 +565,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
-| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
-| **nextPage** | **string**| next page token | [optional]  |
-| **previousPage** | **string**| Previous page token | [optional]  |
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
@@ -645,7 +635,7 @@ This endpoint does require any parameters.
 
 <a name="getchatsthreadmessages"></a>
 
-## [**ChatMessageEntityListing**](ChatMessageEntityListing.html) GetChatsThreadMessages (string threadId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+## [**ChatMessageEntityListing**](ChatMessageEntityListing.html) GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null)
 
 
 
@@ -681,12 +671,6 @@ namespace Example
 
             var apiInstance = new ChatApi();
             var threadId = threadId_example;  // string | threadId
-            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            var nextPage = nextPage_example;  // string | next page token (optional) 
-            var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var limit = limit_example;  // string | The maximum number of messages to retrieve (optional) 
             var before = before_example;  // string | The cutoff date for messages to retrieve (optional) 
             var after = after_example;  // string | The beginning date for messages to retrieve (optional) 
@@ -694,7 +678,7 @@ namespace Example
             try
             { 
                 // Get history by thread
-                ChatMessageEntityListing result = apiInstance.GetChatsThreadMessages(threadId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+                ChatMessageEntityListing result = apiInstance.GetChatsThreadMessages(threadId, limit, before, after);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -712,12 +696,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **threadId** | **string**| threadId |  |
-| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
-| **nextPage** | **string**| next page token | [optional]  |
-| **previousPage** | **string**| Previous page token | [optional]  |
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
@@ -797,7 +775,7 @@ namespace Example
 
 <a name="getchatsusermessages"></a>
 
-## [**ChatMessageResponse**](ChatMessageResponse.html) GetChatsUserMessages (string userId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string limit = null, string before = null, string after = null)
+## [**ChatMessageResponse**](ChatMessageResponse.html) GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null)
 
 
 
@@ -833,12 +811,6 @@ namespace Example
 
             var apiInstance = new ChatApi();
             var userId = userId_example;  // string | userId
-            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
-            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
-            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
-            var nextPage = nextPage_example;  // string | next page token (optional) 
-            var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var limit = limit_example;  // string | The maximum number of messages to retrieve (optional) 
             var before = before_example;  // string | The cutoff date for messages to retrieve (optional) 
             var after = after_example;  // string | The beginning date for messages to retrieve (optional) 
@@ -846,7 +818,7 @@ namespace Example
             try
             { 
                 // Get 1on1 History between a user
-                ChatMessageResponse result = apiInstance.GetChatsUserMessages(userId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, limit, before, after);
+                ChatMessageResponse result = apiInstance.GetChatsUserMessages(userId, limit, before, after);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -864,12 +836,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
-| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
-| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
-| **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
-| **nextPage** | **string**| next page token | [optional]  |
-| **previousPage** | **string**| Previous page token | [optional]  |
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
@@ -878,6 +844,72 @@ namespace Example
 ### Return type
 
 [**ChatMessageResponse**](ChatMessageResponse.html)
+
+<a name="getchatsusersettings"></a>
+
+## [**ChatUserSettings**](ChatUserSettings.html) GetChatsUserSettings (string userId)
+
+
+
+Get a user's chat settings
+
+GetChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* chat:usersettings:view
+* chat:setting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetChatsUserSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get a user's chat settings
+                ChatUserSettings result = apiInstance.GetChatsUserSettings(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.GetChatsUserSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings.html)
 
 <a name="patchchatsroom"></a>
 
@@ -1148,6 +1180,74 @@ namespace Example
 ### Return type
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse.html)
+
+<a name="patchchatsusersettings"></a>
+
+## [**ChatUserSettings**](ChatUserSettings.html) PatchChatsUserSettings (string userId, ChatUserSettings body)
+
+
+
+Update a user's chat settings
+
+PatchChatsUserSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* chat:usersettings:edit
+* chat:setting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchChatsUserSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var userId = userId_example;  // string | User ID
+            var body = new ChatUserSettings(); // ChatUserSettings | 
+
+            try
+            { 
+                // Update a user's chat settings
+                ChatUserSettings result = apiInstance.PatchChatsUserSettings(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.PatchChatsUserSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**ChatUserSettings**](ChatUserSettings.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings.html)
 
 <a name="postchatsroommessages"></a>
 

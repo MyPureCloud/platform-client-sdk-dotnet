@@ -459,6 +459,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundDnclistPhonenumbersWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
+        /// Delete File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns></returns>
+        
+        void DeleteOutboundFilespecificationtemplate (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Delete File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteOutboundFilespecificationtemplateWithHttpInfo (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Delete multiple file specification templates.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns></returns>
+        
+        void DeleteOutboundFilespecificationtemplatesBulk (List<string> id);
+
+        /// <summary>
+        /// Delete multiple file specification templates.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteOutboundFilespecificationtemplatesBulkWithHttpInfo (List<string> id);
+
+        /// <summary>
         /// Delete Import Template
         /// </summary>
         /// <remarks>
@@ -1935,6 +1983,66 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DialerEventEntityListing> GetOutboundEventsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
+        /// Get File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>FileSpecificationTemplate</returns>
+        
+        FileSpecificationTemplate GetOutboundFilespecificationtemplate (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Get File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>ApiResponse of FileSpecificationTemplate</returns>
+        
+        ApiResponse<FileSpecificationTemplate> GetOutboundFilespecificationtemplateWithHttpInfo (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Query File Specification Templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>FileSpecificationTemplateEntityListing</returns>
+        
+        FileSpecificationTemplateEntityListing GetOutboundFilespecificationtemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query File Specification Templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of FileSpecificationTemplateEntityListing</returns>
+        
+        ApiResponse<FileSpecificationTemplateEntityListing> GetOutboundFilespecificationtemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
         /// Get Import Template
         /// </summary>
         /// <remarks>
@@ -3101,6 +3209,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ContactListTemplateEntityListing> PostOutboundContactlisttemplatesBulkAddWithHttpInfo (List<ContactListTemplate> body);
 
         /// <summary>
+        /// Get multiple contact list templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>ContactListTemplateEntityListing</returns>
+        
+        ContactListTemplateEntityListing PostOutboundContactlisttemplatesBulkRetrieve (ContactListTemplateBulkRetrieveBody body);
+
+        /// <summary>
+        /// Get multiple contact list templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>ApiResponse of ContactListTemplateEntityListing</returns>
+        
+        ApiResponse<ContactListTemplateEntityListing> PostOutboundContactlisttemplatesBulkRetrieveWithHttpInfo (ContactListTemplateBulkRetrieveBody body);
+
+        /// <summary>
         /// Add phone numbers to a Dialer DNC list.
         /// </summary>
         /// <remarks>
@@ -3249,6 +3381,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DncList</returns>
         
         ApiResponse<DncList> PostOutboundDnclistsWithHttpInfo (DncListCreate body);
+
+        /// <summary>
+        /// Create File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>FileSpecificationTemplate</returns>
+        
+        FileSpecificationTemplate PostOutboundFilespecificationtemplates (FileSpecificationTemplate body);
+
+        /// <summary>
+        /// Create File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>ApiResponse of FileSpecificationTemplate</returns>
+        
+        ApiResponse<FileSpecificationTemplate> PostOutboundFilespecificationtemplatesWithHttpInfo (FileSpecificationTemplate body);
 
         /// <summary>
         /// Create Import Template
@@ -3709,6 +3865,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DncList</returns>
         
         ApiResponse<DncList> PutOutboundDnclistWithHttpInfo (string dncListId, DncList body);
+
+        /// <summary>
+        /// Update File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>FileSpecificationTemplate</returns>
+        
+        FileSpecificationTemplate PutOutboundFilespecificationtemplate (string fileSpecificationTemplateId, FileSpecificationTemplate body);
+
+        /// <summary>
+        /// Update File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>ApiResponse of FileSpecificationTemplate</returns>
+        
+        ApiResponse<FileSpecificationTemplate> PutOutboundFilespecificationtemplateWithHttpInfo (string fileSpecificationTemplateId, FileSpecificationTemplate body);
 
         /// <summary>
         /// Update Import Template
@@ -4387,6 +4569,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
+        /// Delete File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteOutboundFilespecificationtemplateAsync (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Delete File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundFilespecificationtemplateAsyncWithHttpInfo (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Delete multiple file specification templates.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteOutboundFilespecificationtemplatesBulkAsync (List<string> id);
+
+        /// <summary>
+        /// Delete multiple file specification templates.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundFilespecificationtemplatesBulkAsyncWithHttpInfo (List<string> id);
 
         /// <summary>
         /// Delete Import Template
@@ -5865,6 +6095,66 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DialerEventEntityListing>> GetOutboundEventsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
+        /// Get File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of FileSpecificationTemplate</returns>
+        
+        System.Threading.Tasks.Task<FileSpecificationTemplate> GetOutboundFilespecificationtemplateAsync (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Get File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplate)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplate>> GetOutboundFilespecificationtemplateAsyncWithHttpInfo (string fileSpecificationTemplateId);
+
+        /// <summary>
+        /// Query File Specification Templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of FileSpecificationTemplateEntityListing</returns>
+        
+        System.Threading.Tasks.Task<FileSpecificationTemplateEntityListing> GetOutboundFilespecificationtemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query File Specification Templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplateEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplateEntityListing>> GetOutboundFilespecificationtemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
         /// Get Import Template
         /// </summary>
         /// <remarks>
@@ -7031,6 +7321,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> PostOutboundContactlisttemplatesBulkAddAsyncWithHttpInfo (List<ContactListTemplate> body);
 
         /// <summary>
+        /// Get multiple contact list templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>Task of ContactListTemplateEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ContactListTemplateEntityListing> PostOutboundContactlisttemplatesBulkRetrieveAsync (ContactListTemplateBulkRetrieveBody body);
+
+        /// <summary>
+        /// Get multiple contact list templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>Task of ApiResponse (ContactListTemplateEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> PostOutboundContactlisttemplatesBulkRetrieveAsyncWithHttpInfo (ContactListTemplateBulkRetrieveBody body);
+
+        /// <summary>
         /// Add phone numbers to a Dialer DNC list.
         /// </summary>
         /// <remarks>
@@ -7179,6 +7493,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DncList)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DncList>> PostOutboundDnclistsAsyncWithHttpInfo (DncListCreate body);
+
+        /// <summary>
+        /// Create File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>Task of FileSpecificationTemplate</returns>
+        
+        System.Threading.Tasks.Task<FileSpecificationTemplate> PostOutboundFilespecificationtemplatesAsync (FileSpecificationTemplate body);
+
+        /// <summary>
+        /// Create File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplate)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplate>> PostOutboundFilespecificationtemplatesAsyncWithHttpInfo (FileSpecificationTemplate body);
 
         /// <summary>
         /// Create Import Template
@@ -7639,6 +7977,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DncList)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DncList>> PutOutboundDnclistAsyncWithHttpInfo (string dncListId, DncList body);
+
+        /// <summary>
+        /// Update File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>Task of FileSpecificationTemplate</returns>
+        
+        System.Threading.Tasks.Task<FileSpecificationTemplate> PutOutboundFilespecificationtemplateAsync (string fileSpecificationTemplateId, FileSpecificationTemplate body);
+
+        /// <summary>
+        /// Update File Specification Template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplate)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplate>> PutOutboundFilespecificationtemplateAsyncWithHttpInfo (string fileSpecificationTemplateId, FileSpecificationTemplate body);
 
         /// <summary>
         /// Update Import Template
@@ -11762,6 +12126,424 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistPhonenumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistPhonenumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns></returns>
+        
+        public void DeleteOutboundFilespecificationtemplate (string fileSpecificationTemplateId)
+        {
+             DeleteOutboundFilespecificationtemplateWithHttpInfo(fileSpecificationTemplateId);
+        }
+
+        /// <summary>
+        /// Delete File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteOutboundFilespecificationtemplateWithHttpInfo (string fileSpecificationTemplateId)
+        { 
+            // verify the required parameter 'fileSpecificationTemplateId' is set
+            if (fileSpecificationTemplateId == null)
+                throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->DeleteOutboundFilespecificationtemplate");
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (fileSpecificationTemplateId != null) localVarPathParams.Add("fileSpecificationTemplateId", this.Configuration.ApiClient.ParameterToString(fileSpecificationTemplateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteOutboundFilespecificationtemplateAsync (string fileSpecificationTemplateId)
+        {
+             await DeleteOutboundFilespecificationtemplateAsyncWithHttpInfo(fileSpecificationTemplateId);
+
+        }
+
+        /// <summary>
+        /// Delete File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundFilespecificationtemplateAsyncWithHttpInfo (string fileSpecificationTemplateId)
+        { 
+            // verify the required parameter 'fileSpecificationTemplateId' is set
+            if (fileSpecificationTemplateId == null)
+                throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->DeleteOutboundFilespecificationtemplate");
+            
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (fileSpecificationTemplateId != null) localVarPathParams.Add("fileSpecificationTemplateId", this.Configuration.ApiClient.ParameterToString(fileSpecificationTemplateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete multiple file specification templates. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns></returns>
+        
+        public void DeleteOutboundFilespecificationtemplatesBulk (List<string> id)
+        {
+             DeleteOutboundFilespecificationtemplatesBulkWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Delete multiple file specification templates. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteOutboundFilespecificationtemplatesBulkWithHttpInfo (List<string> id)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundFilespecificationtemplatesBulk");
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplatesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplatesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete multiple file specification templates. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteOutboundFilespecificationtemplatesBulkAsync (List<string> id)
+        {
+             await DeleteOutboundFilespecificationtemplatesBulkAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Delete multiple file specification templates. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">File Specification template id(s) to delete</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundFilespecificationtemplatesBulkAsyncWithHttpInfo (List<string> id)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundFilespecificationtemplatesBulk");
+            
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplatesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundFilespecificationtemplatesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -23167,6 +23949,457 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>FileSpecificationTemplate</returns>
+        
+        public FileSpecificationTemplate GetOutboundFilespecificationtemplate (string fileSpecificationTemplateId)
+        {
+             ApiResponse<FileSpecificationTemplate> localVarResponse = GetOutboundFilespecificationtemplateWithHttpInfo(fileSpecificationTemplateId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>ApiResponse of FileSpecificationTemplate</returns>
+        
+        public ApiResponse< FileSpecificationTemplate > GetOutboundFilespecificationtemplateWithHttpInfo (string fileSpecificationTemplateId)
+        { 
+            // verify the required parameter 'fileSpecificationTemplateId' is set
+            if (fileSpecificationTemplateId == null)
+                throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->GetOutboundFilespecificationtemplate");
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (fileSpecificationTemplateId != null) localVarPathParams.Add("fileSpecificationTemplateId", this.Configuration.ApiClient.ParameterToString(fileSpecificationTemplateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplate>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of FileSpecificationTemplate</returns>
+        
+        public async System.Threading.Tasks.Task<FileSpecificationTemplate> GetOutboundFilespecificationtemplateAsync (string fileSpecificationTemplateId)
+        {
+             ApiResponse<FileSpecificationTemplate> localVarResponse = await GetOutboundFilespecificationtemplateAsyncWithHttpInfo(fileSpecificationTemplateId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplate)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplate>> GetOutboundFilespecificationtemplateAsyncWithHttpInfo (string fileSpecificationTemplateId)
+        { 
+            // verify the required parameter 'fileSpecificationTemplateId' is set
+            if (fileSpecificationTemplateId == null)
+                throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->GetOutboundFilespecificationtemplate");
+            
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (fileSpecificationTemplateId != null) localVarPathParams.Add("fileSpecificationTemplateId", this.Configuration.ApiClient.ParameterToString(fileSpecificationTemplateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplate>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query File Specification Templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>FileSpecificationTemplateEntityListing</returns>
+        
+        public FileSpecificationTemplateEntityListing GetOutboundFilespecificationtemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<FileSpecificationTemplateEntityListing> localVarResponse = GetOutboundFilespecificationtemplatesWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query File Specification Templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of FileSpecificationTemplateEntityListing</returns>
+        
+        public ApiResponse< FileSpecificationTemplateEntityListing > GetOutboundFilespecificationtemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (allowEmptyResult != null) localVarQueryParams.Add(new Tuple<string, string>("allowEmptyResult", this.Configuration.ApiClient.ParameterToString(allowEmptyResult)));
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplates: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplateEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplateEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplateEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query File Specification Templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of FileSpecificationTemplateEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<FileSpecificationTemplateEntityListing> GetOutboundFilespecificationtemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<FileSpecificationTemplateEntityListing> localVarResponse = await GetOutboundFilespecificationtemplatesAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query File Specification Templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplateEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplateEntityListing>> GetOutboundFilespecificationtemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (allowEmptyResult != null) localVarQueryParams.Add(new Tuple<string, string>("allowEmptyResult", this.Configuration.ApiClient.ParameterToString(allowEmptyResult)));
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplates: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundFilespecificationtemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplateEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplateEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplateEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get Import Template 
         /// 
         /// </summary>
@@ -33065,6 +34298,227 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get multiple contact list templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>ContactListTemplateEntityListing</returns>
+        
+        public ContactListTemplateEntityListing PostOutboundContactlisttemplatesBulkRetrieve (ContactListTemplateBulkRetrieveBody body)
+        {
+             ApiResponse<ContactListTemplateEntityListing> localVarResponse = PostOutboundContactlisttemplatesBulkRetrieveWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get multiple contact list templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>ApiResponse of ContactListTemplateEntityListing</returns>
+        
+        public ApiResponse< ContactListTemplateEntityListing > PostOutboundContactlisttemplatesBulkRetrieveWithHttpInfo (ContactListTemplateBulkRetrieveBody body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplatesBulkRetrieve");
+
+            var localVarPath = "/api/v2/outbound/contactlisttemplates/bulk/retrieve";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlisttemplatesBulkRetrieve: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlisttemplatesBulkRetrieve: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListTemplateEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListTemplateEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListTemplateEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get multiple contact list templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>Task of ContactListTemplateEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ContactListTemplateEntityListing> PostOutboundContactlisttemplatesBulkRetrieveAsync (ContactListTemplateBulkRetrieveBody body)
+        {
+             ApiResponse<ContactListTemplateEntityListing> localVarResponse = await PostOutboundContactlisttemplatesBulkRetrieveAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get multiple contact list templates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">contact list templates to get</param>
+        /// <returns>Task of ApiResponse (ContactListTemplateEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> PostOutboundContactlisttemplatesBulkRetrieveAsyncWithHttpInfo (ContactListTemplateBulkRetrieveBody body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplatesBulkRetrieve");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlisttemplates/bulk/retrieve";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlisttemplatesBulkRetrieve: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlisttemplatesBulkRetrieve: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListTemplateEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListTemplateEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListTemplateEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Add phone numbers to a Dialer DNC list. 
         /// 
         /// </summary>
@@ -34390,6 +35844,227 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarHeaders,
                 (DncList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>FileSpecificationTemplate</returns>
+        
+        public FileSpecificationTemplate PostOutboundFilespecificationtemplates (FileSpecificationTemplate body)
+        {
+             ApiResponse<FileSpecificationTemplate> localVarResponse = PostOutboundFilespecificationtemplatesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>ApiResponse of FileSpecificationTemplate</returns>
+        
+        public ApiResponse< FileSpecificationTemplate > PostOutboundFilespecificationtemplatesWithHttpInfo (FileSpecificationTemplate body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundFilespecificationtemplates");
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundFilespecificationtemplates: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundFilespecificationtemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplate>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>Task of FileSpecificationTemplate</returns>
+        
+        public async System.Threading.Tasks.Task<FileSpecificationTemplate> PostOutboundFilespecificationtemplatesAsync (FileSpecificationTemplate body)
+        {
+             ApiResponse<FileSpecificationTemplate> localVarResponse = await PostOutboundFilespecificationtemplatesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">FileSpecificationTemplate</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplate)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplate>> PostOutboundFilespecificationtemplatesAsyncWithHttpInfo (FileSpecificationTemplate body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundFilespecificationtemplates");
+            
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundFilespecificationtemplates: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundFilespecificationtemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplate>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplate)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -38550,6 +40225,240 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DncList>(localVarStatusCode,
                 localVarHeaders,
                 (DncList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncList)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>FileSpecificationTemplate</returns>
+        
+        public FileSpecificationTemplate PutOutboundFilespecificationtemplate (string fileSpecificationTemplateId, FileSpecificationTemplate body)
+        {
+             ApiResponse<FileSpecificationTemplate> localVarResponse = PutOutboundFilespecificationtemplateWithHttpInfo(fileSpecificationTemplateId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>ApiResponse of FileSpecificationTemplate</returns>
+        
+        public ApiResponse< FileSpecificationTemplate > PutOutboundFilespecificationtemplateWithHttpInfo (string fileSpecificationTemplateId, FileSpecificationTemplate body)
+        { 
+            // verify the required parameter 'fileSpecificationTemplateId' is set
+            if (fileSpecificationTemplateId == null)
+                throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->PutOutboundFilespecificationtemplate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundFilespecificationtemplate");
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (fileSpecificationTemplateId != null) localVarPathParams.Add("fileSpecificationTemplateId", this.Configuration.ApiClient.ParameterToString(fileSpecificationTemplateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundFilespecificationtemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundFilespecificationtemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplate>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>Task of FileSpecificationTemplate</returns>
+        
+        public async System.Threading.Tasks.Task<FileSpecificationTemplate> PutOutboundFilespecificationtemplateAsync (string fileSpecificationTemplateId, FileSpecificationTemplate body)
+        {
+             ApiResponse<FileSpecificationTemplate> localVarResponse = await PutOutboundFilespecificationtemplateAsyncWithHttpInfo(fileSpecificationTemplateId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update File Specification Template 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileSpecificationTemplateId">File Specification Template ID</param>
+        /// <param name="body">fileSpecificationTemplate</param>
+        /// <returns>Task of ApiResponse (FileSpecificationTemplate)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplate>> PutOutboundFilespecificationtemplateAsyncWithHttpInfo (string fileSpecificationTemplateId, FileSpecificationTemplate body)
+        { 
+            // verify the required parameter 'fileSpecificationTemplateId' is set
+            if (fileSpecificationTemplateId == null)
+                throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->PutOutboundFilespecificationtemplate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundFilespecificationtemplate");
+            
+
+            var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (fileSpecificationTemplateId != null) localVarPathParams.Add("fileSpecificationTemplateId", this.Configuration.ApiClient.ParameterToString(fileSpecificationTemplateId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundFilespecificationtemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundFilespecificationtemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FileSpecificationTemplate>(localVarStatusCode,
+                localVarHeaders,
+                (FileSpecificationTemplate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FileSpecificationTemplate)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

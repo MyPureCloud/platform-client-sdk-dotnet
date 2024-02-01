@@ -9,7 +9,8 @@ title: UserPresence
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Source** | **string** | Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc. | [optional] |
+| **Source** | **string** | Deprecated - The sourceID field should be used as a replacement. | [optional] |
+| **SourceId** | **string** | Represents the ID of a registered source | [optional] |
 | **Primary** | **bool?** | A boolean used to tell whether or not to set this presence source as the primary on a PATCH | [optional] |
 | **PresenceDefinition** | [**PresenceDefinition**](PresenceDefinition.html) |  | [optional] |
 | **Message** | **string** |  | [optional] |

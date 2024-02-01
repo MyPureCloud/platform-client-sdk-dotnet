@@ -152,7 +152,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
         /// <param name="PhoneAssignmentToEdgeType">The phone status's edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
-        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, DomainEntityRef Edge = null)
+        /// <param name="SelfUri">The URI for this object. Deprecated. Do not use..</param>
+        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, DomainEntityRef Edge = null, string SelfUri = null)
         {
             this.Name = Name;
             this.OperationalStatus = OperationalStatus;
@@ -162,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LineStatuses = LineStatuses;
             this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
             this.Edge = Edge;
+            this.SelfUri = SelfUri;
             
         }
         
@@ -227,11 +229,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The URI for this object
+        /// The URI for this object. Deprecated. Do not use.
         /// </summary>
-        /// <value>The URI for this object</value>
+        /// <value>The URI for this object. Deprecated. Do not use.</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        public string SelfUri { get; set; }
 
 
         /// <summary>

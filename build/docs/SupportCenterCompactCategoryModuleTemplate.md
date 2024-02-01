@@ -7,7 +7,7 @@ title: SupportCenterCompactCategoryModuleTemplate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Active** | **bool?** | Whether this template is active or not | [optional] |
+| **Active** | **bool?** | Whether this template is active or not | |
 {: class="table table-striped"}
 
 

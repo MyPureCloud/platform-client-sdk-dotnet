@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterDetailedCategoryModuleSidebar :  IEquatable<SupportCenterDetailedCategoryModuleSidebar>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleSidebar" /> class.
         /// </summary>
-        /// <param name="Enabled">Whether sidebar is enabled or not.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterDetailedCategoryModuleSidebar() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterDetailedCategoryModuleSidebar" /> class.
+        /// </summary>
+        /// <param name="Enabled">Whether sidebar is enabled or not (required).</param>
         public SupportCenterDetailedCategoryModuleSidebar(bool? Enabled = null)
         {
             this.Enabled = Enabled;

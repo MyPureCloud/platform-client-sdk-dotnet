@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteContentmanagementWorkspaceMember**](ContentManagementApi.html#deletecontentmanagementworkspacemember) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Delete a member from a workspace |
 | [**DeleteContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#deletecontentmanagementworkspacetagvalue) | **Delete** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Delete workspace tag |
 | [**GetContentmanagementDocument**](ContentManagementApi.html#getcontentmanagementdocument) | **Get** /api/v2/contentmanagement/documents/{documentId} | Get a document. |
-| [**GetContentmanagementDocumentAudits**](ContentManagementApi.html#getcontentmanagementdocumentaudits) | **Get** /api/v2/contentmanagement/documents/{documentId}/audits | Get a list of audits for a document. |
 | [**GetContentmanagementDocumentContent**](ContentManagementApi.html#getcontentmanagementdocumentcontent) | **Get** /api/v2/contentmanagement/documents/{documentId}/content | Download a document. |
 | [**GetContentmanagementDocuments**](ContentManagementApi.html#getcontentmanagementdocuments) | **Get** /api/v2/contentmanagement/documents | Get a list of documents. |
 | [**GetContentmanagementQuery**](ContentManagementApi.html#getcontentmanagementquery) | **Get** /api/v2/contentmanagement/query | Query content |
@@ -33,7 +32,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetContentmanagementWorkspaceTagvalue**](ContentManagementApi.html#getcontentmanagementworkspacetagvalue) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Get a workspace tag |
 | [**GetContentmanagementWorkspaceTagvalues**](ContentManagementApi.html#getcontentmanagementworkspacetagvalues) | **Get** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues | Get a list of workspace tags |
 | [**GetContentmanagementWorkspaces**](ContentManagementApi.html#getcontentmanagementworkspaces) | **Get** /api/v2/contentmanagement/workspaces | Get a list of workspaces. |
-| [**PostContentmanagementAuditquery**](ContentManagementApi.html#postcontentmanagementauditquery) | **Post** /api/v2/contentmanagement/auditquery | Query audits |
 | [**PostContentmanagementDocument**](ContentManagementApi.html#postcontentmanagementdocument) | **Post** /api/v2/contentmanagement/documents/{documentId} | Update a document. |
 | [**PostContentmanagementDocumentContent**](ContentManagementApi.html#postcontentmanagementdocumentcontent) | **Post** /api/v2/contentmanagement/documents/{documentId}/content | Replace the contents of a document. |
 | [**PostContentmanagementDocuments**](ContentManagementApi.html#postcontentmanagementdocuments) | **Post** /api/v2/contentmanagement/documents | Add a document. |
@@ -488,82 +486,6 @@ namespace Example
 ### Return type
 
 [**Document**](Document.html)
-
-<a name="getcontentmanagementdocumentaudits"></a>
-
-## [**DocumentAuditEntityListing**](DocumentAuditEntityListing.html) GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get a list of audits for a document.
-
-This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetContentmanagementDocumentAuditsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ContentManagementApi();
-            var documentId = documentId_example;  // string | Document ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var transactionFilter = transactionFilter_example;  // string | Transaction filter (optional) 
-            var level = level_example;  // string | level (optional)  (default to "USER")
-            var sortBy = sortBy_example;  // string | Sort by (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
-
-            try
-            { 
-                // Get a list of audits for a document.
-                DocumentAuditEntityListing result = apiInstance.GetContentmanagementDocumentAudits(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ContentManagementApi.GetContentmanagementDocumentAudits: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **documentId** | **string**| Document ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **transactionFilter** | **string**| Transaction filter | [optional]  |
-| **level** | **string**| level | [optional] [default to "USER"] |
-| **sortBy** | **string**| Sort by | [optional]  |
-| **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
-{: class="table table-striped"}
-
-### Return type
-
-[**DocumentAuditEntityListing**](DocumentAuditEntityListing.html)
 
 <a name="getcontentmanagementdocumentcontent"></a>
 
@@ -1760,70 +1682,6 @@ namespace Example
 ### Return type
 
 [**WorkspaceEntityListing**](WorkspaceEntityListing.html)
-
-<a name="postcontentmanagementauditquery"></a>
-
-## [**QueryResults**](QueryResults.html) PostContentmanagementAuditquery (ContentQueryRequest body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Query audits
-
-This api is deprecated, use https://developer.genesys.cloud/platform/audit/ instead.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostContentmanagementAuditqueryExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ContentManagementApi();
-            var body = new ContentQueryRequest(); // ContentQueryRequest | Allows for a filtered query returning facet information
-
-            try
-            { 
-                // Query audits
-                QueryResults result = apiInstance.PostContentmanagementAuditquery(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ContentManagementApi.PostContentmanagementAuditquery: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**ContentQueryRequest**](ContentQueryRequest.html)| Allows for a filtered query returning facet information |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**QueryResults**](QueryResults.html)
 
 <a name="postcontentmanagementdocument"></a>
 

@@ -22,10 +22,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PatchUser" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
+        /// <param name="PreferredName">Preferred full name of agent.</param>
         /// <param name="AcdAutoAnswer">The value that denotes if acdAutoAnswer is set on the user.</param>
-        public PatchUser(string Id = null, bool? AcdAutoAnswer = null)
+        public PatchUser(string Id = null, string PreferredName = null, bool? AcdAutoAnswer = null)
         {
             this.Id = Id;
+            this.PreferredName = PreferredName;
             this.AcdAutoAnswer = AcdAutoAnswer;
             
         }
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Preferred full name of agent
+        /// </summary>
+        /// <value>Preferred full name of agent</value>
+        [DataMember(Name="preferredName", EmitDefaultValue=false)]
+        public string PreferredName { get; set; }
 
 
 
@@ -59,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PatchUser {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  PreferredName: ").Append(PreferredName).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -106,6 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.PreferredName == other.PreferredName ||
+                    this.PreferredName != null &&
+                    this.PreferredName.Equals(other.PreferredName)
+                ) &&
+                (
                     this.AcdAutoAnswer == other.AcdAutoAnswer ||
                     this.AcdAutoAnswer != null &&
                     this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
@@ -125,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.PreferredName != null)
+                    hash = hash * 59 + this.PreferredName.GetHashCode();
 
                 if (this.AcdAutoAnswer != null)
                     hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();

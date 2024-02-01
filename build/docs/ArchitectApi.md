@@ -2575,7 +2575,7 @@ namespace Example
 
 <a name="getarchitectprompt"></a>
 
-## [**Prompt**](Prompt.html) GetArchitectPrompt (string promptId)
+## [**Prompt**](Prompt.html) GetArchitectPrompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 
 
 
@@ -2608,11 +2608,14 @@ namespace Example
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | Prompt ID
+            var includeMediaUris = true;  // bool? | Include the media URIs for each resource (optional)  (default to true)
+            var includeResources = true;  // bool? | Include the resources for each system prompt (optional)  (default to true)
+            var language = new List<string>(); // List<string> | Filter the resources down to the provided languages (optional) 
 
             try
             { 
                 // Get specified user prompt
-                Prompt result = apiInstance.GetArchitectPrompt(promptId);
+                Prompt result = apiInstance.GetArchitectPrompt(promptId, includeMediaUris, includeResources, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2630,6 +2633,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
+| **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
+| **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
+| **language** | [**List<string>**](string.html)| Filter the resources down to the provided languages | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2847,7 +2853,7 @@ namespace Example
 
 <a name="getarchitectprompts"></a>
 
-## [**PromptEntityListing**](PromptEntityListing.html) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+## [**PromptEntityListing**](PromptEntityListing.html) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 
 
 
@@ -2888,11 +2894,14 @@ namespace Example
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "id")
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
+            var includeMediaUris = true;  // bool? | Include the media URIs for each resource (optional)  (default to true)
+            var includeResources = true;  // bool? | Include the resources for each system prompt (optional)  (default to true)
+            var language = new List<string>(); // List<string> | Filter the resources down to the provided languages (optional) 
 
             try
             { 
                 // Get a pageable list of user prompts
-                PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
+                PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2916,6 +2925,9 @@ namespace Example
 | **nameOrDescription** | **string**| Name or description | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to "id"] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
+| **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
+| **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
+| **language** | [**List<string>**](string.html)| Filter the resources down to the provided languages | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3348,7 +3360,7 @@ namespace Example
 
 <a name="getarchitectsystemprompt"></a>
 
-## [**SystemPrompt**](SystemPrompt.html) GetArchitectSystemprompt (string promptId)
+## [**SystemPrompt**](SystemPrompt.html) GetArchitectSystemprompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 
 
 
@@ -3381,11 +3393,14 @@ namespace Example
 
             var apiInstance = new ArchitectApi();
             var promptId = promptId_example;  // string | promptId
+            var includeMediaUris = true;  // bool? | Include the media URIs for each resource (optional)  (default to true)
+            var includeResources = true;  // bool? | Include the resources for each system prompt (optional)  (default to true)
+            var language = new List<string>(); // List<string> | Filter the resources down to the provided languages (optional) 
 
             try
             { 
                 // Get a system prompt
-                SystemPrompt result = apiInstance.GetArchitectSystemprompt(promptId);
+                SystemPrompt result = apiInstance.GetArchitectSystemprompt(promptId, includeMediaUris, includeResources, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3403,6 +3418,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| promptId |  |
+| **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
+| **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
+| **language** | [**List<string>**](string.html)| Filter the resources down to the provided languages | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3622,7 +3640,7 @@ namespace Example
 
 <a name="getarchitectsystemprompts"></a>
 
-## [**SystemPromptEntityListing**](SystemPromptEntityListing.html) GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
+## [**SystemPromptEntityListing**](SystemPromptEntityListing.html) GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 
 
 
@@ -3661,11 +3679,14 @@ namespace Example
             var name = name_example;  // string | Name (optional) 
             var description = description_example;  // string | Description (optional) 
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            var includeMediaUris = true;  // bool? | Include the media URIs for each resource (optional)  (default to true)
+            var includeResources = true;  // bool? | Include the resources for each system prompt (optional)  (default to true)
+            var language = new List<string>(); // List<string> | Filter the resources down to the provided languages (optional) 
 
             try
             { 
                 // Get System Prompts
-                SystemPromptEntityListing result = apiInstance.GetArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
+                SystemPromptEntityListing result = apiInstance.GetArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription, includeMediaUris, includeResources, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3689,6 +3710,9 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
+| **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
+| **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
+| **language** | [**List<string>**](string.html)| Filter the resources down to the provided languages | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

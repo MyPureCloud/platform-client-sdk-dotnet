@@ -24,6 +24,7 @@ title: OrgUser
 | **Certifications** | **List&lt;string&gt;** |  | [optional] |
 | **Biography** | [**Biography**](Biography.html) |  | [optional] |
 | **EmployerInfo** | [**EmployerInfo**](EmployerInfo.html) |  | [optional] |
+| **PreferredName** | **string** | Preferred full name of the agent | [optional] |
 | **RoutingStatus** | [**RoutingStatus**](RoutingStatus.html) | ACD routing status | [optional] |
 | **Presence** | [**UserPresence**](UserPresence.html) | Active presence | [optional] |
 | **IntegrationPresence** | [**UserPresence**](UserPresence.html) | Integration presence | [optional] |

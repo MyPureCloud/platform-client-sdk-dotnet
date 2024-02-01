@@ -9,15 +9,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeletePresenceDefinition0**](PresenceApi.html#deletepresencedefinition0) | **Delete** /api/v2/presence/definitions/{definitionId} | Delete a Presence Definition |
 | [**DeletePresenceSource**](PresenceApi.html#deletepresencesource) | **Delete** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
-| [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **Delete** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
+| [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **Delete** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead |
 | [**GetPresenceDefinition0**](PresenceApi.html#getpresencedefinition0) | **Get** /api/v2/presence/definitions/{definitionId} | Get a Presence Definition |
 | [**GetPresenceDefinitions0**](PresenceApi.html#getpresencedefinitions0) | **Get** /api/v2/presence/definitions | Get a list of Presence Definitions |
 | [**GetPresenceSettings**](PresenceApi.html#getpresencesettings) | **Get** /api/v2/presence/settings | Get the presence settings |
 | [**GetPresenceSource**](PresenceApi.html#getpresencesource) | **Get** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
 | [**GetPresenceSources**](PresenceApi.html#getpresencesources) | **Get** /api/v2/presence/sources | Get a list of Presence Sources |
 | [**GetPresenceUserPrimarysource**](PresenceApi.html#getpresenceuserprimarysource) | **Get** /api/v2/presence/users/{userId}/primarysource | Get a user&#39;s Primary Presence Source |
-| [**GetPresencedefinition**](PresenceApi.html#getpresencedefinition) | **Get** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
-| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **Get** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
+| [**GetPresencedefinition**](PresenceApi.html#getpresencedefinition) | **Get** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead |
+| [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **Get** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead |
 | [**GetSystempresences**](PresenceApi.html#getsystempresences) | **Get** /api/v2/systempresences | Get the list of SystemPresences |
 | [**GetUserPresence**](PresenceApi.html#getuserpresence) | **Get** /api/v2/users/{userId}/presences/{sourceId} | Get a user&#39;s Presence |
 | [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **Get** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
@@ -27,12 +27,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **Patch** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
 | [**PostPresenceDefinitions0**](PresenceApi.html#postpresencedefinitions0) | **Post** /api/v2/presence/definitions | Create a Presence Definition |
 | [**PostPresenceSources**](PresenceApi.html#postpresencesources) | **Post** /api/v2/presence/sources | Create a Presence Source |
-| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **Post** /api/v2/presencedefinitions | Create a Presence Definition |
+| [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **Post** /api/v2/presencedefinitions | Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead |
 | [**PutPresenceDefinition0**](PresenceApi.html#putpresencedefinition0) | **Put** /api/v2/presence/definitions/{definitionId} | Update a Presence Definition |
 | [**PutPresenceSettings**](PresenceApi.html#putpresencesettings) | **Put** /api/v2/presence/settings | Update the presence settings |
 | [**PutPresenceSource**](PresenceApi.html#putpresencesource) | **Put** /api/v2/presence/sources/{sourceId} | Update a Presence Source |
 | [**PutPresenceUserPrimarysource**](PresenceApi.html#putpresenceuserprimarysource) | **Put** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
-| [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **Put** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
+| [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **Put** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) |
 | [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **Put** /api/v2/users/presences/bulk | Update bulk user Presences |
 {: class="table table-striped"}
 
@@ -166,9 +166,9 @@ void (empty response body)
 
 ## void DeletePresencedefinition (string presenceId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Delete a Presence Definition
+Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
 
 Requires ALL permissions: 
 
@@ -200,7 +200,7 @@ namespace Example
 
             try
             { 
-                // Delete a Presence Definition
+                // Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
                 apiInstance.DeletePresencedefinition(presenceId);
             }
             catch (Exception e)
@@ -607,9 +607,9 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) GetPresencedefinition (string presenceId, string localeCode = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get a Presence Definition
+Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
 
 Requires ALL permissions: 
 
@@ -642,7 +642,7 @@ namespace Example
 
             try
             { 
-                // Get a Presence Definition
+                // Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
                 OrganizationPresence result = apiInstance.GetPresencedefinition(presenceId, localeCode);
                 Debug.WriteLine(result);
             }
@@ -672,9 +672,9 @@ namespace Example
 
 ## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get an Organization's list of Presence Definitions
+Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
 
 Requires NO permissions: 
 
@@ -708,7 +708,7 @@ namespace Example
 
             try
             { 
-                // Get an Organization's list of Presence Definitions
+                // Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
                 OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize, deleted, localeCode);
                 Debug.WriteLine(result);
             }
@@ -1313,9 +1313,9 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PostPresencedefinitions (OrganizationPresence body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Create a Presence Definition
+Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
 
 Requires ALL permissions: 
 
@@ -1347,7 +1347,7 @@ namespace Example
 
             try
             { 
-                // Create a Presence Definition
+                // Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
                 OrganizationPresence result = apiInstance.PostPresencedefinitions(body);
                 Debug.WriteLine(result);
             }
@@ -1634,9 +1634,9 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PutPresencedefinition (string presenceId, OrganizationPresence body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Update a Presence Definition
+Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
 
 Requires ALL permissions: 
 
@@ -1669,7 +1669,7 @@ namespace Example
 
             try
             { 
-                // Update a Presence Definition
+                // Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
                 OrganizationPresence result = apiInstance.PutPresencedefinition(presenceId, body);
                 Debug.WriteLine(result);
             }

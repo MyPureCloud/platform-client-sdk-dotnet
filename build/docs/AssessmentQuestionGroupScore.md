@@ -11,6 +11,7 @@ title: AssessmentQuestionGroupScore
 | **TotalScore** | **float?** | The total score for the questions | [optional] |
 | **MaxTotalScore** | **float?** | The maximum total score for the questions | [optional] |
 | **MarkedNA** | **bool?** | True if this question group is marked NA | [optional] |
+| **SystemMarkedNA** | **bool?** | If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false. | [optional] |
 | **TotalCriticalScore** | **float?** | The total score for the critical questions | [optional] |
 | **MaxTotalCriticalScore** | **float?** | The maximum total score for the critical questions | [optional] |
 | **TotalNonCriticalScore** | **float?** | The total score for the non-critical questions | [optional] |

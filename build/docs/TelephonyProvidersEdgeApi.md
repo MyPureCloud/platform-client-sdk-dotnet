@@ -62,7 +62,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesMediastatisticsConversation**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesmediastatisticsconversation) | **Get** /api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId} | Get media endpoint statistics events. |
 | [**GetTelephonyProvidersEdgesMediastatisticsConversationCommunication**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesmediastatisticsconversationcommunication) | **Get** /api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId} | Get media endpoint statistics event. |
 | [**GetTelephonyProvidersEdgesMetrics**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesmetrics) | **Get** /api/v2/telephony/providers/edges/metrics | Get the metrics for a list of edges. |
-| [**GetTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoutboundroute) | **Get** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Get outbound route |
 | [**GetTelephonyProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoutboundroutes) | **Get** /api/v2/telephony/providers/edges/outboundroutes | Get outbound routes |
 | [**GetTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphone) | **Get** /api/v2/telephony/providers/edges/phones/{phoneId} | Get a Phone by ID |
 | [**GetTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphonebasesetting) | **Get** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Get a Phone Base Settings object by ID |
@@ -2975,8 +2974,6 @@ Get a pageable list of basic extension pool objects filterable by query paramete
 
 This returns extension pools consisting of name and division. If one or more IDs are specified, the search will fetch flow outcomes that match the given ID(s) and not use any additional supplied query parameters in the search.
 
-GetTelephonyProvidersEdgesExtensionpoolsDivisionviews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * telephony:extensionPool:search
@@ -3707,71 +3704,6 @@ namespace Example
 ### Return type
 
 [**List<EdgeMetrics>**](EdgeMetrics.html)
-
-<a name="gettelephonyprovidersedgesoutboundroute"></a>
-
-## [**OutboundRoute**](OutboundRoute.html) GetTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get outbound route
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgesOutboundrouteExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
-
-            try
-            { 
-                // Get outbound route
-                OutboundRoute result = apiInstance.GetTelephonyProvidersEdgesOutboundroute(outboundRouteId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesOutboundroute: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **outboundRouteId** | **string**| Outbound route ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
 
 <a name="gettelephonyprovidersedgesoutboundroutes"></a>
 
@@ -4857,7 +4789,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgessites"></a>
 
-## [**SiteEntityListing**](SiteEntityListing.html) GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
+## [**SiteEntityListing**](SiteEntityListing.html) GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
 
 
 
@@ -4895,11 +4827,12 @@ namespace Example
             var name = name_example;  // string | Name (optional) 
             var locationId = locationId_example;  // string | Location Id (optional) 
             var managed = true;  // bool? | Filter by managed (optional) 
+            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
 
             try
             { 
                 // Get the list of Sites.
-                SiteEntityListing result = apiInstance.GetTelephonyProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
+                SiteEntityListing result = apiInstance.GetTelephonyProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4923,6 +4856,7 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **locationId** | **string**| Location Id | [optional]  |
 | **managed** | **bool?**| Filter by managed | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: edges, location, primarySites, secondarySites |
 {: class="table table-striped"}
 
 ### Return type

@@ -70,12 +70,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TranscriptionConfidenceThreshold">Configure confidence threshold. The possible values are from 1 to 100. (required).</param>
         /// <param name="LowLatencyTranscriptionEnabled">Boolean flag indicating whether low latency transcription via Notification API is enabled.</param>
         /// <param name="ContentSearchEnabled">Setting to enable/disable content search.</param>
-        public TranscriptionSettings(TranscriptionEnum? Transcription = null, int? TranscriptionConfidenceThreshold = null, bool? LowLatencyTranscriptionEnabled = null, bool? ContentSearchEnabled = null)
+        /// <param name="PciDssRedactionEnabled">Setting to enable/disable PCI DSS Redaction.</param>
+        /// <param name="PiiRedactionEnabled">Setting to enable/disable PII Redaction.</param>
+        public TranscriptionSettings(TranscriptionEnum? Transcription = null, int? TranscriptionConfidenceThreshold = null, bool? LowLatencyTranscriptionEnabled = null, bool? ContentSearchEnabled = null, bool? PciDssRedactionEnabled = null, bool? PiiRedactionEnabled = null)
         {
             this.Transcription = Transcription;
             this.TranscriptionConfidenceThreshold = TranscriptionConfidenceThreshold;
             this.LowLatencyTranscriptionEnabled = LowLatencyTranscriptionEnabled;
             this.ContentSearchEnabled = ContentSearchEnabled;
+            this.PciDssRedactionEnabled = PciDssRedactionEnabled;
+            this.PiiRedactionEnabled = PiiRedactionEnabled;
             
         }
         
@@ -109,6 +113,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? ContentSearchEnabled { get; set; }
 
 
+
+        /// <summary>
+        /// Setting to enable/disable PCI DSS Redaction
+        /// </summary>
+        /// <value>Setting to enable/disable PCI DSS Redaction</value>
+        [DataMember(Name="pciDssRedactionEnabled", EmitDefaultValue=false)]
+        public bool? PciDssRedactionEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// Setting to enable/disable PII Redaction
+        /// </summary>
+        /// <value>Setting to enable/disable PII Redaction</value>
+        [DataMember(Name="piiRedactionEnabled", EmitDefaultValue=false)]
+        public bool? PiiRedactionEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,6 +144,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TranscriptionConfidenceThreshold: ").Append(TranscriptionConfidenceThreshold).Append("\n");
             sb.Append("  LowLatencyTranscriptionEnabled: ").Append(LowLatencyTranscriptionEnabled).Append("\n");
             sb.Append("  ContentSearchEnabled: ").Append(ContentSearchEnabled).Append("\n");
+            sb.Append("  PciDssRedactionEnabled: ").Append(PciDssRedactionEnabled).Append("\n");
+            sb.Append("  PiiRedactionEnabled: ").Append(PiiRedactionEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,6 +205,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentSearchEnabled == other.ContentSearchEnabled ||
                     this.ContentSearchEnabled != null &&
                     this.ContentSearchEnabled.Equals(other.ContentSearchEnabled)
+                ) &&
+                (
+                    this.PciDssRedactionEnabled == other.PciDssRedactionEnabled ||
+                    this.PciDssRedactionEnabled != null &&
+                    this.PciDssRedactionEnabled.Equals(other.PciDssRedactionEnabled)
+                ) &&
+                (
+                    this.PiiRedactionEnabled == other.PiiRedactionEnabled ||
+                    this.PiiRedactionEnabled != null &&
+                    this.PiiRedactionEnabled.Equals(other.PiiRedactionEnabled)
                 );
         }
 
@@ -206,6 +240,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContentSearchEnabled != null)
                     hash = hash * 59 + this.ContentSearchEnabled.GetHashCode();
+
+                if (this.PciDssRedactionEnabled != null)
+                    hash = hash * 59 + this.PciDssRedactionEnabled.GetHashCode();
+
+                if (this.PiiRedactionEnabled != null)
+                    hash = hash * 59 + this.PiiRedactionEnabled.GetHashCode();
 
                 return hash;
             }

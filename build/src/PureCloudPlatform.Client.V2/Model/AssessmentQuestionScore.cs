@@ -31,13 +31,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuestionId">The ID of the question (required).</param>
         /// <param name="AnswerId">The ID of the selected answer.</param>
         /// <param name="MarkedNA">True if this question was marked as NA.</param>
+        /// <param name="SystemMarkedNA">If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false..</param>
         /// <param name="FreeTextAnswer">Answer for free text answer type.</param>
-        public AssessmentQuestionScore(string Comments = null, string QuestionId = null, string AnswerId = null, bool? MarkedNA = null, string FreeTextAnswer = null)
+        public AssessmentQuestionScore(string Comments = null, string QuestionId = null, string AnswerId = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, string FreeTextAnswer = null)
         {
             this.Comments = Comments;
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
             this.MarkedNA = MarkedNA;
+            this.SystemMarkedNA = SystemMarkedNA;
             this.FreeTextAnswer = FreeTextAnswer;
             
         }
@@ -99,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.
+        /// </summary>
+        /// <value>If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false.</value>
+        [DataMember(Name="systemMarkedNA", EmitDefaultValue=false)]
+        public bool? SystemMarkedNA { get; set; }
+
+
+
+        /// <summary>
         /// Answer for free text answer type
         /// </summary>
         /// <value>Answer for free text answer type</value>
@@ -121,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            sb.Append("  SystemMarkedNA: ").Append(SystemMarkedNA).Append("\n");
             sb.Append("  FreeTextAnswer: ").Append(FreeTextAnswer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -193,6 +205,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MarkedNA.Equals(other.MarkedNA)
                 ) &&
                 (
+                    this.SystemMarkedNA == other.SystemMarkedNA ||
+                    this.SystemMarkedNA != null &&
+                    this.SystemMarkedNA.Equals(other.SystemMarkedNA)
+                ) &&
+                (
                     this.FreeTextAnswer == other.FreeTextAnswer ||
                     this.FreeTextAnswer != null &&
                     this.FreeTextAnswer.Equals(other.FreeTextAnswer)
@@ -227,6 +244,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+
+                if (this.SystemMarkedNA != null)
+                    hash = hash * 59 + this.SystemMarkedNA.GetHashCode();
 
                 if (this.FreeTextAnswer != null)
                     hash = hash * 59 + this.FreeTextAnswer.GetHashCode();

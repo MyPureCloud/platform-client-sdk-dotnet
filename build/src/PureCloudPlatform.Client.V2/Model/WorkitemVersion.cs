@@ -176,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The Worktype of the Workitem..</param>
         /// <param name="Description">The description of the Workitem..</param>
         /// <param name="Language">The language of the Workitem..</param>
+        /// <param name="UtilizationLabel">The utilization label of the Workitem..</param>
         /// <param name="Priority">The priority of the Workitem. The valid range is between -25,000,000 and 25,000,000..</param>
         /// <param name="DateCreated">The creation date of the Workitem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The modified date of the Workitem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -205,13 +206,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoStatusTransitionDetail">Auto status transition details of Workitem..</param>
         /// <param name="ScoredAgents">A list of scored agents for the Workitem..</param>
         /// <param name="Version">Version.</param>
-        public WorkitemVersion(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null, int? Version = null)
+        public WorkitemVersion(string Name = null, Division Division = null, WorktypeReference Type = null, string Description = null, LanguageReference Language = null, WorkitemUtilizationLabelReference UtilizationLabel = null, int? Priority = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateDue = null, DateTime? DateExpires = null, int? DurationSeconds = null, int? Ttl = null, WorkitemStatusReference Status = null, StatusCategoryEnum? StatusCategory = null, DateTime? DateStatusChanged = null, DateTime? DateClosed = null, WorkbinReference Workbin = null, UserReferenceWithName Reporter = null, UserReferenceWithName Assignee = null, ExternalContactReference ExternalContact = null, string ExternalTag = null, UserReference ModifiedBy = null, WorkitemQueueReference Queue = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssignmentStateChanged = null, int? AlertTimeoutSeconds = null, List<RoutingSkillReference> Skills = null, List<UserReference> PreferredAgents = null, bool? AutoStatusTransition = null, WorkitemSchema Schema = null, Dictionary<string, Object> CustomFields = null, AutoStatusTransitionDetail AutoStatusTransitionDetail = null, List<WorkitemScoredAgent> ScoredAgents = null, int? Version = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Type = Type;
             this.Description = Description;
             this.Language = Language;
+            this.UtilizationLabel = UtilizationLabel;
             this.Priority = Priority;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
@@ -297,6 +299,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The language of the Workitem.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public LanguageReference Language { get; set; }
+
+
+
+        /// <summary>
+        /// The utilization label of the Workitem.
+        /// </summary>
+        /// <value>The utilization label of the Workitem.</value>
+        [DataMember(Name="utilizationLabel", EmitDefaultValue=false)]
+        public WorkitemUtilizationLabelReference UtilizationLabel { get; set; }
 
 
 
@@ -570,6 +581,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  UtilizationLabel: ").Append(UtilizationLabel).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
@@ -669,6 +681,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
+                ) &&
+                (
+                    this.UtilizationLabel == other.UtilizationLabel ||
+                    this.UtilizationLabel != null &&
+                    this.UtilizationLabel.Equals(other.UtilizationLabel)
                 ) &&
                 (
                     this.Priority == other.Priority ||
@@ -850,6 +867,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+
+                if (this.UtilizationLabel != null)
+                    hash = hash * 59 + this.UtilizationLabel.GetHashCode();
 
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();

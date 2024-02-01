@@ -9,7 +9,7 @@ title: GetAlertQuery
 |------------ | ------------- | ------------- | -------------|
 | **RuleType** | **string** | The rule type of the alerts the query will return | |
 | **QueryType** | **string** | The type of query being performed. | |
-| **ActiveStatus** | **string** | The status of the alerts the query will return. | [optional] |
+| **AlertStatus** | **string** | The status of the alerts the query will return. | [optional] |
 | **ViewedStatus** | **string** | The view status of the alerts the query will return. | [optional] |
 | **PageNumber** | **int?** | The page number of the queried response | [optional] |
 | **PageSize** | **int?** | The number of entities to return of the queried response.  The max is 25 | [optional] |

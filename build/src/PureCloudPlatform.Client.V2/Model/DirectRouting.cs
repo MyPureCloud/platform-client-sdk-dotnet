@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallMediaSettings">Direct Routing Settings specific to Call media..</param>
         /// <param name="EmailMediaSettings">Direct Routing Settings specific to Email media..</param>
         /// <param name="MessageMediaSettings">Direct Routing Settings specific to Message media..</param>
-        /// <param name="BackupQueueId">ID of queue to be used as the default backup if an agent does not have their Backup Settings configured..</param>
+        /// <param name="BackupQueueId">ID of another queue to be used as the default backup if an agent does not have their Backup Settings configured. If not set, the current queue will be used as backup, but with Direct Routing criteria removed from the conversation..</param>
         /// <param name="WaitForAgent">Flag indicating if Direct Routing interactions should wait for Direct Routing agent or go immediately to selected backup..</param>
         /// <param name="AgentWaitSeconds">Time (in seconds) that a Direct Routing interaction will wait for Direct Routing agent before going to selected backup. Valid range [60, 864000]..</param>
         public DirectRouting(DirectRoutingMediaSettings CallMediaSettings = null, DirectRoutingMediaSettings EmailMediaSettings = null, DirectRoutingMediaSettings MessageMediaSettings = null, string BackupQueueId = null, bool? WaitForAgent = null, int? AgentWaitSeconds = null)
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// ID of queue to be used as the default backup if an agent does not have their Backup Settings configured.
+        /// ID of another queue to be used as the default backup if an agent does not have their Backup Settings configured. If not set, the current queue will be used as backup, but with Direct Routing criteria removed from the conversation.
         /// </summary>
-        /// <value>ID of queue to be used as the default backup if an agent does not have their Backup Settings configured.</value>
+        /// <value>ID of another queue to be used as the default backup if an agent does not have their Backup Settings configured. If not set, the current queue will be used as backup, but with Direct Routing criteria removed from the conversation.</value>
         [DataMember(Name="backupQueueId", EmitDefaultValue=false)]
         public string BackupQueueId { get; set; }
 

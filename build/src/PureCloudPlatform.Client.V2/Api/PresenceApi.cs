@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeletePresenceSourceWithHttpInfo (string sourceId);
 
         /// <summary>
-        /// Delete a Presence Definition
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -73,11 +73,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeletePresencedefinition (string presenceId);
 
         /// <summary>
-        /// Delete a Presence Definition
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeletePresencedefinitionWithHttpInfo (string presenceId);
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserPrimarySource> GetPresenceUserPrimarysourceWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get a Presence Definition
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -246,11 +246,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        
+        [Obsolete]
         OrganizationPresence GetPresencedefinition (string presenceId, string localeCode = null);
 
         /// <summary>
-        /// Get a Presence Definition
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -259,11 +259,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
+        [Obsolete]
         ApiResponse<OrganizationPresence> GetPresencedefinitionWithHttpInfo (string presenceId, string localeCode = null);
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -274,11 +274,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        
+        [Obsolete]
         OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -289,7 +289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        
+        [Obsolete]
         ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
@@ -517,7 +517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Source> PostPresenceSourcesWithHttpInfo (Source body);
 
         /// <summary>
-        /// Create a Presence Definition
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -525,11 +525,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresence</returns>
-        
+        [Obsolete]
         OrganizationPresence PostPresencedefinitions (OrganizationPresence body);
 
         /// <summary>
-        /// Create a Presence Definition
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -537,7 +537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
+        [Obsolete]
         ApiResponse<OrganizationPresence> PostPresencedefinitionsWithHttpInfo (OrganizationPresence body);
 
         /// <summary>
@@ -643,7 +643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserPrimarySource> PutPresenceUserPrimarysourceWithHttpInfo (string userId, UserPrimarySource body);
 
         /// <summary>
-        /// Update a Presence Definition
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
         /// </summary>
         /// <remarks>
         /// 
@@ -652,11 +652,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
-        
+        [Obsolete]
         OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body);
 
         /// <summary>
-        /// Update a Presence Definition
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
         /// </summary>
         /// <remarks>
         /// 
@@ -665,7 +665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
+        [Obsolete]
         ApiResponse<OrganizationPresence> PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body);
 
         /// <summary>
@@ -745,7 +745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceSourceAsyncWithHttpInfo (string sourceId);
 
         /// <summary>
-        /// Delete a Presence Definition
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -753,11 +753,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeletePresencedefinitionAsync (string presenceId);
 
         /// <summary>
-        /// Delete a Presence Definition
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -765,7 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId);
 
         /// <summary>
@@ -917,7 +917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> GetPresenceUserPrimarysourceAsyncWithHttpInfo (string userId);
 
         /// <summary>
-        /// Get a Presence Definition
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -926,11 +926,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId, string localeCode = null);
 
         /// <summary>
-        /// Get a Presence Definition
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
         /// </summary>
         /// <remarks>
         /// 
@@ -939,11 +939,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId, string localeCode = null);
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -954,11 +954,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -969,7 +969,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
         /// <summary>
@@ -1197,7 +1197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Source>> PostPresenceSourcesAsyncWithHttpInfo (Source body);
 
         /// <summary>
-        /// Create a Presence Definition
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -1205,11 +1205,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body);
 
         /// <summary>
-        /// Create a Presence Definition
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
         /// </summary>
         /// <remarks>
         /// 
@@ -1217,7 +1217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body);
 
         /// <summary>
@@ -1323,7 +1323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> PutPresenceUserPrimarysourceAsyncWithHttpInfo (string userId, UserPrimarySource body);
 
         /// <summary>
-        /// Update a Presence Definition
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
         /// </summary>
         /// <remarks>
         /// 
@@ -1332,11 +1332,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body);
 
         /// <summary>
-        /// Update a Presence Definition
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
         /// </summary>
         /// <remarks>
         /// 
@@ -1345,7 +1345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
 
         /// <summary>
@@ -1883,26 +1883,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Presence Definition 
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeletePresencedefinition (string presenceId)
         {
              DeletePresencedefinitionWithHttpInfo(presenceId);
         }
 
         /// <summary>
-        /// Delete a Presence Definition 
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeletePresencedefinitionWithHttpInfo (string presenceId)
         { 
             // verify the required parameter 'presenceId' is set
@@ -1986,13 +1986,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a Presence Definition 
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeletePresencedefinitionAsync (string presenceId)
         {
              await DeletePresencedefinitionAsyncWithHttpInfo(presenceId);
@@ -2000,13 +2000,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a Presence Definition 
+        /// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId)
         { 
             // verify the required parameter 'presenceId' is set
@@ -3349,14 +3349,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Presence Definition 
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresence</returns>
-        
+        [Obsolete]
         public OrganizationPresence GetPresencedefinition (string presenceId, string localeCode = null)
         {
              ApiResponse<OrganizationPresence> localVarResponse = GetPresencedefinitionWithHttpInfo(presenceId, localeCode);
@@ -3364,14 +3364,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Presence Definition 
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
+        [Obsolete]
         public ApiResponse< OrganizationPresence > GetPresencedefinitionWithHttpInfo (string presenceId, string localeCode = null)
         { 
             // verify the required parameter 'presenceId' is set
@@ -3456,14 +3456,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Presence Definition 
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId, string localeCode = null)
         {
              ApiResponse<OrganizationPresence> localVarResponse = await GetPresencedefinitionAsyncWithHttpInfo(presenceId, localeCode);
@@ -3472,14 +3472,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Presence Definition 
+        /// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId, string localeCode = null)
         { 
             // verify the required parameter 'presenceId' is set
@@ -3566,7 +3566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions 
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3575,7 +3575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        
+        [Obsolete]
         public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
              ApiResponse<OrganizationPresenceEntityListing> localVarResponse = GetPresencedefinitionsWithHttpInfo(pageNumber, pageSize, deleted, localeCode);
@@ -3583,7 +3583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions 
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3592,7 +3592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        
+        [Obsolete]
         public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         { 
 
@@ -3676,7 +3676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions 
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3685,7 +3685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         {
              ApiResponse<OrganizationPresenceEntityListing> localVarResponse = await GetPresencedefinitionsAsyncWithHttpInfo(pageNumber, pageSize, deleted, localeCode);
@@ -3694,7 +3694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an Organization's list of Presence Definitions 
+        /// Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3703,7 +3703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Deleted query can be TRUE, FALSE or ALL (optional, default to "false")</param>
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
         { 
 
@@ -5765,13 +5765,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Presence Definition 
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>OrganizationPresence</returns>
-        
+        [Obsolete]
         public OrganizationPresence PostPresencedefinitions (OrganizationPresence body)
         {
              ApiResponse<OrganizationPresence> localVarResponse = PostPresencedefinitionsWithHttpInfo(body);
@@ -5779,13 +5779,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Presence Definition 
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
+        [Obsolete]
         public ApiResponse< OrganizationPresence > PostPresencedefinitionsWithHttpInfo (OrganizationPresence body)
         { 
             // verify the required parameter 'body' is set
@@ -5874,13 +5874,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Presence Definition 
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body)
         {
              ApiResponse<OrganizationPresence> localVarResponse = await PostPresencedefinitionsAsyncWithHttpInfo(body);
@@ -5889,13 +5889,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Presence Definition 
+        /// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body)
         { 
             // verify the required parameter 'body' is set
@@ -6909,14 +6909,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a Presence Definition 
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
-        
+        [Obsolete]
         public OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body)
         {
              ApiResponse<OrganizationPresence> localVarResponse = PutPresencedefinitionWithHttpInfo(presenceId, body);
@@ -6924,14 +6924,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a Presence Definition 
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        
+        [Obsolete]
         public ApiResponse< OrganizationPresence > PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body)
         { 
             // verify the required parameter 'presenceId' is set
@@ -7024,14 +7024,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a Presence Definition 
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body)
         {
              ApiResponse<OrganizationPresence> localVarResponse = await PutPresencedefinitionAsyncWithHttpInfo(presenceId, body);
@@ -7040,14 +7040,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a Presence Definition 
+        /// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
         { 
             // verify the required parameter 'presenceId' is set

@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SupportCenterStyleSetting :  IEquatable<SupportCenterStyleSetting>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportCenterStyleSetting" /> class.
         /// </summary>
-        /// <param name="HeroStyle">Knowledge portal (previously support center) hero customizations.</param>
-        /// <param name="GlobalStyle">Knowledge portal (previously support center) global customizations.</param>
+        [JsonConstructorAttribute]
+        protected SupportCenterStyleSetting() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SupportCenterStyleSetting" /> class.
+        /// </summary>
+        /// <param name="HeroStyle">Knowledge portal (previously support center) hero customizations (required).</param>
+        /// <param name="GlobalStyle">Knowledge portal (previously support center) global customizations (required).</param>
         public SupportCenterStyleSetting(SupportCenterHeroStyle HeroStyle = null, SupportCenterGlobalStyle GlobalStyle = null)
         {
             this.HeroStyle = HeroStyle;

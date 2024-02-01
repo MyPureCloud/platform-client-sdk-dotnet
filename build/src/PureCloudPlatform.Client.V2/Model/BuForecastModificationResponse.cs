@@ -187,11 +187,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LegacyMetric">The legacy metric to which this modification applies if applicable.</param>
         /// <param name="Value">The value of the modification.</param>
         /// <param name="Values">The list of modification values. Only applicable for grid-type modifications (required).</param>
+        /// <param name="SecondaryValues">The list of modification secondary values. Only applicable for multi granularity modifications.</param>
         /// <param name="DisplayGranularity">The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
         /// <param name="Granularity">The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H (required).</param>
+        /// <param name="SecondaryGranularity">The granularity of the 'secondaryValues' modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
         /// <param name="Enabled">Whether the modification is enabled for the forecast (required).</param>
         /// <param name="PlanningGroupIds">The IDs of the planning groups to which this forecast modification applies (required).</param>
-        public BuForecastModificationResponse(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmForecastModificationIntervalOffsetValue> Values = null, string DisplayGranularity = null, string Granularity = null, bool? Enabled = null, List<string> PlanningGroupIds = null)
+        public BuForecastModificationResponse(TypeEnum? Type = null, int? StartIntervalIndex = null, int? EndIntervalIndex = null, MetricEnum? Metric = null, LegacyMetricEnum? LegacyMetric = null, double? Value = null, List<WfmForecastModificationIntervalOffsetValue> Values = null, List<WfmForecastModificationIntervalOffsetValue> SecondaryValues = null, string DisplayGranularity = null, string Granularity = null, string SecondaryGranularity = null, bool? Enabled = null, List<string> PlanningGroupIds = null)
         {
             this.Type = Type;
             this.StartIntervalIndex = StartIntervalIndex;
@@ -200,8 +202,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LegacyMetric = LegacyMetric;
             this.Value = Value;
             this.Values = Values;
+            this.SecondaryValues = SecondaryValues;
             this.DisplayGranularity = DisplayGranularity;
             this.Granularity = Granularity;
+            this.SecondaryGranularity = SecondaryGranularity;
             this.Enabled = Enabled;
             this.PlanningGroupIds = PlanningGroupIds;
             
@@ -252,6 +256,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The list of modification secondary values. Only applicable for multi granularity modifications
+        /// </summary>
+        /// <value>The list of modification secondary values. Only applicable for multi granularity modifications</value>
+        [DataMember(Name="secondaryValues", EmitDefaultValue=false)]
+        public List<WfmForecastModificationIntervalOffsetValue> SecondaryValues { get; set; }
+
+
+
+        /// <summary>
         /// The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
@@ -266,6 +279,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public string Granularity { get; set; }
+
+
+
+        /// <summary>
+        /// The granularity of the 'secondaryValues' modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
+        /// </summary>
+        /// <value>The granularity of the 'secondaryValues' modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
+        [DataMember(Name="secondaryGranularity", EmitDefaultValue=false)]
+        public string SecondaryGranularity { get; set; }
 
 
 
@@ -302,8 +324,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LegacyMetric: ").Append(LegacyMetric).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
+            sb.Append("  SecondaryValues: ").Append(SecondaryValues).Append("\n");
             sb.Append("  DisplayGranularity: ").Append(DisplayGranularity).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
+            sb.Append("  SecondaryGranularity: ").Append(SecondaryGranularity).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
             sb.Append("}\n");
@@ -382,6 +406,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Values.SequenceEqual(other.Values)
                 ) &&
                 (
+                    this.SecondaryValues == other.SecondaryValues ||
+                    this.SecondaryValues != null &&
+                    this.SecondaryValues.SequenceEqual(other.SecondaryValues)
+                ) &&
+                (
                     this.DisplayGranularity == other.DisplayGranularity ||
                     this.DisplayGranularity != null &&
                     this.DisplayGranularity.Equals(other.DisplayGranularity)
@@ -390,6 +419,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Granularity == other.Granularity ||
                     this.Granularity != null &&
                     this.Granularity.Equals(other.Granularity)
+                ) &&
+                (
+                    this.SecondaryGranularity == other.SecondaryGranularity ||
+                    this.SecondaryGranularity != null &&
+                    this.SecondaryGranularity.Equals(other.SecondaryGranularity)
                 ) &&
                 (
                     this.Enabled == other.Enabled ||
@@ -435,11 +469,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
 
+                if (this.SecondaryValues != null)
+                    hash = hash * 59 + this.SecondaryValues.GetHashCode();
+
                 if (this.DisplayGranularity != null)
                     hash = hash * 59 + this.DisplayGranularity.GetHashCode();
 
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
+
+                if (this.SecondaryGranularity != null)
+                    hash = hash * 59 + this.SecondaryGranularity.GetHashCode();
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();

@@ -263,6 +263,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> GetIntegrationsActionDraftWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
 
         /// <summary>
+        /// Get draft function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>FunctionConfig</returns>
+        
+        FunctionConfig GetIntegrationsActionDraftFunction (string actionId);
+
+        /// <summary>
+        /// Get draft function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>ApiResponse of FunctionConfig</returns>
+        
+        ApiResponse<FunctionConfig> GetIntegrationsActionDraftFunctionWithHttpInfo (string actionId);
+
+        /// <summary>
         /// Retrieve schema for a Draft based on filename.
         /// </summary>
         /// <remarks>
@@ -337,6 +363,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DraftValidationResult</returns>
         
         ApiResponse<DraftValidationResult> GetIntegrationsActionDraftValidationWithHttpInfo (string actionId);
+
+        /// <summary>
+        /// Get published function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>FunctionConfig</returns>
+        
+        FunctionConfig GetIntegrationsActionFunction (string actionId);
+
+        /// <summary>
+        /// Get published function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>ApiResponse of FunctionConfig</returns>
+        
+        ApiResponse<FunctionConfig> GetIntegrationsActionFunctionWithHttpInfo (string actionId);
 
         /// <summary>
         /// Retrieve schema for an action based on filename.
@@ -471,6 +523,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
         /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>ActionCertificateListing</returns>
+        
+        ActionCertificateListing GetIntegrationsActionsCertificates (string status = null, string type = null);
+
+        /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>ApiResponse of ActionCertificateListing</returns>
+        
+        ApiResponse<ActionCertificateListing> GetIntegrationsActionsCertificatesWithHttpInfo (string status = null, string type = null);
+
+        /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
         /// </summary>
         /// <remarks>
@@ -513,6 +591,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActionEntityListing</returns>
         
         ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
+
+        /// <summary>
+        /// Get action function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;FunctionRuntime&gt;</returns>
+        
+        List<FunctionRuntime> GetIntegrationsActionsFunctionsRuntimes ();
+
+        /// <summary>
+        /// Get action function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;FunctionRuntime&gt;</returns>
+        
+        ApiResponse<List<FunctionRuntime>> GetIntegrationsActionsFunctionsRuntimesWithHttpInfo ();
 
         /// <summary>
         /// Get a specific botConnector bot, plus versions, for this integration
@@ -1473,6 +1575,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PureCloudPlatform.Client.V2.Model.Action> PostIntegrationsActionDraftWithHttpInfo (string actionId);
 
         /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>FunctionUploadResponse</returns>
+        
+        FunctionUploadResponse PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>ApiResponse of FunctionUploadResponse</returns>
+        
+        ApiResponse<FunctionUploadResponse> PostIntegrationsActionDraftFunctionUploadWithHttpInfo (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
         /// Publish a Draft and make it the active Action configuration
         /// </summary>
         /// <remarks>
@@ -1765,6 +1895,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of IntegrationConfiguration</returns>
         
         ApiResponse<IntegrationConfiguration> PutIntegrationConfigCurrentWithHttpInfo (string integrationId, IntegrationConfiguration body = null);
+
+        /// <summary>
+        /// Update draft function settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>FunctionConfig</returns>
+        
+        FunctionConfig PutIntegrationsActionDraftFunction (string actionId, Function body);
+
+        /// <summary>
+        /// Update draft function settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>ApiResponse of FunctionConfig</returns>
+        
+        ApiResponse<FunctionConfig> PutIntegrationsActionDraftFunctionWithHttpInfo (string actionId, Function body);
 
         /// <summary>
         /// Set a list of botConnector bots plus versions for this integration
@@ -2147,6 +2305,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> GetIntegrationsActionDraftAsyncWithHttpInfo (string actionId, string expand = null, bool? includeConfig = null);
 
         /// <summary>
+        /// Get draft function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of FunctionConfig</returns>
+        
+        System.Threading.Tasks.Task<FunctionConfig> GetIntegrationsActionDraftFunctionAsync (string actionId);
+
+        /// <summary>
+        /// Get draft function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of ApiResponse (FunctionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FunctionConfig>> GetIntegrationsActionDraftFunctionAsyncWithHttpInfo (string actionId);
+
+        /// <summary>
         /// Retrieve schema for a Draft based on filename.
         /// </summary>
         /// <remarks>
@@ -2221,6 +2405,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DraftValidationResult)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DraftValidationResult>> GetIntegrationsActionDraftValidationAsyncWithHttpInfo (string actionId);
+
+        /// <summary>
+        /// Get published function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of FunctionConfig</returns>
+        
+        System.Threading.Tasks.Task<FunctionConfig> GetIntegrationsActionFunctionAsync (string actionId);
+
+        /// <summary>
+        /// Get published function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of ApiResponse (FunctionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FunctionConfig>> GetIntegrationsActionFunctionAsyncWithHttpInfo (string actionId);
 
         /// <summary>
         /// Retrieve schema for an action based on filename.
@@ -2355,6 +2565,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null);
 
         /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>Task of ActionCertificateListing</returns>
+        
+        System.Threading.Tasks.Task<ActionCertificateListing> GetIntegrationsActionsCertificatesAsync (string status = null, string type = null);
+
+        /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>Task of ApiResponse (ActionCertificateListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ActionCertificateListing>> GetIntegrationsActionsCertificatesAsyncWithHttpInfo (string status = null, string type = null);
+
+        /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
         /// </summary>
         /// <remarks>
@@ -2397,6 +2633,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null);
+
+        /// <summary>
+        /// Get action function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;FunctionRuntime&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<FunctionRuntime>> GetIntegrationsActionsFunctionsRuntimesAsync ();
+
+        /// <summary>
+        /// Get action function settings for Action
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;FunctionRuntime&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<FunctionRuntime>>> GetIntegrationsActionsFunctionsRuntimesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get a specific botConnector bot, plus versions, for this integration
@@ -3357,6 +3617,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Action>> PostIntegrationsActionDraftAsyncWithHttpInfo (string actionId);
 
         /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of FunctionUploadResponse</returns>
+        
+        System.Threading.Tasks.Task<FunctionUploadResponse> PostIntegrationsActionDraftFunctionUploadAsync (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of ApiResponse (FunctionUploadResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FunctionUploadResponse>> PostIntegrationsActionDraftFunctionUploadAsyncWithHttpInfo (string actionId, FunctionUploadRequest body);
+
+        /// <summary>
         /// Publish a Draft and make it the active Action configuration
         /// </summary>
         /// <remarks>
@@ -3649,6 +3937,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (IntegrationConfiguration)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<IntegrationConfiguration>> PutIntegrationConfigCurrentAsyncWithHttpInfo (string integrationId, IntegrationConfiguration body = null);
+
+        /// <summary>
+        /// Update draft function settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>Task of FunctionConfig</returns>
+        
+        System.Threading.Tasks.Task<FunctionConfig> PutIntegrationsActionDraftFunctionAsync (string actionId, Function body);
+
+        /// <summary>
+        /// Update draft function settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>Task of ApiResponse (FunctionConfig)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FunctionConfig>> PutIntegrationsActionDraftFunctionAsyncWithHttpInfo (string actionId, Function body);
 
         /// <summary>
         /// Set a list of botConnector bots plus versions for this integration
@@ -5849,6 +6165,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get draft function settings for Action 
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>FunctionConfig</returns>
+        
+        public FunctionConfig GetIntegrationsActionDraftFunction (string actionId)
+        {
+             ApiResponse<FunctionConfig> localVarResponse = GetIntegrationsActionDraftFunctionWithHttpInfo(actionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get draft function settings for Action 
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>ApiResponse of FunctionConfig</returns>
+        
+        public ApiResponse< FunctionConfig > GetIntegrationsActionDraftFunctionWithHttpInfo (string actionId)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraftFunction");
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionDraftFunction: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionDraftFunction: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get draft function settings for Action 
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of FunctionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<FunctionConfig> GetIntegrationsActionDraftFunctionAsync (string actionId)
+        {
+             ApiResponse<FunctionConfig> localVarResponse = await GetIntegrationsActionDraftFunctionAsyncWithHttpInfo(actionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get draft function settings for Action 
+        /// 
+        /// GetIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of ApiResponse (FunctionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FunctionConfig>> GetIntegrationsActionDraftFunctionAsyncWithHttpInfo (string actionId)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraftFunction");
+            
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionDraftFunction: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionDraftFunction: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Retrieve schema for a Draft based on filename. 
         /// 
         /// </summary>
@@ -6501,6 +7032,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DraftValidationResult>(localVarStatusCode,
                 localVarHeaders,
                 (DraftValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DraftValidationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get published function settings for Action 
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>FunctionConfig</returns>
+        
+        public FunctionConfig GetIntegrationsActionFunction (string actionId)
+        {
+             ApiResponse<FunctionConfig> localVarResponse = GetIntegrationsActionFunctionWithHttpInfo(actionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get published function settings for Action 
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>ApiResponse of FunctionConfig</returns>
+        
+        public ApiResponse< FunctionConfig > GetIntegrationsActionFunctionWithHttpInfo (string actionId)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionFunction");
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/function";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionFunction: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionFunction: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get published function settings for Action 
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of FunctionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<FunctionConfig> GetIntegrationsActionFunctionAsync (string actionId)
+        {
+             ApiResponse<FunctionConfig> localVarResponse = await GetIntegrationsActionFunctionAsyncWithHttpInfo(actionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get published function settings for Action 
+        /// 
+        /// GetIntegrationsActionFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <returns>Task of ApiResponse (FunctionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FunctionConfig>> GetIntegrationsActionFunctionAsyncWithHttpInfo (string actionId)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionFunction");
+            
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/function";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionFunction: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionFunction: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7460,6 +8206,216 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>ActionCertificateListing</returns>
+        
+        public ActionCertificateListing GetIntegrationsActionsCertificates (string status = null, string type = null)
+        {
+             ApiResponse<ActionCertificateListing> localVarResponse = GetIntegrationsActionsCertificatesWithHttpInfo(status, type);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>ApiResponse of ActionCertificateListing</returns>
+        
+        public ApiResponse< ActionCertificateListing > GetIntegrationsActionsCertificatesWithHttpInfo (string status = null, string type = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/actions/certificates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (status != null) localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(status)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificates: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActionCertificateListing>(localVarStatusCode,
+                localVarHeaders,
+                (ActionCertificateListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionCertificateListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>Task of ActionCertificateListing</returns>
+        
+        public async System.Threading.Tasks.Task<ActionCertificateListing> GetIntegrationsActionsCertificatesAsync (string status = null, string type = null)
+        {
+             ApiResponse<ActionCertificateListing> localVarResponse = await GetIntegrationsActionsCertificatesAsyncWithHttpInfo(status, type);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="status">Indicates the validity of the certificate in question. (optional)</param>
+        /// <param name="type">Indicates the type of the certificate. (optional)</param>
+        /// <returns>Task of ApiResponse (ActionCertificateListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ActionCertificateListing>> GetIntegrationsActionsCertificatesAsyncWithHttpInfo (string status = null, string type = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/actions/certificates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (status != null) localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(status)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificates: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActionCertificateListing>(localVarStatusCode,
+                localVarHeaders,
+                (ActionCertificateListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionCertificateListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param. 
         /// 
         /// </summary>
@@ -7717,6 +8673,208 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActionEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ActionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get action function settings for Action 
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;FunctionRuntime&gt;</returns>
+        
+        public List<FunctionRuntime> GetIntegrationsActionsFunctionsRuntimes ()
+        {
+             ApiResponse<List<FunctionRuntime>> localVarResponse = GetIntegrationsActionsFunctionsRuntimesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get action function settings for Action 
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;FunctionRuntime&gt;</returns>
+        
+        public ApiResponse< List<FunctionRuntime> > GetIntegrationsActionsFunctionsRuntimesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/integrations/actions/functions/runtimes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsFunctionsRuntimes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsFunctionsRuntimes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<FunctionRuntime>>(localVarStatusCode,
+                localVarHeaders,
+                (List<FunctionRuntime>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FunctionRuntime>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get action function settings for Action 
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;FunctionRuntime&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<FunctionRuntime>> GetIntegrationsActionsFunctionsRuntimesAsync ()
+        {
+             ApiResponse<List<FunctionRuntime>> localVarResponse = await GetIntegrationsActionsFunctionsRuntimesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get action function settings for Action 
+        /// 
+        /// GetIntegrationsActionsFunctionsRuntimes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;FunctionRuntime&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<FunctionRuntime>>> GetIntegrationsActionsFunctionsRuntimesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/integrations/actions/functions/runtimes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsFunctionsRuntimes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsFunctionsRuntimes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<FunctionRuntime>>(localVarStatusCode,
+                localVarHeaders,
+                (List<FunctionRuntime>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FunctionRuntime>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15366,6 +16524,244 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>FunctionUploadResponse</returns>
+        
+        public FunctionUploadResponse PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
+        {
+             ApiResponse<FunctionUploadResponse> localVarResponse = PostIntegrationsActionDraftFunctionUploadWithHttpInfo(actionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>ApiResponse of FunctionUploadResponse</returns>
+        
+        public ApiResponse< FunctionUploadResponse > PostIntegrationsActionDraftFunctionUploadWithHttpInfo (string actionId, FunctionUploadRequest body)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->PostIntegrationsActionDraftFunctionUpload");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftFunctionUpload");
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of FunctionUploadResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FunctionUploadResponse> PostIntegrationsActionDraftFunctionUploadAsync (string actionId, FunctionUploadRequest body)
+        {
+             ApiResponse<FunctionUploadResponse> localVarResponse = await PostIntegrationsActionDraftFunctionUploadAsyncWithHttpInfo(actionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create upload presigned URL for draft function package file. 
+        /// 
+        /// PostIntegrationsActionDraftFunctionUpload is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to request URL upload.</param>
+        /// <returns>Task of ApiResponse (FunctionUploadResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FunctionUploadResponse>> PostIntegrationsActionDraftFunctionUploadAsyncWithHttpInfo (string actionId, FunctionUploadRequest body)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->PostIntegrationsActionDraftFunctionUpload");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftFunctionUpload");
+            
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIntegrationsActionDraftFunctionUpload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Publish a Draft and make it the active Action configuration 
         /// 
         /// </summary>
@@ -17897,6 +19293,244 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IntegrationConfiguration>(localVarStatusCode,
                 localVarHeaders,
                 (IntegrationConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegrationConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update draft function settings. 
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>FunctionConfig</returns>
+        
+        public FunctionConfig PutIntegrationsActionDraftFunction (string actionId, Function body)
+        {
+             ApiResponse<FunctionConfig> localVarResponse = PutIntegrationsActionDraftFunctionWithHttpInfo(actionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update draft function settings. 
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>ApiResponse of FunctionConfig</returns>
+        
+        public ApiResponse< FunctionConfig > PutIntegrationsActionDraftFunctionWithHttpInfo (string actionId, Function body)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->PutIntegrationsActionDraftFunction");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsActionDraftFunction");
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsActionDraftFunction: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsActionDraftFunction: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionConfig)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update draft function settings. 
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>Task of FunctionConfig</returns>
+        
+        public async System.Threading.Tasks.Task<FunctionConfig> PutIntegrationsActionDraftFunctionAsync (string actionId, Function body)
+        {
+             ApiResponse<FunctionConfig> localVarResponse = await PutIntegrationsActionDraftFunctionAsyncWithHttpInfo(actionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update draft function settings. 
+        /// 
+        /// PutIntegrationsActionDraftFunction is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="actionId">actionId</param>
+        /// <param name="body">Input used to update function settings.</param>
+        /// <returns>Task of ApiResponse (FunctionConfig)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FunctionConfig>> PutIntegrationsActionDraftFunctionAsyncWithHttpInfo (string actionId, Function body)
+        { 
+            // verify the required parameter 'actionId' is set
+            if (actionId == null)
+                throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->PutIntegrationsActionDraftFunction");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsActionDraftFunction");
+            
+
+            var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (actionId != null) localVarPathParams.Add("actionId", this.Configuration.ApiClient.ParameterToString(actionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsActionDraftFunction: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIntegrationsActionDraftFunction: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FunctionConfig>(localVarStatusCode,
+                localVarHeaders,
+                (FunctionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FunctionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -22,15 +22,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UserPresence" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Source">Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc..</param>
+        /// <param name="Source">Deprecated - The sourceID field should be used as a replacement..</param>
+        /// <param name="SourceId">Represents the ID of a registered source.</param>
         /// <param name="Primary">A boolean used to tell whether or not to set this presence source as the primary on a PATCH.</param>
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public UserPresence(string Name = null, string Source = null, bool? Primary = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
+        public UserPresence(string Name = null, string Source = null, string SourceId = null, bool? Primary = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.Source = Source;
+            this.SourceId = SourceId;
             this.Primary = Primary;
             this.PresenceDefinition = PresenceDefinition;
             this.Message = Message;
@@ -58,11 +60,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc.
+        /// Deprecated - The sourceID field should be used as a replacement.
         /// </summary>
-        /// <value>Represents the source where the Presence was set. Some examples are: PURECLOUD, LYNC, OUTLOOK, etc.</value>
+        /// <value>Deprecated - The sourceID field should be used as a replacement.</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
+
+
+
+        /// <summary>
+        /// Represents the ID of a registered source
+        /// </summary>
+        /// <value>Represents the ID of a registered source</value>
+        [DataMember(Name="sourceId", EmitDefaultValue=false)]
+        public string SourceId { get; set; }
 
 
 
@@ -120,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  SourceId: ").Append(SourceId).Append("\n");
             sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
@@ -181,6 +193,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Source.Equals(other.Source)
                 ) &&
                 (
+                    this.SourceId == other.SourceId ||
+                    this.SourceId != null &&
+                    this.SourceId.Equals(other.SourceId)
+                ) &&
+                (
                     this.Primary == other.Primary ||
                     this.Primary != null &&
                     this.Primary.Equals(other.Primary)
@@ -226,6 +243,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
+
+                if (this.SourceId != null)
+                    hash = hash * 59 + this.SourceId.GetHashCode();
 
                 if (this.Primary != null)
                     hash = hash * 59 + this.Primary.GetHashCode();

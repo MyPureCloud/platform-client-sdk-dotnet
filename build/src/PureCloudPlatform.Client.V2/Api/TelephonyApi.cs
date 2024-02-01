@@ -43,7 +43,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -56,7 +55,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -69,7 +67,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -83,7 +80,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -205,7 +201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -218,7 +213,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -231,7 +225,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -245,7 +238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -629,7 +621,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a SIP message. 
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -644,7 +635,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a SIP message. 
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -735,7 +725,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a SIP message. 
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -751,7 +740,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a SIP message. 
         /// Get the raw form of the SIP message
-        /// GetTelephonySipmessagesConversation is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -844,7 +832,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get SIP headers. 
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -860,7 +847,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get SIP headers. 
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -953,7 +939,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get SIP headers. 
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>
@@ -970,7 +955,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get SIP headers. 
         /// Get parsed SIP headers. Returns specific headers if key query parameters are added.
-        /// GetTelephonySipmessagesConversationHeaders is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation id</param>

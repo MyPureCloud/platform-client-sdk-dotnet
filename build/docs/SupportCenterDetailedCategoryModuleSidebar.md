@@ -7,7 +7,7 @@ title: SupportCenterDetailedCategoryModuleSidebar
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Enabled** | **bool?** | Whether sidebar is enabled or not | [optional] |
+| **Enabled** | **bool?** | Whether sidebar is enabled or not | |
 {: class="table table-striped"}
 
 

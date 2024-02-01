@@ -1056,9 +1056,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Prompt</returns>
         
-        Prompt GetArchitectPrompt (string promptId);
+        Prompt GetArchitectPrompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get specified user prompt
@@ -1068,9 +1071,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of Prompt</returns>
         
-        ApiResponse<Prompt> GetArchitectPromptWithHttpInfo (string promptId);
+        ApiResponse<Prompt> GetArchitectPromptWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get generated prompt history
@@ -1176,9 +1182,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>PromptEntityListing</returns>
         
-        PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get a pageable list of user prompts
@@ -1194,9 +1203,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
         
-        ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get a schedule by ID
@@ -1396,9 +1408,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>SystemPrompt</returns>
         
-        SystemPrompt GetArchitectSystemprompt (string promptId);
+        SystemPrompt GetArchitectSystemprompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get a system prompt
@@ -1408,9 +1423,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of SystemPrompt</returns>
         
-        ApiResponse<SystemPrompt> GetArchitectSystempromptWithHttpInfo (string promptId);
+        ApiResponse<SystemPrompt> GetArchitectSystempromptWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get generated prompt history
@@ -1520,9 +1538,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>SystemPromptEntityListing</returns>
         
-        SystemPromptEntityListing GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
+        SystemPromptEntityListing GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get System Prompts
@@ -1538,9 +1559,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of SystemPromptEntityListing</returns>
         
-        ApiResponse<SystemPromptEntityListing> GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
+        ApiResponse<SystemPromptEntityListing> GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get flow
@@ -4756,9 +4780,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of Prompt</returns>
         
-        System.Threading.Tasks.Task<Prompt> GetArchitectPromptAsync (string promptId);
+        System.Threading.Tasks.Task<Prompt> GetArchitectPromptAsync (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get specified user prompt
@@ -4768,9 +4795,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId);
+        System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get generated prompt history
@@ -4876,9 +4906,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of PromptEntityListing</returns>
         
-        System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get a pageable list of user prompts
@@ -4894,9 +4927,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get a schedule by ID
@@ -5096,9 +5132,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of SystemPrompt</returns>
         
-        System.Threading.Tasks.Task<SystemPrompt> GetArchitectSystempromptAsync (string promptId);
+        System.Threading.Tasks.Task<SystemPrompt> GetArchitectSystempromptAsync (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get a system prompt
@@ -5108,9 +5147,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId);
+        System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get generated prompt history
@@ -5220,9 +5262,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of SystemPromptEntityListing</returns>
         
-        System.Threading.Tasks.Task<SystemPromptEntityListing> GetArchitectSystempromptsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
+        System.Threading.Tasks.Task<SystemPromptEntityListing> GetArchitectSystempromptsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get System Prompts
@@ -5238,9 +5283,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
+        System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null);
 
         /// <summary>
         /// Get flow
@@ -15582,11 +15630,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Prompt</returns>
         
-        public Prompt GetArchitectPrompt (string promptId)
+        public Prompt GetArchitectPrompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<Prompt> localVarResponse = GetArchitectPromptWithHttpInfo(promptId);
+             ApiResponse<Prompt> localVarResponse = GetArchitectPromptWithHttpInfo(promptId, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
         }
 
@@ -15596,9 +15647,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of Prompt</returns>
         
-        public ApiResponse< Prompt > GetArchitectPromptWithHttpInfo (string promptId)
+        public ApiResponse< Prompt > GetArchitectPromptWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -15637,6 +15691,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -15686,11 +15743,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of Prompt</returns>
         
-        public async System.Threading.Tasks.Task<Prompt> GetArchitectPromptAsync (string promptId)
+        public async System.Threading.Tasks.Task<Prompt> GetArchitectPromptAsync (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<Prompt> localVarResponse = await GetArchitectPromptAsyncWithHttpInfo(promptId);
+             ApiResponse<Prompt> localVarResponse = await GetArchitectPromptAsyncWithHttpInfo(promptId, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
 
         }
@@ -15701,9 +15761,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId)
+        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -15743,6 +15806,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16500,11 +16566,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>PromptEntityListing</returns>
         
-        public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<PromptEntityListing> localVarResponse = GetArchitectPromptsWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
+             ApiResponse<PromptEntityListing> localVarResponse = GetArchitectPromptsWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
         }
 
@@ -16520,9 +16589,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
         
-        public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
 
             var localVarPath = "/api/v2/architect/prompts";
@@ -16564,6 +16636,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16619,11 +16694,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of PromptEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<PromptEntityListing> localVarResponse = await GetArchitectPromptsAsyncWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
+             ApiResponse<PromptEntityListing> localVarResponse = await GetArchitectPromptsAsyncWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
 
         }
@@ -16640,9 +16718,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
 
             var localVarPath = "/api/v2/architect/prompts";
@@ -16684,6 +16765,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -18110,11 +18194,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>SystemPrompt</returns>
         
-        public SystemPrompt GetArchitectSystemprompt (string promptId)
+        public SystemPrompt GetArchitectSystemprompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<SystemPrompt> localVarResponse = GetArchitectSystempromptWithHttpInfo(promptId);
+             ApiResponse<SystemPrompt> localVarResponse = GetArchitectSystempromptWithHttpInfo(promptId, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
         }
 
@@ -18124,9 +18211,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of SystemPrompt</returns>
         
-        public ApiResponse< SystemPrompt > GetArchitectSystempromptWithHttpInfo (string promptId)
+        public ApiResponse< SystemPrompt > GetArchitectSystempromptWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -18165,6 +18255,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -18214,11 +18307,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of SystemPrompt</returns>
         
-        public async System.Threading.Tasks.Task<SystemPrompt> GetArchitectSystempromptAsync (string promptId)
+        public async System.Threading.Tasks.Task<SystemPrompt> GetArchitectSystempromptAsync (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<SystemPrompt> localVarResponse = await GetArchitectSystempromptAsyncWithHttpInfo(promptId);
+             ApiResponse<SystemPrompt> localVarResponse = await GetArchitectSystempromptAsyncWithHttpInfo(promptId, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
 
         }
@@ -18229,9 +18325,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -18271,6 +18370,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -19040,11 +19142,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>SystemPromptEntityListing</returns>
         
-        public SystemPromptEntityListing GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
+        public SystemPromptEntityListing GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<SystemPromptEntityListing> localVarResponse = GetArchitectSystempromptsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
+             ApiResponse<SystemPromptEntityListing> localVarResponse = GetArchitectSystempromptsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
         }
 
@@ -19060,9 +19165,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>ApiResponse of SystemPromptEntityListing</returns>
         
-        public ApiResponse< SystemPromptEntityListing > GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
+        public ApiResponse< SystemPromptEntityListing > GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
 
             var localVarPath = "/api/v2/architect/systemprompts";
@@ -19104,6 +19212,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -19159,11 +19270,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of SystemPromptEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<SystemPromptEntityListing> GetArchitectSystempromptsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
+        public async System.Threading.Tasks.Task<SystemPromptEntityListing> GetArchitectSystempromptsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         {
-             ApiResponse<SystemPromptEntityListing> localVarResponse = await GetArchitectSystempromptsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
+             ApiResponse<SystemPromptEntityListing> localVarResponse = await GetArchitectSystempromptsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription, includeMediaUris, includeResources, language);
              return localVarResponse.Data;
 
         }
@@ -19180,9 +19294,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="includeMediaUris">Include the media URIs for each resource (optional, default to true)</param>
+        /// <param name="includeResources">Include the resources for each system prompt (optional, default to true)</param>
+        /// <param name="language">Filter the resources down to the provided languages (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
         { 
 
             var localVarPath = "/api/v2/architect/systemprompts";
@@ -19224,6 +19341,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (includeMediaUris != null) localVarQueryParams.Add(new Tuple<string, string>("includeMediaUris", this.Configuration.ApiClient.ParameterToString(includeMediaUris)));
+            if (includeResources != null) localVarQueryParams.Add(new Tuple<string, string>("includeResources", this.Configuration.ApiClient.ParameterToString(includeResources)));
+            if (language != null) language.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

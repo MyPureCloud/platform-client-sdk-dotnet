@@ -4223,6 +4223,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SecureSession> PostConversationParticipantSecureivrsessionsWithHttpInfo (string conversationId, string participantId, CreateSecureSession body = null);
 
         /// <summary>
+        /// Submit feedback for the summary.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        
+        void PostConversationSummaryFeedback (string conversationId, string summaryId, FeedbackAddRequest body = null);
+
+        /// <summary>
+        /// Submit feedback for the summary.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostConversationSummaryFeedbackWithHttpInfo (string conversationId, string summaryId, FeedbackAddRequest body = null);
+
+        /// <summary>
         /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
@@ -5531,27 +5559,27 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InstagramIntegration> PostConversationsMessagingIntegrationsInstagramWithHttpInfo (InstagramIntegrationRequest body);
 
         /// <summary>
-        /// Create a LINE messenger Integration
+        /// Create a LINE messenger Integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>LineIntegration</returns>
-        
+        [Obsolete]
         LineIntegration PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body);
 
         /// <summary>
-        /// Create a LINE messenger Integration
+        /// Create a LINE messenger Integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        
+        [Obsolete]
         ApiResponse<LineIntegration> PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body);
 
         /// <summary>
@@ -10541,6 +10569,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SecureSession>> PostConversationParticipantSecureivrsessionsAsyncWithHttpInfo (string conversationId, string participantId, CreateSecureSession body = null);
 
         /// <summary>
+        /// Submit feedback for the summary.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostConversationSummaryFeedbackAsync (string conversationId, string summaryId, FeedbackAddRequest body = null);
+
+        /// <summary>
+        /// Submit feedback for the summary.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationSummaryFeedbackAsyncWithHttpInfo (string conversationId, string summaryId, FeedbackAddRequest body = null);
+
+        /// <summary>
         /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
@@ -11849,27 +11905,27 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InstagramIntegration>> PostConversationsMessagingIntegrationsInstagramAsyncWithHttpInfo (InstagramIntegrationRequest body);
 
         /// <summary>
-        /// Create a LINE messenger Integration
+        /// Create a LINE messenger Integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of LineIntegration</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<LineIntegration> PostConversationsMessagingIntegrationsLineAsync (LineIntegrationRequest body);
 
         /// <summary>
-        /// Create a LINE messenger Integration
+        /// Create a LINE messenger Integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body);
 
         /// <summary>
@@ -48564,6 +48620,244 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Submit feedback for the summary. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        
+        public void PostConversationSummaryFeedback (string conversationId, string summaryId, FeedbackAddRequest body = null)
+        {
+             PostConversationSummaryFeedbackWithHttpInfo(conversationId, summaryId, body);
+        }
+
+        /// <summary>
+        /// Submit feedback for the summary. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostConversationSummaryFeedbackWithHttpInfo (string conversationId, string summaryId, FeedbackAddRequest body = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationSummaryFeedback");
+            // verify the required parameter 'summaryId' is set
+            if (summaryId == null)
+                throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PostConversationSummaryFeedback");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (summaryId != null) localVarPathParams.Add("summaryId", this.Configuration.ApiClient.ParameterToString(summaryId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationSummaryFeedback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationSummaryFeedback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Submit feedback for the summary. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostConversationSummaryFeedbackAsync (string conversationId, string summaryId, FeedbackAddRequest body = null)
+        {
+             await PostConversationSummaryFeedbackAsyncWithHttpInfo(conversationId, summaryId, body);
+
+        }
+
+        /// <summary>
+        /// Submit feedback for the summary. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="summaryId">Summary ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationSummaryFeedbackAsyncWithHttpInfo (string conversationId, string summaryId, FeedbackAddRequest body = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationSummaryFeedback");
+            
+            // verify the required parameter 'summaryId' is set
+            if (summaryId == null)
+                throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PostConversationSummaryFeedback");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (summaryId != null) localVarPathParams.Add("summaryId", this.Configuration.ApiClient.ParameterToString(summaryId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationSummaryFeedback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationSummaryFeedback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Place a new call as part of a callback conversation. 
         /// 
         /// </summary>
@@ -60040,13 +60334,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a LINE messenger Integration 
-        /// 
+        /// Create a LINE messenger Integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>LineIntegration</returns>
-        
+        [Obsolete]
         public LineIntegration PostConversationsMessagingIntegrationsLine (LineIntegrationRequest body)
         {
              ApiResponse<LineIntegration> localVarResponse = PostConversationsMessagingIntegrationsLineWithHttpInfo(body);
@@ -60054,13 +60348,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a LINE messenger Integration 
-        /// 
+        /// Create a LINE messenger Integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        
+        [Obsolete]
         public ApiResponse< LineIntegration > PostConversationsMessagingIntegrationsLineWithHttpInfo (LineIntegrationRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -60149,13 +60443,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a LINE messenger Integration 
-        /// 
+        /// Create a LINE messenger Integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of LineIntegration</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<LineIntegration> PostConversationsMessagingIntegrationsLineAsync (LineIntegrationRequest body)
         {
              ApiResponse<LineIntegration> localVarResponse = await PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo(body);
@@ -60164,13 +60458,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a LINE messenger Integration 
-        /// 
+        /// Create a LINE messenger Integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PostConversationsMessagingIntegrationsLineAsyncWithHttpInfo (LineIntegrationRequest body)
         { 
             // verify the required parameter 'body' is set

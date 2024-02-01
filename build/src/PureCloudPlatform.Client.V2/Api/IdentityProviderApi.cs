@@ -17,6 +17,30 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Delete Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns></returns>
+        
+        void DeleteIdentityprovider (string providerId);
+
+        /// <summary>
+        /// Delete Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteIdentityproviderWithHttpInfo (string providerId);
+
+        /// <summary>
         /// Delete ADFS Identity Provider
         /// </summary>
         /// <remarks>
@@ -259,15 +283,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteIdentityprovidersSalesforceWithHttpInfo ();
 
         /// <summary>
-        /// The list of identity providers
+        /// Get Identity Provider
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>OAuthProviderEntityListing</returns>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>CustomProvider</returns>
         
-        OAuthProviderEntityListing GetIdentityproviders ();
+        CustomProvider GetIdentityprovider (string providerId);
+
+        /// <summary>
+        /// Get Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>ApiResponse of CustomProvider</returns>
+        
+        ApiResponse<CustomProvider> GetIdentityproviderWithHttpInfo (string providerId);
 
         /// <summary>
         /// The list of identity providers
@@ -276,9 +313,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of OAuthProviderEntityListing</returns>
+        /// <returns>IdentityProviderEntityListing</returns>
         
-        ApiResponse<OAuthProviderEntityListing> GetIdentityprovidersWithHttpInfo ();
+        IdentityProviderEntityListing GetIdentityproviders ();
+
+        /// <summary>
+        /// The list of identity providers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of IdentityProviderEntityListing</returns>
+        
+        ApiResponse<IdentityProviderEntityListing> GetIdentityprovidersWithHttpInfo ();
 
         /// <summary>
         /// Get ADFS Identity Provider
@@ -523,16 +571,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Salesforce> GetIdentityprovidersSalesforceWithHttpInfo ();
 
         /// <summary>
-        /// Update/Create ADFS Identity Provider
+        /// Create Identity Provider
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>CustomProvider</returns>
         
-        OAuthProvider PutIdentityprovidersAdfs (ADFS body);
+        CustomProvider PostIdentityproviders (CustomProvider body);
+
+        /// <summary>
+        /// Create Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of CustomProvider</returns>
+        
+        ApiResponse<CustomProvider> PostIdentityprovidersWithHttpInfo (CustomProvider body);
+
+        /// <summary>
+        /// Update Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>CustomProvider</returns>
+        
+        CustomProvider PutIdentityprovider (string providerId, CustomProvider body);
+
+        /// <summary>
+        /// Update Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of CustomProvider</returns>
+        
+        ApiResponse<CustomProvider> PutIdentityproviderWithHttpInfo (string providerId, CustomProvider body);
 
         /// <summary>
         /// Update/Create ADFS Identity Provider
@@ -542,9 +628,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersAdfsWithHttpInfo (ADFS body);
+        IdentityProvider PutIdentityprovidersAdfs (ADFS body);
+
+        /// <summary>
+        /// Update/Create ADFS Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of IdentityProvider</returns>
+        
+        ApiResponse<IdentityProvider> PutIdentityprovidersAdfsWithHttpInfo (ADFS body);
 
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -554,9 +652,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersCic (CustomerInteractionCenter body);
+        IdentityProvider PutIdentityprovidersCic (CustomerInteractionCenter body);
 
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -566,9 +664,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersCicWithHttpInfo (CustomerInteractionCenter body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersCicWithHttpInfo (CustomerInteractionCenter body);
 
         /// <summary>
         /// Update/Create Generic SAML Identity Provider
@@ -578,9 +676,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersGeneric (GenericSAML body);
+        IdentityProvider PutIdentityprovidersGeneric (GenericSAML body);
 
         /// <summary>
         /// Update/Create Generic SAML Identity Provider
@@ -590,9 +688,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersGenericWithHttpInfo (GenericSAML body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersGenericWithHttpInfo (GenericSAML body);
 
         /// <summary>
         /// Update/Create G Suite Identity Provider
@@ -602,9 +700,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersGsuite (GSuite body);
+        IdentityProvider PutIdentityprovidersGsuite (GSuite body);
 
         /// <summary>
         /// Update/Create G Suite Identity Provider
@@ -614,9 +712,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersGsuiteWithHttpInfo (GSuite body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersGsuiteWithHttpInfo (GSuite body);
 
         /// <summary>
         /// Update/Create IdentityNow Provider
@@ -650,9 +748,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersOkta (Okta body);
+        IdentityProvider PutIdentityprovidersOkta (Okta body);
 
         /// <summary>
         /// Update/Create Okta Identity Provider
@@ -662,9 +760,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersOktaWithHttpInfo (Okta body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersOktaWithHttpInfo (Okta body);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -674,9 +772,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersOnelogin (OneLogin body);
+        IdentityProvider PutIdentityprovidersOnelogin (OneLogin body);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -686,9 +784,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersOneloginWithHttpInfo (OneLogin body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersOneloginWithHttpInfo (OneLogin body);
 
         /// <summary>
         /// Update/Create Ping Identity Provider
@@ -698,9 +796,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersPing (PingIdentity body);
+        IdentityProvider PutIdentityprovidersPing (PingIdentity body);
 
         /// <summary>
         /// Update/Create Ping Identity Provider
@@ -710,9 +808,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersPingWithHttpInfo (PingIdentity body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersPingWithHttpInfo (PingIdentity body);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -722,9 +820,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersPurecloud (PureCloud body);
+        IdentityProvider PutIdentityprovidersPurecloud (PureCloud body);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -734,9 +832,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersPurecloudWithHttpInfo (PureCloud body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersPurecloudWithHttpInfo (PureCloud body);
 
         /// <summary>
         /// Update/Create PureEngage Identity Provider
@@ -746,9 +844,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersPureengage (PureEngage body);
+        IdentityProvider PutIdentityprovidersPureengage (PureEngage body);
 
         /// <summary>
         /// Update/Create PureEngage Identity Provider
@@ -758,9 +856,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersPureengageWithHttpInfo (PureEngage body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersPureengageWithHttpInfo (PureEngage body);
 
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -770,9 +868,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        OAuthProvider PutIdentityprovidersSalesforce (Salesforce body);
+        IdentityProvider PutIdentityprovidersSalesforce (Salesforce body);
 
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -782,13 +880,37 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        ApiResponse<OAuthProvider> PutIdentityprovidersSalesforceWithHttpInfo (Salesforce body);
+        ApiResponse<IdentityProvider> PutIdentityprovidersSalesforceWithHttpInfo (Salesforce body);
 
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
+
+        /// <summary>
+        /// Delete Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteIdentityproviderAsync (string providerId);
+
+        /// <summary>
+        /// Delete Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityproviderAsyncWithHttpInfo (string providerId);
 
         /// <summary>
         /// Delete ADFS Identity Provider
@@ -1033,15 +1155,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersSalesforceAsyncWithHttpInfo ();
 
         /// <summary>
-        /// The list of identity providers
+        /// Get Identity Provider
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of OAuthProviderEntityListing</returns>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of CustomProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProviderEntityListing> GetIdentityprovidersAsync ();
+        System.Threading.Tasks.Task<CustomProvider> GetIdentityproviderAsync (string providerId);
+
+        /// <summary>
+        /// Get Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of ApiResponse (CustomProvider)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CustomProvider>> GetIdentityproviderAsyncWithHttpInfo (string providerId);
 
         /// <summary>
         /// The list of identity providers
@@ -1050,9 +1185,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (OAuthProviderEntityListing)</returns>
+        /// <returns>Task of IdentityProviderEntityListing</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<IdentityProviderEntityListing> GetIdentityprovidersAsync ();
+
+        /// <summary>
+        /// The list of identity providers
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (IdentityProviderEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get ADFS Identity Provider
@@ -1297,16 +1443,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Salesforce>> GetIdentityprovidersSalesforceAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Update/Create ADFS Identity Provider
+        /// Create Identity Provider
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of CustomProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersAdfsAsync (ADFS body);
+        System.Threading.Tasks.Task<CustomProvider> PostIdentityprovidersAsync (CustomProvider body);
+
+        /// <summary>
+        /// Create Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse (CustomProvider)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CustomProvider>> PostIdentityprovidersAsyncWithHttpInfo (CustomProvider body);
+
+        /// <summary>
+        /// Update Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of CustomProvider</returns>
+        
+        System.Threading.Tasks.Task<CustomProvider> PutIdentityproviderAsync (string providerId, CustomProvider body);
+
+        /// <summary>
+        /// Update Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse (CustomProvider)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CustomProvider>> PutIdentityproviderAsyncWithHttpInfo (string providerId, CustomProvider body);
 
         /// <summary>
         /// Update/Create ADFS Identity Provider
@@ -1316,9 +1500,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersAdfsAsyncWithHttpInfo (ADFS body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersAdfsAsync (ADFS body);
+
+        /// <summary>
+        /// Update/Create ADFS Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersAdfsAsyncWithHttpInfo (ADFS body);
 
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -1328,9 +1524,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersCicAsync (CustomerInteractionCenter body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersCicAsync (CustomerInteractionCenter body);
 
         /// <summary>
         /// Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -1340,9 +1536,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersCicAsyncWithHttpInfo (CustomerInteractionCenter body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersCicAsyncWithHttpInfo (CustomerInteractionCenter body);
 
         /// <summary>
         /// Update/Create Generic SAML Identity Provider
@@ -1352,9 +1548,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGenericAsync (GenericSAML body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersGenericAsync (GenericSAML body);
 
         /// <summary>
         /// Update/Create Generic SAML Identity Provider
@@ -1364,9 +1560,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGenericAsyncWithHttpInfo (GenericSAML body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersGenericAsyncWithHttpInfo (GenericSAML body);
 
         /// <summary>
         /// Update/Create G Suite Identity Provider
@@ -1376,9 +1572,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGsuiteAsync (GSuite body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersGsuiteAsync (GSuite body);
 
         /// <summary>
         /// Update/Create G Suite Identity Provider
@@ -1388,9 +1584,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGsuiteAsyncWithHttpInfo (GSuite body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersGsuiteAsyncWithHttpInfo (GSuite body);
 
         /// <summary>
         /// Update/Create IdentityNow Provider
@@ -1424,9 +1620,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOktaAsync (Okta body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersOktaAsync (Okta body);
 
         /// <summary>
         /// Update/Create Okta Identity Provider
@@ -1436,9 +1632,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOktaAsyncWithHttpInfo (Okta body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersOktaAsyncWithHttpInfo (Okta body);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -1448,9 +1644,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOneloginAsync (OneLogin body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersOneloginAsync (OneLogin body);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -1460,9 +1656,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOneloginAsyncWithHttpInfo (OneLogin body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersOneloginAsyncWithHttpInfo (OneLogin body);
 
         /// <summary>
         /// Update/Create Ping Identity Provider
@@ -1472,9 +1668,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPingAsync (PingIdentity body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersPingAsync (PingIdentity body);
 
         /// <summary>
         /// Update/Create Ping Identity Provider
@@ -1484,9 +1680,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPingAsyncWithHttpInfo (PingIdentity body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersPingAsyncWithHttpInfo (PingIdentity body);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -1496,9 +1692,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPurecloudAsync (PureCloud body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersPurecloudAsync (PureCloud body);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -1508,9 +1704,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPurecloudAsyncWithHttpInfo (PureCloud body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersPurecloudAsyncWithHttpInfo (PureCloud body);
 
         /// <summary>
         /// Update/Create PureEngage Identity Provider
@@ -1520,9 +1716,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEngage body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersPureengageAsync (PureEngage body);
 
         /// <summary>
         /// Update/Create PureEngage Identity Provider
@@ -1532,9 +1728,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body);
 
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -1544,9 +1740,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersSalesforceAsync (Salesforce body);
+        System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersSalesforceAsync (Salesforce body);
 
         /// <summary>
         /// Update/Create Salesforce Identity Provider
@@ -1556,9 +1752,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersSalesforceAsyncWithHttpInfo (Salesforce body);
+        System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersSalesforceAsyncWithHttpInfo (Salesforce body);
 
         #endregion Asynchronous Operations
 
@@ -1650,6 +1846,215 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Delete Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns></returns>
+        
+        public void DeleteIdentityprovider (string providerId)
+        {
+             DeleteIdentityproviderWithHttpInfo(providerId);
+        }
+
+        /// <summary>
+        /// Delete Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteIdentityproviderWithHttpInfo (string providerId)
+        { 
+            // verify the required parameter 'providerId' is set
+            if (providerId == null)
+                throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->DeleteIdentityprovider");
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (providerId != null) localVarPathParams.Add("providerId", this.Configuration.ApiClient.ParameterToString(providerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteIdentityproviderAsync (string providerId)
+        {
+             await DeleteIdentityproviderAsyncWithHttpInfo(providerId);
+
+        }
+
+        /// <summary>
+        /// Delete Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityproviderAsyncWithHttpInfo (string providerId)
+        { 
+            // verify the required parameter 'providerId' is set
+            if (providerId == null)
+                throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->DeleteIdentityprovider");
+            
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (providerId != null) localVarPathParams.Add("providerId", this.Configuration.ApiClient.ParameterToString(providerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>
@@ -3831,15 +4236,226 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>CustomProvider</returns>
+        
+        public CustomProvider GetIdentityprovider (string providerId)
+        {
+             ApiResponse<CustomProvider> localVarResponse = GetIdentityproviderWithHttpInfo(providerId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>ApiResponse of CustomProvider</returns>
+        
+        public ApiResponse< CustomProvider > GetIdentityproviderWithHttpInfo (string providerId)
+        { 
+            // verify the required parameter 'providerId' is set
+            if (providerId == null)
+                throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->GetIdentityprovider");
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (providerId != null) localVarPathParams.Add("providerId", this.Configuration.ApiClient.ParameterToString(providerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CustomProvider>(localVarStatusCode,
+                localVarHeaders,
+                (CustomProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomProvider)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of CustomProvider</returns>
+        
+        public async System.Threading.Tasks.Task<CustomProvider> GetIdentityproviderAsync (string providerId)
+        {
+             ApiResponse<CustomProvider> localVarResponse = await GetIdentityproviderAsyncWithHttpInfo(providerId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <returns>Task of ApiResponse (CustomProvider)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CustomProvider>> GetIdentityproviderAsyncWithHttpInfo (string providerId)
+        { 
+            // verify the required parameter 'providerId' is set
+            if (providerId == null)
+                throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->GetIdentityprovider");
+            
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (providerId != null) localVarPathParams.Add("providerId", this.Configuration.ApiClient.ParameterToString(providerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CustomProvider>(localVarStatusCode,
+                localVarHeaders,
+                (CustomProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomProvider)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// The list of identity providers 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>OAuthProviderEntityListing</returns>
+        /// <returns>IdentityProviderEntityListing</returns>
         
-        public OAuthProviderEntityListing GetIdentityproviders ()
+        public IdentityProviderEntityListing GetIdentityproviders ()
         {
-             ApiResponse<OAuthProviderEntityListing> localVarResponse = GetIdentityprovidersWithHttpInfo();
+             ApiResponse<IdentityProviderEntityListing> localVarResponse = GetIdentityprovidersWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -3848,9 +4464,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of OAuthProviderEntityListing</returns>
+        /// <returns>ApiResponse of IdentityProviderEntityListing</returns>
         
-        public ApiResponse< OAuthProviderEntityListing > GetIdentityprovidersWithHttpInfo ()
+        public ApiResponse< IdentityProviderEntityListing > GetIdentityprovidersWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/identityproviders";
@@ -3920,9 +4536,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProviderEntityListing>(localVarStatusCode,
+            return new ApiResponse<IdentityProviderEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProviderEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProviderEntityListing)),
+                (IdentityProviderEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProviderEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3933,11 +4549,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of OAuthProviderEntityListing</returns>
+        /// <returns>Task of IdentityProviderEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProviderEntityListing> GetIdentityprovidersAsync ()
+        public async System.Threading.Tasks.Task<IdentityProviderEntityListing> GetIdentityprovidersAsync ()
         {
-             ApiResponse<OAuthProviderEntityListing> localVarResponse = await GetIdentityprovidersAsyncWithHttpInfo();
+             ApiResponse<IdentityProviderEntityListing> localVarResponse = await GetIdentityprovidersAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -3947,9 +4563,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (OAuthProviderEntityListing)</returns>
+        /// <returns>Task of ApiResponse (IdentityProviderEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/identityproviders";
@@ -4019,9 +4635,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIdentityproviders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProviderEntityListing>(localVarStatusCode,
+            return new ApiResponse<IdentityProviderEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProviderEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProviderEntityListing)),
+                (IdentityProviderEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProviderEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6207,16 +6823,471 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>CustomProvider</returns>
+        
+        public CustomProvider PostIdentityproviders (CustomProvider body)
+        {
+             ApiResponse<CustomProvider> localVarResponse = PostIdentityprovidersWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of CustomProvider</returns>
+        
+        public ApiResponse< CustomProvider > PostIdentityprovidersWithHttpInfo (CustomProvider body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PostIdentityproviders");
+
+            var localVarPath = "/api/v2/identityproviders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIdentityproviders: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIdentityproviders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CustomProvider>(localVarStatusCode,
+                localVarHeaders,
+                (CustomProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomProvider)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of CustomProvider</returns>
+        
+        public async System.Threading.Tasks.Task<CustomProvider> PostIdentityprovidersAsync (CustomProvider body)
+        {
+             ApiResponse<CustomProvider> localVarResponse = await PostIdentityprovidersAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse (CustomProvider)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CustomProvider>> PostIdentityprovidersAsyncWithHttpInfo (CustomProvider body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PostIdentityproviders");
+            
+
+            var localVarPath = "/api/v2/identityproviders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostIdentityproviders: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostIdentityproviders: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CustomProvider>(localVarStatusCode,
+                localVarHeaders,
+                (CustomProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomProvider)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>CustomProvider</returns>
+        
+        public CustomProvider PutIdentityprovider (string providerId, CustomProvider body)
+        {
+             ApiResponse<CustomProvider> localVarResponse = PutIdentityproviderWithHttpInfo(providerId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of CustomProvider</returns>
+        
+        public ApiResponse< CustomProvider > PutIdentityproviderWithHttpInfo (string providerId, CustomProvider body)
+        { 
+            // verify the required parameter 'providerId' is set
+            if (providerId == null)
+                throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->PutIdentityprovider");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovider");
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (providerId != null) localVarPathParams.Add("providerId", this.Configuration.ApiClient.ParameterToString(providerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CustomProvider>(localVarStatusCode,
+                localVarHeaders,
+                (CustomProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomProvider)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of CustomProvider</returns>
+        
+        public async System.Threading.Tasks.Task<CustomProvider> PutIdentityproviderAsync (string providerId, CustomProvider body)
+        {
+             ApiResponse<CustomProvider> localVarResponse = await PutIdentityproviderAsyncWithHttpInfo(providerId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Identity Provider 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="providerId">Provider ID</param>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse (CustomProvider)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CustomProvider>> PutIdentityproviderAsyncWithHttpInfo (string providerId, CustomProvider body)
+        { 
+            // verify the required parameter 'providerId' is set
+            if (providerId == null)
+                throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->PutIdentityprovider");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovider");
+            
+
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (providerId != null) localVarPathParams.Add("providerId", this.Configuration.ApiClient.ParameterToString(providerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovider: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CustomProvider>(localVarStatusCode,
+                localVarHeaders,
+                (CustomProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CustomProvider)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update/Create ADFS Identity Provider 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersAdfs (ADFS body)
+        public IdentityProvider PutIdentityprovidersAdfs (ADFS body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersAdfsWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersAdfsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6226,9 +7297,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersAdfsWithHttpInfo (ADFS body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersAdfsWithHttpInfo (ADFS body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6307,9 +7378,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6321,11 +7392,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersAdfsAsync (ADFS body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersAdfsAsync (ADFS body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersAdfsAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersAdfsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6336,9 +7407,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersAdfsAsyncWithHttpInfo (ADFS body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersAdfsAsyncWithHttpInfo (ADFS body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6418,9 +7489,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersAdfs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6433,11 +7504,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersCic (CustomerInteractionCenter body)
+        public IdentityProvider PutIdentityprovidersCic (CustomerInteractionCenter body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersCicWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersCicWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6447,9 +7518,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersCicWithHttpInfo (CustomerInteractionCenter body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersCicWithHttpInfo (CustomerInteractionCenter body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6528,9 +7599,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6542,11 +7613,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersCicAsync (CustomerInteractionCenter body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersCicAsync (CustomerInteractionCenter body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersCicAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersCicAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6557,9 +7628,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersCicAsyncWithHttpInfo (CustomerInteractionCenter body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersCicAsyncWithHttpInfo (CustomerInteractionCenter body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6639,9 +7710,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersCic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6654,11 +7725,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersGeneric (GenericSAML body)
+        public IdentityProvider PutIdentityprovidersGeneric (GenericSAML body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersGenericWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersGenericWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6668,9 +7739,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersGenericWithHttpInfo (GenericSAML body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersGenericWithHttpInfo (GenericSAML body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6749,9 +7820,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersGeneric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6763,11 +7834,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGenericAsync (GenericSAML body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersGenericAsync (GenericSAML body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersGenericAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersGenericAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6778,9 +7849,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGenericAsyncWithHttpInfo (GenericSAML body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersGenericAsyncWithHttpInfo (GenericSAML body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6860,9 +7931,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersGeneric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6875,11 +7946,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersGsuite (GSuite body)
+        public IdentityProvider PutIdentityprovidersGsuite (GSuite body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersGsuiteWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersGsuiteWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -6889,9 +7960,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersGsuiteWithHttpInfo (GSuite body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersGsuiteWithHttpInfo (GSuite body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6970,9 +8041,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersGsuite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6984,11 +8055,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGsuiteAsync (GSuite body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersGsuiteAsync (GSuite body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersGsuiteAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersGsuiteAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -6999,9 +8070,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGsuiteAsyncWithHttpInfo (GSuite body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersGsuiteAsyncWithHttpInfo (GSuite body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7081,9 +8152,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersGsuite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7317,11 +8388,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersOkta (Okta body)
+        public IdentityProvider PutIdentityprovidersOkta (Okta body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersOktaWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersOktaWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7331,9 +8402,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersOktaWithHttpInfo (Okta body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersOktaWithHttpInfo (Okta body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7412,9 +8483,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7426,11 +8497,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOktaAsync (Okta body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersOktaAsync (Okta body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersOktaAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersOktaAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7441,9 +8512,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOktaAsyncWithHttpInfo (Okta body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersOktaAsyncWithHttpInfo (Okta body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7523,9 +8594,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersOkta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7538,11 +8609,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersOnelogin (OneLogin body)
+        public IdentityProvider PutIdentityprovidersOnelogin (OneLogin body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersOneloginWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersOneloginWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7552,9 +8623,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersOneloginWithHttpInfo (OneLogin body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersOneloginWithHttpInfo (OneLogin body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7633,9 +8704,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7647,11 +8718,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOneloginAsync (OneLogin body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersOneloginAsync (OneLogin body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersOneloginAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersOneloginAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7662,9 +8733,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOneloginAsyncWithHttpInfo (OneLogin body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersOneloginAsyncWithHttpInfo (OneLogin body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7744,9 +8815,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersOnelogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7759,11 +8830,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersPing (PingIdentity body)
+        public IdentityProvider PutIdentityprovidersPing (PingIdentity body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPingWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersPingWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7773,9 +8844,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersPingWithHttpInfo (PingIdentity body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersPingWithHttpInfo (PingIdentity body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7854,9 +8925,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersPing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7868,11 +8939,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPingAsync (PingIdentity body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersPingAsync (PingIdentity body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPingAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersPingAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7883,9 +8954,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPingAsyncWithHttpInfo (PingIdentity body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersPingAsyncWithHttpInfo (PingIdentity body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7965,9 +9036,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersPing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7980,11 +9051,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersPurecloud (PureCloud body)
+        public IdentityProvider PutIdentityprovidersPurecloud (PureCloud body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPurecloudWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersPurecloudWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7994,9 +9065,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersPurecloudWithHttpInfo (PureCloud body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersPurecloudWithHttpInfo (PureCloud body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8075,9 +9146,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8089,11 +9160,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPurecloudAsync (PureCloud body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersPurecloudAsync (PureCloud body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPurecloudAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersPurecloudAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -8104,9 +9175,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPurecloudAsyncWithHttpInfo (PureCloud body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersPurecloudAsyncWithHttpInfo (PureCloud body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8186,9 +9257,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersPurecloud: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8201,11 +9272,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersPureengage (PureEngage body)
+        public IdentityProvider PutIdentityprovidersPureengage (PureEngage body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPureengageWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersPureengageWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -8215,9 +9286,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersPureengageWithHttpInfo (PureEngage body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersPureengageWithHttpInfo (PureEngage body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8296,9 +9367,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersPureengage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8310,11 +9381,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEngage body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersPureengageAsync (PureEngage body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPureengageAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersPureengageAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -8325,9 +9396,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8407,9 +9478,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersPureengage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8422,11 +9493,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>OAuthProvider</returns>
+        /// <returns>IdentityProvider</returns>
         
-        public OAuthProvider PutIdentityprovidersSalesforce (Salesforce body)
+        public IdentityProvider PutIdentityprovidersSalesforce (Salesforce body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersSalesforceWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = PutIdentityprovidersSalesforceWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -8436,9 +9507,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>ApiResponse of OAuthProvider</returns>
+        /// <returns>ApiResponse of IdentityProvider</returns>
         
-        public ApiResponse< OAuthProvider > PutIdentityprovidersSalesforceWithHttpInfo (Salesforce body)
+        public ApiResponse< IdentityProvider > PutIdentityprovidersSalesforceWithHttpInfo (Salesforce body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8517,9 +9588,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8531,11 +9602,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of OAuthProvider</returns>
+        /// <returns>Task of IdentityProvider</returns>
         
-        public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersSalesforceAsync (Salesforce body)
+        public async System.Threading.Tasks.Task<IdentityProvider> PutIdentityprovidersSalesforceAsync (Salesforce body)
         {
-             ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersSalesforceAsyncWithHttpInfo(body);
+             ApiResponse<IdentityProvider> localVarResponse = await PutIdentityprovidersSalesforceAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -8546,9 +9617,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
-        /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        /// <returns>Task of ApiResponse (IdentityProvider)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersSalesforceAsyncWithHttpInfo (Salesforce body)
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityProvider>> PutIdentityprovidersSalesforceAsyncWithHttpInfo (Salesforce body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8628,9 +9699,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutIdentityprovidersSalesforce: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<OAuthProvider>(localVarStatusCode,
+            return new ApiResponse<IdentityProvider>(localVarStatusCode,
                 localVarHeaders,
-                (OAuthProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthProvider)),
+                (IdentityProvider) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityProvider)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
