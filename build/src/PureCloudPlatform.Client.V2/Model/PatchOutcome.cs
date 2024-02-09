@@ -35,9 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Context">The context of the outcome..</param>
         /// <param name="Journey">The pattern of rules defining the filter of the outcome..</param>
         /// <param name="AssociatedValueField">The field from the event indicating the associated value..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedDate">Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public PatchOutcome(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, bool? IsPositive = null, Context Context = null, Journey Journey = null, AssociatedValueField AssociatedValueField = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        public PatchOutcome(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, bool? IsPositive = null, PatchContext Context = null, PatchJourney Journey = null, PatchAssociatedValueField AssociatedValueField = null)
         {
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
@@ -47,20 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Context = Context;
             this.Journey = Journey;
             this.AssociatedValueField = AssociatedValueField;
-            this.CreatedDate = CreatedDate;
-            this.ModifiedDate = ModifiedDate;
             
         }
         
-
-
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-
 
 
         /// <summary>
@@ -113,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The context of the outcome.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
-        public Context Context { get; set; }
+        public PatchContext Context { get; set; }
 
 
 
@@ -122,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The pattern of rules defining the filter of the outcome.</value>
         [DataMember(Name="journey", EmitDefaultValue=false)]
-        public Journey Journey { get; set; }
+        public PatchJourney Journey { get; set; }
 
 
 
@@ -131,34 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The field from the event indicating the associated value.</value>
         [DataMember(Name="associatedValueField", EmitDefaultValue=false)]
-        public AssociatedValueField AssociatedValueField { get; set; }
-
-
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="createdDate", EmitDefaultValue=false)]
-        public DateTime? CreatedDate { get; set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; set; }
+        public PatchAssociatedValueField AssociatedValueField { get; set; }
 
 
         /// <summary>
@@ -170,7 +130,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class PatchOutcome {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -179,9 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Journey: ").Append(Journey).Append("\n");
             sb.Append("  AssociatedValueField: ").Append(AssociatedValueField).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -223,11 +179,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
                     this.IsActive == other.IsActive ||
                     this.IsActive != null &&
                     this.IsActive.Equals(other.IsActive)
@@ -266,21 +217,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssociatedValueField == other.AssociatedValueField ||
                     this.AssociatedValueField != null &&
                     this.AssociatedValueField.Equals(other.AssociatedValueField)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.CreatedDate == other.CreatedDate ||
-                    this.CreatedDate != null &&
-                    this.CreatedDate.Equals(other.CreatedDate)
-                ) &&
-                (
-                    this.ModifiedDate == other.ModifiedDate ||
-                    this.ModifiedDate != null &&
-                    this.ModifiedDate.Equals(other.ModifiedDate)
                 );
         }
 
@@ -295,9 +231,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
 
@@ -321,15 +254,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AssociatedValueField != null)
                     hash = hash * 59 + this.AssociatedValueField.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
-
-                if (this.CreatedDate != null)
-                    hash = hash * 59 + this.CreatedDate.GetHashCode();
-
-                if (this.ModifiedDate != null)
-                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
 
                 return hash;
             }

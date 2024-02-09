@@ -156,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id of the export job..</param>
         /// <param name="DownloadURL">The URL of the location at which the caller can download the export file, when available..</param>
         /// <param name="FileType">File type of the document (required).</param>
+        /// <param name="JsonFileVersion">Requested version of the exported json file..</param>
         /// <param name="CountDocumentProcessed">The current count of the number of records processed..</param>
         /// <param name="ExportFilter">Filters to narrow down what to export..</param>
         /// <param name="Status">The status of the export job..</param>
@@ -164,11 +165,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The timestamp of when the export stopped. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ErrorInformation">Any error information, or null of the processing is not in failed state..</param>
-        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
+        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? JsonFileVersion = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
         {
             this.Id = Id;
             this.DownloadURL = DownloadURL;
             this.FileType = FileType;
+            this.JsonFileVersion = JsonFileVersion;
             this.CountDocumentProcessed = CountDocumentProcessed;
             this.ExportFilter = ExportFilter;
             this.Status = Status;
@@ -199,6 +201,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DownloadURL { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Requested version of the exported json file.
+        /// </summary>
+        /// <value>Requested version of the exported json file.</value>
+        [DataMember(Name="jsonFileVersion", EmitDefaultValue=false)]
+        public int? JsonFileVersion { get; set; }
 
 
 
@@ -287,6 +298,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadURL: ").Append(DownloadURL).Append("\n");
             sb.Append("  FileType: ").Append(FileType).Append("\n");
+            sb.Append("  JsonFileVersion: ").Append(JsonFileVersion).Append("\n");
             sb.Append("  CountDocumentProcessed: ").Append(CountDocumentProcessed).Append("\n");
             sb.Append("  ExportFilter: ").Append(ExportFilter).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -350,6 +362,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FileType == other.FileType ||
                     this.FileType != null &&
                     this.FileType.Equals(other.FileType)
+                ) &&
+                (
+                    this.JsonFileVersion == other.JsonFileVersion ||
+                    this.JsonFileVersion != null &&
+                    this.JsonFileVersion.Equals(other.JsonFileVersion)
                 ) &&
                 (
                     this.CountDocumentProcessed == other.CountDocumentProcessed ||
@@ -417,6 +434,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FileType != null)
                     hash = hash * 59 + this.FileType.GetHashCode();
+
+                if (this.JsonFileVersion != null)
+                    hash = hash * 59 + this.JsonFileVersion.GetHashCode();
 
                 if (this.CountDocumentProcessed != null)
                     hash = hash * 59 + this.CountDocumentProcessed.GetHashCode();

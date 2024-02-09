@@ -17,6 +17,34 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Get content upload from URL job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>GetUploadSourceUrlJobStatusResponse</returns>
+        
+        GetUploadSourceUrlJobStatusResponse GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId);
+
+        /// <summary>
+        /// Get content upload from URL job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>ApiResponse of GetUploadSourceUrlJobStatusResponse</returns>
+        
+        ApiResponse<GetUploadSourceUrlJobStatusResponse> GetKnowledgeKnowledgebaseUploadsUrlsJobWithHttpInfo (string knowledgeBaseId, string jobId);
+
+        /// <summary>
         /// Create upload presigned URL for draft function package file.
         /// </summary>
         /// <remarks>
@@ -67,6 +95,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UploadUrlResponse</returns>
         
         ApiResponse<UploadUrlResponse> PostKnowledgeDocumentuploadsWithHttpInfo (UploadUrlRequest body);
+
+        /// <summary>
+        /// Create content upload from URL job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>CreateUploadSourceUrlJobResponse</returns>
+        
+        CreateUploadSourceUrlJobResponse PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body);
+
+        /// <summary>
+        /// Create content upload from URL job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>ApiResponse of CreateUploadSourceUrlJobResponse</returns>
+        
+        ApiResponse<CreateUploadSourceUrlJobResponse> PostKnowledgeKnowledgebaseUploadsUrlsJobsWithHttpInfo (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body);
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
@@ -195,6 +251,34 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
+        /// Get content upload from URL job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>Task of GetUploadSourceUrlJobStatusResponse</returns>
+        
+        System.Threading.Tasks.Task<GetUploadSourceUrlJobStatusResponse> GetKnowledgeKnowledgebaseUploadsUrlsJobAsync (string knowledgeBaseId, string jobId);
+
+        /// <summary>
+        /// Get content upload from URL job status
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>Task of ApiResponse (GetUploadSourceUrlJobStatusResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GetUploadSourceUrlJobStatusResponse>> GetKnowledgeKnowledgebaseUploadsUrlsJobAsyncWithHttpInfo (string knowledgeBaseId, string jobId);
+
+        /// <summary>
         /// Create upload presigned URL for draft function package file.
         /// </summary>
         /// <remarks>
@@ -245,6 +329,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UploadUrlResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UploadUrlResponse>> PostKnowledgeDocumentuploadsAsyncWithHttpInfo (UploadUrlRequest body);
+
+        /// <summary>
+        /// Create content upload from URL job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>Task of CreateUploadSourceUrlJobResponse</returns>
+        
+        System.Threading.Tasks.Task<CreateUploadSourceUrlJobResponse> PostKnowledgeKnowledgebaseUploadsUrlsJobsAsync (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body);
+
+        /// <summary>
+        /// Create content upload from URL job
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>Task of ApiResponse (CreateUploadSourceUrlJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CreateUploadSourceUrlJobResponse>> PostKnowledgeKnowledgebaseUploadsUrlsJobsAsyncWithHttpInfo (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body);
 
         /// <summary>
         /// Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
@@ -458,6 +570,234 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Get content upload from URL job status 
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>GetUploadSourceUrlJobStatusResponse</returns>
+        
+        public GetUploadSourceUrlJobStatusResponse GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
+        {
+             ApiResponse<GetUploadSourceUrlJobStatusResponse> localVarResponse = GetKnowledgeKnowledgebaseUploadsUrlsJobWithHttpInfo(knowledgeBaseId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get content upload from URL job status 
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>ApiResponse of GetUploadSourceUrlJobStatusResponse</returns>
+        
+        public ApiResponse< GetUploadSourceUrlJobStatusResponse > GetKnowledgeKnowledgebaseUploadsUrlsJobWithHttpInfo (string knowledgeBaseId, string jobId)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling UploadsApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UploadsApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUploadsUrlsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUploadsUrlsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetUploadSourceUrlJobStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetUploadSourceUrlJobStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUploadSourceUrlJobStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get content upload from URL job status 
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>Task of GetUploadSourceUrlJobStatusResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GetUploadSourceUrlJobStatusResponse> GetKnowledgeKnowledgebaseUploadsUrlsJobAsync (string knowledgeBaseId, string jobId)
+        {
+             ApiResponse<GetUploadSourceUrlJobStatusResponse> localVarResponse = await GetKnowledgeKnowledgebaseUploadsUrlsJobAsyncWithHttpInfo(knowledgeBaseId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get content upload from URL job status 
+        /// 
+        /// GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="jobId">Upload job ID</param>
+        /// <returns>Task of ApiResponse (GetUploadSourceUrlJobStatusResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GetUploadSourceUrlJobStatusResponse>> GetKnowledgeKnowledgebaseUploadsUrlsJobAsyncWithHttpInfo (string knowledgeBaseId, string jobId)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling UploadsApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UploadsApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
+            
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUploadsUrlsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeKnowledgebaseUploadsUrlsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GetUploadSourceUrlJobStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GetUploadSourceUrlJobStatusResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetUploadSourceUrlJobStatusResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>
@@ -913,6 +1253,244 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UploadUrlResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UploadUrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UploadUrlResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create content upload from URL job 
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>CreateUploadSourceUrlJobResponse</returns>
+        
+        public CreateUploadSourceUrlJobResponse PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+        {
+             ApiResponse<CreateUploadSourceUrlJobResponse> localVarResponse = PostKnowledgeKnowledgebaseUploadsUrlsJobsWithHttpInfo(knowledgeBaseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create content upload from URL job 
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>ApiResponse of CreateUploadSourceUrlJobResponse</returns>
+        
+        public ApiResponse< CreateUploadSourceUrlJobResponse > PostKnowledgeKnowledgebaseUploadsUrlsJobsWithHttpInfo (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling UploadsApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseUploadsUrlsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseUploadsUrlsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateUploadSourceUrlJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CreateUploadSourceUrlJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateUploadSourceUrlJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create content upload from URL job 
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>Task of CreateUploadSourceUrlJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<CreateUploadSourceUrlJobResponse> PostKnowledgeKnowledgebaseUploadsUrlsJobsAsync (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+        {
+             ApiResponse<CreateUploadSourceUrlJobResponse> localVarResponse = await PostKnowledgeKnowledgebaseUploadsUrlsJobsAsyncWithHttpInfo(knowledgeBaseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create content upload from URL job 
+        /// 
+        /// PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body">uploadRequest</param>
+        /// <returns>Task of ApiResponse (CreateUploadSourceUrlJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CreateUploadSourceUrlJobResponse>> PostKnowledgeKnowledgebaseUploadsUrlsJobsAsyncWithHttpInfo (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling UploadsApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
+            
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseUploadsUrlsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseUploadsUrlsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CreateUploadSourceUrlJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (CreateUploadSourceUrlJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateUploadSourceUrlJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

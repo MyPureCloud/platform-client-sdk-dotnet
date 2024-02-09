@@ -471,12 +471,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Removedskillid,
             
             /// <summary>
-            /// Enum Reoffered for "reoffered"
-            /// </summary>
-            [EnumMember(Value = "reoffered")]
-            Reoffered,
-            
-            /// <summary>
             /// Enum Requestedlanguageid for "requestedLanguageId"
             /// </summary>
             [EnumMember(Value = "requestedLanguageId")]

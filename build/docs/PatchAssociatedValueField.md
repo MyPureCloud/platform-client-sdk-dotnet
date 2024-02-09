@@ -1,0 +1,14 @@
+---
+title: PatchAssociatedValueField
+---
+## ININ.PureCloudApi.Model.PatchAssociatedValueField
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **DataType** | **string** | The data type of the value field. | [optional] |
+| **Name** | **string** | The field name for extracting value from event. | [optional] |
+{: class="table table-striped"}
+
+

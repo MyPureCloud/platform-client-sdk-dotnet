@@ -121,6 +121,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
 | [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **Post** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
 | [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **Post** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
+| [**PostOutboundContactlistfiltersBulkRetrieve**](OutboundApi.html#postoutboundcontactlistfiltersbulkretrieve) | **Post** /api/v2/outbound/contactlistfilters/bulk/retrieve | Retrieve multiple contact list filters |
 | [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **Post** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **Post** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostOutboundContactlisttemplates**](OutboundApi.html#postoutboundcontactlisttemplates) | **Post** /api/v2/outbound/contactlisttemplates | Create Contact List Template |
@@ -5038,7 +5039,7 @@ namespace Example
 
 <a name="getoutboundimporttemplate"></a>
 
-## [**ImportTemplate**](ImportTemplate.html) GetOutboundImporttemplate (string importTemplateId)
+## [**ImportTemplate**](ImportTemplate.html) GetOutboundImporttemplate (string importTemplateId, bool? includeImportStatus = null)
 
 
 
@@ -5071,11 +5072,12 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var importTemplateId = importTemplateId_example;  // string | Import Template ID
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
 
             try
             { 
                 // Get Import Template
-                ImportTemplate result = apiInstance.GetOutboundImporttemplate(importTemplateId);
+                ImportTemplate result = apiInstance.GetOutboundImporttemplate(importTemplateId, includeImportStatus);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5093,6 +5095,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **importTemplateId** | **string**| Import Template ID |  |
+| **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -5166,7 +5169,7 @@ namespace Example
 
 <a name="getoutboundimporttemplates"></a>
 
-## [**ImportTemplateEntityListing**](ImportTemplateEntityListing.html) GetOutboundImporttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
+## [**ImportTemplateEntityListing**](ImportTemplateEntityListing.html) GetOutboundImporttemplates (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
 
 
 
@@ -5198,6 +5201,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new OutboundApi();
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
             var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
@@ -5210,7 +5214,7 @@ namespace Example
             try
             { 
                 // Query Import Templates
-                ImportTemplateEntityListing result = apiInstance.GetOutboundImporttemplates(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
+                ImportTemplateEntityListing result = apiInstance.GetOutboundImporttemplates(includeImportStatus, pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5227,6 +5231,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
 | **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
@@ -5983,7 +5988,7 @@ namespace Example
 
 <a name="getoutboundschedulesemailcampaigns"></a>
 
-## [**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html) GetOutboundSchedulesEmailcampaigns ()
+## [**EmailCampaignScheduleEntityListing**](EmailCampaignScheduleEntityListing.html) GetOutboundSchedulesEmailcampaigns ()
 
 
 
@@ -6019,7 +6024,7 @@ namespace Example
             try
             { 
                 // Query for a list of email campaign schedules.
-                MessagingCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesEmailcampaigns();
+                EmailCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesEmailcampaigns();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6037,7 +6042,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing.html)
+[**EmailCampaignScheduleEntityListing**](EmailCampaignScheduleEntityListing.html)
 
 <a name="getoutboundschedulesmessagingcampaign"></a>
 
@@ -7703,6 +7708,69 @@ namespace Example
 ### Return type
 
 [**ContactListFilter**](ContactListFilter.html)
+
+<a name="postoutboundcontactlistfiltersbulkretrieve"></a>
+
+## [**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) PostOutboundContactlistfiltersBulkRetrieve (ContactListFilterBulkRetrieveBody body)
+
+
+
+Retrieve multiple contact list filters
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistfiltersBulkRetrieveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListFilterBulkRetrieveBody(); // ContactListFilterBulkRetrieveBody | The contact list filters to retrieve
+
+            try
+            { 
+                // Retrieve multiple contact list filters
+                ContactListFilterEntityListing result = apiInstance.PostOutboundContactlistfiltersBulkRetrieve(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistfiltersBulkRetrieve: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListFilterBulkRetrieveBody**](ContactListFilterBulkRetrieveBody.html)| The contact list filters to retrieve |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListFilterEntityListing**](ContactListFilterEntityListing.html)
 
 <a name="postoutboundcontactlistfilterspreview"></a>
 

@@ -47,9 +47,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetrainings) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Get all trainings information for a knowledgebase |
 | [**GetKnowledgeKnowledgebaseOperations**](KnowledgeApi.html#getknowledgeknowledgebaseoperations) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations | Get operations |
 | [**GetKnowledgeKnowledgebaseOperationsUsersQuery**](KnowledgeApi.html#getknowledgeknowledgebaseoperationsusersquery) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query | Get ids of operation creator users and oauth clients |
+| [**GetKnowledgeKnowledgebaseParseJob**](KnowledgeApi.html#getknowledgeknowledgebaseparsejob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId} | Get parse job report |
 | [**GetKnowledgeKnowledgebaseUnansweredGroup**](KnowledgeApi.html#getknowledgeknowledgebaseunansweredgroup) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId} | Get knowledge base unanswered group for a particular groupId |
 | [**GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeApi.html#getknowledgeknowledgebaseunansweredgroupphrasegroup) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Get knowledge base unanswered phrase group for a particular phraseGroupId |
 | [**GetKnowledgeKnowledgebaseUnansweredGroups**](KnowledgeApi.html#getknowledgeknowledgebaseunansweredgroups) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups | Get knowledge base unanswered groups |
+| [**GetKnowledgeKnowledgebaseUploadsUrlsJob**](KnowledgeApi.html#getknowledgeknowledgebaseuploadsurlsjob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId} | Get content upload from URL job status |
 | [**GetKnowledgeKnowledgebases**](KnowledgeApi.html#getknowledgeknowledgebases) | **Get** /api/v2/knowledge/knowledgebases | Get knowledge bases |
 | [**PatchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeApi.html#patchknowledgeguestsessiondocumentssearchsearchid) | **Patch** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebase**](KnowledgeApi.html#patchknowledgeknowledgebase) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
@@ -63,6 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocument) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Update document |
 | [**PatchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocuments) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Update documents collection |
 | [**PatchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocumentsimport) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Start import operation |
+| [**PatchKnowledgeKnowledgebaseParseJob**](KnowledgeApi.html#patchknowledgeknowledgebaseparsejob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId} | Send update to the parse operation |
 | [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeApi.html#patchknowledgeknowledgebaseunansweredgroupphrasegroup) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
 | [**PostKnowledgeDocumentuploads**](KnowledgeApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostKnowledgeGuestSessionDocumentFeedback**](KnowledgeApi.html#postknowledgeguestsessiondocumentfeedback) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback | Give feedback on a document |
@@ -89,7 +92,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocumentsimports) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports | Create import operation |
 | [**PostKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeApi.html#postknowledgeknowledgebaselanguagetrainingpromote) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId}/promote | Promote trained documents from draft state to active. |
 | [**PostKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#postknowledgeknowledgebaselanguagetrainings) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Trigger training |
+| [**PostKnowledgeKnowledgebaseParseJobImport**](KnowledgeApi.html#postknowledgeknowledgebaseparsejobimport) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import | Import the parsed articles |
+| [**PostKnowledgeKnowledgebaseParseJobs**](KnowledgeApi.html#postknowledgeknowledgebaseparsejobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs | Create parse job |
 | [**PostKnowledgeKnowledgebaseSearch**](KnowledgeApi.html#postknowledgeknowledgebasesearch) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
+| [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](KnowledgeApi.html#postknowledgeknowledgebaseuploadsurlsjobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
 | [**PostKnowledgeKnowledgebases**](KnowledgeApi.html#postknowledgeknowledgebases) | **Post** /api/v2/knowledge/knowledgebases | Create new knowledge base |
 {: class="table table-striped"}
 
@@ -2866,6 +2872,75 @@ namespace Example
 
 [**OperationCreatorUserResponse**](OperationCreatorUserResponse.html)
 
+<a name="getknowledgeknowledgebaseparsejob"></a>
+
+## [**KnowledgeParseJobResponse**](KnowledgeParseJobResponse.html) GetKnowledgeKnowledgebaseParseJob (string knowledgeBaseId, string parseJobId, List<string> expand = null)
+
+
+
+Get parse job report
+
+GetKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:importJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseParseJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var parseJobId = parseJobId_example;  // string | Parse job ID
+            var expand = new List<string>(); // List<string> | If expand contains 'urls' downloadURL and failedEntitiesURL will be filled. (optional) 
+
+            try
+            { 
+                // Get parse job report
+                KnowledgeParseJobResponse result = apiInstance.GetKnowledgeKnowledgebaseParseJob(knowledgeBaseId, parseJobId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseParseJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **parseJobId** | **string**| Parse job ID |  |
+| **expand** | [**List<string>**](string.html)| If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. | [optional] <br />**Values**: urls |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeParseJobResponse**](KnowledgeParseJobResponse.html)
+
 <a name="getknowledgeknowledgebaseunansweredgroup"></a>
 
 ## [**UnansweredGroup**](UnansweredGroup.html) GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
@@ -3078,6 +3153,73 @@ namespace Example
 ### Return type
 
 [**UnansweredGroups**](UnansweredGroups.html)
+
+<a name="getknowledgeknowledgebaseuploadsurlsjob"></a>
+
+## [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse.html) GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
+
+
+
+Get content upload from URL job status
+
+GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseUploadsUrlsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var jobId = jobId_example;  // string | Upload job ID
+
+            try
+            { 
+                // Get content upload from URL job status
+                GetUploadSourceUrlJobStatusResponse result = apiInstance.GetKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseUploadsUrlsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **jobId** | **string**| Upload job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse.html)
 
 <a name="getknowledgeknowledgebases"></a>
 
@@ -3959,6 +4101,74 @@ namespace Example
 ### Return type
 
 [**KnowledgeImport**](KnowledgeImport.html)
+
+<a name="patchknowledgeknowledgebaseparsejob"></a>
+
+## void PatchKnowledgeKnowledgebaseParseJob (string knowledgeBaseId, string parseJobId, KnowledgeParseJobRequestPatch body)
+
+
+
+Send update to the parse operation
+
+PatchKnowledgeKnowledgebaseParseJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:importJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseParseJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var parseJobId = parseJobId_example;  // string | Parse job ID
+            var body = new KnowledgeParseJobRequestPatch(); // KnowledgeParseJobRequestPatch | 
+
+            try
+            { 
+                // Send update to the parse operation
+                apiInstance.PatchKnowledgeKnowledgebaseParseJob(knowledgeBaseId, parseJobId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseParseJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **parseJobId** | **string**| Parse job ID |  |
+| **body** | [**KnowledgeParseJobRequestPatch**](KnowledgeParseJobRequestPatch.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="patchknowledgeknowledgebaseunansweredgroupphrasegroup"></a>
 
@@ -5657,6 +5867,141 @@ namespace Example
 
 [**KnowledgeTraining**](KnowledgeTraining.html)
 
+<a name="postknowledgeknowledgebaseparsejobimport"></a>
+
+## void PostKnowledgeKnowledgebaseParseJobImport (string knowledgeBaseId, string parseJobId, KnowledgeParseJobRequestImport body)
+
+
+
+Import the parsed articles
+
+PostKnowledgeKnowledgebaseParseJobImport is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:importJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseParseJobImportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var parseJobId = parseJobId_example;  // string | Parse job ID
+            var body = new KnowledgeParseJobRequestImport(); // KnowledgeParseJobRequestImport | 
+
+            try
+            { 
+                // Import the parsed articles
+                apiInstance.PostKnowledgeKnowledgebaseParseJobImport(knowledgeBaseId, parseJobId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseParseJobImport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **parseJobId** | **string**| Parse job ID |  |
+| **body** | [**KnowledgeParseJobRequestImport**](KnowledgeParseJobRequestImport.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postknowledgeknowledgebaseparsejobs"></a>
+
+## [**KnowledgeParseJobResponse**](KnowledgeParseJobResponse.html) PostKnowledgeKnowledgebaseParseJobs (string knowledgeBaseId, KnowledgeParseJobRequest body)
+
+
+
+Create parse job
+
+PostKnowledgeKnowledgebaseParseJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:importJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseParseJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeParseJobRequest(); // KnowledgeParseJobRequest | 
+
+            try
+            { 
+                // Create parse job
+                KnowledgeParseJobResponse result = apiInstance.PostKnowledgeKnowledgebaseParseJobs(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseParseJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeParseJobRequest**](KnowledgeParseJobRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeParseJobResponse**](KnowledgeParseJobResponse.html)
+
 <a name="postknowledgeknowledgebasesearch"></a>
 
 ## [**KnowledgeSearchResponse**](KnowledgeSearchResponse.html) PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
@@ -5721,6 +6066,73 @@ namespace Example
 ### Return type
 
 [**KnowledgeSearchResponse**](KnowledgeSearchResponse.html)
+
+<a name="postknowledgeknowledgebaseuploadsurlsjobs"></a>
+
+## [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse.html) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+
+
+
+Create content upload from URL job
+
+PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseUploadsUrlsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new CreateUploadSourceUrlJobRequest(); // CreateUploadSourceUrlJobRequest | uploadRequest
+
+            try
+            { 
+                // Create content upload from URL job
+                CreateUploadSourceUrlJobResponse result = apiInstance.PostKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseUploadsUrlsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest.html)| uploadRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse.html)
 
 <a name="postknowledgeknowledgebases"></a>
 

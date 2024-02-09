@@ -34,10 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsMobile">Flag that is true for mobile devices..</param>
         /// <param name="ViewHeight">Browser's viewport height..</param>
         /// <param name="ViewWidth">Browser's viewport width..</param>
-        /// <param name="FeaturesFlash">Whether Flash is installed..</param>
-        /// <param name="FeaturesJava">Whether Java is installed..</param>
-        /// <param name="FeaturesPdf">Whether the browser recognizes PDFs..</param>
-        /// <param name="FeaturesWebrtc">Whether WebRTC is supported..</param>
+        /// <param name="FeaturesFlash">Whether Flash is installed. (required).</param>
+        /// <param name="FeaturesJava">Whether Java is installed. (required).</param>
+        /// <param name="FeaturesPdf">Whether the browser recognizes PDFs. (required).</param>
+        /// <param name="FeaturesWebrtc">Whether WebRTC is supported. (required).</param>
         public Browser(string Family = null, string Version = null, string Lang = null, string Fingerprint = null, bool? IsMobile = null, int? ViewHeight = null, int? ViewWidth = null, bool? FeaturesFlash = null, bool? FeaturesJava = null, bool? FeaturesPdf = null, bool? FeaturesWebrtc = null)
         {
             this.Family = Family;

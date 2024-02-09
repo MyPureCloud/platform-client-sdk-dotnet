@@ -28,21 +28,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WebEvent" /> class.
         /// </summary>
         /// <param name="EventName">Represents the action the customer performed. A good event name is typically an object followed by the action performed in past tense (e.g. page_viewed, order_completed, user_registered). (required).</param>
-        /// <param name="TotalEventCount">The total count of events performed by the customer across all sessions..</param>
-        /// <param name="TotalPageviewCount">The total count of pageviews performed by the customer across all sessions..</param>
-        /// <param name="Page">The webpage where the user interaction occurred..</param>
-        /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15)..</param>
-        /// <param name="Browser">Customer's browser..</param>
-        /// <param name="Device">Customer's device..</param>
+        /// <param name="TotalEventCount">The total count of events performed by the customer across all sessions. (required).</param>
+        /// <param name="TotalPageviewCount">The total count of pageviews performed by the customer across all sessions. (required).</param>
+        /// <param name="Page">The webpage where the user interaction occurred. (required).</param>
+        /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15). (required).</param>
+        /// <param name="Browser">Customer's browser. (required).</param>
+        /// <param name="Device">Customer's device. (required).</param>
         /// <param name="Geolocation">Customer's geolocation..</param>
         /// <param name="IpAddress">Customer's IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
         /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="Referrer">Identifies the page URL that originally generated the request for the current page being viewed..</param>
-        /// <param name="Attributes">User-defined attributes associated with a particular event..</param>
-        /// <param name="Traits">User-defined traits associated with a particular event..</param>
+        /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
+        /// <param name="Traits">User-defined traits associated with a particular event. (required).</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
-        /// <param name="Authenticated">Indicates whether the event was produced during an authenticated session..</param>
+        /// <param name="Authenticated">Indicates whether the event was produced during an authenticated session. (required).</param>
         public WebEvent(string EventName = null, int? TotalEventCount = null, int? TotalPageviewCount = null, JourneyPage Page = null, string UserAgentString = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, string SearchQuery = null, bool? Authenticated = null)
         {
             this.EventName = EventName;

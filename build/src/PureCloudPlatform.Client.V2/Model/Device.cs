@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Category">Device category. (required).</param>
         /// <param name="Type">Device type (e.g. iPad, iPhone, Other). (required).</param>
-        /// <param name="IsMobile">Flag that is true for mobile devices..</param>
+        /// <param name="IsMobile">Flag that is true for mobile devices. (required).</param>
         /// <param name="ScreenHeight">Device's screen height..</param>
         /// <param name="ScreenWidth">Device's screen width..</param>
         /// <param name="ScreenDensity">Device's screen density, measured as a scale factor where a value of 1 represents a baseline 1:1 ratio of pixels to logical (device-independent) pixels..</param>

@@ -27,10 +27,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OutcomeAchievedEventOutcome" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">ID of the outcome. (required).</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="DisplayName">The display name of the outcome. (required).</param>
-        /// <param name="Version">The version of the outcome..</param>
+        /// <param name="Version">The version of the outcome. (required).</param>
         public OutcomeAchievedEventOutcome(string Id = null, string SelfUri = null, string DisplayName = null, int? Version = null)
         {
             this.Id = Id;
@@ -43,8 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// ID of the outcome.
         /// </summary>
+        /// <value>ID of the outcome.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

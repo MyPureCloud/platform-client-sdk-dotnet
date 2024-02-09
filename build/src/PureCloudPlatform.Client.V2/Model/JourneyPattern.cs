@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyPattern" /> class.
         /// </summary>
         /// <param name="Criteria">A list of one or more criteria to satisfy. (required).</param>
-        /// <param name="Count">The number of times the pattern must match..</param>
+        /// <param name="Count">The number of times the pattern must match. (required).</param>
         /// <param name="StreamType">The stream type for which this pattern can be matched on. (required).</param>
         /// <param name="SessionType">The session type for which this pattern can be matched on. (required).</param>
         /// <param name="EventName">The name of the event for which this pattern can be matched on..</param>

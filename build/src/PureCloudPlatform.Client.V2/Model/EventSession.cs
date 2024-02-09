@@ -18,12 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EventSession :  IEquatable<EventSession>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EventSession" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        [JsonConstructorAttribute]
+        protected EventSession() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EventSession" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the session. (required).</param>
         /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="Type">Session types indicate the type or category of sessions (e.g. web, app)..</param>
+        /// <param name="Type">Session types indicate the type or category of sessions (e.g. web, app). (required).</param>
         public EventSession(string Id = null, string SelfUri = null, string Type = null)
         {
             this.Id = Id;
@@ -35,8 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the session.
         /// </summary>
+        /// <value>The ID of the session.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

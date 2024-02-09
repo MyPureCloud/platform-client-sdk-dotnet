@@ -27,29 +27,29 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Event" /> class.
         /// </summary>
-        /// <param name="Id">System-generated UUID for the event..</param>
+        /// <param name="Id">System-generated UUID for the event. (required).</param>
+        /// <param name="CorrelationId">UUID corresponding to triggering action that caused this event (e.g. HTTP POST, SIP invite, another event). (required).</param>
         /// <param name="CustomerId">Primary identifier of the customer in the source of the events..</param>
         /// <param name="CustomerIdType">Type of primary identifier (e.g. cookie, email, phone)..</param>
-        /// <param name="Session">The session that the event belongs to..</param>
+        /// <param name="Session">The session that the event belongs to. (required).</param>
         /// <param name="EventType">The name representing the type of event. (required).</param>
         /// <param name="GenericActionEvent">Event triggered by generic actions..</param>
         /// <param name="OutcomeAchievedEvent">Event where a customer has achieved a specific outcome or goal..</param>
-        /// <param name="SegmentAssignedEvent">Event that represents a segment being assigned (deprecated)..</param>
         /// <param name="SegmentAssignmentEvent">Event that represents a segment being assigned..</param>
         /// <param name="WebActionEvent">Event triggered by web actions..</param>
         /// <param name="WebEvent">Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc..</param>
         /// <param name="AppEvent">Event that tracks user interactions with content in an application such as screen views, searches, etc..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Event(string Id = null, string CustomerId = null, string CustomerIdType = null, EventSession Session = null, string EventType = null, GenericActionEvent GenericActionEvent = null, OutcomeAchievedEvent OutcomeAchievedEvent = null, SegmentAssignedEvent SegmentAssignedEvent = null, SegmentAssignmentEvent SegmentAssignmentEvent = null, WebActionEvent WebActionEvent = null, WebEvent WebEvent = null, AppEvent AppEvent = null, DateTime? CreatedDate = null)
+        /// <param name="CreatedDate">Timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public Event(string Id = null, string CorrelationId = null, string CustomerId = null, string CustomerIdType = null, EventSession Session = null, string EventType = null, GenericActionEvent GenericActionEvent = null, OutcomeAchievedEvent OutcomeAchievedEvent = null, SegmentAssignmentEvent SegmentAssignmentEvent = null, WebActionEvent WebActionEvent = null, WebEvent WebEvent = null, AppEvent AppEvent = null, DateTime? CreatedDate = null)
         {
             this.Id = Id;
+            this.CorrelationId = CorrelationId;
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
             this.Session = Session;
             this.EventType = EventType;
             this.GenericActionEvent = GenericActionEvent;
             this.OutcomeAchievedEvent = OutcomeAchievedEvent;
-            this.SegmentAssignedEvent = SegmentAssignedEvent;
             this.SegmentAssignmentEvent = SegmentAssignmentEvent;
             this.WebActionEvent = WebActionEvent;
             this.WebEvent = WebEvent;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>UUID corresponding to triggering action that caused this event (e.g. HTTP POST, SIP invite, another event).</value>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
-        public string CorrelationId { get; private set; }
+        public string CorrelationId { get; set; }
 
 
 
@@ -129,15 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Event where a customer has achieved a specific outcome or goal.</value>
         [DataMember(Name="outcomeAchievedEvent", EmitDefaultValue=false)]
         public OutcomeAchievedEvent OutcomeAchievedEvent { get; set; }
-
-
-
-        /// <summary>
-        /// Event that represents a segment being assigned (deprecated).
-        /// </summary>
-        /// <value>Event that represents a segment being assigned (deprecated).</value>
-        [DataMember(Name="segmentAssignedEvent", EmitDefaultValue=false)]
-        public SegmentAssignedEvent SegmentAssignedEvent { get; set; }
 
 
 
@@ -202,7 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  GenericActionEvent: ").Append(GenericActionEvent).Append("\n");
             sb.Append("  OutcomeAchievedEvent: ").Append(OutcomeAchievedEvent).Append("\n");
-            sb.Append("  SegmentAssignedEvent: ").Append(SegmentAssignedEvent).Append("\n");
             sb.Append("  SegmentAssignmentEvent: ").Append(SegmentAssignmentEvent).Append("\n");
             sb.Append("  WebActionEvent: ").Append(WebActionEvent).Append("\n");
             sb.Append("  WebEvent: ").Append(WebEvent).Append("\n");
@@ -289,11 +279,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutcomeAchievedEvent.Equals(other.OutcomeAchievedEvent)
                 ) &&
                 (
-                    this.SegmentAssignedEvent == other.SegmentAssignedEvent ||
-                    this.SegmentAssignedEvent != null &&
-                    this.SegmentAssignedEvent.Equals(other.SegmentAssignedEvent)
-                ) &&
-                (
                     this.SegmentAssignmentEvent == other.SegmentAssignmentEvent ||
                     this.SegmentAssignmentEvent != null &&
                     this.SegmentAssignmentEvent.Equals(other.SegmentAssignmentEvent)
@@ -354,9 +339,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutcomeAchievedEvent != null)
                     hash = hash * 59 + this.OutcomeAchievedEvent.GetHashCode();
-
-                if (this.SegmentAssignedEvent != null)
-                    hash = hash * 59 + this.SegmentAssignedEvent.GetHashCode();
 
                 if (this.SegmentAssignmentEvent != null)
                     hash = hash * 59 + this.SegmentAssignmentEvent.GetHashCode();

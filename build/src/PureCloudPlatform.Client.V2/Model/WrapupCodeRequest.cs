@@ -28,13 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WrapupCodeRequest" /> class.
         /// </summary>
         /// <param name="Name">The wrap-up code name. (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="DateCreated">Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">The ID of the user that created the wrap-up code..</param>
         /// <param name="ModifiedBy">The ID of the user that modified the wrap-up code..</param>
-        public WrapupCodeRequest(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string CreatedBy = null, string ModifiedBy = null)
+        public WrapupCodeRequest(string Name = null, WritableStarrableDivision Division = null, DateTime? DateCreated = null, DateTime? DateModified = null, string CreatedBy = null, string ModifiedBy = null)
         {
             this.Name = Name;
+            this.Division = Division;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
@@ -59,6 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The wrap-up code name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableStarrableDivision Division { get; set; }
 
 
 
@@ -117,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -173,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -215,6 +232,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

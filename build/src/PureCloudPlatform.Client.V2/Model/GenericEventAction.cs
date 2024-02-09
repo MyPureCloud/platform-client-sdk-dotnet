@@ -190,11 +190,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GenericEventAction" /> class.
         /// </summary>
         /// <param name="Id">ID of the action. (required).</param>
-        /// <param name="State">Current state of the action (e.g. qualified, succeeded, errored)..</param>
-        /// <param name="MediaType">The media type used to deliver the action (e.g. email, webhook)..</param>
-        /// <param name="Prompt">Prompt of the action to be displayed/sent to the visitor..</param>
+        /// <param name="State">Current state of the action (e.g. qualified, succeeded, errored). (required).</param>
+        /// <param name="MediaType">The media type used to deliver the action (e.g. email, webhook). (required).</param>
+        /// <param name="Prompt">Prompt of the action to be displayed/sent to the visitor. (required).</param>
         /// <param name="MediaAddress">Address of the media type used to deliver the action (e.g. email address, webhook URL)..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the action was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="CreatedDate">Timestamp indicating when the action was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public GenericEventAction(string Id = null, StateEnum? State = null, MediaTypeEnum? MediaType = null, string Prompt = null, string MediaAddress = null, DateTime? CreatedDate = null)
         {
             this.Id = Id;

@@ -136,6 +136,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nworkitemswrapupremoved,
             
             /// <summary>
+            /// Enum Oworkitemsservicelevel for "oWorkitemsServiceLevel"
+            /// </summary>
+            [EnumMember(Value = "oWorkitemsServiceLevel")]
+            Oworkitemsservicelevel,
+            
+            /// <summary>
             /// Enum Tworkitemsalert for "tWorkitemsAlert"
             /// </summary>
             [EnumMember(Value = "tWorkitemsAlert")]

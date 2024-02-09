@@ -27,18 +27,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Outcome" /> class.
         /// </summary>
-        /// <param name="IsActive">Whether or not the outcome is active..</param>
+        /// <param name="Id">ID of the outcome. (required).</param>
+        /// <param name="IsActive">Whether or not the outcome is active. (required).</param>
         /// <param name="DisplayName">The display name of the outcome. (required).</param>
-        /// <param name="Version">The version of the outcome..</param>
+        /// <param name="Version">The version of the outcome. (required).</param>
         /// <param name="Description">A description of the outcome..</param>
-        /// <param name="IsPositive">Whether or not the outcome is positive..</param>
-        /// <param name="Context">The context of the outcome..</param>
-        /// <param name="Journey">The pattern of rules defining the filter of the outcome..</param>
+        /// <param name="IsPositive">Whether or not the outcome is positive. (required).</param>
+        /// <param name="Context">The context of the outcome. (required).</param>
+        /// <param name="Journey">The pattern of rules defining the filter of the outcome. (required).</param>
         /// <param name="AssociatedValueField">The field from the event indicating the associated value..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedDate">Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Outcome(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, bool? IsPositive = null, Context Context = null, Journey Journey = null, AssociatedValueField AssociatedValueField = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        /// <param name="CreatedDate">Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="ModifiedDate">Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public Outcome(string Id = null, bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, bool? IsPositive = null, Context Context = null, Journey Journey = null, AssociatedValueField AssociatedValueField = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
+            this.Id = Id;
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
             this.Version = Version;
@@ -55,11 +57,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// ID of the outcome.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>ID of the outcome.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

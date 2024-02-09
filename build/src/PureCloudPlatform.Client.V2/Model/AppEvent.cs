@@ -18,13 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AppEvent :  IEquatable<AppEvent>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppEvent" /> class.
         /// </summary>
-        /// <param name="EventName">Represents the action the customer performed. A good event name is typically an object followed by the action performed in past tense (e.g. screen_viewed, order_completed, user_registered)..</param>
-        /// <param name="ScreenName">The name of the screen in the app that the event took place..</param>
-        /// <param name="App">Application that the customer is interacting with..</param>
-        /// <param name="Device">Customer's device..</param>
+        [JsonConstructorAttribute]
+        protected AppEvent() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppEvent" /> class.
+        /// </summary>
+        /// <param name="EventName">Represents the action the customer performed. A good event name is typically an object followed by the action performed in past tense (e.g. screen_viewed, order_completed, user_registered). (required).</param>
+        /// <param name="ScreenName">The name of the screen in the app that the event took place. (required).</param>
+        /// <param name="App">Application that the customer is interacting with. (required).</param>
+        /// <param name="Device">Customer's device. (required).</param>
         /// <param name="IpAddress">Customer's IP address. May be null if the business configures the tracker to not collect IP addresses..</param>
         /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
         /// <param name="Geolocation">Customer's geolocation..</param>
@@ -32,8 +38,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NetworkConnectivity">Information relating to the device's network connectivity..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
-        /// <param name="Attributes">User-defined attributes associated with a particular event..</param>
-        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone..</param>
+        /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
+        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events. Examples are email, name, phone. (required).</param>
         public AppEvent(string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpAddress = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null)
         {
             this.EventName = EventName;

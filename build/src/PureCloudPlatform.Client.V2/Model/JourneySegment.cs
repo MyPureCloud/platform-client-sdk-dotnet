@@ -60,21 +60,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneySegment" /> class.
         /// </summary>
-        /// <param name="IsActive">Whether or not the segment is active..</param>
+        /// <param name="Id">The ID of the segment. (required).</param>
+        /// <param name="IsActive">Whether or not the segment is active. (required).</param>
         /// <param name="DisplayName">The display name of the segment. (required).</param>
-        /// <param name="Version">The version of the segment..</param>
+        /// <param name="Version">The version of the segment. (required).</param>
         /// <param name="Description">A description of the segment..</param>
-        /// <param name="Color">The hexadecimal color value of the segment..</param>
-        /// <param name="Scope">The target entity that a segment applies to..</param>
-        /// <param name="ShouldDisplayToAgent">Whether or not the segment should be displayed to agent/supervisor users..</param>
-        /// <param name="Context">The context of the segment..</param>
-        /// <param name="Journey">The pattern of rules defining the segment..</param>
+        /// <param name="Color">The hexadecimal color value of the segment. (required).</param>
+        /// <param name="Scope">The target entity that a segment applies to. (required).</param>
+        /// <param name="ShouldDisplayToAgent">Whether or not the segment should be displayed to agent/supervisor users. (required).</param>
+        /// <param name="Context">The context of the segment. (required).</param>
+        /// <param name="Journey">The pattern of rules defining the segment. (required).</param>
         /// <param name="ExternalSegment">Details of an entity corresponding to this segment in an external system..</param>
         /// <param name="AssignmentExpirationDays">Time, in days, from when the segment is assigned until it is automatically unassigned..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedDate">Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public JourneySegment(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, ScopeEnum? Scope = null, bool? ShouldDisplayToAgent = null, Context Context = null, Journey Journey = null, ExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        /// <param name="CreatedDate">Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="ModifiedDate">Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public JourneySegment(string Id = null, bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, ScopeEnum? Scope = null, bool? ShouldDisplayToAgent = null, Context Context = null, Journey Journey = null, ExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
+            this.Id = Id;
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
             this.Version = Version;
@@ -94,11 +96,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the segment.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the segment.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

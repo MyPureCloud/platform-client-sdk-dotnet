@@ -198,10 +198,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Message type for messaging conversations.</value>
         [DataMember(Name="messageType", EmitDefaultValue=false)]
         public MessageTypeEnum? MessageType { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChannel" /> class.
         /// </summary>
-        /// <param name="Type">The type or category of this channel..</param>
+        [JsonConstructorAttribute]
+        protected ConversationChannel() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversationChannel" /> class.
+        /// </summary>
+        /// <param name="Type">The type or category of this channel. (required).</param>
         /// <param name="MessageType">Message type for messaging conversations..</param>
         /// <param name="Platform">The source provider for the conversation (e.g. Edge, PureCloud Messaging, PureCloud Email)..</param>
         public ConversationChannel(TypeEnum? Type = null, MessageTypeEnum? MessageType = null, string Platform = null)

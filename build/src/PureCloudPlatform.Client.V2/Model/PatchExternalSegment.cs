@@ -18,16 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchExternalSegment :  IEquatable<PatchExternalSegment>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchExternalSegment" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected PatchExternalSegment() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PatchExternalSegment" /> class.
-        /// </summary>
-        /// <param name="Name">Name for the external segment in the system where it originates from. (required).</param>
+        /// <param name="Name">Name for the external segment in the system where it originates from..</param>
         public PatchExternalSegment(string Name = null)
         {
             this.Name = Name;

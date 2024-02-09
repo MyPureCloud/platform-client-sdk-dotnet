@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutcomeAchievement :  IEquatable<OutcomeAchievement>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OutcomeAchievement" /> class.
         /// </summary>
-        /// <param name="Outcome">The outcome that was achieved..</param>
-        /// <param name="AchievedDate">Timestamp indicating when the outcome was achieved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        [JsonConstructorAttribute]
+        protected OutcomeAchievement() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OutcomeAchievement" /> class.
+        /// </summary>
+        /// <param name="Outcome">The outcome that was achieved. (required).</param>
+        /// <param name="AchievedDate">Timestamp indicating when the outcome was achieved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public OutcomeAchievement(AchievedOutcome Outcome = null, DateTime? AchievedDate = null)
         {
             this.Outcome = Outcome;

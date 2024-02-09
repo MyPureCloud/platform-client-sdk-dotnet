@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SegmentAssignmentEvent :  IEquatable<SegmentAssignmentEvent>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SegmentAssignmentEvent" /> class.
         /// </summary>
-        /// <param name="Segment">The segment which was assigned..</param>
+        [JsonConstructorAttribute]
+        protected SegmentAssignmentEvent() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SegmentAssignmentEvent" /> class.
+        /// </summary>
+        /// <param name="Segment">The segment which was assigned. (required).</param>
         public SegmentAssignmentEvent(AddressableEntityRef Segment = null)
         {
             this.Segment = Segment;

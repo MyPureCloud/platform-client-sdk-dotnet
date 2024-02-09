@@ -18,13 +18,21 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SessionLastEvent :  IEquatable<SessionLastEvent>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionLastEvent" /> class.
         /// </summary>
-        /// <param name="EventName">The name of the event..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the event was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public SessionLastEvent(string EventName = null, DateTime? CreatedDate = null)
+        [JsonConstructorAttribute]
+        protected SessionLastEvent() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SessionLastEvent" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the last event. (required).</param>
+        /// <param name="EventName">The name of the event. (required).</param>
+        /// <param name="CreatedDate">Timestamp indicating when the event was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public SessionLastEvent(string Id = null, string EventName = null, DateTime? CreatedDate = null)
         {
+            this.Id = Id;
             this.EventName = EventName;
             this.CreatedDate = CreatedDate;
             
@@ -33,11 +41,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the last event.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the last event.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

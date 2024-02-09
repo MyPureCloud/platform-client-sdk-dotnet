@@ -10,7 +10,7 @@ title: Criteria
 | **Key** | **string** | The criteria key. | |
 | **Values** | **List&lt;string&gt;** | The criteria values. | |
 | **ShouldIgnoreCase** | **bool?** | Should criteria be case insensitive. | |
-| **Operator** | **string** | The comparison operator. | [optional] |
+| **Operator** | **string** | The comparison operator. | |
 {: class="table table-striped"}
 
 

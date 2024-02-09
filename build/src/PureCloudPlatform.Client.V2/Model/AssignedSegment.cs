@@ -18,22 +18,30 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AssignedSegment :  IEquatable<AssignedSegment>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignedSegment" /> class.
         /// </summary>
-        public AssignedSegment()
+        [JsonConstructorAttribute]
+        protected AssignedSegment() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssignedSegment" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the segment assigned. (required).</param>
+        public AssignedSegment(string Id = null)
         {
+            this.Id = Id;
             
         }
         
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the segment assigned.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the segment assigned.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

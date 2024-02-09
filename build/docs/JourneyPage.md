@@ -16,7 +16,7 @@ title: JourneyPage
 | **Lang** | **string** | ISO 639-1 language code for the page as defined in the {@code &lt;html&gt;} tag. | [optional] |
 | **Pathname** | **string** | Path name of the page for the event. | |
 | **QueryString** | **string** | Query string that is passed to the page in the current event. | [optional] |
-| **Breadcrumb** | **List&lt;string&gt;** | Hierarchy of the current page in relation to the website&#39;s structure. | [optional] |
+| **Breadcrumb** | **List&lt;string&gt;** | Hierarchy of the current page in relation to the website&#39;s structure. | |
 {: class="table table-striped"}
 
 

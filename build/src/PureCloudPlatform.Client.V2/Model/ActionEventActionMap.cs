@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionEventActionMap" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="Id">The ID of the action map. (required).</param>
         /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="Version">The version of the action map..</param>
+        /// <param name="Version">The version of the action map. (required).</param>
         /// <param name="DisplayName">Display name of the action map. (required).</param>
         public ActionEventActionMap(string Id = null, string SelfUri = null, int? Version = null, string DisplayName = null)
         {
@@ -43,8 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the action map.
         /// </summary>
+        /// <value>The ID of the action map.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

@@ -123,7 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Key">The criteria key. (required).</param>
         /// <param name="Values">The criteria values. (required).</param>
         /// <param name="ShouldIgnoreCase">Should criteria be case insensitive. (required).</param>
-        /// <param name="Operator">The comparison operator..</param>
+        /// <param name="Operator">The comparison operator. (required).</param>
         public Criteria(string Key = null, List<string> Values = null, bool? ShouldIgnoreCase = null, OperatorEnum? Operator = null)
         {
             this.Key = Key;

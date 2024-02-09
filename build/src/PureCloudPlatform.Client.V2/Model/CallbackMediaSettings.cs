@@ -27,7 +27,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoAnswerAlertToneSeconds">How long to play the alerting tone for an auto-answer interaction.</param>
         /// <param name="ManualAnswerAlertToneSeconds">How long to play the alerting tone for a manual-answer interaction.</param>
         /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
-        public CallbackMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
+        /// <param name="EnableAutoDialAndEnd">Flag to enable Auto-Dial and Auto-End automation for callbacks on this queue..</param>
+        /// <param name="AutoDialDelaySeconds">Time in seconds after agent connects to callback before outgoing call is auto-dialed. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds..</param>
+        /// <param name="AutoEndDelaySeconds">Time in seconds after agent disconnects from the outgoing call before the encasing callback is auto-ended. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds..</param>
+        public CallbackMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null, bool? EnableAutoDialAndEnd = null, int? AutoDialDelaySeconds = null, int? AutoEndDelaySeconds = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
@@ -35,6 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutoAnswerAlertToneSeconds = AutoAnswerAlertToneSeconds;
             this.ManualAnswerAlertToneSeconds = ManualAnswerAlertToneSeconds;
             this.SubTypeSettings = SubTypeSettings;
+            this.EnableAutoDialAndEnd = EnableAutoDialAndEnd;
+            this.AutoDialDelaySeconds = AutoDialDelaySeconds;
+            this.AutoEndDelaySeconds = AutoEndDelaySeconds;
             
         }
         
@@ -93,6 +99,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, BaseMediaSettings> SubTypeSettings { get; set; }
 
 
+
+        /// <summary>
+        /// Flag to enable Auto-Dial and Auto-End automation for callbacks on this queue.
+        /// </summary>
+        /// <value>Flag to enable Auto-Dial and Auto-End automation for callbacks on this queue.</value>
+        [DataMember(Name="enableAutoDialAndEnd", EmitDefaultValue=false)]
+        public bool? EnableAutoDialAndEnd { get; set; }
+
+
+
+        /// <summary>
+        /// Time in seconds after agent connects to callback before outgoing call is auto-dialed. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds.
+        /// </summary>
+        /// <value>Time in seconds after agent connects to callback before outgoing call is auto-dialed. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds.</value>
+        [DataMember(Name="autoDialDelaySeconds", EmitDefaultValue=false)]
+        public int? AutoDialDelaySeconds { get; set; }
+
+
+
+        /// <summary>
+        /// Time in seconds after agent disconnects from the outgoing call before the encasing callback is auto-ended. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds.
+        /// </summary>
+        /// <value>Time in seconds after agent disconnects from the outgoing call before the encasing callback is auto-ended. Allowable values in range 0 - 1200 seconds. Defaults to 300 seconds.</value>
+        [DataMember(Name="autoEndDelaySeconds", EmitDefaultValue=false)]
+        public int? AutoEndDelaySeconds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoAnswerAlertToneSeconds: ").Append(AutoAnswerAlertToneSeconds).Append("\n");
             sb.Append("  ManualAnswerAlertToneSeconds: ").Append(ManualAnswerAlertToneSeconds).Append("\n");
             sb.Append("  SubTypeSettings: ").Append(SubTypeSettings).Append("\n");
+            sb.Append("  EnableAutoDialAndEnd: ").Append(EnableAutoDialAndEnd).Append("\n");
+            sb.Append("  AutoDialDelaySeconds: ").Append(AutoDialDelaySeconds).Append("\n");
+            sb.Append("  AutoEndDelaySeconds: ").Append(AutoEndDelaySeconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +213,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SubTypeSettings == other.SubTypeSettings ||
                     this.SubTypeSettings != null &&
                     this.SubTypeSettings.SequenceEqual(other.SubTypeSettings)
+                ) &&
+                (
+                    this.EnableAutoDialAndEnd == other.EnableAutoDialAndEnd ||
+                    this.EnableAutoDialAndEnd != null &&
+                    this.EnableAutoDialAndEnd.Equals(other.EnableAutoDialAndEnd)
+                ) &&
+                (
+                    this.AutoDialDelaySeconds == other.AutoDialDelaySeconds ||
+                    this.AutoDialDelaySeconds != null &&
+                    this.AutoDialDelaySeconds.Equals(other.AutoDialDelaySeconds)
+                ) &&
+                (
+                    this.AutoEndDelaySeconds == other.AutoEndDelaySeconds ||
+                    this.AutoEndDelaySeconds != null &&
+                    this.AutoEndDelaySeconds.Equals(other.AutoEndDelaySeconds)
                 );
         }
 
@@ -208,6 +259,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SubTypeSettings != null)
                     hash = hash * 59 + this.SubTypeSettings.GetHashCode();
+
+                if (this.EnableAutoDialAndEnd != null)
+                    hash = hash * 59 + this.EnableAutoDialAndEnd.GetHashCode();
+
+                if (this.AutoDialDelaySeconds != null)
+                    hash = hash * 59 + this.AutoDialDelaySeconds.GetHashCode();
+
+                if (this.AutoEndDelaySeconds != null)
+                    hash = hash * 59 + this.AutoEndDelaySeconds.GetHashCode();
 
                 return hash;
             }

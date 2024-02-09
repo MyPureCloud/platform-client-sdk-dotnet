@@ -28,14 +28,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WebActionEvent" /> class.
         /// </summary>
         /// <param name="Action">The action that triggered the event. (required).</param>
-        /// <param name="ActionMap">The action map that triggered the action..</param>
-        /// <param name="ActionTarget">The target for engagement actions..</param>
+        /// <param name="ActionMap">The action map that triggered the action. (required).</param>
+        /// <param name="ActionTarget">The target for engagement actions. (required).</param>
         /// <param name="TimeToDisposition">Milliseconds elapsed until the action is disposed..</param>
         /// <param name="ErrorCode">Code of the error returned when the action fails..</param>
         /// <param name="ErrorMessage">Message of the error returned when the action fails..</param>
-        /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15)..</param>
-        /// <param name="Browser">Customer's browser..</param>
-        /// <param name="Device">Customer's device..</param>
+        /// <param name="UserAgentString">HTTP User-Agent string (see https://tools.ietf.org/html/rfc1945#section-10.15). (required).</param>
+        /// <param name="Browser">Customer's browser. (required).</param>
+        /// <param name="Device">Customer's device. (required).</param>
         /// <param name="Geolocation">Customer's geolocation..</param>
         /// <param name="IpAddress">Visitor's IP address..</param>
         /// <param name="IpOrganization">Visitor's IP-based organization or ISP name..</param>

@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Lang">ISO 639-1 language code for the page as defined in the {@code <html>} tag..</param>
         /// <param name="Pathname">Path name of the page for the event. (required).</param>
         /// <param name="QueryString">Query string that is passed to the page in the current event..</param>
-        /// <param name="Breadcrumb">Hierarchy of the current page in relation to the website's structure..</param>
+        /// <param name="Breadcrumb">Hierarchy of the current page in relation to the website's structure. (required).</param>
         public JourneyPage(string Url = null, string Title = null, string Domain = null, string Fragment = null, string Hostname = null, string Keywords = null, string Lang = null, string Pathname = null, string QueryString = null, List<string> Breadcrumb = null)
         {
             this.Url = Url;

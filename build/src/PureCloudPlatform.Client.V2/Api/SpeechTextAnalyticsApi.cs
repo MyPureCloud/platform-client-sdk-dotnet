@@ -590,11 +590,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>TopicsEntityListing</returns>
         
-        TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
+        TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of Speech & Text Analytics topics
@@ -608,11 +609,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of TopicsEntityListing</returns>
         
-        ApiResponse<TopicsEntityListing> GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<TopicsEntityListing> GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get list of supported Speech & Text Analytics topics dialects
@@ -1656,11 +1658,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of TopicsEntityListing</returns>
         
-        System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of Speech & Text Analytics topics
@@ -1674,11 +1677,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (TopicsEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get list of supported Speech & Text Analytics topics dialects
@@ -7070,13 +7074,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>TopicsEntityListing</returns>
         
-        public TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
+        public TopicsEntityListing GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<TopicsEntityListing> localVarResponse = GetSpeechandtextanalyticsTopicsWithHttpInfo(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
+             ApiResponse<TopicsEntityListing> localVarResponse = GetSpeechandtextanalyticsTopicsWithHttpInfo(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7090,11 +7095,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of TopicsEntityListing</returns>
         
-        public ApiResponse< TopicsEntityListing > GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< TopicsEntityListing > GetSpeechandtextanalyticsTopicsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/topics";
@@ -7134,6 +7140,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (dialects != null) dialects.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("dialects", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -7189,13 +7196,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of TopicsEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<TopicsEntityListing> GetSpeechandtextanalyticsTopicsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<TopicsEntityListing> localVarResponse = await GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
+             ApiResponse<TopicsEntityListing> localVarResponse = await GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7210,11 +7218,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
+        /// <param name="dialects">Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (TopicsEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/topics";
@@ -7254,6 +7263,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (dialects != null) dialects.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("dialects", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 

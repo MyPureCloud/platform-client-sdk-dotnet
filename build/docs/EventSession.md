@@ -7,9 +7,9 @@ title: EventSession
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** |  | [optional] |
+| **Id** | **string** | The ID of the session. | |
 | **SelfUri** | **string** |  | [optional] |
-| **Type** | **string** | Session types indicate the type or category of sessions (e.g. web, app). | [optional] |
+| **Type** | **string** | Session types indicate the type or category of sessions (e.g. web, app). | |
 {: class="table table-striped"}
 
 

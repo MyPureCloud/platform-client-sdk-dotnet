@@ -2050,9 +2050,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>ImportTemplate</returns>
         
-        ImportTemplate GetOutboundImporttemplate (string importTemplateId);
+        ImportTemplate GetOutboundImporttemplate (string importTemplateId, bool? includeImportStatus = null);
 
         /// <summary>
         /// Get Import Template
@@ -2062,9 +2063,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>ApiResponse of ImportTemplate</returns>
         
-        ApiResponse<ImportTemplate> GetOutboundImporttemplateWithHttpInfo (string importTemplateId);
+        ApiResponse<ImportTemplate> GetOutboundImporttemplateWithHttpInfo (string importTemplateId, bool? includeImportStatus = null);
 
         /// <summary>
         /// Get the import status for an import template.
@@ -2099,6 +2101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -2109,7 +2112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>ImportTemplateEntityListing</returns>
         
-        ImportTemplateEntityListing GetOutboundImporttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
+        ImportTemplateEntityListing GetOutboundImporttemplates (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
 
         /// <summary>
         /// Query Import Templates
@@ -2118,6 +2121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -2128,7 +2132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>ApiResponse of ImportTemplateEntityListing</returns>
         
-        ApiResponse<ImportTemplateEntityListing> GetOutboundImporttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
+        ApiResponse<ImportTemplateEntityListing> GetOutboundImporttemplatesWithHttpInfo (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
 
         /// <summary>
         /// Get an Outbound Messaging Campaign
@@ -2441,9 +2445,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>MessagingCampaignScheduleEntityListing</returns>
+        /// <returns>EmailCampaignScheduleEntityListing</returns>
         
-        MessagingCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ();
+        EmailCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ();
 
         /// <summary>
         /// Query for a list of email campaign schedules.
@@ -2452,9 +2456,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
+        /// <returns>ApiResponse of EmailCampaignScheduleEntityListing</returns>
         
-        ApiResponse<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsWithHttpInfo ();
+        ApiResponse<EmailCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsWithHttpInfo ();
 
         /// <summary>
         /// Get a messaging campaign schedule.
@@ -3111,6 +3115,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ContactListFilter</returns>
         
         ApiResponse<ContactListFilter> PostOutboundContactlistfiltersWithHttpInfo (ContactListFilter body);
+
+        /// <summary>
+        /// Retrieve multiple contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>ContactListFilterEntityListing</returns>
+        
+        ContactListFilterEntityListing PostOutboundContactlistfiltersBulkRetrieve (ContactListFilterBulkRetrieveBody body);
+
+        /// <summary>
+        /// Retrieve multiple contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>ApiResponse of ContactListFilterEntityListing</returns>
+        
+        ApiResponse<ContactListFilterEntityListing> PostOutboundContactlistfiltersBulkRetrieveWithHttpInfo (ContactListFilterBulkRetrieveBody body);
 
         /// <summary>
         /// Get a preview of the output of a contact list filter
@@ -6162,9 +6190,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>Task of ImportTemplate</returns>
         
-        System.Threading.Tasks.Task<ImportTemplate> GetOutboundImporttemplateAsync (string importTemplateId);
+        System.Threading.Tasks.Task<ImportTemplate> GetOutboundImporttemplateAsync (string importTemplateId, bool? includeImportStatus = null);
 
         /// <summary>
         /// Get Import Template
@@ -6174,9 +6203,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ImportTemplate)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ImportTemplate>> GetOutboundImporttemplateAsyncWithHttpInfo (string importTemplateId);
+        System.Threading.Tasks.Task<ApiResponse<ImportTemplate>> GetOutboundImporttemplateAsyncWithHttpInfo (string importTemplateId, bool? includeImportStatus = null);
 
         /// <summary>
         /// Get the import status for an import template.
@@ -6211,6 +6241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -6221,7 +6252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>Task of ImportTemplateEntityListing</returns>
         
-        System.Threading.Tasks.Task<ImportTemplateEntityListing> GetOutboundImporttemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
+        System.Threading.Tasks.Task<ImportTemplateEntityListing> GetOutboundImporttemplatesAsync (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
 
         /// <summary>
         /// Query Import Templates
@@ -6230,6 +6261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -6240,7 +6272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>Task of ApiResponse (ImportTemplateEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ImportTemplateEntityListing>> GetOutboundImporttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
+        System.Threading.Tasks.Task<ApiResponse<ImportTemplateEntityListing>> GetOutboundImporttemplatesAsyncWithHttpInfo (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null);
 
         /// <summary>
         /// Get an Outbound Messaging Campaign
@@ -6553,9 +6585,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
+        /// <returns>Task of EmailCampaignScheduleEntityListing</returns>
         
-        System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ();
+        System.Threading.Tasks.Task<EmailCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ();
 
         /// <summary>
         /// Query for a list of email campaign schedules.
@@ -6564,9 +6596,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EmailCampaignScheduleEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<EmailCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get a messaging campaign schedule.
@@ -7223,6 +7255,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PostOutboundContactlistfiltersAsyncWithHttpInfo (ContactListFilter body);
+
+        /// <summary>
+        /// Retrieve multiple contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>Task of ContactListFilterEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ContactListFilterEntityListing> PostOutboundContactlistfiltersBulkRetrieveAsync (ContactListFilterBulkRetrieveBody body);
+
+        /// <summary>
+        /// Retrieve multiple contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>Task of ApiResponse (ContactListFilterEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> PostOutboundContactlistfiltersBulkRetrieveAsyncWithHttpInfo (ContactListFilterBulkRetrieveBody body);
 
         /// <summary>
         /// Get a preview of the output of a contact list filter
@@ -24405,11 +24461,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>ImportTemplate</returns>
         
-        public ImportTemplate GetOutboundImporttemplate (string importTemplateId)
+        public ImportTemplate GetOutboundImporttemplate (string importTemplateId, bool? includeImportStatus = null)
         {
-             ApiResponse<ImportTemplate> localVarResponse = GetOutboundImporttemplateWithHttpInfo(importTemplateId);
+             ApiResponse<ImportTemplate> localVarResponse = GetOutboundImporttemplateWithHttpInfo(importTemplateId, includeImportStatus);
              return localVarResponse.Data;
         }
 
@@ -24419,9 +24476,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>ApiResponse of ImportTemplate</returns>
         
-        public ApiResponse< ImportTemplate > GetOutboundImporttemplateWithHttpInfo (string importTemplateId)
+        public ApiResponse< ImportTemplate > GetOutboundImporttemplateWithHttpInfo (string importTemplateId, bool? includeImportStatus = null)
         { 
             // verify the required parameter 'importTemplateId' is set
             if (importTemplateId == null)
@@ -24460,6 +24518,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (importTemplateId != null) localVarPathParams.Add("importTemplateId", this.Configuration.ApiClient.ParameterToString(importTemplateId));
 
             // Query params
+            if (includeImportStatus != null) localVarQueryParams.Add(new Tuple<string, string>("includeImportStatus", this.Configuration.ApiClient.ParameterToString(includeImportStatus)));
 
             // Header params
 
@@ -24509,11 +24568,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>Task of ImportTemplate</returns>
         
-        public async System.Threading.Tasks.Task<ImportTemplate> GetOutboundImporttemplateAsync (string importTemplateId)
+        public async System.Threading.Tasks.Task<ImportTemplate> GetOutboundImporttemplateAsync (string importTemplateId, bool? includeImportStatus = null)
         {
-             ApiResponse<ImportTemplate> localVarResponse = await GetOutboundImporttemplateAsyncWithHttpInfo(importTemplateId);
+             ApiResponse<ImportTemplate> localVarResponse = await GetOutboundImporttemplateAsyncWithHttpInfo(importTemplateId, includeImportStatus);
              return localVarResponse.Data;
 
         }
@@ -24524,9 +24584,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="importTemplateId">Import Template ID</param>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ImportTemplate)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ImportTemplate>> GetOutboundImporttemplateAsyncWithHttpInfo (string importTemplateId)
+        public async System.Threading.Tasks.Task<ApiResponse<ImportTemplate>> GetOutboundImporttemplateAsyncWithHttpInfo (string importTemplateId, bool? includeImportStatus = null)
         { 
             // verify the required parameter 'importTemplateId' is set
             if (importTemplateId == null)
@@ -24566,6 +24627,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (importTemplateId != null) localVarPathParams.Add("importTemplateId", this.Configuration.ApiClient.ParameterToString(importTemplateId));
 
             // Query params
+            if (includeImportStatus != null) localVarQueryParams.Add(new Tuple<string, string>("includeImportStatus", this.Configuration.ApiClient.ParameterToString(includeImportStatus)));
 
             // Header params
 
@@ -24832,6 +24894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -24842,9 +24905,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>ImportTemplateEntityListing</returns>
         
-        public ImportTemplateEntityListing GetOutboundImporttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
+        public ImportTemplateEntityListing GetOutboundImporttemplates (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
         {
-             ApiResponse<ImportTemplateEntityListing> localVarResponse = GetOutboundImporttemplatesWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
+             ApiResponse<ImportTemplateEntityListing> localVarResponse = GetOutboundImporttemplatesWithHttpInfo(includeImportStatus, pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
              return localVarResponse.Data;
         }
 
@@ -24853,6 +24916,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -24863,7 +24927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>ApiResponse of ImportTemplateEntityListing</returns>
         
-        public ApiResponse< ImportTemplateEntityListing > GetOutboundImporttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
+        public ApiResponse< ImportTemplateEntityListing > GetOutboundImporttemplatesWithHttpInfo (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
         { 
 
             var localVarPath = "/api/v2/outbound/importtemplates";
@@ -24898,6 +24962,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (includeImportStatus != null) localVarQueryParams.Add(new Tuple<string, string>("includeImportStatus", this.Configuration.ApiClient.ParameterToString(includeImportStatus)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (allowEmptyResult != null) localVarQueryParams.Add(new Tuple<string, string>("allowEmptyResult", this.Configuration.ApiClient.ParameterToString(allowEmptyResult)));
@@ -24954,6 +25019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -24964,9 +25030,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>Task of ImportTemplateEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ImportTemplateEntityListing> GetOutboundImporttemplatesAsync (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
+        public async System.Threading.Tasks.Task<ImportTemplateEntityListing> GetOutboundImporttemplatesAsync (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
         {
-             ApiResponse<ImportTemplateEntityListing> localVarResponse = await GetOutboundImporttemplatesAsyncWithHttpInfo(pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
+             ApiResponse<ImportTemplateEntityListing> localVarResponse = await GetOutboundImporttemplatesAsyncWithHttpInfo(includeImportStatus, pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
              return localVarResponse.Data;
 
         }
@@ -24976,6 +25042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeImportStatus">Import status (optional, default to false)</param>
         /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="allowEmptyResult">Whether to return an empty page when there are no results for that page (optional, default to false)</param>
@@ -24986,7 +25053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListTemplateId">Contact List Template ID (optional)</param>
         /// <returns>Task of ApiResponse (ImportTemplateEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ImportTemplateEntityListing>> GetOutboundImporttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ImportTemplateEntityListing>> GetOutboundImporttemplatesAsyncWithHttpInfo (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
         { 
 
             var localVarPath = "/api/v2/outbound/importtemplates";
@@ -25021,6 +25088,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (includeImportStatus != null) localVarQueryParams.Add(new Tuple<string, string>("includeImportStatus", this.Configuration.ApiClient.ParameterToString(includeImportStatus)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (allowEmptyResult != null) localVarQueryParams.Add(new Tuple<string, string>("allowEmptyResult", this.Configuration.ApiClient.ParameterToString(allowEmptyResult)));
@@ -27491,11 +27559,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>MessagingCampaignScheduleEntityListing</returns>
+        /// <returns>EmailCampaignScheduleEntityListing</returns>
         
-        public MessagingCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ()
+        public EmailCampaignScheduleEntityListing GetOutboundSchedulesEmailcampaigns ()
         {
-             ApiResponse<MessagingCampaignScheduleEntityListing> localVarResponse = GetOutboundSchedulesEmailcampaignsWithHttpInfo();
+             ApiResponse<EmailCampaignScheduleEntityListing> localVarResponse = GetOutboundSchedulesEmailcampaignsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -27504,9 +27572,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of MessagingCampaignScheduleEntityListing</returns>
+        /// <returns>ApiResponse of EmailCampaignScheduleEntityListing</returns>
         
-        public ApiResponse< MessagingCampaignScheduleEntityListing > GetOutboundSchedulesEmailcampaignsWithHttpInfo ()
+        public ApiResponse< EmailCampaignScheduleEntityListing > GetOutboundSchedulesEmailcampaignsWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/outbound/schedules/emailcampaigns";
@@ -27576,9 +27644,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<MessagingCampaignScheduleEntityListing>(localVarStatusCode,
+            return new ApiResponse<EmailCampaignScheduleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (MessagingCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignScheduleEntityListing)),
+                (EmailCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailCampaignScheduleEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27589,11 +27657,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of MessagingCampaignScheduleEntityListing</returns>
+        /// <returns>Task of EmailCampaignScheduleEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ()
+        public async System.Threading.Tasks.Task<EmailCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsAsync ()
         {
-             ApiResponse<MessagingCampaignScheduleEntityListing> localVarResponse = await GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo();
+             ApiResponse<EmailCampaignScheduleEntityListing> localVarResponse = await GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -27603,9 +27671,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (MessagingCampaignScheduleEntityListing)</returns>
+        /// <returns>Task of ApiResponse (EmailCampaignScheduleEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<EmailCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/outbound/schedules/emailcampaigns";
@@ -27675,9 +27743,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesEmailcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<MessagingCampaignScheduleEntityListing>(localVarStatusCode,
+            return new ApiResponse<EmailCampaignScheduleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (MessagingCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingCampaignScheduleEntityListing)),
+                (EmailCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailCampaignScheduleEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33407,6 +33475,227 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ContactListFilter>(localVarStatusCode,
                 localVarHeaders,
                 (ContactListFilter) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve multiple contact list filters 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>ContactListFilterEntityListing</returns>
+        
+        public ContactListFilterEntityListing PostOutboundContactlistfiltersBulkRetrieve (ContactListFilterBulkRetrieveBody body)
+        {
+             ApiResponse<ContactListFilterEntityListing> localVarResponse = PostOutboundContactlistfiltersBulkRetrieveWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve multiple contact list filters 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>ApiResponse of ContactListFilterEntityListing</returns>
+        
+        public ApiResponse< ContactListFilterEntityListing > PostOutboundContactlistfiltersBulkRetrieveWithHttpInfo (ContactListFilterBulkRetrieveBody body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersBulkRetrieve");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/bulk/retrieve";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersBulkRetrieve: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersBulkRetrieve: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilterEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilterEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilterEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve multiple contact list filters 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>Task of ContactListFilterEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ContactListFilterEntityListing> PostOutboundContactlistfiltersBulkRetrieveAsync (ContactListFilterBulkRetrieveBody body)
+        {
+             ApiResponse<ContactListFilterEntityListing> localVarResponse = await PostOutboundContactlistfiltersBulkRetrieveAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve multiple contact list filters 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The contact list filters to retrieve</param>
+        /// <returns>Task of ApiResponse (ContactListFilterEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> PostOutboundContactlistfiltersBulkRetrieveAsyncWithHttpInfo (ContactListFilterBulkRetrieveBody body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersBulkRetrieve");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/bulk/retrieve";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersBulkRetrieve: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersBulkRetrieve: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilterEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilterEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilterEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

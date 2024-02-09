@@ -3328,9 +3328,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>FlowResultEntityListing</returns>
         
-        FlowResultEntityListing PostFlowsInstancesQuery (CriteriaQuery body, bool? indexOnly = null);
+        FlowResultEntityListing PostFlowsInstancesQuery (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null);
 
         /// <summary>
         /// Query the database of existing flow histories to look for particular flow criteria
@@ -3342,9 +3343,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>ApiResponse of FlowResultEntityListing</returns>
         
-        ApiResponse<FlowResultEntityListing> PostFlowsInstancesQueryWithHttpInfo (CriteriaQuery body, bool? indexOnly = null);
+        ApiResponse<FlowResultEntityListing> PostFlowsInstancesQueryWithHttpInfo (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null);
 
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -7052,9 +7054,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>Task of FlowResultEntityListing</returns>
         
-        System.Threading.Tasks.Task<FlowResultEntityListing> PostFlowsInstancesQueryAsync (CriteriaQuery body, bool? indexOnly = null);
+        System.Threading.Tasks.Task<FlowResultEntityListing> PostFlowsInstancesQueryAsync (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null);
 
         /// <summary>
         /// Query the database of existing flow histories to look for particular flow criteria
@@ -7066,9 +7069,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>Task of ApiResponse (FlowResultEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<FlowResultEntityListing>> PostFlowsInstancesQueryAsyncWithHttpInfo (CriteriaQuery body, bool? indexOnly = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowResultEntityListing>> PostFlowsInstancesQueryAsyncWithHttpInfo (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null);
 
         /// <summary>
         /// Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -33553,11 +33557,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>FlowResultEntityListing</returns>
         
-        public FlowResultEntityListing PostFlowsInstancesQuery (CriteriaQuery body, bool? indexOnly = null)
+        public FlowResultEntityListing PostFlowsInstancesQuery (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null)
         {
-             ApiResponse<FlowResultEntityListing> localVarResponse = PostFlowsInstancesQueryWithHttpInfo(body, indexOnly);
+             ApiResponse<FlowResultEntityListing> localVarResponse = PostFlowsInstancesQueryWithHttpInfo(body, indexOnly, pageSize);
              return localVarResponse.Data;
         }
 
@@ -33569,9 +33574,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>ApiResponse of FlowResultEntityListing</returns>
         
-        public ApiResponse< FlowResultEntityListing > PostFlowsInstancesQueryWithHttpInfo (CriteriaQuery body, bool? indexOnly = null)
+        public ApiResponse< FlowResultEntityListing > PostFlowsInstancesQueryWithHttpInfo (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33611,6 +33617,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (indexOnly != null) localVarQueryParams.Add(new Tuple<string, string>("indexOnly", this.Configuration.ApiClient.ParameterToString(indexOnly)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -33667,11 +33674,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>Task of FlowResultEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<FlowResultEntityListing> PostFlowsInstancesQueryAsync (CriteriaQuery body, bool? indexOnly = null)
+        public async System.Threading.Tasks.Task<FlowResultEntityListing> PostFlowsInstancesQueryAsync (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null)
         {
-             ApiResponse<FlowResultEntityListing> localVarResponse = await PostFlowsInstancesQueryAsyncWithHttpInfo(body, indexOnly);
+             ApiResponse<FlowResultEntityListing> localVarResponse = await PostFlowsInstancesQueryAsyncWithHttpInfo(body, indexOnly, pageSize);
              return localVarResponse.Data;
 
         }
@@ -33684,9 +33692,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <param name="indexOnly">indexes only (optional)</param>
+        /// <param name="pageSize">number of results to return (optional, default to 50)</param>
         /// <returns>Task of ApiResponse (FlowResultEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<FlowResultEntityListing>> PostFlowsInstancesQueryAsyncWithHttpInfo (CriteriaQuery body, bool? indexOnly = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowResultEntityListing>> PostFlowsInstancesQueryAsyncWithHttpInfo (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33727,6 +33736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (indexOnly != null) localVarQueryParams.Add(new Tuple<string, string>("indexOnly", this.Configuration.ApiClient.ParameterToString(indexOnly)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 

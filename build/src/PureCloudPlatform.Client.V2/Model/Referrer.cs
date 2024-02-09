@@ -92,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueryString">Referrer URL querystring..</param>
         /// <param name="Fragment">Referrer URL fragment..</param>
         /// <param name="Name">Name of referrer (e.g. Yahoo!, Google, InfoSpace)..</param>
-        /// <param name="Medium">Type of referrer (e.g. search, social)..</param>
+        /// <param name="Medium">Type of referrer (e.g. search, social). (required).</param>
         public Referrer(string Url = null, string Domain = null, string Hostname = null, string Keywords = null, string Pathname = null, string QueryString = null, string Fragment = null, string Name = null, MediumEnum? Medium = null)
         {
             this.Url = Url;

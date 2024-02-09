@@ -84,6 +84,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsKnowledgeAggregatesJobs**](AnalyticsApi.html#postanalyticsknowledgeaggregatesjobs) | **Post** /api/v2/analytics/knowledge/aggregates/jobs | Query for knowledge aggregates asynchronously |
 | [**PostAnalyticsKnowledgeAggregatesQuery**](AnalyticsApi.html#postanalyticsknowledgeaggregatesquery) | **Post** /api/v2/analytics/knowledge/aggregates/query | Query for knowledge aggregates |
 | [**PostAnalyticsQueuesObservationsQuery**](AnalyticsApi.html#postanalyticsqueuesobservationsquery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
+| [**PostAnalyticsRatelimitsAggregatesQuery**](AnalyticsApi.html#postanalyticsratelimitsaggregatesquery) | **Post** /api/v2/analytics/ratelimits/aggregates/query | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
 | [**PostAnalyticsReportingExports**](AnalyticsApi.html#postanalyticsreportingexports) | **Post** /api/v2/analytics/reporting/exports | Generate a view export request |
 | [**PostAnalyticsReportingScheduleRunreport**](AnalyticsApi.html#postanalyticsreportingschedulerunreport) | **Post** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
 | [**PostAnalyticsReportingSchedules**](AnalyticsApi.html#postanalyticsreportingschedules) | **Post** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
@@ -4458,8 +4459,6 @@ namespace Example
 
 Query for flow execution aggregates
 
-PostAnalyticsFlowexecutionsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:flowExecutionAggregate:view
@@ -5095,6 +5094,69 @@ namespace Example
 ### Return type
 
 [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
+
+<a name="postanalyticsratelimitsaggregatesquery"></a>
+
+## [**RateLimitAggregateQueryResponse**](RateLimitAggregateQueryResponse.html) PostAnalyticsRatelimitsAggregatesQuery (RateLimitAggregationQuery body)
+
+
+
+Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+
+Requires ANY permissions: 
+
+* analytics:rateLimitAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsRatelimitsAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new RateLimitAggregationQuery(); // RateLimitAggregationQuery | query
+
+            try
+            { 
+                // Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+                RateLimitAggregateQueryResponse result = apiInstance.PostAnalyticsRatelimitsAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsRatelimitsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RateLimitAggregationQuery**](RateLimitAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RateLimitAggregateQueryResponse**](RateLimitAggregateQueryResponse.html)
 
 <a name="postanalyticsreportingexports"></a>
 

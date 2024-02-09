@@ -18,17 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PatchSegment :  IEquatable<PatchSegment>
     {
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PatchSegment" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected PatchSegment() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchSegment" /> class.
         /// </summary>
         /// <param name="IsActive">Whether or not the segment is active..</param>
-        /// <param name="DisplayName">The display name of the segment. (required).</param>
+        /// <param name="DisplayName">The display name of the segment..</param>
         /// <param name="Version">The version of the segment..</param>
         /// <param name="Description">A description of the segment..</param>
         /// <param name="Color">The hexadecimal color value of the segment..</param>
@@ -37,9 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Journey">The pattern of rules defining the segment..</param>
         /// <param name="ExternalSegment">Details of an entity corresponding to this segment in an external system..</param>
         /// <param name="AssignmentExpirationDays">Time, in days, from when the segment is assigned until it is automatically unassigned..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedDate">Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public PatchSegment(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, bool? ShouldDisplayToAgent = null, Context Context = null, Journey Journey = null, PatchExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
+        public PatchSegment(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, bool? ShouldDisplayToAgent = null, PatchContext Context = null, PatchJourney Journey = null, PatchExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null)
         {
             this.IsActive = IsActive;
             this.DisplayName = DisplayName;
@@ -51,20 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Journey = Journey;
             this.ExternalSegment = ExternalSegment;
             this.AssignmentExpirationDays = AssignmentExpirationDays;
-            this.CreatedDate = CreatedDate;
-            this.ModifiedDate = ModifiedDate;
             
         }
         
-
-
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-
 
 
         /// <summary>
@@ -126,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The context of the segment.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
-        public Context Context { get; set; }
+        public PatchContext Context { get; set; }
 
 
 
@@ -135,7 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The pattern of rules defining the segment.</value>
         [DataMember(Name="journey", EmitDefaultValue=false)]
-        public Journey Journey { get; set; }
+        public PatchJourney Journey { get; set; }
 
 
 
@@ -156,33 +137,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? AssignmentExpirationDays { get; set; }
 
 
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="createdDate", EmitDefaultValue=false)]
-        public DateTime? CreatedDate { get; set; }
-
-
-
-        /// <summary>
-        /// Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,7 +146,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class PatchSegment {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
@@ -203,9 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Journey: ").Append(Journey).Append("\n");
             sb.Append("  ExternalSegment: ").Append(ExternalSegment).Append("\n");
             sb.Append("  AssignmentExpirationDays: ").Append(AssignmentExpirationDays).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
-            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -246,11 +196,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
                 (
                     this.IsActive == other.IsActive ||
                     this.IsActive != null &&
@@ -300,21 +245,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AssignmentExpirationDays == other.AssignmentExpirationDays ||
                     this.AssignmentExpirationDays != null &&
                     this.AssignmentExpirationDays.Equals(other.AssignmentExpirationDays)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.CreatedDate == other.CreatedDate ||
-                    this.CreatedDate != null &&
-                    this.CreatedDate.Equals(other.CreatedDate)
-                ) &&
-                (
-                    this.ModifiedDate == other.ModifiedDate ||
-                    this.ModifiedDate != null &&
-                    this.ModifiedDate.Equals(other.ModifiedDate)
                 );
         }
 
@@ -329,9 +259,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
                 if (this.IsActive != null)
                     hash = hash * 59 + this.IsActive.GetHashCode();
 
@@ -361,15 +288,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AssignmentExpirationDays != null)
                     hash = hash * 59 + this.AssignmentExpirationDays.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
-
-                if (this.CreatedDate != null)
-                    hash = hash * 59 + this.CreatedDate.GetHashCode();
-
-                if (this.ModifiedDate != null)
-                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
 
                 return hash;
             }

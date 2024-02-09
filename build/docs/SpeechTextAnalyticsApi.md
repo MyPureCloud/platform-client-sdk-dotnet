@@ -1500,7 +1500,7 @@ namespace Example
 
 <a name="getspeechandtextanalyticstopics"></a>
 
-## [**TopicsEntityListing**](TopicsEntityListing.html) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
+## [**TopicsEntityListing**](TopicsEntityListing.html) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
 
 
 
@@ -1537,13 +1537,14 @@ namespace Example
             var state = state_example;  // string | Topic state. Defaults to latest (optional) 
             var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
             var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
+            var dialects = new List<string>(); // List<string> | Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional) 
             var sortBy = sortBy_example;  // string | Sort results by. Defaults to name (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order. Defaults to asc (optional) 
 
             try
             { 
                 // Get the list of Speech & Text Analytics topics
-                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
+                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1565,6 +1566,7 @@ namespace Example
 | **state** | **string**| Topic state. Defaults to latest | [optional] <br />**Values**: latest, published |
 | **name** | **string**| Case insensitive partial name to filter by | [optional]  |
 | **ids** | [**List<string>**](string.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
+| **dialects** | [**List<string>**](string.html)| Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN, fr-FR, fr-CA, it-IT, de-DE, pt-BR, pl-PL, pt-PT, nl-NL, ko-KR |
 | **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name |
 | **sortOrder** | **string**| Sort order. Defaults to asc | [optional] <br />**Values**: asc, desc |
 {: class="table table-striped"}

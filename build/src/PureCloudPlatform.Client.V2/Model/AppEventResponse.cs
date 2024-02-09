@@ -18,26 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AppEventResponse :  IEquatable<AppEventResponse>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppEventResponse" /> class.
         /// </summary>
-        /// <param name="Id">System-generated UUID for the event..</param>
-        /// <param name="CustomerId">Identifier of the customer in the source of the event..</param>
-        /// <param name="CustomerIdType">Type of identifier for the customer ID (cookie, email etc.)..</param>
-        /// <param name="EventName">Represents the action the customer performed. A good event name is typically an object followed by the action performed in past tense (e.g. screen_viewed, order_completed, user_registered)..</param>
-        /// <param name="ScreenName">The name of the screen in the app that the event took place..</param>
-        /// <param name="App">Application that the customer is interacting with..</param>
-        /// <param name="Device">Customer's device..</param>
+        [JsonConstructorAttribute]
+        protected AppEventResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppEventResponse" /> class.
+        /// </summary>
+        /// <param name="Id">System-generated UUID for the event. (required).</param>
+        /// <param name="CustomerId">Identifier of the customer in the source of the event. (required).</param>
+        /// <param name="CustomerIdType">Type of identifier for the customer ID (cookie, email etc.). (required).</param>
+        /// <param name="EventName">Represents the action the customer performed. A good event name is typically an object followed by the action performed in past tense (e.g. screen_viewed, order_completed, user_registered). (required).</param>
+        /// <param name="ScreenName">The name of the screen in the app that the event took place. (required).</param>
+        /// <param name="App">Application that the customer is interacting with. (required).</param>
+        /// <param name="Device">Customer's device. (required).</param>
         /// <param name="IpOrganization">Customer's IP-based organization or ISP name..</param>
         /// <param name="Geolocation">Customer's geolocation..</param>
         /// <param name="SdkLibrary">SDK library used to generate the event..</param>
         /// <param name="NetworkConnectivity">Information relating to the device's network connectivity..</param>
         /// <param name="MktCampaign">Marketing / traffic source information..</param>
-        /// <param name="Session">The app session the event belongs to..</param>
+        /// <param name="Session">The app session the event belongs to. (required).</param>
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
-        /// <param name="Attributes">User-defined attributes associated with a particular event..</param>
-        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone)..</param>
-        /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
+        /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, name, phone). (required).</param>
+        /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public AppEventResponse(string Id = null, string CustomerId = null, string CustomerIdType = null, string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, AppEventResponseSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, DateTime? CreatedDate = null)
         {
             this.Id = Id;

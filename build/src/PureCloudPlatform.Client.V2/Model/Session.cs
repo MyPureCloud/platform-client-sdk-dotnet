@@ -237,12 +237,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Last ACD outcome for the conversation.</value>
         [DataMember(Name="lastAcdOutcome", EmitDefaultValue=false)]
         public LastAcdOutcomeEnum? LastAcdOutcome { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Session" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Session() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Session" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the session. (required).</param>
         /// <param name="CustomerId">Primary identifier of the customer in the source where the events for the session originate from..</param>
         /// <param name="CustomerIdType">Type of source customer identifier (e.g. cookie, email, phone)..</param>
-        /// <param name="Type">Session types indicate the type or category of sessions (e.g. web, app)..</param>
+        /// <param name="Type">Session types indicate the type or category of sessions (e.g. web, app). (required).</param>
         /// <param name="ExternalId">Unique identifier in the external system where the events for the session originate from..</param>
         /// <param name="ExternalUrl">A URL that identifies an external system-of-record resource that may have more detailed information on the session..</param>
         /// <param name="ShortId">Shortened numeric identifier of 4-6 digits..</param>
@@ -264,10 +271,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SearchTerms">Search terms associated with the session..</param>
         /// <param name="UserAgentString">String identifying the user agent..</param>
         /// <param name="DurationInSeconds">Indicates how long the session has been active (valid for an individual device)..</param>
-        /// <param name="EventCount">The count of all events performed during the session..</param>
+        /// <param name="EventCount">The count of all events performed during the session. (required).</param>
         /// <param name="PageviewCount">The count of all pageviews performed during the session..</param>
         /// <param name="ScreenviewCount">The count of all screenviews performed during the session..</param>
-        /// <param name="LastEvent">Information about the most recent event in this session..</param>
+        /// <param name="LastEvent">Information about the most recent event in this session. (required).</param>
         /// <param name="LastConnectedQueue">The last queue connected to this session..</param>
         /// <param name="LastConnectedUser">The last user connected to this session..</param>
         /// <param name="LastUserDisposition">The last user disposition connected to this session..</param>
@@ -276,13 +283,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationSubject">The subject for the conversation, for example an email subject..</param>
         /// <param name="LastUserDisconnectType">Disconnect reason for the last user connected to the conversation..</param>
         /// <param name="LastAcdOutcome">Last ACD outcome for the conversation..</param>
-        /// <param name="Authenticated">Indicates whether or not the session is authenticated..</param>
-        /// <param name="CreatedDate">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Authenticated">Indicates whether or not the session is authenticated. (required).</param>
+        /// <param name="CreatedDate">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndedDate">Timestamp indicating when the session was ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AwayDate">Timestamp indicating when the visitor should be considered as away. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IdleDate">Timestamp indicating when the visitor should be considered as idle. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Session(string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, JourneyApp App = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
+        public Session(string Id = null, string CustomerId = null, string CustomerIdType = null, string Type = null, string ExternalId = null, string ExternalUrl = null, string ShortId = null, List<OutcomeAchievement> OutcomeAchievements = null, List<SessionSegmentAssignment> SegmentAssignments = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttributeList> AttributeLists = null, Browser Browser = null, Device Device = null, JourneyGeolocation Geolocation = null, string IpAddress = null, string IpOrganization = null, JourneyPage LastPage = null, JourneyCampaign MktCampaign = null, Referrer Referrer = null, JourneyApp App = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, SessionLastEvent LastEvent = null, ConnectedQueue LastConnectedQueue = null, ConnectedUser LastConnectedUser = null, ConversationUserDisposition LastUserDisposition = null, List<ConversationChannel> ConversationChannels = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, DateTime? AwayDate = null, DateTime? IdleDate = null)
         {
+            this.Id = Id;
             this.CustomerId = CustomerId;
             this.CustomerIdType = CustomerIdType;
             this.Type = Type;
@@ -330,11 +338,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the session.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the session.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

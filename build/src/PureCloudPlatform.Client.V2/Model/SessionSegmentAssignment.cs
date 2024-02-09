@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SessionSegmentAssignment :  IEquatable<SessionSegmentAssignment>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionSegmentAssignment" /> class.
         /// </summary>
-        /// <param name="Segment">The segment that was assigned..</param>
-        /// <param name="AssignedDate">Timestamp indicating when the segment was assigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        [JsonConstructorAttribute]
+        protected SessionSegmentAssignment() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SessionSegmentAssignment" /> class.
+        /// </summary>
+        /// <param name="Segment">The segment that was assigned. (required).</param>
+        /// <param name="AssignedDate">Timestamp indicating when the segment was assigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public SessionSegmentAssignment(AssignedSegment Segment = null, DateTime? AssignedDate = null)
         {
             this.Segment = Segment;

@@ -18,22 +18,30 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AchievedOutcome :  IEquatable<AchievedOutcome>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AchievedOutcome" /> class.
         /// </summary>
-        public AchievedOutcome()
+        [JsonConstructorAttribute]
+        protected AchievedOutcome() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AchievedOutcome" /> class.
+        /// </summary>
+        /// <param name="Id">The ID of the outcome achieved. (required).</param>
+        public AchievedOutcome(string Id = null)
         {
+            this.Id = Id;
             
         }
         
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the outcome achieved.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the outcome achieved.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

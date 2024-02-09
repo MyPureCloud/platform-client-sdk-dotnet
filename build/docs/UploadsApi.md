@@ -7,14 +7,83 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetKnowledgeKnowledgebaseUploadsUrlsJob**](UploadsApi.html#getknowledgeknowledgebaseuploadsurlsjob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId} | Get content upload from URL job status |
 | [**PostIntegrationsActionDraftFunctionUpload**](UploadsApi.html#postintegrationsactiondraftfunctionupload) | **Post** /api/v2/integrations/actions/{actionId}/draft/function/upload | Create upload presigned URL for draft function package file. |
 | [**PostKnowledgeDocumentuploads**](UploadsApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](UploadsApi.html#postknowledgeknowledgebaseuploadsurlsjobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
 | [**PostLanguageunderstandingMinerUploads**](UploadsApi.html#postlanguageunderstandingmineruploads) | **Post** /api/v2/languageunderstanding/miners/{minerId}/uploads | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
 | [**PostUploadsLearningCoverart**](UploadsApi.html#postuploadslearningcoverart) | **Post** /api/v2/uploads/learning/coverart | Generates pre-signed URL to upload cover art for learning modules |
 | [**PostUploadsPublicassetsImages**](UploadsApi.html#postuploadspublicassetsimages) | **Post** /api/v2/uploads/publicassets/images | Creates presigned url for uploading a public asset image |
 | [**PostUploadsRecordings**](UploadsApi.html#postuploadsrecordings) | **Post** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
 | [**PostUploadsWorkforcemanagementHistoricaldataCsv**](UploadsApi.html#postuploadsworkforcemanagementhistoricaldatacsv) | **Post** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
 {: class="table table-striped"}
+
+<a name="getknowledgeknowledgebaseuploadsurlsjob"></a>
+
+## [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse.html) GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
+
+
+
+Get content upload from URL job status
+
+GetKnowledgeKnowledgebaseUploadsUrlsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseUploadsUrlsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UploadsApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var jobId = jobId_example;  // string | Upload job ID
+
+            try
+            { 
+                // Get content upload from URL job status
+                GetUploadSourceUrlJobStatusResponse result = apiInstance.GetKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UploadsApi.GetKnowledgeKnowledgebaseUploadsUrlsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **jobId** | **string**| Upload job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse.html)
 
 <a name="postintegrationsactiondraftfunctionupload"></a>
 
@@ -145,6 +214,73 @@ namespace Example
 ### Return type
 
 [**UploadUrlResponse**](UploadUrlResponse.html)
+
+<a name="postknowledgeknowledgebaseuploadsurlsjobs"></a>
+
+## [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse.html) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
+
+
+
+Create content upload from URL job
+
+PostKnowledgeKnowledgebaseUploadsUrlsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseUploadsUrlsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UploadsApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new CreateUploadSourceUrlJobRequest(); // CreateUploadSourceUrlJobRequest | uploadRequest
+
+            try
+            { 
+                // Create content upload from URL job
+                CreateUploadSourceUrlJobResponse result = apiInstance.PostKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UploadsApi.PostKnowledgeKnowledgebaseUploadsUrlsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest.html)| uploadRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse.html)
 
 <a name="postlanguageunderstandingmineruploads"></a>
 

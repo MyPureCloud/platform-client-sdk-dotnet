@@ -206,6 +206,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The status of the import process.
+        /// </summary>
+        /// <value>The status of the import process.</value>
+        [DataMember(Name="importStatus", EmitDefaultValue=false)]
+        public ImportStatus ImportStatus { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -233,6 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SplittingInformation: ").Append(SplittingInformation).Append("\n");
             sb.Append("  ListNameFormat: ").Append(ListNameFormat).Append("\n");
             sb.Append("  CustomListNameFormatValue: ").Append(CustomListNameFormatValue).Append("\n");
+            sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -330,6 +340,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomListNameFormatValue.Equals(other.CustomListNameFormatValue)
                 ) &&
                 (
+                    this.ImportStatus == other.ImportStatus ||
+                    this.ImportStatus != null &&
+                    this.ImportStatus.Equals(other.ImportStatus)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -379,6 +394,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CustomListNameFormatValue != null)
                     hash = hash * 59 + this.CustomListNameFormatValue.GetHashCode();
+
+                if (this.ImportStatus != null)
+                    hash = hash * 59 + this.ImportStatus.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

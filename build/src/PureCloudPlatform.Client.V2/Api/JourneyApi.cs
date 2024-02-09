@@ -1086,7 +1086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
         
-        Outcome PostJourneyOutcomes (Outcome body = null);
+        Outcome PostJourneyOutcomes (OutcomeRequest body = null);
 
         /// <summary>
         /// Create an outcome.
@@ -1098,7 +1098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
         
-        ApiResponse<Outcome> PostJourneyOutcomesWithHttpInfo (Outcome body = null);
+        ApiResponse<Outcome> PostJourneyOutcomesWithHttpInfo (OutcomeRequest body = null);
 
         /// <summary>
         /// Create Outcome Attributions
@@ -1160,7 +1160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>JourneySegment</returns>
         
-        JourneySegment PostJourneySegments (JourneySegment body = null);
+        JourneySegment PostJourneySegments (JourneySegmentRequest body = null);
 
         /// <summary>
         /// Create a segment.
@@ -1172,7 +1172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of JourneySegment</returns>
         
-        ApiResponse<JourneySegment> PostJourneySegmentsWithHttpInfo (JourneySegment body = null);
+        ApiResponse<JourneySegment> PostJourneySegmentsWithHttpInfo (JourneySegmentRequest body = null);
 
         #endregion Synchronous Operations
 
@@ -2248,7 +2248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
         
-        System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (Outcome body = null);
+        System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (OutcomeRequest body = null);
 
         /// <summary>
         /// Create an outcome.
@@ -2260,7 +2260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (Outcome body = null);
+        System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (OutcomeRequest body = null);
 
         /// <summary>
         /// Create Outcome Attributions
@@ -2322,7 +2322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of JourneySegment</returns>
         
-        System.Threading.Tasks.Task<JourneySegment> PostJourneySegmentsAsync (JourneySegment body = null);
+        System.Threading.Tasks.Task<JourneySegment> PostJourneySegmentsAsync (JourneySegmentRequest body = null);
 
         /// <summary>
         /// Create a segment.
@@ -2334,7 +2334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegment body = null);
+        System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegmentRequest body = null);
 
         #endregion Asynchronous Operations
 
@@ -11188,7 +11188,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
         
-        public Outcome PostJourneyOutcomes (Outcome body = null)
+        public Outcome PostJourneyOutcomes (OutcomeRequest body = null)
         {
              ApiResponse<Outcome> localVarResponse = PostJourneyOutcomesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11202,7 +11202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
         
-        public ApiResponse< Outcome > PostJourneyOutcomesWithHttpInfo (Outcome body = null)
+        public ApiResponse< Outcome > PostJourneyOutcomesWithHttpInfo (OutcomeRequest body = null)
         { 
 
             var localVarPath = "/api/v2/journey/outcomes";
@@ -11294,7 +11294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
         
-        public async System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (Outcome body = null)
+        public async System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (OutcomeRequest body = null)
         {
              ApiResponse<Outcome> localVarResponse = await PostJourneyOutcomesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11309,7 +11309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (Outcome body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (OutcomeRequest body = null)
         { 
 
             var localVarPath = "/api/v2/journey/outcomes";
@@ -11834,7 +11834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>JourneySegment</returns>
         
-        public JourneySegment PostJourneySegments (JourneySegment body = null)
+        public JourneySegment PostJourneySegments (JourneySegmentRequest body = null)
         {
              ApiResponse<JourneySegment> localVarResponse = PostJourneySegmentsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11848,7 +11848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of JourneySegment</returns>
         
-        public ApiResponse< JourneySegment > PostJourneySegmentsWithHttpInfo (JourneySegment body = null)
+        public ApiResponse< JourneySegment > PostJourneySegmentsWithHttpInfo (JourneySegmentRequest body = null)
         { 
 
             var localVarPath = "/api/v2/journey/segments";
@@ -11940,7 +11940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of JourneySegment</returns>
         
-        public async System.Threading.Tasks.Task<JourneySegment> PostJourneySegmentsAsync (JourneySegment body = null)
+        public async System.Threading.Tasks.Task<JourneySegment> PostJourneySegmentsAsync (JourneySegmentRequest body = null)
         {
              ApiResponse<JourneySegment> localVarResponse = await PostJourneySegmentsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11955,7 +11955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (JourneySegment)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegment body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegmentRequest body = null)
         { 
 
             var localVarPath = "/api/v2/journey/segments";

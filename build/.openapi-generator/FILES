@@ -662,6 +662,7 @@ docs/ContactListDivisionView.md
 docs/ContactListDivisionViewListing.md
 docs/ContactListEntityListing.md
 docs/ContactListFilter.md
+docs/ContactListFilterBulkRetrieveBody.md
 docs/ContactListFilterClause.md
 docs/ContactListFilterEntityListing.md
 docs/ContactListFilterPredicate.md
@@ -1023,6 +1024,8 @@ docs/CreateShareResponse.md
 docs/CreateTimeOffLimitRequest.md
 docs/CreateTimeOffPlanRequest.md
 docs/CreateTriggerRequest.md
+docs/CreateUploadSourceUrlJobRequest.md
+docs/CreateUploadSourceUrlJobResponse.md
 docs/CreateUser.md
 docs/CreateUtilizationLabelRequest.md
 docs/CreateUtilizationTagRequest.md
@@ -1642,6 +1645,7 @@ docs/EmailAddress.md
 docs/EmailAttachment.md
 docs/EmailBeginTransmittingEvent.md
 docs/EmailCampaignSchedule.md
+docs/EmailCampaignScheduleEntityListing.md
 docs/EmailColumn.md
 docs/EmailCommunicationAnsweredEvent.md
 docs/EmailCommunicationDispositionAppliedEvent.md
@@ -2514,9 +2518,12 @@ docs/GetKnowledgeKnowledgebaseLanguageTraining-example.txt
 docs/GetKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/GetKnowledgeKnowledgebaseOperations-example.txt
 docs/GetKnowledgeKnowledgebaseOperationsUsersQuery-example.txt
+docs/GetKnowledgeKnowledgebaseParseJob-example.txt
 docs/GetKnowledgeKnowledgebaseUnansweredGroup-example.txt
 docs/GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
 docs/GetKnowledgeKnowledgebaseUnansweredGroups-example.txt
+docs/GetKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
+docs/GetKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
 docs/GetKnowledgeKnowledgebases-example.txt
 docs/GetLanguage-example.txt
 docs/GetLanguages-example.txt
@@ -2972,6 +2979,7 @@ docs/GetTextbotsBotsSearch-example.txt
 docs/GetTimezones-example.txt
 docs/GetTokensMe-example.txt
 docs/GetTokensTimeout-example.txt
+docs/GetUploadSourceUrlJobStatusResponse.md
 docs/GetUsageEventsDefinition-example.txt
 docs/GetUsageEventsDefinitions-example.txt
 docs/GetUsageQueryExecutionIdResults-example.txt
@@ -3341,6 +3349,7 @@ docs/JourneyOutcomeEventsNotificationSession.md
 docs/JourneyPage.md
 docs/JourneyPattern.md
 docs/JourneySegment.md
+docs/JourneySegmentRequest.md
 docs/JourneySessionEventsNotificationApp.md
 docs/JourneySessionEventsNotificationBrowser.md
 docs/JourneySessionEventsNotificationConnectedQueue.md
@@ -3498,6 +3507,12 @@ docs/KnowledgeImportJobRequest.md
 docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
+docs/KnowledgeParseImportResult.md
+docs/KnowledgeParseJobRequest.md
+docs/KnowledgeParseJobRequestImport.md
+docs/KnowledgeParseJobRequestPatch.md
+docs/KnowledgeParseJobResponse.md
+docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocument.md
 docs/KnowledgeSearchRequest.md
@@ -3958,6 +3973,7 @@ docs/OutcomeProbabilityCondition.md
 docs/OutcomeQuantileCondition.md
 docs/OutcomeRef.md
 docs/OutcomeRefRequest.md
+docs/OutcomeRequest.md
 docs/OutcomeScore.md
 docs/OutcomeScoresResult.md
 docs/OutlierInfo.md
@@ -3990,6 +4006,7 @@ docs/PatchAlertingRulesBulk-example.txt
 docs/PatchAnalyticsReportingSettings-example.txt
 docs/PatchArchitectGrammar-example.txt
 docs/PatchArchitectGrammarLanguage-example.txt
+docs/PatchAssociatedValueField.md
 docs/PatchAuthorizationRole-example.txt
 docs/PatchAuthorizationSettings-example.txt
 docs/PatchBuReschedulingOptionsManagementUnitRequest.md
@@ -4012,6 +4029,8 @@ docs/PatchContentOffer.md
 docs/PatchContentOfferStyleProperties.md
 docs/PatchContentOfferStylingConfiguration.md
 docs/PatchContentPositionProperties.md
+docs/PatchContext.md
+docs/PatchContextPattern.md
 docs/PatchConversationParticipant-example.txt
 docs/PatchConversationParticipantAttributes-example.txt
 docs/PatchConversationSecureattributes-example.txt
@@ -4052,10 +4071,12 @@ docs/PatchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/PatchConversationsMessagingSetting-example.txt
 docs/PatchConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/PatchConversationsSettings-example.txt
+docs/PatchCriteria.md
 docs/PatchCtaButtonStyleProperties.md
 docs/PatchEmailsSettings-example.txt
 docs/PatchEmailsSettings-example.txt
 docs/PatchEmployeeperformanceExternalmetricsDefinition-example.txt
+docs/PatchEntityTypeCriteria.md
 docs/PatchExternalSegment.md
 docs/PatchExternalcontactsContactIdentifiers-example.txt
 docs/PatchGeolocationsSettings-example.txt
@@ -4064,10 +4085,12 @@ docs/PatchIntegrationAction.md
 docs/PatchIntegrationActionFields.md
 docs/PatchIntegrationsAction-example.txt
 docs/PatchIntegrationsActionDraft-example.txt
+docs/PatchJourney.md
 docs/PatchJourneyActionmap-example.txt
 docs/PatchJourneyActiontarget-example.txt
 docs/PatchJourneyActiontemplate-example.txt
 docs/PatchJourneyOutcome-example.txt
+docs/PatchJourneyPattern.md
 docs/PatchJourneySegment-example.txt
 docs/PatchKnowledgeGuestSessionDocumentsSearchSearchId-example.txt
 docs/PatchKnowledgeKnowledgebase-example.txt
@@ -4081,6 +4104,7 @@ docs/PatchKnowledgeKnowledgebaseLanguageCategory-example.txt
 docs/PatchKnowledgeKnowledgebaseLanguageDocument-example.txt
 docs/PatchKnowledgeKnowledgebaseLanguageDocuments-example.txt
 docs/PatchKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
+docs/PatchKnowledgeKnowledgebaseParseJob-example.txt
 docs/PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
 docs/PatchLanguageunderstandingDomain-example.txt
 docs/PatchLanguageunderstandingMinerDraft-example.txt
@@ -4271,6 +4295,7 @@ docs/PostAnalyticsKnowledgeAggregatesJobs-example.txt
 docs/PostAnalyticsKnowledgeAggregatesQuery-example.txt
 docs/PostAnalyticsQueuesObservationsQuery-example.txt
 docs/PostAnalyticsQueuesObservationsQuery-example.txt
+docs/PostAnalyticsRatelimitsAggregatesQuery-example.txt
 docs/PostAnalyticsReportingExports-example.txt
 docs/PostAnalyticsReportingScheduleRunreport-example.txt
 docs/PostAnalyticsReportingSchedules-example.txt
@@ -4554,8 +4579,12 @@ docs/PostKnowledgeKnowledgebaseLanguageDocuments-example.txt
 docs/PostKnowledgeKnowledgebaseLanguageDocumentsImports-example.txt
 docs/PostKnowledgeKnowledgebaseLanguageTrainingPromote-example.txt
 docs/PostKnowledgeKnowledgebaseLanguageTrainings-example.txt
+docs/PostKnowledgeKnowledgebaseParseJobImport-example.txt
+docs/PostKnowledgeKnowledgebaseParseJobs-example.txt
 docs/PostKnowledgeKnowledgebaseSearch-example.txt
 docs/PostKnowledgeKnowledgebaseSearch-example.txt
+docs/PostKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
+docs/PostKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
 docs/PostKnowledgeKnowledgebases-example.txt
 docs/PostLanguages-example.txt
 docs/PostLanguageunderstandingDomainFeedback-example.txt
@@ -4617,6 +4646,7 @@ docs/PostOutboundContactlistContacts-example.txt
 docs/PostOutboundContactlistContactsBulk-example.txt
 docs/PostOutboundContactlistExport-example.txt
 docs/PostOutboundContactlistfilters-example.txt
+docs/PostOutboundContactlistfiltersBulkRetrieve-example.txt
 docs/PostOutboundContactlistfiltersPreview-example.txt
 docs/PostOutboundContactlists-example.txt
 docs/PostOutboundContactlisttemplates-example.txt
@@ -5418,6 +5448,13 @@ docs/QueueUserEventTopicQueueMember.md
 docs/QueueUserEventTopicUserReference.md
 docs/QueueUtilizationDiagnostic.md
 docs/QuickReply.md
+docs/RateLimitAggregateDataContainer.md
+docs/RateLimitAggregateQueryClause.md
+docs/RateLimitAggregateQueryFilter.md
+docs/RateLimitAggregateQueryPredicate.md
+docs/RateLimitAggregateQueryResponse.md
+docs/RateLimitAggregationQuery.md
+docs/RateLimitAggregationView.md
 docs/Reaction.md
 docs/RealTimeAdherenceExplanation.md
 docs/RecallEntry.md
@@ -5487,6 +5524,14 @@ docs/ReportingTurnKnowledgeFeedback.md
 docs/ReportingTurnKnowledgeSearch.md
 docs/ReportingTurnsResponse.md
 docs/RequestConfig.md
+docs/RequestContext.md
+docs/RequestContextPattern.md
+docs/RequestCriteria.md
+docs/RequestDevice.md
+docs/RequestEntityTypeCriteria.md
+docs/RequestExternalSegment.md
+docs/RequestJourney.md
+docs/RequestJourneyPattern.md
 docs/RequestMapping.md
 docs/RequestScoredAgent.md
 docs/ReschedulingManagementUnitResponse.md
@@ -5661,8 +5706,6 @@ docs/SecureSessionEntityListing.md
 docs/SecurityProfile.md
 docs/SecurityProfileEntityListing.md
 docs/Segment.md
-docs/SegmentAssignedEvent.md
-docs/SegmentAssignedEventSegment.md
 docs/SegmentAssignmentEvent.md
 docs/SegmentDetailQueryClause.md
 docs/SegmentDetailQueryFilter.md
@@ -7474,6 +7517,7 @@ src/PureCloudPlatform.Client.V2/Model/ContactListDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListDivisionViewListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListFilter.cs
+src/PureCloudPlatform.Client.V2/Model/ContactListFilterBulkRetrieveBody.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListFilterClause.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListFilterEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListFilterPredicate.cs
@@ -7831,6 +7875,8 @@ src/PureCloudPlatform.Client.V2/Model/CreateShareResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTimeOffLimitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTimeOffPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTriggerRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateUploadSourceUrlJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateUploadSourceUrlJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateUser.cs
 src/PureCloudPlatform.Client.V2/Model/CreateUtilizationLabelRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateUtilizationTagRequest.cs
@@ -8185,6 +8231,7 @@ src/PureCloudPlatform.Client.V2/Model/EmailAddress.cs
 src/PureCloudPlatform.Client.V2/Model/EmailAttachment.cs
 src/PureCloudPlatform.Client.V2/Model/EmailBeginTransmittingEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCampaignSchedule.cs
+src/PureCloudPlatform.Client.V2/Model/EmailCampaignScheduleEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EmailColumn.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCommunicationAnsweredEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailCommunicationDispositionAppliedEvent.cs
@@ -8522,6 +8569,7 @@ src/PureCloudPlatform.Client.V2/Model/GetMetricsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetProfilesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetRulesQuery.cs
 src/PureCloudPlatform.Client.V2/Model/GetTemplatesResponse.cs
+src/PureCloudPlatform.Client.V2/Model/GetUploadSourceUrlJobStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GoogleDialogflowCustomSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Grammar.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarFileUploadRequest.cs
@@ -8720,6 +8768,7 @@ src/PureCloudPlatform.Client.V2/Model/JourneyOutcomeEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyPage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyPattern.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySegment.cs
+src/PureCloudPlatform.Client.V2/Model/JourneySegmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationApp.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationBrowser.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConnectedQueue.cs
@@ -8875,6 +8924,12 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobSettings.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobStatistics.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeParseImportResult.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobRequestImport.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobRequestPatch.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeParseRecord.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocument.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchRequest.cs
@@ -9305,6 +9360,7 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeProbabilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeQuantileCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeRef.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeRefRequest.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeScoresResult.cs
 src/PureCloudPlatform.Client.V2/Model/OutlierInfo.cs
@@ -9331,6 +9387,7 @@ src/PureCloudPlatform.Client.V2/Model/PatchActionProperties.cs
 src/PureCloudPlatform.Client.V2/Model/PatchActionSurvey.cs
 src/PureCloudPlatform.Client.V2/Model/PatchActionTarget.cs
 src/PureCloudPlatform.Client.V2/Model/PatchActionTemplate.cs
+src/PureCloudPlatform.Client.V2/Model/PatchAssociatedValueField.cs
 src/PureCloudPlatform.Client.V2/Model/PatchBuReschedulingOptionsManagementUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PatchBuReschedulingOptionsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PatchBuScheduleRunRequest.cs
@@ -9342,10 +9399,16 @@ src/PureCloudPlatform.Client.V2/Model/PatchContentOffer.cs
 src/PureCloudPlatform.Client.V2/Model/PatchContentOfferStyleProperties.cs
 src/PureCloudPlatform.Client.V2/Model/PatchContentOfferStylingConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/PatchContentPositionProperties.cs
+src/PureCloudPlatform.Client.V2/Model/PatchContext.cs
+src/PureCloudPlatform.Client.V2/Model/PatchContextPattern.cs
+src/PureCloudPlatform.Client.V2/Model/PatchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/PatchCtaButtonStyleProperties.cs
+src/PureCloudPlatform.Client.V2/Model/PatchEntityTypeCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/PatchExternalSegment.cs
 src/PureCloudPlatform.Client.V2/Model/PatchIntegrationAction.cs
 src/PureCloudPlatform.Client.V2/Model/PatchIntegrationActionFields.cs
+src/PureCloudPlatform.Client.V2/Model/PatchJourney.cs
+src/PureCloudPlatform.Client.V2/Model/PatchJourneyPattern.cs
 src/PureCloudPlatform.Client.V2/Model/PatchOutcome.cs
 src/PureCloudPlatform.Client.V2/Model/PatchPredictorRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PatchSegment.cs
@@ -9746,6 +9809,13 @@ src/PureCloudPlatform.Client.V2/Model/QueueUserEventTopicQueueMember.cs
 src/PureCloudPlatform.Client.V2/Model/QueueUserEventTopicUserReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueUtilizationDiagnostic.cs
 src/PureCloudPlatform.Client.V2/Model/QuickReply.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateDataContainer.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryClause.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryFilter.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryPredicate.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/Reaction.cs
 src/PureCloudPlatform.Client.V2/Model/RealTimeAdherenceExplanation.cs
 src/PureCloudPlatform.Client.V2/Model/RecallEntry.cs
@@ -9813,6 +9883,14 @@ src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeSearch.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RequestConfig.cs
+src/PureCloudPlatform.Client.V2/Model/RequestContext.cs
+src/PureCloudPlatform.Client.V2/Model/RequestContextPattern.cs
+src/PureCloudPlatform.Client.V2/Model/RequestCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/RequestDevice.cs
+src/PureCloudPlatform.Client.V2/Model/RequestEntityTypeCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/RequestExternalSegment.cs
+src/PureCloudPlatform.Client.V2/Model/RequestJourney.cs
+src/PureCloudPlatform.Client.V2/Model/RequestJourneyPattern.cs
 src/PureCloudPlatform.Client.V2/Model/RequestMapping.cs
 src/PureCloudPlatform.Client.V2/Model/RequestScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ReschedulingManagementUnitResponse.cs
@@ -9975,8 +10053,6 @@ src/PureCloudPlatform.Client.V2/Model/SecureSessionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SecurityProfile.cs
 src/PureCloudPlatform.Client.V2/Model/SecurityProfileEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Segment.cs
-src/PureCloudPlatform.Client.V2/Model/SegmentAssignedEvent.cs
-src/PureCloudPlatform.Client.V2/Model/SegmentAssignedEventSegment.cs
 src/PureCloudPlatform.Client.V2/Model/SegmentAssignmentEvent.cs
 src/PureCloudPlatform.Client.V2/Model/SegmentDetailQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/SegmentDetailQueryFilter.cs

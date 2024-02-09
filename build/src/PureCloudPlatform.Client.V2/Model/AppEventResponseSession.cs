@@ -18,16 +18,24 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AppEventResponseSession :  IEquatable<AppEventResponseSession>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AppEventResponseSession" /> class.
         /// </summary>
-        /// <param name="DurationInSeconds">Indicates how long the customer has been in the app within this session..</param>
-        /// <param name="EventCount">The count of all events recorded during this session..</param>
-        /// <param name="ScreenviewCount">The count of all screen views recorded during this session..</param>
+        [JsonConstructorAttribute]
+        protected AppEventResponseSession() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppEventResponseSession" /> class.
+        /// </summary>
+        /// <param name="Id">ID of the app session. (required).</param>
+        /// <param name="DurationInSeconds">Indicates how long the customer has been in the app within this session. (required).</param>
+        /// <param name="EventCount">The count of all events recorded during this session. (required).</param>
+        /// <param name="ScreenviewCount">The count of all screen views recorded during this session. (required).</param>
         /// <param name="Referrer">The referrer of the first event in the app session..</param>
-        /// <param name="CreatedDate">UTC timestamp of the session's first event, that is when the session starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public AppEventResponseSession(int? DurationInSeconds = null, int? EventCount = null, int? ScreenviewCount = null, Referrer Referrer = null, DateTime? CreatedDate = null)
+        /// <param name="CreatedDate">UTC timestamp of the session's first event, that is when the session starts. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public AppEventResponseSession(string Id = null, int? DurationInSeconds = null, int? EventCount = null, int? ScreenviewCount = null, Referrer Referrer = null, DateTime? CreatedDate = null)
         {
+            this.Id = Id;
             this.DurationInSeconds = DurationInSeconds;
             this.EventCount = EventCount;
             this.ScreenviewCount = ScreenviewCount;
@@ -39,11 +47,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// ID of the app session.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>ID of the app session.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

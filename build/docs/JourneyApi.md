@@ -2646,7 +2646,7 @@ namespace Example
 
 <a name="postjourneyoutcomes"></a>
 
-## [**Outcome**](Outcome.html) PostJourneyOutcomes (Outcome body = null)
+## [**Outcome**](Outcome.html) PostJourneyOutcomes (OutcomeRequest body = null)
 
 
 
@@ -2678,7 +2678,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new JourneyApi();
-            var body = new Outcome(); // Outcome |  (optional) 
+            var body = new OutcomeRequest(); // OutcomeRequest |  (optional) 
 
             try
             { 
@@ -2700,7 +2700,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Outcome**](Outcome.html)|  | [optional]  |
+| **body** | [**OutcomeRequest**](OutcomeRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2837,7 +2837,7 @@ namespace Example
 
 <a name="postjourneysegments"></a>
 
-## [**JourneySegment**](JourneySegment.html) PostJourneySegments (JourneySegment body = null)
+## [**JourneySegment**](JourneySegment.html) PostJourneySegments (JourneySegmentRequest body = null)
 
 
 
@@ -2869,7 +2869,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new JourneyApi();
-            var body = new JourneySegment(); // JourneySegment |  (optional) 
+            var body = new JourneySegmentRequest(); // JourneySegmentRequest |  (optional) 
 
             try
             { 
@@ -2891,7 +2891,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**JourneySegment**](JourneySegment.html)|  | [optional]  |
+| **body** | [**JourneySegmentRequest**](JourneySegmentRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

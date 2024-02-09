@@ -7,9 +7,9 @@ title: SessionLastEvent
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **EventName** | **string** | The name of the event. | [optional] |
-| **CreatedDate** | **DateTime?** | Timestamp indicating when the event was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **Id** | **string** | The ID of the last event. | |
+| **EventName** | **string** | The name of the event. | |
+| **CreatedDate** | **DateTime?** | Timestamp indicating when the event was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 {: class="table table-striped"}
 
 

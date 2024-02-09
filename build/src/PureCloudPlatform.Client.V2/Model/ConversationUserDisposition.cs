@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationUserDisposition :  IEquatable<ConversationUserDisposition>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationUserDisposition" /> class.
         /// </summary>
-        /// <param name="Code">User-defined wrap-up code for the conversation..</param>
+        [JsonConstructorAttribute]
+        protected ConversationUserDisposition() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversationUserDisposition" /> class.
+        /// </summary>
+        /// <param name="Code">User-defined wrap-up code for the conversation. (required).</param>
         /// <param name="Notes">Text entered by the user to describe the call or disposition..</param>
         public ConversationUserDisposition(string Code = null, string Notes = null)
         {
