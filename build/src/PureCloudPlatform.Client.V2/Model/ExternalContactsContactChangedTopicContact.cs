@@ -59,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExternalContactsContactChangedTopicContact" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
+        /// <param name="Division">Division.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Type">Type.</param>
         /// <param name="FirstName">FirstName.</param>
@@ -85,9 +86,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomFields">CustomFields.</param>
         /// <param name="CreateDate">CreateDate.</param>
         /// <param name="ModifyDate">ModifyDate.</param>
-        public ExternalContactsContactChangedTopicContact(string Id = null, ExternalContactsContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsContactChangedTopicTwitterId TwitterId = null, ExternalContactsContactChangedTopicLineId LineId = null, ExternalContactsContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsContactChangedTopicFacebookId FacebookId = null, ExternalContactsContactChangedTopicInstagramId InstagramId = null, ExternalContactsContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
+        public ExternalContactsContactChangedTopicContact(string Id = null, ExternalContactsContactChangedTopicDivision Division = null, ExternalContactsContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsContactChangedTopicTwitterId TwitterId = null, ExternalContactsContactChangedTopicLineId LineId = null, ExternalContactsContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsContactChangedTopicFacebookId FacebookId = null, ExternalContactsContactChangedTopicInstagramId InstagramId = null, ExternalContactsContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
         {
             this.Id = Id;
+            this.Division = Division;
             this.ExternalOrganization = ExternalOrganization;
             this.Type = Type;
             this.FirstName = FirstName;
@@ -124,6 +126,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Division
+        /// </summary>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public ExternalContactsContactChangedTopicDivision Division { get; set; }
 
 
 
@@ -338,6 +348,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ExternalContactsContactChangedTopicContact {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
@@ -408,6 +419,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.ExternalOrganization == other.ExternalOrganization ||
@@ -554,6 +570,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();

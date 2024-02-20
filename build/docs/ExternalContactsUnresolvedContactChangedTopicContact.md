@@ -8,6 +8,7 @@ title: ExternalContactsUnresolvedContactChangedTopicContact
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
+| **Division** | [**ExternalContactsUnresolvedContactChangedTopicDivision**](ExternalContactsUnresolvedContactChangedTopicDivision.html) |  | [optional] |
 | **ExternalOrganization** | [**ExternalContactsUnresolvedContactChangedTopicExternalOrganization**](ExternalContactsUnresolvedContactChangedTopicExternalOrganization.html) |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **FirstName** | **string** |  | [optional] |

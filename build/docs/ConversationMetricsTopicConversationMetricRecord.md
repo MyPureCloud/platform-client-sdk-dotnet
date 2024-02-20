@@ -68,7 +68,6 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **QueueId** | **string** | Queue identifier | [optional] |
 | **Remote** | **string** | Name, phone number, or email address of the remote party. | [optional] |
 | **RemovedSkillIds** | **List&lt;string&gt;** | ID(s) of Skill(s) that have been removed by bullseye routing | [optional] |
-| **Reoffered** | **bool?** | Marker for an interaction that got reoffered to the same queue by an in-queue flow | [optional] |
 | **RequestedLanguageId** | **string** | Unique identifier for the language requested for an interaction | [optional] |
 | **RequestedRoutingSkillIds** | **List&lt;string&gt;** | Unique identifier(s) for skill(s) requested for an interaction | [optional] |
 | **RequestedRoutings** | **List&lt;string&gt;** | Routing type(s) for requested/attempted routing methods. | [optional] |

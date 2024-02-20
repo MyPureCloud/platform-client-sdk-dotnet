@@ -1,0 +1,16 @@
+---
+title: OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes
+---
+## ININ.PureCloudApi.Model.OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **ContactPhoneNumber** | **string** |  | [optional] |
+| **ContactPhoneNumberColumnName** | **string** |  | [optional] |
+| **ConfiguredSenderPhoneNumber** | **string** |  | [optional] |
+| **SenderPhoneNumber** | **string** |  | [optional] |
+{: class="table table-striped"}
+
+
