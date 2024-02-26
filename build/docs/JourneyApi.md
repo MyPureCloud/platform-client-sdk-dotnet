@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneyOutcome**](JourneyApi.html#deletejourneyoutcome) | **Delete** /api/v2/journey/outcomes/{outcomeId} | Delete an outcome. |
 | [**DeleteJourneyOutcomesPredictor**](JourneyApi.html#deletejourneyoutcomespredictor) | **Delete** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
 | [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **Delete** /api/v2/journey/segments/{segmentId} | Delete a segment. |
+| [**DeleteJourneyView**](JourneyApi.html#deletejourneyview) | **Delete** /api/v2/journey/views/{viewId} | Delete a Journey View by ID |
 | [**GetAnalyticsJourneysAggregatesJob**](JourneyApi.html#getanalyticsjourneysaggregatesjob) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId} | Get status for async query for journey aggregates |
 | [**GetAnalyticsJourneysAggregatesJobResults**](JourneyApi.html#getanalyticsjourneysaggregatesjobresults) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetExternalcontactsContactJourneySessions**](JourneyApi.html#getexternalcontactscontactjourneysessions) | **Get** /api/v2/externalcontacts/contacts/{contactId}/journey/sessions | Retrieve all sessions for a given external contact. |
@@ -35,6 +36,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneySession**](JourneyApi.html#getjourneysession) | **Get** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
 | [**GetJourneySessionEvents**](JourneyApi.html#getjourneysessionevents) | **Get** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
 | [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
+| [**GetJourneyView**](JourneyApi.html#getjourneyview) | **Get** /api/v2/journey/views/{viewId} | Get a Journey View by ID |
+| [**GetJourneyViewVersion**](JourneyApi.html#getjourneyviewversion) | **Get** /api/v2/journey/views/{viewId}/versions/{versionId} | Get a Journey View by ID and version |
+| [**GetJourneyViews**](JourneyApi.html#getjourneyviews) | **Get** /api/v2/journey/views | Get a list of Journey Views |
 | [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
@@ -47,10 +51,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **Post** /api/v2/journey/actiontemplates | Create a single action template. |
 | [**PostJourneyDeploymentActionevent**](JourneyApi.html#postjourneydeploymentactionevent) | **Post** /api/v2/journey/deployments/{deploymentId}/actionevent | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**PostJourneyDeploymentAppevents**](JourneyApi.html#postjourneydeploymentappevents) | **Post** /api/v2/journey/deployments/{deploymentId}/appevents | Send a journey app event, used for tracking customer activity on an application. |
+| [**PostJourneyFlowsPathsQuery**](JourneyApi.html#postjourneyflowspathsquery) | **Post** /api/v2/journey/flows/paths/query | Query for flow paths. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **Post** /api/v2/journey/outcomes | Create an outcome. |
 | [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
 | [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **Post** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
 | [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **Post** /api/v2/journey/segments | Create a segment. |
+| [**PostJourneyViewVersions**](JourneyApi.html#postjourneyviewversions) | **Post** /api/v2/journey/views/{viewId}/versions | Update a Journey View by ID |
+| [**PostJourneyViews**](JourneyApi.html#postjourneyviews) | **Post** /api/v2/journey/views | Create a new Journey View |
 {: class="table table-striped"}
 
 <a name="deletejourneyactionmap"></a>
@@ -359,6 +366,72 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **segmentId** | **string**| ID of the segment. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletejourneyview"></a>
+
+## void DeleteJourneyView (string viewId)
+
+
+
+Delete a Journey View by ID
+
+deletes all versions
+
+DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:views:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteJourneyViewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | viewId
+
+            try
+            { 
+                // Delete a Journey View by ID
+                apiInstance.DeleteJourneyView(viewId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.DeleteJourneyView: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| viewId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1887,6 +1960,200 @@ namespace Example
 
 [**OutcomeScoresResult**](OutcomeScoresResult.html)
 
+<a name="getjourneyview"></a>
+
+## [**JourneyView**](JourneyView.html) GetJourneyView (string viewId)
+
+
+
+Get a Journey View by ID
+
+returns the latest version
+
+GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:views:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | viewId
+
+            try
+            { 
+                // Get a Journey View by ID
+                JourneyView result = apiInstance.GetJourneyView(viewId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyView: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| viewId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
+
+<a name="getjourneyviewversion"></a>
+
+## [**JourneyView**](JourneyView.html) GetJourneyViewVersion (string viewId, string versionId)
+
+
+
+Get a Journey View by ID and version
+
+GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:views:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewVersionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | viewId
+            var versionId = versionId_example;  // string | versionId
+
+            try
+            { 
+                // Get a Journey View by ID and version
+                JourneyView result = apiInstance.GetJourneyViewVersion(viewId, versionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewVersion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| viewId |  |
+| **versionId** | **string**| versionId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
+
+<a name="getjourneyviews"></a>
+
+## [**AddressableEntityListing**](AddressableEntityListing.html) GetJourneyViews ()
+
+
+
+Get a list of Journey Views
+
+GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:views:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+
+            try
+            { 
+                // Get a list of Journey Views
+                AddressableEntityListing result = apiInstance.GetJourneyViews();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**AddressableEntityListing**](AddressableEntityListing.html)
+
 <a name="patchjourneyactionmap"></a>
 
 ## [**ActionMap**](ActionMap.html) PatchJourneyActionmap (string actionMapId, PatchActionMap body = null)
@@ -2644,6 +2911,71 @@ namespace Example
 
 [**AppEventResponse**](AppEventResponse.html)
 
+<a name="postjourneyflowspathsquery"></a>
+
+## [**FlowPaths**](FlowPaths.html) PostJourneyFlowsPathsQuery (FlowPathsQuery body = null)
+
+
+
+Query for flow paths.
+
+PostJourneyFlowsPathsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:flowpaths:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyFlowsPathsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new FlowPathsQuery(); // FlowPathsQuery |  (optional) 
+
+            try
+            { 
+                // Query for flow paths.
+                FlowPaths result = apiInstance.PostJourneyFlowsPathsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyFlowsPathsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**FlowPathsQuery**](FlowPathsQuery.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowPaths**](FlowPaths.html)
+
 <a name="postjourneyoutcomes"></a>
 
 ## [**Outcome**](Outcome.html) PostJourneyOutcomes (OutcomeRequest body = null)
@@ -2897,4 +3229,138 @@ namespace Example
 ### Return type
 
 [**JourneySegment**](JourneySegment.html)
+
+<a name="postjourneyviewversions"></a>
+
+## [**JourneyView**](JourneyView.html) PostJourneyViewVersions (string viewId, JourneyView body)
+
+
+
+Update a Journey View by ID
+
+creates a new version
+
+PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:views:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyViewVersionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | viewId
+            var body = new JourneyView(); // JourneyView | JourneyView
+
+            try
+            { 
+                // Update a Journey View by ID
+                JourneyView result = apiInstance.PostJourneyViewVersions(viewId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyViewVersions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| viewId |  |
+| **body** | [**JourneyView**](JourneyView.html)| JourneyView |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
+
+<a name="postjourneyviews"></a>
+
+## [**JourneyView**](JourneyView.html) PostJourneyViews (JourneyView body)
+
+
+
+Create a new Journey View
+
+PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:views:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyViewsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new JourneyView(); // JourneyView | JourneyView
+
+            try
+            { 
+                // Create a new Journey View
+                JourneyView result = apiInstance.PostJourneyViews(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyViews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**JourneyView**](JourneyView.html)| JourneyView |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
 

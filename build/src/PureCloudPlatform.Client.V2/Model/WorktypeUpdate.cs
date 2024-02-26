@@ -30,13 +30,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultTtlSeconds">The default time to time to live in seconds for Workitems created from the Worktype. The valid range is between 1 and 365 days..</param>
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="SchemaId">The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID..</param>
+        /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
         /// <param name="Description">The description of the Worktype. Maximum length of 4096 characters..</param>
         /// <param name="DefaultStatusId">The ID of the default status for Workitems created from the Worktype..</param>
         /// <param name="SchemaVersion">The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set..</param>
         /// <param name="DefaultLanguageId">The ID of the default language for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultSkillIds">The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs.</param>
         /// <param name="DefaultQueueId">The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID..</param>
-        public WorktypeUpdate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, string Description = null, string DefaultStatusId = null, int? SchemaVersion = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultQueueId = null)
+        public WorktypeUpdate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, string Description = null, string DefaultStatusId = null, int? SchemaVersion = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultQueueId = null)
         {
             this.Name = Name;
             this.DefaultWorkbinId = DefaultWorkbinId;
@@ -47,6 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultTtlSeconds = DefaultTtlSeconds;
             this.AssignmentEnabled = AssignmentEnabled;
             this.SchemaId = SchemaId;
+            this.ServiceLevelTarget = ServiceLevelTarget;
             this.Description = Description;
             this.DefaultStatusId = DefaultStatusId;
             this.SchemaVersion = SchemaVersion;
@@ -140,6 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The target service level for Workitems created from the Worktype. The default value is 100.
+        /// </summary>
+        /// <value>The target service level for Workitems created from the Worktype. The default value is 100.</value>
+        [DataMember(Name="serviceLevelTarget", EmitDefaultValue=false)]
+        public int? ServiceLevelTarget { get; set; }
+
+
+
+        /// <summary>
         /// The description of the Worktype. Maximum length of 4096 characters.
         /// </summary>
         /// <value>The description of the Worktype. Maximum length of 4096 characters.</value>
@@ -210,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultTtlSeconds: ").Append(DefaultTtlSeconds).Append("\n");
             sb.Append("  AssignmentEnabled: ").Append(AssignmentEnabled).Append("\n");
             sb.Append("  SchemaId: ").Append(SchemaId).Append("\n");
+            sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DefaultStatusId: ").Append(DefaultStatusId).Append("\n");
             sb.Append("  SchemaVersion: ").Append(SchemaVersion).Append("\n");
@@ -302,6 +314,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SchemaId.Equals(other.SchemaId)
                 ) &&
                 (
+                    this.ServiceLevelTarget == other.ServiceLevelTarget ||
+                    this.ServiceLevelTarget != null &&
+                    this.ServiceLevelTarget.Equals(other.ServiceLevelTarget)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -370,6 +387,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SchemaId != null)
                     hash = hash * 59 + this.SchemaId.GetHashCode();
+
+                if (this.ServiceLevelTarget != null)
+                    hash = hash * 59 + this.ServiceLevelTarget.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

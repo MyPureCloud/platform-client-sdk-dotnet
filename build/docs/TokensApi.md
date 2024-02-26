@@ -203,8 +203,6 @@ namespace Example
 
 Get the current Idle Token Timeout Value
 
-GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * directory:organization:admin
@@ -318,8 +316,6 @@ void (empty response body)
 
 
 Update or Enable/Disable the Idle Token Timeout
-
-PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

@@ -127,6 +127,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Transmitting,
             
             /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked,
+            
+            /// <summary>
             /// Enum None for "none"
             /// </summary>
             [EnumMember(Value = "none")]

@@ -68,11 +68,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseParseJob**](KnowledgeApi.html#patchknowledgeknowledgebaseparsejob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId} | Send update to the parse operation |
 | [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeApi.html#patchknowledgeknowledgebaseunansweredgroupphrasegroup) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
 | [**PostKnowledgeDocumentuploads**](KnowledgeApi.html#postknowledgedocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**PostKnowledgeGuestSessionDocumentCopies**](KnowledgeApi.html#postknowledgeguestsessiondocumentcopies) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies | Indicate that the document was copied by the user. |
 | [**PostKnowledgeGuestSessionDocumentFeedback**](KnowledgeApi.html#postknowledgeguestsessiondocumentfeedback) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback | Give feedback on a document |
+| [**PostKnowledgeGuestSessionDocumentViews**](KnowledgeApi.html#postknowledgeguestsessiondocumentviews) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views | Create view event for a document. |
+| [**PostKnowledgeGuestSessionDocumentsPresentations**](KnowledgeApi.html#postknowledgeguestsessiondocumentspresentations) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/presentations | Indicate that documents were presented to the user. |
 | [**PostKnowledgeGuestSessionDocumentsSearch**](KnowledgeApi.html#postknowledgeguestsessiondocumentssearch) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search | Search the documents in a guest session. |
 | [**PostKnowledgeGuestSessionDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeguestsessiondocumentssearchsuggestions) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
 | [**PostKnowledgeGuestSessions**](KnowledgeApi.html#postknowledgeguestsessions) | **Post** /api/v2/knowledge/guest/sessions | Create guest session |
 | [**PostKnowledgeKnowledgebaseCategories**](KnowledgeApi.html#postknowledgeknowledgebasecategories) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories | Create new category |
+| [**PostKnowledgeKnowledgebaseDocumentCopies**](KnowledgeApi.html#postknowledgeknowledgebasedocumentcopies) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies | Indicate that the document was copied by the user. |
 | [**PostKnowledgeKnowledgebaseDocumentFeedback**](KnowledgeApi.html#postknowledgeknowledgebasedocumentfeedback) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback | Give feedback on a document |
 | [**PostKnowledgeKnowledgebaseDocumentVariations**](KnowledgeApi.html#postknowledgeknowledgebasedocumentvariations) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations | Create a variation for a document. |
 | [**PostKnowledgeKnowledgebaseDocumentVersions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentversions) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Creates or restores a document version. |
@@ -80,6 +84,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseDocuments**](KnowledgeApi.html#postknowledgeknowledgebasedocuments) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Create document. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkRemove**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkremove) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove | Bulk remove documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkUpdate**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkupdate) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update | Bulk update documents. |
+| [**PostKnowledgeKnowledgebaseDocumentsPresentations**](KnowledgeApi.html#postknowledgeknowledgebasedocumentspresentations) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations | Indicate that documents were presented to the user. |
 | [**PostKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearch) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search | Search the documents in a knowledge base. |
 | [**PostKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearchsuggestions) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
 | [**PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsversionsbulkadd) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add | Bulk add document versions. |
@@ -4303,6 +4308,65 @@ namespace Example
 
 [**UploadUrlResponse**](UploadUrlResponse.html)
 
+<a name="postknowledgeguestsessiondocumentcopies"></a>
+
+## void PostKnowledgeGuestSessionDocumentCopies (string sessionId, string documentId, KnowledgeGuestDocumentCopy body = null)
+
+
+
+Indicate that the document was copied by the user.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentCopiesExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var documentId = documentId_example;  // string | Document ID
+            var body = new KnowledgeGuestDocumentCopy(); // KnowledgeGuestDocumentCopy |  (optional) 
+
+            try
+            { 
+                // Indicate that the document was copied by the user.
+                apiInstance.PostKnowledgeGuestSessionDocumentCopies(sessionId, documentId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentCopies: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **documentId** | **string**| Document ID |  |
+| **body** | [**KnowledgeGuestDocumentCopy**](KnowledgeGuestDocumentCopy.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postknowledgeguestsessiondocumentfeedback"></a>
 
 ## [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html) PostKnowledgeGuestSessionDocumentFeedback (string sessionId, string documentId, KnowledgeGuestDocumentFeedback body = null)
@@ -4362,6 +4426,122 @@ namespace Example
 ### Return type
 
 [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback.html)
+
+<a name="postknowledgeguestsessiondocumentviews"></a>
+
+## void PostKnowledgeGuestSessionDocumentViews (string sessionId, string documentId, KnowledgeGuestDocumentView body = null)
+
+
+
+Create view event for a document.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentViewsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var documentId = documentId_example;  // string | Document ID
+            var body = new KnowledgeGuestDocumentView(); // KnowledgeGuestDocumentView |  (optional) 
+
+            try
+            { 
+                // Create view event for a document.
+                apiInstance.PostKnowledgeGuestSessionDocumentViews(sessionId, documentId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentViews: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **documentId** | **string**| Document ID |  |
+| **body** | [**KnowledgeGuestDocumentView**](KnowledgeGuestDocumentView.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postknowledgeguestsessiondocumentspresentations"></a>
+
+## void PostKnowledgeGuestSessionDocumentsPresentations (string sessionId, KnowledgeGuestDocumentPresentation body = null)
+
+
+
+Indicate that documents were presented to the user.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentsPresentationsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var body = new KnowledgeGuestDocumentPresentation(); // KnowledgeGuestDocumentPresentation |  (optional) 
+
+            try
+            { 
+                // Indicate that documents were presented to the user.
+                apiInstance.PostKnowledgeGuestSessionDocumentsPresentations(sessionId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentsPresentations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **body** | [**KnowledgeGuestDocumentPresentation**](KnowledgeGuestDocumentPresentation.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postknowledgeguestsessiondocumentssearch"></a>
 
@@ -4601,6 +4781,72 @@ namespace Example
 ### Return type
 
 [**CategoryResponse**](CategoryResponse.html)
+
+<a name="postknowledgeknowledgebasedocumentcopies"></a>
+
+## void PostKnowledgeKnowledgebaseDocumentCopies (string knowledgeBaseId, string documentId, KnowledgeDocumentCopy body = null)
+
+
+
+Indicate that the document was copied by the user.
+
+Requires ALL permissions: 
+
+* knowledge:documentCopy:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentCopiesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var body = new KnowledgeDocumentCopy(); // KnowledgeDocumentCopy |  (optional) 
+
+            try
+            { 
+                // Indicate that the document was copied by the user.
+                apiInstance.PostKnowledgeKnowledgebaseDocumentCopies(knowledgeBaseId, documentId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentCopies: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **body** | [**KnowledgeDocumentCopy**](KnowledgeDocumentCopy.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postknowledgeknowledgebasedocumentfeedback"></a>
 
@@ -5068,6 +5314,70 @@ namespace Example
 ### Return type
 
 [**BulkResponse**](BulkResponse.html)
+
+<a name="postknowledgeknowledgebasedocumentspresentations"></a>
+
+## void PostKnowledgeKnowledgebaseDocumentsPresentations (string knowledgeBaseId, KnowledgeDocumentPresentation body = null)
+
+
+
+Indicate that documents were presented to the user.
+
+Requires ALL permissions: 
+
+* knowledge:documentPresentation:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsPresentationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var body = new KnowledgeDocumentPresentation(); // KnowledgeDocumentPresentation |  (optional) 
+
+            try
+            { 
+                // Indicate that documents were presented to the user.
+                apiInstance.PostKnowledgeKnowledgebaseDocumentsPresentations(knowledgeBaseId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsPresentations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **body** | [**KnowledgeDocumentPresentation**](KnowledgeDocumentPresentation.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postknowledgeknowledgebasedocumentssearch"></a>
 

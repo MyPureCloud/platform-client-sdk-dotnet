@@ -91,7 +91,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IdleTokenTimeout</returns>
@@ -103,7 +102,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IdleTokenTimeout</returns>
@@ -137,7 +135,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -150,7 +147,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -237,7 +233,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IdleTokenTimeout</returns>
@@ -249,7 +244,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IdleTokenTimeout)</returns>
@@ -283,7 +277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -296,7 +289,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -1008,7 +1000,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the current Idle Token Timeout Value 
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IdleTokenTimeout</returns>
@@ -1022,7 +1013,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the current Idle Token Timeout Value 
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IdleTokenTimeout</returns>
@@ -1108,7 +1098,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the current Idle Token Timeout Value 
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IdleTokenTimeout</returns>
@@ -1123,7 +1112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the current Idle Token Timeout Value 
         /// 
-        /// GetTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IdleTokenTimeout)</returns>
@@ -1406,7 +1394,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -1421,7 +1408,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -1514,7 +1500,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
@@ -1530,7 +1515,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update or Enable/Disable the Idle Token Timeout 
         /// 
-        /// PutTokensTimeout is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>

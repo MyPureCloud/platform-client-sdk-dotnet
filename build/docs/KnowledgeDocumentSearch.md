@@ -17,6 +17,7 @@ title: KnowledgeDocumentSearch
 | **Results** | [**List&lt;KnowledgeDocumentSearchResult&gt;**](KnowledgeDocumentSearchResult.html) | Documents matching the search query. | [optional] |
 | **Application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication.html) | The client application details from which search happened. | [optional] |
 | **ConversationContext** | [**KnowledgeConversationContextResponse**](KnowledgeConversationContextResponse.html) | Conversation context information if the search is initiated in the context of a conversation. | [optional] |
+| **ConfidenceThreshold** | **float?** | The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. | [optional] |
 {: class="table table-striped"}
 
 

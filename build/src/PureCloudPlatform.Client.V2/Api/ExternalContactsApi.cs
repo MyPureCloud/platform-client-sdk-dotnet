@@ -827,7 +827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorContactListing</returns>
         
@@ -840,7 +840,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
         
@@ -853,7 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorNoteListing</returns>
         
@@ -866,7 +866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
         
@@ -879,7 +879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorOrganizationListing</returns>
         
@@ -892,7 +892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
         
@@ -905,7 +905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorRelationshipListing</returns>
         
@@ -918,7 +918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
         
@@ -2655,7 +2655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorContactListing</returns>
         
@@ -2668,7 +2668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
         
@@ -2681,7 +2681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorNoteListing</returns>
         
@@ -2694,7 +2694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
         
@@ -2707,7 +2707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorOrganizationListing</returns>
         
@@ -2720,7 +2720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
         
@@ -2733,7 +2733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorRelationshipListing</returns>
         
@@ -2746,7 +2746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
         
@@ -10357,7 +10357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorContactListing</returns>
         
@@ -10372,7 +10372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
         
@@ -10461,7 +10461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorContactListing</returns>
         
@@ -10477,7 +10477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
         
@@ -10567,7 +10567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorNoteListing</returns>
         
@@ -10582,7 +10582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
         
@@ -10671,7 +10671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorNoteListing</returns>
         
@@ -10687,7 +10687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
         
@@ -10777,7 +10777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorOrganizationListing</returns>
         
@@ -10792,7 +10792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
         
@@ -10881,7 +10881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorOrganizationListing</returns>
         
@@ -10897,7 +10897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
         
@@ -10987,7 +10987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorRelationshipListing</returns>
         
@@ -11002,7 +11002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
         
@@ -11091,7 +11091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorRelationshipListing</returns>
         
@@ -11107,7 +11107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
+        /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100 (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
         

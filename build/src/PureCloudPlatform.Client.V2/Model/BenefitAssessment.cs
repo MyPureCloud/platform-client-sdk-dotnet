@@ -97,6 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The unique identifier of job that created this benefit assessment.
+        /// </summary>
+        /// <value>The unique identifier of job that created this benefit assessment.</value>
+        [DataMember(Name="jobId", EmitDefaultValue=false)]
+        public string JobId { get; private set; }
+
+
+
+        /// <summary>
         /// Creation Date of the benefit assessment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Creation Date of the benefit assessment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -135,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  KpiAssessments: ").Append(KpiAssessments).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  JobId: ").Append(JobId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -199,6 +209,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State.Equals(other.State)
                 ) &&
                 (
+                    this.JobId == other.JobId ||
+                    this.JobId != null &&
+                    this.JobId.Equals(other.JobId)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -237,6 +252,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.JobId != null)
+                    hash = hash * 59 + this.JobId.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

@@ -40,7 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultSkills">The default skills for Workitems created from the Worktype..</param>
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="Schema">The schema defining the custom attributes for Workitems created from the Worktype..</param>
-        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null)
+        /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
+        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -61,6 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultSkills = DefaultSkills;
             this.AssignmentEnabled = AssignmentEnabled;
             this.Schema = Schema;
+            this.ServiceLevelTarget = ServiceLevelTarget;
             
         }
         
@@ -247,6 +249,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The target service level for Workitems created from the Worktype. The default value is 100.
+        /// </summary>
+        /// <value>The target service level for Workitems created from the Worktype. The default value is 100.</value>
+        [DataMember(Name="serviceLevelTarget", EmitDefaultValue=false)]
+        public int? ServiceLevelTarget { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -283,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultSkills: ").Append(DefaultSkills).Append("\n");
             sb.Append("  AssignmentEnabled: ").Append(AssignmentEnabled).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
+            sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -425,6 +437,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Schema.Equals(other.Schema)
                 ) &&
                 (
+                    this.ServiceLevelTarget == other.ServiceLevelTarget ||
+                    this.ServiceLevelTarget != null &&
+                    this.ServiceLevelTarget.Equals(other.ServiceLevelTarget)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -501,6 +518,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
+
+                if (this.ServiceLevelTarget != null)
+                    hash = hash * 59 + this.ServiceLevelTarget.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

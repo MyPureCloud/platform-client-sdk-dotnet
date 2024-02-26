@@ -72,7 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueryType">The type of the query that initiates the search..</param>
         /// <param name="Application">The client application details from which search happened..</param>
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
-        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null)
+        /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold..</param>
+        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null, float? ConfidenceThreshold = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -80,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueryType = QueryType;
             this.Application = Application;
             this.ConversationContext = ConversationContext;
+            this.ConfidenceThreshold = ConfidenceThreshold;
             
         }
         
@@ -167,6 +169,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeConversationContextResponse ConversationContext { get; set; }
 
 
+
+        /// <summary>
+        /// The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold.
+        /// </summary>
+        /// <value>The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold.</value>
+        [DataMember(Name="confidenceThreshold", EmitDefaultValue=false)]
+        public float? ConfidenceThreshold { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -186,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
+            sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -275,6 +287,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationContext == other.ConversationContext ||
                     this.ConversationContext != null &&
                     this.ConversationContext.Equals(other.ConversationContext)
+                ) &&
+                (
+                    this.ConfidenceThreshold == other.ConfidenceThreshold ||
+                    this.ConfidenceThreshold != null &&
+                    this.ConfidenceThreshold.Equals(other.ConfidenceThreshold)
                 );
         }
 
@@ -318,6 +335,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationContext != null)
                     hash = hash * 59 + this.ConversationContext.GetHashCode();
+
+                if (this.ConfidenceThreshold != null)
+                    hash = hash * 59 + this.ConfidenceThreshold.GetHashCode();
 
                 return hash;
             }

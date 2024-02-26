@@ -75,8 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value = false .</param>
         /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value = true .</param>
         /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false.</param>
-        /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years..</param>
-        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null)
+        /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is supported only when querying for conversations up to and including 5 years old..</param>
+        /// <param name="AgedConversationInterval">As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null, string AgedConversationInterval = null)
         {
             this.Action = Action;
             this.ActionDate = ActionDate;
@@ -88,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IncludeScreenRecordings = IncludeScreenRecordings;
             this.ClearExport = ClearExport;
             this.ConversationQuery = ConversationQuery;
+            this.AgedConversationInterval = AgedConversationInterval;
             
         }
         
@@ -168,11 +170,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years.
+        /// Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is supported only when querying for conversations up to and including 5 years old.
         /// </summary>
-        /// <value>Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years.</value>
+        /// <value>Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is supported only when querying for conversations up to and including 5 years old.</value>
         [DataMember(Name="conversationQuery", EmitDefaultValue=false)]
         public AsyncConversationQuery ConversationQuery { get; set; }
+
+
+
+        /// <summary>
+        /// As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+        /// </summary>
+        /// <value>As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
+        [DataMember(Name="agedConversationInterval", EmitDefaultValue=false)]
+        public string AgedConversationInterval { get; set; }
 
 
         /// <summary>
@@ -194,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IncludeScreenRecordings: ").Append(IncludeScreenRecordings).Append("\n");
             sb.Append("  ClearExport: ").Append(ClearExport).Append("\n");
             sb.Append("  ConversationQuery: ").Append(ConversationQuery).Append("\n");
+            sb.Append("  AgedConversationInterval: ").Append(AgedConversationInterval).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -283,6 +295,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationQuery == other.ConversationQuery ||
                     this.ConversationQuery != null &&
                     this.ConversationQuery.Equals(other.ConversationQuery)
+                ) &&
+                (
+                    this.AgedConversationInterval == other.AgedConversationInterval ||
+                    this.AgedConversationInterval != null &&
+                    this.AgedConversationInterval.Equals(other.AgedConversationInterval)
                 );
         }
 
@@ -326,6 +343,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationQuery != null)
                     hash = hash * 59 + this.ConversationQuery.GetHashCode();
+
+                if (this.AgedConversationInterval != null)
+                    hash = hash * 59 + this.AgedConversationInterval.GetHashCode();
 
                 return hash;
             }

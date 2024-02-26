@@ -44,11 +44,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageSeverities">Schedule generation message severity configuration.</param>
         /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published..</param>
         /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit.</param>
-        public BuSchedulingSettingsResponse(List<SchedulerMessageTypeSeverity> MessageSeverities = null, List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null)
+        /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit.</param>
+        public BuSchedulingSettingsResponse(List<SchedulerMessageTypeSeverity> MessageSeverities = null, List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null)
         {
             this.MessageSeverities = MessageSeverities;
             this.SyncTimeOffProperties = SyncTimeOffProperties;
             this.ServiceGoalImpact = ServiceGoalImpact;
+            this.AllowWorkPlanPerMinuteGranularity = AllowWorkPlanPerMinuteGranularity;
             
         }
         
@@ -80,6 +82,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public WfmServiceGoalImpactSettings ServiceGoalImpact { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether or not per minute granularity for scheduling will be enabled for this business unit
+        /// </summary>
+        /// <value>Indicates whether or not per minute granularity for scheduling will be enabled for this business unit</value>
+        [DataMember(Name="allowWorkPlanPerMinuteGranularity", EmitDefaultValue=false)]
+        public bool? AllowWorkPlanPerMinuteGranularity { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageSeverities: ").Append(MessageSeverities).Append("\n");
             sb.Append("  SyncTimeOffProperties: ").Append(SyncTimeOffProperties).Append("\n");
             sb.Append("  ServiceGoalImpact: ").Append(ServiceGoalImpact).Append("\n");
+            sb.Append("  AllowWorkPlanPerMinuteGranularity: ").Append(AllowWorkPlanPerMinuteGranularity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceGoalImpact == other.ServiceGoalImpact ||
                     this.ServiceGoalImpact != null &&
                     this.ServiceGoalImpact.Equals(other.ServiceGoalImpact)
+                ) &&
+                (
+                    this.AllowWorkPlanPerMinuteGranularity == other.AllowWorkPlanPerMinuteGranularity ||
+                    this.AllowWorkPlanPerMinuteGranularity != null &&
+                    this.AllowWorkPlanPerMinuteGranularity.Equals(other.AllowWorkPlanPerMinuteGranularity)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ServiceGoalImpact != null)
                     hash = hash * 59 + this.ServiceGoalImpact.GetHashCode();
+
+                if (this.AllowWorkPlanPerMinuteGranularity != null)
+                    hash = hash * 59 + this.AllowWorkPlanPerMinuteGranularity.GetHashCode();
 
                 return hash;
             }

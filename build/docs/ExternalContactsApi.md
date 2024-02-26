@@ -90,6 +90,7 @@ Delete an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:delete
 * externalContacts:contact:delete
 
 ### Example
@@ -153,6 +154,7 @@ Delete a note for an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -344,6 +346,7 @@ Delete a note for an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -471,6 +474,7 @@ Delete a relationship
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -534,6 +538,7 @@ Fetch an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -731,6 +736,7 @@ Fetch a note for an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -798,6 +804,7 @@ List notes for an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -934,6 +941,7 @@ Search for external contacts
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1322,6 +1330,7 @@ Search for external contacts in an external organization
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1395,6 +1404,7 @@ Fetch a note for an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -1931,6 +1941,7 @@ Fetch a relationship
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -2061,6 +2072,7 @@ Scan for external contacts using paging
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -2085,7 +2097,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
-            var limit = 56;  // int? | The number of contacts per page; must be between 10 and 200, default is 100) (optional) 
+            var limit = 56;  // int? | The number of contacts per page; must be between 10 and 200, default is 100 (optional) 
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
 
             try
@@ -2108,7 +2120,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **limit** | **int?**| The number of contacts per page; must be between 10 and 200, default is 100) | [optional]  |
+| **limit** | **int?**| The number of contacts per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
 {: class="table table-striped"}
 
@@ -2126,6 +2138,7 @@ Scan for notes using paging
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -2150,7 +2163,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
-            var limit = 56;  // int? | The number of notes per page; must be between 10 and 200, default is 100) (optional) 
+            var limit = 56;  // int? | The number of notes per page; must be between 10 and 200, default is 100 (optional) 
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
 
             try
@@ -2173,7 +2186,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **limit** | **int?**| The number of notes per page; must be between 10 and 200, default is 100) | [optional]  |
+| **limit** | **int?**| The number of notes per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
 {: class="table table-striped"}
 
@@ -2191,6 +2204,7 @@ Scan for external organizations using paging
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -2215,7 +2229,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
-            var limit = 56;  // int? | The number of organizations per page; must be between 10 and 200, default is 100) (optional) 
+            var limit = 56;  // int? | The number of organizations per page; must be between 10 and 200, default is 100 (optional) 
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
 
             try
@@ -2238,7 +2252,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **limit** | **int?**| The number of organizations per page; must be between 10 and 200, default is 100) | [optional]  |
+| **limit** | **int?**| The number of organizations per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
 {: class="table table-striped"}
 
@@ -2256,6 +2270,7 @@ Scan for relationships
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -2280,7 +2295,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ExternalContactsApi();
-            var limit = 56;  // int? | The number of relationships per page; must be between 10 and 200, default is 100) (optional) 
+            var limit = 56;  // int? | The number of relationships per page; must be between 10 and 200, default is 100 (optional) 
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
 
             try
@@ -2303,7 +2318,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **limit** | **int?**| The number of relationships per page; must be between 10 and 200, default is 100) | [optional]  |
+| **limit** | **int?**| The number of relationships per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
 {: class="table table-striped"}
 
@@ -3465,6 +3480,7 @@ Create a note for an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -3593,6 +3609,7 @@ Create an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:add
 * externalContacts:contact:add
 
 ### Example
@@ -4043,6 +4060,7 @@ Create a relationship
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -4106,6 +4124,7 @@ Update an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -4171,6 +4190,7 @@ Update a note for an external contact
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -4436,6 +4456,7 @@ Update a note for an external organization
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -4633,6 +4654,7 @@ Update a relationship
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example

@@ -161,7 +161,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SortBy">The field in the documents that you want to sort the search results by..</param>
         /// <param name="Application">The client application details from which search request was sent..</param>
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null)
+        /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -174,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SortBy = SortBy;
             this.Application = Application;
             this.ConversationContext = ConversationContext;
+            this.ConfidenceThreshold = ConfidenceThreshold;
             
         }
         
@@ -283,6 +285,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeConversationContext ConversationContext { get; set; }
 
 
+
+        /// <summary>
+        /// The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1.
+        /// </summary>
+        /// <value>The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1.</value>
+        [DataMember(Name="confidenceThreshold", EmitDefaultValue=false)]
+        public float? ConfidenceThreshold { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -306,6 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
+            sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -415,6 +427,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationContext == other.ConversationContext ||
                     this.ConversationContext != null &&
                     this.ConversationContext.Equals(other.ConversationContext)
+                ) &&
+                (
+                    this.ConfidenceThreshold == other.ConfidenceThreshold ||
+                    this.ConfidenceThreshold != null &&
+                    this.ConfidenceThreshold.Equals(other.ConfidenceThreshold)
                 );
         }
 
@@ -470,6 +487,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationContext != null)
                     hash = hash * 59 + this.ConversationContext.GetHashCode();
+
+                if (this.ConfidenceThreshold != null)
+                    hash = hash * 59 + this.ConfidenceThreshold.GetHashCode();
 
                 return hash;
             }

@@ -38,10 +38,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AttachmentDeleted">If message's attachment was deleted.</param>
         /// <param name="FileUri">URI of file attachment.</param>
         /// <param name="Thread">The id for a thread this message corresponds to (required).</param>
+        /// <param name="ParentThread">Parent thread id for thread replies.</param>
         /// <param name="User">The user who sent the message.</param>
         /// <param name="ToUser">The receiving user of the message.</param>
         /// <param name="Reactions">The emoji reactions to this message.</param>
-        public ChatMessageResponse(string Id = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ToJid = null, string Jid = null, string Body = null, Dictionary<string, string> Mentions = null, bool? Edited = null, bool? AttachmentDeleted = null, string FileUri = null, Entity Thread = null, AddressableEntityRef User = null, AddressableEntityRef ToUser = null, List<ChatReaction> Reactions = null)
+        public ChatMessageResponse(string Id = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ToJid = null, string Jid = null, string Body = null, Dictionary<string, string> Mentions = null, bool? Edited = null, bool? AttachmentDeleted = null, string FileUri = null, Entity Thread = null, Entity ParentThread = null, AddressableEntityRef User = null, AddressableEntityRef ToUser = null, List<ChatReaction> Reactions = null)
         {
             this.Id = Id;
             this.DateCreated = DateCreated;
@@ -54,6 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AttachmentDeleted = AttachmentDeleted;
             this.FileUri = FileUri;
             this.Thread = Thread;
+            this.ParentThread = ParentThread;
             this.User = User;
             this.ToUser = ToUser;
             this.Reactions = Reactions;
@@ -162,6 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Parent thread id for thread replies
+        /// </summary>
+        /// <value>Parent thread id for thread replies</value>
+        [DataMember(Name="parentThread", EmitDefaultValue=false)]
+        public Entity ParentThread { get; set; }
+
+
+
+        /// <summary>
         /// The user who sent the message
         /// </summary>
         /// <value>The user who sent the message</value>
@@ -207,6 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AttachmentDeleted: ").Append(AttachmentDeleted).Append("\n");
             sb.Append("  FileUri: ").Append(FileUri).Append("\n");
             sb.Append("  Thread: ").Append(Thread).Append("\n");
+            sb.Append("  ParentThread: ").Append(ParentThread).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ToUser: ").Append(ToUser).Append("\n");
             sb.Append("  Reactions: ").Append(Reactions).Append("\n");
@@ -306,6 +318,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Thread.Equals(other.Thread)
                 ) &&
                 (
+                    this.ParentThread == other.ParentThread ||
+                    this.ParentThread != null &&
+                    this.ParentThread.Equals(other.ParentThread)
+                ) &&
+                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
@@ -365,6 +382,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Thread != null)
                     hash = hash * 59 + this.Thread.GetHashCode();
+
+                if (this.ParentThread != null)
+                    hash = hash * 59 + this.ParentThread.GetHashCode();
 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

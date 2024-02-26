@@ -467,9 +467,8 @@ This endpoint does require any parameters.
 
 Get the effective limits in a namespace for an organization
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* limits:organization:view
 
 ### Example
 ```{"language":"csharp"}
@@ -592,9 +591,8 @@ namespace Example
 
 Get the available limit namespaces
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* limits:organization:view
 
 ### Example
 ```{"language":"csharp"}

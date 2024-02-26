@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Message for "Message"
             /// </summary>
             [EnumMember(Value = "Message")]
-            Message
+            Message,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
         /// CommunicationType for Cobrowse Session
