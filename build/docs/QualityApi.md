@@ -27,14 +27,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityEvaluatorsActivity**](QualityApi.html#getqualityevaluatorsactivity) | **Get** /api/v2/quality/evaluators/activity | Get an evaluator activity |
 | [**GetQualityForm**](QualityApi.html#getqualityform) | **Get** /api/v2/quality/forms/{formId} | Get an evaluation form |
 | [**GetQualityFormVersions**](QualityApi.html#getqualityformversions) | **Get** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
-| [**GetQualityForms**](QualityApi.html#getqualityforms) | **Get** /api/v2/quality/forms | Get the list of evaluation forms |
+| [**GetQualityForms**](QualityApi.html#getqualityforms) | **Get** /api/v2/quality/forms | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
 | [**GetQualityFormsEvaluation**](QualityApi.html#getqualityformsevaluation) | **Get** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
 | [**GetQualityFormsEvaluationVersions**](QualityApi.html#getqualityformsevaluationversions) | **Get** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetQualityFormsEvaluations**](QualityApi.html#getqualityformsevaluations) | **Get** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
 | [**GetQualityFormsEvaluationsBulkContexts**](QualityApi.html#getqualityformsevaluationsbulkcontexts) | **Get** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
 | [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **Get** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
 | [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **Get** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
-| [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **Get** /api/v2/quality/forms/surveys | Get the list of survey forms |
+| [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **Get** /api/v2/quality/forms/surveys | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
 | [**GetQualityFormsSurveysBulk**](QualityApi.html#getqualityformssurveysbulk) | **Get** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
 | [**GetQualityFormsSurveysBulkContexts**](QualityApi.html#getqualityformssurveysbulkcontexts) | **Get** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
 | [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **Get** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
@@ -1481,7 +1481,7 @@ namespace Example
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get the list of evaluation forms
+Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
 
 Requires ANY permissions: 
 
@@ -1520,7 +1520,7 @@ namespace Example
 
             try
             { 
-                // Get the list of evaluation forms
+                // Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
                 EvaluationFormResponseEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1692,7 +1692,7 @@ namespace Example
 
 Get the list of evaluation forms
 
-By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
 
 Requires ANY permissions: 
 
@@ -1962,7 +1962,7 @@ namespace Example
 
 
 
-Get the list of survey forms
+Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
 
 Requires ALL permissions: 
 
@@ -2001,7 +2001,7 @@ namespace Example
 
             try
             { 
-                // Get the list of survey forms
+                // Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
                 SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3064,7 +3064,7 @@ namespace Example
 
 <a name="postqualityconversationevaluations"></a>
 
-## [**Evaluation**](Evaluation.html) PostQualityConversationEvaluations (string conversationId, Evaluation body, string expand = null)
+## [**Evaluation**](Evaluation.html) PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null)
 
 
 
@@ -3097,7 +3097,7 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var conversationId = conversationId_example;  // string | conversationId
-            var body = new Evaluation(); // Evaluation | evaluation
+            var body = new EvaluationCreateBody(); // EvaluationCreateBody | evaluation
             var expand = expand_example;  // string | evaluatorId (optional) 
 
             try
@@ -3121,7 +3121,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-| **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
+| **body** | [**EvaluationCreateBody**](EvaluationCreateBody.html)| evaluation |  |
 | **expand** | **string**| evaluatorId | [optional]  |
 {: class="table table-striped"}
 

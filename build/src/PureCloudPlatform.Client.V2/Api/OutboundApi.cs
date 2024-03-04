@@ -3076,9 +3076,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>DomainEntityRef</returns>
         
-        DomainEntityRef PostOutboundContactlistExport (string contactListId);
+        DomainEntityRef PostOutboundContactlistExport (string contactListId, ContactsExportRequest body = null);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -3088,9 +3089,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>ApiResponse of DomainEntityRef</returns>
         
-        ApiResponse<DomainEntityRef> PostOutboundContactlistExportWithHttpInfo (string contactListId);
+        ApiResponse<DomainEntityRef> PostOutboundContactlistExportWithHttpInfo (string contactListId, ContactsExportRequest body = null);
 
         /// <summary>
         /// Create Contact List Filter
@@ -7216,9 +7218,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>Task of DomainEntityRef</returns>
         
-        System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId);
+        System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId, ContactsExportRequest body = null);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -7228,9 +7231,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId);
+        System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId, ContactsExportRequest body = null);
 
         /// <summary>
         /// Create Contact List Filter
@@ -33055,11 +33059,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>DomainEntityRef</returns>
         
-        public DomainEntityRef PostOutboundContactlistExport (string contactListId)
+        public DomainEntityRef PostOutboundContactlistExport (string contactListId, ContactsExportRequest body = null)
         {
-             ApiResponse<DomainEntityRef> localVarResponse = PostOutboundContactlistExportWithHttpInfo(contactListId);
+             ApiResponse<DomainEntityRef> localVarResponse = PostOutboundContactlistExportWithHttpInfo(contactListId, body);
              return localVarResponse.Data;
         }
 
@@ -33069,9 +33074,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>ApiResponse of DomainEntityRef</returns>
         
-        public ApiResponse< DomainEntityRef > PostOutboundContactlistExportWithHttpInfo (string contactListId)
+        public ApiResponse< DomainEntityRef > PostOutboundContactlistExportWithHttpInfo (string contactListId, ContactsExportRequest body = null)
         { 
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -33088,6 +33094,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -33116,6 +33123,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required
@@ -33159,11 +33171,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>Task of DomainEntityRef</returns>
         
-        public async System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId)
+        public async System.Threading.Tasks.Task<DomainEntityRef> PostOutboundContactlistExportAsync (string contactListId, ContactsExportRequest body = null)
         {
-             ApiResponse<DomainEntityRef> localVarResponse = await PostOutboundContactlistExportAsyncWithHttpInfo(contactListId);
+             ApiResponse<DomainEntityRef> localVarResponse = await PostOutboundContactlistExportAsyncWithHttpInfo(contactListId, body);
              return localVarResponse.Data;
 
         }
@@ -33174,9 +33187,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
+        /// <param name="body">Export information to get (optional)</param>
         /// <returns>Task of ApiResponse (DomainEntityRef)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityRef>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId, ContactsExportRequest body = null)
         { 
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -33194,6 +33208,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
                 "application/json"
+                
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -33222,6 +33237,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Form params
             
             // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
 
 
             // authentication (PureCloud OAuth) required

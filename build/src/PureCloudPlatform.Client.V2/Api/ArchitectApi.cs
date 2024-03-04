@@ -375,6 +375,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId);
 
         /// <summary>
+        /// Deletes a log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns></returns>
+        
+        void DeleteFlowInstancesSettingsLoglevels (string flowId);
+
+        /// <summary>
+        /// Deletes a log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId);
+
+        /// <summary>
         /// Batch-delete a list of flows
         /// </summary>
         /// <remarks>
@@ -449,6 +475,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId);
+
+        /// <summary>
+        /// Resets the org log level to default, base
+        /// </summary>
+        /// <remarks>
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        
+        void DeleteFlowsInstancesSettingsLoglevelsDefault ();
+
+        /// <summary>
+        /// Resets the org log level to default, base
+        /// </summary>
+        /// <remarks>
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo ();
 
         /// <summary>
         /// Delete a flow milestone.
@@ -1629,6 +1679,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<HistoryListing> GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
+        /// Retrieves the log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        FlowSettingsResponse GetFlowInstancesSettingsLoglevels (string flowId, List<string> expand = null);
+
+        /// <summary>
+        /// Retrieves the log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        ApiResponse<FlowSettingsResponse> GetFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId, List<string> expand = null);
+
+        /// <summary>
         /// Get the latest configuration for flow
         /// </summary>
         /// <remarks>
@@ -2229,7 +2307,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -2243,7 +2320,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -2257,7 +2333,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -2270,7 +2345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -2283,7 +2357,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
@@ -2296,13 +2369,116 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
         /// <returns>ApiResponse of FlowsQueryCriteriaResponse</returns>
         
         ApiResponse<FlowsQueryCriteriaResponse> GetFlowsInstancesQuerycapabilitiesWithHttpInfo (string expand = null);
+
+        /// <summary>
+        /// Get the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ExecutionDataFlowSettingsResponse</returns>
+        
+        ExecutionDataFlowSettingsResponse GetFlowsInstancesSettingsExecutiondata ();
+
+        /// <summary>
+        /// Get the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ExecutionDataFlowSettingsResponse</returns>
+        
+        ApiResponse<ExecutionDataFlowSettingsResponse> GetFlowsInstancesSettingsExecutiondataWithHttpInfo ();
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>FlowSettingsResponseEntityListing</returns>
+        
+        FlowSettingsResponseEntityListing GetFlowsInstancesSettingsLoglevels (List<string> expand = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of FlowSettingsResponseEntityListing</returns>
+        
+        ApiResponse<FlowSettingsResponseEntityListing> GetFlowsInstancesSettingsLoglevelsWithHttpInfo (List<string> expand = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization.
+        /// </summary>
+        /// <remarks>
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>FlowLogLevelCharacteristicsDefinitions</returns>
+        
+        FlowLogLevelCharacteristicsDefinitions GetFlowsInstancesSettingsLoglevelsCharacteristics ();
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization.
+        /// </summary>
+        /// <remarks>
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of FlowLogLevelCharacteristicsDefinitions</returns>
+        
+        ApiResponse<FlowLogLevelCharacteristicsDefinitions> GetFlowsInstancesSettingsLoglevelsCharacteristicsWithHttpInfo ();
+
+        /// <summary>
+        /// Returns the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        FlowSettingsResponse GetFlowsInstancesSettingsLoglevelsDefault (List<string> expand = null);
+
+        /// <summary>
+        /// Returns the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        ApiResponse<FlowSettingsResponse> GetFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo (List<string> expand = null);
 
         /// <summary>
         /// Fetch Architect Job Status
@@ -2587,6 +2763,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GrammarLanguage</returns>
         
         ApiResponse<GrammarLanguage> PatchArchitectGrammarLanguageWithHttpInfo (string grammarId, string languageCode, GrammarLanguageUpdate body = null);
+
+        /// <summary>
+        /// Edit the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>ExecutionDataFlowSettingsResponse</returns>
+        
+        ExecutionDataFlowSettingsResponse PatchFlowsInstancesSettingsExecutiondata (ExecutionDataSettingsRequest body);
+
+        /// <summary>
+        /// Edit the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>ApiResponse of ExecutionDataFlowSettingsResponse</returns>
+        
+        ApiResponse<ExecutionDataFlowSettingsResponse> PatchFlowsInstancesSettingsExecutiondataWithHttpInfo (ExecutionDataSettingsRequest body);
 
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -2969,6 +3171,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Operation> PostFlowHistoryWithHttpInfo (string flowId);
 
         /// <summary>
+        /// Set the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        FlowSettingsResponse PostFlowInstancesSettingsLoglevels (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Set the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        ApiResponse<FlowSettingsResponse> PostFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
         /// Create flow version
         /// </summary>
         /// <remarks>
@@ -3295,7 +3527,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -3309,7 +3540,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -3323,7 +3553,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -3338,7 +3567,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -3631,6 +3859,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body);
 
         /// <summary>
+        /// Edit the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        FlowSettingsResponse PutFlowInstancesSettingsLoglevels (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Edit the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        ApiResponse<FlowSettingsResponse> PutFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
         /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
@@ -3685,6 +3943,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         
         ApiResponse<Dictionary<string, Object>> PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null);
+
+        /// <summary>
+        /// Edit the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        FlowSettingsResponse PutFlowsInstancesSettingsLoglevelsDefault (FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Edit the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        ApiResponse<FlowSettingsResponse> PutFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo (FlowLogLevelRequest body, List<string> expand = null);
 
         /// <summary>
         /// Updates a flow milestone
@@ -4101,6 +4387,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId);
 
         /// <summary>
+        /// Deletes a log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteFlowInstancesSettingsLoglevelsAsync (string flowId);
+
+        /// <summary>
+        /// Deletes a log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId);
+
+        /// <summary>
         /// Batch-delete a list of flows
         /// </summary>
         /// <remarks>
@@ -4175,6 +4487,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId);
+
+        /// <summary>
+        /// Resets the org log level to default, base
+        /// </summary>
+        /// <remarks>
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteFlowsInstancesSettingsLoglevelsDefaultAsync ();
+
+        /// <summary>
+        /// Resets the org log level to default, base
+        /// </summary>
+        /// <remarks>
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo ();
 
         /// <summary>
         /// Delete a flow milestone.
@@ -5355,6 +5691,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
+        /// Retrieves the log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<FlowSettingsResponse> GetFlowInstancesSettingsLoglevelsAsync (string flowId, List<string> expand = null);
+
+        /// <summary>
+        /// Retrieves the log level for a flow by flow id.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> GetFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId, List<string> expand = null);
+
+        /// <summary>
         /// Get the latest configuration for flow
         /// </summary>
         /// <remarks>
@@ -5955,7 +6319,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -5969,7 +6332,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -5983,7 +6345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -5996,7 +6357,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -6009,7 +6369,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
@@ -6022,13 +6381,116 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
         /// <returns>Task of ApiResponse (FlowsQueryCriteriaResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FlowsQueryCriteriaResponse>> GetFlowsInstancesQuerycapabilitiesAsyncWithHttpInfo (string expand = null);
+
+        /// <summary>
+        /// Get the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ExecutionDataFlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<ExecutionDataFlowSettingsResponse> GetFlowsInstancesSettingsExecutiondataAsync ();
+
+        /// <summary>
+        /// Get the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ExecutionDataFlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExecutionDataFlowSettingsResponse>> GetFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of FlowSettingsResponseEntityListing</returns>
+        
+        System.Threading.Tasks.Task<FlowSettingsResponseEntityListing> GetFlowsInstancesSettingsLoglevelsAsync (List<string> expand = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization.
+        /// </summary>
+        /// <remarks>
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponseEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponseEntityListing>> GetFlowsInstancesSettingsLoglevelsAsyncWithHttpInfo (List<string> expand = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization.
+        /// </summary>
+        /// <remarks>
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of FlowLogLevelCharacteristicsDefinitions</returns>
+        
+        System.Threading.Tasks.Task<FlowLogLevelCharacteristicsDefinitions> GetFlowsInstancesSettingsLoglevelsCharacteristicsAsync ();
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization.
+        /// </summary>
+        /// <remarks>
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (FlowLogLevelCharacteristicsDefinitions)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowLogLevelCharacteristicsDefinitions>> GetFlowsInstancesSettingsLoglevelsCharacteristicsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Returns the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<FlowSettingsResponse> GetFlowsInstancesSettingsLoglevelsDefaultAsync (List<string> expand = null);
+
+        /// <summary>
+        /// Returns the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> GetFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
         /// Fetch Architect Job Status
@@ -6313,6 +6775,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GrammarLanguage)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<GrammarLanguage>> PatchArchitectGrammarLanguageAsyncWithHttpInfo (string grammarId, string languageCode, GrammarLanguageUpdate body = null);
+
+        /// <summary>
+        /// Edit the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>Task of ExecutionDataFlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<ExecutionDataFlowSettingsResponse> PatchFlowsInstancesSettingsExecutiondataAsync (ExecutionDataSettingsRequest body);
+
+        /// <summary>
+        /// Edit the execution history enabled setting.
+        /// </summary>
+        /// <remarks>
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>Task of ApiResponse (ExecutionDataFlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExecutionDataFlowSettingsResponse>> PatchFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo (ExecutionDataSettingsRequest body);
 
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -6695,6 +7183,36 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowHistoryAsyncWithHttpInfo (string flowId);
 
         /// <summary>
+        /// Set the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<FlowSettingsResponse> PostFlowInstancesSettingsLoglevelsAsync (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Set the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> PostFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
         /// Create flow version
         /// </summary>
         /// <remarks>
@@ -7021,7 +7539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -7035,7 +7552,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -7049,7 +7565,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -7064,7 +7579,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -7357,6 +7871,36 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body);
 
         /// <summary>
+        /// Edit the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<FlowSettingsResponse> PutFlowInstancesSettingsLoglevelsAsync (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Edit the logLevel for a particular flow id
+        /// </summary>
+        /// <remarks>
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> PutFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
         /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
@@ -7411,6 +7955,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null);
+
+        /// <summary>
+        /// Edit the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        System.Threading.Tasks.Task<FlowSettingsResponse> PutFlowsInstancesSettingsLoglevelsDefaultAsync (FlowLogLevelRequest body, List<string> expand = null);
+
+        /// <summary>
+        /// Edit the flow default log level.
+        /// </summary>
+        /// <remarks>
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> PutFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo (FlowLogLevelRequest body, List<string> expand = null);
 
         /// <summary>
         /// Updates a flow milestone
@@ -10587,6 +11159,219 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Deletes a log level for a flow by flow id. 
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns></returns>
+        
+        public void DeleteFlowInstancesSettingsLoglevels (string flowId)
+        {
+             DeleteFlowInstancesSettingsLoglevelsWithHttpInfo(flowId);
+        }
+
+        /// <summary>
+        /// Deletes a log level for a flow by flow id. 
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlowInstancesSettingsLoglevels");
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Deletes a log level for a flow by flow id. 
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteFlowInstancesSettingsLoglevelsAsync (string flowId)
+        {
+             await DeleteFlowInstancesSettingsLoglevelsAsyncWithHttpInfo(flowId);
+
+        }
+
+        /// <summary>
+        /// Deletes a log level for a flow by flow id. 
+        /// Deletes the associated log level for a flow by flow id
+        /// DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to delete the loglevel for</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlowInstancesSettingsLoglevels");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Batch-delete a list of flows 
         /// Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
@@ -11224,6 +12009,206 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Resets the org log level to default, base 
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        
+        public void DeleteFlowsInstancesSettingsLoglevelsDefault ()
+        {
+             DeleteFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Resets the org log level to default, base 
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Resets the org log level to default, base 
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteFlowsInstancesSettingsLoglevelsDefaultAsync ()
+        {
+             await DeleteFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Resets the org log level to default, base 
+        /// Resets the org log level to default, base
+        /// DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -19864,6 +20849,227 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Retrieves the log level for a flow by flow id. 
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        public FlowSettingsResponse GetFlowInstancesSettingsLoglevels (string flowId, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = GetFlowInstancesSettingsLoglevelsWithHttpInfo(flowId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves the log level for a flow by flow id. 
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        public ApiResponse< FlowSettingsResponse > GetFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId, List<string> expand = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowInstancesSettingsLoglevels");
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieves the log level for a flow by flow id. 
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FlowSettingsResponse> GetFlowInstancesSettingsLoglevelsAsync (string flowId, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = await GetFlowInstancesSettingsLoglevelsAsyncWithHttpInfo(flowId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves the log level for a flow by flow id. 
+        /// Retrieves the log level for a flow by flow id.
+        /// GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to get the loglevel for</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> GetFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId, List<string> expand = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowInstancesSettingsLoglevels");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the latest configuration for flow 
         /// 
         /// </summary>
@@ -24358,7 +25564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) to prepare a download of a singular flow execution data instance by Id 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -24374,7 +25579,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) to prepare a download of a singular flow execution data instance by Id 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -24467,7 +25671,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) to prepare a download of a singular flow execution data instance by Id 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -24484,7 +25687,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) to prepare a download of a singular flow execution data instance by Id 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// GetFlowsInstance is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceId">Instance ID</param>
@@ -24579,7 +25781,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status and/or results of an asynchronous flow execution data retrieval job 
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -24594,7 +25795,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status and/or results of an asynchronous flow execution data retrieval job 
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -24685,7 +25885,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status and/or results of an asynchronous flow execution data retrieval job 
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -24701,7 +25900,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status and/or results of an asynchronous flow execution data retrieval job 
         /// 
-        /// GetFlowsInstancesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The asynchronous job ID</param>
@@ -24794,7 +25992,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a list of capabilities that the org can use to query for execution data 
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
@@ -24809,7 +26006,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a list of capabilities that the org can use to query for execution data 
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
@@ -24897,7 +26093,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a list of capabilities that the org can use to query for execution data 
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
@@ -24913,7 +26108,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieve a list of capabilities that the org can use to query for execution data 
         /// Returns the queryable parameters that can be used to build a query for execution data.
-        /// GetFlowsInstancesQuerycapabilities is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Expand various query types. (optional)</param>
@@ -24993,6 +26187,838 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FlowsQueryCriteriaResponse>(localVarStatusCode,
                 localVarHeaders,
                 (FlowsQueryCriteriaResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowsQueryCriteriaResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the execution history enabled setting. 
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ExecutionDataFlowSettingsResponse</returns>
+        
+        public ExecutionDataFlowSettingsResponse GetFlowsInstancesSettingsExecutiondata ()
+        {
+             ApiResponse<ExecutionDataFlowSettingsResponse> localVarResponse = GetFlowsInstancesSettingsExecutiondataWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the execution history enabled setting. 
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ExecutionDataFlowSettingsResponse</returns>
+        
+        public ApiResponse< ExecutionDataFlowSettingsResponse > GetFlowsInstancesSettingsExecutiondataWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsExecutiondata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsExecutiondata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExecutionDataFlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExecutionDataFlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecutionDataFlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the execution history enabled setting. 
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ExecutionDataFlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ExecutionDataFlowSettingsResponse> GetFlowsInstancesSettingsExecutiondataAsync ()
+        {
+             ApiResponse<ExecutionDataFlowSettingsResponse> localVarResponse = await GetFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the execution history enabled setting. 
+        /// Get the execution history enabled setting.
+        /// GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ExecutionDataFlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExecutionDataFlowSettingsResponse>> GetFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsExecutiondata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsExecutiondata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExecutionDataFlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExecutionDataFlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecutionDataFlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization. 
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>FlowSettingsResponseEntityListing</returns>
+        
+        public FlowSettingsResponseEntityListing GetFlowsInstancesSettingsLoglevels (List<string> expand = null, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<FlowSettingsResponseEntityListing> localVarResponse = GetFlowsInstancesSettingsLoglevelsWithHttpInfo(expand, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization. 
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>ApiResponse of FlowSettingsResponseEntityListing</returns>
+        
+        public ApiResponse< FlowSettingsResponseEntityListing > GetFlowsInstancesSettingsLoglevelsWithHttpInfo (List<string> expand = null, int? pageNumber = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization. 
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of FlowSettingsResponseEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<FlowSettingsResponseEntityListing> GetFlowsInstancesSettingsLoglevelsAsync (List<string> expand = null, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<FlowSettingsResponseEntityListing> localVarResponse = await GetFlowsInstancesSettingsLoglevelsAsyncWithHttpInfo(expand, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of LogLevels for the organization. 
+        /// Returns a paged set of LogLevels per flow id
+        /// GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponseEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponseEntityListing>> GetFlowsInstancesSettingsLoglevelsAsyncWithHttpInfo (List<string> expand = null, int? pageNumber = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization. 
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>FlowLogLevelCharacteristicsDefinitions</returns>
+        
+        public FlowLogLevelCharacteristicsDefinitions GetFlowsInstancesSettingsLoglevelsCharacteristics ()
+        {
+             ApiResponse<FlowLogLevelCharacteristicsDefinitions> localVarResponse = GetFlowsInstancesSettingsLoglevelsCharacteristicsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization. 
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of FlowLogLevelCharacteristicsDefinitions</returns>
+        
+        public ApiResponse< FlowLogLevelCharacteristicsDefinitions > GetFlowsInstancesSettingsLoglevelsCharacteristicsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/characteristics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsCharacteristics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsCharacteristics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowLogLevelCharacteristicsDefinitions>(localVarStatusCode,
+                localVarHeaders,
+                (FlowLogLevelCharacteristicsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowLogLevelCharacteristicsDefinitions)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization. 
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of FlowLogLevelCharacteristicsDefinitions</returns>
+        
+        public async System.Threading.Tasks.Task<FlowLogLevelCharacteristicsDefinitions> GetFlowsInstancesSettingsLoglevelsCharacteristicsAsync ()
+        {
+             ApiResponse<FlowLogLevelCharacteristicsDefinitions> localVarResponse = await GetFlowsInstancesSettingsLoglevelsCharacteristicsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the available flow log level characteristics for this organization. 
+        /// Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+        /// GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (FlowLogLevelCharacteristicsDefinitions)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowLogLevelCharacteristicsDefinitions>> GetFlowsInstancesSettingsLoglevelsCharacteristicsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/characteristics";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsCharacteristics: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsCharacteristics: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowLogLevelCharacteristicsDefinitions>(localVarStatusCode,
+                localVarHeaders,
+                (FlowLogLevelCharacteristicsDefinitions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowLogLevelCharacteristicsDefinitions)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Returns the flow default log level. 
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        public FlowSettingsResponse GetFlowsInstancesSettingsLoglevelsDefault (List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = GetFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo(expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the flow default log level. 
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        public ApiResponse< FlowSettingsResponse > GetFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo (List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Returns the flow default log level. 
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FlowSettingsResponse> GetFlowsInstancesSettingsLoglevelsDefaultAsync (List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = await GetFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo(expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the flow default log level. 
+        /// Returns the flow default log level which will be used if no specific flow id log level is found.
+        /// GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> GetFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo (List<string> expand = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27091,6 +29117,231 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<GrammarLanguage>(localVarStatusCode,
                 localVarHeaders,
                 (GrammarLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrammarLanguage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Edit the execution history enabled setting. 
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>ExecutionDataFlowSettingsResponse</returns>
+        
+        public ExecutionDataFlowSettingsResponse PatchFlowsInstancesSettingsExecutiondata (ExecutionDataSettingsRequest body)
+        {
+             ApiResponse<ExecutionDataFlowSettingsResponse> localVarResponse = PatchFlowsInstancesSettingsExecutiondataWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit the execution history enabled setting. 
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>ApiResponse of ExecutionDataFlowSettingsResponse</returns>
+        
+        public ApiResponse< ExecutionDataFlowSettingsResponse > PatchFlowsInstancesSettingsExecutiondataWithHttpInfo (ExecutionDataSettingsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PatchFlowsInstancesSettingsExecutiondata");
+
+            var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFlowsInstancesSettingsExecutiondata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFlowsInstancesSettingsExecutiondata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExecutionDataFlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExecutionDataFlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecutionDataFlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Edit the execution history enabled setting. 
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>Task of ExecutionDataFlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ExecutionDataFlowSettingsResponse> PatchFlowsInstancesSettingsExecutiondataAsync (ExecutionDataSettingsRequest body)
+        {
+             ApiResponse<ExecutionDataFlowSettingsResponse> localVarResponse = await PatchFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit the execution history enabled setting. 
+        /// Edit the execution history enabled setting.
+        /// PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New Execution Data Setting</param>
+        /// <returns>Task of ApiResponse (ExecutionDataFlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExecutionDataFlowSettingsResponse>> PatchFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo (ExecutionDataSettingsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PatchFlowsInstancesSettingsExecutiondata");
+            
+
+            var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFlowsInstancesSettingsExecutiondata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchFlowsInstancesSettingsExecutiondata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExecutionDataFlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExecutionDataFlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExecutionDataFlowSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -30465,6 +32716,250 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Set the logLevel for a particular flow id 
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        public FlowSettingsResponse PostFlowInstancesSettingsLoglevels (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = PostFlowInstancesSettingsLoglevelsWithHttpInfo(flowId, body, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the logLevel for a particular flow id 
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        public ApiResponse< FlowSettingsResponse > PostFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowInstancesSettingsLoglevels");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowInstancesSettingsLoglevels");
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Set the logLevel for a particular flow id 
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FlowSettingsResponse> PostFlowInstancesSettingsLoglevelsAsync (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = await PostFlowInstancesSettingsLoglevelsAsyncWithHttpInfo(flowId, body, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the logLevel for a particular flow id 
+        /// Assigns a new loglevel to a flow id
+        /// PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to set the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> PostFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowInstancesSettingsLoglevels");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowInstancesSettingsLoglevels");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create flow version 
         /// 
         /// </summary>
@@ -33321,7 +35816,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) that will prepare a list of execution data IDs for download. 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -33337,7 +35831,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) that will prepare a list of execution data IDs for download. 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -33435,7 +35928,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) that will prepare a list of execution data IDs for download. 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -33452,7 +35944,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Start a process (job) that will prepare a list of execution data IDs for download. 
         /// Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
-        /// PostFlowsInstancesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Requested Flow Ids</param>
@@ -33552,7 +36043,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the database of existing flow histories to look for particular flow criteria 
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -33569,7 +36059,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the database of existing flow histories to look for particular flow criteria 
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -33669,7 +36158,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the database of existing flow histories to look for particular flow criteria 
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -33687,7 +36175,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the database of existing flow histories to look for particular flow criteria 
         /// Returns a list of matching flow histories up to 200 max.
-        /// PostFlowsInstancesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -36311,6 +38798,250 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Edit the logLevel for a particular flow id 
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        public FlowSettingsResponse PutFlowInstancesSettingsLoglevels (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = PutFlowInstancesSettingsLoglevelsWithHttpInfo(flowId, body, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit the logLevel for a particular flow id 
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        public ApiResponse< FlowSettingsResponse > PutFlowInstancesSettingsLoglevelsWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlowInstancesSettingsLoglevels");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowInstancesSettingsLoglevels");
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Edit the logLevel for a particular flow id 
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FlowSettingsResponse> PutFlowInstancesSettingsLoglevelsAsync (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = await PutFlowInstancesSettingsLoglevelsAsyncWithHttpInfo(flowId, body, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit the logLevel for a particular flow id 
+        /// Updates the loglevel for a flow id
+        /// PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">The flow id to edit the loglevel for</param>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> PutFlowInstancesSettingsLoglevelsAsyncWithHttpInfo (string flowId, FlowLogLevelRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlowInstancesSettingsLoglevels");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowInstancesSettingsLoglevels");
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowInstancesSettingsLoglevels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowInstancesSettingsLoglevels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Updates a specific datatable by id 
         /// Updates a schema for a datatable with the given datatableId -updates allow only new fields to be added in the schema, no changes or removals of existing fields.
         /// </summary>
@@ -36784,6 +39515,237 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
                 localVarHeaders,
                 (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Edit the flow default log level. 
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>FlowSettingsResponse</returns>
+        
+        public FlowSettingsResponse PutFlowsInstancesSettingsLoglevelsDefault (FlowLogLevelRequest body, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = PutFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo(body, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit the flow default log level. 
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of FlowSettingsResponse</returns>
+        
+        public ApiResponse< FlowSettingsResponse > PutFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo (FlowLogLevelRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsInstancesSettingsLoglevelsDefault");
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Edit the flow default log level. 
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of FlowSettingsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<FlowSettingsResponse> PutFlowsInstancesSettingsLoglevelsDefaultAsync (FlowLogLevelRequest body, List<string> expand = null)
+        {
+             ApiResponse<FlowSettingsResponse> localVarResponse = await PutFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo(body, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Edit the flow default log level. 
+        /// Edit the flow default log level.
+        /// PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">New LogLevel settings</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (FlowSettingsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> PutFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo (FlowLogLevelRequest body, List<string> expand = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsInstancesSettingsLoglevelsDefault");
+            
+
+            var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsInstancesSettingsLoglevelsDefault: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowSettingsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FlowSettingsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowSettingsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

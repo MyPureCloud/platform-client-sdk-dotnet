@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">The id of the queue that is routing this conversation. (required).</param>
         /// <param name="SkillIds">The unique identifiers for the skills that should be used to determine the destination for the conversation..</param>
         /// <param name="LanguageId">The unique identifier for the language that should be used to determine the destination for the conversation..</param>
-        /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level..</param>
+        /// <param name="Label">An optional label that categorizes the conversation. Max-utilization settings can be configured at a per-label level..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
         /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
         public EmailRoutingEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string QueueId = null, List<string> SkillIds = null, string LanguageId = null, string Label = null, EmailInitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
@@ -118,9 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.
+        /// An optional label that categorizes the conversation. Max-utilization settings can be configured at a per-label level.
         /// </summary>
-        /// <value>An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</value>
+        /// <value>An optional label that categorizes the conversation. Max-utilization settings can be configured at a per-label level.</value>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
 

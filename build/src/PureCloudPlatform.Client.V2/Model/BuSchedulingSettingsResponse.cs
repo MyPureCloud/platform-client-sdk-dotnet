@@ -44,7 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageSeverities">Schedule generation message severity configuration.</param>
         /// <param name="SyncTimeOffProperties">Synchronize set of time off properties from scheduled activities to time off requests when the schedule is published..</param>
         /// <param name="ServiceGoalImpact">Configures the max percent increase and decrease of service goals for this business unit.</param>
-        /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit.</param>
+        /// <param name="AllowWorkPlanPerMinuteGranularity">Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false..</param>
         public BuSchedulingSettingsResponse(List<SchedulerMessageTypeSeverity> MessageSeverities = null, List<SyncTimeOffPropertiesEnum> SyncTimeOffProperties = null, WfmServiceGoalImpactSettings ServiceGoalImpact = null, bool? AllowWorkPlanPerMinuteGranularity = null)
         {
             this.MessageSeverities = MessageSeverities;
@@ -84,9 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates whether or not per minute granularity for scheduling will be enabled for this business unit
+        /// Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false.
         /// </summary>
-        /// <value>Indicates whether or not per minute granularity for scheduling will be enabled for this business unit</value>
+        /// <value>Indicates whether or not per minute granularity for scheduling will be enabled for this business unit. Defaults to false.</value>
         [DataMember(Name="allowWorkPlanPerMinuteGranularity", EmitDefaultValue=false)]
         public bool? AllowWorkPlanPerMinuteGranularity { get; set; }
 

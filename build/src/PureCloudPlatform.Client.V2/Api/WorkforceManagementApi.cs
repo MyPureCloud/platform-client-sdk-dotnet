@@ -471,27 +471,27 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmHistoricalAdherenceResponse> GetWorkforcemanagementAdherenceHistoricalJobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get status of the modeling job
+        /// To get status of the modeling job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ModelingStatusResponse</returns>
-        
+        [Obsolete]
         ModelingStatusResponse GetWorkforcemanagementAdhocmodelingjob (string jobId);
 
         /// <summary>
-        /// Get status of the modeling job
+        /// To get status of the modeling job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ApiResponse of ModelingStatusResponse</returns>
-        
+        [Obsolete]
         ApiResponse<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -5153,27 +5153,27 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> GetWorkforcemanagementAdherenceHistoricalJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get status of the modeling job
+        /// To get status of the modeling job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ModelingStatusResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobAsync (string jobId);
 
         /// <summary>
-        /// Get status of the modeling job
+        /// To get status of the modeling job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -13386,13 +13386,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get status of the modeling job 
-        /// 
+        /// To get status of the modeling job. 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ModelingStatusResponse</returns>
-        
+        [Obsolete]
         public ModelingStatusResponse GetWorkforcemanagementAdhocmodelingjob (string jobId)
         {
              ApiResponse<ModelingStatusResponse> localVarResponse = GetWorkforcemanagementAdhocmodelingjobWithHttpInfo(jobId);
@@ -13400,13 +13400,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get status of the modeling job 
-        /// 
+        /// To get status of the modeling job. 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>ApiResponse of ModelingStatusResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< ModelingStatusResponse > GetWorkforcemanagementAdhocmodelingjobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -13490,13 +13490,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get status of the modeling job 
-        /// 
+        /// To get status of the modeling job. 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ModelingStatusResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ModelingStatusResponse> GetWorkforcemanagementAdhocmodelingjobAsync (string jobId)
         {
              ApiResponse<ModelingStatusResponse> localVarResponse = await GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo(jobId);
@@ -13505,13 +13505,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get status of the modeling job 
-        /// 
+        /// To get status of the modeling job. 
+        /// This Endpoint is Deprecated, and not recommended to be used.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The id of the modeling job</param>
         /// <returns>Task of ApiResponse (ModelingStatusResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ModelingStatusResponse>> GetWorkforcemanagementAdhocmodelingjobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set

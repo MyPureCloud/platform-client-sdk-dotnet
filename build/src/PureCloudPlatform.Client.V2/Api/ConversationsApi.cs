@@ -219,27 +219,27 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteConversationsMessagingIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
-        /// Delete a LINE messenger integration
+        /// Delete a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteConversationsMessagingIntegrationsLineIntegrationId (string integrationId);
 
         /// <summary>
-        /// Delete a LINE messenger integration
+        /// Delete a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
@@ -2079,10 +2079,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InstagramIntegration> GetConversationsMessagingIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations
+        /// Get a list of LINE messenger Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2091,14 +2091,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>LineIntegrationEntityListing</returns>
-        
+        [Obsolete]
         LineIntegrationEntityListing GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations
+        /// Get a list of LINE messenger Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2107,33 +2107,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>ApiResponse of LineIntegrationEntityListing</returns>
-        
+        [Obsolete]
         ApiResponse<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a LINE messenger integration
+        /// Get a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>LineIntegration</returns>
-        
+        [Obsolete]
         LineIntegration GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a LINE messenger integration
+        /// Get a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        
+        [Obsolete]
         ApiResponse<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
@@ -6169,29 +6169,29 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<string> PutConversationsMessageRecordingstateWithHttpInfo (string conversationId, SetRecordingState body);
 
         /// <summary>
-        /// Update a LINE messenger integration
+        /// Update a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>LineIntegration</returns>
-        
+        [Obsolete]
         LineIntegration PutConversationsMessagingIntegrationsLineIntegrationId (string integrationId, LineIntegrationRequest body);
 
         /// <summary>
-        /// Update a LINE messenger integration
+        /// Update a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        
+        [Obsolete]
         ApiResponse<LineIntegration> PutConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, LineIntegrationRequest body);
 
         /// <summary>
@@ -6551,27 +6551,27 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
-        /// Delete a LINE messenger integration
+        /// Delete a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId);
 
         /// <summary>
-        /// Delete a LINE messenger integration
+        /// Delete a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
@@ -8411,10 +8411,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InstagramIntegration>> GetConversationsMessagingIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations
+        /// Get a list of LINE messenger Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -8423,14 +8423,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of LineIntegrationEntityListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations
+        /// Get a list of LINE messenger Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -8439,33 +8439,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegrationEntityListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<LineIntegrationEntityListing>> GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a LINE messenger integration
+        /// Get a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of LineIntegration</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a LINE messenger integration
+        /// Get a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
@@ -12501,29 +12501,29 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<string>> PutConversationsMessageRecordingstateAsyncWithHttpInfo (string conversationId, SetRecordingState body);
 
         /// <summary>
-        /// Update a LINE messenger integration
+        /// Update a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of LineIntegration</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<LineIntegration> PutConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId, LineIntegrationRequest body);
 
         /// <summary>
-        /// Update a LINE messenger integration
+        /// Update a LINE messenger integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PutConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, LineIntegrationRequest body);
 
         /// <summary>
@@ -14506,26 +14506,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a LINE messenger integration 
-        /// 
+        /// Delete a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteConversationsMessagingIntegrationsLineIntegrationId (string integrationId)
         {
              DeleteConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo(integrationId);
         }
 
         /// <summary>
-        /// Delete a LINE messenger integration 
-        /// 
+        /// Delete a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
@@ -14609,13 +14609,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a LINE messenger integration 
-        /// 
+        /// Delete a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId)
         {
              await DeleteConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo(integrationId);
@@ -14623,13 +14623,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a LINE messenger integration 
-        /// 
+        /// Delete a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
@@ -30190,8 +30190,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations 
-        /// 
+        /// Get a list of LINE messenger Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -30200,7 +30200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>LineIntegrationEntityListing</returns>
-        
+        [Obsolete]
         public LineIntegrationEntityListing GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         {
              ApiResponse<LineIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsLineWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
@@ -30208,8 +30208,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations 
-        /// 
+        /// Get a list of LINE messenger Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -30218,7 +30218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>ApiResponse of LineIntegrationEntityListing</returns>
-        
+        [Obsolete]
         public ApiResponse< LineIntegrationEntityListing > GetConversationsMessagingIntegrationsLineWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         { 
 
@@ -30303,8 +30303,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations 
-        /// 
+        /// Get a list of LINE messenger Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -30313,7 +30313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of LineIntegrationEntityListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<LineIntegrationEntityListing> GetConversationsMessagingIntegrationsLineAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         {
              ApiResponse<LineIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
@@ -30322,8 +30322,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of LINE messenger Integrations 
-        /// 
+        /// Get a list of LINE messenger Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -30332,7 +30332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegrationEntityListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<LineIntegrationEntityListing>> GetConversationsMessagingIntegrationsLineAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         { 
 
@@ -30418,14 +30418,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a LINE messenger integration 
-        /// 
+        /// Get a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>LineIntegration</returns>
-        
+        [Obsolete]
         public LineIntegration GetConversationsMessagingIntegrationsLineIntegrationId (string integrationId, string expand = null)
         {
              ApiResponse<LineIntegration> localVarResponse = GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo(integrationId, expand);
@@ -30433,14 +30433,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a LINE messenger integration 
-        /// 
+        /// Get a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        
+        [Obsolete]
         public ApiResponse< LineIntegration > GetConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
@@ -30525,14 +30525,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a LINE messenger integration 
-        /// 
+        /// Get a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of LineIntegration</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<LineIntegration> GetConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId, string expand = null)
         {
              ApiResponse<LineIntegration> localVarResponse = await GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo(integrationId, expand);
@@ -30541,14 +30541,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a LINE messenger integration 
-        /// 
+        /// Get a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> GetConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
@@ -65846,14 +65846,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a LINE messenger integration 
-        /// 
+        /// Update a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>LineIntegration</returns>
-        
+        [Obsolete]
         public LineIntegration PutConversationsMessagingIntegrationsLineIntegrationId (string integrationId, LineIntegrationRequest body)
         {
              ApiResponse<LineIntegration> localVarResponse = PutConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo(integrationId, body);
@@ -65861,14 +65861,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a LINE messenger integration 
-        /// 
+        /// Update a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>ApiResponse of LineIntegration</returns>
-        
+        [Obsolete]
         public ApiResponse< LineIntegration > PutConversationsMessagingIntegrationsLineIntegrationIdWithHttpInfo (string integrationId, LineIntegrationRequest body)
         { 
             // verify the required parameter 'integrationId' is set
@@ -65961,14 +65961,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a LINE messenger integration 
-        /// 
+        /// Update a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of LineIntegration</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<LineIntegration> PutConversationsMessagingIntegrationsLineIntegrationIdAsync (string integrationId, LineIntegrationRequest body)
         {
              ApiResponse<LineIntegration> localVarResponse = await PutConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo(integrationId, body);
@@ -65977,14 +65977,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a LINE messenger integration 
-        /// 
+        /// Update a LINE messenger integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">LineIntegrationRequest</param>
         /// <returns>Task of ApiResponse (LineIntegration)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<LineIntegration>> PutConversationsMessagingIntegrationsLineIntegrationIdAsyncWithHttpInfo (string integrationId, LineIntegrationRequest body)
         { 
             // verify the required parameter 'integrationId' is set

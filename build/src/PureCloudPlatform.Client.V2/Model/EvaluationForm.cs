@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Published">Published.</param>
         /// <param name="ContextId">ContextId.</param>
         /// <param name="QuestionGroups">A list of question groups (required).</param>
-        /// <param name="PublishedVersions">PublishedVersions.</param>
+        /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
         public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
             this.Name = Name;
@@ -99,8 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets PublishedVersions
+        /// A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).
         /// </summary>
+        /// <value>A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the 'expand=publishHistory' query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable).</value>
         [DataMember(Name="publishedVersions", EmitDefaultValue=false)]
         public DomainEntityListingEvaluationForm PublishedVersions { get; set; }
 

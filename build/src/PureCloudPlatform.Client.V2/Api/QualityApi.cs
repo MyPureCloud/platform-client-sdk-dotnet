@@ -639,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the list of evaluation forms
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
         /// </summary>
         /// <remarks>
         /// 
@@ -658,7 +658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         EvaluationFormResponseEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of evaluation forms
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
         /// </summary>
         /// <remarks>
         /// 
@@ -734,7 +734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -753,7 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -845,7 +845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveyVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the list of survey forms
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
         /// </summary>
         /// <remarks>
         /// 
@@ -864,7 +864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         SurveyFormEntityListing GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of survey forms
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
         /// </summary>
         /// <remarks>
         /// 
@@ -1306,7 +1306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
         
-        Evaluation PostQualityConversationEvaluations (string conversationId, Evaluation body, string expand = null);
+        Evaluation PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -1320,7 +1320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         
-        ApiResponse<Evaluation> PostQualityConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null);
+        ApiResponse<Evaluation> PostQualityConversationEvaluationsWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null);
 
         /// <summary>
         /// Create audit query execution
@@ -2349,7 +2349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the list of evaluation forms
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
         /// </summary>
         /// <remarks>
         /// 
@@ -2368,7 +2368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of evaluation forms
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
         /// </summary>
         /// <remarks>
         /// 
@@ -2444,7 +2444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -2463,7 +2463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -2555,7 +2555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveyVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the list of survey forms
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
         /// </summary>
         /// <remarks>
         /// 
@@ -2574,7 +2574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<SurveyFormEntityListing> GetQualityFormsSurveysAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
-        /// Get the list of survey forms
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
         /// </summary>
         /// <remarks>
         /// 
@@ -3016,7 +3016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
         
-        System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, Evaluation body, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, EvaluationCreateBody body, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -3030,7 +3030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null);
 
         /// <summary>
         /// Create audit query execution
@@ -8157,7 +8157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of evaluation forms 
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8178,7 +8178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of evaluation forms 
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8279,7 +8279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of evaluation forms 
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8301,7 +8301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of evaluation forms 
+        /// Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8844,7 +8844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of evaluation forms 
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8865,7 +8865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of evaluation forms 
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8966,7 +8966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of evaluation forms 
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -8988,7 +8988,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the list of evaluation forms 
-        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+        /// By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -9734,7 +9734,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of survey forms 
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9755,7 +9755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of survey forms 
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9856,7 +9856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the list of survey forms 
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9878,7 +9878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the list of survey forms 
+        /// Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13477,7 +13477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
         
-        public Evaluation PostQualityConversationEvaluations (string conversationId, Evaluation body, string expand = null)
+        public Evaluation PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null)
         {
              ApiResponse<Evaluation> localVarResponse = PostQualityConversationEvaluationsWithHttpInfo(conversationId, body, expand);
              return localVarResponse.Data;
@@ -13493,7 +13493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         
-        public ApiResponse< Evaluation > PostQualityConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body, string expand = null)
+        public ApiResponse< Evaluation > PostQualityConversationEvaluationsWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -13595,7 +13595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
         
-        public async System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, Evaluation body, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, EvaluationCreateBody body, string expand = null)
         {
              ApiResponse<Evaluation> localVarResponse = await PostQualityConversationEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
              return localVarResponse.Data;
@@ -13612,7 +13612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)

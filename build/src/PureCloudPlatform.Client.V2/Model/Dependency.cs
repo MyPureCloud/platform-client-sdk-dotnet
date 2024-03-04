@@ -363,6 +363,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sttengine,
             
             /// <summary>
+            /// Enum Surveyform for "SURVEYFORM"
+            /// </summary>
+            [EnumMember(Value = "SURVEYFORM")]
+            Surveyform,
+            
+            /// <summary>
             /// Enum Surveyinviteflow for "SURVEYINVITEFLOW"
             /// </summary>
             [EnumMember(Value = "SURVEYINVITEFLOW")]

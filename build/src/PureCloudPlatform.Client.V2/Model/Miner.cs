@@ -453,7 +453,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Error Information</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
-        public ErrorInfo ErrorInfo { get; private set; }
+        public MinerErrorInfo ErrorInfo { get; private set; }
 
 
 
@@ -462,7 +462,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Warning Information</value>
         [DataMember(Name="warningInfo", EmitDefaultValue=false)]
-        public ErrorInfo WarningInfo { get; private set; }
+        public MinerErrorInfo WarningInfo { get; private set; }
 
 
 

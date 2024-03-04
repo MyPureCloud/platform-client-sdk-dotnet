@@ -649,6 +649,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkitemStatus> GetTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId);
 
         /// <summary>
+        /// Get list of statuses for this worktype.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>WorkitemStatusListing</returns>
+        
+        WorkitemStatusListing GetTaskmanagementWorktypeStatuses (string worktypeId);
+
+        /// <summary>
+        /// Get list of statuses for this worktype.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>ApiResponse of WorkitemStatusListing</returns>
+        
+        ApiResponse<WorkitemStatusListing> GetTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId);
+
+        /// <summary>
         /// Get a version of a worktype
         /// </summary>
         /// <remarks>
@@ -1861,6 +1887,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> GetTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId);
+
+        /// <summary>
+        /// Get list of statuses for this worktype.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>Task of WorkitemStatusListing</returns>
+        
+        System.Threading.Tasks.Task<WorkitemStatusListing> GetTaskmanagementWorktypeStatusesAsync (string worktypeId);
+
+        /// <summary>
+        /// Get list of statuses for this worktype.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>Task of ApiResponse (WorkitemStatusListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WorkitemStatusListing>> GetTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId);
 
         /// <summary>
         /// Get a version of a worktype
@@ -7461,6 +7513,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WorkitemStatus>(localVarStatusCode,
                 localVarHeaders,
                 (WorkitemStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of statuses for this worktype. 
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>WorkitemStatusListing</returns>
+        
+        public WorkitemStatusListing GetTaskmanagementWorktypeStatuses (string worktypeId)
+        {
+             ApiResponse<WorkitemStatusListing> localVarResponse = GetTaskmanagementWorktypeStatusesWithHttpInfo(worktypeId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of statuses for this worktype. 
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>ApiResponse of WorkitemStatusListing</returns>
+        
+        public ApiResponse< WorkitemStatusListing > GetTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeStatuses");
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeStatuses: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeStatuses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemStatusListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemStatusListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemStatusListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of statuses for this worktype. 
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>Task of WorkitemStatusListing</returns>
+        
+        public async System.Threading.Tasks.Task<WorkitemStatusListing> GetTaskmanagementWorktypeStatusesAsync (string worktypeId)
+        {
+             ApiResponse<WorkitemStatusListing> localVarResponse = await GetTaskmanagementWorktypeStatusesAsyncWithHttpInfo(worktypeId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of statuses for this worktype. 
+        /// 
+        /// GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="worktypeId">Worktype id</param>
+        /// <returns>Task of ApiResponse (WorkitemStatusListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatusListing>> GetTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId)
+        { 
+            // verify the required parameter 'worktypeId' is set
+            if (worktypeId == null)
+                throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->GetTaskmanagementWorktypeStatuses");
+            
+
+            var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (worktypeId != null) localVarPathParams.Add("worktypeId", this.Configuration.ApiClient.ParameterToString(worktypeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeStatuses: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorktypeStatuses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WorkitemStatusListing>(localVarStatusCode,
+                localVarHeaders,
+                (WorkitemStatusListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemStatusListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

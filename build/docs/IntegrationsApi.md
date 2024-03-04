@@ -39,15 +39,22 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsCredentialsTypes**](IntegrationsApi.html#getintegrationscredentialstypes) | **Get** /api/v2/integrations/credentials/types | List all credential types |
 | [**GetIntegrationsSpeechDialogflowAgent**](IntegrationsApi.html#getintegrationsspeechdialogflowagent) | **Get** /api/v2/integrations/speech/dialogflow/agents/{agentId} | Get details about a Dialogflow agent |
 | [**GetIntegrationsSpeechDialogflowAgents**](IntegrationsApi.html#getintegrationsspeechdialogflowagents) | **Get** /api/v2/integrations/speech/dialogflow/agents | Get a list of Dialogflow agents in the customers&#39; Google accounts |
+| [**GetIntegrationsSpeechDialogflowcxAgent**](IntegrationsApi.html#getintegrationsspeechdialogflowcxagent) | **Get** /api/v2/integrations/speech/dialogflowcx/agents/{agentId} | Get details about a Dialogflow CX agent |
+| [**GetIntegrationsSpeechDialogflowcxAgents**](IntegrationsApi.html#getintegrationsspeechdialogflowcxagents) | **Get** /api/v2/integrations/speech/dialogflowcx/agents | Get a list of Dialogflow CX agents in the customers&#39; Google accounts |
 | [**GetIntegrationsSpeechLexBotAlias**](IntegrationsApi.html#getintegrationsspeechlexbotalias) | **Get** /api/v2/integrations/speech/lex/bot/alias/{aliasId} | Get details about a Lex bot alias |
 | [**GetIntegrationsSpeechLexBotBotIdAliases**](IntegrationsApi.html#getintegrationsspeechlexbotbotidaliases) | **Get** /api/v2/integrations/speech/lex/bot/{botId}/aliases | Get a list of aliases for a bot in the customer&#39;s AWS accounts |
 | [**GetIntegrationsSpeechLexBots**](IntegrationsApi.html#getintegrationsspeechlexbots) | **Get** /api/v2/integrations/speech/lex/bots | Get a list of Lex bots in the customers&#39; AWS accounts |
+| [**GetIntegrationsSpeechLexv2BotAlias**](IntegrationsApi.html#getintegrationsspeechlexv2botalias) | **Get** /api/v2/integrations/speech/lexv2/bot/alias/{aliasId} | Get details about a Lex V2 bot alias |
+| [**GetIntegrationsSpeechLexv2BotBotIdAliases**](IntegrationsApi.html#getintegrationsspeechlexv2botbotidaliases) | **Get** /api/v2/integrations/speech/lexv2/bot/{botId}/aliases | Get a list of aliases for a Lex V2 bot |
+| [**GetIntegrationsSpeechLexv2Bots**](IntegrationsApi.html#getintegrationsspeechlexv2bots) | **Get** /api/v2/integrations/speech/lexv2/bots | Get a list of Lex V2 bots |
 | [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBot**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbot) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId} | Get a Nuance bot in the specified Integration |
 | [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotjob) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId} | Get the status of an asynchronous Nuance bot GET job |
 | [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotjobresults) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results | Get the result of an asynchronous Nuance bot GET job |
 | [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBots**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbots) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots | Get a list of Nuance bots available in the specified Integration |
 | [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotsjob) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId} | Get the status of an asynchronous Nuance bots GET job |
 | [**GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults**](IntegrationsApi.html#getintegrationsspeechnuancenuanceintegrationidbotsjobresults) | **Get** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results | Get the result of an asynchronous Nuance bots GET job |
+| [**GetIntegrationsSpeechSttEngine**](IntegrationsApi.html#getintegrationsspeechsttengine) | **Get** /api/v2/integrations/speech/stt/engines/{engineId} | Get details about a STT engine |
+| [**GetIntegrationsSpeechSttEngines**](IntegrationsApi.html#getintegrationsspeechsttengines) | **Get** /api/v2/integrations/speech/stt/engines | Get a list of STT engines enabled for org |
 | [**GetIntegrationsSpeechTtsEngine**](IntegrationsApi.html#getintegrationsspeechttsengine) | **Get** /api/v2/integrations/speech/tts/engines/{engineId} | Get details about a TTS engine |
 | [**GetIntegrationsSpeechTtsEngineVoice**](IntegrationsApi.html#getintegrationsspeechttsenginevoice) | **Get** /api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId} | Get details about a specific voice for a TTS engine |
 | [**GetIntegrationsSpeechTtsEngineVoices**](IntegrationsApi.html#getintegrationsspeechttsenginevoices) | **Get** /api/v2/integrations/speech/tts/engines/{engineId}/voices | Get a list of voices for a TTS engine |
@@ -56,6 +63,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsType**](IntegrationsApi.html#getintegrationstype) | **Get** /api/v2/integrations/types/{typeId} | Get integration type. |
 | [**GetIntegrationsTypeConfigschema**](IntegrationsApi.html#getintegrationstypeconfigschema) | **Get** /api/v2/integrations/types/{typeId}/configschemas/{configType} | Get properties config schema for an integration type. |
 | [**GetIntegrationsTypes**](IntegrationsApi.html#getintegrationstypes) | **Get** /api/v2/integrations/types | List integration types |
+| [**GetIntegrationsUnifiedcommunicationsClientapp**](IntegrationsApi.html#getintegrationsunifiedcommunicationsclientapp) | **Get** /api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId} | UC integration client application configuration. |
+| [**GetIntegrationsUnifiedcommunicationsClientapps**](IntegrationsApi.html#getintegrationsunifiedcommunicationsclientapps) | **Get** /api/v2/integrations/unifiedcommunications/clientapps | List UC integration client application configurations. |
 | [**GetIntegrationsUserapps**](IntegrationsApi.html#getintegrationsuserapps) | **Get** /api/v2/integrations/userapps | List permitted user app integrations for the logged in user |
 | [**PatchIntegration**](IntegrationsApi.html#patchintegration) | **Patch** /api/v2/integrations/{integrationId} | Update an integration. |
 | [**PatchIntegrationsAction**](IntegrationsApi.html#patchintegrationsaction) | **Patch** /api/v2/integrations/actions/{actionId} | Patch an Action |
@@ -2229,6 +2238,136 @@ namespace Example
 
 [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html)
 
+<a name="getintegrationsspeechdialogflowcxagent"></a>
+
+## [**DialogflowCXAgent**](DialogflowCXAgent.html) GetIntegrationsSpeechDialogflowcxAgent (string agentId)
+
+
+
+Get details about a Dialogflow CX agent
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechDialogflowcxAgentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var agentId = agentId_example;  // string | The agent ID
+
+            try
+            { 
+                // Get details about a Dialogflow CX agent
+                DialogflowCXAgent result = apiInstance.GetIntegrationsSpeechDialogflowcxAgent(agentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechDialogflowcxAgent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The agent ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialogflowCXAgent**](DialogflowCXAgent.html)
+
+<a name="getintegrationsspeechdialogflowcxagents"></a>
+
+## [**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing.html) GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null)
+
+
+
+Get a list of Dialogflow CX agents in the customers' Google accounts
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechDialogflowcxAgentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = name_example;  // string | Filter on agent name (optional) 
+
+            try
+            { 
+                // Get a list of Dialogflow CX agents in the customers' Google accounts
+                DialogflowCXAgentSummaryEntityListing result = apiInstance.GetIntegrationsSpeechDialogflowcxAgents(pageNumber, pageSize, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechDialogflowcxAgents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **name** | **string**| Filter on agent name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing.html)
+
 <a name="getintegrationsspeechlexbotalias"></a>
 
 ## [**LexBotAlias**](LexBotAlias.html) GetIntegrationsSpeechLexBotAlias (string aliasId)
@@ -2430,6 +2569,207 @@ namespace Example
 
 [**LexBotEntityListing**](LexBotEntityListing.html)
 
+<a name="getintegrationsspeechlexv2botalias"></a>
+
+## [**LexV2BotAlias**](LexV2BotAlias.html) GetIntegrationsSpeechLexv2BotAlias (string aliasId)
+
+
+
+Get details about a Lex V2 bot alias
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechLexv2BotAliasExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var aliasId = aliasId_example;  // string | The Alias ID
+
+            try
+            { 
+                // Get details about a Lex V2 bot alias
+                LexV2BotAlias result = apiInstance.GetIntegrationsSpeechLexv2BotAlias(aliasId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechLexv2BotAlias: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **aliasId** | **string**| The Alias ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LexV2BotAlias**](LexV2BotAlias.html)
+
+<a name="getintegrationsspeechlexv2botbotidaliases"></a>
+
+## [**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing.html) GetIntegrationsSpeechLexv2BotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+
+
+
+Get a list of aliases for a Lex V2 bot
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechLexv2BotBotIdAliasesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var botId = botId_example;  // string | The Bot ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var status = status_example;  // string | Filter on alias status (optional) 
+            var name = name_example;  // string | Filter on alias name (optional) 
+
+            try
+            { 
+                // Get a list of aliases for a Lex V2 bot
+                LexV2BotAliasEntityListing result = apiInstance.GetIntegrationsSpeechLexv2BotBotIdAliases(botId, pageNumber, pageSize, status, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechLexv2BotBotIdAliases: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **botId** | **string**| The Bot ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **status** | **string**| Filter on alias status | [optional] <br />**Values**: Creating, Available, Deleting, Failed |
+| **name** | **string**| Filter on alias name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing.html)
+
+<a name="getintegrationsspeechlexv2bots"></a>
+
+## [**LexV2BotEntityListing**](LexV2BotEntityListing.html) GetIntegrationsSpeechLexv2Bots (int? pageNumber = null, int? pageSize = null, string name = null)
+
+
+
+Get a list of Lex V2 bots
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechLexv2BotsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = name_example;  // string | Filter on bot name (optional) 
+
+            try
+            { 
+                // Get a list of Lex V2 bots
+                LexV2BotEntityListing result = apiInstance.GetIntegrationsSpeechLexv2Bots(pageNumber, pageSize, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechLexv2Bots: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **name** | **string**| Filter on bot name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LexV2BotEntityListing**](LexV2BotEntityListing.html)
+
 <a name="getintegrationsspeechnuancenuanceintegrationidbot"></a>
 
 ## [**NuanceBot**](NuanceBot.html) GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
@@ -2437,8 +2777,6 @@ namespace Example
 
 
 Get a Nuance bot in the specified Integration
-
-GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2509,8 +2847,6 @@ namespace Example
 
 Get the status of an asynchronous Nuance bot GET job
 
-GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2577,8 +2913,6 @@ namespace Example
 
 
 Get the result of an asynchronous Nuance bot GET job
-
-GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2649,8 +2983,6 @@ Get a list of Nuance bots available in the specified Integration
 
 If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
 
-GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2720,8 +3052,6 @@ namespace Example
 
 Get the status of an asynchronous Nuance bots GET job
 
-GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2787,8 +3117,6 @@ namespace Example
 
 Get the result of an asynchronous Nuance bots GET job
 
-GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -2845,6 +3173,136 @@ namespace Example
 ### Return type
 
 [**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+
+<a name="getintegrationsspeechsttengine"></a>
+
+## [**SttEngineEntity**](SttEngineEntity.html) GetIntegrationsSpeechSttEngine (string engineId)
+
+
+
+Get details about a STT engine
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechSttEngineExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var engineId = engineId_example;  // string | The engine ID
+
+            try
+            { 
+                // Get details about a STT engine
+                SttEngineEntity result = apiInstance.GetIntegrationsSpeechSttEngine(engineId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechSttEngine: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **engineId** | **string**| The engine ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SttEngineEntity**](SttEngineEntity.html)
+
+<a name="getintegrationsspeechsttengines"></a>
+
+## [**SttEngineEntityListing**](SttEngineEntityListing.html) GetIntegrationsSpeechSttEngines (int? pageNumber = null, int? pageSize = null, string name = null)
+
+
+
+Get a list of STT engines enabled for org
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsSpeechSttEnginesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = name_example;  // string | Filter on engine name (optional) 
+
+            try
+            { 
+                // Get a list of STT engines enabled for org
+                SttEngineEntityListing result = apiInstance.GetIntegrationsSpeechSttEngines(pageNumber, pageSize, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsSpeechSttEngines: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **name** | **string**| Filter on engine name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SttEngineEntityListing**](SttEngineEntityListing.html)
 
 <a name="getintegrationsspeechttsengine"></a>
 
@@ -3372,6 +3830,146 @@ namespace Example
 ### Return type
 
 [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+<a name="getintegrationsunifiedcommunicationsclientapp"></a>
+
+## [**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration.html) GetIntegrationsUnifiedcommunicationsClientapp (string ucIntegrationId)
+
+
+
+UC integration client application configuration.
+
+This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+
+Requires ANY permissions: 
+
+* integration:unifiedCommunications:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsUnifiedcommunicationsClientappExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var ucIntegrationId = ucIntegrationId_example;  // string | 3rd Party Service Type
+
+            try
+            { 
+                // UC integration client application configuration.
+                UnifiedCommunicationsIntegration result = apiInstance.GetIntegrationsUnifiedcommunicationsClientapp(ucIntegrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsUnifiedcommunicationsClientapp: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ucIntegrationId** | **string**| 3rd Party Service Type |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration.html)
+
+<a name="getintegrationsunifiedcommunicationsclientapps"></a>
+
+## [**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing.html) GetIntegrationsUnifiedcommunicationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+
+
+
+List UC integration client application configurations.
+
+This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+
+Requires ANY permissions: 
+
+* integration:unifiedCommunications:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsUnifiedcommunicationsClientappsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+
+            try
+            { 
+                // List UC integration client application configurations.
+                UnifiedCommunicationsIntegrationListing result = apiInstance.GetIntegrationsUnifiedcommunicationsClientapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsUnifiedcommunicationsClientapps: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing.html)
 
 <a name="getintegrationsuserapps"></a>
 
@@ -4305,8 +4903,6 @@ namespace Example
 
 Get a Nuance bot in the specified Integration asynchronously
 
-PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -4376,8 +4972,6 @@ namespace Example
 
 Get a list of Nuance bots in the specified Integration asynchronously
 
-PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * integrations:integration:view
@@ -4446,8 +5040,6 @@ namespace Example
 
 
 Try out a single credential for a Nuance bot to know if the secret is correct
-
-PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4772,8 +5364,6 @@ namespace Example
 
 
 Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
-
-PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

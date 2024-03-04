@@ -18,6 +18,82 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CommonRuleBulkUpdateNotificationsRequest :  IEquatable<CommonRuleBulkUpdateNotificationsRequest>
     {
+        /// <summary>
+        /// Gets or Sets TypesToAdd
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypesToAddEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "Sms"
+            /// </summary>
+            [EnumMember(Value = "Sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Device for "Device"
+            /// </summary>
+            [EnumMember(Value = "Device")]
+            Device,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Push for "Push"
+            /// </summary>
+            [EnumMember(Value = "Push")]
+            Push
+        }
+        /// <summary>
+        /// Gets or Sets TypesToRemove
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypesToRemoveEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "Sms"
+            /// </summary>
+            [EnumMember(Value = "Sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Device for "Device"
+            /// </summary>
+            [EnumMember(Value = "Device")]
+            Device,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Push for "Push"
+            /// </summary>
+            [EnumMember(Value = "Push")]
+            Push
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonRuleBulkUpdateNotificationsRequest" /> class.
@@ -28,11 +104,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CommonRuleBulkUpdateNotificationsRequest" /> class.
         /// </summary>
         /// <param name="RuleIds">The user supplied rules ids to be updated (required).</param>
-        /// <param name="Properties">The rule properties to be updated (required).</param>
-        public CommonRuleBulkUpdateNotificationsRequest(List<string> RuleIds = null, ModifiableRuleProperties Properties = null)
+        /// <param name="Properties">The rule properties to be updated.</param>
+        /// <param name="TypesToAdd">Collection of alerting notification types to add for all entities in the rules.</param>
+        /// <param name="TypesToRemove">Collection of alerting notification types to remove for all entities in the rules.</param>
+        public CommonRuleBulkUpdateNotificationsRequest(List<string> RuleIds = null, ModifiableRuleProperties Properties = null, List<TypesToAddEnum> TypesToAdd = null, List<TypesToRemoveEnum> TypesToRemove = null)
         {
             this.RuleIds = RuleIds;
             this.Properties = Properties;
+            this.TypesToAdd = TypesToAdd;
+            this.TypesToRemove = TypesToRemove;
             
         }
         
@@ -55,6 +135,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public ModifiableRuleProperties Properties { get; set; }
 
 
+
+        /// <summary>
+        /// Collection of alerting notification types to add for all entities in the rules
+        /// </summary>
+        /// <value>Collection of alerting notification types to add for all entities in the rules</value>
+        [DataMember(Name="typesToAdd", EmitDefaultValue=false)]
+        public List<TypesToAddEnum> TypesToAdd { get; set; }
+
+
+
+        /// <summary>
+        /// Collection of alerting notification types to remove for all entities in the rules
+        /// </summary>
+        /// <value>Collection of alerting notification types to remove for all entities in the rules</value>
+        [DataMember(Name="typesToRemove", EmitDefaultValue=false)]
+        public List<TypesToRemoveEnum> TypesToRemove { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +164,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  RuleIds: ").Append(RuleIds).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            sb.Append("  TypesToAdd: ").Append(TypesToAdd).Append("\n");
+            sb.Append("  TypesToRemove: ").Append(TypesToRemove).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +215,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.Equals(other.Properties)
+                ) &&
+                (
+                    this.TypesToAdd == other.TypesToAdd ||
+                    this.TypesToAdd != null &&
+                    this.TypesToAdd.SequenceEqual(other.TypesToAdd)
+                ) &&
+                (
+                    this.TypesToRemove == other.TypesToRemove ||
+                    this.TypesToRemove != null &&
+                    this.TypesToRemove.SequenceEqual(other.TypesToRemove)
                 );
         }
 
@@ -134,6 +244,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+
+                if (this.TypesToAdd != null)
+                    hash = hash * 59 + this.TypesToAdd.GetHashCode();
+
+                if (this.TypesToRemove != null)
+                    hash = hash * 59 + this.TypesToRemove.GetHashCode();
 
                 return hash;
             }

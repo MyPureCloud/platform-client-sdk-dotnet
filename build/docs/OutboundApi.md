@@ -7582,7 +7582,7 @@ namespace Example
 
 <a name="postoutboundcontactlistexport"></a>
 
-## [**DomainEntityRef**](DomainEntityRef.html) PostOutboundContactlistExport (string contactListId)
+## [**DomainEntityRef**](DomainEntityRef.html) PostOutboundContactlistExport (string contactListId, ContactsExportRequest body = null)
 
 
 
@@ -7618,11 +7618,12 @@ namespace Example
 
             var apiInstance = new OutboundApi();
             var contactListId = contactListId_example;  // string | ContactList ID
+            var body = new ContactsExportRequest(); // ContactsExportRequest | Export information to get (optional) 
 
             try
             { 
                 // Initiate the export of a contact list.
-                DomainEntityRef result = apiInstance.PostOutboundContactlistExport(contactListId);
+                DomainEntityRef result = apiInstance.PostOutboundContactlistExport(contactListId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7640,6 +7641,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
+| **body** | [**ContactsExportRequest**](ContactsExportRequest.html)| Export information to get | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

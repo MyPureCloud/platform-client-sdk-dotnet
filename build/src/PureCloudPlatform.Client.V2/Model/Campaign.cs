@@ -176,7 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListFilters">Filter to apply to the contact list before dialing. Currently a campaign can only have one filter applied..</param>
         /// <param name="Division">The division this campaign belongs to..</param>
         /// <param name="DynamicContactQueueingSettings">Settings for dynamic queueing of contacts..</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null)
+        /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on this campaign.</param>
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, int? MaxCallsPerAgent = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -207,6 +208,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContactListFilters = ContactListFilters;
             this.Division = Division;
             this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
+            this.MaxCallsPerAgent = MaxCallsPerAgent;
             
         }
         
@@ -496,6 +498,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The maximum number of calls that can be placed per agent on this campaign
+        /// </summary>
+        /// <value>The maximum number of calls that can be placed per agent on this campaign</value>
+        [DataMember(Name="maxCallsPerAgent", EmitDefaultValue=false)]
+        public int? MaxCallsPerAgent { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -545,6 +556,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
+            sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -752,6 +764,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DynamicContactQueueingSettings.Equals(other.DynamicContactQueueingSettings)
                 ) &&
                 (
+                    this.MaxCallsPerAgent == other.MaxCallsPerAgent ||
+                    this.MaxCallsPerAgent != null &&
+                    this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -867,6 +884,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DynamicContactQueueingSettings != null)
                     hash = hash * 59 + this.DynamicContactQueueingSettings.GetHashCode();
+
+                if (this.MaxCallsPerAgent != null)
+                    hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorktype**](TaskManagementApi.html#gettaskmanagementworktype) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId} | Get a worktype |
 | [**GetTaskmanagementWorktypeHistory**](TaskManagementApi.html#gettaskmanagementworktypehistory) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/history | Get a listing of a worktype&#39;s attribute change history |
 | [**GetTaskmanagementWorktypeStatus**](TaskManagementApi.html#gettaskmanagementworktypestatus) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId} | Get a status |
+| [**GetTaskmanagementWorktypeStatuses**](TaskManagementApi.html#gettaskmanagementworktypestatuses) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Get list of statuses for this worktype. |
 | [**GetTaskmanagementWorktypeVersion**](TaskManagementApi.html#gettaskmanagementworktypeversion) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/versions/{entityVersion} | Get a version of a worktype |
 | [**GetTaskmanagementWorktypeVersions**](TaskManagementApi.html#gettaskmanagementworktypeversions) | **Get** /api/v2/taskmanagement/worktypes/{worktypeId}/versions | Get all versions of a worktype |
 | [**PatchTaskmanagementWorkbin**](TaskManagementApi.html#patchtaskmanagementworkbin) | **Patch** /api/v2/taskmanagement/workbins/{workbinId} | Update the attributes of a workbin |
@@ -1533,6 +1534,71 @@ namespace Example
 ### Return type
 
 [**WorkitemStatus**](WorkitemStatus.html)
+
+<a name="gettaskmanagementworktypestatuses"></a>
+
+## [**WorkitemStatusListing**](WorkitemStatusListing.html) GetTaskmanagementWorktypeStatuses (string worktypeId)
+
+
+
+Get list of statuses for this worktype.
+
+GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* workitems:status:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorktypeStatusesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var worktypeId = worktypeId_example;  // string | Worktype id
+
+            try
+            { 
+                // Get list of statuses for this worktype.
+                WorkitemStatusListing result = apiInstance.GetTaskmanagementWorktypeStatuses(worktypeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorktypeStatuses: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **worktypeId** | **string**| Worktype id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkitemStatusListing**](WorkitemStatusListing.html)
 
 <a name="gettaskmanagementworktypeversion"></a>
 

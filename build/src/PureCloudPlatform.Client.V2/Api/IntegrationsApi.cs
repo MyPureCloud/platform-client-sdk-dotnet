@@ -919,6 +919,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DialogflowAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowAgentsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
+        /// Get details about a Dialogflow CX agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>DialogflowCXAgent</returns>
+        
+        DialogflowCXAgent GetIntegrationsSpeechDialogflowcxAgent (string agentId);
+
+        /// <summary>
+        /// Get details about a Dialogflow CX agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>ApiResponse of DialogflowCXAgent</returns>
+        
+        ApiResponse<DialogflowCXAgent> GetIntegrationsSpeechDialogflowcxAgentWithHttpInfo (string agentId);
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>DialogflowCXAgentSummaryEntityListing</returns>
+        
+        DialogflowCXAgentSummaryEntityListing GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>ApiResponse of DialogflowCXAgentSummaryEntityListing</returns>
+        
+        ApiResponse<DialogflowCXAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowcxAgentsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
         /// Get details about a Lex bot alias
         /// </summary>
         /// <remarks>
@@ -1003,11 +1055,94 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LexBotEntityListing> GetIntegrationsSpeechLexBotsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
+        /// Get details about a Lex V2 bot alias
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>LexV2BotAlias</returns>
+        
+        LexV2BotAlias GetIntegrationsSpeechLexv2BotAlias (string aliasId);
+
+        /// <summary>
+        /// Get details about a Lex V2 bot alias
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>ApiResponse of LexV2BotAlias</returns>
+        
+        ApiResponse<LexV2BotAlias> GetIntegrationsSpeechLexv2BotAliasWithHttpInfo (string aliasId);
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>LexV2BotAliasEntityListing</returns>
+        
+        LexV2BotAliasEntityListing GetIntegrationsSpeechLexv2BotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>ApiResponse of LexV2BotAliasEntityListing</returns>
+        
+        ApiResponse<LexV2BotAliasEntityListing> GetIntegrationsSpeechLexv2BotBotIdAliasesWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
+
+        /// <summary>
+        /// Get a list of Lex V2 bots
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>LexV2BotEntityListing</returns>
+        
+        LexV2BotEntityListing GetIntegrationsSpeechLexv2Bots (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
+        /// Get a list of Lex V2 bots
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>ApiResponse of LexV2BotEntityListing</returns>
+        
+        ApiResponse<LexV2BotEntityListing> GetIntegrationsSpeechLexv2BotsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
         /// Get a Nuance bot in the specified Integration
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1023,7 +1158,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1039,7 +1173,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1054,7 +1187,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1069,7 +1201,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1084,7 +1215,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1099,7 +1229,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1115,7 +1244,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1131,7 +1259,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1145,7 +1272,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1159,7 +1285,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1173,7 +1298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1181,6 +1305,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of NuanceBotEntityListing</returns>
         
         ApiResponse<NuanceBotEntityListing> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsWithHttpInfo (string nuanceIntegrationId, string jobId);
+
+        /// <summary>
+        /// Get details about a STT engine
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>SttEngineEntity</returns>
+        
+        SttEngineEntity GetIntegrationsSpeechSttEngine (string engineId);
+
+        /// <summary>
+        /// Get details about a STT engine
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>ApiResponse of SttEngineEntity</returns>
+        
+        ApiResponse<SttEngineEntity> GetIntegrationsSpeechSttEngineWithHttpInfo (string engineId);
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>SttEngineEntityListing</returns>
+        
+        SttEngineEntityListing GetIntegrationsSpeechSttEngines (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>ApiResponse of SttEngineEntityListing</returns>
+        
+        ApiResponse<SttEngineEntityListing> GetIntegrationsSpeechSttEnginesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
         /// Get details about a TTS engine
@@ -1399,6 +1575,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of IntegrationTypeEntityListing</returns>
         
         ApiResponse<IntegrationTypeEntityListing> GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+
+        /// <summary>
+        /// UC integration client application configuration.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>UnifiedCommunicationsIntegration</returns>
+        
+        UnifiedCommunicationsIntegration GetIntegrationsUnifiedcommunicationsClientapp (string ucIntegrationId);
+
+        /// <summary>
+        /// UC integration client application configuration.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>ApiResponse of UnifiedCommunicationsIntegration</returns>
+        
+        ApiResponse<UnifiedCommunicationsIntegration> GetIntegrationsUnifiedcommunicationsClientappWithHttpInfo (string ucIntegrationId);
+
+        /// <summary>
+        /// List UC integration client application configurations.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>UnifiedCommunicationsIntegrationListing</returns>
+        
+        UnifiedCommunicationsIntegrationListing GetIntegrationsUnifiedcommunicationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+
+        /// <summary>
+        /// List UC integration client application configurations.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>ApiResponse of UnifiedCommunicationsIntegrationListing</returns>
+        
+        ApiResponse<UnifiedCommunicationsIntegrationListing> GetIntegrationsUnifiedcommunicationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List permitted user app integrations for the logged in user
@@ -1783,7 +2017,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1799,7 +2032,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1815,7 +2047,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1831,7 +2062,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1847,7 +2077,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1861,7 +2090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1981,7 +2209,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -1995,7 +2222,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -2961,6 +3187,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DialogflowAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowAgentsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
+        /// Get details about a Dialogflow CX agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>Task of DialogflowCXAgent</returns>
+        
+        System.Threading.Tasks.Task<DialogflowCXAgent> GetIntegrationsSpeechDialogflowcxAgentAsync (string agentId);
+
+        /// <summary>
+        /// Get details about a Dialogflow CX agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>Task of ApiResponse (DialogflowCXAgent)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DialogflowCXAgent>> GetIntegrationsSpeechDialogflowcxAgentAsyncWithHttpInfo (string agentId);
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>Task of DialogflowCXAgentSummaryEntityListing</returns>
+        
+        System.Threading.Tasks.Task<DialogflowCXAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowcxAgentsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>Task of ApiResponse (DialogflowCXAgentSummaryEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DialogflowCXAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowcxAgentsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
         /// Get details about a Lex bot alias
         /// </summary>
         /// <remarks>
@@ -3045,11 +3323,94 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LexBotEntityListing>> GetIntegrationsSpeechLexBotsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
+        /// Get details about a Lex V2 bot alias
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>Task of LexV2BotAlias</returns>
+        
+        System.Threading.Tasks.Task<LexV2BotAlias> GetIntegrationsSpeechLexv2BotAliasAsync (string aliasId);
+
+        /// <summary>
+        /// Get details about a Lex V2 bot alias
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>Task of ApiResponse (LexV2BotAlias)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LexV2BotAlias>> GetIntegrationsSpeechLexv2BotAliasAsyncWithHttpInfo (string aliasId);
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>Task of LexV2BotAliasEntityListing</returns>
+        
+        System.Threading.Tasks.Task<LexV2BotAliasEntityListing> GetIntegrationsSpeechLexv2BotBotIdAliasesAsync (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>Task of ApiResponse (LexV2BotAliasEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LexV2BotAliasEntityListing>> GetIntegrationsSpeechLexv2BotBotIdAliasesAsyncWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null);
+
+        /// <summary>
+        /// Get a list of Lex V2 bots
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>Task of LexV2BotEntityListing</returns>
+        
+        System.Threading.Tasks.Task<LexV2BotEntityListing> GetIntegrationsSpeechLexv2BotsAsync (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
+        /// Get a list of Lex V2 bots
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>Task of ApiResponse (LexV2BotEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LexV2BotEntityListing>> GetIntegrationsSpeechLexv2BotsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
         /// Get a Nuance bot in the specified Integration
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3065,7 +3426,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3081,7 +3441,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3096,7 +3455,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3111,7 +3469,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3126,7 +3483,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3141,7 +3497,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3157,7 +3512,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3173,7 +3527,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3187,7 +3540,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3201,7 +3553,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3215,7 +3566,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3223,6 +3573,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (NuanceBotEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<NuanceBotEntityListing>> GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsAsyncWithHttpInfo (string nuanceIntegrationId, string jobId);
+
+        /// <summary>
+        /// Get details about a STT engine
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>Task of SttEngineEntity</returns>
+        
+        System.Threading.Tasks.Task<SttEngineEntity> GetIntegrationsSpeechSttEngineAsync (string engineId);
+
+        /// <summary>
+        /// Get details about a STT engine
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>Task of ApiResponse (SttEngineEntity)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SttEngineEntity>> GetIntegrationsSpeechSttEngineAsyncWithHttpInfo (string engineId);
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>Task of SttEngineEntityListing</returns>
+        
+        System.Threading.Tasks.Task<SttEngineEntityListing> GetIntegrationsSpeechSttEnginesAsync (int? pageNumber = null, int? pageSize = null, string name = null);
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>Task of ApiResponse (SttEngineEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SttEngineEntityListing>> GetIntegrationsSpeechSttEnginesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null);
 
         /// <summary>
         /// Get details about a TTS engine
@@ -3441,6 +3843,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (IntegrationTypeEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+
+        /// <summary>
+        /// UC integration client application configuration.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>Task of UnifiedCommunicationsIntegration</returns>
+        
+        System.Threading.Tasks.Task<UnifiedCommunicationsIntegration> GetIntegrationsUnifiedcommunicationsClientappAsync (string ucIntegrationId);
+
+        /// <summary>
+        /// UC integration client application configuration.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>Task of ApiResponse (UnifiedCommunicationsIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UnifiedCommunicationsIntegration>> GetIntegrationsUnifiedcommunicationsClientappAsyncWithHttpInfo (string ucIntegrationId);
+
+        /// <summary>
+        /// List UC integration client application configurations.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>Task of UnifiedCommunicationsIntegrationListing</returns>
+        
+        System.Threading.Tasks.Task<UnifiedCommunicationsIntegrationListing> GetIntegrationsUnifiedcommunicationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+
+        /// <summary>
+        /// List UC integration client application configurations.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>Task of ApiResponse (UnifiedCommunicationsIntegrationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UnifiedCommunicationsIntegrationListing>> GetIntegrationsUnifiedcommunicationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List permitted user app integrations for the logged in user
@@ -3825,7 +4285,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3841,7 +4300,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3857,7 +4315,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3873,7 +4330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3889,7 +4345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -3903,7 +4358,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -4023,7 +4477,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -4037,7 +4490,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11296,6 +11748,433 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get details about a Dialogflow CX agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>DialogflowCXAgent</returns>
+        
+        public DialogflowCXAgent GetIntegrationsSpeechDialogflowcxAgent (string agentId)
+        {
+             ApiResponse<DialogflowCXAgent> localVarResponse = GetIntegrationsSpeechDialogflowcxAgentWithHttpInfo(agentId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about a Dialogflow CX agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>ApiResponse of DialogflowCXAgent</returns>
+        
+        public ApiResponse< DialogflowCXAgent > GetIntegrationsSpeechDialogflowcxAgentWithHttpInfo (string agentId)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling IntegrationsApi->GetIntegrationsSpeechDialogflowcxAgent");
+
+            var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents/{agentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialogflowCXAgent>(localVarStatusCode,
+                localVarHeaders,
+                (DialogflowCXAgent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialogflowCXAgent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about a Dialogflow CX agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>Task of DialogflowCXAgent</returns>
+        
+        public async System.Threading.Tasks.Task<DialogflowCXAgent> GetIntegrationsSpeechDialogflowcxAgentAsync (string agentId)
+        {
+             ApiResponse<DialogflowCXAgent> localVarResponse = await GetIntegrationsSpeechDialogflowcxAgentAsyncWithHttpInfo(agentId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about a Dialogflow CX agent 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentId">The agent ID</param>
+        /// <returns>Task of ApiResponse (DialogflowCXAgent)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DialogflowCXAgent>> GetIntegrationsSpeechDialogflowcxAgentAsyncWithHttpInfo (string agentId)
+        { 
+            // verify the required parameter 'agentId' is set
+            if (agentId == null)
+                throw new ApiException(400, "Missing required parameter 'agentId' when calling IntegrationsApi->GetIntegrationsSpeechDialogflowcxAgent");
+            
+
+            var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents/{agentId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentId != null) localVarPathParams.Add("agentId", this.Configuration.ApiClient.ParameterToString(agentId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialogflowCXAgent>(localVarStatusCode,
+                localVarHeaders,
+                (DialogflowCXAgent) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialogflowCXAgent)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>DialogflowCXAgentSummaryEntityListing</returns>
+        
+        public DialogflowCXAgentSummaryEntityListing GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null)
+        {
+             ApiResponse<DialogflowCXAgentSummaryEntityListing> localVarResponse = GetIntegrationsSpeechDialogflowcxAgentsWithHttpInfo(pageNumber, pageSize, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>ApiResponse of DialogflowCXAgentSummaryEntityListing</returns>
+        
+        public ApiResponse< DialogflowCXAgentSummaryEntityListing > GetIntegrationsSpeechDialogflowcxAgentsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialogflowCXAgentSummaryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DialogflowCXAgentSummaryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialogflowCXAgentSummaryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>Task of DialogflowCXAgentSummaryEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<DialogflowCXAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowcxAgentsAsync (int? pageNumber = null, int? pageSize = null, string name = null)
+        {
+             ApiResponse<DialogflowCXAgentSummaryEntityListing> localVarResponse = await GetIntegrationsSpeechDialogflowcxAgentsAsyncWithHttpInfo(pageNumber, pageSize, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Dialogflow CX agents in the customers' Google accounts 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on agent name (optional)</param>
+        /// <returns>Task of ApiResponse (DialogflowCXAgentSummaryEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DialogflowCXAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowcxAgentsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechDialogflowcxAgents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialogflowCXAgentSummaryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DialogflowCXAgentSummaryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialogflowCXAgentSummaryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get details about a Lex bot alias 
         /// 
         /// </summary>
@@ -11958,9 +12837,670 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get details about a Lex V2 bot alias 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>LexV2BotAlias</returns>
+        
+        public LexV2BotAlias GetIntegrationsSpeechLexv2BotAlias (string aliasId)
+        {
+             ApiResponse<LexV2BotAlias> localVarResponse = GetIntegrationsSpeechLexv2BotAliasWithHttpInfo(aliasId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about a Lex V2 bot alias 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>ApiResponse of LexV2BotAlias</returns>
+        
+        public ApiResponse< LexV2BotAlias > GetIntegrationsSpeechLexv2BotAliasWithHttpInfo (string aliasId)
+        { 
+            // verify the required parameter 'aliasId' is set
+            if (aliasId == null)
+                throw new ApiException(400, "Missing required parameter 'aliasId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotAlias");
+
+            var localVarPath = "/api/v2/integrations/speech/lexv2/bot/alias/{aliasId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (aliasId != null) localVarPathParams.Add("aliasId", this.Configuration.ApiClient.ParameterToString(aliasId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotAlias: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotAlias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LexV2BotAlias>(localVarStatusCode,
+                localVarHeaders,
+                (LexV2BotAlias) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LexV2BotAlias)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about a Lex V2 bot alias 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>Task of LexV2BotAlias</returns>
+        
+        public async System.Threading.Tasks.Task<LexV2BotAlias> GetIntegrationsSpeechLexv2BotAliasAsync (string aliasId)
+        {
+             ApiResponse<LexV2BotAlias> localVarResponse = await GetIntegrationsSpeechLexv2BotAliasAsyncWithHttpInfo(aliasId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about a Lex V2 bot alias 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="aliasId">The Alias ID</param>
+        /// <returns>Task of ApiResponse (LexV2BotAlias)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LexV2BotAlias>> GetIntegrationsSpeechLexv2BotAliasAsyncWithHttpInfo (string aliasId)
+        { 
+            // verify the required parameter 'aliasId' is set
+            if (aliasId == null)
+                throw new ApiException(400, "Missing required parameter 'aliasId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotAlias");
+            
+
+            var localVarPath = "/api/v2/integrations/speech/lexv2/bot/alias/{aliasId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (aliasId != null) localVarPathParams.Add("aliasId", this.Configuration.ApiClient.ParameterToString(aliasId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotAlias: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotAlias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LexV2BotAlias>(localVarStatusCode,
+                localVarHeaders,
+                (LexV2BotAlias) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LexV2BotAlias)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>LexV2BotAliasEntityListing</returns>
+        
+        public LexV2BotAliasEntityListing GetIntegrationsSpeechLexv2BotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+        {
+             ApiResponse<LexV2BotAliasEntityListing> localVarResponse = GetIntegrationsSpeechLexv2BotBotIdAliasesWithHttpInfo(botId, pageNumber, pageSize, status, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>ApiResponse of LexV2BotAliasEntityListing</returns>
+        
+        public ApiResponse< LexV2BotAliasEntityListing > GetIntegrationsSpeechLexv2BotBotIdAliasesWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+        { 
+            // verify the required parameter 'botId' is set
+            if (botId == null)
+                throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotBotIdAliases");
+
+            var localVarPath = "/api/v2/integrations/speech/lexv2/bot/{botId}/aliases";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botId != null) localVarPathParams.Add("botId", this.Configuration.ApiClient.ParameterToString(botId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (status != null) localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(status)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotBotIdAliases: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotBotIdAliases: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LexV2BotAliasEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LexV2BotAliasEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LexV2BotAliasEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>Task of LexV2BotAliasEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<LexV2BotAliasEntityListing> GetIntegrationsSpeechLexv2BotBotIdAliasesAsync (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+        {
+             ApiResponse<LexV2BotAliasEntityListing> localVarResponse = await GetIntegrationsSpeechLexv2BotBotIdAliasesAsyncWithHttpInfo(botId, pageNumber, pageSize, status, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of aliases for a Lex V2 bot 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botId">The Bot ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="status">Filter on alias status (optional)</param>
+        /// <param name="name">Filter on alias name (optional)</param>
+        /// <returns>Task of ApiResponse (LexV2BotAliasEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LexV2BotAliasEntityListing>> GetIntegrationsSpeechLexv2BotBotIdAliasesAsyncWithHttpInfo (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
+        { 
+            // verify the required parameter 'botId' is set
+            if (botId == null)
+                throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotBotIdAliases");
+            
+
+            var localVarPath = "/api/v2/integrations/speech/lexv2/bot/{botId}/aliases";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botId != null) localVarPathParams.Add("botId", this.Configuration.ApiClient.ParameterToString(botId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (status != null) localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(status)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotBotIdAliases: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2BotBotIdAliases: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LexV2BotAliasEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LexV2BotAliasEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LexV2BotAliasEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of Lex V2 bots 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>LexV2BotEntityListing</returns>
+        
+        public LexV2BotEntityListing GetIntegrationsSpeechLexv2Bots (int? pageNumber = null, int? pageSize = null, string name = null)
+        {
+             ApiResponse<LexV2BotEntityListing> localVarResponse = GetIntegrationsSpeechLexv2BotsWithHttpInfo(pageNumber, pageSize, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Lex V2 bots 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>ApiResponse of LexV2BotEntityListing</returns>
+        
+        public ApiResponse< LexV2BotEntityListing > GetIntegrationsSpeechLexv2BotsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/speech/lexv2/bots";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2Bots: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2Bots: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LexV2BotEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LexV2BotEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LexV2BotEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of Lex V2 bots 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>Task of LexV2BotEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<LexV2BotEntityListing> GetIntegrationsSpeechLexv2BotsAsync (int? pageNumber = null, int? pageSize = null, string name = null)
+        {
+             ApiResponse<LexV2BotEntityListing> localVarResponse = await GetIntegrationsSpeechLexv2BotsAsyncWithHttpInfo(pageNumber, pageSize, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Lex V2 bots 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on bot name (optional)</param>
+        /// <returns>Task of ApiResponse (LexV2BotEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LexV2BotEntityListing>> GetIntegrationsSpeechLexv2BotsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/speech/lexv2/bots";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2Bots: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechLexv2Bots: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LexV2BotEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (LexV2BotEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LexV2BotEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a Nuance bot in the specified Integration 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -11978,7 +13518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12078,7 +13617,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12097,7 +13635,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBot is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12200,7 +13737,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12217,7 +13753,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12318,7 +13853,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12336,7 +13870,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12441,7 +13974,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12458,7 +13990,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12559,7 +14090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12577,7 +14107,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bot GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12682,7 +14211,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots available in the specified Integration 
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12700,7 +14228,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots available in the specified Integration 
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12797,7 +14324,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots available in the specified Integration 
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12816,7 +14342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots available in the specified Integration 
         /// If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBots is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12915,7 +14440,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -12931,7 +14455,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13027,7 +14550,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13044,7 +14566,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the status of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13143,7 +14664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13159,7 +14679,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13255,7 +14774,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13272,7 +14790,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of an asynchronous Nuance bots GET job 
         /// 
-        /// GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -13362,6 +14879,433 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<NuanceBotEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (NuanceBotEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NuanceBotEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get details about a STT engine 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>SttEngineEntity</returns>
+        
+        public SttEngineEntity GetIntegrationsSpeechSttEngine (string engineId)
+        {
+             ApiResponse<SttEngineEntity> localVarResponse = GetIntegrationsSpeechSttEngineWithHttpInfo(engineId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get details about a STT engine 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>ApiResponse of SttEngineEntity</returns>
+        
+        public ApiResponse< SttEngineEntity > GetIntegrationsSpeechSttEngineWithHttpInfo (string engineId)
+        { 
+            // verify the required parameter 'engineId' is set
+            if (engineId == null)
+                throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechSttEngine");
+
+            var localVarPath = "/api/v2/integrations/speech/stt/engines/{engineId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (engineId != null) localVarPathParams.Add("engineId", this.Configuration.ApiClient.ParameterToString(engineId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SttEngineEntity>(localVarStatusCode,
+                localVarHeaders,
+                (SttEngineEntity) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SttEngineEntity)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get details about a STT engine 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>Task of SttEngineEntity</returns>
+        
+        public async System.Threading.Tasks.Task<SttEngineEntity> GetIntegrationsSpeechSttEngineAsync (string engineId)
+        {
+             ApiResponse<SttEngineEntity> localVarResponse = await GetIntegrationsSpeechSttEngineAsyncWithHttpInfo(engineId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get details about a STT engine 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="engineId">The engine ID</param>
+        /// <returns>Task of ApiResponse (SttEngineEntity)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SttEngineEntity>> GetIntegrationsSpeechSttEngineAsyncWithHttpInfo (string engineId)
+        { 
+            // verify the required parameter 'engineId' is set
+            if (engineId == null)
+                throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechSttEngine");
+            
+
+            var localVarPath = "/api/v2/integrations/speech/stt/engines/{engineId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (engineId != null) localVarPathParams.Add("engineId", this.Configuration.ApiClient.ParameterToString(engineId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SttEngineEntity>(localVarStatusCode,
+                localVarHeaders,
+                (SttEngineEntity) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SttEngineEntity)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>SttEngineEntityListing</returns>
+        
+        public SttEngineEntityListing GetIntegrationsSpeechSttEngines (int? pageNumber = null, int? pageSize = null, string name = null)
+        {
+             ApiResponse<SttEngineEntityListing> localVarResponse = GetIntegrationsSpeechSttEnginesWithHttpInfo(pageNumber, pageSize, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>ApiResponse of SttEngineEntityListing</returns>
+        
+        public ApiResponse< SttEngineEntityListing > GetIntegrationsSpeechSttEnginesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/speech/stt/engines";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngines: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngines: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SttEngineEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SttEngineEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SttEngineEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>Task of SttEngineEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<SttEngineEntityListing> GetIntegrationsSpeechSttEnginesAsync (int? pageNumber = null, int? pageSize = null, string name = null)
+        {
+             ApiResponse<SttEngineEntityListing> localVarResponse = await GetIntegrationsSpeechSttEnginesAsyncWithHttpInfo(pageNumber, pageSize, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of STT engines enabled for org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="name">Filter on engine name (optional)</param>
+        /// <returns>Task of ApiResponse (SttEngineEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SttEngineEntityListing>> GetIntegrationsSpeechSttEnginesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/speech/stt/engines";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngines: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsSpeechSttEngines: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SttEngineEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SttEngineEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SttEngineEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15121,6 +17065,451 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<IntegrationTypeEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (IntegrationTypeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegrationTypeEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>UnifiedCommunicationsIntegration</returns>
+        
+        public UnifiedCommunicationsIntegration GetIntegrationsUnifiedcommunicationsClientapp (string ucIntegrationId)
+        {
+             ApiResponse<UnifiedCommunicationsIntegration> localVarResponse = GetIntegrationsUnifiedcommunicationsClientappWithHttpInfo(ucIntegrationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>ApiResponse of UnifiedCommunicationsIntegration</returns>
+        
+        public ApiResponse< UnifiedCommunicationsIntegration > GetIntegrationsUnifiedcommunicationsClientappWithHttpInfo (string ucIntegrationId)
+        { 
+            // verify the required parameter 'ucIntegrationId' is set
+            if (ucIntegrationId == null)
+                throw new ApiException(400, "Missing required parameter 'ucIntegrationId' when calling IntegrationsApi->GetIntegrationsUnifiedcommunicationsClientapp");
+
+            var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ucIntegrationId != null) localVarPathParams.Add("ucIntegrationId", this.Configuration.ApiClient.ParameterToString(ucIntegrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UnifiedCommunicationsIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (UnifiedCommunicationsIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnifiedCommunicationsIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>Task of UnifiedCommunicationsIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<UnifiedCommunicationsIntegration> GetIntegrationsUnifiedcommunicationsClientappAsync (string ucIntegrationId)
+        {
+             ApiResponse<UnifiedCommunicationsIntegration> localVarResponse = await GetIntegrationsUnifiedcommunicationsClientappAsyncWithHttpInfo(ucIntegrationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// UC integration client application configuration. 
+        /// This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="ucIntegrationId">3rd Party Service Type</param>
+        /// <returns>Task of ApiResponse (UnifiedCommunicationsIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UnifiedCommunicationsIntegration>> GetIntegrationsUnifiedcommunicationsClientappAsyncWithHttpInfo (string ucIntegrationId)
+        { 
+            // verify the required parameter 'ucIntegrationId' is set
+            if (ucIntegrationId == null)
+                throw new ApiException(400, "Missing required parameter 'ucIntegrationId' when calling IntegrationsApi->GetIntegrationsUnifiedcommunicationsClientapp");
+            
+
+            var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (ucIntegrationId != null) localVarPathParams.Add("ucIntegrationId", this.Configuration.ApiClient.ParameterToString(ucIntegrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapp: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UnifiedCommunicationsIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (UnifiedCommunicationsIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnifiedCommunicationsIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// List UC integration client application configurations. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>UnifiedCommunicationsIntegrationListing</returns>
+        
+        public UnifiedCommunicationsIntegrationListing GetIntegrationsUnifiedcommunicationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        {
+             ApiResponse<UnifiedCommunicationsIntegrationListing> localVarResponse = GetIntegrationsUnifiedcommunicationsClientappsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List UC integration client application configurations. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>ApiResponse of UnifiedCommunicationsIntegrationListing</returns>
+        
+        public ApiResponse< UnifiedCommunicationsIntegrationListing > GetIntegrationsUnifiedcommunicationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapps: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapps: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UnifiedCommunicationsIntegrationListing>(localVarStatusCode,
+                localVarHeaders,
+                (UnifiedCommunicationsIntegrationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnifiedCommunicationsIntegrationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// List UC integration client application configurations. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>Task of UnifiedCommunicationsIntegrationListing</returns>
+        
+        public async System.Threading.Tasks.Task<UnifiedCommunicationsIntegrationListing> GetIntegrationsUnifiedcommunicationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        {
+             ApiResponse<UnifiedCommunicationsIntegrationListing> localVarResponse = await GetIntegrationsUnifiedcommunicationsClientappsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List UC integration client application configurations. 
+        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
+        /// <param name="sortBy">variable name requested to sort by (optional)</param>
+        /// <param name="expand">variable name requested by expand list (optional)</param>
+        /// <param name="nextPage">next page token (optional)</param>
+        /// <param name="previousPage">Previous page token (optional)</param>
+        /// <returns>Task of ApiResponse (UnifiedCommunicationsIntegrationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UnifiedCommunicationsIntegrationListing>> GetIntegrationsUnifiedcommunicationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        { 
+
+            var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapps: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsUnifiedcommunicationsClientapps: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UnifiedCommunicationsIntegrationListing>(localVarStatusCode,
+                localVarHeaders,
+                (UnifiedCommunicationsIntegrationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnifiedCommunicationsIntegrationListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18356,7 +20745,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18374,7 +20762,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18479,7 +20866,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18498,7 +20884,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Nuance bot in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18606,7 +20991,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18624,7 +21008,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18721,7 +21104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18740,7 +21122,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Nuance bots in the specified Integration asynchronously 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18839,7 +21220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18854,7 +21234,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18955,7 +21334,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -18971,7 +21349,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Try out a single credential for a Nuance bot to know if the secret is correct 
         /// 
-        /// PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -19999,7 +22376,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -20014,7 +22390,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -20115,7 +22490,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>
@@ -20131,7 +22505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration 
         /// 
-        /// PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nuanceIntegrationId">The integration ID for this group of bots</param>

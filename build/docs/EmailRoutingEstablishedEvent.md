@@ -14,7 +14,7 @@ title: EmailRoutingEstablishedEvent
 | **QueueId** | **string** | The id of the queue that is routing this conversation. | |
 | **SkillIds** | **List&lt;string&gt;** | The unique identifiers for the skills that should be used to determine the destination for the conversation. | [optional] |
 | **LanguageId** | **string** | The unique identifier for the language that should be used to determine the destination for the conversation. | [optional] |
-| **Label** | **string** | An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level. | [optional] |
+| **Label** | **string** | An optional label that categorizes the conversation. Max-utilization settings can be configured at a per-label level. | [optional] |
 | **InitialConfiguration** | [**EmailInitialConfiguration**](EmailInitialConfiguration.html) | Metadata about this communication. | |
 | **SourceConfiguration** | [**SourceConfiguration**](SourceConfiguration.html) | Metadata about the source of this communication&#39;s interaction. | |
 {: class="table table-striped"}
