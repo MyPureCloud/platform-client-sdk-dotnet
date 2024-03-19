@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="NextStatus">Next status of auto status transition..</param>
         /// <param name="DateOfTransition">Date at which auto status transition occurs. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public AutoStatusTransitionDetail(WorkitemStatusReference NextStatus = null, DateTime? DateOfTransition = null)
+        /// <param name="ErrorDetails">This property will be set if auto status transition is failed..</param>
+        public AutoStatusTransitionDetail(WorkitemStatusReference NextStatus = null, DateTime? DateOfTransition = null, TaskManagementErrorDetails ErrorDetails = null)
         {
             this.NextStatus = NextStatus;
             this.DateOfTransition = DateOfTransition;
+            this.ErrorDetails = ErrorDetails;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateOfTransition { get; set; }
 
 
+
+        /// <summary>
+        /// This property will be set if auto status transition is failed.
+        /// </summary>
+        /// <value>This property will be set if auto status transition is failed.</value>
+        [DataMember(Name="errorDetails", EmitDefaultValue=false)]
+        public TaskManagementErrorDetails ErrorDetails { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  NextStatus: ").Append(NextStatus).Append("\n");
             sb.Append("  DateOfTransition: ").Append(DateOfTransition).Append("\n");
+            sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateOfTransition == other.DateOfTransition ||
                     this.DateOfTransition != null &&
                     this.DateOfTransition.Equals(other.DateOfTransition)
+                ) &&
+                (
+                    this.ErrorDetails == other.ErrorDetails ||
+                    this.ErrorDetails != null &&
+                    this.ErrorDetails.Equals(other.ErrorDetails)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateOfTransition != null)
                     hash = hash * 59 + this.DateOfTransition.GetHashCode();
+
+                if (this.ErrorDetails != null)
+                    hash = hash * 59 + this.ErrorDetails.GetHashCode();
 
                 return hash;
             }

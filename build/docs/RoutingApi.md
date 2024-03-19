@@ -3415,7 +3415,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
 | **name** | **string**| Filter by queue member name (contains-style search) | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill (contains-style search) | [optional]  |
 | **skills** | [**List<string>**](string.html)| Filter by skill (contains-style search) | [optional]  |
@@ -3502,7 +3502,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -3585,7 +3585,7 @@ namespace Example
 
 <a name="getroutingqueues"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, string cannedResponseLibraryId = null, bool? hasPeer = null)
 
 
 
@@ -3620,16 +3620,17 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var sortOrder = sortOrder_example;  // string | Note: results are sorted by name. (optional)  (default to asc)
-            var name = name_example;  // string | Filter by queue name (optional) 
-            var id = new List<string>(); // List<string> | Filter by queue ID(s) (optional) 
-            var divisionId = new List<string>(); // List<string> | Filter by queue division ID(s) (optional) 
-            var peerId = new List<string>(); // List<string> | Filter by queue peer ID(s) (optional) 
-            var hasPeer = true;  // bool? | Filter by queues associated with peer (optional) 
+            var name = name_example;  // string | Include only queues with the given name (leading and trailing asterisks allowed) (optional) 
+            var id = new List<string>(); // List<string> | Include only queues with the specified ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Include only queues in the specified division ID(s) (optional) 
+            var peerId = new List<string>(); // List<string> | Include only queues with the specified peer ID(s) (optional) 
+            var cannedResponseLibraryId = cannedResponseLibraryId_example;  // string | Include only queues explicitly associated with the specified canned response library ID (optional) 
+            var hasPeer = true;  // bool? | Include only queues with a peer ID (optional) 
 
             try
             { 
                 // Get list of queues.
-                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, cannedResponseLibraryId, hasPeer);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3649,11 +3650,12 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **name** | **string**| Filter by queue name | [optional]  |
-| **id** | [**List<string>**](string.html)| Filter by queue ID(s) | [optional]  |
-| **divisionId** | [**List<string>**](string.html)| Filter by queue division ID(s) | [optional]  |
-| **peerId** | [**List<string>**](string.html)| Filter by queue peer ID(s) | [optional]  |
-| **hasPeer** | **bool?**| Filter by queues associated with peer | [optional]  |
+| **name** | **string**| Include only queues with the given name (leading and trailing asterisks allowed) | [optional]  |
+| **id** | [**List<string>**](string.html)| Include only queues with the specified ID(s) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Include only queues in the specified division ID(s) | [optional]  |
+| **peerId** | [**List<string>**](string.html)| Include only queues with the specified peer ID(s) | [optional]  |
+| **cannedResponseLibraryId** | **string**| Include only queues explicitly associated with the specified canned response library ID | [optional]  |
+| **hasPeer** | **bool?**| Include only queues with a peer ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

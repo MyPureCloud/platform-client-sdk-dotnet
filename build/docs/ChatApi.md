@@ -15,6 +15,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetChatsRoom**](ChatApi.html#getchatsroom) | **Get** /api/v2/chats/rooms/{roomJid} | Get a room |
 | [**GetChatsRoomMessage**](ChatApi.html#getchatsroommessage) | **Get** /api/v2/chats/rooms/{roomJid}/messages/{messageIds} | Get messages by id(s) from a room |
 | [**GetChatsRoomMessages**](ChatApi.html#getchatsroommessages) | **Get** /api/v2/chats/rooms/{roomJid}/messages | Get a room&#39;s message history |
+| [**GetChatsRoomParticipant**](ChatApi.html#getchatsroomparticipant) | **Get** /api/v2/chats/rooms/{roomJid}/participants/{participantJid} | Get a room participant |
+| [**GetChatsRoomParticipants**](ChatApi.html#getchatsroomparticipants) | **Get** /api/v2/chats/rooms/{roomJid}/participants | Get room participants in a room |
 | [**GetChatsSettings**](ChatApi.html#getchatssettings) | **Get** /api/v2/chats/settings | Get Chat Settings. |
 | [**GetChatsThreadMessages**](ChatApi.html#getchatsthreadmessages) | **Get** /api/v2/chats/threads/{threadId}/messages | Get history by thread |
 | [**GetChatsUserMessage**](ChatApi.html#getchatsusermessage) | **Get** /api/v2/chats/users/{userId}/messages/{messageIds} | Get messages by id(s) from a 1on1 |
@@ -30,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostChatsRoomPinnedmessages**](ChatApi.html#postchatsroompinnedmessages) | **Post** /api/v2/chats/rooms/{roomJid}/pinnedmessages | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**PostChatsRooms**](ChatApi.html#postchatsrooms) | **Post** /api/v2/chats/rooms | Create an adhoc room |
 | [**PostChatsUserMessages**](ChatApi.html#postchatsusermessages) | **Post** /api/v2/chats/users/{userId}/messages | Send a message to a user |
+| [**PutChatsMessageReactions**](ChatApi.html#putchatsmessagereactions) | **Put** /api/v2/chats/messages/{messageId}/reactions | Update reactions to a message |
 | [**PutChatsSettings**](ChatApi.html#putchatssettings) | **Put** /api/v2/chats/settings | Update Chat Settings. |
 {: class="table table-striped"}
 
@@ -40,8 +43,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 
 Delete a message in a room
-
-DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -108,8 +109,6 @@ void (empty response body)
 
 Remove a user from a room.
 
-DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -174,8 +173,6 @@ void (empty response body)
 
 
 Remove a pinned message from a room
-
-DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -242,8 +239,6 @@ void (empty response body)
 
 Delete a message to a user
 
-DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -308,8 +303,6 @@ void (empty response body)
 
 
 Get a message
-
-GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -376,8 +369,6 @@ namespace Example
 
 Get a room
 
-GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -441,8 +432,6 @@ namespace Example
 
 
 Get messages by id(s) from a room
-
-GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -510,8 +499,6 @@ namespace Example
 
 Get a room's message history
 
-GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -573,6 +560,134 @@ namespace Example
 ### Return type
 
 [**ChatMessageEntityListing**](ChatMessageEntityListing.html)
+
+<a name="getchatsroomparticipant"></a>
+
+## [**RoomParticipant**](RoomParticipant.html) GetChatsRoomParticipant (string roomJid, string participantJid)
+
+
+
+Get a room participant
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetChatsRoomParticipantExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var roomJid = roomJid_example;  // string | roomJid
+            var participantJid = participantJid_example;  // string | participantJid
+
+            try
+            { 
+                // Get a room participant
+                RoomParticipant result = apiInstance.GetChatsRoomParticipant(roomJid, participantJid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.GetChatsRoomParticipant: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roomJid** | **string**| roomJid |  |
+| **participantJid** | **string**| participantJid |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoomParticipant**](RoomParticipant.html)
+
+<a name="getchatsroomparticipants"></a>
+
+## [**RoomParticipantsResponse**](RoomParticipantsResponse.html) GetChatsRoomParticipants (string roomJid)
+
+
+
+Get room participants in a room
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:room:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetChatsRoomParticipantsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var roomJid = roomJid_example;  // string | roomJid
+
+            try
+            { 
+                // Get room participants in a room
+                RoomParticipantsResponse result = apiInstance.GetChatsRoomParticipants(roomJid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.GetChatsRoomParticipants: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roomJid** | **string**| roomJid |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoomParticipantsResponse**](RoomParticipantsResponse.html)
 
 <a name="getchatssettings"></a>
 
@@ -640,8 +755,6 @@ This endpoint does require any parameters.
 
 
 Get history by thread
-
-GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -713,8 +826,6 @@ namespace Example
 
 Get messages by id(s) from a 1on1
 
-GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -780,8 +891,6 @@ namespace Example
 
 
 Get 1on1 History between a user
-
-GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -919,8 +1028,6 @@ namespace Example
 
 Set properties for a room
 
-PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -985,8 +1092,6 @@ void (empty response body)
 
 
 Edit a message in a room
-
-PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1118,8 +1223,6 @@ namespace Example
 
 
 Edit a message to a user
-
-PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1257,8 +1360,6 @@ namespace Example
 
 Send a message to a room
 
-PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -1325,8 +1426,6 @@ namespace Example
 
 Join a room
 
-PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -1391,8 +1490,6 @@ void (empty response body)
 
 
 Add pinned messages for a room, up to a maximum of 5 pinned messages
-
-PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1459,8 +1556,6 @@ void (empty response body)
 
 Create an adhoc room
 
-PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -1525,8 +1620,6 @@ namespace Example
 
 Send a message to a user
 
-PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * chat:chat:access
@@ -1584,6 +1677,71 @@ namespace Example
 ### Return type
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse.html)
+
+<a name="putchatsmessagereactions"></a>
+
+## void PutChatsMessageReactions (string messageId, ChatReactionUpdate body)
+
+
+
+Update reactions to a message
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:reactions:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutChatsMessageReactionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var messageId = messageId_example;  // string | messageId
+            var body = new ChatReactionUpdate(); // ChatReactionUpdate | reactionUpdate
+
+            try
+            { 
+                // Update reactions to a message
+                apiInstance.PutChatsMessageReactions(messageId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.PutChatsMessageReactions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| messageId |  |
+| **body** | [**ChatReactionUpdate**](ChatReactionUpdate.html)| reactionUpdate |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="putchatssettings"></a>
 

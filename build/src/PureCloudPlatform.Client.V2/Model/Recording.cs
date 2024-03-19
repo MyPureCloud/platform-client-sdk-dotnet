@@ -176,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Path">Path.</param>
         /// <param name="StartTime">The start time of the recording. Null when there is no playable media..</param>
         /// <param name="EndTime">The end time of the recording. Null when there is no playable media..</param>
-        /// <param name="Media">The type of media that the recording is. At the moment that could be audio, chat, or email..</param>
+        /// <param name="Media">The media type of the recording. This could be audio, chat, messaging, email, or screen..</param>
         /// <param name="Annotations">Annotations that belong to the recording..</param>
         /// <param name="Transcript">Represents a chat transcript.</param>
         /// <param name="EmailTranscript">Represents an email transcript.</param>
@@ -290,9 +290,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The type of media that the recording is. At the moment that could be audio, chat, or email.
+        /// The media type of the recording. This could be audio, chat, messaging, email, or screen.
         /// </summary>
-        /// <value>The type of media that the recording is. At the moment that could be audio, chat, or email.</value>
+        /// <value>The media type of the recording. This could be audio, chat, messaging, email, or screen.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public string Media { get; set; }
 

@@ -21,7 +21,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -35,7 +34,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -49,7 +47,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -63,7 +60,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -77,7 +73,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -91,7 +86,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -105,7 +99,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -119,7 +112,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -133,7 +125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -146,7 +137,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -159,7 +149,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -172,7 +161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -185,7 +173,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -199,7 +186,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -213,7 +199,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -229,7 +214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -239,6 +223,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
         ApiResponse<ChatMessageEntityListing> GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null);
+
+        /// <summary>
+        /// Get a room participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>RoomParticipant</returns>
+        
+        RoomParticipant GetChatsRoomParticipant (string roomJid, string participantJid);
+
+        /// <summary>
+        /// Get a room participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>ApiResponse of RoomParticipant</returns>
+        
+        ApiResponse<RoomParticipant> GetChatsRoomParticipantWithHttpInfo (string roomJid, string participantJid);
+
+        /// <summary>
+        /// Get room participants in a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>RoomParticipantsResponse</returns>
+        
+        RoomParticipantsResponse GetChatsRoomParticipants (string roomJid);
+
+        /// <summary>
+        /// Get room participants in a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>ApiResponse of RoomParticipantsResponse</returns>
+        
+        ApiResponse<RoomParticipantsResponse> GetChatsRoomParticipantsWithHttpInfo (string roomJid);
 
         /// <summary>
         /// Get Chat Settings.
@@ -267,7 +301,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -283,7 +316,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -299,7 +331,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -313,7 +344,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -327,7 +357,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -343,7 +372,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -385,7 +413,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -399,7 +426,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -413,7 +439,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -428,7 +453,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -467,7 +491,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -482,7 +505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -525,7 +547,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -539,7 +560,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -553,7 +573,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -567,7 +586,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -581,7 +599,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -595,7 +612,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -609,7 +625,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -622,7 +637,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -635,7 +649,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -649,7 +662,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -657,6 +669,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChatSendMessageResponse</returns>
         
         ApiResponse<ChatSendMessageResponse> PostChatsUserMessagesWithHttpInfo (string userId, SendMessageBody body);
+
+        /// <summary>
+        /// Update reactions to a message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns></returns>
+        
+        void PutChatsMessageReactions (string messageId, ChatReactionUpdate body);
+
+        /// <summary>
+        /// Update reactions to a message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PutChatsMessageReactionsWithHttpInfo (string messageId, ChatReactionUpdate body);
 
         /// <summary>
         /// Update Chat Settings.
@@ -691,7 +729,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -705,7 +742,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -719,7 +755,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -733,7 +768,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -747,7 +781,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -761,7 +794,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -775,7 +807,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -789,7 +820,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -803,7 +833,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -816,7 +845,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -829,7 +857,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -842,7 +869,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -855,7 +881,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -869,7 +894,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -883,7 +907,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -899,7 +922,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -909,6 +931,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null);
+
+        /// <summary>
+        /// Get a room participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>Task of RoomParticipant</returns>
+        
+        System.Threading.Tasks.Task<RoomParticipant> GetChatsRoomParticipantAsync (string roomJid, string participantJid);
+
+        /// <summary>
+        /// Get a room participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>Task of ApiResponse (RoomParticipant)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RoomParticipant>> GetChatsRoomParticipantAsyncWithHttpInfo (string roomJid, string participantJid);
+
+        /// <summary>
+        /// Get room participants in a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>Task of RoomParticipantsResponse</returns>
+        
+        System.Threading.Tasks.Task<RoomParticipantsResponse> GetChatsRoomParticipantsAsync (string roomJid);
+
+        /// <summary>
+        /// Get room participants in a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>Task of ApiResponse (RoomParticipantsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<RoomParticipantsResponse>> GetChatsRoomParticipantsAsyncWithHttpInfo (string roomJid);
 
         /// <summary>
         /// Get Chat Settings.
@@ -937,7 +1009,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -953,7 +1024,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -969,7 +1039,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -983,7 +1052,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -997,7 +1065,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1013,7 +1080,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1055,7 +1121,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1069,7 +1134,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1083,7 +1147,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1098,7 +1161,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1137,7 +1199,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1152,7 +1213,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1195,7 +1255,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1209,7 +1268,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1223,7 +1281,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1237,7 +1294,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1251,7 +1307,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1265,7 +1320,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1279,7 +1333,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -1292,7 +1345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -1305,7 +1357,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1319,7 +1370,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -1327,6 +1377,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChatSendMessageResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ChatSendMessageResponse>> PostChatsUserMessagesAsyncWithHttpInfo (string userId, SendMessageBody body);
+
+        /// <summary>
+        /// Update reactions to a message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PutChatsMessageReactionsAsync (string messageId, ChatReactionUpdate body);
+
+        /// <summary>
+        /// Update reactions to a message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutChatsMessageReactionsAsyncWithHttpInfo (string messageId, ChatReactionUpdate body);
 
         /// <summary>
         /// Update Chat Settings.
@@ -1447,7 +1523,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message in a room 
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1462,7 +1537,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message in a room 
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1558,7 +1632,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message in a room 
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1574,7 +1647,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message in a room 
         /// 
-        /// DeleteChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -1673,7 +1745,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a user from a room. 
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1688,7 +1759,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a user from a room. 
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1784,7 +1854,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a user from a room. 
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1800,7 +1869,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a user from a room. 
         /// 
-        /// DeleteChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1899,7 +1967,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a room 
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -1914,7 +1981,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a room 
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2010,7 +2076,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a room 
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2026,7 +2091,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Remove a pinned message from a room 
         /// 
-        /// DeleteChatsRoomPinnedmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2125,7 +2189,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message to a user 
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2140,7 +2203,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message to a user 
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2236,7 +2298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message to a user 
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2252,7 +2313,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a message to a user 
         /// 
-        /// DeleteChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -2351,7 +2411,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a message 
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -2366,7 +2425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a message 
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -2457,7 +2515,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a message 
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -2473,7 +2530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a message 
         /// 
-        /// GetChatsMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
@@ -2566,7 +2622,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room 
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2581,7 +2636,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room 
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2672,7 +2726,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room 
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2688,7 +2741,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room 
         /// 
-        /// GetChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2781,7 +2833,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a room 
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2797,7 +2848,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a room 
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2893,7 +2943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a room 
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -2910,7 +2959,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a room 
         /// 
-        /// GetChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -3009,7 +3057,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room's message history 
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -3027,7 +3074,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room's message history 
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -3124,7 +3170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room's message history 
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -3143,7 +3188,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a room's message history 
         /// 
-        /// GetChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -3233,6 +3277,441 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ChatMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a room participant 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>RoomParticipant</returns>
+        
+        public RoomParticipant GetChatsRoomParticipant (string roomJid, string participantJid)
+        {
+             ApiResponse<RoomParticipant> localVarResponse = GetChatsRoomParticipantWithHttpInfo(roomJid, participantJid);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a room participant 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>ApiResponse of RoomParticipant</returns>
+        
+        public ApiResponse< RoomParticipant > GetChatsRoomParticipantWithHttpInfo (string roomJid, string participantJid)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomParticipant");
+            // verify the required parameter 'participantJid' is set
+            if (participantJid == null)
+                throw new ApiException(400, "Missing required parameter 'participantJid' when calling ChatApi->GetChatsRoomParticipant");
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{participantJid}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+            if (participantJid != null) localVarPathParams.Add("participantJid", this.Configuration.ApiClient.ParameterToString(participantJid));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipant: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoomParticipant>(localVarStatusCode,
+                localVarHeaders,
+                (RoomParticipant) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoomParticipant)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a room participant 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>Task of RoomParticipant</returns>
+        
+        public async System.Threading.Tasks.Task<RoomParticipant> GetChatsRoomParticipantAsync (string roomJid, string participantJid)
+        {
+             ApiResponse<RoomParticipant> localVarResponse = await GetChatsRoomParticipantAsyncWithHttpInfo(roomJid, participantJid);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a room participant 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="participantJid">participantJid</param>
+        /// <returns>Task of ApiResponse (RoomParticipant)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RoomParticipant>> GetChatsRoomParticipantAsyncWithHttpInfo (string roomJid, string participantJid)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomParticipant");
+            
+            // verify the required parameter 'participantJid' is set
+            if (participantJid == null)
+                throw new ApiException(400, "Missing required parameter 'participantJid' when calling ChatApi->GetChatsRoomParticipant");
+            
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{participantJid}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+            if (participantJid != null) localVarPathParams.Add("participantJid", this.Configuration.ApiClient.ParameterToString(participantJid));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipant: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoomParticipant>(localVarStatusCode,
+                localVarHeaders,
+                (RoomParticipant) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoomParticipant)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get room participants in a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>RoomParticipantsResponse</returns>
+        
+        public RoomParticipantsResponse GetChatsRoomParticipants (string roomJid)
+        {
+             ApiResponse<RoomParticipantsResponse> localVarResponse = GetChatsRoomParticipantsWithHttpInfo(roomJid);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get room participants in a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>ApiResponse of RoomParticipantsResponse</returns>
+        
+        public ApiResponse< RoomParticipantsResponse > GetChatsRoomParticipantsWithHttpInfo (string roomJid)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomParticipants");
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipants: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipants: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoomParticipantsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RoomParticipantsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoomParticipantsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get room participants in a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>Task of RoomParticipantsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<RoomParticipantsResponse> GetChatsRoomParticipantsAsync (string roomJid)
+        {
+             ApiResponse<RoomParticipantsResponse> localVarResponse = await GetChatsRoomParticipantsAsyncWithHttpInfo(roomJid);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get room participants in a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <returns>Task of ApiResponse (RoomParticipantsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<RoomParticipantsResponse>> GetChatsRoomParticipantsAsyncWithHttpInfo (string roomJid)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomParticipants");
+            
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipants: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsRoomParticipants: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoomParticipantsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (RoomParticipantsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoomParticipantsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3440,7 +3919,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get history by thread 
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -3458,7 +3936,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get history by thread 
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -3555,7 +4032,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get history by thread 
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -3574,7 +4050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get history by thread 
         /// 
-        /// GetChatsThreadMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="threadId">threadId</param>
@@ -3673,7 +4148,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a 1on1 
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -3689,7 +4163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a 1on1 
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -3785,7 +4258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a 1on1 
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -3802,7 +4274,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get messages by id(s) from a 1on1 
         /// 
-        /// GetChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -3901,7 +4372,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get 1on1 History between a user 
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -3919,7 +4389,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get 1on1 History between a user 
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4016,7 +4485,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get 1on1 History between a user 
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4035,7 +4503,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get 1on1 History between a user 
         /// 
-        /// GetChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -4349,7 +4816,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Set properties for a room 
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -4364,7 +4830,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Set properties for a room 
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -4465,7 +4930,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Set properties for a room 
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -4481,7 +4945,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Set properties for a room 
         /// 
-        /// PatchChatsRoom is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -4585,7 +5048,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message in a room 
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -4602,7 +5064,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message in a room 
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -4708,7 +5169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message in a room 
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -4726,7 +5186,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message in a room 
         /// 
-        /// PatchChatsRoomMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -5057,7 +5516,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message to a user 
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -5074,7 +5532,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message to a user 
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -5180,7 +5637,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message to a user 
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -5198,7 +5654,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit a message to a user 
         /// 
-        /// PatchChatsUserMessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -5546,7 +6001,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a room 
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -5562,7 +6016,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a room 
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -5663,7 +6116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a room 
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -5680,7 +6132,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a room 
         /// 
-        /// PostChatsRoomMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomId</param>
@@ -5784,7 +6235,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Join a room 
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -5799,7 +6249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Join a room 
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -5895,7 +6344,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Join a room 
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -5911,7 +6359,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Join a room 
         /// 
-        /// PostChatsRoomParticipant is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -6010,7 +6457,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -6025,7 +6471,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -6126,7 +6571,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -6142,7 +6586,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
         /// 
-        /// PostChatsRoomPinnedmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roomJid">roomJid</param>
@@ -6246,7 +6689,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an adhoc room 
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -6261,7 +6703,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an adhoc room 
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -6357,7 +6798,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an adhoc room 
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -6373,7 +6813,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an adhoc room 
         /// 
-        /// PostChatsRooms is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Room properties</param>
@@ -6471,7 +6910,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a user 
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -6487,7 +6925,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a user 
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -6588,7 +7025,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a user 
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -6605,7 +7041,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Send a message to a user 
         /// 
-        /// PostChatsUserMessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">userId</param>
@@ -6700,6 +7135,238 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatSendMessageResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ChatSendMessageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSendMessageResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update reactions to a message 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns></returns>
+        
+        public void PutChatsMessageReactions (string messageId, ChatReactionUpdate body)
+        {
+             PutChatsMessageReactionsWithHttpInfo(messageId, body);
+        }
+
+        /// <summary>
+        /// Update reactions to a message 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PutChatsMessageReactionsWithHttpInfo (string messageId, ChatReactionUpdate body)
+        { 
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->PutChatsMessageReactions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsMessageReactions");
+
+            var localVarPath = "/api/v2/chats/messages/{messageId}/reactions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsMessageReactions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsMessageReactions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update reactions to a message 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PutChatsMessageReactionsAsync (string messageId, ChatReactionUpdate body)
+        {
+             await PutChatsMessageReactionsAsyncWithHttpInfo(messageId, body);
+
+        }
+
+        /// <summary>
+        /// Update reactions to a message 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">messageId</param>
+        /// <param name="body">reactionUpdate</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutChatsMessageReactionsAsyncWithHttpInfo (string messageId, ChatReactionUpdate body)
+        { 
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->PutChatsMessageReactions");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsMessageReactions");
+            
+
+            var localVarPath = "/api/v2/chats/messages/{messageId}/reactions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsMessageReactions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsMessageReactions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

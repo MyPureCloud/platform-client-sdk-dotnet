@@ -13,7 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrganizationsIpaddressauthentication**](OrganizationApi.html#getorganizationsipaddressauthentication) | **Get** /api/v2/organizations/ipaddressauthentication | Get organization IP address whitelist settings |
 | [**GetOrganizationsLimitsChangerequest**](OrganizationApi.html#getorganizationslimitschangerequest) | **Get** /api/v2/organizations/limits/changerequests/{requestId} | Get a limit change request |
 | [**GetOrganizationsLimitsChangerequests**](OrganizationApi.html#getorganizationslimitschangerequests) | **Get** /api/v2/organizations/limits/changerequests | Get the available limit change requests |
-| [**GetOrganizationsLimitsDocs**](OrganizationApi.html#getorganizationslimitsdocs) | **Get** /api/v2/organizations/limits/docs | Get a link to the limit documentation |
+| [**GetOrganizationsLimitsDocs**](OrganizationApi.html#getorganizationslimitsdocs) | **Get** /api/v2/organizations/limits/docs | Get limit documentation |
 | [**GetOrganizationsLimitsNamespace**](OrganizationApi.html#getorganizationslimitsnamespace) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName} | Get the effective limits in a namespace for an organization |
 | [**GetOrganizationsLimitsNamespaceDefaults**](OrganizationApi.html#getorganizationslimitsnamespacedefaults) | **Get** /api/v2/organizations/limits/namespaces/{namespaceName}/defaults | Get the default limits in a namespace for an organization |
 | [**GetOrganizationsLimitsNamespaces**](OrganizationApi.html#getorganizationslimitsnamespaces) | **Get** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
@@ -404,11 +404,11 @@ namespace Example
 
 <a name="getorganizationslimitsdocs"></a>
 
-## [**UrlResponse**](UrlResponse.html) GetOrganizationsLimitsDocs ()
+## [**LimitDocumentation**](LimitDocumentation.html) GetOrganizationsLimitsDocs ()
 
 
 
-Get a link to the limit documentation
+Get limit documentation
 
 Requires NO permissions: 
 
@@ -438,8 +438,8 @@ namespace Example
 
             try
             { 
-                // Get a link to the limit documentation
-                UrlResponse result = apiInstance.GetOrganizationsLimitsDocs();
+                // Get limit documentation
+                LimitDocumentation result = apiInstance.GetOrganizationsLimitsDocs();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -457,7 +457,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**UrlResponse**](UrlResponse.html)
+[**LimitDocumentation**](LimitDocumentation.html)
 
 <a name="getorganizationslimitsnamespace"></a>
 

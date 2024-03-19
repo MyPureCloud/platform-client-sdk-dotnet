@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventDateTime">A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="ConversationId">A unique Id (V4 UUID) identifying this conversation (required).</param>
         /// <param name="CommunicationId">A unique Id (V4 UUID) identifying this communication. (required).</param>
-        /// <param name="UserId">A unique Id (V4 UUID) identifying this userId this communication belongs to. (required).</param>
+        /// <param name="UserId">A unique Id (V4 UUID) identifying the user this communication belongs to. (required).</param>
         /// <param name="QueueId">A unique Id (V4 UUID) identifying the queue that the user is messaging on behalf of. Applies to outbound messages only..</param>
         /// <param name="AfterCallWorkRequired">Indicates whether or not this user will be required to complete after call work..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
@@ -89,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A unique Id (V4 UUID) identifying this userId this communication belongs to.
+        /// A unique Id (V4 UUID) identifying the user this communication belongs to.
         /// </summary>
-        /// <value>A unique Id (V4 UUID) identifying this userId this communication belongs to.</value>
+        /// <value>A unique Id (V4 UUID) identifying the user this communication belongs to.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 

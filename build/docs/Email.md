@@ -33,6 +33,7 @@ title: Email
 | **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings.html) | Represents the queue settings for this media type. | [optional] |
+| **ResumeTimestamp** | **long?** | Represents the timestamp when a parked conversation will resume. | [optional] |
 {: class="table table-striped"}
 
 

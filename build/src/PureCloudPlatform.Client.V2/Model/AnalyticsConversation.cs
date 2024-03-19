@@ -139,7 +139,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workflow for "workflow"
             /// </summary>
             [EnumMember(Value = "workflow")]
-            Workflow
+            Workflow,
+            
+            /// <summary>
+            /// Enum Voicesurveyflow for "voicesurveyflow"
+            /// </summary>
+            [EnumMember(Value = "voicesurveyflow")]
+            Voicesurveyflow
         }
         /// <summary>
         /// The original direction of the conversation

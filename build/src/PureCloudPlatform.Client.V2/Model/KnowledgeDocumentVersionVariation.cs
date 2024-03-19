@@ -27,12 +27,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentVersionVariation" /> class.
         /// </summary>
-        /// <param name="Body">The content for the variation..</param>
         /// <param name="Contexts">The context values associated with the variation. (required).</param>
-        public KnowledgeDocumentVersionVariation(DocumentBody Body = null, List<DocumentVariationContext> Contexts = null)
+        /// <param name="Priority">The priority of the variation..</param>
+        /// <param name="Name">The name of the variation..</param>
+        /// <param name="Body">The content for the variation..</param>
+        public KnowledgeDocumentVersionVariation(List<DocumentVariationContext> Contexts = null, int? Priority = null, string Name = null, DocumentBody Body = null)
         {
-            this.Body = Body;
             this.Contexts = Contexts;
+            this.Priority = Priority;
+            this.Name = Name;
+            this.Body = Body;
             
         }
         
@@ -44,15 +48,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the variation.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// The content for the variation.
-        /// </summary>
-        /// <value>The content for the variation.</value>
-        [DataMember(Name="body", EmitDefaultValue=false)]
-        public DocumentBody Body { get; set; }
 
 
 
@@ -84,6 +79,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The priority of the variation.
+        /// </summary>
+        /// <value>The priority of the variation.</value>
+        [DataMember(Name="priority", EmitDefaultValue=false)]
+        public int? Priority { get; set; }
+
+
+
+        /// <summary>
+        /// The name of the variation.
+        /// </summary>
+        /// <value>The name of the variation.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The content for the variation.
+        /// </summary>
+        /// <value>The content for the variation.</value>
+        [DataMember(Name="body", EmitDefaultValue=false)]
+        public DocumentBody Body { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -110,10 +132,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class KnowledgeDocumentVersionVariation {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Contexts: ").Append(Contexts).Append("\n");
+            sb.Append("  Priority: ").Append(Priority).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  DocumentVersion: ").Append(DocumentVersion).Append("\n");
             sb.Append("}\n");
@@ -162,11 +186,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Body == other.Body ||
-                    this.Body != null &&
-                    this.Body.Equals(other.Body)
-                ) &&
-                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -180,6 +199,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Contexts == other.Contexts ||
                     this.Contexts != null &&
                     this.Contexts.SequenceEqual(other.Contexts)
+                ) &&
+                (
+                    this.Priority == other.Priority ||
+                    this.Priority != null &&
+                    this.Priority.Equals(other.Priority)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Body == other.Body ||
+                    this.Body != null &&
+                    this.Body.Equals(other.Body)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -207,9 +241,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Body != null)
-                    hash = hash * 59 + this.Body.GetHashCode();
-
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
@@ -218,6 +249,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Contexts != null)
                     hash = hash * 59 + this.Contexts.GetHashCode();
+
+                if (this.Priority != null)
+                    hash = hash * 59 + this.Priority.GetHashCode();
+
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Body != null)
+                    hash = hash * 59 + this.Body.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

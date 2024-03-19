@@ -27,14 +27,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeGuestDocumentVariation" /> class.
         /// </summary>
-        /// <param name="Body">The content for the variation..</param>
         /// <param name="DocumentVersion">The version of the document..</param>
         /// <param name="Contexts">The context values associated with the variation. (required).</param>
-        public KnowledgeGuestDocumentVariation(DocumentBody Body = null, AddressableEntityRef DocumentVersion = null, List<KnowledgeGuestDocumentVariationContext> Contexts = null)
+        /// <param name="Body">The content for the variation..</param>
+        public KnowledgeGuestDocumentVariation(AddressableEntityRef DocumentVersion = null, List<KnowledgeGuestDocumentVariationContext> Contexts = null, DocumentBody Body = null)
         {
-            this.Body = Body;
             this.DocumentVersion = DocumentVersion;
             this.Contexts = Contexts;
+            this.Body = Body;
             
         }
         
@@ -46,15 +46,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the variation.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// The content for the variation.
-        /// </summary>
-        /// <value>The content for the variation.</value>
-        [DataMember(Name="body", EmitDefaultValue=false)]
-        public DocumentBody Body { get; set; }
 
 
 
@@ -104,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The content for the variation.
+        /// </summary>
+        /// <value>The content for the variation.</value>
+        [DataMember(Name="body", EmitDefaultValue=false)]
+        public DocumentBody Body { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -121,12 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class KnowledgeGuestDocumentVariation {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DocumentVersion: ").Append(DocumentVersion).Append("\n");
             sb.Append("  Contexts: ").Append(Contexts).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
+            sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -174,11 +174,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Body == other.Body ||
-                    this.Body != null &&
-                    this.Body.Equals(other.Body)
-                ) &&
-                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -204,6 +199,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Document.Equals(other.Document)
                 ) &&
                 (
+                    this.Body == other.Body ||
+                    this.Body != null &&
+                    this.Body.Equals(other.Body)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -224,9 +224,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Body != null)
-                    hash = hash * 59 + this.Body.GetHashCode();
-
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
@@ -241,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
+
+                if (this.Body != null)
+                    hash = hash * 59 + this.Body.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

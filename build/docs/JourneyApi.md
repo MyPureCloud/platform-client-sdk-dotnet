@@ -38,7 +38,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneySessionOutcomescores**](JourneyApi.html#getjourneysessionoutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
 | [**GetJourneyView**](JourneyApi.html#getjourneyview) | **Get** /api/v2/journey/views/{viewId} | Get a Journey View by ID |
 | [**GetJourneyViewVersion**](JourneyApi.html#getjourneyviewversion) | **Get** /api/v2/journey/views/{viewId}/versions/{versionId} | Get a Journey View by ID and version |
+| [**GetJourneyViewVersionJob**](JourneyApi.html#getjourneyviewversionjob) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId} | Get the job for a journey view version. |
+| [**GetJourneyViewVersionJobResults**](JourneyApi.html#getjourneyviewversionjobresults) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results | Get the result of a job for a journey view version. |
+| [**GetJourneyViewVersionJobsLatest**](JourneyApi.html#getjourneyviewversionjobslatest) | **Get** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest | Get the latest job of a journey view version. |
 | [**GetJourneyViews**](JourneyApi.html#getjourneyviews) | **Get** /api/v2/journey/views | Get a list of Journey Views |
+| [**GetJourneyViewsEventdefinition**](JourneyApi.html#getjourneyviewseventdefinition) | **Get** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Get an Event Definition |
+| [**GetJourneyViewsEventdefinitions**](JourneyApi.html#getjourneyviewseventdefinitions) | **Get** /api/v2/journey/views/eventdefinitions | Get a list of Event Definitions |
 | [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
@@ -56,8 +61,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
 | [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **Post** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
 | [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **Post** /api/v2/journey/segments | Create a segment. |
+| [**PostJourneyViewVersionJobs**](JourneyApi.html#postjourneyviewversionjobs) | **Post** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs | Submit a job request for a journey view version. |
 | [**PostJourneyViewVersions**](JourneyApi.html#postjourneyviewversions) | **Post** /api/v2/journey/views/{viewId}/versions | Update a Journey View by ID |
 | [**PostJourneyViews**](JourneyApi.html#postjourneyviews) | **Post** /api/v2/journey/views | Create a new Journey View |
+| [**PostJourneyViewsEncodingsValidate**](JourneyApi.html#postjourneyviewsencodingsvalidate) | **Post** /api/v2/journey/views/encodings/validate | Validate whether an encoding exist for a label/value combination. |
 {: class="table table-striped"}
 
 <a name="deletejourneyactionmap"></a>
@@ -2094,6 +2101,217 @@ namespace Example
 
 [**JourneyView**](JourneyView.html)
 
+<a name="getjourneyviewversionjob"></a>
+
+## [**JourneyViewJob**](JourneyViewJob.html) GetJourneyViewVersionJob (string viewId, string journeyVersionId, string jobId)
+
+
+
+Get the job for a journey view version.
+
+used for long descriptions
+
+GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewVersionJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+            var journeyVersionId = journeyVersionId_example;  // string | Journey View Version
+            var jobId = jobId_example;  // string | JobId
+
+            try
+            { 
+                // Get the job for a journey view version.
+                JourneyViewJob result = apiInstance.GetJourneyViewVersionJob(viewId, journeyVersionId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewVersionJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+| **journeyVersionId** | **string**| Journey View Version |  |
+| **jobId** | **string**| JobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyViewJob**](JourneyViewJob.html)
+
+<a name="getjourneyviewversionjobresults"></a>
+
+## [**JourneyViewResult**](JourneyViewResult.html) GetJourneyViewVersionJobResults (string viewId, string journeyViewVersion, string jobId)
+
+
+
+Get the result of a job for a journey view version.
+
+used for long descriptions
+
+GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:viewsResults:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewVersionJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | JourneyViewResult id
+            var journeyViewVersion = journeyViewVersion_example;  // string | Journey View Version
+            var jobId = jobId_example;  // string | Id of the executing job
+
+            try
+            { 
+                // Get the result of a job for a journey view version.
+                JourneyViewResult result = apiInstance.GetJourneyViewVersionJobResults(viewId, journeyViewVersion, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewVersionJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| JourneyViewResult id |  |
+| **journeyViewVersion** | **string**| Journey View Version |  |
+| **jobId** | **string**| Id of the executing job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyViewResult**](JourneyViewResult.html)
+
+<a name="getjourneyviewversionjobslatest"></a>
+
+## [**JourneyViewJob**](JourneyViewJob.html) GetJourneyViewVersionJobsLatest (string viewId, string journeyVersionId)
+
+
+
+Get the latest job of a journey view version.
+
+used for long descriptions
+
+GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewVersionJobsLatestExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+            var journeyVersionId = journeyVersionId_example;  // string | Journey View Version
+
+            try
+            { 
+                // Get the latest job of a journey view version.
+                JourneyViewJob result = apiInstance.GetJourneyViewVersionJobsLatest(viewId, journeyVersionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewVersionJobsLatest: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+| **journeyVersionId** | **string**| Journey View Version |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyViewJob**](JourneyViewJob.html)
+
 <a name="getjourneyviews"></a>
 
 ## [**AddressableEntityListing**](AddressableEntityListing.html) GetJourneyViews ()
@@ -2153,6 +2371,131 @@ This endpoint does require any parameters.
 ### Return type
 
 [**AddressableEntityListing**](AddressableEntityListing.html)
+
+<a name="getjourneyviewseventdefinition"></a>
+
+## [**JourneyEventDefinition**](JourneyEventDefinition.html) GetJourneyViewsEventdefinition (string eventDefinitionId)
+
+
+
+Get an Event Definition
+
+GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:eventDefinition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsEventdefinitionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var eventDefinitionId = eventDefinitionId_example;  // string | Event Definition ID
+
+            try
+            { 
+                // Get an Event Definition
+                JourneyEventDefinition result = apiInstance.GetJourneyViewsEventdefinition(eventDefinitionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsEventdefinition: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eventDefinitionId** | **string**| Event Definition ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyEventDefinition**](JourneyEventDefinition.html)
+
+<a name="getjourneyviewseventdefinitions"></a>
+
+## [**JourneyEventDefinitionListing**](JourneyEventDefinitionListing.html) GetJourneyViewsEventdefinitions ()
+
+
+
+Get a list of Event Definitions
+
+GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:eventDefinition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsEventdefinitionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+
+            try
+            { 
+                // Get a list of Event Definitions
+                JourneyEventDefinitionListing result = apiInstance.GetJourneyViewsEventdefinitions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsEventdefinitions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**JourneyEventDefinitionListing**](JourneyEventDefinitionListing.html)
 
 <a name="patchjourneyactionmap"></a>
 
@@ -3230,6 +3573,75 @@ namespace Example
 
 [**JourneySegment**](JourneySegment.html)
 
+<a name="postjourneyviewversionjobs"></a>
+
+## [**JourneyViewJob**](JourneyViewJob.html) PostJourneyViewVersionJobs (string viewId, string journeyVersionId)
+
+
+
+Submit a job request for a journey view version.
+
+used for long descriptions
+
+PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyViewVersionJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var viewId = viewId_example;  // string | Journey View Id
+            var journeyVersionId = journeyVersionId_example;  // string | Journey View Version
+
+            try
+            { 
+                // Submit a job request for a journey view version.
+                JourneyViewJob result = apiInstance.PostJourneyViewVersionJobs(viewId, journeyVersionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyViewVersionJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **viewId** | **string**| Journey View Id |  |
+| **journeyVersionId** | **string**| Journey View Version |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyViewJob**](JourneyViewJob.html)
+
 <a name="postjourneyviewversions"></a>
 
 ## [**JourneyView**](JourneyView.html) PostJourneyViewVersions (string viewId, JourneyView body)
@@ -3363,4 +3775,71 @@ namespace Example
 ### Return type
 
 [**JourneyView**](JourneyView.html)
+
+<a name="postjourneyviewsencodingsvalidate"></a>
+
+## [**EntityListing**](EntityListing.html) PostJourneyViewsEncodingsValidate (List<Label> body = null)
+
+
+
+Validate whether an encoding exist for a label/value combination.
+
+True indicates a valid encoding
+
+PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:viewsEncodings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyViewsEncodingsValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new List<Label>(); // List<Label> |  (optional) 
+
+            try
+            { 
+                // Validate whether an encoding exist for a label/value combination.
+                EntityListing result = apiInstance.PostJourneyViewsEncodingsValidate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyViewsEncodingsValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<Label>**](Label.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
 

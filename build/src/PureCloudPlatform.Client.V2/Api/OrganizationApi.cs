@@ -163,26 +163,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
-        /// Get a link to the limit documentation
+        /// Get limit documentation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UrlResponse</returns>
+        /// <returns>LimitDocumentation</returns>
         
-        UrlResponse GetOrganizationsLimitsDocs ();
+        LimitDocumentation GetOrganizationsLimitsDocs ();
 
         /// <summary>
-        /// Get a link to the limit documentation
+        /// Get limit documentation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UrlResponse</returns>
+        /// <returns>ApiResponse of LimitDocumentation</returns>
         
-        ApiResponse<UrlResponse> GetOrganizationsLimitsDocsWithHttpInfo ();
+        ApiResponse<LimitDocumentation> GetOrganizationsLimitsDocsWithHttpInfo ();
 
         /// <summary>
         /// Get the effective limits in a namespace for an organization
@@ -599,26 +599,26 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestsEntityListing>> GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
-        /// Get a link to the limit documentation
+        /// Get limit documentation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UrlResponse</returns>
+        /// <returns>Task of LimitDocumentation</returns>
         
-        System.Threading.Tasks.Task<UrlResponse> GetOrganizationsLimitsDocsAsync ();
+        System.Threading.Tasks.Task<LimitDocumentation> GetOrganizationsLimitsDocsAsync ();
 
         /// <summary>
-        /// Get a link to the limit documentation
+        /// Get limit documentation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        /// <returns>Task of ApiResponse (LimitDocumentation)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<LimitDocumentation>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get the effective limits in a namespace for an organization
@@ -2221,26 +2221,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a link to the limit documentation 
+        /// Get limit documentation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UrlResponse</returns>
+        /// <returns>LimitDocumentation</returns>
         
-        public UrlResponse GetOrganizationsLimitsDocs ()
+        public LimitDocumentation GetOrganizationsLimitsDocs ()
         {
-             ApiResponse<UrlResponse> localVarResponse = GetOrganizationsLimitsDocsWithHttpInfo();
+             ApiResponse<LimitDocumentation> localVarResponse = GetOrganizationsLimitsDocsWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a link to the limit documentation 
+        /// Get limit documentation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UrlResponse</returns>
+        /// <returns>ApiResponse of LimitDocumentation</returns>
         
-        public ApiResponse< UrlResponse > GetOrganizationsLimitsDocsWithHttpInfo ()
+        public ApiResponse< LimitDocumentation > GetOrganizationsLimitsDocsWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/organizations/limits/docs";
@@ -2310,36 +2310,36 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsDocs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UrlResponse>(localVarStatusCode,
+            return new ApiResponse<LimitDocumentation>(localVarStatusCode,
                 localVarHeaders,
-                (UrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
+                (LimitDocumentation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitDocumentation)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
 
         /// <summary>
-        /// Get a link to the limit documentation 
+        /// Get limit documentation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UrlResponse</returns>
+        /// <returns>Task of LimitDocumentation</returns>
         
-        public async System.Threading.Tasks.Task<UrlResponse> GetOrganizationsLimitsDocsAsync ()
+        public async System.Threading.Tasks.Task<LimitDocumentation> GetOrganizationsLimitsDocsAsync ()
         {
-             ApiResponse<UrlResponse> localVarResponse = await GetOrganizationsLimitsDocsAsyncWithHttpInfo();
+             ApiResponse<LimitDocumentation> localVarResponse = await GetOrganizationsLimitsDocsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a link to the limit documentation 
+        /// Get limit documentation 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        /// <returns>Task of ApiResponse (LimitDocumentation)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<LimitDocumentation>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/organizations/limits/docs";
@@ -2409,9 +2409,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsDocs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<UrlResponse>(localVarStatusCode,
+            return new ApiResponse<LimitDocumentation>(localVarStatusCode,
                 localVarHeaders,
-                (UrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
+                (LimitDocumentation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitDocumentation)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

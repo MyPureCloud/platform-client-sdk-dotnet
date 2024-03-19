@@ -151,6 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyid,
             
             /// <summary>
+            /// Enum Surveypartialresponse for "surveyPartialResponse"
+            /// </summary>
+            [EnumMember(Value = "surveyPartialResponse")]
+            Surveypartialresponse,
+            
+            /// <summary>
             /// Enum Surveypreviousstatus for "surveyPreviousStatus"
             /// </summary>
             [EnumMember(Value = "surveyPreviousStatus")]
@@ -179,6 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "surveyStatus")]
             Surveystatus,
+            
+            /// <summary>
+            /// Enum Surveytype for "surveyType"
+            /// </summary>
+            [EnumMember(Value = "surveyType")]
+            Surveytype,
             
             /// <summary>
             /// Enum Teamid for "teamId"

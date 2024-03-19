@@ -105,6 +105,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Learning,
             
             /// <summary>
+            /// Enum Employeeengagement for "EmployeeEngagement"
+            /// </summary>
+            [EnumMember(Value = "EmployeeEngagement")]
+            Employeeengagement,
+            
+            /// <summary>
             /// Enum Workforcemanagement for "WorkforceManagement"
             /// </summary>
             [EnumMember(Value = "WorkforceManagement")]
@@ -447,6 +453,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ChangePassword")]
             Changepassword,
+            
+            /// <summary>
+            /// Enum Authenticationfailed for "AuthenticationFailed"
+            /// </summary>
+            [EnumMember(Value = "AuthenticationFailed")]
+            Authenticationfailed,
             
             /// <summary>
             /// Enum Revoke for "Revoke"
@@ -1303,6 +1315,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Assignment,
             
             /// <summary>
+            /// Enum Recognition for "Recognition"
+            /// </summary>
+            [EnumMember(Value = "Recognition")]
+            Recognition,
+            
+            /// <summary>
             /// Enum Activitycode for "ActivityCode"
             /// </summary>
             [EnumMember(Value = "ActivityCode")]
@@ -1313,6 +1331,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AdherenceExplanation")]
             Adherenceexplanation,
+            
+            /// <summary>
+            /// Enum Alternativeshift for "AlternativeShift"
+            /// </summary>
+            [EnumMember(Value = "AlternativeShift")]
+            Alternativeshift,
             
             /// <summary>
             /// Enum Businessunit for "BusinessUnit"

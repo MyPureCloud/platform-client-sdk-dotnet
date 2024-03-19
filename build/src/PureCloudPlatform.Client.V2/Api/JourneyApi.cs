@@ -853,6 +853,94 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<JourneyView> GetJourneyViewVersionWithHttpInfo (string viewId, string versionId);
 
         /// <summary>
+        /// Get the job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>JourneyViewJob</returns>
+        
+        JourneyViewJob GetJourneyViewVersionJob (string viewId, string journeyVersionId, string jobId);
+
+        /// <summary>
+        /// Get the job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>ApiResponse of JourneyViewJob</returns>
+        
+        ApiResponse<JourneyViewJob> GetJourneyViewVersionJobWithHttpInfo (string viewId, string journeyVersionId, string jobId);
+
+        /// <summary>
+        /// Get the result of a job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>JourneyViewResult</returns>
+        
+        JourneyViewResult GetJourneyViewVersionJobResults (string viewId, string journeyViewVersion, string jobId);
+
+        /// <summary>
+        /// Get the result of a job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>ApiResponse of JourneyViewResult</returns>
+        
+        ApiResponse<JourneyViewResult> GetJourneyViewVersionJobResultsWithHttpInfo (string viewId, string journeyViewVersion, string jobId);
+
+        /// <summary>
+        /// Get the latest job of a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>JourneyViewJob</returns>
+        
+        JourneyViewJob GetJourneyViewVersionJobsLatest (string viewId, string journeyVersionId);
+
+        /// <summary>
+        /// Get the latest job of a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>ApiResponse of JourneyViewJob</returns>
+        
+        ApiResponse<JourneyViewJob> GetJourneyViewVersionJobsLatestWithHttpInfo (string viewId, string journeyVersionId);
+
+        /// <summary>
         /// Get a list of Journey Views
         /// </summary>
         /// <remarks>
@@ -875,6 +963,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AddressableEntityListing</returns>
         
         ApiResponse<AddressableEntityListing> GetJourneyViewsWithHttpInfo ();
+
+        /// <summary>
+        /// Get an Event Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>JourneyEventDefinition</returns>
+        
+        JourneyEventDefinition GetJourneyViewsEventdefinition (string eventDefinitionId);
+
+        /// <summary>
+        /// Get an Event Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>ApiResponse of JourneyEventDefinition</returns>
+        
+        ApiResponse<JourneyEventDefinition> GetJourneyViewsEventdefinitionWithHttpInfo (string eventDefinitionId);
+
+        /// <summary>
+        /// Get a list of Event Definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>JourneyEventDefinitionListing</returns>
+        
+        JourneyEventDefinitionListing GetJourneyViewsEventdefinitions ();
+
+        /// <summary>
+        /// Get a list of Event Definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of JourneyEventDefinitionListing</returns>
+        
+        ApiResponse<JourneyEventDefinitionListing> GetJourneyViewsEventdefinitionsWithHttpInfo ();
 
         /// <summary>
         /// Update single action map.
@@ -1305,6 +1443,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<JourneySegment> PostJourneySegmentsWithHttpInfo (JourneySegmentRequest body = null);
 
         /// <summary>
+        /// Submit a job request for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>JourneyViewJob</returns>
+        
+        JourneyViewJob PostJourneyViewVersionJobs (string viewId, string journeyVersionId);
+
+        /// <summary>
+        /// Submit a job request for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>ApiResponse of JourneyViewJob</returns>
+        
+        ApiResponse<JourneyViewJob> PostJourneyViewVersionJobsWithHttpInfo (string viewId, string journeyVersionId);
+
+        /// <summary>
         /// Update a Journey View by ID
         /// </summary>
         /// <remarks>
@@ -1357,6 +1523,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of JourneyView</returns>
         
         ApiResponse<JourneyView> PostJourneyViewsWithHttpInfo (JourneyView body);
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination.
+        /// </summary>
+        /// <remarks>
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>EntityListing</returns>
+        
+        EntityListing PostJourneyViewsEncodingsValidate (List<Label> body = null);
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination.
+        /// </summary>
+        /// <remarks>
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of EntityListing</returns>
+        
+        ApiResponse<EntityListing> PostJourneyViewsEncodingsValidateWithHttpInfo (List<Label> body = null);
 
         #endregion Synchronous Operations
 
@@ -2199,6 +2391,94 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<JourneyView>> GetJourneyViewVersionAsyncWithHttpInfo (string viewId, string versionId);
 
         /// <summary>
+        /// Get the job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>Task of JourneyViewJob</returns>
+        
+        System.Threading.Tasks.Task<JourneyViewJob> GetJourneyViewVersionJobAsync (string viewId, string journeyVersionId, string jobId);
+
+        /// <summary>
+        /// Get the job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>Task of ApiResponse (JourneyViewJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewJob>> GetJourneyViewVersionJobAsyncWithHttpInfo (string viewId, string journeyVersionId, string jobId);
+
+        /// <summary>
+        /// Get the result of a job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>Task of JourneyViewResult</returns>
+        
+        System.Threading.Tasks.Task<JourneyViewResult> GetJourneyViewVersionJobResultsAsync (string viewId, string journeyViewVersion, string jobId);
+
+        /// <summary>
+        /// Get the result of a job for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>Task of ApiResponse (JourneyViewResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewResult>> GetJourneyViewVersionJobResultsAsyncWithHttpInfo (string viewId, string journeyViewVersion, string jobId);
+
+        /// <summary>
+        /// Get the latest job of a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of JourneyViewJob</returns>
+        
+        System.Threading.Tasks.Task<JourneyViewJob> GetJourneyViewVersionJobsLatestAsync (string viewId, string journeyVersionId);
+
+        /// <summary>
+        /// Get the latest job of a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of ApiResponse (JourneyViewJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewJob>> GetJourneyViewVersionJobsLatestAsyncWithHttpInfo (string viewId, string journeyVersionId);
+
+        /// <summary>
         /// Get a list of Journey Views
         /// </summary>
         /// <remarks>
@@ -2221,6 +2501,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AddressableEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AddressableEntityListing>> GetJourneyViewsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get an Event Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>Task of JourneyEventDefinition</returns>
+        
+        System.Threading.Tasks.Task<JourneyEventDefinition> GetJourneyViewsEventdefinitionAsync (string eventDefinitionId);
+
+        /// <summary>
+        /// Get an Event Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>Task of ApiResponse (JourneyEventDefinition)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyEventDefinition>> GetJourneyViewsEventdefinitionAsyncWithHttpInfo (string eventDefinitionId);
+
+        /// <summary>
+        /// Get a list of Event Definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of JourneyEventDefinitionListing</returns>
+        
+        System.Threading.Tasks.Task<JourneyEventDefinitionListing> GetJourneyViewsEventdefinitionsAsync ();
+
+        /// <summary>
+        /// Get a list of Event Definitions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (JourneyEventDefinitionListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyEventDefinitionListing>> GetJourneyViewsEventdefinitionsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Update single action map.
@@ -2651,6 +2981,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo (JourneySegmentRequest body = null);
 
         /// <summary>
+        /// Submit a job request for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of JourneyViewJob</returns>
+        
+        System.Threading.Tasks.Task<JourneyViewJob> PostJourneyViewVersionJobsAsync (string viewId, string journeyVersionId);
+
+        /// <summary>
+        /// Submit a job request for a journey view version.
+        /// </summary>
+        /// <remarks>
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of ApiResponse (JourneyViewJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewJob>> PostJourneyViewVersionJobsAsyncWithHttpInfo (string viewId, string journeyVersionId);
+
+        /// <summary>
         /// Update a Journey View by ID
         /// </summary>
         /// <remarks>
@@ -2703,6 +3061,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (JourneyView)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<JourneyView>> PostJourneyViewsAsyncWithHttpInfo (JourneyView body);
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination.
+        /// </summary>
+        /// <remarks>
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of EntityListing</returns>
+        
+        System.Threading.Tasks.Task<EntityListing> PostJourneyViewsEncodingsValidateAsync (List<Label> body = null);
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination.
+        /// </summary>
+        /// <remarks>
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (EntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EntityListing>> PostJourneyViewsEncodingsValidateAsyncWithHttpInfo (List<Label> body = null);
 
         #endregion Asynchronous Operations
 
@@ -9544,6 +9928,716 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>JourneyViewJob</returns>
+        
+        public JourneyViewJob GetJourneyViewVersionJob (string viewId, string journeyVersionId, string jobId)
+        {
+             ApiResponse<JourneyViewJob> localVarResponse = GetJourneyViewVersionJobWithHttpInfo(viewId, journeyVersionId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>ApiResponse of JourneyViewJob</returns>
+        
+        public ApiResponse< JourneyViewJob > GetJourneyViewVersionJobWithHttpInfo (string viewId, string journeyVersionId, string jobId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewVersionJob");
+            // verify the required parameter 'journeyVersionId' is set
+            if (journeyVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->GetJourneyViewVersionJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJob");
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyVersionId != null) localVarPathParams.Add("journeyVersionId", this.Configuration.ApiClient.ParameterToString(journeyVersionId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewJob>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>Task of JourneyViewJob</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyViewJob> GetJourneyViewVersionJobAsync (string viewId, string journeyVersionId, string jobId)
+        {
+             ApiResponse<JourneyViewJob> localVarResponse = await GetJourneyViewVersionJobAsyncWithHttpInfo(viewId, journeyVersionId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <param name="jobId">JobId</param>
+        /// <returns>Task of ApiResponse (JourneyViewJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewJob>> GetJourneyViewVersionJobAsyncWithHttpInfo (string viewId, string journeyVersionId, string jobId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewVersionJob");
+            
+            // verify the required parameter 'journeyVersionId' is set
+            if (journeyVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->GetJourneyViewVersionJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJob");
+            
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyVersionId != null) localVarPathParams.Add("journeyVersionId", this.Configuration.ApiClient.ParameterToString(journeyVersionId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewJob>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the result of a job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>JourneyViewResult</returns>
+        
+        public JourneyViewResult GetJourneyViewVersionJobResults (string viewId, string journeyViewVersion, string jobId)
+        {
+             ApiResponse<JourneyViewResult> localVarResponse = GetJourneyViewVersionJobResultsWithHttpInfo(viewId, journeyViewVersion, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the result of a job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>ApiResponse of JourneyViewResult</returns>
+        
+        public ApiResponse< JourneyViewResult > GetJourneyViewVersionJobResultsWithHttpInfo (string viewId, string journeyViewVersion, string jobId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewVersionJobResults");
+            // verify the required parameter 'journeyViewVersion' is set
+            if (journeyViewVersion == null)
+                throw new ApiException(400, "Missing required parameter 'journeyViewVersion' when calling JourneyApi->GetJourneyViewVersionJobResults");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJobResults");
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyViewVersion != null) localVarPathParams.Add("journeyViewVersion", this.Configuration.ApiClient.ParameterToString(journeyViewVersion));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewResult>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the result of a job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>Task of JourneyViewResult</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyViewResult> GetJourneyViewVersionJobResultsAsync (string viewId, string journeyViewVersion, string jobId)
+        {
+             ApiResponse<JourneyViewResult> localVarResponse = await GetJourneyViewVersionJobResultsAsyncWithHttpInfo(viewId, journeyViewVersion, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the result of a job for a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">JourneyViewResult id</param>
+        /// <param name="journeyViewVersion">Journey View Version</param>
+        /// <param name="jobId">Id of the executing job</param>
+        /// <returns>Task of ApiResponse (JourneyViewResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewResult>> GetJourneyViewVersionJobResultsAsyncWithHttpInfo (string viewId, string journeyViewVersion, string jobId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewVersionJobResults");
+            
+            // verify the required parameter 'journeyViewVersion' is set
+            if (journeyViewVersion == null)
+                throw new ApiException(400, "Missing required parameter 'journeyViewVersion' when calling JourneyApi->GetJourneyViewVersionJobResults");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJobResults");
+            
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyViewVersion != null) localVarPathParams.Add("journeyViewVersion", this.Configuration.ApiClient.ParameterToString(journeyViewVersion));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewResult>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the latest job of a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>JourneyViewJob</returns>
+        
+        public JourneyViewJob GetJourneyViewVersionJobsLatest (string viewId, string journeyVersionId)
+        {
+             ApiResponse<JourneyViewJob> localVarResponse = GetJourneyViewVersionJobsLatestWithHttpInfo(viewId, journeyVersionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the latest job of a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>ApiResponse of JourneyViewJob</returns>
+        
+        public ApiResponse< JourneyViewJob > GetJourneyViewVersionJobsLatestWithHttpInfo (string viewId, string journeyVersionId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewVersionJobsLatest");
+            // verify the required parameter 'journeyVersionId' is set
+            if (journeyVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->GetJourneyViewVersionJobsLatest");
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyVersionId != null) localVarPathParams.Add("journeyVersionId", this.Configuration.ApiClient.ParameterToString(journeyVersionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobsLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobsLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewJob>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the latest job of a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of JourneyViewJob</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyViewJob> GetJourneyViewVersionJobsLatestAsync (string viewId, string journeyVersionId)
+        {
+             ApiResponse<JourneyViewJob> localVarResponse = await GetJourneyViewVersionJobsLatestAsyncWithHttpInfo(viewId, journeyVersionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the latest job of a journey view version. 
+        /// used for long descriptions
+        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of ApiResponse (JourneyViewJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewJob>> GetJourneyViewVersionJobsLatestAsyncWithHttpInfo (string viewId, string journeyVersionId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewVersionJobsLatest");
+            
+            // verify the required parameter 'journeyVersionId' is set
+            if (journeyVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->GetJourneyViewVersionJobsLatest");
+            
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyVersionId != null) localVarPathParams.Add("journeyVersionId", this.Configuration.ApiClient.ParameterToString(journeyVersionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobsLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewVersionJobsLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewJob>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a list of Journey Views 
         /// 
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -9739,6 +10833,423 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AddressableEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (AddressableEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddressableEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an Event Definition 
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>JourneyEventDefinition</returns>
+        
+        public JourneyEventDefinition GetJourneyViewsEventdefinition (string eventDefinitionId)
+        {
+             ApiResponse<JourneyEventDefinition> localVarResponse = GetJourneyViewsEventdefinitionWithHttpInfo(eventDefinitionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an Event Definition 
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>ApiResponse of JourneyEventDefinition</returns>
+        
+        public ApiResponse< JourneyEventDefinition > GetJourneyViewsEventdefinitionWithHttpInfo (string eventDefinitionId)
+        { 
+            // verify the required parameter 'eventDefinitionId' is set
+            if (eventDefinitionId == null)
+                throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->GetJourneyViewsEventdefinition");
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (eventDefinitionId != null) localVarPathParams.Add("eventDefinitionId", this.Configuration.ApiClient.ParameterToString(eventDefinitionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyEventDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyEventDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyEventDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an Event Definition 
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>Task of JourneyEventDefinition</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyEventDefinition> GetJourneyViewsEventdefinitionAsync (string eventDefinitionId)
+        {
+             ApiResponse<JourneyEventDefinition> localVarResponse = await GetJourneyViewsEventdefinitionAsyncWithHttpInfo(eventDefinitionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an Event Definition 
+        /// 
+        /// GetJourneyViewsEventdefinition is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventDefinitionId">Event Definition ID</param>
+        /// <returns>Task of ApiResponse (JourneyEventDefinition)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyEventDefinition>> GetJourneyViewsEventdefinitionAsyncWithHttpInfo (string eventDefinitionId)
+        { 
+            // verify the required parameter 'eventDefinitionId' is set
+            if (eventDefinitionId == null)
+                throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->GetJourneyViewsEventdefinition");
+            
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (eventDefinitionId != null) localVarPathParams.Add("eventDefinitionId", this.Configuration.ApiClient.ParameterToString(eventDefinitionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyEventDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyEventDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyEventDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of Event Definitions 
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>JourneyEventDefinitionListing</returns>
+        
+        public JourneyEventDefinitionListing GetJourneyViewsEventdefinitions ()
+        {
+             ApiResponse<JourneyEventDefinitionListing> localVarResponse = GetJourneyViewsEventdefinitionsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Event Definitions 
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of JourneyEventDefinitionListing</returns>
+        
+        public ApiResponse< JourneyEventDefinitionListing > GetJourneyViewsEventdefinitionsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyEventDefinitionListing>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyEventDefinitionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyEventDefinitionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of Event Definitions 
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of JourneyEventDefinitionListing</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyEventDefinitionListing> GetJourneyViewsEventdefinitionsAsync ()
+        {
+             ApiResponse<JourneyEventDefinitionListing> localVarResponse = await GetJourneyViewsEventdefinitionsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Event Definitions 
+        /// 
+        /// GetJourneyViewsEventdefinitions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (JourneyEventDefinitionListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyEventDefinitionListing>> GetJourneyViewsEventdefinitionsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/views/eventdefinitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyViewsEventdefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyEventDefinitionListing>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyEventDefinitionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyEventDefinitionListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -13485,6 +14996,234 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Submit a job request for a journey view version. 
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>JourneyViewJob</returns>
+        
+        public JourneyViewJob PostJourneyViewVersionJobs (string viewId, string journeyVersionId)
+        {
+             ApiResponse<JourneyViewJob> localVarResponse = PostJourneyViewVersionJobsWithHttpInfo(viewId, journeyVersionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Submit a job request for a journey view version. 
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>ApiResponse of JourneyViewJob</returns>
+        
+        public ApiResponse< JourneyViewJob > PostJourneyViewVersionJobsWithHttpInfo (string viewId, string journeyVersionId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->PostJourneyViewVersionJobs");
+            // verify the required parameter 'journeyVersionId' is set
+            if (journeyVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->PostJourneyViewVersionJobs");
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyVersionId != null) localVarPathParams.Add("journeyVersionId", this.Configuration.ApiClient.ParameterToString(journeyVersionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewVersionJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewVersionJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewJob>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Submit a job request for a journey view version. 
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of JourneyViewJob</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyViewJob> PostJourneyViewVersionJobsAsync (string viewId, string journeyVersionId)
+        {
+             ApiResponse<JourneyViewJob> localVarResponse = await PostJourneyViewVersionJobsAsyncWithHttpInfo(viewId, journeyVersionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Submit a job request for a journey view version. 
+        /// used for long descriptions
+        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="viewId">Journey View Id</param>
+        /// <param name="journeyVersionId">Journey View Version</param>
+        /// <returns>Task of ApiResponse (JourneyViewJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewJob>> PostJourneyViewVersionJobsAsyncWithHttpInfo (string viewId, string journeyVersionId)
+        { 
+            // verify the required parameter 'viewId' is set
+            if (viewId == null)
+                throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->PostJourneyViewVersionJobs");
+            
+            // verify the required parameter 'journeyVersionId' is set
+            if (journeyVersionId == null)
+                throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->PostJourneyViewVersionJobs");
+            
+
+            var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (viewId != null) localVarPathParams.Add("viewId", this.Configuration.ApiClient.ParameterToString(viewId));
+            if (journeyVersionId != null) localVarPathParams.Add("journeyVersionId", this.Configuration.ApiClient.ParameterToString(journeyVersionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewVersionJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewVersionJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyViewJob>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyViewJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update a Journey View by ID 
         /// creates a new version
         /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -13941,6 +15680,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<JourneyView>(localVarStatusCode,
                 localVarHeaders,
                 (JourneyView) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyView)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination. 
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>EntityListing</returns>
+        
+        public EntityListing PostJourneyViewsEncodingsValidate (List<Label> body = null)
+        {
+             ApiResponse<EntityListing> localVarResponse = PostJourneyViewsEncodingsValidateWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination. 
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of EntityListing</returns>
+        
+        public ApiResponse< EntityListing > PostJourneyViewsEncodingsValidateWithHttpInfo (List<Label> body = null)
+        { 
+
+            var localVarPath = "/api/v2/journey/views/encodings/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewsEncodingsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewsEncodingsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination. 
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of EntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<EntityListing> PostJourneyViewsEncodingsValidateAsync (List<Label> body = null)
+        {
+             ApiResponse<EntityListing> localVarResponse = await PostJourneyViewsEncodingsValidateAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate whether an encoding exist for a label/value combination. 
+        /// True indicates a valid encoding
+        /// PostJourneyViewsEncodingsValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (EntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> PostJourneyViewsEncodingsValidateAsyncWithHttpInfo (List<Label> body = null)
+        { 
+
+            var localVarPath = "/api/v2/journey/views/encodings/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewsEncodingsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyViewsEncodingsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

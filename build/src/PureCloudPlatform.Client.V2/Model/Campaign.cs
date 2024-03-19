@@ -177,7 +177,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division this campaign belongs to..</param>
         /// <param name="DynamicContactQueueingSettings">Settings for dynamic queueing of contacts..</param>
         /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on this campaign.</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, int? MaxCallsPerAgent = null)
+        /// <param name="CallbackAutoAnswer">The option manages the auto-answer callback calls.</param>
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, int? MaxCallsPerAgent = null, bool? CallbackAutoAnswer = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -209,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Division = Division;
             this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
             this.MaxCallsPerAgent = MaxCallsPerAgent;
+            this.CallbackAutoAnswer = CallbackAutoAnswer;
             
         }
         
@@ -507,6 +509,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The option manages the auto-answer callback calls
+        /// </summary>
+        /// <value>The option manages the auto-answer callback calls</value>
+        [DataMember(Name="callbackAutoAnswer", EmitDefaultValue=false)]
+        public bool? CallbackAutoAnswer { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -557,6 +568,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
+            sb.Append("  CallbackAutoAnswer: ").Append(CallbackAutoAnswer).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -769,6 +781,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
                 ) &&
                 (
+                    this.CallbackAutoAnswer == other.CallbackAutoAnswer ||
+                    this.CallbackAutoAnswer != null &&
+                    this.CallbackAutoAnswer.Equals(other.CallbackAutoAnswer)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -887,6 +904,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxCallsPerAgent != null)
                     hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
+
+                if (this.CallbackAutoAnswer != null)
+                    hash = hash * 59 + this.CallbackAutoAnswer.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

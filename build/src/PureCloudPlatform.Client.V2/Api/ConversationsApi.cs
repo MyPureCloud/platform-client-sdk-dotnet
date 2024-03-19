@@ -270,24 +270,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId);
 
         /// <summary>
         /// Delete a Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
@@ -2195,10 +2195,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OpenIntegration> GetConversationsMessagingIntegrationsOpenIntegrationIdWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a list of Twitter Integrations
+        /// Get a list of Twitter Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2207,14 +2207,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>TwitterIntegrationEntityListing</returns>
-        
+        [Obsolete]
         TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a list of Twitter Integrations
+        /// Get a list of Twitter Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2223,33 +2223,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>ApiResponse of TwitterIntegrationEntityListing</returns>
-        
+        [Obsolete]
         ApiResponse<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a Twitter messaging integration
+        /// Get a Twitter messaging integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>TwitterIntegration</returns>
-        
+        [Obsolete]
         TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a Twitter messaging integration
+        /// Get a Twitter messaging integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        
+        [Obsolete]
         ApiResponse<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
@@ -3616,26 +3616,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>TwitterIntegration</returns>
-        
+        [Obsolete]
         TwitterIntegration PatchConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, TwitterIntegrationRequest body);
 
         /// <summary>
         /// Update Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        
+        [Obsolete]
         ApiResponse<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIntegrationRequest body);
 
         /// <summary>
@@ -5596,24 +5596,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a Twitter Integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>TwitterIntegration</returns>
-        
+        [Obsolete]
         TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body);
 
         /// <summary>
         /// Create a Twitter Integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        
+        [Obsolete]
         ApiResponse<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body);
 
         /// <summary>
@@ -6602,24 +6602,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId);
 
         /// <summary>
         /// Delete a Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
@@ -8527,10 +8527,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OpenIntegration>> GetConversationsMessagingIntegrationsOpenIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a list of Twitter Integrations
+        /// Get a list of Twitter Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -8539,14 +8539,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of TwitterIntegrationEntityListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a list of Twitter Integrations
+        /// Get a list of Twitter Integrations (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -8555,33 +8555,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegrationEntityListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
 
         /// <summary>
-        /// Get a Twitter messaging integration
+        /// Get a Twitter messaging integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of TwitterIntegration</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, string expand = null);
 
         /// <summary>
-        /// Get a Twitter messaging integration
+        /// Get a Twitter messaging integration (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
@@ -9948,26 +9948,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of TwitterIntegration</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, TwitterIntegrationRequest body);
 
         /// <summary>
         /// Update Twitter messaging integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIntegrationRequest body);
 
         /// <summary>
@@ -11928,24 +11928,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a Twitter Integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of TwitterIntegration</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body);
 
         /// <summary>
         /// Create a Twitter Integration
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body);
 
         /// <summary>
@@ -14925,12 +14925,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId)
         {
              DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId);
@@ -14938,12 +14938,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
@@ -15028,12 +15028,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId)
         {
              await DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId);
@@ -15042,12 +15042,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
@@ -31080,8 +31080,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Twitter Integrations 
-        /// 
+        /// Get a list of Twitter Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -31090,7 +31090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>TwitterIntegrationEntityListing</returns>
-        
+        [Obsolete]
         public TwitterIntegrationEntityListing GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         {
              ApiResponse<TwitterIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsTwitterWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
@@ -31098,8 +31098,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Twitter Integrations 
-        /// 
+        /// Get a list of Twitter Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -31108,7 +31108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>ApiResponse of TwitterIntegrationEntityListing</returns>
-        
+        [Obsolete]
         public ApiResponse< TwitterIntegrationEntityListing > GetConversationsMessagingIntegrationsTwitterWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         { 
 
@@ -31193,8 +31193,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Twitter Integrations 
-        /// 
+        /// Get a list of Twitter Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -31203,7 +31203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of TwitterIntegrationEntityListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         {
              ApiResponse<TwitterIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
@@ -31212,8 +31212,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Twitter Integrations 
-        /// 
+        /// Get a list of Twitter Integrations (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -31222,7 +31222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
         /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegrationEntityListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
         { 
 
@@ -31308,14 +31308,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Twitter messaging integration 
-        /// 
+        /// Get a Twitter messaging integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>TwitterIntegration</returns>
-        
+        [Obsolete]
         public TwitterIntegration GetConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, string expand = null)
         {
              ApiResponse<TwitterIntegration> localVarResponse = GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, expand);
@@ -31323,14 +31323,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Twitter messaging integration 
-        /// 
+        /// Get a Twitter messaging integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        
+        [Obsolete]
         public ApiResponse< TwitterIntegration > GetConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
@@ -31415,14 +31415,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a Twitter messaging integration 
-        /// 
+        /// Get a Twitter messaging integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of TwitterIntegration</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<TwitterIntegration> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, string expand = null)
         {
              ApiResponse<TwitterIntegration> localVarResponse = await GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, expand);
@@ -31431,14 +31431,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a Twitter messaging integration 
-        /// 
+        /// Get a Twitter messaging integration (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> GetConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
         { 
             // verify the required parameter 'integrationId' is set
@@ -43268,13 +43268,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>TwitterIntegration</returns>
-        
+        [Obsolete]
         public TwitterIntegration PatchConversationsMessagingIntegrationsTwitterIntegrationId (string integrationId, TwitterIntegrationRequest body)
         {
              ApiResponse<TwitterIntegration> localVarResponse = PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, body);
@@ -43283,13 +43283,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        
+        [Obsolete]
         public ApiResponse< TwitterIntegration > PatchConversationsMessagingIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIntegrationRequest body)
         { 
             // verify the required parameter 'integrationId' is set
@@ -43383,13 +43383,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of TwitterIntegration</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<TwitterIntegration> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsync (string integrationId, TwitterIntegrationRequest body)
         {
              ApiResponse<TwitterIntegration> localVarResponse = await PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, body);
@@ -43399,13 +43399,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update Twitter messaging integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PatchConversationsMessagingIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIntegrationRequest body)
         { 
             // verify the required parameter 'integrationId' is set
@@ -60721,12 +60721,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Twitter Integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>TwitterIntegration</returns>
-        
+        [Obsolete]
         public TwitterIntegration PostConversationsMessagingIntegrationsTwitter (TwitterIntegrationRequest body)
         {
              ApiResponse<TwitterIntegration> localVarResponse = PostConversationsMessagingIntegrationsTwitterWithHttpInfo(body);
@@ -60735,12 +60735,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Twitter Integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>ApiResponse of TwitterIntegration</returns>
-        
+        [Obsolete]
         public ApiResponse< TwitterIntegration > PostConversationsMessagingIntegrationsTwitterWithHttpInfo (TwitterIntegrationRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -60830,12 +60830,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Twitter Integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of TwitterIntegration</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterAsync (TwitterIntegrationRequest body)
         {
              ApiResponse<TwitterIntegration> localVarResponse = await PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(body);
@@ -60845,12 +60845,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a Twitter Integration 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">TwitterIntegrationRequest</param>
         /// <returns>Task of ApiResponse (TwitterIntegration)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo (TwitterIntegrationRequest body)
         { 
             // verify the required parameter 'body' is set

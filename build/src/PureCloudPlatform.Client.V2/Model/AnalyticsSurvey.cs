@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AnalyticsSurvey :  IEquatable<AnalyticsSurvey>
     {
         /// <summary>
+        /// The type of the survey
+        /// </summary>
+        /// <value>The type of the survey</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SurveyTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Web for "Web"
+            /// </summary>
+            [EnumMember(Value = "Web")]
+            Web,
+            
+            /// <summary>
+            /// Enum Voice for "Voice"
+            /// </summary>
+            [EnumMember(Value = "Voice")]
+            Voice
+        }
+        /// <summary>
+        /// The type of the survey
+        /// </summary>
+        /// <value>The type of the survey</value>
+        [DataMember(Name="surveyType", EmitDefaultValue=false)]
+        public SurveyTypeEnum? SurveyType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSurvey" /> class.
         /// </summary>
         /// <param name="EventTime">Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -28,11 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyFormId">ID of the survey form used.</param>
         /// <param name="SurveyFormName">Name of the survey form used.</param>
         /// <param name="SurveyId">ID of the survey.</param>
+        /// <param name="SurveyPartialResponse">Whether the survey was completed with any required questions unanswered..</param>
         /// <param name="SurveyPromoterScore">Score of the survey used with NPS.</param>
         /// <param name="SurveyStatus">The status of the survey.</param>
+        /// <param name="SurveyType">The type of the survey.</param>
         /// <param name="UserId">ID of the agent the survey was performed against.</param>
         /// <param name="OSurveyTotalScore">OSurveyTotalScore.</param>
-        public AnalyticsSurvey(DateTime? EventTime = null, string QueueId = null, DateTime? SurveyCompletedDate = null, string SurveyFormContextId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyId = null, int? SurveyPromoterScore = null, string SurveyStatus = null, string UserId = null, long? OSurveyTotalScore = null)
+        public AnalyticsSurvey(DateTime? EventTime = null, string QueueId = null, DateTime? SurveyCompletedDate = null, string SurveyFormContextId = null, string SurveyFormId = null, string SurveyFormName = null, string SurveyId = null, bool? SurveyPartialResponse = null, int? SurveyPromoterScore = null, string SurveyStatus = null, SurveyTypeEnum? SurveyType = null, string UserId = null, long? OSurveyTotalScore = null)
         {
             this.EventTime = EventTime;
             this.QueueId = QueueId;
@@ -41,8 +76,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyFormId = SurveyFormId;
             this.SurveyFormName = SurveyFormName;
             this.SurveyId = SurveyId;
+            this.SurveyPartialResponse = SurveyPartialResponse;
             this.SurveyPromoterScore = SurveyPromoterScore;
             this.SurveyStatus = SurveyStatus;
+            this.SurveyType = SurveyType;
             this.UserId = UserId;
             this.OSurveyTotalScore = OSurveyTotalScore;
             
@@ -114,6 +151,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether the survey was completed with any required questions unanswered.
+        /// </summary>
+        /// <value>Whether the survey was completed with any required questions unanswered.</value>
+        [DataMember(Name="surveyPartialResponse", EmitDefaultValue=false)]
+        public bool? SurveyPartialResponse { get; set; }
+
+
+
+        /// <summary>
         /// Score of the survey used with NPS
         /// </summary>
         /// <value>Score of the survey used with NPS</value>
@@ -128,6 +174,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The status of the survey</value>
         [DataMember(Name="surveyStatus", EmitDefaultValue=false)]
         public string SurveyStatus { get; set; }
+
+
 
 
 
@@ -163,8 +211,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyFormId: ").Append(SurveyFormId).Append("\n");
             sb.Append("  SurveyFormName: ").Append(SurveyFormName).Append("\n");
             sb.Append("  SurveyId: ").Append(SurveyId).Append("\n");
+            sb.Append("  SurveyPartialResponse: ").Append(SurveyPartialResponse).Append("\n");
             sb.Append("  SurveyPromoterScore: ").Append(SurveyPromoterScore).Append("\n");
             sb.Append("  SurveyStatus: ").Append(SurveyStatus).Append("\n");
+            sb.Append("  SurveyType: ").Append(SurveyType).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  OSurveyTotalScore: ").Append(OSurveyTotalScore).Append("\n");
             sb.Append("}\n");
@@ -243,6 +293,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyId.Equals(other.SurveyId)
                 ) &&
                 (
+                    this.SurveyPartialResponse == other.SurveyPartialResponse ||
+                    this.SurveyPartialResponse != null &&
+                    this.SurveyPartialResponse.Equals(other.SurveyPartialResponse)
+                ) &&
+                (
                     this.SurveyPromoterScore == other.SurveyPromoterScore ||
                     this.SurveyPromoterScore != null &&
                     this.SurveyPromoterScore.Equals(other.SurveyPromoterScore)
@@ -251,6 +306,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SurveyStatus == other.SurveyStatus ||
                     this.SurveyStatus != null &&
                     this.SurveyStatus.Equals(other.SurveyStatus)
+                ) &&
+                (
+                    this.SurveyType == other.SurveyType ||
+                    this.SurveyType != null &&
+                    this.SurveyType.Equals(other.SurveyType)
                 ) &&
                 (
                     this.UserId == other.UserId ||
@@ -296,11 +356,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SurveyId != null)
                     hash = hash * 59 + this.SurveyId.GetHashCode();
 
+                if (this.SurveyPartialResponse != null)
+                    hash = hash * 59 + this.SurveyPartialResponse.GetHashCode();
+
                 if (this.SurveyPromoterScore != null)
                     hash = hash * 59 + this.SurveyPromoterScore.GetHashCode();
 
                 if (this.SurveyStatus != null)
                     hash = hash * 59 + this.SurveyStatus.GetHashCode();
+
+                if (this.SurveyType != null)
+                    hash = hash * 59 + this.SurveyType.GetHashCode();
 
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();

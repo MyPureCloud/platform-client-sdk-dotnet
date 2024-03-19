@@ -99,6 +99,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Title,
             
             /// <summary>
+            /// Enum Variationid for "variationId"
+            /// </summary>
+            [EnumMember(Value = "variationId")]
+            Variationid,
+            
+            /// <summary>
             /// Enum Visible for "visible"
             /// </summary>
             [EnumMember(Value = "visible")]

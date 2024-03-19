@@ -12,6 +12,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitplanninggroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Deletes the planning group |
 | [**DeleteWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitschedulingrun) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Cancel a scheduling run |
 | [**DeleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitservicegoaltemplate) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Delete a service goal template |
+| [**DeleteWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitstaffinggroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Deletes a staffing group |
+| [**DeleteWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunittimeofflimit) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId} | Deletes a time-off limit object |
+| [**DeleteWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunittimeoffplan) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Deletes a time-off plan |
 | [**DeleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekschedule) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId} | Delete a schedule |
 | [**DeleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekshorttermforecast) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Delete a short term forecast |
 | [**DeleteWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#deleteworkforcemanagementcalendarurlics) | **Delete** /api/v2/workforcemanagement/calendar/url/ics | Disable generated calendar link for the current user |
@@ -41,6 +44,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitSchedulingRuns**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitschedulingruns) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs | Get the list of scheduling runs |
 | [**GetWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitservicegoaltemplate) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Get a service goal template |
 | [**GetWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitservicegoaltemplates) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Gets list of service goal templates |
+| [**GetWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitstaffinggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Gets a staffing group |
+| [**GetWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitstaffinggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups | Gets a list of staffing groups |
+| [**GetWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementApi.html#getworkforcemanagementbusinessunittimeofflimit) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId} | Gets a time-off limit object |
+| [**GetWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunittimeofflimits) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits | Gets a list of time-off limit objects |
+| [**GetWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementApi.html#getworkforcemanagementbusinessunittimeoffplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Gets a time-off plan |
+| [**GetWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementApi.html#getworkforcemanagementbusinessunittimeoffplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans | Gets a list of time-off plans |
 | [**GetWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekschedule) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId} | Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route |
 | [**GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekschedulegenerationresults) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults | Get the generation results for a generated schedule |
 | [**GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekscheduleheadcountforecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast | Get the headcount forecast by planning group for the schedule |
@@ -101,6 +110,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitplanninggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitschedulingrun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitservicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
+| [**PatchWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitstaffinggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Updates a staffing group |
+| [**PatchWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunittimeoffplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Updates a time-off plan |
 | [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Update the requested management unit |
 | [**PatchWorkforcemanagementManagementunitAgents**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitagents) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents | Update agent configurations |
 | [**PatchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeofflimit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Updates a time off limit object. |
@@ -127,6 +138,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitintraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
 | [**PostWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitplanninggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Adds a new planning group |
 | [**PostWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitservicegoaltemplates) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Adds a new service goal template |
+| [**PostWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitstaffinggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups | Creates a new staffing group |
+| [**PostWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitstaffinggroupsquery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query | Gets staffing group associations for a list of user IDs |
+| [**PostWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementApi.html#postworkforcemanagementbusinessunittimeofflimits) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits | Creates a new time-off limit object |
+| [**PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunittimeofflimitsvaluesquery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query | Retrieves time-off limit related values based on a given set of filters. |
+| [**PostWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementApi.html#postworkforcemanagementbusinessunittimeoffplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans | Creates a new time-off plan |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleagentschedulesquery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query | Loads agent schedule data from the schedule. Used in combination with the metadata route |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleCopy**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekschedulecopy) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy | Copy a schedule |
 | [**PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekscheduleperformancepredictionsrecalculations) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations | Request a daily recalculation of the performance prediction for the associated schedule |
@@ -182,6 +198,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementTimeoffrequestsEstimate**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequestsestimate) | **Post** /api/v2/workforcemanagement/timeoffrequests/estimate | Estimates available time off for current user |
 | [**PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequestsintegrationstatusquery) | **Post** /api/v2/workforcemanagement/timeoffrequests/integrationstatus/query | Retrieves integration statuses for a list of current user time off requests |
 | [**PutWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementApi.html#putworkforcemanagementagentintegrationshris) | **Put** /api/v2/workforcemanagement/agents/{agentId}/integrations/hris | Update integrations for agent |
+| [**PutWorkforcemanagementBusinessunitTimeofflimitValues**](WorkforceManagementApi.html#putworkforcemanagementbusinessunittimeofflimitvalues) | **Put** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time-off limit object |
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementApi.html#putworkforcemanagementmanagementunittimeofflimitvalues) | **Put** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
 {: class="table table-striped"}
 
@@ -499,6 +516,198 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit. |  |
 | **serviceGoalTemplateId** | **string**| The ID of the service goal template to delete |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteworkforcemanagementbusinessunitstaffinggroup"></a>
+
+## void DeleteWorkforcemanagementBusinessunitStaffinggroup (string businessUnitId, string staffingGroupId)
+
+
+
+Deletes a staffing group
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitStaffinggroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var staffingGroupId = staffingGroupId_example;  // string | The ID of the staffing group to delete
+
+            try
+            { 
+                // Deletes a staffing group
+                apiInstance.DeleteWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitStaffinggroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **staffingGroupId** | **string**| The ID of the staffing group to delete |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteworkforcemanagementbusinessunittimeofflimit"></a>
+
+## void DeleteWorkforcemanagementBusinessunitTimeofflimit (string businessUnitId, string timeOffLimitId)
+
+
+
+Deletes a time-off limit object
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitTimeofflimitExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit object to delete
+
+            try
+            { 
+                // Deletes a time-off limit object
+                apiInstance.DeleteWorkforcemanagementBusinessunitTimeofflimit(businessUnitId, timeOffLimitId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitTimeofflimit: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit object to delete |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteworkforcemanagementbusinessunittimeoffplan"></a>
+
+## void DeleteWorkforcemanagementBusinessunitTimeoffplan (string businessUnitId, string timeOffPlanId)
+
+
+
+Deletes a time-off plan
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitTimeoffplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time-off plan to delete
+
+            try
+            { 
+                // Deletes a time-off plan
+                apiInstance.DeleteWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitTimeoffplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffPlanId** | **string**| The ID of the time-off plan to delete |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2570,6 +2779,401 @@ namespace Example
 ### Return type
 
 [**ServiceGoalTemplateList**](ServiceGoalTemplateList.html)
+
+<a name="getworkforcemanagementbusinessunitstaffinggroup"></a>
+
+## [**StaffingGroupResponse**](StaffingGroupResponse.html) GetWorkforcemanagementBusinessunitStaffinggroup (string businessUnitId, string staffingGroupId)
+
+
+
+Gets a staffing group
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitStaffinggroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var staffingGroupId = staffingGroupId_example;  // string | The ID of the staffing group to fetch
+
+            try
+            { 
+                // Gets a staffing group
+                StaffingGroupResponse result = apiInstance.GetWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitStaffinggroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **staffingGroupId** | **string**| The ID of the staffing group to fetch |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaffingGroupResponse**](StaffingGroupResponse.html)
+
+<a name="getworkforcemanagementbusinessunitstaffinggroups"></a>
+
+## [**StaffingGroupListing**](StaffingGroupListing.html) GetWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, string managementUnitId = null)
+
+
+
+Gets a list of staffing groups
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitStaffinggroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit to get management unit specific staffing groups (optional) 
+
+            try
+            { 
+                // Gets a list of staffing groups
+                StaffingGroupListing result = apiInstance.GetWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, managementUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitStaffinggroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **managementUnitId** | **string**| The ID of the management unit to get management unit specific staffing groups | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaffingGroupListing**](StaffingGroupListing.html)
+
+<a name="getworkforcemanagementbusinessunittimeofflimit"></a>
+
+## [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html) GetWorkforcemanagementBusinessunitTimeofflimit (string businessUnitId, string timeOffLimitId)
+
+
+
+Gets a time-off limit object
+
+Returns properties of time-off limit object, but not daily values
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitTimeofflimitExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit to fetch
+
+            try
+            { 
+                // Gets a time-off limit object
+                BuTimeOffLimitResponse result = apiInstance.GetWorkforcemanagementBusinessunitTimeofflimit(businessUnitId, timeOffLimitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitTimeofflimit: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit to fetch |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
+
+<a name="getworkforcemanagementbusinessunittimeofflimits"></a>
+
+## [**BuTimeOffLimitListing**](BuTimeOffLimitListing.html) GetWorkforcemanagementBusinessunitTimeofflimits (string businessUnitId, string managementUnitId = null)
+
+
+
+Gets a list of time-off limit objects
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+* wfm:timeOffPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitTimeofflimitsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit to get management unit specific time-off limit objects (optional) 
+
+            try
+            { 
+                // Gets a list of time-off limit objects
+                BuTimeOffLimitListing result = apiInstance.GetWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, managementUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitTimeofflimits: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **managementUnitId** | **string**| The ID of the management unit to get management unit specific time-off limit objects | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffLimitListing**](BuTimeOffLimitListing.html)
+
+<a name="getworkforcemanagementbusinessunittimeoffplan"></a>
+
+## [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html) GetWorkforcemanagementBusinessunitTimeoffplan (string businessUnitId, string timeOffPlanId)
+
+
+
+Gets a time-off plan
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitTimeoffplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time-off plan to fetch
+
+            try
+            { 
+                // Gets a time-off plan
+                BuTimeOffPlanResponse result = apiInstance.GetWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitTimeoffplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffPlanId** | **string**| The ID of the time-off plan to fetch |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
+
+<a name="getworkforcemanagementbusinessunittimeoffplans"></a>
+
+## [**BuTimeOffPlanListing**](BuTimeOffPlanListing.html) GetWorkforcemanagementBusinessunitTimeoffplans (string businessUnitId, string managementUnitId = null, bool? forceDownloadService = null)
+
+
+
+Gets a list of time-off plans
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitTimeoffplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit to get management unit specific staffing groups (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Gets a list of time-off plans
+                BuTimeOffPlanListing result = apiInstance.GetWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, managementUnitId, forceDownloadService);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitTimeoffplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **managementUnitId** | **string**| The ID of the management unit to get management unit specific staffing groups | [optional]  |
+| **forceDownloadService** | **bool?**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffPlanListing**](BuTimeOffPlanListing.html)
 
 <a name="getworkforcemanagementbusinessunitweekschedule"></a>
 
@@ -6629,6 +7233,140 @@ namespace Example
 
 [**ServiceGoalTemplate**](ServiceGoalTemplate.html)
 
+<a name="patchworkforcemanagementbusinessunitstaffinggroup"></a>
+
+## [**StaffingGroupResponse**](StaffingGroupResponse.html) PatchWorkforcemanagementBusinessunitStaffinggroup (string businessUnitId, string staffingGroupId, UpdateStaffingGroupRequest body = null)
+
+
+
+Updates a staffing group
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitStaffinggroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var staffingGroupId = staffingGroupId_example;  // string | The ID of the staffing group to update
+            var body = new UpdateStaffingGroupRequest(); // UpdateStaffingGroupRequest | body (optional) 
+
+            try
+            { 
+                // Updates a staffing group
+                StaffingGroupResponse result = apiInstance.PatchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitStaffinggroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **staffingGroupId** | **string**| The ID of the staffing group to update |  |
+| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaffingGroupResponse**](StaffingGroupResponse.html)
+
+<a name="patchworkforcemanagementbusinessunittimeoffplan"></a>
+
+## [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html) PatchWorkforcemanagementBusinessunitTimeoffplan (string businessUnitId, string timeOffPlanId, BuUpdateTimeOffPlanRequest body = null)
+
+
+
+Updates a time-off plan
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitTimeoffplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffPlanId = timeOffPlanId_example;  // string | The ID of the time-off plan to update
+            var body = new BuUpdateTimeOffPlanRequest(); // BuUpdateTimeOffPlanRequest | body (optional) 
+
+            try
+            { 
+                // Updates a time-off plan
+                BuTimeOffPlanResponse result = apiInstance.PatchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitTimeoffplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffPlanId** | **string**| The ID of the time-off plan to update |  |
+| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
+
 <a name="patchworkforcemanagementmanagementunit"></a>
 
 ## [**ManagementUnit**](ManagementUnit.html) PatchWorkforcemanagementManagementunit (string managementUnitId, UpdateManagementUnitRequest body = null)
@@ -8344,6 +9082,331 @@ namespace Example
 ### Return type
 
 [**ServiceGoalTemplate**](ServiceGoalTemplate.html)
+
+<a name="postworkforcemanagementbusinessunitstaffinggroups"></a>
+
+## [**StaffingGroupResponse**](StaffingGroupResponse.html) PostWorkforcemanagementBusinessunitStaffinggroups (string businessUnitId, CreateStaffingGroupRequest body = null)
+
+
+
+Creates a new staffing group
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitStaffinggroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CreateStaffingGroupRequest(); // CreateStaffingGroupRequest | body (optional) 
+
+            try
+            { 
+                // Creates a new staffing group
+                StaffingGroupResponse result = apiInstance.PostWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitStaffinggroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaffingGroupResponse**](StaffingGroupResponse.html)
+
+<a name="postworkforcemanagementbusinessunitstaffinggroupsquery"></a>
+
+## [**UserStaffingGroupListing**](UserStaffingGroupListing.html) PostWorkforcemanagementBusinessunitStaffinggroupsQuery (string businessUnitId, QueryUserStaffingGroupListRequest body = null)
+
+
+
+Gets staffing group associations for a list of user IDs
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitStaffinggroupsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryUserStaffingGroupListRequest(); // QueryUserStaffingGroupListRequest | body (optional) 
+
+            try
+            { 
+                // Gets staffing group associations for a list of user IDs
+                UserStaffingGroupListing result = apiInstance.PostWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitStaffinggroupsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserStaffingGroupListing**](UserStaffingGroupListing.html)
+
+<a name="postworkforcemanagementbusinessunittimeofflimits"></a>
+
+## [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html) PostWorkforcemanagementBusinessunitTimeofflimits (string businessUnitId, BuCreateTimeOffLimitRequest body = null)
+
+
+
+Creates a new time-off limit object
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeofflimitsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BuCreateTimeOffLimitRequest(); // BuCreateTimeOffLimitRequest | body (optional) 
+
+            try
+            { 
+                // Creates a new time-off limit object
+                BuTimeOffLimitResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeofflimits: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
+
+<a name="postworkforcemanagementbusinessunittimeofflimitsvaluesquery"></a>
+
+## [**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse.html) PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery (string businessUnitId, QueryTimeOffLimitValuesRequest body = null)
+
+
+
+Retrieves time-off limit related values based on a given set of filters.
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeofflimitsValuesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryTimeOffLimitValuesRequest(); // QueryTimeOffLimitValuesRequest | body (optional) 
+
+            try
+            { 
+                // Retrieves time-off limit related values based on a given set of filters.
+                BuTimeOffLimitValuesResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse.html)
+
+<a name="postworkforcemanagementbusinessunittimeoffplans"></a>
+
+## [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html) PostWorkforcemanagementBusinessunitTimeoffplans (string businessUnitId, BuCreateTimeOffPlanRequest body = null)
+
+
+
+Creates a new time-off plan
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitTimeoffplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new BuCreateTimeOffPlanRequest(); // BuCreateTimeOffPlanRequest | body (optional) 
+
+            try
+            { 
+                // Creates a new time-off plan
+                BuTimeOffPlanResponse result = apiInstance.PostWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitTimeoffplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
 
 <a name="postworkforcemanagementbusinessunitweekscheduleagentschedulesquery"></a>
 
@@ -12014,6 +13077,75 @@ namespace Example
 ### Return type
 
 [**AgentIntegrationsResponse**](AgentIntegrationsResponse.html)
+
+<a name="putworkforcemanagementbusinessunittimeofflimitvalues"></a>
+
+## [**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html) PutWorkforcemanagementBusinessunitTimeofflimitValues (string businessUnitId, string timeOffLimitId, BuSetTimeOffLimitValuesRequest body = null)
+
+
+
+Sets daily values for a date range of time-off limit object
+
+Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time-off limit API
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutWorkforcemanagementBusinessunitTimeofflimitValuesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var timeOffLimitId = timeOffLimitId_example;  // string | The ID of the time-off limit object to set values for
+            var body = new BuSetTimeOffLimitValuesRequest(); // BuSetTimeOffLimitValuesRequest | body (optional) 
+
+            try
+            { 
+                // Sets daily values for a date range of time-off limit object
+                BuTimeOffLimitResponse result = apiInstance.PutWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId, timeOffLimitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PutWorkforcemanagementBusinessunitTimeofflimitValues: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **timeOffLimitId** | **string**| The ID of the time-off limit object to set values for |  |
+| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
 
 <a name="putworkforcemanagementmanagementunittimeofflimitvalues"></a>
 

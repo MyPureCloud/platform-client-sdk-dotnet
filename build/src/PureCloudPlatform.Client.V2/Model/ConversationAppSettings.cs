@@ -19,56 +19,21 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ConversationAppSettings :  IEquatable<ConversationAppSettings>
     {
         /// <summary>
-        /// Deprecated. The auto start type for the messenger conversation
-        /// </summary>
-        /// <value>Deprecated. The auto start type for the messenger conversation</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum AutoStartTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Standard for "Standard"
-            /// </summary>
-            [EnumMember(Value = "Standard")]
-            Standard,
-            
-            /// <summary>
-            /// Enum Automatic for "Automatic"
-            /// </summary>
-            [EnumMember(Value = "Automatic")]
-            Automatic
-        }
-        /// <summary>
-        /// Deprecated. The auto start type for the messenger conversation
-        /// </summary>
-        /// <value>Deprecated. The auto start type for the messenger conversation</value>
-        [DataMember(Name="autoStartType", EmitDefaultValue=false)]
-        public AutoStartTypeEnum? AutoStartType { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAppSettings" /> class.
         /// </summary>
         /// <param name="Enabled">The toggle to enable or disable conversations.</param>
         /// <param name="ShowAgentTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
         /// <param name="ShowUserTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
-        /// <param name="AutoStartType">Deprecated. The auto start type for the messenger conversation.</param>
         /// <param name="AutoStart">The auto start for the messenger conversation.</param>
         /// <param name="Markdown">The markdown for the messenger app.</param>
         /// <param name="ConversationDisconnect">The conversation disconnect settings for the messenger app.</param>
         /// <param name="ConversationClear">The conversation clear settings for the messenger app.</param>
         /// <param name="Humanize">The humanize conversations settings for the messenger app.</param>
-        public ConversationAppSettings(bool? Enabled = null, bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, ConversationClearSettings ConversationClear = null, Humanize Humanize = null)
+        public ConversationAppSettings(bool? Enabled = null, bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, ConversationClearSettings ConversationClear = null, Humanize Humanize = null)
         {
             this.Enabled = Enabled;
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
             this.ShowUserTypingIndicator = ShowUserTypingIndicator;
-            this.AutoStartType = AutoStartType;
             this.AutoStart = AutoStart;
             this.Markdown = Markdown;
             this.ConversationDisconnect = ConversationDisconnect;
@@ -103,8 +68,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The toggle to enable or disable typing indicator for messenger</value>
         [DataMember(Name="showUserTypingIndicator", EmitDefaultValue=false)]
         public bool? ShowUserTypingIndicator { get; set; }
-
-
 
 
 
@@ -164,7 +127,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  ShowAgentTypingIndicator: ").Append(ShowAgentTypingIndicator).Append("\n");
             sb.Append("  ShowUserTypingIndicator: ").Append(ShowUserTypingIndicator).Append("\n");
-            sb.Append("  AutoStartType: ").Append(AutoStartType).Append("\n");
             sb.Append("  AutoStart: ").Append(AutoStart).Append("\n");
             sb.Append("  Markdown: ").Append(Markdown).Append("\n");
             sb.Append("  ConversationDisconnect: ").Append(ConversationDisconnect).Append("\n");
@@ -226,11 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShowUserTypingIndicator.Equals(other.ShowUserTypingIndicator)
                 ) &&
                 (
-                    this.AutoStartType == other.AutoStartType ||
-                    this.AutoStartType != null &&
-                    this.AutoStartType.Equals(other.AutoStartType)
-                ) &&
-                (
                     this.AutoStart == other.AutoStart ||
                     this.AutoStart != null &&
                     this.AutoStart.Equals(other.AutoStart)
@@ -276,9 +233,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ShowUserTypingIndicator != null)
                     hash = hash * 59 + this.ShowUserTypingIndicator.GetHashCode();
-
-                if (this.AutoStartType != null)
-                    hash = hash * 59 + this.AutoStartType.GetHashCode();
 
                 if (this.AutoStart != null)
                     hash = hash * 59 + this.AutoStart.GetHashCode();

@@ -10,7 +10,6 @@ title: ConversationAppSettings
 | **Enabled** | **bool?** | The toggle to enable or disable conversations | [optional] |
 | **ShowAgentTypingIndicator** | **bool?** | The toggle to enable or disable typing indicator for messenger | [optional] |
 | **ShowUserTypingIndicator** | **bool?** | The toggle to enable or disable typing indicator for messenger | [optional] |
-| **AutoStartType** | **string** | Deprecated. The auto start type for the messenger conversation | [optional] |
 | **AutoStart** | [**AutoStart**](AutoStart.html) | The auto start for the messenger conversation | [optional] |
 | **Markdown** | [**Markdown**](Markdown.html) | The markdown for the messenger app | [optional] |
 | **ConversationDisconnect** | [**ConversationDisconnectSettings**](ConversationDisconnectSettings.html) | The conversation disconnect settings for the messenger app | [optional] |

@@ -39,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingUploadsReport**](RecordingApi.html#getrecordinguploadsreport) | **Get** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
 | [**GetRecordingsRetentionQuery**](RecordingApi.html#getrecordingsretentionquery) | **Get** /api/v2/recordings/retention/query | Query for recording retention data |
 | [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **Get** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
+| [**GetRecordingsScreensessionsDetails**](RecordingApi.html#getrecordingsscreensessionsdetails) | **Get** /api/v2/recordings/screensessions/details | Retrieves an object containing the total number of concurrent active screen recordings |
 | [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **Patch** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **Patch** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **Patch** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
@@ -2216,6 +2217,66 @@ namespace Example
 ### Return type
 
 [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
+
+<a name="getrecordingsscreensessionsdetails"></a>
+
+## [**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions.html) GetRecordingsScreensessionsDetails ()
+
+
+
+Retrieves an object containing the total number of concurrent active screen recordings
+
+GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* recording:screenRecording:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingsScreensessionsDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+
+            try
+            { 
+                // Retrieves an object containing the total number of concurrent active screen recordings
+                ScreenRecordingActiveSessions result = apiInstance.GetRecordingsScreensessionsDetails();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingsScreensessionsDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions.html)
 
 <a name="patchrecordingcrossplatformmediaretentionpolicy"></a>
 

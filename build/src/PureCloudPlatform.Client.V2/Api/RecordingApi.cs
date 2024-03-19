@@ -917,6 +917,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ScreenRecordingSessionListing> GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ScreenRecordingActiveSessions</returns>
+        
+        ScreenRecordingActiveSessions GetRecordingsScreensessionsDetails ();
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ScreenRecordingActiveSessions</returns>
+        
+        ApiResponse<ScreenRecordingActiveSessions> GetRecordingsScreensessionsDetailsWithHttpInfo ();
+
+        /// <summary>
         /// Patch a media retention policy
         /// </summary>
         /// <remarks>
@@ -2475,6 +2499,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ScreenRecordingActiveSessions</returns>
+        
+        System.Threading.Tasks.Task<ScreenRecordingActiveSessions> GetRecordingsScreensessionsDetailsAsync ();
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ScreenRecordingActiveSessions)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScreenRecordingActiveSessions>> GetRecordingsScreensessionsDetailsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Patch a media retention policy
@@ -10340,6 +10388,208 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ScreenRecordingSessionListing>(localVarStatusCode,
                 localVarHeaders,
                 (ScreenRecordingSessionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingSessionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings 
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ScreenRecordingActiveSessions</returns>
+        
+        public ScreenRecordingActiveSessions GetRecordingsScreensessionsDetails ()
+        {
+             ApiResponse<ScreenRecordingActiveSessions> localVarResponse = GetRecordingsScreensessionsDetailsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings 
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ScreenRecordingActiveSessions</returns>
+        
+        public ApiResponse< ScreenRecordingActiveSessions > GetRecordingsScreensessionsDetailsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/recordings/screensessions/details";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessionsDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessionsDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenRecordingActiveSessions>(localVarStatusCode,
+                localVarHeaders,
+                (ScreenRecordingActiveSessions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingActiveSessions)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings 
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ScreenRecordingActiveSessions</returns>
+        
+        public async System.Threading.Tasks.Task<ScreenRecordingActiveSessions> GetRecordingsScreensessionsDetailsAsync ()
+        {
+             ApiResponse<ScreenRecordingActiveSessions> localVarResponse = await GetRecordingsScreensessionsDetailsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves an object containing the total number of concurrent active screen recordings 
+        /// 
+        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ScreenRecordingActiveSessions)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScreenRecordingActiveSessions>> GetRecordingsScreensessionsDetailsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/recordings/screensessions/details";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessionsDetails: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingsScreensessionsDetails: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScreenRecordingActiveSessions>(localVarStatusCode,
+                localVarHeaders,
+                (ScreenRecordingActiveSessions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScreenRecordingActiveSessions)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

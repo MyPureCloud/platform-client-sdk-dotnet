@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="logLevel">Log level</param>
         /// <param name="logResponseBody">Log response body bool</param>
         /// <param name="logRequestBody">Log request body bool</param>
-        internal Logger(string logFilePath = null,
+        public Logger(string logFilePath = null,
                       bool logToConsole = true,
                       LogFormat logFormat = LogFormat.Text,
                       LogLevel logLevel = LogLevel.LNone,
@@ -169,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 requestBodyToString(requestBody)
             );
 
-            log(LogLevel.LTrace, logStatement);
+            Log(LogLevel.LTrace, logStatement);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 requestBody: requestBodyToString(requestBody)
             );
 
-            log(LogLevel.LDebug, logStatement);
+            Log(LogLevel.LDebug, logStatement);
         }
 
         /// <summary>
@@ -229,10 +229,15 @@ namespace PureCloudPlatform.Client.V2.Client
                 responseBody
             );
 
-            log(LogLevel.LError, logStatement);
+            Log(LogLevel.LError, logStatement);
         }
 
-        private void log(LogLevel logLevel, LogStatement logStatement)
+        /// <summary>
+        /// Write log statement
+        /// </summary>
+        /// <param name="logLevel">Log level</param>
+        /// <param name="logStatement">Log statement</param>
+        protected virtual void Log(LogLevel logLevel, LogStatement logStatement)
         {
             if (logLevel >= Level)
             {
@@ -313,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Client
     /// <summary>
     /// LogStatement
     /// </summary>
-    class LogStatement
+    public class LogStatement
     {
         /// <summary>
         /// Initializes a new instance of the Logger LogStatement

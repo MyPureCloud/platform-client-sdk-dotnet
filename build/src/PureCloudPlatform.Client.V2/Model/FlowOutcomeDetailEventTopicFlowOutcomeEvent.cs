@@ -306,7 +306,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workitem for "WORKITEM"
             /// </summary>
             [EnumMember(Value = "WORKITEM")]
-            Workitem
+            Workitem,
+            
+            /// <summary>
+            /// Enum Voicesurvey for "VOICESURVEY"
+            /// </summary>
+            [EnumMember(Value = "VOICESURVEY")]
+            Voicesurvey
         }
         /// <summary>
         /// Gets or Sets FlowOutcomeValue

@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "198.1.0");
+            request.AddHeader("purecloud-sdk", "199.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -348,9 +348,20 @@ namespace PureCloudPlatform.Client.V2.Client
             }
 
             RestClient = new RestClient(options);
+
+            var fullUrl = RestClient.BuildUri(request);
+            string url = fullUrl == null ? path : fullUrl.ToString();
             do
             {
                 response = await RestClient.ExecuteAsync(request);
+                Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
+                Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>());
             }while(retry.ShouldRetry(response));
 
             if (UsingCodeAuth && Configuration.ShouldRefreshAccessToken)
