@@ -832,7 +832,7 @@ namespace Example
 
 <a name="getknowledgeguestsessiondocument"></a>
 
-## [**KnowledgeGuestDocument**](KnowledgeGuestDocument.html) GetKnowledgeGuestSessionDocument (string sessionId, string documentId)
+## [**KnowledgeGuestDocumentResponse**](KnowledgeGuestDocumentResponse.html) GetKnowledgeGuestSessionDocument (string sessionId, string documentId)
 
 
 
@@ -863,7 +863,7 @@ namespace Example
             try
             { 
                 // Get a knowledge document by ID.
-                KnowledgeGuestDocument result = apiInstance.GetKnowledgeGuestSessionDocument(sessionId, documentId);
+                KnowledgeGuestDocumentResponse result = apiInstance.GetKnowledgeGuestSessionDocument(sessionId, documentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -886,7 +886,7 @@ namespace Example
 
 ### Return type
 
-[**KnowledgeGuestDocument**](KnowledgeGuestDocument.html)
+[**KnowledgeGuestDocumentResponse**](KnowledgeGuestDocumentResponse.html)
 
 <a name="getknowledgeguestsessiondocuments"></a>
 

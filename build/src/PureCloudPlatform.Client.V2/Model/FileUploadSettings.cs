@@ -22,12 +22,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="FileUploadSettings" /> class.
         /// </summary>
         /// <param name="EnableAttachments">whether or not attachments is enabled.</param>
-        /// <param name="UseSupportedContentProfile">whether or not supported content profile is enabled.</param>
         /// <param name="Modes">The list of supported file upload modes.</param>
-        public FileUploadSettings(bool? EnableAttachments = null, bool? UseSupportedContentProfile = null, List<FileUploadMode> Modes = null)
+        public FileUploadSettings(bool? EnableAttachments = null, List<FileUploadMode> Modes = null)
         {
             this.EnableAttachments = EnableAttachments;
-            this.UseSupportedContentProfile = UseSupportedContentProfile;
             this.Modes = Modes;
             
         }
@@ -40,15 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>whether or not attachments is enabled</value>
         [DataMember(Name="enableAttachments", EmitDefaultValue=false)]
         public bool? EnableAttachments { get; set; }
-
-
-
-        /// <summary>
-        /// whether or not supported content profile is enabled
-        /// </summary>
-        /// <value>whether or not supported content profile is enabled</value>
-        [DataMember(Name="useSupportedContentProfile", EmitDefaultValue=false)]
-        public bool? UseSupportedContentProfile { get; set; }
 
 
 
@@ -70,7 +59,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class FileUploadSettings {\n");
 
             sb.Append("  EnableAttachments: ").Append(EnableAttachments).Append("\n");
-            sb.Append("  UseSupportedContentProfile: ").Append(UseSupportedContentProfile).Append("\n");
             sb.Append("  Modes: ").Append(Modes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -118,11 +106,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EnableAttachments.Equals(other.EnableAttachments)
                 ) &&
                 (
-                    this.UseSupportedContentProfile == other.UseSupportedContentProfile ||
-                    this.UseSupportedContentProfile != null &&
-                    this.UseSupportedContentProfile.Equals(other.UseSupportedContentProfile)
-                ) &&
-                (
                     this.Modes == other.Modes ||
                     this.Modes != null &&
                     this.Modes.SequenceEqual(other.Modes)
@@ -142,9 +125,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.EnableAttachments != null)
                     hash = hash * 59 + this.EnableAttachments.GetHashCode();
-
-                if (this.UseSupportedContentProfile != null)
-                    hash = hash * 59 + this.UseSupportedContentProfile.GetHashCode();
 
                 if (this.Modes != null)
                     hash = hash * 59 + this.Modes.GetHashCode();

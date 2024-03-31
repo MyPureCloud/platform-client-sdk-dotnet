@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListId">The contactList associated with this preview data pop..</param>
         /// <param name="CampaignId">The campaignId associated with this preview data pop..</param>
         /// <param name="PhoneNumberColumns">The phone number columns associated with this campaign.</param>
-        public DialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<PhoneNumberColumn> PhoneNumberColumns = null)
+        /// <param name="CallbackAutoAnswer">Whether or not to auto answer the callback.</param>
+        public DialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<PhoneNumberColumn> PhoneNumberColumns = null, bool? CallbackAutoAnswer = null)
         {
             this.Id = Id;
             this.ContactId = ContactId;
             this.ContactListId = ContactListId;
             this.CampaignId = CampaignId;
             this.PhoneNumberColumns = PhoneNumberColumns;
+            this.CallbackAutoAnswer = CallbackAutoAnswer;
             
         }
         
@@ -81,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<PhoneNumberColumn> PhoneNumberColumns { get; set; }
 
 
+
+        /// <summary>
+        /// Whether or not to auto answer the callback
+        /// </summary>
+        /// <value>Whether or not to auto answer the callback</value>
+        [DataMember(Name="callbackAutoAnswer", EmitDefaultValue=false)]
+        public bool? CallbackAutoAnswer { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
+            sb.Append("  CallbackAutoAnswer: ").Append(CallbackAutoAnswer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -159,6 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneNumberColumns == other.PhoneNumberColumns ||
                     this.PhoneNumberColumns != null &&
                     this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
+                ) &&
+                (
+                    this.CallbackAutoAnswer == other.CallbackAutoAnswer ||
+                    this.CallbackAutoAnswer != null &&
+                    this.CallbackAutoAnswer.Equals(other.CallbackAutoAnswer)
                 );
         }
 
@@ -187,6 +204,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PhoneNumberColumns != null)
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
+
+                if (this.CallbackAutoAnswer != null)
+                    hash = hash * 59 + this.CallbackAutoAnswer.GetHashCode();
 
                 return hash;
             }

@@ -64,17 +64,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="V2MobiusRulesTopicCondition" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="Conditions">Conditions.</param>
         /// <param name="Predicates">Predicates.</param>
         /// <param name="Type">Type.</param>
-        public V2MobiusRulesTopicCondition(List<V2MobiusRulesTopicCondition> Conditions = null, List<V2MobiusRulesTopicConditionRulePredicate> Predicates = null, TypeEnum? Type = null)
+        public V2MobiusRulesTopicCondition(Guid? Id = null, List<V2MobiusRulesTopicCondition> Conditions = null, List<V2MobiusRulesTopicConditionRulePredicate> Predicates = null, TypeEnum? Type = null)
         {
+            this.Id = Id;
             this.Conditions = Conditions;
             this.Predicates = Predicates;
             this.Type = Type;
             
         }
         
+
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public Guid? Id { get; set; }
+
 
 
         /// <summary>
@@ -103,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class V2MobiusRulesTopicCondition {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -147,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.SequenceEqual(other.Conditions)
@@ -174,6 +190,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
 

@@ -22,12 +22,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContactsExportRequest" /> class.
         /// </summary>
         /// <param name="ContactListFilterId">Contact List Filter ID..</param>
-        /// <param name="SearchCriteria">Criteria to filter the contacts by..</param>
+        /// <param name="Criteria">Criteria to filter the contacts by..</param>
         /// <param name="ContactIds">Contact IDs to be exported..</param>
-        public ContactsExportRequest(string ContactListFilterId = null, ContactBulkSearchCriteria SearchCriteria = null, List<string> ContactIds = null)
+        public ContactsExportRequest(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, List<string> ContactIds = null)
         {
             this.ContactListFilterId = ContactListFilterId;
-            this.SearchCriteria = SearchCriteria;
+            this.Criteria = Criteria;
             this.ContactIds = ContactIds;
             
         }
@@ -47,8 +47,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Criteria to filter the contacts by.
         /// </summary>
         /// <value>Criteria to filter the contacts by.</value>
-        [DataMember(Name="searchCriteria", EmitDefaultValue=false)]
-        public ContactBulkSearchCriteria SearchCriteria { get; set; }
+        [DataMember(Name="criteria", EmitDefaultValue=false)]
+        public ContactBulkSearchCriteria Criteria { get; set; }
 
 
 
@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ContactsExportRequest {\n");
 
             sb.Append("  ContactListFilterId: ").Append(ContactListFilterId).Append("\n");
-            sb.Append("  SearchCriteria: ").Append(SearchCriteria).Append("\n");
+            sb.Append("  Criteria: ").Append(Criteria).Append("\n");
             sb.Append("  ContactIds: ").Append(ContactIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -118,9 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactListFilterId.Equals(other.ContactListFilterId)
                 ) &&
                 (
-                    this.SearchCriteria == other.SearchCriteria ||
-                    this.SearchCriteria != null &&
-                    this.SearchCriteria.Equals(other.SearchCriteria)
+                    this.Criteria == other.Criteria ||
+                    this.Criteria != null &&
+                    this.Criteria.Equals(other.Criteria)
                 ) &&
                 (
                     this.ContactIds == other.ContactIds ||
@@ -143,8 +143,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ContactListFilterId != null)
                     hash = hash * 59 + this.ContactListFilterId.GetHashCode();
 
-                if (this.SearchCriteria != null)
-                    hash = hash * 59 + this.SearchCriteria.GetHashCode();
+                if (this.Criteria != null)
+                    hash = hash * 59 + this.Criteria.GetHashCode();
 
                 if (this.ContactIds != null)
                     hash = hash * 59 + this.ContactIds.GetHashCode();

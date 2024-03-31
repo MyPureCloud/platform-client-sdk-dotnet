@@ -73,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Category">The reference to category associated with the document..</param>
         /// <param name="Labels">The references to labels associated with the document..</param>
         /// <param name="KnowledgeBase">Knowledge base to which the document belongs to..</param>
-        /// <param name="Variations">Variations of the document..</param>
         /// <param name="ExternalId">The reference to external id associated with the document..</param>
-        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, List<DocumentVariation> Variations = null, string ExternalId = null)
+        /// <param name="Variations">Variations of the document..</param>
+        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, List<DocumentVariation> Variations = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -90,8 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Category = Category;
             this.Labels = Labels;
             this.KnowledgeBase = KnowledgeBase;
-            this.Variations = Variations;
             this.ExternalId = ExternalId;
+            this.Variations = Variations;
             
         }
         
@@ -235,20 +235,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Variations of the document.
-        /// </summary>
-        /// <value>Variations of the document.</value>
-        [DataMember(Name="variations", EmitDefaultValue=false)]
-        public List<DocumentVariation> Variations { get; set; }
-
-
-
-        /// <summary>
         /// The reference to external id associated with the document.
         /// </summary>
         /// <value>The reference to external id associated with the document.</value>
         [DataMember(Name="externalId", EmitDefaultValue=false)]
         public string ExternalId { get; set; }
+
+
+
+        /// <summary>
+        /// Variations of the document.
+        /// </summary>
+        /// <value>Variations of the document.</value>
+        [DataMember(Name="variations", EmitDefaultValue=false)]
+        public List<DocumentVariation> Variations { get; set; }
 
 
 
@@ -285,8 +285,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
-            sb.Append("  Variations: ").Append(Variations).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
+            sb.Append("  Variations: ").Append(Variations).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -409,14 +409,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KnowledgeBase.Equals(other.KnowledgeBase)
                 ) &&
                 (
-                    this.Variations == other.Variations ||
-                    this.Variations != null &&
-                    this.Variations.SequenceEqual(other.Variations)
-                ) &&
-                (
                     this.ExternalId == other.ExternalId ||
                     this.ExternalId != null &&
                     this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
+                    this.Variations == other.Variations ||
+                    this.Variations != null &&
+                    this.Variations.SequenceEqual(other.Variations)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -484,11 +484,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.KnowledgeBase != null)
                     hash = hash * 59 + this.KnowledgeBase.GetHashCode();
 
-                if (this.Variations != null)
-                    hash = hash * 59 + this.Variations.GetHashCode();
-
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
+
+                if (this.Variations != null)
+                    hash = hash * 59 + this.Variations.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

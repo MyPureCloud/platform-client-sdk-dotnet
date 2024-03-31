@@ -82,6 +82,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagesCachedmedia**](ConversationsApi.html#getconversationsmessagescachedmedia) | **Get** /api/v2/conversations/messages/cachedmedia | Get a list of cached media items |
 | [**GetConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsApi.html#getconversationsmessagescachedmediacachedmediaitemid) | **Get** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Get a cached media item |
 | [**GetConversationsMessagingFacebookApp**](ConversationsApi.html#getconversationsmessagingfacebookapp) | **Get** /api/v2/conversations/messaging/facebook/app | Get Genesys Facebook App Id |
+| [**GetConversationsMessagingFacebookPermissions**](ConversationsApi.html#getconversationsmessagingfacebookpermissions) | **Get** /api/v2/conversations/messaging/facebook/permissions | Get a list of Facebook Permissions |
 | [**GetConversationsMessagingIntegrations**](ConversationsApi.html#getconversationsmessagingintegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
 | [**GetConversationsMessagingIntegrationsFacebook**](ConversationsApi.html#getconversationsmessagingintegrationsfacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
 | [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsApi.html#getconversationsmessagingintegrationsfacebookintegrationid) | **Get** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
@@ -5015,6 +5016,66 @@ This endpoint does require any parameters.
 ### Return type
 
 [**FacebookAppCredentials**](FacebookAppCredentials.html)
+
+<a name="getconversationsmessagingfacebookpermissions"></a>
+
+## [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing.html) GetConversationsMessagingFacebookPermissions ()
+
+
+
+Get a list of Facebook Permissions
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+* messaging:integration:edit
+* messaging:conversationInstagramIntegration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingFacebookPermissionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Get a list of Facebook Permissions
+                FacebookPermissionEntityListing result = apiInstance.GetConversationsMessagingFacebookPermissions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingFacebookPermissions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**FacebookPermissionEntityListing**](FacebookPermissionEntityListing.html)
 
 <a name="getconversationsmessagingintegrations"></a>
 

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KnowledgeGuestDocument
+    /// KnowledgeGuestSearchDocumentResponse
     /// </summary>
     [DataContract]
-    public partial class KnowledgeGuestDocument :  IEquatable<KnowledgeGuestDocument>
+    public partial class KnowledgeGuestSearchDocumentResponse :  IEquatable<KnowledgeGuestSearchDocumentResponse>
     {
         /// <summary>
         /// State of the document.
@@ -58,7 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeGuestDocument" /> class.
+        /// Initializes a new instance of the <see cref="KnowledgeGuestSearchDocumentResponse" /> class.
         /// </summary>
         /// <param name="Title">Document title, having a limit of 500 words..</param>
         /// <param name="Visible">Indicates if the knowledge document should be included in search results..</param>
@@ -71,7 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DatePublished">The date on which the document was last published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DocumentVersion">The version of the document..</param>
         /// <param name="Variations">Variations of the document..</param>
-        public KnowledgeGuestDocument(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, List<KnowledgeGuestDocumentVariation> Variations = null)
+        /// <param name="Answer">The answer to the query..</param>
+        public KnowledgeGuestSearchDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, List<KnowledgeGuestDocumentVariationAnswer> Variations = null, string Answer = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -84,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DatePublished = DatePublished;
             this.DocumentVersion = DocumentVersion;
             this.Variations = Variations;
+            this.Answer = Answer;
             
         }
         
@@ -200,15 +202,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Variations of the document.
-        /// </summary>
-        /// <value>Variations of the document.</value>
-        [DataMember(Name="variations", EmitDefaultValue=false)]
-        public List<KnowledgeGuestDocumentVariation> Variations { get; set; }
-
-
-
-        /// <summary>
         /// ID of the guest session.
         /// </summary>
         /// <value>ID of the guest session.</value>
@@ -227,6 +220,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Variations of the document.
+        /// </summary>
+        /// <value>Variations of the document.</value>
+        [DataMember(Name="variations", EmitDefaultValue=false)]
+        public List<KnowledgeGuestDocumentVariationAnswer> Variations { get; set; }
+
+
+
+        /// <summary>
+        /// The answer to the query.
+        /// </summary>
+        /// <value>The answer to the query.</value>
+        [DataMember(Name="answer", EmitDefaultValue=false)]
+        public string Answer { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -241,7 +252,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KnowledgeGuestDocument {\n");
+            sb.Append("class KnowledgeGuestSearchDocumentResponse {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -256,9 +267,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DocumentVersion: ").Append(DocumentVersion).Append("\n");
-            sb.Append("  Variations: ").Append(Variations).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  Variations: ").Append(Variations).Append("\n");
+            sb.Append("  Answer: ").Append(Answer).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -285,15 +297,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KnowledgeGuestDocument);
+            return this.Equals(obj as KnowledgeGuestSearchDocumentResponse);
         }
 
         /// <summary>
-        /// Returns true if KnowledgeGuestDocument instances are equal
+        /// Returns true if KnowledgeGuestSearchDocumentResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of KnowledgeGuestDocument to be compared</param>
+        /// <param name="other">Instance of KnowledgeGuestSearchDocumentResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KnowledgeGuestDocument other)
+        public bool Equals(KnowledgeGuestSearchDocumentResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -366,11 +378,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DocumentVersion.Equals(other.DocumentVersion)
                 ) &&
                 (
-                    this.Variations == other.Variations ||
-                    this.Variations != null &&
-                    this.Variations.SequenceEqual(other.Variations)
-                ) &&
-                (
                     this.SessionId == other.SessionId ||
                     this.SessionId != null &&
                     this.SessionId.Equals(other.SessionId)
@@ -379,6 +386,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Category == other.Category ||
                     this.Category != null &&
                     this.Category.Equals(other.Category)
+                ) &&
+                (
+                    this.Variations == other.Variations ||
+                    this.Variations != null &&
+                    this.Variations.SequenceEqual(other.Variations)
+                ) &&
+                (
+                    this.Answer == other.Answer ||
+                    this.Answer != null &&
+                    this.Answer.Equals(other.Answer)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -437,14 +454,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DocumentVersion != null)
                     hash = hash * 59 + this.DocumentVersion.GetHashCode();
 
-                if (this.Variations != null)
-                    hash = hash * 59 + this.Variations.GetHashCode();
-
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
 
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+
+                if (this.Variations != null)
+                    hash = hash * 59 + this.Variations.GetHashCode();
+
+                if (this.Answer != null)
+                    hash = hash * 59 + this.Answer.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

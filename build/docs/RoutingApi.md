@@ -130,6 +130,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingSkills**](RoutingApi.html#postroutingskills) | **Post** /api/v2/routing/skills | Create Skill |
 | [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **Post** /api/v2/routing/sms/addresses | Provision an Address for SMS |
 | [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **Post** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
+| [**PostRoutingSmsPhonenumbersAlphanumeric**](RoutingApi.html#postroutingsmsphonenumbersalphanumeric) | **Post** /api/v2/routing/sms/phonenumbers/alphanumeric | Provision an alphanumeric number for SMS |
 | [**PostRoutingSmsPhonenumbersImport**](RoutingApi.html#postroutingsmsphonenumbersimport) | **Post** /api/v2/routing/sms/phonenumbers/import | Imports a phone number for SMS |
 | [**PostRoutingUtilizationLabels**](RoutingApi.html#postroutingutilizationlabels) | **Post** /api/v2/routing/utilization/labels | Create a utilization label |
 | [**PostRoutingUtilizationTags**](RoutingApi.html#postroutingutilizationtags) | **Post** /api/v2/routing/utilization/tags | Create an utilization tag |
@@ -4778,7 +4779,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **phoneNumber** | **string**| Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. | [optional]  |
-| **phoneNumberType** | [**List<string>**](string.html)| Filter on phone number type | [optional] <br />**Values**: local, mobile, tollfree, shortcode |
+| **phoneNumberType** | [**List<string>**](string.html)| Filter on phone number type | [optional] <br />**Values**: local, mobile, tollfree, shortcode, alphanumeric |
 | **phoneNumberStatus** | [**List<string>**](string.html)| Filter on phone number status | [optional] <br />**Values**: active, invalid, initiated, porting, pending, pending-cancellation |
 | **countryCode** | [**List<string>**](string.html)| Filter on country code | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
@@ -8205,6 +8206,71 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision.html)| SmsPhoneNumber |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="postroutingsmsphonenumbersalphanumeric"></a>
+
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsPhonenumbersAlphanumeric (SmsAlphanumericProvision body)
+
+
+
+Provision an alphanumeric number for SMS
+
+PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* sms:phoneNumber:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingSmsPhonenumbersAlphanumericExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new SmsAlphanumericProvision(); // SmsAlphanumericProvision | SmsPhoneNumber
+
+            try
+            { 
+                // Provision an alphanumeric number for SMS
+                SmsPhoneNumber result = apiInstance.PostRoutingSmsPhonenumbersAlphanumeric(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingSmsPhonenumbersAlphanumeric: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SmsAlphanumericProvision**](SmsAlphanumericProvision.html)| SmsPhoneNumber |  |
 {: class="table table-striped"}
 
 ### Return type

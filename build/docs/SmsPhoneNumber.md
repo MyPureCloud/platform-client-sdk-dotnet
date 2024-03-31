@@ -9,7 +9,7 @@ title: SmsPhoneNumber
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **PhoneNumber** | **string** | A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234 | |
+| **PhoneNumber** | **string** | A phone number provisioned for SMS communications. | |
 | **PhoneNumberType** | **string** | Type of the phone number provisioned. | [optional] |
 | **ProvisionedThroughPureCloud** | **bool?** | Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud | [optional] |
 | **PhoneNumberStatus** | **string** | Status of the provisioned phone number. | [optional] |

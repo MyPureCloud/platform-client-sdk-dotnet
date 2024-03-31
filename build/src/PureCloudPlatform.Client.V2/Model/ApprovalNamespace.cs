@@ -418,10 +418,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Webhooks,
             
             /// <summary>
+            /// Enum Workforcemanagementforecast for "workforce.management.forecast"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.forecast")]
+            Workforcemanagementforecast,
+            
+            /// <summary>
             /// Enum Workforcemanagement for "workforce.management"
             /// </summary>
             [EnumMember(Value = "workforce.management")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum System for "system"
+            /// </summary>
+            [EnumMember(Value = "system")]
+            System
         }
         /// <summary>
         /// The current namespace approval status.
@@ -541,7 +553,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Secondary for "Secondary"
             /// </summary>
             [EnumMember(Value = "Secondary")]
-            Secondary
+            Secondary,
+            
+            /// <summary>
+            /// Enum System for "System"
+            /// </summary>
+            [EnumMember(Value = "System")]
+            System
         }
         /// <summary>
         /// The namespace of the associated approvers.

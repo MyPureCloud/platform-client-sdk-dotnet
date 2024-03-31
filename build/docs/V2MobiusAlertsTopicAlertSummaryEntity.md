@@ -8,10 +8,10 @@ title: V2MobiusAlertsTopicAlertSummaryEntity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EntityType** | **string** |  | [optional] |
-| **User** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
-| **Group** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
-| **Queue** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
-| **Team** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
+| **User** | [**V2MobiusAlertsTopicAlertingAddressableEntityRef**](V2MobiusAlertsTopicAlertingAddressableEntityRef.html) |  | [optional] |
+| **Group** | [**V2MobiusAlertsTopicAlertingAddressableEntityRef**](V2MobiusAlertsTopicAlertingAddressableEntityRef.html) |  | [optional] |
+| **Queue** | [**V2MobiusAlertsTopicAlertingAddressableEntityRef**](V2MobiusAlertsTopicAlertingAddressableEntityRef.html) |  | [optional] |
+| **Team** | [**V2MobiusAlertsTopicAlertingAddressableEntityRef**](V2MobiusAlertsTopicAlertingAddressableEntityRef.html) |  | [optional] |
 | **Alerting** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 

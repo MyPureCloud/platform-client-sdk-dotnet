@@ -67,10 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Recipient">Recipient.</param>
         /// <param name="NotificationTypes">NotificationTypes.</param>
-        public V2MobiusAlertsTopicAlertNotification(string Recipient = null, List<NotificationTypesEnum> NotificationTypes = null)
+        /// <param name="Locale">Locale.</param>
+        public V2MobiusAlertsTopicAlertNotification(string Recipient = null, List<NotificationTypesEnum> NotificationTypes = null, string Locale = null)
         {
             this.Recipient = Recipient;
             this.NotificationTypes = NotificationTypes;
+            this.Locale = Locale;
             
         }
         
@@ -91,6 +93,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<NotificationTypesEnum> NotificationTypes { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Locale
+        /// </summary>
+        [DataMember(Name="locale", EmitDefaultValue=false)]
+        public string Locale { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("  NotificationTypes: ").Append(NotificationTypes).Append("\n");
+            sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -151,6 +162,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NotificationTypes == other.NotificationTypes ||
                     this.NotificationTypes != null &&
                     this.NotificationTypes.SequenceEqual(other.NotificationTypes)
+                ) &&
+                (
+                    this.Locale == other.Locale ||
+                    this.Locale != null &&
+                    this.Locale.Equals(other.Locale)
                 );
         }
 
@@ -170,6 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.NotificationTypes != null)
                     hash = hash * 59 + this.NotificationTypes.GetHashCode();
+
+                if (this.Locale != null)
+                    hash = hash * 59 + this.Locale.GetHashCode();
 
                 return hash;
             }

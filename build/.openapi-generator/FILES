@@ -134,6 +134,7 @@ docs/AlertingApi.md
 docs/AlertingUnreadStatus.md
 docs/AllTimePoints.md
 docs/Alteration.md
+docs/AlternativeShiftNotification.md
 docs/AmazonLexRequest.md
 docs/AnalyticsAgentGroup.md
 docs/AnalyticsApi.json
@@ -1101,6 +1102,12 @@ docs/DIDNumberEntityListing.md
 docs/DIDPool.md
 docs/DIDPoolEntityListing.md
 docs/DailyPossibleShift.md
+docs/DashboardConfiguration.md
+docs/DashboardConfigurationBulkRequest.md
+docs/DashboardConfigurationListing.md
+docs/DashboardConfigurationQueryRequest.md
+docs/DashboardUser.md
+docs/DashboardUserListing.md
 docs/DataActionConditionPredicate.md
 docs/DataActionConditionSettings.md
 docs/DataActionContactColumnFieldMapping.md
@@ -1439,9 +1446,13 @@ docs/DialerCampaignRuleConfigChangeCampaignRuleCondition.md
 docs/DialerCampaignRuleConfigChangeCampaignRuleEntities.md
 docs/DialerCampaignRuleConfigChangeObject.md
 docs/DialerCampaignRuleConfigChangeUriReference.md
+docs/DialerCampaignScheduleConfigChangeAlteration.md
 docs/DialerCampaignScheduleConfigChangeCampaignSchedule.md
 docs/DialerCampaignScheduleConfigChangeObject.md
+docs/DialerCampaignScheduleConfigChangeRecurrencePattern.md
+docs/DialerCampaignScheduleConfigChangeRecurrenceRange.md
 docs/DialerCampaignScheduleConfigChangeScheduleInterval.md
+docs/DialerCampaignScheduleConfigChangeScheduleRecurrence.md
 docs/DialerCampaignScheduleConfigChangeUriReference.md
 docs/DialerContact.md
 docs/DialerContactId.md
@@ -1541,6 +1552,7 @@ docs/DocumentArticle.md
 docs/DocumentAttribute.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
+docs/DocumentBodyBlockWithHighlight.md
 docs/DocumentBodyImage.md
 docs/DocumentBodyImageProperties.md
 docs/DocumentBodyList.md
@@ -1549,6 +1561,7 @@ docs/DocumentBodyListBlockProperties.md
 docs/DocumentBodyListItemProperties.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
+docs/DocumentBodyParagraphWithHighlight.md
 docs/DocumentBodyTable.md
 docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
@@ -1559,8 +1572,11 @@ docs/DocumentBodyTableRowBlock.md
 docs/DocumentBodyTableRowBlockProperties.md
 docs/DocumentBodyVideo.md
 docs/DocumentBodyVideoProperties.md
+docs/DocumentBodyWithHighlight.md
 docs/DocumentCategoryInput.md
 docs/DocumentContentBlock.md
+docs/DocumentContentBlockWithHighlight.md
+docs/DocumentContentHighlightIndex.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
 docs/DocumentListContentBlock.md
@@ -1577,6 +1593,7 @@ docs/DocumentThumbnail.md
 docs/DocumentUpdate.md
 docs/DocumentUpload.md
 docs/DocumentVariation.md
+docs/DocumentVariationAnswer.md
 docs/DocumentVariationContext.md
 docs/DocumentVariationListing.md
 docs/DocumentationResult.md
@@ -1633,6 +1650,7 @@ docs/DynamicGroupQuery.md
 docs/DynamicGroupQueryPreview.md
 docs/DynamicGroupRoutingSkillCondition.md
 docs/DynamicGroupSkillCondition.md
+docs/DynamicLineBalancingSettings.md
 docs/Edge.md
 docs/EdgeAutoUpdateConfig.md
 docs/EdgeChangeTopicEdge.md
@@ -1874,6 +1892,8 @@ docs/FacebookIntegration.md
 docs/FacebookIntegrationEntityListing.md
 docs/FacebookIntegrationRequest.md
 docs/FacebookIntegrationUpdateRequest.md
+docs/FacebookPermission.md
+docs/FacebookPermissionEntityListing.md
 docs/FacebookScopedId.md
 docs/Facet.md
 docs/FacetEntry.md
@@ -2093,6 +2113,8 @@ docs/GetAnalyticsJourneysAggregatesJobResults-example.txt
 docs/GetAnalyticsJourneysAggregatesJobResults-example.txt
 docs/GetAnalyticsKnowledgeAggregatesJob-example.txt
 docs/GetAnalyticsKnowledgeAggregatesJobResults-example.txt
+docs/GetAnalyticsReportingDashboardsUser-example.txt
+docs/GetAnalyticsReportingDashboardsUsers-example.txt
 docs/GetAnalyticsReportingExports-example.txt
 docs/GetAnalyticsReportingExportsMetadata-example.txt
 docs/GetAnalyticsReportingMetadata-example.txt
@@ -2104,6 +2126,7 @@ docs/GetAnalyticsReportingScheduleHistoryLatest-example.txt
 docs/GetAnalyticsReportingScheduleHistoryRunId-example.txt
 docs/GetAnalyticsReportingSchedules-example.txt
 docs/GetAnalyticsReportingSettings-example.txt
+docs/GetAnalyticsReportingSettingsUserDashboards-example.txt
 docs/GetAnalyticsReportingTimeperiods-example.txt
 docs/GetAnalyticsResolutionsAggregatesJob-example.txt
 docs/GetAnalyticsResolutionsAggregatesJobResults-example.txt
@@ -2291,6 +2314,7 @@ docs/GetConversationsMessages-example.txt
 docs/GetConversationsMessagesCachedmedia-example.txt
 docs/GetConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/GetConversationsMessagingFacebookApp-example.txt
+docs/GetConversationsMessagingFacebookPermissions-example.txt
 docs/GetConversationsMessagingIntegrations-example.txt
 docs/GetConversationsMessagingIntegrationsFacebook-example.txt
 docs/GetConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
@@ -3464,6 +3488,9 @@ docs/JourneySessionEventsNotificationSessionLastEvent.md
 docs/JourneySessionEventsNotificationUser.md
 docs/JourneySurveyQuestion.md
 docs/JourneyView.md
+docs/JourneyViewChart.md
+docs/JourneyViewChartGroupByAttribute.md
+docs/JourneyViewChartMetric.md
 docs/JourneyViewElement.md
 docs/JourneyViewElementAttributes.md
 docs/JourneyViewElementFilter.md
@@ -3594,19 +3621,21 @@ docs/KnowledgeExportJobRequest.md
 docs/KnowledgeExportJobResponse.md
 docs/KnowledgeExtendedCategory.md
 docs/KnowledgeGroupStatistics.md
-docs/KnowledgeGuestDocument.md
 docs/KnowledgeGuestDocumentCopy.md
 docs/KnowledgeGuestDocumentFeedback.md
 docs/KnowledgeGuestDocumentPresentation.md
+docs/KnowledgeGuestDocumentResponse.md
 docs/KnowledgeGuestDocumentResponseListing.md
 docs/KnowledgeGuestDocumentSuggestion.md
 docs/KnowledgeGuestDocumentSuggestionRequest.md
 docs/KnowledgeGuestDocumentSuggestionResult.md
 docs/KnowledgeGuestDocumentVariation.md
+docs/KnowledgeGuestDocumentVariationAnswer.md
 docs/KnowledgeGuestDocumentVariationContext.md
 docs/KnowledgeGuestDocumentVersionReference.md
 docs/KnowledgeGuestDocumentView.md
 docs/KnowledgeGuestSearchClientApplication.md
+docs/KnowledgeGuestSearchDocumentResponse.md
 docs/KnowledgeGuestSession.md
 docs/KnowledgeGuestSessionApp.md
 docs/KnowledgeGuestSessionContext.md
@@ -3624,7 +3653,8 @@ docs/KnowledgeParseJobRequestPatch.md
 docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
-docs/KnowledgeSearchDocument.md
+docs/KnowledgeSearchDocumentResponse.md
+docs/KnowledgeSearchDocumentV1.md
 docs/KnowledgeSearchRequest.md
 docs/KnowledgeSearchResponse.md
 docs/KnowledgeTraining.md
@@ -3725,6 +3755,7 @@ docs/LexV2BotEntityListing.md
 docs/LexV2Intent.md
 docs/LexV2Slot.md
 docs/Library.md
+docs/LibraryBatchRequest.md
 docs/LibraryEntityListing.md
 docs/LicenseApi.json
 docs/LicenseApi.md
@@ -4444,9 +4475,12 @@ docs/PostAnalyticsKnowledgeAggregatesQuery-example.txt
 docs/PostAnalyticsQueuesObservationsQuery-example.txt
 docs/PostAnalyticsQueuesObservationsQuery-example.txt
 docs/PostAnalyticsRatelimitsAggregatesQuery-example.txt
+docs/PostAnalyticsReportingDashboardsUsersBulkRemove-example.txt
 docs/PostAnalyticsReportingExports-example.txt
 docs/PostAnalyticsReportingScheduleRunreport-example.txt
 docs/PostAnalyticsReportingSchedules-example.txt
+docs/PostAnalyticsReportingSettingsDashboardsBulkRemove-example.txt
+docs/PostAnalyticsReportingSettingsDashboardsQuery-example.txt
 docs/PostAnalyticsResolutionsAggregatesJobs-example.txt
 docs/PostAnalyticsRoutingActivityQuery-example.txt
 docs/PostAnalyticsRoutingActivityQuery-example.txt
@@ -4856,6 +4890,7 @@ docs/PostRecordingsDeletionprotection-example.txt
 docs/PostRecordingsScreensessionsAcknowledge-example.txt
 docs/PostRecordingsScreensessionsMetadata-example.txt
 docs/PostResponsemanagementLibraries-example.txt
+docs/PostResponsemanagementLibrariesBulk-example.txt
 docs/PostResponsemanagementResponseassetsSearch-example.txt
 docs/PostResponsemanagementResponseassetsUploads-example.txt
 docs/PostResponsemanagementResponses-example.txt
@@ -4878,6 +4913,7 @@ docs/PostRoutingSkillgroups-example.txt
 docs/PostRoutingSkills-example.txt
 docs/PostRoutingSmsAddresses-example.txt
 docs/PostRoutingSmsPhonenumbers-example.txt
+docs/PostRoutingSmsPhonenumbersAlphanumeric-example.txt
 docs/PostRoutingSmsPhonenumbersImport-example.txt
 docs/PostRoutingUtilizationLabels-example.txt
 docs/PostRoutingUtilizationTags-example.txt
@@ -5970,6 +6006,7 @@ docs/SkillsToRemove.md
 docs/SmsAddress.md
 docs/SmsAddressEntityListing.md
 docs/SmsAddressProvision.md
+docs/SmsAlphanumericProvision.md
 docs/SmsAvailablePhoneNumber.md
 docs/SmsConfig.md
 docs/SmsPhoneNumber.md
@@ -6558,11 +6595,12 @@ docs/V2MobiusAlertsTopicAlertNotification.md
 docs/V2MobiusAlertsTopicAlertRuleProperties.md
 docs/V2MobiusAlertsTopicAlertSummary.md
 docs/V2MobiusAlertsTopicAlertSummaryEntity.md
+docs/V2MobiusAlertsTopicAlertingAddressableEntityRef.md
 docs/V2MobiusAlertsTopicCondition.md
 docs/V2MobiusAlertsTopicConditionRulePredicate.md
 docs/V2MobiusAlertsTopicEntityProperties.md
-docs/V2MobiusRulesTopicAddressableEntityRef.md
 docs/V2MobiusRulesTopicAlertNotification.md
+docs/V2MobiusRulesTopicAlertingAddressableEntityRef.md
 docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
@@ -6611,6 +6649,7 @@ docs/VoicemailsSearchResponse.md
 docs/Void.md
 docs/WaitlistPosition.md
 docs/WaitlistPositionListing.md
+docs/Warning.md
 docs/WebActionEvent.md
 docs/WebChatApi.json
 docs/WebChatApi.md
@@ -6809,6 +6848,7 @@ docs/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.md
 docs/WfmUserEntityListing.md
 docs/WfmUserNotification.md
 docs/WfmUserNotificationTopicAdherenceExplanationNotification.md
+docs/WfmUserNotificationTopicAlternativeShiftNotification.md
 docs/WfmUserNotificationTopicBusinessUnit.md
 docs/WfmUserNotificationTopicManagementUnit.md
 docs/WfmUserNotificationTopicShiftTradeNotification.md
@@ -6847,6 +6887,7 @@ docs/WhatsAppIntegration.md
 docs/WhatsAppIntegrationEntityListing.md
 docs/WhatsAppIntegrationRequest.md
 docs/WhatsAppIntegrationUpdateRequest.md
+docs/Widget.md
 docs/WidgetClientConfig.md
 docs/WidgetClientConfigThirdParty.md
 docs/WidgetClientConfigV1.md
@@ -7196,6 +7237,7 @@ src/PureCloudPlatform.Client.V2/Model/AlertSummaryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/AlertingUnreadStatus.cs
 src/PureCloudPlatform.Client.V2/Model/AllTimePoints.cs
 src/PureCloudPlatform.Client.V2/Model/Alteration.cs
+src/PureCloudPlatform.Client.V2/Model/AlternativeShiftNotification.cs
 src/PureCloudPlatform.Client.V2/Model/AmazonLexRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentGroup.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversation.cs
@@ -8143,6 +8185,12 @@ src/PureCloudPlatform.Client.V2/Model/DIDNumberEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DIDPool.cs
 src/PureCloudPlatform.Client.V2/Model/DIDPoolEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DailyPossibleShift.cs
+src/PureCloudPlatform.Client.V2/Model/DashboardConfiguration.cs
+src/PureCloudPlatform.Client.V2/Model/DashboardConfigurationBulkRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DashboardConfigurationListing.cs
+src/PureCloudPlatform.Client.V2/Model/DashboardConfigurationQueryRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DashboardUser.cs
+src/PureCloudPlatform.Client.V2/Model/DashboardUserListing.cs
 src/PureCloudPlatform.Client.V2/Model/DataActionConditionPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/DataActionConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/DataActionContactColumnFieldMapping.cs
@@ -8212,9 +8260,13 @@ src/PureCloudPlatform.Client.V2/Model/DialerCampaignRuleConfigChangeCampaignRule
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignRuleConfigChangeCampaignRuleEntities.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignRuleConfigChangeObject.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignRuleConfigChangeUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeAlteration.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeCampaignSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeObject.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeRecurrencePattern.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeRecurrenceRange.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeScheduleInterval.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeScheduleRecurrence.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/DialerContact.cs
 src/PureCloudPlatform.Client.V2/Model/DialerContactId.cs
@@ -8314,6 +8366,7 @@ src/PureCloudPlatform.Client.V2/Model/DocumentArticle.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBody.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyBlock.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyBlockWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyImage.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyImageProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyList.cs
@@ -8322,6 +8375,7 @@ src/PureCloudPlatform.Client.V2/Model/DocumentBodyListBlockProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyListItemProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraph.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTable.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCaptionBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableCaptionItem.cs
@@ -8332,8 +8386,11 @@ src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableRowBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableRowBlockProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideo.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideoProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentCategoryInput.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentContentBlock.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentContentBlockWithHighlight.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentContentHighlightIndex.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentFaq.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentListContentBlock.cs
@@ -8350,6 +8407,7 @@ src/PureCloudPlatform.Client.V2/Model/DocumentThumbnail.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentUpload.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentVariation.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentVariationAnswer.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentVariationContext.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentVariationListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentationResult.cs
@@ -8404,6 +8462,7 @@ src/PureCloudPlatform.Client.V2/Model/DynamicGroupQuery.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicGroupQueryPreview.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicGroupRoutingSkillCondition.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicGroupSkillCondition.cs
+src/PureCloudPlatform.Client.V2/Model/DynamicLineBalancingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Edge.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeAutoUpdateConfig.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeChangeTopicEdge.cs
@@ -8639,6 +8698,8 @@ src/PureCloudPlatform.Client.V2/Model/FacebookIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookIntegrationUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/FacebookPermission.cs
+src/PureCloudPlatform.Client.V2/Model/FacebookPermissionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/Facet.cs
 src/PureCloudPlatform.Client.V2/Model/FacetEntry.cs
@@ -9035,6 +9096,9 @@ src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationSessionLas
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationUser.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySurveyQuestion.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyView.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyViewChart.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyViewChartGroupByAttribute.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyViewChartMetric.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewElement.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewElementAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewElementFilter.cs
@@ -9163,19 +9227,21 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExtendedCategory.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGroupStatistics.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocument.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentCopy.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentPresentation.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentResponseListing.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentSuggestion.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentSuggestionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentSuggestionResult.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentVariation.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentVariationAnswer.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentVariationContext.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentVersionReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestDocumentView.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSearchClientApplication.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSearchDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSession.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSessionApp.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSessionContext.cs
@@ -9193,7 +9259,8 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseRecord.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocument.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentV1.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeTraining.cs
@@ -9288,6 +9355,7 @@ src/PureCloudPlatform.Client.V2/Model/LexV2BotEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LexV2Intent.cs
 src/PureCloudPlatform.Client.V2/Model/LexV2Slot.cs
 src/PureCloudPlatform.Client.V2/Model/Library.cs
+src/PureCloudPlatform.Client.V2/Model/LibraryBatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LibraryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LicenseAssignmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LicenseBatchAssignmentRequest.cs
@@ -10443,6 +10511,7 @@ src/PureCloudPlatform.Client.V2/Model/SkillsToRemove.cs
 src/PureCloudPlatform.Client.V2/Model/SmsAddress.cs
 src/PureCloudPlatform.Client.V2/Model/SmsAddressEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SmsAddressProvision.cs
+src/PureCloudPlatform.Client.V2/Model/SmsAlphanumericProvision.cs
 src/PureCloudPlatform.Client.V2/Model/SmsAvailablePhoneNumber.cs
 src/PureCloudPlatform.Client.V2/Model/SmsConfig.cs
 src/PureCloudPlatform.Client.V2/Model/SmsPhoneNumber.cs
@@ -11003,11 +11072,12 @@ src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertRuleProperties.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertSummary.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertSummaryEntity.cs
+src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicAlertingAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicCondition.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicConditionRulePredicate.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusAlertsTopicEntityProperties.cs
-src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicAlertNotification.cs
+src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicAlertingAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicCondition.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicConditionRulePredicate.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicEntityProperties.cs
@@ -11054,6 +11124,7 @@ src/PureCloudPlatform.Client.V2/Model/VoicemailsSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Void.cs
 src/PureCloudPlatform.Client.V2/Model/WaitlistPosition.cs
 src/PureCloudPlatform.Client.V2/Model/WaitlistPositionListing.cs
+src/PureCloudPlatform.Client.V2/Model/Warning.cs
 src/PureCloudPlatform.Client.V2/Model/WebActionEvent.cs
 src/PureCloudPlatform.Client.V2/Model/WebChatConfig.cs
 src/PureCloudPlatform.Client.V2/Model/WebChatConversation.cs
@@ -11246,6 +11317,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmUpdateAgentDetailsTopicWfmUpdateAgentDe
 src/PureCloudPlatform.Client.V2/Model/WfmUserEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserNotificationTopicAdherenceExplanationNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmUserNotificationTopicAlternativeShiftNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserNotificationTopicBusinessUnit.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserNotificationTopicManagementUnit.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUserNotificationTopicShiftTradeNotification.cs
@@ -11284,6 +11356,7 @@ src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegrationUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/Widget.cs
 src/PureCloudPlatform.Client.V2/Model/WidgetClientConfig.cs
 src/PureCloudPlatform.Client.V2/Model/WidgetClientConfigThirdParty.cs
 src/PureCloudPlatform.Client.V2/Model/WidgetClientConfigV1.cs

@@ -333,9 +333,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>KnowledgeGuestDocument</returns>
+        /// <returns>KnowledgeGuestDocumentResponse</returns>
         
-        KnowledgeGuestDocument GetKnowledgeGuestSessionDocument (string sessionId, string documentId);
+        KnowledgeGuestDocumentResponse GetKnowledgeGuestSessionDocument (string sessionId, string documentId);
 
         /// <summary>
         /// Get a knowledge document by ID.
@@ -346,9 +346,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>ApiResponse of KnowledgeGuestDocument</returns>
+        /// <returns>ApiResponse of KnowledgeGuestDocumentResponse</returns>
         
-        ApiResponse<KnowledgeGuestDocument> GetKnowledgeGuestSessionDocumentWithHttpInfo (string sessionId, string documentId);
+        ApiResponse<KnowledgeGuestDocumentResponse> GetKnowledgeGuestSessionDocumentWithHttpInfo (string sessionId, string documentId);
 
         /// <summary>
         /// Get documents.
@@ -3123,9 +3123,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>Task of KnowledgeGuestDocument</returns>
+        /// <returns>Task of KnowledgeGuestDocumentResponse</returns>
         
-        System.Threading.Tasks.Task<KnowledgeGuestDocument> GetKnowledgeGuestSessionDocumentAsync (string sessionId, string documentId);
+        System.Threading.Tasks.Task<KnowledgeGuestDocumentResponse> GetKnowledgeGuestSessionDocumentAsync (string sessionId, string documentId);
 
         /// <summary>
         /// Get a knowledge document by ID.
@@ -3136,9 +3136,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>Task of ApiResponse (KnowledgeGuestDocument)</returns>
+        /// <returns>Task of ApiResponse (KnowledgeGuestDocumentResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocument>> GetKnowledgeGuestSessionDocumentAsyncWithHttpInfo (string sessionId, string documentId);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponse>> GetKnowledgeGuestSessionDocumentAsyncWithHttpInfo (string sessionId, string documentId);
 
         /// <summary>
         /// Get documents.
@@ -8211,11 +8211,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>KnowledgeGuestDocument</returns>
+        /// <returns>KnowledgeGuestDocumentResponse</returns>
         
-        public KnowledgeGuestDocument GetKnowledgeGuestSessionDocument (string sessionId, string documentId)
+        public KnowledgeGuestDocumentResponse GetKnowledgeGuestSessionDocument (string sessionId, string documentId)
         {
-             ApiResponse<KnowledgeGuestDocument> localVarResponse = GetKnowledgeGuestSessionDocumentWithHttpInfo(sessionId, documentId);
+             ApiResponse<KnowledgeGuestDocumentResponse> localVarResponse = GetKnowledgeGuestSessionDocumentWithHttpInfo(sessionId, documentId);
              return localVarResponse.Data;
         }
 
@@ -8226,9 +8226,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>ApiResponse of KnowledgeGuestDocument</returns>
+        /// <returns>ApiResponse of KnowledgeGuestDocumentResponse</returns>
         
-        public ApiResponse< KnowledgeGuestDocument > GetKnowledgeGuestSessionDocumentWithHttpInfo (string sessionId, string documentId)
+        public ApiResponse< KnowledgeGuestDocumentResponse > GetKnowledgeGuestSessionDocumentWithHttpInfo (string sessionId, string documentId)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -8299,9 +8299,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionDocument: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<KnowledgeGuestDocument>(localVarStatusCode,
+            return new ApiResponse<KnowledgeGuestDocumentResponse>(localVarStatusCode,
                 localVarHeaders,
-                (KnowledgeGuestDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeGuestDocument)),
+                (KnowledgeGuestDocumentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeGuestDocumentResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8314,11 +8314,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>Task of KnowledgeGuestDocument</returns>
+        /// <returns>Task of KnowledgeGuestDocumentResponse</returns>
         
-        public async System.Threading.Tasks.Task<KnowledgeGuestDocument> GetKnowledgeGuestSessionDocumentAsync (string sessionId, string documentId)
+        public async System.Threading.Tasks.Task<KnowledgeGuestDocumentResponse> GetKnowledgeGuestSessionDocumentAsync (string sessionId, string documentId)
         {
-             ApiResponse<KnowledgeGuestDocument> localVarResponse = await GetKnowledgeGuestSessionDocumentAsyncWithHttpInfo(sessionId, documentId);
+             ApiResponse<KnowledgeGuestDocumentResponse> localVarResponse = await GetKnowledgeGuestSessionDocumentAsyncWithHttpInfo(sessionId, documentId);
              return localVarResponse.Data;
 
         }
@@ -8330,9 +8330,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="documentId">Document ID</param>
-        /// <returns>Task of ApiResponse (KnowledgeGuestDocument)</returns>
+        /// <returns>Task of ApiResponse (KnowledgeGuestDocumentResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocument>> GetKnowledgeGuestSessionDocumentAsyncWithHttpInfo (string sessionId, string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponse>> GetKnowledgeGuestSessionDocumentAsyncWithHttpInfo (string sessionId, string documentId)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -8405,9 +8405,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeGuestSessionDocument: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<KnowledgeGuestDocument>(localVarStatusCode,
+            return new ApiResponse<KnowledgeGuestDocumentResponse>(localVarStatusCode,
                 localVarHeaders,
-                (KnowledgeGuestDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeGuestDocument)),
+                (KnowledgeGuestDocumentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeGuestDocumentResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

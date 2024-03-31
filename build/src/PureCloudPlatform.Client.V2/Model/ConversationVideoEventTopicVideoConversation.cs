@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Participants">Participants.</param>
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
-        public ConversationVideoEventTopicVideoConversation(string Id = null, string Name = null, List<ConversationVideoEventTopicVideoMediaParticipant> Participants = null, List<string> OtherMediaUris = null)
+        /// <param name="Address">Address.</param>
+        public ConversationVideoEventTopicVideoConversation(string Id = null, string Name = null, List<ConversationVideoEventTopicVideoMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
+            this.Address = Address;
             
         }
         
@@ -67,6 +69,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> OtherMediaUris { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public string Address { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OtherMediaUris == other.OtherMediaUris ||
                     this.OtherMediaUris != null &&
                     this.OtherMediaUris.SequenceEqual(other.OtherMediaUris)
+                ) &&
+                (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
                 );
         }
 
@@ -164,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
+
+                if (this.Address != null)
+                    hash = hash * 59 + this.Address.GetHashCode();
 
                 return hash;
             }

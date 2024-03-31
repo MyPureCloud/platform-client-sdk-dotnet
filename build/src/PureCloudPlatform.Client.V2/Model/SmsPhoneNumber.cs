@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Shortcode for "shortcode"
             /// </summary>
             [EnumMember(Value = "shortcode")]
-            Shortcode
+            Shortcode,
+            
+            /// <summary>
+            /// Enum Alphanumeric for "alphanumeric"
+            /// </summary>
+            [EnumMember(Value = "alphanumeric")]
+            Alphanumeric
         }
         /// <summary>
         /// Status of the provisioned phone number.
@@ -222,7 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SmsPhoneNumber" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="PhoneNumber">A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
+        /// <param name="PhoneNumber">A phone number provisioned for SMS communications. (required).</param>
         /// <param name="ProvisionedThroughPureCloud">Is set to false, if the phone number is provisioned through a SMS provider, outside of PureCloud.</param>
         /// <param name="PhoneNumberStatus">Status of the provisioned phone number..</param>
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with..</param>
@@ -292,9 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234
+        /// A phone number provisioned for SMS communications.
         /// </summary>
-        /// <value>A phone number provisioned for SMS communications in E.164 format. E.g. +13175555555 or +34234234234</value>
+        /// <value>A phone number provisioned for SMS communications.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
 

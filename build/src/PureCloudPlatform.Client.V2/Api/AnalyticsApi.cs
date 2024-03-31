@@ -737,6 +737,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KnowledgeAsyncAggregateQueryResponse> GetAnalyticsKnowledgeAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
+        /// Get dashboards summary for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>DashboardUser</returns>
+        
+        DashboardUser GetAnalyticsReportingDashboardsUser (string userId);
+
+        /// <summary>
+        /// Get dashboards summary for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of DashboardUser</returns>
+        
+        ApiResponse<DashboardUser> GetAnalyticsReportingDashboardsUserWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get dashboards summary for users in a org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>DashboardUserListing</returns>
+        
+        DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+
+        /// <summary>
+        /// Get dashboards summary for users in a org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>ApiResponse of DashboardUserListing</returns>
+        
+        ApiResponse<DashboardUserListing> GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+
+        /// <summary>
         /// Get all view export requests for a user
         /// </summary>
         /// <remarks>
@@ -1009,6 +1065,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AnalyticsReportingSettings</returns>
         
         ApiResponse<AnalyticsReportingSettings> GetAnalyticsReportingSettingsWithHttpInfo ();
+
+        /// <summary>
+        /// Get list of dashboards for an user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>DashboardConfigurationListing</returns>
+        
+        DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
+
+        /// <summary>
+        /// Get list of dashboards for an user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>ApiResponse of DashboardConfigurationListing</returns>
+        
+        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
 
         /// <summary>
         /// Get a list of report time periods.
@@ -2031,6 +2121,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RateLimitAggregateQueryResponse> PostAnalyticsRatelimitsAggregatesQueryWithHttpInfo (RateLimitAggregationQuery body);
 
         /// <summary>
+        /// Bulk delete dashboards owned by other user(s)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns></returns>
+        
+        void PostAnalyticsReportingDashboardsUsersBulkRemove (List<string> body);
+
+        /// <summary>
+        /// Bulk delete dashboards owned by other user(s)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostAnalyticsReportingDashboardsUsersBulkRemoveWithHttpInfo (List<string> body);
+
+        /// <summary>
         /// Generate a view export request
         /// </summary>
         /// <remarks>
@@ -2101,6 +2215,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ReportSchedule</returns>
         [Obsolete]
         ApiResponse<ReportSchedule> PostAnalyticsReportingSchedulesWithHttpInfo (ReportSchedule body);
+
+        /// <summary>
+        /// Bulk remove dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        
+        void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body);
+
+        /// <summary>
+        /// Bulk remove dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostAnalyticsReportingSettingsDashboardsBulkRemoveWithHttpInfo (DashboardConfigurationBulkRequest body);
+
+        /// <summary>
+        /// Query dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>DashboardConfigurationListing</returns>
+        
+        DashboardConfigurationListing PostAnalyticsReportingSettingsDashboardsQuery (DashboardConfigurationQueryRequest body);
+
+        /// <summary>
+        /// Query dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of DashboardConfigurationListing</returns>
+        
+        ApiResponse<DashboardConfigurationListing> PostAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (DashboardConfigurationQueryRequest body);
 
         /// <summary>
         /// Query for resolution aggregates asynchronously
@@ -3267,6 +3429,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<KnowledgeAsyncAggregateQueryResponse>> GetAnalyticsKnowledgeAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
+        /// Get dashboards summary for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of DashboardUser</returns>
+        
+        System.Threading.Tasks.Task<DashboardUser> GetAnalyticsReportingDashboardsUserAsync (string userId);
+
+        /// <summary>
+        /// Get dashboards summary for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (DashboardUser)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DashboardUser>> GetAnalyticsReportingDashboardsUserAsyncWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get dashboards summary for users in a org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>Task of DashboardUserListing</returns>
+        
+        System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+
+        /// <summary>
+        /// Get dashboards summary for users in a org
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>Task of ApiResponse (DashboardUserListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null);
+
+        /// <summary>
         /// Get all view export requests for a user
         /// </summary>
         /// <remarks>
@@ -3539,6 +3757,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AnalyticsReportingSettings)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AnalyticsReportingSettings>> GetAnalyticsReportingSettingsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get list of dashboards for an user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>Task of DashboardConfigurationListing</returns>
+        
+        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
+
+        /// <summary>
+        /// Get list of dashboards for an user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
 
         /// <summary>
         /// Get a list of report time periods.
@@ -4561,6 +4813,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RateLimitAggregateQueryResponse>> PostAnalyticsRatelimitsAggregatesQueryAsyncWithHttpInfo (RateLimitAggregationQuery body);
 
         /// <summary>
+        /// Bulk delete dashboards owned by other user(s)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostAnalyticsReportingDashboardsUsersBulkRemoveAsync (List<string> body);
+
+        /// <summary>
+        /// Bulk delete dashboards owned by other user(s)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostAnalyticsReportingDashboardsUsersBulkRemoveAsyncWithHttpInfo (List<string> body);
+
+        /// <summary>
         /// Generate a view export request
         /// </summary>
         /// <remarks>
@@ -4631,6 +4907,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
         [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostAnalyticsReportingSchedulesAsyncWithHttpInfo (ReportSchedule body);
+
+        /// <summary>
+        /// Bulk remove dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostAnalyticsReportingSettingsDashboardsBulkRemoveAsync (DashboardConfigurationBulkRequest body);
+
+        /// <summary>
+        /// Bulk remove dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostAnalyticsReportingSettingsDashboardsBulkRemoveAsyncWithHttpInfo (DashboardConfigurationBulkRequest body);
+
+        /// <summary>
+        /// Query dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of DashboardConfigurationListing</returns>
+        
+        System.Threading.Tasks.Task<DashboardConfigurationListing> PostAnalyticsReportingSettingsDashboardsQueryAsync (DashboardConfigurationQueryRequest body);
+
+        /// <summary>
+        /// Query dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> PostAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (DashboardConfigurationQueryRequest body);
 
         /// <summary>
         /// Query for resolution aggregates asynchronously
@@ -11019,6 +11343,445 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get dashboards summary for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>DashboardUser</returns>
+        
+        public DashboardUser GetAnalyticsReportingDashboardsUser (string userId)
+        {
+             ApiResponse<DashboardUser> localVarResponse = GetAnalyticsReportingDashboardsUserWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get dashboards summary for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of DashboardUser</returns>
+        
+        public ApiResponse< DashboardUser > GetAnalyticsReportingDashboardsUserWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AnalyticsApi->GetAnalyticsReportingDashboardsUser");
+
+            var localVarPath = "/api/v2/analytics/reporting/dashboards/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardUser>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardUser)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get dashboards summary for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of DashboardUser</returns>
+        
+        public async System.Threading.Tasks.Task<DashboardUser> GetAnalyticsReportingDashboardsUserAsync (string userId)
+        {
+             ApiResponse<DashboardUser> localVarResponse = await GetAnalyticsReportingDashboardsUserAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get dashboards summary for a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (DashboardUser)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardUser>> GetAnalyticsReportingDashboardsUserAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AnalyticsApi->GetAnalyticsReportingDashboardsUser");
+            
+
+            var localVarPath = "/api/v2/analytics/reporting/dashboards/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardUser>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardUser)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get dashboards summary for users in a org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>DashboardUserListing</returns>
+        
+        public DashboardUserListing GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        {
+             ApiResponse<DashboardUserListing> localVarResponse = GetAnalyticsReportingDashboardsUsersWithHttpInfo(sortBy, pageNumber, pageSize, id, state);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get dashboards summary for users in a org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>ApiResponse of DashboardUserListing</returns>
+        
+        public ApiResponse< DashboardUserListing > GetAnalyticsReportingDashboardsUsersWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        { 
+
+            var localVarPath = "/api/v2/analytics/reporting/dashboards/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardUserListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardUserListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardUserListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get dashboards summary for users in a org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>Task of DashboardUserListing</returns>
+        
+        public async System.Threading.Tasks.Task<DashboardUserListing> GetAnalyticsReportingDashboardsUsersAsync (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        {
+             ApiResponse<DashboardUserListing> localVarResponse = await GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo(sortBy, pageNumber, pageSize, id, state);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get dashboards summary for users in a org 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
+        /// <param name="state">Only list users of this state (optional)</param>
+        /// <returns>Task of ApiResponse (DashboardUserListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardUserListing>> GetAnalyticsReportingDashboardsUsersAsyncWithHttpInfo (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+        { 
+
+            var localVarPath = "/api/v2/analytics/reporting/dashboards/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUsers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingDashboardsUsers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardUserListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardUserListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardUserListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get all view export requests for a user 
         /// 
         /// </summary>
@@ -13328,6 +14091,247 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AnalyticsReportingSettings>(localVarStatusCode,
                 localVarHeaders,
                 (AnalyticsReportingSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsReportingSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of dashboards for an user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>DashboardConfigurationListing</returns>
+        
+        public DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        {
+             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of dashboards for an user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>ApiResponse of DashboardConfigurationListing</returns>
+        
+        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AnalyticsApi->GetAnalyticsReportingSettingsUserDashboards");
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/users/{userId}/dashboards";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (publicOnly != null) localVarQueryParams.Add(new Tuple<string, string>("publicOnly", this.Configuration.ApiClient.ParameterToString(publicOnly)));
+            if (favoriteOnly != null) localVarQueryParams.Add(new Tuple<string, string>("favoriteOnly", this.Configuration.ApiClient.ParameterToString(favoriteOnly)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsUserDashboards: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsUserDashboards: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of dashboards for an user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>Task of DashboardConfigurationListing</returns>
+        
+        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        {
+             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of dashboards for an user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="sortBy"> (optional, default to "asc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 50)</param>
+        /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
+        /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AnalyticsApi->GetAnalyticsReportingSettingsUserDashboards");
+            
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/users/{userId}/dashboards";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (publicOnly != null) localVarQueryParams.Add(new Tuple<string, string>("publicOnly", this.Configuration.ApiClient.ParameterToString(publicOnly)));
+            if (favoriteOnly != null) localVarQueryParams.Add(new Tuple<string, string>("favoriteOnly", this.Configuration.ApiClient.ParameterToString(favoriteOnly)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsUserDashboards: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsUserDashboards: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22168,6 +23172,225 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Bulk delete dashboards owned by other user(s) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns></returns>
+        
+        public void PostAnalyticsReportingDashboardsUsersBulkRemove (List<string> body)
+        {
+             PostAnalyticsReportingDashboardsUsersBulkRemoveWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Bulk delete dashboards owned by other user(s) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostAnalyticsReportingDashboardsUsersBulkRemoveWithHttpInfo (List<string> body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingDashboardsUsersBulkRemove");
+
+            var localVarPath = "/api/v2/analytics/reporting/dashboards/users/bulk/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingDashboardsUsersBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingDashboardsUsersBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk delete dashboards owned by other user(s) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostAnalyticsReportingDashboardsUsersBulkRemoveAsync (List<string> body)
+        {
+             await PostAnalyticsReportingDashboardsUsersBulkRemoveAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Bulk delete dashboards owned by other user(s) 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">List of userIds</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAnalyticsReportingDashboardsUsersBulkRemoveAsyncWithHttpInfo (List<string> body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingDashboardsUsersBulkRemove");
+            
+
+            var localVarPath = "/api/v2/analytics/reporting/dashboards/users/bulk/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingDashboardsUsersBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingDashboardsUsersBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Generate a view export request 
         /// This API creates a reporting export but the desired way to export analytics data is to use the analytics query APIs instead
         /// </summary>
@@ -22814,6 +24037,446 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ReportSchedule>(localVarStatusCode,
                 localVarHeaders,
                 (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Bulk remove dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        
+        public void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body)
+        {
+             PostAnalyticsReportingSettingsDashboardsBulkRemoveWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Bulk remove dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostAnalyticsReportingSettingsDashboardsBulkRemoveWithHttpInfo (DashboardConfigurationBulkRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingSettingsDashboardsBulkRemove");
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/dashboards/bulk/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Bulk remove dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostAnalyticsReportingSettingsDashboardsBulkRemoveAsync (DashboardConfigurationBulkRequest body)
+        {
+             await PostAnalyticsReportingSettingsDashboardsBulkRemoveAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Bulk remove dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAnalyticsReportingSettingsDashboardsBulkRemoveAsyncWithHttpInfo (DashboardConfigurationBulkRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingSettingsDashboardsBulkRemove");
+            
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/dashboards/bulk/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>DashboardConfigurationListing</returns>
+        
+        public DashboardConfigurationListing PostAnalyticsReportingSettingsDashboardsQuery (DashboardConfigurationQueryRequest body)
+        {
+             ApiResponse<DashboardConfigurationListing> localVarResponse = PostAnalyticsReportingSettingsDashboardsQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of DashboardConfigurationListing</returns>
+        
+        public ApiResponse< DashboardConfigurationListing > PostAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (DashboardConfigurationQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingSettingsDashboardsQuery");
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/dashboards/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of DashboardConfigurationListing</returns>
+        
+        public async System.Threading.Tasks.Task<DashboardConfigurationListing> PostAnalyticsReportingSettingsDashboardsQueryAsync (DashboardConfigurationQueryRequest body)
+        {
+             ApiResponse<DashboardConfigurationListing> localVarResponse = await PostAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> PostAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (DashboardConfigurationQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingSettingsDashboardsQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/dashboards/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

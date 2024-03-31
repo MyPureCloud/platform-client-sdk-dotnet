@@ -107,6 +107,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Screen
         }
         /// <summary>
+        /// Gets or Sets MediaSubtype
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaSubtypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Trunk for "Trunk"
+            /// </summary>
+            [EnumMember(Value = "Trunk")]
+            Trunk,
+            
+            /// <summary>
+            /// Enum Station for "Station"
+            /// </summary>
+            [EnumMember(Value = "Station")]
+            Station,
+            
+            /// <summary>
+            /// Enum Consult for "Consult"
+            /// </summary>
+            [EnumMember(Value = "Consult")]
+            Consult,
+            
+            /// <summary>
+            /// Enum Screen for "Screen"
+            /// </summary>
+            [EnumMember(Value = "Screen")]
+            Screen
+        }
+        /// <summary>
         /// Gets or Sets FileState
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -340,6 +378,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
         /// <summary>
+        /// Gets or Sets MediaSubtype
+        /// </summary>
+        [DataMember(Name="mediaSubtype", EmitDefaultValue=false)]
+        public MediaSubtypeEnum? MediaSubtype { get; set; }
+        /// <summary>
         /// Gets or Sets FileState
         /// </summary>
         [DataMember(Name="fileState", EmitDefaultValue=false)]
@@ -364,13 +407,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProviderType">ProviderType.</param>
         /// <param name="MediaSizeBytes">MediaSizeBytes.</param>
         /// <param name="MediaType">MediaType.</param>
+        /// <param name="MediaSubtype">MediaSubtype.</param>
+        /// <param name="MediaSubject">MediaSubject.</param>
         /// <param name="FileState">FileState.</param>
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
         /// <param name="Recording">Recording.</param>
         /// <param name="OrphanStatus">The status of the orphaned recording's conversation..</param>
         /// <param name="SourceOrphaningId">An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with.</param>
         /// <param name="Region">Region.</param>
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null, string SourceOrphaningId = null, RegionEnum? Region = null)
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null, string SourceOrphaningId = null, RegionEnum? Region = null)
         {
             this.Name = Name;
             this.CreatedTime = CreatedTime;
@@ -378,6 +423,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProviderType = ProviderType;
             this.MediaSizeBytes = MediaSizeBytes;
             this.MediaType = MediaType;
+            this.MediaSubtype = MediaSubtype;
+            this.MediaSubject = MediaSubject;
             this.FileState = FileState;
             this.ProviderEndpoint = ProviderEndpoint;
             this.Recording = Recording;
@@ -439,6 +486,16 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets MediaSubject
+        /// </summary>
+        [DataMember(Name="mediaSubject", EmitDefaultValue=false)]
+        public string MediaSubject { get; set; }
+
+
+
+
+
+        /// <summary>
         /// Gets or Sets ProviderEndpoint
         /// </summary>
         [DataMember(Name="providerEndpoint", EmitDefaultValue=false)]
@@ -491,6 +548,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProviderType: ").Append(ProviderType).Append("\n");
             sb.Append("  MediaSizeBytes: ").Append(MediaSizeBytes).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  MediaSubtype: ").Append(MediaSubtype).Append("\n");
+            sb.Append("  MediaSubject: ").Append(MediaSubject).Append("\n");
             sb.Append("  FileState: ").Append(FileState).Append("\n");
             sb.Append("  ProviderEndpoint: ").Append(ProviderEndpoint).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
@@ -574,6 +633,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.MediaSubtype == other.MediaSubtype ||
+                    this.MediaSubtype != null &&
+                    this.MediaSubtype.Equals(other.MediaSubtype)
+                ) &&
+                (
+                    this.MediaSubject == other.MediaSubject ||
+                    this.MediaSubject != null &&
+                    this.MediaSubject.Equals(other.MediaSubject)
+                ) &&
+                (
                     this.FileState == other.FileState ||
                     this.FileState != null &&
                     this.FileState.Equals(other.FileState)
@@ -641,6 +710,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.MediaSubtype != null)
+                    hash = hash * 59 + this.MediaSubtype.GetHashCode();
+
+                if (this.MediaSubject != null)
+                    hash = hash * 59 + this.MediaSubject.GetHashCode();
 
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();

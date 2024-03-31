@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsWithHttpInfo (string executionId);
 
         /// <summary>
-        /// Get the results of a usage search
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
         /// 
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId);
 
         /// <summary>
-        /// Get the results of a usage search
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
         /// 
@@ -167,10 +167,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UsageExecutionResult> PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body);
 
         /// <summary>
-        /// Search organization API Usage - 
+        /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -179,10 +179,10 @@ namespace PureCloudPlatform.Client.V2.Api
         UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body);
 
         /// <summary>
-        /// Search organization API Usage - 
+        /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -271,7 +271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageQueryExecutionIdResultsAsyncWithHttpInfo (string executionId);
 
         /// <summary>
-        /// Get the results of a usage search
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId);
 
         /// <summary>
-        /// Get the results of a usage search
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
         /// </summary>
         /// <remarks>
         /// 
@@ -345,10 +345,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body);
 
         /// <summary>
-        /// Search organization API Usage - 
+        /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -357,10 +357,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body);
 
         /// <summary>
-        /// Search organization API Usage - 
+        /// Search organization API Usage
         /// </summary>
         /// <remarks>
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -1113,7 +1113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the results of a usage search 
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1127,7 +1127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the results of a usage search 
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1217,7 +1217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the results of a usage search 
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1232,7 +1232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the results of a usage search 
+        /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1779,8 +1779,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Search organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Search organization API Usage 
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -1793,8 +1793,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Search organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Search organization API Usage 
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -1888,8 +1888,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Search organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Search organization API Usage 
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>
@@ -1903,8 +1903,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Search organization API Usage -  
-        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// Search organization API Usage 
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SimpleSearch</param>

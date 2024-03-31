@@ -8,6 +8,7 @@ title: DialerCampaignScheduleConfigChangeCampaignSchedule
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Intervals** | [**List&lt;DialerCampaignScheduleConfigChangeScheduleInterval&gt;**](DialerCampaignScheduleConfigChangeScheduleInterval.html) | a list of start and end times | [optional] |
+| **Recurrences** | [**List&lt;DialerCampaignScheduleConfigChangeScheduleRecurrence&gt;**](DialerCampaignScheduleConfigChangeScheduleRecurrence.html) | a list of recurrences for a schedule | [optional] |
 | **TimeZone** | **string** | time zone identifier to be applied to the intervals; for example Africa/Abidjan | [optional] |
 | **Campaign** | [**DialerCampaignScheduleConfigChangeUriReference**](DialerCampaignScheduleConfigChangeUriReference.html) |  | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |

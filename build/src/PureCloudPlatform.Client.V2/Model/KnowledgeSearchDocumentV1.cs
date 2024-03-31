@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KnowledgeSearchDocument
+    /// KnowledgeSearchDocumentV1
     /// </summary>
     [DataContract]
-    public partial class KnowledgeSearchDocument :  IEquatable<KnowledgeSearchDocument>
+    public partial class KnowledgeSearchDocumentV1 :  IEquatable<KnowledgeSearchDocumentV1>
     {
         /// <summary>
         /// Language of the document
@@ -290,12 +290,12 @@ namespace PureCloudPlatform.Client.V2.Model
         public TypeEnum? Type { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeSearchDocument" /> class.
+        /// Initializes a new instance of the <see cref="KnowledgeSearchDocumentV1" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected KnowledgeSearchDocument() { }
+        protected KnowledgeSearchDocumentV1() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="KnowledgeSearchDocument" /> class.
+        /// Initializes a new instance of the <see cref="KnowledgeSearchDocumentV1" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="LanguageCode">Language of the document (required).</param>
@@ -304,7 +304,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Categories">Document categories.</param>
         /// <param name="ExternalUrl">External URL to the document.</param>
         /// <param name="Article">Article.</param>
-        public KnowledgeSearchDocument(string Name = null, LanguageCodeEnum? LanguageCode = null, TypeEnum? Type = null, DocumentFaq Faq = null, List<KnowledgeCategory> Categories = null, string ExternalUrl = null, DocumentArticle Article = null)
+        public KnowledgeSearchDocumentV1(string Name = null, LanguageCodeEnum? LanguageCode = null, TypeEnum? Type = null, DocumentFaq Faq = null, List<KnowledgeCategory> Categories = null, string ExternalUrl = null, DocumentArticle Article = null)
         {
             this.Name = Name;
             this.LanguageCode = LanguageCode;
@@ -426,7 +426,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KnowledgeSearchDocument {\n");
+            sb.Append("class KnowledgeSearchDocumentV1 {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -466,15 +466,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KnowledgeSearchDocument);
+            return this.Equals(obj as KnowledgeSearchDocumentV1);
         }
 
         /// <summary>
-        /// Returns true if KnowledgeSearchDocument instances are equal
+        /// Returns true if KnowledgeSearchDocumentV1 instances are equal
         /// </summary>
-        /// <param name="other">Instance of KnowledgeSearchDocument to be compared</param>
+        /// <param name="other">Instance of KnowledgeSearchDocumentV1 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KnowledgeSearchDocument other)
+        public bool Equals(KnowledgeSearchDocumentV1 other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -62,15 +62,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Participants">Participants.</param>
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
+        /// <param name="Address">Address.</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="MaxParticipants">MaxParticipants.</param>
-        public ConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<ConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
+        public ConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<ConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
+            this.Address = Address;
             this.RecordingState = RecordingState;
             this.SecurePause = SecurePause;
             this.MaxParticipants = MaxParticipants;
@@ -111,6 +113,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public string Address { get; set; }
+
+
+
 
 
         /// <summary>
@@ -141,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
@@ -205,6 +216,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OtherMediaUris.SequenceEqual(other.OtherMediaUris)
                 ) &&
                 (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
+                ) &&
+                (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
@@ -243,6 +259,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
+
+                if (this.Address != null)
+                    hash = hash * 59 + this.Address.GetHashCode();
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();

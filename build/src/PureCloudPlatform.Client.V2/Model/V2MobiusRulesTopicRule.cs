@@ -118,7 +118,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Action">Action.</param>
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="SendExitingAlarmNotification">SendExitingAlarmNotification.</param>
-        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null, bool? SendExitingAlarmNotification = null)
+        /// <param name="WaitBetweenNotificationMs">WaitBetweenNotificationMs.</param>
+        public V2MobiusRulesTopicRule(Guid? Id = null, Guid? UserId = null, string Name = null, TypeEnum? Type = null, List<V2MobiusRulesTopicAlertNotification> Notifications = null, V2MobiusRulesTopicCondition Conditions = null, bool? Enabled = null, bool? InAlarm = null, ActionEnum? Action = null, DateTime? DateCreated = null, bool? SendExitingAlarmNotification = null, int? WaitBetweenNotificationMs = null)
         {
             this.Id = Id;
             this.UserId = UserId;
@@ -131,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Action = Action;
             this.DateCreated = DateCreated;
             this.SendExitingAlarmNotification = SendExitingAlarmNotification;
+            this.WaitBetweenNotificationMs = WaitBetweenNotificationMs;
             
         }
         
@@ -211,6 +213,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? SendExitingAlarmNotification { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets WaitBetweenNotificationMs
+        /// </summary>
+        [DataMember(Name="waitBetweenNotificationMs", EmitDefaultValue=false)]
+        public int? WaitBetweenNotificationMs { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -231,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  SendExitingAlarmNotification: ").Append(SendExitingAlarmNotification).Append("\n");
+            sb.Append("  WaitBetweenNotificationMs: ").Append(WaitBetweenNotificationMs).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -325,6 +336,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SendExitingAlarmNotification == other.SendExitingAlarmNotification ||
                     this.SendExitingAlarmNotification != null &&
                     this.SendExitingAlarmNotification.Equals(other.SendExitingAlarmNotification)
+                ) &&
+                (
+                    this.WaitBetweenNotificationMs == other.WaitBetweenNotificationMs ||
+                    this.WaitBetweenNotificationMs != null &&
+                    this.WaitBetweenNotificationMs.Equals(other.WaitBetweenNotificationMs)
                 );
         }
 
@@ -371,6 +387,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SendExitingAlarmNotification != null)
                     hash = hash * 59 + this.SendExitingAlarmNotification.GetHashCode();
+
+                if (this.WaitBetweenNotificationMs != null)
+                    hash = hash * 59 + this.WaitBetweenNotificationMs.GetHashCode();
 
                 return hash;
             }

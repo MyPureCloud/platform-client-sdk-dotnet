@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Transmitting for "transmitting"
             /// </summary>
             [EnumMember(Value = "transmitting")]
-            Transmitting
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked
         }
         /// <summary>
         /// Gets or Sets InitialState
@@ -104,7 +110,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Transmitting for "transmitting"
             /// </summary>
             [EnumMember(Value = "transmitting")]
-            Transmitting
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked
         }
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.

@@ -70,13 +70,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
         /// <param name="QueryType">The type of the query that initiates the search..</param>
+        /// <param name="AnswerHighlightTopResults">The number of articles to be sent for answer-highlighting. Can range from 1-5..</param>
         /// <param name="IncludeDraftDocuments">Indicates whether the search results would also include draft documents..</param>
-        public KnowledgeDocumentGuestSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null)
+        public KnowledgeDocumentGuestSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, int? AnswerHighlightTopResults = null, bool? IncludeDraftDocuments = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.QueryType = QueryType;
+            this.AnswerHighlightTopResults = AnswerHighlightTopResults;
             this.IncludeDraftDocuments = IncludeDraftDocuments;
             
         }
@@ -149,6 +151,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The number of articles to be sent for answer-highlighting. Can range from 1-5.
+        /// </summary>
+        /// <value>The number of articles to be sent for answer-highlighting. Can range from 1-5.</value>
+        [DataMember(Name="answerHighlightTopResults", EmitDefaultValue=false)]
+        public int? AnswerHighlightTopResults { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether the search results would also include draft documents.
         /// </summary>
         /// <value>Indicates whether the search results would also include draft documents.</value>
@@ -173,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  QueryType: ").Append(QueryType).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  AnswerHighlightTopResults: ").Append(AnswerHighlightTopResults).Append("\n");
             sb.Append("  IncludeDraftDocuments: ").Append(IncludeDraftDocuments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -255,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
+                    this.AnswerHighlightTopResults == other.AnswerHighlightTopResults ||
+                    this.AnswerHighlightTopResults != null &&
+                    this.AnswerHighlightTopResults.Equals(other.AnswerHighlightTopResults)
+                ) &&
+                (
                     this.IncludeDraftDocuments == other.IncludeDraftDocuments ||
                     this.IncludeDraftDocuments != null &&
                     this.IncludeDraftDocuments.Equals(other.IncludeDraftDocuments)
@@ -295,6 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
+
+                if (this.AnswerHighlightTopResults != null)
+                    hash = hash * 59 + this.AnswerHighlightTopResults.GetHashCode();
 
                 if (this.IncludeDraftDocuments != null)
                     hash = hash * 59 + this.IncludeDraftDocuments.GetHashCode();

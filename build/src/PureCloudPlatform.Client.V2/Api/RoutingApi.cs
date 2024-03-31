@@ -3305,6 +3305,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersWithHttpInfo (SmsPhoneNumberProvision body);
 
         /// <summary>
+        /// Provision an alphanumeric number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>SmsPhoneNumber</returns>
+        
+        SmsPhoneNumber PostRoutingSmsPhonenumbersAlphanumeric (SmsAlphanumericProvision body);
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
+        ApiResponse<SmsPhoneNumber> PostRoutingSmsPhonenumbersAlphanumericWithHttpInfo (SmsAlphanumericProvision body);
+
+        /// <summary>
         /// Imports a phone number for SMS
         /// </summary>
         /// <remarks>
@@ -7083,6 +7109,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAsyncWithHttpInfo (SmsPhoneNumberProvision body);
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of SmsPhoneNumber</returns>
+        
+        System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAlphanumericAsync (SmsAlphanumericProvision body);
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAlphanumericAsyncWithHttpInfo (SmsAlphanumericProvision body);
 
         /// <summary>
         /// Imports a phone number for SMS
@@ -34908,6 +34960,231 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+                localVarHeaders,
+                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS 
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>SmsPhoneNumber</returns>
+        
+        public SmsPhoneNumber PostRoutingSmsPhonenumbersAlphanumeric (SmsAlphanumericProvision body)
+        {
+             ApiResponse<SmsPhoneNumber> localVarResponse = PostRoutingSmsPhonenumbersAlphanumericWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS 
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>ApiResponse of SmsPhoneNumber</returns>
+        
+        public ApiResponse< SmsPhoneNumber > PostRoutingSmsPhonenumbersAlphanumericWithHttpInfo (SmsAlphanumericProvision body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingSmsPhonenumbersAlphanumeric");
+
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/alphanumeric";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersAlphanumeric: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersAlphanumeric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
+                localVarHeaders,
+                (SmsPhoneNumber) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsPhoneNumber)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS 
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of SmsPhoneNumber</returns>
+        
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> PostRoutingSmsPhonenumbersAlphanumericAsync (SmsAlphanumericProvision body)
+        {
+             ApiResponse<SmsPhoneNumber> localVarResponse = await PostRoutingSmsPhonenumbersAlphanumericAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Provision an alphanumeric number for SMS 
+        /// 
+        /// PostRoutingSmsPhonenumbersAlphanumeric is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SmsPhoneNumber</param>
+        /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> PostRoutingSmsPhonenumbersAlphanumericAsyncWithHttpInfo (SmsAlphanumericProvision body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingSmsPhonenumbersAlphanumeric");
+            
+
+            var localVarPath = "/api/v2/routing/sms/phonenumbers/alphanumeric";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersAlphanumeric: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingSmsPhonenumbersAlphanumeric: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<SmsPhoneNumber>(localVarStatusCode,
                 localVarHeaders,

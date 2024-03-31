@@ -113,6 +113,68 @@ namespace PureCloudPlatform.Client.V2.Model
             Unknown
         }
         /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Voice for "Voice"
+            /// </summary>
+            [EnumMember(Value = "Voice")]
+            Voice,
+            
+            /// <summary>
+            /// Enum Chat for "Chat"
+            /// </summary>
+            [EnumMember(Value = "Chat")]
+            Chat,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Callback for "Callback"
+            /// </summary>
+            [EnumMember(Value = "Callback")]
+            Callback,
+            
+            /// <summary>
+            /// Enum Message for "Message"
+            /// </summary>
+            [EnumMember(Value = "Message")]
+            Message,
+            
+            /// <summary>
+            /// Enum Screenshare for "Screenshare"
+            /// </summary>
+            [EnumMember(Value = "Screenshare")]
+            Screenshare,
+            
+            /// <summary>
+            /// Enum Cobrowse for "Cobrowse"
+            /// </summary>
+            [EnumMember(Value = "Cobrowse")]
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
+        }
+        /// <summary>
         /// Gets or Sets ComparisonOperator
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -179,6 +241,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="metricValueType", EmitDefaultValue=false)]
         public MetricValueTypeEnum? MetricValueType { get; set; }
         /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+        /// <summary>
         /// Gets or Sets ComparisonOperator
         /// </summary>
         [DataMember(Name="comparisonOperator", EmitDefaultValue=false)]
@@ -186,23 +253,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="V2MobiusAlertsTopicConditionRulePredicate" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="Entity">Entity.</param>
         /// <param name="Metric">Metric.</param>
         /// <param name="MetricType">MetricType.</param>
         /// <param name="MetricValueType">MetricValueType.</param>
         /// <param name="Value">Value.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="MediaType">MediaType.</param>
         /// <param name="ComparisonOperator">ComparisonOperator.</param>
-        public V2MobiusAlertsTopicConditionRulePredicate(V2MobiusAlertsTopicEntityProperties Entity = null, string Metric = null, MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, double? Value = null, ComparisonOperatorEnum? ComparisonOperator = null)
+        public V2MobiusAlertsTopicConditionRulePredicate(Guid? Id = null, V2MobiusAlertsTopicEntityProperties Entity = null, string Metric = null, MetricTypeEnum? MetricType = null, MetricValueTypeEnum? MetricValueType = null, double? Value = null, string Status = null, MediaTypeEnum? MediaType = null, ComparisonOperatorEnum? ComparisonOperator = null)
         {
+            this.Id = Id;
             this.Entity = Entity;
             this.Metric = Metric;
             this.MetricType = MetricType;
             this.MetricValueType = MetricValueType;
             this.Value = Value;
+            this.Status = Status;
+            this.MediaType = MediaType;
             this.ComparisonOperator = ComparisonOperator;
             
         }
         
+
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public Guid? Id { get; set; }
+
 
 
         /// <summary>
@@ -233,6 +314,16 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public string Status { get; set; }
+
+
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -243,11 +334,14 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class V2MobiusAlertsTopicConditionRulePredicate {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  MetricType: ").Append(MetricType).Append("\n");
             sb.Append("  MetricValueType: ").Append(MetricValueType).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  ComparisonOperator: ").Append(ComparisonOperator).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -290,6 +384,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
@@ -315,6 +414,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value.Equals(other.Value)
                 ) &&
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.MediaType == other.MediaType ||
+                    this.MediaType != null &&
+                    this.MediaType.Equals(other.MediaType)
+                ) &&
+                (
                     this.ComparisonOperator == other.ComparisonOperator ||
                     this.ComparisonOperator != null &&
                     this.ComparisonOperator.Equals(other.ComparisonOperator)
@@ -332,6 +441,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
 
@@ -346,6 +458,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.MediaType != null)
+                    hash = hash * 59 + this.MediaType.GetHashCode();
 
                 if (this.ComparisonOperator != null)
                     hash = hash * 59 + this.ComparisonOperator.GetHashCode();

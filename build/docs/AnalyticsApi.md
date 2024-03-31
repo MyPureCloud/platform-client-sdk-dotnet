@@ -34,6 +34,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsJourneysAggregatesJobResults**](AnalyticsApi.html#getanalyticsjourneysaggregatesjobresults) | **Get** /api/v2/analytics/journeys/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsKnowledgeAggregatesJob**](AnalyticsApi.html#getanalyticsknowledgeaggregatesjob) | **Get** /api/v2/analytics/knowledge/aggregates/jobs/{jobId} | Get status for async query for knowledge aggregates |
 | [**GetAnalyticsKnowledgeAggregatesJobResults**](AnalyticsApi.html#getanalyticsknowledgeaggregatesjobresults) | **Get** /api/v2/analytics/knowledge/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsReportingDashboardsUser**](AnalyticsApi.html#getanalyticsreportingdashboardsuser) | **Get** /api/v2/analytics/reporting/dashboards/users/{userId} | Get dashboards summary for a user |
+| [**GetAnalyticsReportingDashboardsUsers**](AnalyticsApi.html#getanalyticsreportingdashboardsusers) | **Get** /api/v2/analytics/reporting/dashboards/users | Get dashboards summary for users in a org |
 | [**GetAnalyticsReportingExports**](AnalyticsApi.html#getanalyticsreportingexports) | **Get** /api/v2/analytics/reporting/exports | Get all view export requests for a user |
 | [**GetAnalyticsReportingExportsMetadata**](AnalyticsApi.html#getanalyticsreportingexportsmetadata) | **Get** /api/v2/analytics/reporting/exports/metadata | Get all export metadata |
 | [**GetAnalyticsReportingMetadata**](AnalyticsApi.html#getanalyticsreportingmetadata) | **Get** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
@@ -45,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsReportingScheduleHistoryRunId**](AnalyticsApi.html#getanalyticsreportingschedulehistoryrunid) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
 | [**GetAnalyticsReportingSchedules**](AnalyticsApi.html#getanalyticsreportingschedules) | **Get** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
 | [**GetAnalyticsReportingSettings**](AnalyticsApi.html#getanalyticsreportingsettings) | **Get** /api/v2/analytics/reporting/settings | Get AnalyticsReportingSettings for an organization |
+| [**GetAnalyticsReportingSettingsUserDashboards**](AnalyticsApi.html#getanalyticsreportingsettingsuserdashboards) | **Get** /api/v2/analytics/reporting/settings/users/{userId}/dashboards | Get list of dashboards for an user |
 | [**GetAnalyticsReportingTimeperiods**](AnalyticsApi.html#getanalyticsreportingtimeperiods) | **Get** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
 | [**GetAnalyticsResolutionsAggregatesJob**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjob) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId} | Get status for async query for resolution aggregates |
 | [**GetAnalyticsResolutionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjobresults) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
@@ -85,9 +88,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsKnowledgeAggregatesQuery**](AnalyticsApi.html#postanalyticsknowledgeaggregatesquery) | **Post** /api/v2/analytics/knowledge/aggregates/query | Query for knowledge aggregates |
 | [**PostAnalyticsQueuesObservationsQuery**](AnalyticsApi.html#postanalyticsqueuesobservationsquery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostAnalyticsRatelimitsAggregatesQuery**](AnalyticsApi.html#postanalyticsratelimitsaggregatesquery) | **Post** /api/v2/analytics/ratelimits/aggregates/query | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
+| [**PostAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsApi.html#postanalyticsreportingdashboardsusersbulkremove) | **Post** /api/v2/analytics/reporting/dashboards/users/bulk/remove | Bulk delete dashboards owned by other user(s) |
 | [**PostAnalyticsReportingExports**](AnalyticsApi.html#postanalyticsreportingexports) | **Post** /api/v2/analytics/reporting/exports | Generate a view export request |
 | [**PostAnalyticsReportingScheduleRunreport**](AnalyticsApi.html#postanalyticsreportingschedulerunreport) | **Post** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
 | [**PostAnalyticsReportingSchedules**](AnalyticsApi.html#postanalyticsreportingschedules) | **Post** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
+| [**PostAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsApi.html#postanalyticsreportingsettingsdashboardsbulkremove) | **Post** /api/v2/analytics/reporting/settings/dashboards/bulk/remove | Bulk remove dashboard configurations |
+| [**PostAnalyticsReportingSettingsDashboardsQuery**](AnalyticsApi.html#postanalyticsreportingsettingsdashboardsquery) | **Post** /api/v2/analytics/reporting/settings/dashboards/query | Query dashboard configurations |
 | [**PostAnalyticsResolutionsAggregatesJobs**](AnalyticsApi.html#postanalyticsresolutionsaggregatesjobs) | **Post** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
 | [**PostAnalyticsRoutingActivityQuery**](AnalyticsApi.html#postanalyticsroutingactivityquery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
 | [**PostAnalyticsSurveysAggregatesJobs**](AnalyticsApi.html#postanalyticssurveysaggregatesjobs) | **Post** /api/v2/analytics/surveys/aggregates/jobs | Query for survey aggregates asynchronously |
@@ -1881,6 +1887,140 @@ namespace Example
 
 [**KnowledgeAsyncAggregateQueryResponse**](KnowledgeAsyncAggregateQueryResponse.html)
 
+<a name="getanalyticsreportingdashboardsuser"></a>
+
+## [**DashboardUser**](DashboardUser.html) GetAnalyticsReportingDashboardsUser (string userId)
+
+
+
+Get dashboards summary for a user
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsReportingDashboardsUserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get dashboards summary for a user
+                DashboardUser result = apiInstance.GetAnalyticsReportingDashboardsUser(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingDashboardsUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DashboardUser**](DashboardUser.html)
+
+<a name="getanalyticsreportingdashboardsusers"></a>
+
+## [**DashboardUserListing**](DashboardUserListing.html) GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
+
+
+
+Get dashboards summary for users in a org
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsReportingDashboardsUsersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var sortBy = sortBy_example;  // string |  (optional)  (default to "asc")
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var id = new List<string>(); // List<string> | A list of user IDs to fetch by bulk (optional) 
+            var state = state_example;  // string | Only list users of this state (optional) 
+
+            try
+            { 
+                // Get dashboards summary for users in a org
+                DashboardUserListing result = apiInstance.GetAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, id, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingDashboardsUsers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sortBy** | **string**|  | [optional] [default to "asc"] |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 25] |
+| **id** | [**List<string>**](string.html)| A list of user IDs to fetch by bulk | [optional]  |
+| **state** | **string**| Only list users of this state | [optional] <br />**Values**: active, inactive |
+{: class="table table-striped"}
+
+### Return type
+
+[**DashboardUserListing**](DashboardUserListing.html)
+
 <a name="getanalyticsreportingexports"></a>
 
 ## [**ReportingExportJobListing**](ReportingExportJobListing.html) GetAnalyticsReportingExports (int? pageNumber = null, int? pageSize = null)
@@ -2574,6 +2714,79 @@ This endpoint does require any parameters.
 ### Return type
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
+
+<a name="getanalyticsreportingsettingsuserdashboards"></a>
+
+## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+
+
+
+Get list of dashboards for an user
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:viewPrivate
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsReportingSettingsUserDashboardsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var userId = userId_example;  // string | User ID
+            var sortBy = sortBy_example;  // string |  (optional)  (default to "asc")
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 50)
+            var publicOnly = true;  // bool? | If true, retrieve only public dashboards (optional) 
+            var favoriteOnly = true;  // bool? | If true, retrieve only favorite dashboards (optional) 
+
+            try
+            { 
+                // Get list of dashboards for an user
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingSettingsUserDashboards: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **sortBy** | **string**|  | [optional] [default to "asc"] |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 50] |
+| **publicOnly** | **bool?**| If true, retrieve only public dashboards | [optional]  |
+| **favoriteOnly** | **bool?**| If true, retrieve only favorite dashboards | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DashboardConfigurationListing**](DashboardConfigurationListing.html)
 
 <a name="getanalyticsreportingtimeperiods"></a>
 
@@ -3490,11 +3703,7 @@ Patch AnalyticsReportingSettings values for an organization
 
 Requires ANY permissions: 
 
-* recording:recordingSegment:view
-* analytics:conversationDetail:view
-* analytics:conversationAggregate:view
 * analytics:reportingSettings:edit
-* analytics:dashboardConfigurations:view
 
 ### Example
 ```{"language":"csharp"}
@@ -5156,6 +5365,69 @@ namespace Example
 
 [**RateLimitAggregateQueryResponse**](RateLimitAggregateQueryResponse.html)
 
+<a name="postanalyticsreportingdashboardsusersbulkremove"></a>
+
+## void PostAnalyticsReportingDashboardsUsersBulkRemove (List<string> body)
+
+
+
+Bulk delete dashboards owned by other user(s)
+
+Requires ANY permissions: 
+
+* analytics:dashboardConfigurations:deleteActive
+* analytics:dashboardConfigurations:deleteInactive
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsReportingDashboardsUsersBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new List<string>(); // List<string> | List of userIds
+
+            try
+            { 
+                // Bulk delete dashboards owned by other user(s)
+                apiInstance.PostAnalyticsReportingDashboardsUsersBulkRemove(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsReportingDashboardsUsersBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<string>**](string.html)| List of userIds |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postanalyticsreportingexports"></a>
 
 ## [**ReportingExportJobResponse**](ReportingExportJobResponse.html) PostAnalyticsReportingExports (ReportingExportJobRequest body)
@@ -5350,6 +5622,131 @@ namespace Example
 ### Return type
 
 [**ReportSchedule**](ReportSchedule.html)
+
+<a name="postanalyticsreportingsettingsdashboardsbulkremove"></a>
+
+## void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body)
+
+
+
+Bulk remove dashboard configurations
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsReportingSettingsDashboardsBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new DashboardConfigurationBulkRequest(); // DashboardConfigurationBulkRequest | 
+
+            try
+            { 
+                // Bulk remove dashboard configurations
+                apiInstance.PostAnalyticsReportingSettingsDashboardsBulkRemove(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsReportingSettingsDashboardsBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DashboardConfigurationBulkRequest**](DashboardConfigurationBulkRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postanalyticsreportingsettingsdashboardsquery"></a>
+
+## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) PostAnalyticsReportingSettingsDashboardsQuery (DashboardConfigurationQueryRequest body)
+
+
+
+Query dashboard configurations
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsReportingSettingsDashboardsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new DashboardConfigurationQueryRequest(); // DashboardConfigurationQueryRequest | 
+
+            try
+            { 
+                // Query dashboard configurations
+                DashboardConfigurationListing result = apiInstance.PostAnalyticsReportingSettingsDashboardsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsReportingSettingsDashboardsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DashboardConfigurationQueryRequest**](DashboardConfigurationQueryRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DashboardConfigurationListing**](DashboardConfigurationListing.html)
 
 <a name="postanalyticsresolutionsaggregatesjobs"></a>
 

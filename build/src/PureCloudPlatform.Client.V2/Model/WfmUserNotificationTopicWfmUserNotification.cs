@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Adherenceexplanation for "AdherenceExplanation"
             /// </summary>
             [EnumMember(Value = "AdherenceExplanation")]
-            Adherenceexplanation
+            Adherenceexplanation,
+            
+            /// <summary>
+            /// Enum Alternativeshift for "AlternativeShift"
+            /// </summary>
+            [EnumMember(Value = "AlternativeShift")]
+            Alternativeshift
         }
         /// <summary>
         /// Gets or Sets Type
@@ -65,10 +71,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShiftTrade">ShiftTrade.</param>
         /// <param name="TimeOffRequest">TimeOffRequest.</param>
         /// <param name="AdherenceExplanation">AdherenceExplanation.</param>
+        /// <param name="AlternativeShift">AlternativeShift.</param>
         /// <param name="AgentNotification">AgentNotification.</param>
         /// <param name="OtherNotificationIdsInGroup">OtherNotificationIdsInGroup.</param>
         /// <param name="MarkedAsRead">MarkedAsRead.</param>
-        public WfmUserNotificationTopicWfmUserNotification(string Id = null, string MutableGroupId = null, DateTime? Timestamp = null, TypeEnum? Type = null, WfmUserNotificationTopicShiftTradeNotification ShiftTrade = null, WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest = null, WfmUserNotificationTopicAdherenceExplanationNotification AdherenceExplanation = null, bool? AgentNotification = null, List<string> OtherNotificationIdsInGroup = null, bool? MarkedAsRead = null)
+        public WfmUserNotificationTopicWfmUserNotification(string Id = null, string MutableGroupId = null, DateTime? Timestamp = null, TypeEnum? Type = null, WfmUserNotificationTopicShiftTradeNotification ShiftTrade = null, WfmUserNotificationTopicTimeOffRequestNotification TimeOffRequest = null, WfmUserNotificationTopicAdherenceExplanationNotification AdherenceExplanation = null, WfmUserNotificationTopicAlternativeShiftNotification AlternativeShift = null, bool? AgentNotification = null, List<string> OtherNotificationIdsInGroup = null, bool? MarkedAsRead = null)
         {
             this.Id = Id;
             this.MutableGroupId = MutableGroupId;
@@ -77,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShiftTrade = ShiftTrade;
             this.TimeOffRequest = TimeOffRequest;
             this.AdherenceExplanation = AdherenceExplanation;
+            this.AlternativeShift = AlternativeShift;
             this.AgentNotification = AgentNotification;
             this.OtherNotificationIdsInGroup = OtherNotificationIdsInGroup;
             this.MarkedAsRead = MarkedAsRead;
@@ -136,6 +144,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AlternativeShift
+        /// </summary>
+        [DataMember(Name="alternativeShift", EmitDefaultValue=false)]
+        public WfmUserNotificationTopicAlternativeShiftNotification AlternativeShift { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets AgentNotification
         /// </summary>
         [DataMember(Name="agentNotification", EmitDefaultValue=false)]
@@ -174,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShiftTrade: ").Append(ShiftTrade).Append("\n");
             sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
             sb.Append("  AdherenceExplanation: ").Append(AdherenceExplanation).Append("\n");
+            sb.Append("  AlternativeShift: ").Append(AlternativeShift).Append("\n");
             sb.Append("  AgentNotification: ").Append(AgentNotification).Append("\n");
             sb.Append("  OtherNotificationIdsInGroup: ").Append(OtherNotificationIdsInGroup).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
@@ -253,6 +270,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdherenceExplanation.Equals(other.AdherenceExplanation)
                 ) &&
                 (
+                    this.AlternativeShift == other.AlternativeShift ||
+                    this.AlternativeShift != null &&
+                    this.AlternativeShift.Equals(other.AlternativeShift)
+                ) &&
+                (
                     this.AgentNotification == other.AgentNotification ||
                     this.AgentNotification != null &&
                     this.AgentNotification.Equals(other.AgentNotification)
@@ -300,6 +322,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdherenceExplanation != null)
                     hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
+
+                if (this.AlternativeShift != null)
+                    hash = hash * 59 + this.AlternativeShift.GetHashCode();
 
                 if (this.AgentNotification != null)
                     hash = hash * 59 + this.AgentNotification.GetHashCode();

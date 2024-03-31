@@ -12,6 +12,7 @@ title: DialerPreview
 | **ContactListId** | **string** | The contactList associated with this preview data pop. | [optional] |
 | **CampaignId** | **string** | The campaignId associated with this preview data pop. | [optional] |
 | **PhoneNumberColumns** | [**List&lt;PhoneNumberColumn&gt;**](PhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
+| **CallbackAutoAnswer** | **bool?** | Whether or not to auto answer the callback | [optional] |
 {: class="table table-striped"}
 
 

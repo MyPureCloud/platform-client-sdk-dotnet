@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Timeoffrequest for "TimeOffRequest"
             /// </summary>
             [EnumMember(Value = "TimeOffRequest")]
-            Timeoffrequest
+            Timeoffrequest,
+            
+            /// <summary>
+            /// Enum Alternativeshift for "AlternativeShift"
+            /// </summary>
+            [EnumMember(Value = "AlternativeShift")]
+            Alternativeshift
         }
         /// <summary>
         /// The type of this notification
@@ -136,6 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An alternative shift trade notification.  Only set if type == AlternativeShift
+        /// </summary>
+        /// <value>An alternative shift trade notification.  Only set if type == AlternativeShift</value>
+        [DataMember(Name="alternativeShift", EmitDefaultValue=false)]
+        public AlternativeShiftNotification AlternativeShift { get; private set; }
+
+
+
+        /// <summary>
         /// Whether this notification has been marked \"read\"
         /// </summary>
         /// <value>Whether this notification has been marked \"read\"</value>
@@ -177,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShiftTrade: ").Append(ShiftTrade).Append("\n");
             sb.Append("  TimeOffRequest: ").Append(TimeOffRequest).Append("\n");
             sb.Append("  AdherenceExplanation: ").Append(AdherenceExplanation).Append("\n");
+            sb.Append("  AlternativeShift: ").Append(AlternativeShift).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  AgentNotification: ").Append(AgentNotification).Append("\n");
             sb.Append("  OtherNotificationIdsInGroup: ").Append(OtherNotificationIdsInGroup).Append("\n");
@@ -256,6 +272,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdherenceExplanation.Equals(other.AdherenceExplanation)
                 ) &&
                 (
+                    this.AlternativeShift == other.AlternativeShift ||
+                    this.AlternativeShift != null &&
+                    this.AlternativeShift.Equals(other.AlternativeShift)
+                ) &&
+                (
                     this.MarkedAsRead == other.MarkedAsRead ||
                     this.MarkedAsRead != null &&
                     this.MarkedAsRead.Equals(other.MarkedAsRead)
@@ -303,6 +324,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdherenceExplanation != null)
                     hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
+
+                if (this.AlternativeShift != null)
+                    hash = hash * 59 + this.AlternativeShift.GetHashCode();
 
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();

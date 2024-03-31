@@ -8,10 +8,10 @@ title: V2MobiusRulesTopicEntityProperties
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **EntityType** | **string** |  | [optional] |
-| **User** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
-| **Group** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
-| **Queue** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
-| **Team** | [**V2MobiusRulesTopicAddressableEntityRef**](V2MobiusRulesTopicAddressableEntityRef.html) |  | [optional] |
+| **User** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
+| **Group** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
+| **Queue** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
+| **Team** | [**V2MobiusRulesTopicAlertingAddressableEntityRef**](V2MobiusRulesTopicAlertingAddressableEntityRef.html) |  | [optional] |
 {: class="table table-striped"}
 
 

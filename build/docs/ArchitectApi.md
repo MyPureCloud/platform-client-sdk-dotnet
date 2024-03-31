@@ -5774,6 +5774,7 @@ GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is sub
 Requires ANY permissions: 
 
 * architect:flowLogLevel:view
+* architect:flowLogLevelDefault:view
 
 ### Example
 ```{"language":"csharp"}

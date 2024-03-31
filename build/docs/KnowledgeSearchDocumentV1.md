@@ -1,7 +1,7 @@
 ---
-title: KnowledgeSearchDocument
+title: KnowledgeSearchDocumentV1
 ---
-## ININ.PureCloudApi.Model.KnowledgeSearchDocument
+## ININ.PureCloudApi.Model.KnowledgeSearchDocumentV1
 
 ## Properties
 

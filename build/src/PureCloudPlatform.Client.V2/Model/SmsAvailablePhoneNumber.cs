@@ -87,7 +87,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Shortcode for "shortcode"
             /// </summary>
             [EnumMember(Value = "shortcode")]
-            Shortcode
+            Shortcode,
+            
+            /// <summary>
+            /// Enum Alphanumeric for "alphanumeric"
+            /// </summary>
+            [EnumMember(Value = "alphanumeric")]
+            Alphanumeric
         }
         /// <summary>
         /// The address requirement needed for provisioning this number. If there is a requirement, the address must be the residence or place of business of the individual or entity using the phone number.

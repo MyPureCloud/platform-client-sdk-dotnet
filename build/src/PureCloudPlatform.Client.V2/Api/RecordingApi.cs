@@ -894,26 +894,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves a paged listing of screen recording sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ScreenRecordingSessionListing</returns>
-        
+        [Obsolete]
         ScreenRecordingSessionListing GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
-        
+        [Obsolete]
         ApiResponse<ScreenRecordingSessionListing> GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2478,26 +2478,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieves a paged listing of screen recording sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ScreenRecordingSessionListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetRecordingsScreensessionsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -10186,13 +10186,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions 
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ScreenRecordingSessionListing</returns>
-        
+        [Obsolete]
         public ScreenRecordingSessionListing GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ScreenRecordingSessionListing> localVarResponse = GetRecordingsScreensessionsWithHttpInfo(pageSize, pageNumber);
@@ -10201,13 +10201,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions 
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
-        
+        [Obsolete]
         public ApiResponse< ScreenRecordingSessionListing > GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -10290,13 +10290,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions 
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ScreenRecordingSessionListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetRecordingsScreensessionsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ScreenRecordingSessionListing> localVarResponse = await GetRecordingsScreensessionsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -10306,13 +10306,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions 
-        /// 
+        /// Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 

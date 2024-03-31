@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Group">Group.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="Team">Team.</param>
-        public V2MobiusAlertsTopicEntityProperties(EntityTypeEnum? EntityType = null, V2MobiusAlertsTopicAddressableEntityRef User = null, V2MobiusAlertsTopicAddressableEntityRef Group = null, V2MobiusAlertsTopicAddressableEntityRef Queue = null, V2MobiusAlertsTopicAddressableEntityRef Team = null)
+        public V2MobiusAlertsTopicEntityProperties(EntityTypeEnum? EntityType = null, V2MobiusAlertsTopicAlertingAddressableEntityRef User = null, V2MobiusAlertsTopicAlertingAddressableEntityRef Group = null, V2MobiusAlertsTopicAlertingAddressableEntityRef Queue = null, V2MobiusAlertsTopicAlertingAddressableEntityRef Team = null)
         {
             this.EntityType = EntityType;
             this.User = User;
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public V2MobiusAlertsTopicAddressableEntityRef User { get; set; }
+        public V2MobiusAlertsTopicAlertingAddressableEntityRef User { get; set; }
 
 
 
@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name="group", EmitDefaultValue=false)]
-        public V2MobiusAlertsTopicAddressableEntityRef Group { get; set; }
+        public V2MobiusAlertsTopicAlertingAddressableEntityRef Group { get; set; }
 
 
 
@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public V2MobiusAlertsTopicAddressableEntityRef Queue { get; set; }
+        public V2MobiusAlertsTopicAlertingAddressableEntityRef Queue { get; set; }
 
 
 
@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
-        public V2MobiusAlertsTopicAddressableEntityRef Team { get; set; }
+        public V2MobiusAlertsTopicAlertingAddressableEntityRef Team { get; set; }
 
 
         /// <summary>

@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "199.0.0");
+            request.AddHeader("purecloud-sdk", "200.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;

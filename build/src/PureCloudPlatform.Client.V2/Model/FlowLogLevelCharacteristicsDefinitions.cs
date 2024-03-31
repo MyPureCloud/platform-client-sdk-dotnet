@@ -21,20 +21,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowLogLevelCharacteristicsDefinitions" /> class.
         /// </summary>
-        /// <param name="Characteristics">Characteristics.</param>
-        public FlowLogLevelCharacteristicsDefinitions(List<FlowLogLevelCharacteristicsDefinition> Characteristics = null)
+        public FlowLogLevelCharacteristicsDefinitions()
         {
-            this.Characteristics = Characteristics;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Characteristics
+        /// A list of flow log levels available to the organization.
         /// </summary>
+        /// <value>A list of flow log levels available to the organization.</value>
+        [DataMember(Name="logLevels", EmitDefaultValue=false)]
+        public List<FlowLogLevel> LogLevels { get; private set; }
+
+
+
+        /// <summary>
+        /// A list of characteristics that the loglevels will have that are available to the organization..
+        /// </summary>
+        /// <value>A list of characteristics that the loglevels will have that are available to the organization..</value>
         [DataMember(Name="characteristics", EmitDefaultValue=false)]
-        public List<FlowLogLevelCharacteristicsDefinition> Characteristics { get; set; }
+        public List<FlowLogLevelCharacteristicsDefinition> Characteristics { get; private set; }
 
 
         /// <summary>
@@ -46,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class FlowLogLevelCharacteristicsDefinitions {\n");
 
+            sb.Append("  LogLevels: ").Append(LogLevels).Append("\n");
             sb.Append("  Characteristics: ").Append(Characteristics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -88,6 +97,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.LogLevels == other.LogLevels ||
+                    this.LogLevels != null &&
+                    this.LogLevels.SequenceEqual(other.LogLevels)
+                ) &&
+                (
                     this.Characteristics == other.Characteristics ||
                     this.Characteristics != null &&
                     this.Characteristics.SequenceEqual(other.Characteristics)
@@ -105,6 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.LogLevels != null)
+                    hash = hash * 59 + this.LogLevels.GetHashCode();
+
                 if (this.Characteristics != null)
                     hash = hash * 59 + this.Characteristics.GetHashCode();
 

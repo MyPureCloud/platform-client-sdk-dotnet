@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Confidence">The confidence associated with a document with respect to a search query..</param>
         /// <param name="Document">Document that matched the query..</param>
-        public KnowledgeDocumentSearchResult(double? Confidence = null, KnowledgeDocumentResponse Document = null)
+        public KnowledgeDocumentSearchResult(double? Confidence = null, KnowledgeSearchDocumentResponse Document = null)
         {
             this.Confidence = Confidence;
             this.Document = Document;
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Document that matched the query.</value>
         [DataMember(Name="document", EmitDefaultValue=false)]
-        public KnowledgeDocumentResponse Document { get; set; }
+        public KnowledgeSearchDocumentResponse Document { get; set; }
 
 
         /// <summary>

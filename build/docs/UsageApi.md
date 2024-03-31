@@ -10,10 +10,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOauthClientUsageQueryResult**](UsageApi.html#getoauthclientusagequeryresult) | **Get** /api/v2/oauth/clients/{clientId}/usage/query/results/{executionId} | Get the results of a usage query |
 | [**GetOauthClientUsageSummary**](UsageApi.html#getoauthclientusagesummary) | **Get** /api/v2/oauth/clients/{clientId}/usage/summary | Get a summary of OAuth client API usage |
 | [**GetUsageQueryExecutionIdResults**](UsageApi.html#getusagequeryexecutionidresults) | **Get** /api/v2/usage/query/{executionId}/results | Get the results of a usage query |
-| [**GetUsageSimplesearchExecutionIdResults**](UsageApi.html#getusagesimplesearchexecutionidresults) | **Get** /api/v2/usage/simplesearch/{executionId}/results | Get the results of a usage search |
+| [**GetUsageSimplesearchExecutionIdResults**](UsageApi.html#getusagesimplesearchexecutionidresults) | **Get** /api/v2/usage/simplesearch/{executionId}/results | Get the results of a usage search. Number of records to be returned is limited to 20,000 results. |
 | [**PostOauthClientUsageQuery**](UsageApi.html#postoauthclientusagequery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
 | [**PostUsageQuery**](UsageApi.html#postusagequery) | **Post** /api/v2/usage/query | Query organization API Usage -  |
-| [**PostUsageSimplesearch**](UsageApi.html#postusagesimplesearch) | **Post** /api/v2/usage/simplesearch | Search organization API Usage -  |
+| [**PostUsageSimplesearch**](UsageApi.html#postusagesimplesearch) | **Post** /api/v2/usage/simplesearch | Search organization API Usage |
 {: class="table table-striped"}
 
 <a name="getoauthclientusagequeryresult"></a>
@@ -220,7 +220,7 @@ namespace Example
 
 
 
-Get the results of a usage search
+Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
 
 Requires ANY permissions: 
 
@@ -253,7 +253,7 @@ namespace Example
 
             try
             { 
-                // Get the results of a usage search
+                // Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
                 ApiUsageQueryResult result = apiInstance.GetUsageSimplesearchExecutionIdResults(executionId);
                 Debug.WriteLine(result);
             }
@@ -418,9 +418,9 @@ namespace Example
 
 
 
-Search organization API Usage - 
+Search organization API Usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
 
 Requires ANY permissions: 
 
@@ -453,7 +453,7 @@ namespace Example
 
             try
             { 
-                // Search organization API Usage - 
+                // Search organization API Usage
                 UsageExecutionResult result = apiInstance.PostUsageSimplesearch(body);
                 Debug.WriteLine(result);
             }

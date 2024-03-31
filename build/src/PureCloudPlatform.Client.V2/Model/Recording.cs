@@ -19,6 +19,45 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class Recording :  IEquatable<Recording>
     {
         /// <summary>
+        /// The media subtype of the recording.
+        /// </summary>
+        /// <value>The media subtype of the recording.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MediaSubtypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Trunk for "Trunk"
+            /// </summary>
+            [EnumMember(Value = "Trunk")]
+            Trunk,
+            
+            /// <summary>
+            /// Enum Station for "Station"
+            /// </summary>
+            [EnumMember(Value = "Station")]
+            Station,
+            
+            /// <summary>
+            /// Enum Consult for "Consult"
+            /// </summary>
+            [EnumMember(Value = "Consult")]
+            Consult,
+            
+            /// <summary>
+            /// Enum Screen for "Screen"
+            /// </summary>
+            [EnumMember(Value = "Screen")]
+            Screen
+        }
+        /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
         /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
@@ -145,6 +184,12 @@ namespace PureCloudPlatform.Client.V2.Model
             EmailTranscriptTooLarge
         }
         /// <summary>
+        /// The media subtype of the recording.
+        /// </summary>
+        /// <value>The media subtype of the recording.</value>
+        [DataMember(Name="mediaSubtype", EmitDefaultValue=false)]
+        public MediaSubtypeEnum? MediaSubtype { get; set; }
+        /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
         /// <value>Represents the current file state for a recording. Examples: Uploading, Archived, etc</value>
@@ -177,6 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTime">The start time of the recording. Null when there is no playable media..</param>
         /// <param name="EndTime">The end time of the recording. Null when there is no playable media..</param>
         /// <param name="Media">The media type of the recording. This could be audio, chat, messaging, email, or screen..</param>
+        /// <param name="MediaSubtype">The media subtype of the recording..</param>
+        /// <param name="MediaSubject">The media subject of the recording..</param>
         /// <param name="Annotations">Annotations that belong to the recording..</param>
         /// <param name="Transcript">Represents a chat transcript.</param>
         /// <param name="EmailTranscript">Represents an email transcript.</param>
@@ -201,7 +248,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingErrorStatus">Status of a recording that cannot be returned because of an error.</param>
         /// <param name="OriginalRecordingStartTime">The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreationTime">The creation time of the recording. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null, DateTime? OriginalRecordingStartTime = null, DateTime? CreationTime = null)
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? OutputDurationMs = null, int? OutputSizeInBytes = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null, RecordingFileRoleEnum? RecordingFileRole = null, RecordingErrorStatusEnum? RecordingErrorStatus = null, DateTime? OriginalRecordingStartTime = null, DateTime? CreationTime = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -209,6 +256,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Media = Media;
+            this.MediaSubtype = MediaSubtype;
+            this.MediaSubject = MediaSubject;
             this.Annotations = Annotations;
             this.Transcript = Transcript;
             this.EmailTranscript = EmailTranscript;
@@ -295,6 +344,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The media type of the recording. This could be audio, chat, messaging, email, or screen.</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public string Media { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// The media subject of the recording.
+        /// </summary>
+        /// <value>The media subject of the recording.</value>
+        [DataMember(Name="mediaSubject", EmitDefaultValue=false)]
+        public string MediaSubject { get; set; }
 
 
 
@@ -508,6 +568,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  Media: ").Append(Media).Append("\n");
+            sb.Append("  MediaSubtype: ").Append(MediaSubtype).Append("\n");
+            sb.Append("  MediaSubject: ").Append(MediaSubject).Append("\n");
             sb.Append("  Annotations: ").Append(Annotations).Append("\n");
             sb.Append("  Transcript: ").Append(Transcript).Append("\n");
             sb.Append("  EmailTranscript: ").Append(EmailTranscript).Append("\n");
@@ -607,6 +669,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Media == other.Media ||
                     this.Media != null &&
                     this.Media.Equals(other.Media)
+                ) &&
+                (
+                    this.MediaSubtype == other.MediaSubtype ||
+                    this.MediaSubtype != null &&
+                    this.MediaSubtype.Equals(other.MediaSubtype)
+                ) &&
+                (
+                    this.MediaSubject == other.MediaSubject ||
+                    this.MediaSubject != null &&
+                    this.MediaSubject.Equals(other.MediaSubject)
                 ) &&
                 (
                     this.Annotations == other.Annotations ||
@@ -766,6 +838,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
+
+                if (this.MediaSubtype != null)
+                    hash = hash * 59 + this.MediaSubtype.GetHashCode();
+
+                if (this.MediaSubject != null)
+                    hash = hash * 59 + this.MediaSubject.GetHashCode();
 
                 if (this.Annotations != null)
                     hash = hash * 59 + this.Annotations.GetHashCode();

@@ -1,7 +1,7 @@
 ---
-title: KnowledgeGuestDocument
+title: KnowledgeSearchDocumentResponse
 ---
-## ININ.PureCloudApi.Model.KnowledgeGuestDocument
+## ININ.PureCloudApi.Model.KnowledgeSearchDocumentResponse
 
 ## Properties
 
@@ -20,9 +20,12 @@ title: KnowledgeGuestDocument
 | **CreatedBy** | [**UserReference**](UserReference.html) | The user who created the document. | [optional] |
 | **ModifiedBy** | [**UserReference**](UserReference.html) | The user who modified the document. | [optional] |
 | **DocumentVersion** | [**AddressableEntityRef**](AddressableEntityRef.html) | The version of the document. | [optional] |
-| **Variations** | [**List&lt;KnowledgeGuestDocumentVariation&gt;**](KnowledgeGuestDocumentVariation.html) | Variations of the document. | [optional] |
-| **SessionId** | **string** | ID of the guest session. | [optional] |
-| **Category** | [**GuestCategoryReference**](GuestCategoryReference.html) | The reference to category associated with the document. | [optional] |
+| **Category** | [**CategoryResponse**](CategoryResponse.html) | The reference to category associated with the document. | [optional] |
+| **Labels** | [**List&lt;LabelResponse&gt;**](LabelResponse.html) | The references to labels associated with the document. | [optional] |
+| **KnowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference.html) | Knowledge base to which the document belongs to. | [optional] |
+| **ExternalId** | **string** | The reference to external id associated with the document. | [optional] |
+| **Variations** | [**List&lt;DocumentVariationAnswer&gt;**](DocumentVariationAnswer.html) | Variations of the document. | [optional] |
+| **Answer** | **string** | The answer to the query. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

@@ -162,7 +162,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Application">The client application details from which search request was sent..</param>
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
         /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null)
+        /// <param name="AnswerHighlightTopResults">The number of articles to be sent for answer-highlighting. Can range from 1-5..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null, int? AnswerHighlightTopResults = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -176,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Application = Application;
             this.ConversationContext = ConversationContext;
             this.ConfidenceThreshold = ConfidenceThreshold;
+            this.AnswerHighlightTopResults = AnswerHighlightTopResults;
             
         }
         
@@ -294,6 +296,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public float? ConfidenceThreshold { get; set; }
 
 
+
+        /// <summary>
+        /// The number of articles to be sent for answer-highlighting. Can range from 1-5.
+        /// </summary>
+        /// <value>The number of articles to be sent for answer-highlighting. Can range from 1-5.</value>
+        [DataMember(Name="answerHighlightTopResults", EmitDefaultValue=false)]
+        public int? AnswerHighlightTopResults { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -318,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
             sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
+            sb.Append("  AnswerHighlightTopResults: ").Append(AnswerHighlightTopResults).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -432,6 +444,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConfidenceThreshold == other.ConfidenceThreshold ||
                     this.ConfidenceThreshold != null &&
                     this.ConfidenceThreshold.Equals(other.ConfidenceThreshold)
+                ) &&
+                (
+                    this.AnswerHighlightTopResults == other.AnswerHighlightTopResults ||
+                    this.AnswerHighlightTopResults != null &&
+                    this.AnswerHighlightTopResults.Equals(other.AnswerHighlightTopResults)
                 );
         }
 
@@ -490,6 +507,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConfidenceThreshold != null)
                     hash = hash * 59 + this.ConfidenceThreshold.GetHashCode();
+
+                if (this.AnswerHighlightTopResults != null)
+                    hash = hash * 59 + this.AnswerHighlightTopResults.GetHashCode();
 
                 return hash;
             }

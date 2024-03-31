@@ -23,8 +23,8 @@ title: KnowledgeDocumentResponse
 | **Category** | [**CategoryResponse**](CategoryResponse.html) | The reference to category associated with the document. | [optional] |
 | **Labels** | [**List&lt;LabelResponse&gt;**](LabelResponse.html) | The references to labels associated with the document. | [optional] |
 | **KnowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference.html) | Knowledge base to which the document belongs to. | [optional] |
-| **Variations** | [**List&lt;DocumentVariation&gt;**](DocumentVariation.html) | Variations of the document. | [optional] |
 | **ExternalId** | **string** | The reference to external id associated with the document. | [optional] |
+| **Variations** | [**List&lt;DocumentVariation&gt;**](DocumentVariation.html) | Variations of the document. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

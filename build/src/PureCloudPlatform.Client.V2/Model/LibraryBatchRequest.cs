@@ -13,29 +13,35 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// V2MobiusRulesTopicAddressableEntityRef
+    /// LibraryBatchRequest
     /// </summary>
     [DataContract]
-    public partial class V2MobiusRulesTopicAddressableEntityRef :  IEquatable<V2MobiusRulesTopicAddressableEntityRef>
+    public partial class LibraryBatchRequest :  IEquatable<LibraryBatchRequest>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="V2MobiusRulesTopicAddressableEntityRef" /> class.
+        /// Initializes a new instance of the <see cref="LibraryBatchRequest" /> class.
         /// </summary>
-        /// <param name="Id">The ID of the resource.</param>
-        public V2MobiusRulesTopicAddressableEntityRef(string Id = null)
+        [JsonConstructorAttribute]
+        protected LibraryBatchRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LibraryBatchRequest" /> class.
+        /// </summary>
+        /// <param name="LibraryIds">List of Library IDs (required).</param>
+        public LibraryBatchRequest(List<string> LibraryIds = null)
         {
-            this.Id = Id;
+            this.LibraryIds = LibraryIds;
             
         }
         
 
 
         /// <summary>
-        /// The ID of the resource
+        /// List of Library IDs
         /// </summary>
-        /// <value>The ID of the resource</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        /// <value>List of Library IDs</value>
+        [DataMember(Name="libraryIds", EmitDefaultValue=false)]
+        public List<string> LibraryIds { get; set; }
 
 
         /// <summary>
@@ -45,9 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class V2MobiusRulesTopicAddressableEntityRef {\n");
+            sb.Append("class LibraryBatchRequest {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  LibraryIds: ").Append(LibraryIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,15 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as V2MobiusRulesTopicAddressableEntityRef);
+            return this.Equals(obj as LibraryBatchRequest);
         }
 
         /// <summary>
-        /// Returns true if V2MobiusRulesTopicAddressableEntityRef instances are equal
+        /// Returns true if LibraryBatchRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of V2MobiusRulesTopicAddressableEntityRef to be compared</param>
+        /// <param name="other">Instance of LibraryBatchRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(V2MobiusRulesTopicAddressableEntityRef other)
+        public bool Equals(LibraryBatchRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,9 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.LibraryIds == other.LibraryIds ||
+                    this.LibraryIds != null &&
+                    this.LibraryIds.SequenceEqual(other.LibraryIds)
                 );
         }
 
@@ -106,8 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.LibraryIds != null)
+                    hash = hash * 59 + this.LibraryIds.GetHashCode();
 
                 return hash;
             }

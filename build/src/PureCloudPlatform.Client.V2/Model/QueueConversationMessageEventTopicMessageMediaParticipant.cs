@@ -99,6 +99,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Scheduled,
             
             /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked,
+            
+            /// <summary>
             /// Enum None for "none"
             /// </summary>
             [EnumMember(Value = "none")]
@@ -183,6 +189,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "scheduled")]
             Scheduled,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked,
             
             /// <summary>
             /// Enum None for "none"

@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetResponsemanagementResponseassetsStatusStatusId**](ResponseManagementApi.html#getresponsemanagementresponseassetsstatusstatusid) | **Get** /api/v2/responsemanagement/responseassets/status/{statusId} | Get response asset upload status |
 | [**GetResponsemanagementResponses**](ResponseManagementApi.html#getresponsemanagementresponses) | **Get** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
 | [**PostResponsemanagementLibraries**](ResponseManagementApi.html#postresponsemanagementlibraries) | **Post** /api/v2/responsemanagement/libraries | Create a response library. |
+| [**PostResponsemanagementLibrariesBulk**](ResponseManagementApi.html#postresponsemanagementlibrariesbulk) | **Post** /api/v2/responsemanagement/libraries/bulk | Get response libraries. |
 | [**PostResponsemanagementResponseassetsSearch**](ResponseManagementApi.html#postresponsemanagementresponseassetssearch) | **Post** /api/v2/responsemanagement/responseassets/search | Search response assets |
 | [**PostResponsemanagementResponseassetsUploads**](ResponseManagementApi.html#postresponsemanagementresponseassetsuploads) | **Post** /api/v2/responsemanagement/responseassets/uploads | Creates pre-signed url for uploading response asset |
 | [**PostResponsemanagementResponses**](ResponseManagementApi.html#postresponsemanagementresponses) | **Post** /api/v2/responsemanagement/responses | Create a response. |
@@ -670,6 +671,69 @@ namespace Example
 ### Return type
 
 [**Library**](Library.html)
+
+<a name="postresponsemanagementlibrariesbulk"></a>
+
+## [**LibraryEntityListing**](LibraryEntityListing.html) PostResponsemanagementLibrariesBulk (LibraryBatchRequest body)
+
+
+
+Get response libraries.
+
+Requires ANY permissions: 
+
+* responses:library:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostResponsemanagementLibrariesBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var body = new LibraryBatchRequest(); // LibraryBatchRequest | LibraryIDs (max allowed 50)
+
+            try
+            { 
+                // Get response libraries.
+                LibraryEntityListing result = apiInstance.PostResponsemanagementLibrariesBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PostResponsemanagementLibrariesBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LibraryBatchRequest**](LibraryBatchRequest.html)| LibraryIDs (max allowed 50) |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LibraryEntityListing**](LibraryEntityListing.html)
 
 <a name="postresponsemanagementresponseassetssearch"></a>
 

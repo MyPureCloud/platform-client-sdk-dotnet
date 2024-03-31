@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Results associated to the search response</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<KnowledgeSearchDocument> Results { get; private set; }
+        public List<KnowledgeSearchDocumentV1> Results { get; private set; }
 
 
         /// <summary>
