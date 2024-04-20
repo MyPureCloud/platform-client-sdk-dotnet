@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Successconfirmationno,
             
             /// <summary>
+            /// Enum Skippedcollection for "SkippedCollection"
+            /// </summary>
+            [EnumMember(Value = "SkippedCollection")]
+            Skippedcollection,
+            
+            /// <summary>
             /// Enum Nomatchcollection for "NoMatchCollection"
             /// </summary>
             [EnumMember(Value = "NoMatchCollection")]

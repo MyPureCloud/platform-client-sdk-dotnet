@@ -19,8 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TransferToExternalRequest :  IEquatable<TransferToExternalRequest>
     {
         /// <summary>
-        /// Gets or Sets TransferType
+        /// The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.
         /// </summary>
+        /// <value>The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TransferTypeEnum
         {
@@ -45,14 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Unattended
         }
         /// <summary>
-        /// Gets or Sets TransferType
+        /// The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.
         /// </summary>
+        /// <value>The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.</value>
         [DataMember(Name="transferType", EmitDefaultValue=false)]
         public TransferTypeEnum? TransferType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferToExternalRequest" /> class.
         /// </summary>
-        /// <param name="TransferType">TransferType.</param>
+        /// <param name="TransferType">The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended..</param>
         /// <param name="Address">The address (like phone number) of the external contact..</param>
         public TransferToExternalRequest(TransferTypeEnum? TransferType = null, string Address = null)
         {

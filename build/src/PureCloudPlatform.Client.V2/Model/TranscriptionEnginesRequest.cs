@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TranscriptionEnginesRequest" /> class.
         /// </summary>
         /// <param name="TranscriptionEngines">The transcription engine setting (required).</param>
-        public TranscriptionEnginesRequest(List<TranscriptionEngines> TranscriptionEngines = null)
+        public TranscriptionEnginesRequest(List<ProgramTranscriptionEngine> TranscriptionEngines = null)
         {
             this.TranscriptionEngines = TranscriptionEngines;
             
@@ -41,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The transcription engine setting</value>
         [DataMember(Name="transcriptionEngines", EmitDefaultValue=false)]
-        public List<TranscriptionEngines> TranscriptionEngines { get; set; }
+        public List<ProgramTranscriptionEngine> TranscriptionEngines { get; set; }
 
 
         /// <summary>

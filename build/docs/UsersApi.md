@@ -1195,7 +1195,7 @@ namespace Example
 
 <a name="getauthorizationsubject"></a>
 
-## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId)
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
 
 
 
@@ -1228,11 +1228,12 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var includeDuplicates = includeDuplicates_example;  // bool? | Include multiple entries with the same role and division but different subjects (optional)  (default to false)
 
             try
             { 
                 // Returns a listing of roles and permissions for a user.
-                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId);
+                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId, includeDuplicates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1250,6 +1251,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
+| **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -1258,7 +1260,7 @@ namespace Example
 
 <a name="getauthorizationsubjectsme"></a>
 
-## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubjectsMe ()
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
 
 
 
@@ -1289,11 +1291,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new UsersApi();
+            var includeDuplicates = includeDuplicates_example;  // bool? | Include multiple entries with the same role and division but different subjects (optional)  (default to false)
 
             try
             { 
                 // Returns a listing of roles and permissions for the currently authenticated user.
-                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe();
+                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe(includeDuplicates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1306,8 +1309,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
+{: class="table table-striped"}
 
 ### Return type
 
@@ -2978,7 +2985,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Assessment |
-| **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
+| **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule, NotCompleted |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
 
@@ -3062,7 +3069,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **types** | [**List<string>**](string.html)| Specifies the activity types. | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Assessment |
-| **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule |
+| **statuses** | [**List<string>**](string.html)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule, NotCompleted |
 | **relationship** | [**List<string>**](string.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
 {: class="table table-striped"}
 

@@ -76,7 +76,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum System for "System"
             /// </summary>
             [EnumMember(Value = "System")]
-            System
+            System,
+            
+            /// <summary>
+            /// Enum GenesysInternal for "GENESYS_INTERNAL"
+            /// </summary>
+            [EnumMember(Value = "GENESYS_INTERNAL")]
+            GenesysInternal
         }
         /// <summary>
         /// The status of the action of this audit message.
@@ -167,6 +173,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Export")]
             Export,
+            
+            /// <summary>
+            /// Enum Download for "Download"
+            /// </summary>
+            [EnumMember(Value = "Download")]
+            Download,
             
             /// <summary>
             /// Enum Restorerequest for "RestoreRequest"

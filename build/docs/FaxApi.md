@@ -11,8 +11,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFaxDocument**](FaxApi.html#getfaxdocument) | **Get** /api/v2/fax/documents/{documentId} | Get a document. |
 | [**GetFaxDocumentContent**](FaxApi.html#getfaxdocumentcontent) | **Get** /api/v2/fax/documents/{documentId}/content | Download a fax document. |
 | [**GetFaxDocuments**](FaxApi.html#getfaxdocuments) | **Get** /api/v2/fax/documents | Get a list of fax documents. |
+| [**GetFaxSettings**](FaxApi.html#getfaxsettings) | **Get** /api/v2/fax/settings | Get organization config for given organization |
 | [**GetFaxSummary**](FaxApi.html#getfaxsummary) | **Get** /api/v2/fax/summary | Get fax summary |
 | [**PutFaxDocument**](FaxApi.html#putfaxdocument) | **Put** /api/v2/fax/documents/{documentId} | Update a fax document. |
+| [**PutFaxSettings**](FaxApi.html#putfaxsettings) | **Put** /api/v2/fax/settings | Update/write organization config for given organization |
 {: class="table table-striped"}
 
 <a name="deletefaxdocument"></a>
@@ -264,6 +266,63 @@ namespace Example
 
 [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html)
 
+<a name="getfaxsettings"></a>
+
+## [**FaxConfig**](FaxConfig.html) GetFaxSettings ()
+
+
+
+Get organization config for given organization
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFaxSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new FaxApi();
+
+            try
+            { 
+                // Get organization config for given organization
+                FaxConfig result = apiInstance.GetFaxSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.GetFaxSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**FaxConfig**](FaxConfig.html)
+
 <a name="getfaxsummary"></a>
 
 ## [**FaxSummary**](FaxSummary.html) GetFaxSummary ()
@@ -384,4 +443,67 @@ namespace Example
 ### Return type
 
 [**FaxDocument**](FaxDocument.html)
+
+<a name="putfaxsettings"></a>
+
+## [**FaxConfig**](FaxConfig.html) PutFaxSettings (FaxConfig body = null)
+
+
+
+Update/write organization config for given organization
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutFaxSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new FaxApi();
+            var body = new FaxConfig(); // FaxConfig |  (optional) 
+
+            try
+            { 
+                // Update/write organization config for given organization
+                FaxConfig result = apiInstance.PutFaxSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaxApi.PutFaxSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**FaxConfig**](FaxConfig.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FaxConfig**](FaxConfig.html)
 

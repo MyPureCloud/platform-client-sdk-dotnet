@@ -1328,7 +1328,7 @@ This endpoint does require any parameters.
 
 <a name="getauthorizationsubject"></a>
 
-## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId)
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
 
 
 
@@ -1361,11 +1361,12 @@ namespace Example
 
             var apiInstance = new AuthorizationApi();
             var subjectId = subjectId_example;  // string | Subject ID (user or group)
+            var includeDuplicates = includeDuplicates_example;  // bool? | Include multiple entries with the same role and division but different subjects (optional)  (default to false)
 
             try
             { 
                 // Returns a listing of roles and permissions for a user.
-                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId);
+                AuthzSubject result = apiInstance.GetAuthorizationSubject(subjectId, includeDuplicates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1383,6 +1384,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
+| **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
 {: class="table table-striped"}
 
 ### Return type
@@ -1391,7 +1393,7 @@ namespace Example
 
 <a name="getauthorizationsubjectsme"></a>
 
-## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubjectsMe ()
+## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
 
 
 
@@ -1422,11 +1424,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new AuthorizationApi();
+            var includeDuplicates = includeDuplicates_example;  // bool? | Include multiple entries with the same role and division but different subjects (optional)  (default to false)
 
             try
             { 
                 // Returns a listing of roles and permissions for the currently authenticated user.
-                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe();
+                AuthzSubject result = apiInstance.GetAuthorizationSubjectsMe(includeDuplicates);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1439,8 +1442,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
+{: class="table table-striped"}
 
 ### Return type
 

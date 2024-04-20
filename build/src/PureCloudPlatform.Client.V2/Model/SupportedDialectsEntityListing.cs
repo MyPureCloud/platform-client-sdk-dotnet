@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SupportedDialectsEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        public SupportedDialectsEntityListing(List<TranscriptionEngines> Entities = null)
+        public SupportedDialectsEntityListing(List<SupportedDialectsTranscriptionEngine> Entities = null)
         {
             this.Entities = Entities;
             
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<TranscriptionEngines> Entities { get; set; }
+        public List<SupportedDialectsTranscriptionEngine> Entities { get; set; }
 
 
         /// <summary>

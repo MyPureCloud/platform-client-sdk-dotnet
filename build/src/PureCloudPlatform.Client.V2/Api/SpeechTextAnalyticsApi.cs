@@ -586,7 +586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -605,7 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -1654,7 +1654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -1673,7 +1673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -7070,7 +7070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -7091,7 +7091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -7192,7 +7192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>
@@ -7214,7 +7214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
-        /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 500. (optional, default to 20)</param>
         /// <param name="state">Topic state. Defaults to latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
         /// <param name="ids">Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)</param>

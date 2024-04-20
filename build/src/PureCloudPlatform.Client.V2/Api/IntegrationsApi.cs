@@ -764,7 +764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// UC integration client application configuration.
         /// </summary>
         /// <remarks>
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -774,14 +774,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>UCIntegrationListing</returns>
-        
+        [Obsolete]
         UCIntegrationListing GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// UC integration client application configuration.
         /// </summary>
         /// <remarks>
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -791,7 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of UCIntegrationListing</returns>
-        
+        [Obsolete]
         ApiResponse<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -3032,7 +3032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// UC integration client application configuration.
         /// </summary>
         /// <remarks>
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3042,14 +3042,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of UCIntegrationListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// UC integration client application configuration.
         /// </summary>
         /// <remarks>
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3059,7 +3059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (UCIntegrationListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<UCIntegrationListing>> GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
@@ -10469,7 +10469,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// UC integration client application configuration. 
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -10479,7 +10479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>UCIntegrationListing</returns>
-        
+        [Obsolete]
         public UCIntegrationListing GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<UCIntegrationListing> localVarResponse = GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -10488,7 +10488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// UC integration client application configuration. 
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -10498,7 +10498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of UCIntegrationListing</returns>
-        
+        [Obsolete]
         public ApiResponse< UCIntegrationListing > GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
@@ -10585,7 +10585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// UC integration client application configuration. 
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -10595,7 +10595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of UCIntegrationListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<UCIntegrationListing> localVarResponse = await GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
@@ -10605,7 +10605,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// UC integration client application configuration. 
-        /// This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
+        /// Deprecated: Please use GET /integrations/unifiedcommunications/clientapps instead. This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled for the current organization.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -10615,7 +10615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (UCIntegrationListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<UCIntegrationListing>> GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 

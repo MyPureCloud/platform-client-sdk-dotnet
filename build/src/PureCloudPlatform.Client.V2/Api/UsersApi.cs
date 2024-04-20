@@ -462,9 +462,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>AuthzSubject</returns>
         
-        AuthzSubject GetAuthorizationSubject (string subjectId);
+        AuthzSubject GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -474,9 +475,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId);
+        ApiResponse<AuthzSubject> GetAuthorizationSubjectWithHttpInfo (string subjectId, bool? includeDuplicates = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -485,9 +487,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>AuthzSubject</returns>
         
-        AuthzSubject GetAuthorizationSubjectsMe ();
+        AuthzSubject GetAuthorizationSubjectsMe (bool? includeDuplicates = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -496,9 +499,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo ();
+        ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo (bool? includeDuplicates = null);
 
         /// <summary>
         /// Fetch field config for an entity type
@@ -2900,9 +2904,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId);
+        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId, bool? includeDuplicates = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -2912,9 +2917,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId);
+        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId, bool? includeDuplicates = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -2923,9 +2929,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ();
+        System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync (bool? includeDuplicates = null);
 
         /// <summary>
         /// Returns a listing of roles and permissions for the currently authenticated user.
@@ -2934,9 +2941,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo (bool? includeDuplicates = null);
 
         /// <summary>
         /// Fetch field config for an entity type
@@ -8678,11 +8686,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>AuthzSubject</returns>
         
-        public AuthzSubject GetAuthorizationSubject (string subjectId)
+        public AuthzSubject GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId);
+             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectWithHttpInfo(subjectId, includeDuplicates);
              return localVarResponse.Data;
         }
 
@@ -8692,9 +8701,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId)
+        public ApiResponse< AuthzSubject > GetAuthorizationSubjectWithHttpInfo (string subjectId, bool? includeDuplicates = null)
         { 
             // verify the required parameter 'subjectId' is set
             if (subjectId == null)
@@ -8733,6 +8743,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
 
             // Query params
+            if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
 
             // Header params
 
@@ -8782,11 +8793,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId)
+        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectAsync (string subjectId, bool? includeDuplicates = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId);
+             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectAsyncWithHttpInfo(subjectId, includeDuplicates);
              return localVarResponse.Data;
 
         }
@@ -8797,9 +8809,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">Subject ID (user or group)</param>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectAsyncWithHttpInfo (string subjectId, bool? includeDuplicates = null)
         { 
             // verify the required parameter 'subjectId' is set
             if (subjectId == null)
@@ -8839,6 +8852,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (subjectId != null) localVarPathParams.Add("subjectId", this.Configuration.ApiClient.ParameterToString(subjectId));
 
             // Query params
+            if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
 
             // Header params
 
@@ -8888,11 +8902,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>AuthzSubject</returns>
         
-        public AuthzSubject GetAuthorizationSubjectsMe ()
+        public AuthzSubject GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo();
+             ApiResponse<AuthzSubject> localVarResponse = GetAuthorizationSubjectsMeWithHttpInfo(includeDuplicates);
              return localVarResponse.Data;
         }
 
@@ -8901,9 +8916,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzSubject</returns>
         
-        public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo ()
+        public ApiResponse< AuthzSubject > GetAuthorizationSubjectsMeWithHttpInfo (bool? includeDuplicates = null)
         { 
 
             var localVarPath = "/api/v2/authorization/subjects/me";
@@ -8938,6 +8954,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
 
             // Header params
 
@@ -8986,11 +9003,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of AuthzSubject</returns>
         
-        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync ()
+        public async System.Threading.Tasks.Task<AuthzSubject> GetAuthorizationSubjectsMeAsync (bool? includeDuplicates = null)
         {
-             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo();
+             ApiResponse<AuthzSubject> localVarResponse = await GetAuthorizationSubjectsMeAsyncWithHttpInfo(includeDuplicates);
              return localVarResponse.Data;
 
         }
@@ -9000,9 +9018,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includeDuplicates">Include multiple entries with the same role and division but different subjects (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzSubject)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo (bool? includeDuplicates = null)
         { 
 
             var localVarPath = "/api/v2/authorization/subjects/me";
@@ -9037,6 +9056,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (includeDuplicates != null) localVarQueryParams.Add(new Tuple<string, string>("includeDuplicates", this.Configuration.ApiClient.ParameterToString(includeDuplicates)));
 
             // Header params
 

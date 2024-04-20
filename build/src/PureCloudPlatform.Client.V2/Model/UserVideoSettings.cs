@@ -13,28 +13,40 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AvailableLanguageList
+    /// The settings for User Video
     /// </summary>
     [DataContract]
-    public partial class AvailableLanguageList :  IEquatable<AvailableLanguageList>
+    public partial class UserVideoSettings :  IEquatable<UserVideoSettings>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AvailableLanguageList" /> class.
+        /// Initializes a new instance of the <see cref="UserVideoSettings" /> class.
         /// </summary>
-        /// <param name="Languages">Languages.</param>
-        public AvailableLanguageList(List<string> Languages = null)
+        /// <param name="AllowCamera">whether or not user camera is allowed.</param>
+        /// <param name="AllowScreenShare">whether or not user screen share is allowed.</param>
+        public UserVideoSettings(bool? AllowCamera = null, bool? AllowScreenShare = null)
         {
-            this.Languages = Languages;
+            this.AllowCamera = AllowCamera;
+            this.AllowScreenShare = AllowScreenShare;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Languages
+        /// whether or not user camera is allowed
         /// </summary>
-        [DataMember(Name="languages", EmitDefaultValue=false)]
-        public List<string> Languages { get; set; }
+        /// <value>whether or not user camera is allowed</value>
+        [DataMember(Name="allowCamera", EmitDefaultValue=false)]
+        public bool? AllowCamera { get; set; }
+
+
+
+        /// <summary>
+        /// whether or not user screen share is allowed
+        /// </summary>
+        /// <value>whether or not user screen share is allowed</value>
+        [DataMember(Name="allowScreenShare", EmitDefaultValue=false)]
+        public bool? AllowScreenShare { get; set; }
 
 
         /// <summary>
@@ -44,9 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AvailableLanguageList {\n");
+            sb.Append("class UserVideoSettings {\n");
 
-            sb.Append("  Languages: ").Append(Languages).Append("\n");
+            sb.Append("  AllowCamera: ").Append(AllowCamera).Append("\n");
+            sb.Append("  AllowScreenShare: ").Append(AllowScreenShare).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,15 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AvailableLanguageList);
+            return this.Equals(obj as UserVideoSettings);
         }
 
         /// <summary>
-        /// Returns true if AvailableLanguageList instances are equal
+        /// Returns true if UserVideoSettings instances are equal
         /// </summary>
-        /// <param name="other">Instance of AvailableLanguageList to be compared</param>
+        /// <param name="other">Instance of UserVideoSettings to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AvailableLanguageList other)
+        public bool Equals(UserVideoSettings other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -88,9 +101,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Languages == other.Languages ||
-                    this.Languages != null &&
-                    this.Languages.SequenceEqual(other.Languages)
+                    this.AllowCamera == other.AllowCamera ||
+                    this.AllowCamera != null &&
+                    this.AllowCamera.Equals(other.AllowCamera)
+                ) &&
+                (
+                    this.AllowScreenShare == other.AllowScreenShare ||
+                    this.AllowScreenShare != null &&
+                    this.AllowScreenShare.Equals(other.AllowScreenShare)
                 );
         }
 
@@ -105,8 +123,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Languages != null)
-                    hash = hash * 59 + this.Languages.GetHashCode();
+                if (this.AllowCamera != null)
+                    hash = hash * 59 + this.AllowCamera.GetHashCode();
+
+                if (this.AllowScreenShare != null)
+                    hash = hash * 59 + this.AllowScreenShare.GetHashCode();
 
                 return hash;
             }

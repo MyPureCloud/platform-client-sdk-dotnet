@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TranscriptionEngines">The program transcription engine settings.</param>
         /// <param name="ModifiedBy">The user last modified the record.</param>
         /// <param name="DateModified">The last modified date of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ProgramTranscriptionEngines(BaseProgramEntity Program = null, List<TranscriptionEngines> TranscriptionEngines = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null)
+        public ProgramTranscriptionEngines(BaseProgramEntity Program = null, List<ProgramTranscriptionEngine> TranscriptionEngines = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null)
         {
             this.Program = Program;
             this.TranscriptionEngines = TranscriptionEngines;
@@ -34,6 +34,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+
 
 
         /// <summary>
@@ -50,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The program transcription engine settings</value>
         [DataMember(Name="transcriptionEngines", EmitDefaultValue=false)]
-        public List<TranscriptionEngines> TranscriptionEngines { get; set; }
+        public List<ProgramTranscriptionEngine> TranscriptionEngines { get; set; }
 
 
 
@@ -71,6 +80,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateModified { get; set; }
 
 
+
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,10 +98,12 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ProgramTranscriptionEngines {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Program: ").Append(Program).Append("\n");
             sb.Append("  TranscriptionEngines: ").Append(TranscriptionEngines).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -125,6 +145,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Program == other.Program ||
                     this.Program != null &&
                     this.Program.Equals(other.Program)
@@ -143,6 +168,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -157,6 +187,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Program != null)
                     hash = hash * 59 + this.Program.GetHashCode();
 
@@ -168,6 +201,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

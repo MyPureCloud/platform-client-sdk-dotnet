@@ -1,13 +1,13 @@
 ---
-title: AvailableLanguageList
+title: LinkConfiguration
 ---
-## ININ.PureCloudApi.Model.AvailableLanguageList
+## ININ.PureCloudApi.Model.LinkConfiguration
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Languages** | **List&lt;string&gt;** |  | [optional] |
+| **UriTemplate** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

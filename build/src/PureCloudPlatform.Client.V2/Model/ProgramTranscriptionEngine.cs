@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// TranscriptionEngines
+    /// ProgramTranscriptionEngine
     /// </summary>
     [DataContract]
-    public partial class TranscriptionEngines :  IEquatable<TranscriptionEngines>
+    public partial class ProgramTranscriptionEngine :  IEquatable<ProgramTranscriptionEngine>
     {
         /// <summary>
         /// Gets or Sets Engine
@@ -42,7 +42,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Genesysextended for "GenesysExtended"
             /// </summary>
             [EnumMember(Value = "GenesysExtended")]
-            Genesysextended
+            Genesysextended,
+            
+            /// <summary>
+            /// Enum Transcriptionconnector for "TranscriptionConnector"
+            /// </summary>
+            [EnumMember(Value = "TranscriptionConnector")]
+            Transcriptionconnector
         }
         /// <summary>
         /// Gets or Sets Engine
@@ -50,14 +56,16 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="engine", EmitDefaultValue=false)]
         public EngineEnum? Engine { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TranscriptionEngines" /> class.
+        /// Initializes a new instance of the <see cref="ProgramTranscriptionEngine" /> class.
         /// </summary>
         /// <param name="Engine">Engine.</param>
         /// <param name="Dialects">Dialects.</param>
-        public TranscriptionEngines(EngineEnum? Engine = null, List<string> Dialects = null)
+        /// <param name="EngineIntegration">EngineIntegration.</param>
+        public ProgramTranscriptionEngine(EngineEnum? Engine = null, List<string> Dialects = null, EngineIntegration EngineIntegration = null)
         {
             this.Engine = Engine;
             this.Dialects = Dialects;
+            this.EngineIntegration = EngineIntegration;
             
         }
         
@@ -72,6 +80,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> Dialects { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets EngineIntegration
+        /// </summary>
+        [DataMember(Name="engineIntegration", EmitDefaultValue=false)]
+        public EngineIntegration EngineIntegration { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,10 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TranscriptionEngines {\n");
+            sb.Append("class ProgramTranscriptionEngine {\n");
 
             sb.Append("  Engine: ").Append(Engine).Append("\n");
             sb.Append("  Dialects: ").Append(Dialects).Append("\n");
+            sb.Append("  EngineIntegration: ").Append(EngineIntegration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,15 +125,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TranscriptionEngines);
+            return this.Equals(obj as ProgramTranscriptionEngine);
         }
 
         /// <summary>
-        /// Returns true if TranscriptionEngines instances are equal
+        /// Returns true if ProgramTranscriptionEngine instances are equal
         /// </summary>
-        /// <param name="other">Instance of TranscriptionEngines to be compared</param>
+        /// <param name="other">Instance of ProgramTranscriptionEngine to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TranscriptionEngines other)
+        public bool Equals(ProgramTranscriptionEngine other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -132,6 +149,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Dialects == other.Dialects ||
                     this.Dialects != null &&
                     this.Dialects.SequenceEqual(other.Dialects)
+                ) &&
+                (
+                    this.EngineIntegration == other.EngineIntegration ||
+                    this.EngineIntegration != null &&
+                    this.EngineIntegration.Equals(other.EngineIntegration)
                 );
         }
 
@@ -151,6 +173,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Dialects != null)
                     hash = hash * 59 + this.Dialects.GetHashCode();
+
+                if (this.EngineIntegration != null)
+                    hash = hash * 59 + this.EngineIntegration.GetHashCode();
 
                 return hash;
             }

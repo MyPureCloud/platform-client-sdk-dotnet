@@ -19,8 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TransferRequest :  IEquatable<TransferRequest>
     {
         /// <summary>
-        /// Gets or Sets TransferType
+        /// The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.
         /// </summary>
+        /// <value>The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TransferTypeEnum
         {
@@ -45,14 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Unattended
         }
         /// <summary>
-        /// Gets or Sets TransferType
+        /// The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.
         /// </summary>
+        /// <value>The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended.</value>
         [DataMember(Name="transferType", EmitDefaultValue=false)]
         public TransferTypeEnum? TransferType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferRequest" /> class.
         /// </summary>
-        /// <param name="TransferType">TransferType.</param>
+        /// <param name="TransferType">The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended..</param>
         /// <param name="UserId">The user ID of the transfer target..</param>
         /// <param name="Address">The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication..</param>
         /// <param name="UserName">The user name of the transfer target..</param>

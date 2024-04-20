@@ -8,9 +8,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteChatsRoomMessage**](ChatApi.html#deletechatsroommessage) | **Delete** /api/v2/chats/rooms/{roomJid}/messages/{messageId} | Delete a message in a room |
+| [**DeleteChatsRoomMessagesPin**](ChatApi.html#deletechatsroommessagespin) | **Delete** /api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId} | Remove a pinned message from a room |
 | [**DeleteChatsRoomParticipant**](ChatApi.html#deletechatsroomparticipant) | **Delete** /api/v2/chats/rooms/{roomJid}/participants/{userId} | Remove a user from a room. |
-| [**DeleteChatsRoomPinnedmessage**](ChatApi.html#deletechatsroompinnedmessage) | **Delete** /api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId} | Remove a pinned message from a room |
 | [**DeleteChatsUserMessage**](ChatApi.html#deletechatsusermessage) | **Delete** /api/v2/chats/users/{userId}/messages/{messageId} | Delete a message to a user |
+| [**DeleteChatsUserMessagesPin**](ChatApi.html#deletechatsusermessagespin) | **Delete** /api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId} | Remove a pinned message from a 1on1 |
 | [**GetChatsMessage**](ChatApi.html#getchatsmessage) | **Get** /api/v2/chats/messages/{messageId} | Get a message |
 | [**GetChatsRoom**](ChatApi.html#getchatsroom) | **Get** /api/v2/chats/rooms/{roomJid} | Get a room |
 | [**GetChatsRoomMessage**](ChatApi.html#getchatsroommessage) | **Get** /api/v2/chats/rooms/{roomJid}/messages/{messageIds} | Get messages by id(s) from a room |
@@ -19,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetChatsRoomParticipants**](ChatApi.html#getchatsroomparticipants) | **Get** /api/v2/chats/rooms/{roomJid}/participants | Get room participants in a room |
 | [**GetChatsSettings**](ChatApi.html#getchatssettings) | **Get** /api/v2/chats/settings | Get Chat Settings. |
 | [**GetChatsThreadMessages**](ChatApi.html#getchatsthreadmessages) | **Get** /api/v2/chats/threads/{threadId}/messages | Get history by thread |
+| [**GetChatsUser**](ChatApi.html#getchatsuser) | **Get** /api/v2/chats/users/{userId} | Get information for a 1on1 |
 | [**GetChatsUserMessage**](ChatApi.html#getchatsusermessage) | **Get** /api/v2/chats/users/{userId}/messages/{messageIds} | Get messages by id(s) from a 1on1 |
 | [**GetChatsUserMessages**](ChatApi.html#getchatsusermessages) | **Get** /api/v2/chats/users/{userId}/messages | Get 1on1 History between a user |
 | [**GetChatsUserSettings**](ChatApi.html#getchatsusersettings) | **Get** /api/v2/chats/users/{userId}/settings | Get a user&#39;s chat settings |
@@ -28,10 +30,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchChatsUserMessage**](ChatApi.html#patchchatsusermessage) | **Patch** /api/v2/chats/users/{userId}/messages/{messageId} | Edit a message to a user |
 | [**PatchChatsUserSettings**](ChatApi.html#patchchatsusersettings) | **Patch** /api/v2/chats/users/{userId}/settings | Update a user&#39;s chat settings |
 | [**PostChatsRoomMessages**](ChatApi.html#postchatsroommessages) | **Post** /api/v2/chats/rooms/{roomJid}/messages | Send a message to a room |
+| [**PostChatsRoomMessagesPins**](ChatApi.html#postchatsroommessagespins) | **Post** /api/v2/chats/rooms/{roomJid}/messages/pins | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**PostChatsRoomParticipant**](ChatApi.html#postchatsroomparticipant) | **Post** /api/v2/chats/rooms/{roomJid}/participants/{userId} | Join a room |
-| [**PostChatsRoomPinnedmessages**](ChatApi.html#postchatsroompinnedmessages) | **Post** /api/v2/chats/rooms/{roomJid}/pinnedmessages | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**PostChatsRooms**](ChatApi.html#postchatsrooms) | **Post** /api/v2/chats/rooms | Create an adhoc room |
 | [**PostChatsUserMessages**](ChatApi.html#postchatsusermessages) | **Post** /api/v2/chats/users/{userId}/messages | Send a message to a user |
+| [**PostChatsUserMessagesPins**](ChatApi.html#postchatsusermessagespins) | **Post** /api/v2/chats/users/{userId}/messages/pins | Add pinned messages for a 1on1, up to a maximum of 5 pinned messages |
 | [**PutChatsMessageReactions**](ChatApi.html#putchatsmessagereactions) | **Put** /api/v2/chats/messages/{messageId}/reactions | Update reactions to a message |
 | [**PutChatsSettings**](ChatApi.html#putchatssettings) | **Put** /api/v2/chats/settings | Update Chat Settings. |
 {: class="table table-striped"}
@@ -95,6 +98,71 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomId |  |
 | **messageId** | **string**| messageId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletechatsroommessagespin"></a>
+
+## void DeleteChatsRoomMessagesPin (string roomJid, string pinnedMessageId)
+
+
+
+Remove a pinned message from a room
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:room:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteChatsRoomMessagesPinExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var roomJid = roomJid_example;  // string | roomJid
+            var pinnedMessageId = pinnedMessageId_example;  // string | pinnedMessageId
+
+            try
+            { 
+                // Remove a pinned message from a room
+                apiInstance.DeleteChatsRoomMessagesPin(roomJid, pinnedMessageId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.DeleteChatsRoomMessagesPin: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roomJid** | **string**| roomJid |  |
+| **pinnedMessageId** | **string**| pinnedMessageId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -166,71 +234,6 @@ namespace Example
 
 void (empty response body)
 
-<a name="deletechatsroompinnedmessage"></a>
-
-## void DeleteChatsRoomPinnedmessage (string roomJid, string pinnedMessageId)
-
-
-
-Remove a pinned message from a room
-
-Requires ANY permissions: 
-
-* chat:chat:access
-* chat:room:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteChatsRoomPinnedmessageExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ChatApi();
-            var roomJid = roomJid_example;  // string | roomJid
-            var pinnedMessageId = pinnedMessageId_example;  // string | pinnedMessageId
-
-            try
-            { 
-                // Remove a pinned message from a room
-                apiInstance.DeleteChatsRoomPinnedmessage(roomJid, pinnedMessageId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChatApi.DeleteChatsRoomPinnedmessage: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **roomJid** | **string**| roomJid |  |
-| **pinnedMessageId** | **string**| pinnedMessageId |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
 <a name="deletechatsusermessage"></a>
 
 ## void DeleteChatsUserMessage (string userId, string messageId)
@@ -290,6 +293,73 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **messageId** | **string**| messageId |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletechatsusermessagespin"></a>
+
+## void DeleteChatsUserMessagesPin (string userId, string pinnedMessageId)
+
+
+
+Remove a pinned message from a 1on1
+
+DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:1on1:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteChatsUserMessagesPinExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var userId = userId_example;  // string | userId
+            var pinnedMessageId = pinnedMessageId_example;  // string | pinnedMessageId
+
+            try
+            { 
+                // Remove a pinned message from a 1on1
+                apiInstance.DeleteChatsUserMessagesPin(userId, pinnedMessageId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.DeleteChatsUserMessagesPin: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
+| **pinnedMessageId** | **string**| pinnedMessageId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -817,6 +887,72 @@ namespace Example
 ### Return type
 
 [**ChatMessageEntityListing**](ChatMessageEntityListing.html)
+
+<a name="getchatsuser"></a>
+
+## [**OneOnOne**](OneOnOne.html) GetChatsUser (string userId)
+
+
+
+Get information for a 1on1
+
+GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:1on1:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetChatsUserExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var userId = userId_example;  // string | userId
+
+            try
+            { 
+                // Get information for a 1on1
+                OneOnOne result = apiInstance.GetChatsUser(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.GetChatsUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OneOnOne**](OneOnOne.html)
 
 <a name="getchatsusermessage"></a>
 
@@ -1418,6 +1554,71 @@ namespace Example
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse.html)
 
+<a name="postchatsroommessagespins"></a>
+
+## void PostChatsRoomMessagesPins (string roomJid, PinnedMessageRequest body)
+
+
+
+Add pinned messages for a room, up to a maximum of 5 pinned messages
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:room:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostChatsRoomMessagesPinsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var roomJid = roomJid_example;  // string | roomJid
+            var body = new PinnedMessageRequest(); // PinnedMessageRequest | Pinned Message Ids
+
+            try
+            { 
+                // Add pinned messages for a room, up to a maximum of 5 pinned messages
+                apiInstance.PostChatsRoomMessagesPins(roomJid, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.PostChatsRoomMessagesPins: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **roomJid** | **string**| roomJid |  |
+| **body** | [**PinnedMessageRequest**](PinnedMessageRequest.html)| Pinned Message Ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postchatsroomparticipant"></a>
 
 ## void PostChatsRoomParticipant (string roomJid, string userId)
@@ -1477,71 +1678,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **userId** | **string**| userId |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="postchatsroompinnedmessages"></a>
-
-## void PostChatsRoomPinnedmessages (string roomJid, PinnedMessageRequest body)
-
-
-
-Add pinned messages for a room, up to a maximum of 5 pinned messages
-
-Requires ANY permissions: 
-
-* chat:chat:access
-* chat:room:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostChatsRoomPinnedmessagesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ChatApi();
-            var roomJid = roomJid_example;  // string | roomJid
-            var body = new PinnedMessageRequest(); // PinnedMessageRequest | Pinned Message Ids
-
-            try
-            { 
-                // Add pinned messages for a room, up to a maximum of 5 pinned messages
-                apiInstance.PostChatsRoomPinnedmessages(roomJid, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ChatApi.PostChatsRoomPinnedmessages: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **roomJid** | **string**| roomJid |  |
-| **body** | [**PinnedMessageRequest**](PinnedMessageRequest.html)| Pinned Message Ids |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1677,6 +1813,73 @@ namespace Example
 ### Return type
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse.html)
+
+<a name="postchatsusermessagespins"></a>
+
+## void PostChatsUserMessagesPins (string userId, PinnedMessageRequest body)
+
+
+
+Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+
+PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:1on1:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostChatsUserMessagesPinsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var userId = userId_example;  // string | userId
+            var body = new PinnedMessageRequest(); // PinnedMessageRequest | Pinned Message Ids
+
+            try
+            { 
+                // Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+                apiInstance.PostChatsUserMessagesPins(userId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.PostChatsUserMessagesPins: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
+| **body** | [**PinnedMessageRequest**](PinnedMessageRequest.html)| Pinned Message Ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="putchatsmessagereactions"></a>
 

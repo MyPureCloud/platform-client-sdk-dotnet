@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum System for "SYSTEM"
             /// </summary>
             [EnumMember(Value = "SYSTEM")]
-            System
+            System,
+            
+            /// <summary>
+            /// Enum GenesysInternal for "GENESYS_INTERNAL"
+            /// </summary>
+            [EnumMember(Value = "GENESYS_INTERNAL")]
+            GenesysInternal
         }
         /// <summary>
         /// Status of the event being audited

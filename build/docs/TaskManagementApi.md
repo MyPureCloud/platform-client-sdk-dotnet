@@ -22,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTaskmanagementWorkitemVersion**](TaskManagementApi.html#gettaskmanagementworkitemversion) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/versions/{entityVersion} | Get a version of a workitem |
 | [**GetTaskmanagementWorkitemVersions**](TaskManagementApi.html#gettaskmanagementworkitemversions) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/versions | Get all versions of a workitem |
 | [**GetTaskmanagementWorkitemWrapups**](TaskManagementApi.html#gettaskmanagementworkitemwrapups) | **Get** /api/v2/taskmanagement/workitems/{workitemId}/wrapups | Get all wrapup codes added for all users for a workitem. |
+| [**GetTaskmanagementWorkitemsQueryJob**](TaskManagementApi.html#gettaskmanagementworkitemsqueryjob) | **Get** /api/v2/taskmanagement/workitems/query/jobs/{jobId} | Get the workitem query job associated with the job id. |
+| [**GetTaskmanagementWorkitemsQueryJobResults**](TaskManagementApi.html#gettaskmanagementworkitemsqueryjobresults) | **Get** /api/v2/taskmanagement/workitems/query/jobs/{jobId}/results | Get results from for workitem query job  |
 | [**GetTaskmanagementWorkitemsSchema**](TaskManagementApi.html#gettaskmanagementworkitemsschema) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Get a schema |
 | [**GetTaskmanagementWorkitemsSchemaVersion**](TaskManagementApi.html#gettaskmanagementworkitemsschemaversion) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetTaskmanagementWorkitemsSchemaVersions**](TaskManagementApi.html#gettaskmanagementworkitemsschemaversions) | **Get** /api/v2/taskmanagement/workitems/schemas/{schemaId}/versions | Get all versions of a schema |
@@ -46,6 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTaskmanagementWorkitemTerminate**](TaskManagementApi.html#posttaskmanagementworkitemterminate) | **Post** /api/v2/taskmanagement/workitems/{workitemId}/terminate | Terminate a workitem |
 | [**PostTaskmanagementWorkitems**](TaskManagementApi.html#posttaskmanagementworkitems) | **Post** /api/v2/taskmanagement/workitems | Create a workitem |
 | [**PostTaskmanagementWorkitemsQuery**](TaskManagementApi.html#posttaskmanagementworkitemsquery) | **Post** /api/v2/taskmanagement/workitems/query | Query for workitems |
+| [**PostTaskmanagementWorkitemsQueryJobs**](TaskManagementApi.html#posttaskmanagementworkitemsqueryjobs) | **Post** /api/v2/taskmanagement/workitems/query/jobs | Create a workitem query job |
 | [**PostTaskmanagementWorkitemsSchemas**](TaskManagementApi.html#posttaskmanagementworkitemsschemas) | **Post** /api/v2/taskmanagement/workitems/schemas | Create a schema |
 | [**PostTaskmanagementWorktypeStatuses**](TaskManagementApi.html#posttaskmanagementworktypestatuses) | **Post** /api/v2/taskmanagement/worktypes/{worktypeId}/statuses | Add a status to a worktype |
 | [**PostTaskmanagementWorktypes**](TaskManagementApi.html#posttaskmanagementworktypes) | **Post** /api/v2/taskmanagement/worktypes | Create a worktype |
@@ -1072,6 +1075,136 @@ namespace Example
 ### Return type
 
 [**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing.html)
+
+<a name="gettaskmanagementworkitemsqueryjob"></a>
+
+## [**WorkitemQueryJobResponse**](WorkitemQueryJobResponse.html) GetTaskmanagementWorkitemsQueryJob (string jobId)
+
+
+
+Get the workitem query job associated with the job id.
+
+GetTaskmanagementWorkitemsQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* workitems:queryJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsQueryJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get the workitem query job associated with the job id.
+                WorkitemQueryJobResponse result = apiInstance.GetTaskmanagementWorkitemsQueryJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsQueryJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkitemQueryJobResponse**](WorkitemQueryJobResponse.html)
+
+<a name="gettaskmanagementworkitemsqueryjobresults"></a>
+
+## [**WorkitemPagedEntityListing**](WorkitemPagedEntityListing.html) GetTaskmanagementWorkitemsQueryJobResults (string jobId)
+
+
+
+Get results from for workitem query job 
+
+GetTaskmanagementWorkitemsQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* workitems:queryJobResults:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTaskmanagementWorkitemsQueryJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get results from for workitem query job 
+                WorkitemPagedEntityListing result = apiInstance.GetTaskmanagementWorkitemsQueryJobResults(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.GetTaskmanagementWorkitemsQueryJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkitemPagedEntityListing**](WorkitemPagedEntityListing.html)
 
 <a name="gettaskmanagementworkitemsschema"></a>
 
@@ -2670,6 +2803,71 @@ namespace Example
 ### Return type
 
 [**WorkitemPostQueryEntityListing**](WorkitemPostQueryEntityListing.html)
+
+<a name="posttaskmanagementworkitemsqueryjobs"></a>
+
+## [**WorkitemQueryJobResponse**](WorkitemQueryJobResponse.html) PostTaskmanagementWorkitemsQueryJobs (WorkitemQueryJobCreate body)
+
+
+
+Create a workitem query job
+
+PostTaskmanagementWorkitemsQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* workitems:queryJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTaskmanagementWorkitemsQueryJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TaskManagementApi();
+            var body = new WorkitemQueryJobCreate(); // WorkitemQueryJobCreate | WorkitemQueryJobCreate
+
+            try
+            { 
+                // Create a workitem query job
+                WorkitemQueryJobResponse result = apiInstance.PostTaskmanagementWorkitemsQueryJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TaskManagementApi.PostTaskmanagementWorkitemsQueryJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**WorkitemQueryJobCreate**](WorkitemQueryJobCreate.html)| WorkitemQueryJobCreate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkitemQueryJobResponse**](WorkitemQueryJobResponse.html)
 
 <a name="posttaskmanagementworkitemsschemas"></a>
 

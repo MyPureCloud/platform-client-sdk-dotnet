@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// JourneyViewResult
+    /// A journey view result
     /// </summary>
     [DataContract]
     public partial class JourneyViewResult :  IEquatable<JourneyViewResult>

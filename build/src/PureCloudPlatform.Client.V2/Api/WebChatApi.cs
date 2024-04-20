@@ -138,26 +138,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a media request in the conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         WebChatGuestMediaRequest GetWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId);
 
         /// <summary>
         /// Get a media request in the conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatGuestMediaRequest> GetWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId);
 
         /// <summary>
@@ -324,28 +324,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         WebChatGuestMediaRequest PatchWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatGuestMediaRequest> PatchWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
@@ -626,26 +626,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a media request in the conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatGuestMediaRequest> GetWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId);
 
         /// <summary>
         /// Get a media request in the conversation
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> GetWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId);
 
         /// <summary>
@@ -812,28 +812,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatGuestMediaRequest> PatchWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> PatchWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body);
 
         /// <summary>
@@ -2116,13 +2116,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a media request in the conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         public WebChatGuestMediaRequest GetWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = GetWebchatGuestConversationMediarequestWithHttpInfo(conversationId, mediaRequestId);
@@ -2131,13 +2131,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a media request in the conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatGuestMediaRequest > GetWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -2225,13 +2225,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a media request in the conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatGuestMediaRequest> GetWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = await GetWebchatGuestConversationMediarequestAsyncWithHttpInfo(conversationId, mediaRequestId);
@@ -2241,13 +2241,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a media request in the conversation 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> GetWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -3649,14 +3649,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         public WebChatGuestMediaRequest PatchWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = PatchWebchatGuestConversationMediarequestWithHttpInfo(conversationId, mediaRequestId, body);
@@ -3665,14 +3665,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>ApiResponse of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatGuestMediaRequest > PatchWebchatGuestConversationMediarequestWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -3769,14 +3769,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>Task of WebChatGuestMediaRequest</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatGuestMediaRequest> PatchWebchatGuestConversationMediarequestAsync (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         {
              ApiResponse<WebChatGuestMediaRequest> localVarResponse = await PatchWebchatGuestConversationMediarequestAsyncWithHttpInfo(conversationId, mediaRequestId, body);
@@ -3786,14 +3786,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="mediaRequestId">mediaRequestId</param>
         /// <param name="body">Request</param>
         /// <returns>Task of ApiResponse (WebChatGuestMediaRequest)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatGuestMediaRequest>> PatchWebchatGuestConversationMediarequestAsyncWithHttpInfo (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
         { 
             // verify the required parameter 'conversationId' is set

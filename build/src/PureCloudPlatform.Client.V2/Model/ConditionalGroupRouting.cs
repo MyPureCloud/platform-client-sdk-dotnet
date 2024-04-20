@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConditionalGroupRouting" /> class.
         /// </summary>
-        /// <param name="Rules">The set of rules that defines Conditional Group Routing for this queue.</param>
+        /// <param name="Rules">The set of rules to be executed for each conversation.</param>
         public ConditionalGroupRouting(List<ConditionalGroupRoutingRule> Rules = null)
         {
             this.Rules = Rules;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The set of rules that defines Conditional Group Routing for this queue
+        /// The set of rules to be executed for each conversation
         /// </summary>
-        /// <value>The set of rules that defines Conditional Group Routing for this queue</value>
+        /// <value>The set of rules to be executed for each conversation</value>
         [DataMember(Name="rules", EmitDefaultValue=false)]
         public List<ConditionalGroupRoutingRule> Rules { get; set; }
 

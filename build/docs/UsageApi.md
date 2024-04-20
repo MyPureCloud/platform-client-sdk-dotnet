@@ -216,7 +216,7 @@ namespace Example
 
 <a name="getusagesimplesearchexecutionidresults"></a>
 
-## [**ApiUsageQueryResult**](ApiUsageQueryResult.html) GetUsageSimplesearchExecutionIdResults (string executionId)
+## [**ApiUsageQueryResult**](ApiUsageQueryResult.html) GetUsageSimplesearchExecutionIdResults (string executionId, string after = null, int? pageSize = null)
 
 
 
@@ -250,11 +250,13 @@ namespace Example
 
             var apiInstance = new UsageApi();
             var executionId = executionId_example;  // string | ID of the search execution
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned (optional) 
+            var pageSize = 56;  // int? | The max number of entities to be returned per request. Maximum page size of 1000 (optional) 
 
             try
             { 
                 // Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
-                ApiUsageQueryResult result = apiInstance.GetUsageSimplesearchExecutionIdResults(executionId);
+                ApiUsageQueryResult result = apiInstance.GetUsageSimplesearchExecutionIdResults(executionId, after, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -272,6 +274,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **executionId** | **string**| ID of the search execution |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned | [optional]  |
+| **pageSize** | **int?**| The max number of entities to be returned per request. Maximum page size of 1000 | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

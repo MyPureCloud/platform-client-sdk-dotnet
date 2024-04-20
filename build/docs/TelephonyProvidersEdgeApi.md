@@ -35,7 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgeSoftwareversions**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoftwareversions) | **Get** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
 | [**GetTelephonyProvidersEdgeTrunks**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgetrunks) | **Get** /api/v2/telephony/providers/edges/{edgeId}/trunks | Get the list of available trunks for the given Edge. |
 | [**GetTelephonyProvidersEdges**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedges) | **Get** /api/v2/telephony/providers/edges | Get the list of edges. |
-| [**GetTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesavailablelanguages) | **Get** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. |
 | [**GetTelephonyProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgescertificateauthorities) | **Get** /api/v2/telephony/providers/edges/certificateauthorities | Get the list of certificate authorities. |
 | [**GetTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgescertificateauthority) | **Get** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Get a certificate authority. |
 | [**GetTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdid) | **Get** /api/v2/telephony/providers/edges/dids/{didId} | Get a DID by ID. |
@@ -1926,63 +1925,6 @@ namespace Example
 ### Return type
 
 [**EdgeEntityListing**](EdgeEntityListing.html)
-
-<a name="gettelephonyprovidersedgesavailablelanguages"></a>
-
-## [**AvailableLanguageList**](AvailableLanguageList.html) GetTelephonyProvidersEdgesAvailablelanguages ()
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgesAvailablelanguagesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-
-            try
-            { 
-                // Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
-                AvailableLanguageList result = apiInstance.GetTelephonyProvidersEdgesAvailablelanguages();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesAvailablelanguages: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-[**AvailableLanguageList**](AvailableLanguageList.html)
 
 <a name="gettelephonyprovidersedgescertificateauthorities"></a>
 

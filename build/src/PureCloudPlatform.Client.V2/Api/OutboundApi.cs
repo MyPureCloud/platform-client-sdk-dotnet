@@ -2783,10 +2783,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AttemptLimits> PostOutboundAttemptlimitsWithHttpInfo (AttemptLimits body);
 
         /// <summary>
-        /// Retrieves audits for dialer.
+        /// Retrieves audits for dialer. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -2796,14 +2796,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
-        
+        [Obsolete]
         AuditSearchResult PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
-        /// Retrieves audits for dialer.
+        /// Retrieves audits for dialer. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -2813,7 +2813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>ApiResponse of AuditSearchResult</returns>
-        
+        [Obsolete]
         ApiResponse<AuditSearchResult> PostOutboundAuditsWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
@@ -6925,10 +6925,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AttemptLimits>> PostOutboundAttemptlimitsAsyncWithHttpInfo (AttemptLimits body);
 
         /// <summary>
-        /// Retrieves audits for dialer.
+        /// Retrieves audits for dialer. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -6938,14 +6938,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of AuditSearchResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AuditSearchResult> PostOutboundAuditsAsync (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
-        /// Retrieves audits for dialer.
+        /// Retrieves audits for dialer. (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -6955,7 +6955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostOutboundAuditsAsyncWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null);
 
         /// <summary>
@@ -30558,8 +30558,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieves audits for dialer. 
-        /// 
+        /// Retrieves audits for dialer. (Deprecated) 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -30569,7 +30569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>AuditSearchResult</returns>
-        
+        [Obsolete]
         public AuditSearchResult PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = PostOutboundAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
@@ -30577,8 +30577,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieves audits for dialer. 
-        /// 
+        /// Retrieves audits for dialer. (Deprecated) 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -30588,7 +30588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>ApiResponse of AuditSearchResult</returns>
-        
+        [Obsolete]
         public ApiResponse< AuditSearchResult > PostOutboundAuditsWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         { 
             // verify the required parameter 'body' is set
@@ -30682,8 +30682,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieves audits for dialer. 
-        /// 
+        /// Retrieves audits for dialer. (Deprecated) 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -30693,7 +30693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of AuditSearchResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AuditSearchResult> PostOutboundAuditsAsync (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         {
              ApiResponse<AuditSearchResult> localVarResponse = await PostOutboundAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
@@ -30702,8 +30702,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieves audits for dialer. 
-        /// 
+        /// Retrieves audits for dialer. (Deprecated) 
+        /// This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuditSearch</param>
@@ -30713,7 +30713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ascending")</param>
         /// <param name="facetsOnly">Facets only (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuditSearchResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AuditSearchResult>> PostOutboundAuditsAsyncWithHttpInfo (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
         { 
             // verify the required parameter 'body' is set

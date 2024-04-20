@@ -108,7 +108,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchOutboundDnclistPhonenumbers**](OutboundApi.html#patchoutbounddnclistphonenumbers) | **Patch** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add numbers to or delete numbers from a DNC list. |
 | [**PatchOutboundSettings**](OutboundApi.html#patchoutboundsettings) | **Patch** /api/v2/outbound/settings | Update the outbound settings for this organization |
 | [**PostOutboundAttemptlimits**](OutboundApi.html#postoutboundattemptlimits) | **Post** /api/v2/outbound/attemptlimits | Create attempt limits |
-| [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **Post** /api/v2/outbound/audits | Retrieves audits for dialer. |
+| [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **Post** /api/v2/outbound/audits | Retrieves audits for dialer. (Deprecated) |
 | [**PostOutboundCallabletimesets**](OutboundApi.html#postoutboundcallabletimesets) | **Post** /api/v2/outbound/callabletimesets | Create callable time set |
 | [**PostOutboundCallanalysisresponsesets**](OutboundApi.html#postoutboundcallanalysisresponsesets) | **Post** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
 | [**PostOutboundCampaignAgentownedmappingpreview**](OutboundApi.html#postoutboundcampaignagentownedmappingpreview) | **Post** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
@@ -6867,9 +6867,11 @@ namespace Example
 
 ## [**AuditSearchResult**](AuditSearchResult.html) PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
+Retrieves audits for dialer. (Deprecated)
 
-Retrieves audits for dialer.
+This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
 
 Requires ANY permissions: 
 
@@ -6906,7 +6908,7 @@ namespace Example
 
             try
             { 
-                // Retrieves audits for dialer.
+                // Retrieves audits for dialer. (Deprecated)
                 AuditSearchResult result = apiInstance.PostOutboundAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
                 Debug.WriteLine(result);
             }

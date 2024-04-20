@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InitiatingShiftId">The ID of the shift that the initiating user wants to give up (required).</param>
         /// <param name="ReceivingUserId">The ID of the user to whom to send the request (for use in direct trade requests).</param>
         /// <param name="Expiration">When this shift trade request should expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="AcceptableIntervals">AcceptableIntervals.</param>
+        /// <param name="AcceptableIntervals">The acceptable intervals the initiating user is willing to accept in trade.  Empty indicates the user is giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         public AddShiftTradeRequest(string ScheduleId = null, string InitiatingShiftId = null, string ReceivingUserId = null, DateTime? Expiration = null, List<string> AcceptableIntervals = null)
         {
             this.ScheduleId = ScheduleId;
@@ -81,8 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets AcceptableIntervals
+        /// The acceptable intervals the initiating user is willing to accept in trade.  Empty indicates the user is giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
+        /// <value>The acceptable intervals the initiating user is willing to accept in trade.  Empty indicates the user is giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="acceptableIntervals", EmitDefaultValue=false)]
         public List<string> AcceptableIntervals { get; set; }
 

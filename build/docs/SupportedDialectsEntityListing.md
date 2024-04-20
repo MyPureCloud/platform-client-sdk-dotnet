@@ -7,7 +7,7 @@ title: SupportedDialectsEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;TranscriptionEngines&gt;**](TranscriptionEngines.html) |  | [optional] |
+| **Entities** | [**List&lt;SupportedDialectsTranscriptionEngine&gt;**](SupportedDialectsTranscriptionEngine.html) |  | [optional] |
 {: class="table table-striped"}
 
 

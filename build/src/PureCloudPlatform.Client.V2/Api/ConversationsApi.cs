@@ -1268,7 +1268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1276,14 +1276,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         AssignedWrapupCode GetConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -1291,61 +1291,61 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         ApiResponse<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         AssignedWrapupCode GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         ApiResponse<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         List<WrapupCode> GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         ApiResponse<List<WrapupCode>> GetConversationsCobrowsesessionParticipantWrapupcodesWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
@@ -2405,31 +2405,31 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingSetting> GetConversationsMessagingSettingsDefaultWithHttpInfo ();
 
         /// <summary>
-        /// Get a list of Messaging Stickers
+        /// Get a list of Messaging Stickers (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>MessagingStickerEntityListing</returns>
-        
+        [Obsolete]
         MessagingStickerEntityListing GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get a list of Messaging Stickers
+        /// Get a list of Messaging Stickers (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of MessagingStickerEntityListing</returns>
-        
+        [Obsolete]
         ApiResponse<MessagingStickerEntityListing> GetConversationsMessagingStickerWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2530,7 +2530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -2538,14 +2538,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         AssignedWrapupCode GetConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -2553,7 +2553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         ApiResponse<AssignedWrapupCode> GetConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
@@ -3194,89 +3194,89 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
-        
+        [Obsolete]
         Conversation PatchConversationsCobrowsesession (string conversationId, Conversation body);
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
-        
+        [Obsolete]
         ApiResponse<Conversation> PatchConversationsCobrowsesessionWithHttpInfo (string conversationId, Conversation body);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PatchConversationsCobrowsesessionParticipantWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ParticipantAttributes</returns>
-        
+        [Obsolete]
         ParticipantAttributes PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ParticipantAttributes</returns>
-        
+        [Obsolete]
         ApiResponse<ParticipantAttributes> PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3284,14 +3284,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Object</returns>
-        
+        [Obsolete]
         Object PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -3299,7 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PatchConversationsCobrowsesessionParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
@@ -4862,7 +4862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -4870,14 +4870,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -4885,35 +4885,35 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PostConversationsCobrowsesessionParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body = null);
 
         /// <summary>
@@ -5498,24 +5498,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send an inbound Open Message
         /// </summary>
         /// <remarks>
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>OpenNormalizedMessage</returns>
-        
+        [Obsolete]
         OpenNormalizedMessage PostConversationsMessagesInboundOpen (OpenNormalizedMessage body);
 
         /// <summary>
         /// Send an inbound Open Message
         /// </summary>
         /// <remarks>
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>ApiResponse of OpenNormalizedMessage</returns>
-        
+        [Obsolete]
         ApiResponse<OpenNormalizedMessage> PostConversationsMessagesInboundOpenWithHttpInfo (OpenNormalizedMessage body);
 
         /// <summary>
@@ -5762,7 +5762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -5770,14 +5770,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -5785,7 +5785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
@@ -6292,26 +6292,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>string</returns>
-        
+        [Obsolete]
         string PutConversationsScreenshareRecordingstate (string conversationId, SetRecordingState body);
 
         /// <summary>
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>ApiResponse of string</returns>
-        
+        [Obsolete]
         ApiResponse<string> PutConversationsScreenshareRecordingstateWithHttpInfo (string conversationId, SetRecordingState body);
 
         /// <summary>
@@ -7622,7 +7622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -7630,14 +7630,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -7645,61 +7645,61 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<List<WrapupCode>> GetConversationsCobrowsesessionParticipantWrapupcodesAsync (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetConversationsCobrowsesessionParticipantWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
@@ -8759,31 +8759,31 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingSetting>> GetConversationsMessagingSettingsDefaultAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get a list of Messaging Stickers
+        /// Get a list of Messaging Stickers (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of MessagingStickerEntityListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<MessagingStickerEntityListing> GetConversationsMessagingStickerAsync (string messengerType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get a list of Messaging Stickers
+        /// Get a list of Messaging Stickers (Deprecated)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (MessagingStickerEntityListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<MessagingStickerEntityListing>> GetConversationsMessagingStickerAsyncWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -8884,7 +8884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -8892,14 +8892,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation communication. 
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -8907,7 +8907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null);
 
         /// <summary>
@@ -9548,89 +9548,89 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Conversation> PatchConversationsCobrowsesessionAsync (string conversationId, Conversation body);
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchConversationsCobrowsesessionAsyncWithHttpInfo (string conversationId, Conversation body);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PatchConversationsCobrowsesessionParticipantAsync (string conversationId, string participantId, MediaParticipantRequest body = null);
 
         /// <summary>
         /// Update conversation participant
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCobrowsesessionParticipantAsyncWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ParticipantAttributes</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCobrowsesessionParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -9638,14 +9638,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of Object</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Object> PatchConversationsCobrowsesessionParticipantCommunicationAsync (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -9653,7 +9653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCobrowsesessionParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
@@ -11216,7 +11216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -11224,14 +11224,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -11239,35 +11239,35 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantReplaceAsync (string conversationId, string participantId, TransferRequest body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body = null);
 
         /// <summary>
@@ -11852,24 +11852,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Send an inbound Open Message
         /// </summary>
         /// <remarks>
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>Task of OpenNormalizedMessage</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OpenNormalizedMessage> PostConversationsMessagesInboundOpenAsync (OpenNormalizedMessage body);
 
         /// <summary>
         /// Send an inbound Open Message
         /// </summary>
         /// <remarks>
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>Task of ApiResponse (OpenNormalizedMessage)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OpenNormalizedMessage>> PostConversationsMessagesInboundOpenAsyncWithHttpInfo (OpenNormalizedMessage body);
 
         /// <summary>
@@ -12116,7 +12116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12124,14 +12124,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PostConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -12139,7 +12139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
@@ -12646,26 +12646,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of string</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<string> PutConversationsScreenshareRecordingstateAsync (string conversationId, SetRecordingState body);
 
         /// <summary>
         /// Update a conversation by setting its recording state
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<string>> PutConversationsScreenshareRecordingstateAsyncWithHttpInfo (string conversationId, SetRecordingState body);
 
         /// <summary>
@@ -23435,7 +23435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -23443,7 +23443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public AssignedWrapupCode GetConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, provisional);
@@ -23452,7 +23452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -23460,7 +23460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public ApiResponse< AssignedWrapupCode > GetConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -23554,7 +23554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -23562,7 +23562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, provisional);
@@ -23572,7 +23572,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -23580,7 +23580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -23678,14 +23678,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public AssignedWrapupCode GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
@@ -23694,14 +23694,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public ApiResponse< AssignedWrapupCode > GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -23791,14 +23791,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
@@ -23808,14 +23808,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -23908,13 +23908,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         public List<WrapupCode> GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = GetConversationsCobrowsesessionParticipantWrapupcodesWithHttpInfo(conversationId, participantId);
@@ -23923,13 +23923,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         public ApiResponse< List<WrapupCode> > GetConversationsCobrowsesessionParticipantWrapupcodesWithHttpInfo (string conversationId, string participantId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -24018,13 +24018,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<List<WrapupCode>> GetConversationsCobrowsesessionParticipantWrapupcodesAsync (string conversationId, string participantId)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = await GetConversationsCobrowsesessionParticipantWrapupcodesAsyncWithHttpInfo(conversationId, participantId);
@@ -24034,13 +24034,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetConversationsCobrowsesessionParticipantWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -32831,15 +32831,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Messaging Stickers 
-        /// 
+        /// Get a list of Messaging Stickers (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>MessagingStickerEntityListing</returns>
-        
+        [Obsolete]
         public MessagingStickerEntityListing GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<MessagingStickerEntityListing> localVarResponse = GetConversationsMessagingStickerWithHttpInfo(messengerType, pageSize, pageNumber);
@@ -32847,15 +32847,15 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Messaging Stickers 
-        /// 
+        /// Get a list of Messaging Stickers (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of MessagingStickerEntityListing</returns>
-        
+        [Obsolete]
         public ApiResponse< MessagingStickerEntityListing > GetConversationsMessagingStickerWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'messengerType' is set
@@ -32941,15 +32941,15 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Messaging Stickers 
-        /// 
+        /// Get a list of Messaging Stickers (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of MessagingStickerEntityListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<MessagingStickerEntityListing> GetConversationsMessagingStickerAsync (string messengerType, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<MessagingStickerEntityListing> localVarResponse = await GetConversationsMessagingStickerAsyncWithHttpInfo(messengerType, pageSize, pageNumber);
@@ -32958,15 +32958,15 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Messaging Stickers 
-        /// 
+        /// Get a list of Messaging Stickers (Deprecated) 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messengerType">Messenger Type</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (MessagingStickerEntityListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<MessagingStickerEntityListing>> GetConversationsMessagingStickerAsyncWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'messengerType' is set
@@ -33872,7 +33872,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -33880,7 +33880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public AssignedWrapupCode GetConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, provisional);
@@ -33889,7 +33889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -33897,7 +33897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>ApiResponse of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public ApiResponse< AssignedWrapupCode > GetConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -33991,7 +33991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -33999,7 +33999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of AssignedWrapupCode</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, bool? provisional = null)
         {
              ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, provisional);
@@ -34009,7 +34009,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the wrap-up for this conversation communication.  
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -34017,7 +34017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -39639,13 +39639,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
-        
+        [Obsolete]
         public Conversation PatchConversationsCobrowsesession (string conversationId, Conversation body)
         {
              ApiResponse<Conversation> localVarResponse = PatchConversationsCobrowsesessionWithHttpInfo(conversationId, body);
@@ -39654,13 +39654,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
-        
+        [Obsolete]
         public ApiResponse< Conversation > PatchConversationsCobrowsesessionWithHttpInfo (string conversationId, Conversation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -39754,13 +39754,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Conversation> PatchConversationsCobrowsesessionAsync (string conversationId, Conversation body)
         {
              ApiResponse<Conversation> localVarResponse = await PatchConversationsCobrowsesessionAsyncWithHttpInfo(conversationId, body);
@@ -39770,13 +39770,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Conversation>> PatchConversationsCobrowsesessionAsyncWithHttpInfo (string conversationId, Conversation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -39873,14 +39873,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
         {
              PatchConversationsCobrowsesessionParticipantWithHttpInfo(conversationId, participantId, body);
@@ -39888,14 +39888,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PatchConversationsCobrowsesessionParticipantWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -39990,14 +39990,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PatchConversationsCobrowsesessionParticipantAsync (string conversationId, string participantId, MediaParticipantRequest body = null)
         {
              await PatchConversationsCobrowsesessionParticipantAsyncWithHttpInfo(conversationId, participantId, body);
@@ -40006,14 +40006,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCobrowsesessionParticipantAsyncWithHttpInfo (string conversationId, string participantId, MediaParticipantRequest body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -40111,14 +40111,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ParticipantAttributes</returns>
-        
+        [Obsolete]
         public ParticipantAttributes PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
         {
              ApiResponse<ParticipantAttributes> localVarResponse = PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo(conversationId, participantId, body);
@@ -40127,14 +40127,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of ParticipantAttributes</returns>
-        
+        [Obsolete]
         public ApiResponse< ParticipantAttributes > PatchConversationsCobrowsesessionParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -40229,14 +40229,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ParticipantAttributes</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ParticipantAttributes> PatchConversationsCobrowsesessionParticipantAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
         {
              ApiResponse<ParticipantAttributes> localVarResponse = await PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo(conversationId, participantId, body);
@@ -40246,14 +40246,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update the attributes on a conversation participant. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (ParticipantAttributes)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ParticipantAttributes>> PatchConversationsCobrowsesessionParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -40351,7 +40351,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -40359,7 +40359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Object</returns>
-        
+        [Obsolete]
         public Object PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         {
              ApiResponse<Object> localVarResponse = PatchConversationsCobrowsesessionParticipantCommunicationWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -40368,7 +40368,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -40376,7 +40376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>ApiResponse of Object</returns>
-        
+        [Obsolete]
         public ApiResponse< Object > PatchConversationsCobrowsesessionParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -40478,7 +40478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -40486,7 +40486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of Object</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Object> PatchConversationsCobrowsesessionParticipantCommunicationAsync (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         {
              ApiResponse<Object> localVarResponse = await PatchConversationsCobrowsesessionParticipantCommunicationAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -40496,7 +40496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update conversation participant's communication by disconnecting it. 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -40504,7 +40504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Participant</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCobrowsesessionParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -54249,7 +54249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -54257,7 +54257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -54265,7 +54265,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -54273,7 +54273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -54372,7 +54372,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -54380,7 +54380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -54389,7 +54389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -54397,7 +54397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -54500,14 +54500,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
         {
              PostConversationsCobrowsesessionParticipantReplaceWithHttpInfo(conversationId, participantId, body);
@@ -54515,14 +54515,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PostConversationsCobrowsesessionParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -54617,14 +54617,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantReplaceAsync (string conversationId, string participantId, TransferRequest body = null)
         {
              await PostConversationsCobrowsesessionParticipantReplaceAsyncWithHttpInfo(conversationId, participantId, body);
@@ -54633,14 +54633,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Replace this participant with the specified user and/or address 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -59858,12 +59858,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send an inbound Open Message 
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>OpenNormalizedMessage</returns>
-        
+        [Obsolete]
         public OpenNormalizedMessage PostConversationsMessagesInboundOpen (OpenNormalizedMessage body)
         {
              ApiResponse<OpenNormalizedMessage> localVarResponse = PostConversationsMessagesInboundOpenWithHttpInfo(body);
@@ -59872,12 +59872,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send an inbound Open Message 
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>ApiResponse of OpenNormalizedMessage</returns>
-        
+        [Obsolete]
         public ApiResponse< OpenNormalizedMessage > PostConversationsMessagesInboundOpenWithHttpInfo (OpenNormalizedMessage body)
         { 
             // verify the required parameter 'body' is set
@@ -59967,12 +59967,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send an inbound Open Message 
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>Task of OpenNormalizedMessage</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OpenNormalizedMessage> PostConversationsMessagesInboundOpenAsync (OpenNormalizedMessage body)
         {
              ApiResponse<OpenNormalizedMessage> localVarResponse = await PostConversationsMessagesInboundOpenAsyncWithHttpInfo(body);
@@ -59982,12 +59982,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Send an inbound Open Message 
-        /// Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+        /// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">NormalizedMessage</param>
         /// <returns>Task of ApiResponse (OpenNormalizedMessage)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OpenNormalizedMessage>> PostConversationsMessagesInboundOpenAsyncWithHttpInfo (OpenNormalizedMessage body)
         { 
             // verify the required parameter 'body' is set
@@ -62289,7 +62289,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -62297,7 +62297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -62305,7 +62305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -62313,7 +62313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -62412,7 +62412,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -62420,7 +62420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PostConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
@@ -62429,7 +62429,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Apply wrap-up for this conversation communication 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -62437,7 +62437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -66986,13 +66986,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>string</returns>
-        
+        [Obsolete]
         public string PutConversationsScreenshareRecordingstate (string conversationId, SetRecordingState body)
         {
              ApiResponse<string> localVarResponse = PutConversationsScreenshareRecordingstateWithHttpInfo(conversationId, body);
@@ -67001,13 +67001,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>ApiResponse of string</returns>
-        
+        [Obsolete]
         public ApiResponse< string > PutConversationsScreenshareRecordingstateWithHttpInfo (string conversationId, SetRecordingState body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -67101,13 +67101,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of string</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<string> PutConversationsScreenshareRecordingstateAsync (string conversationId, SetRecordingState body)
         {
              ApiResponse<string> localVarResponse = await PutConversationsScreenshareRecordingstateAsyncWithHttpInfo(conversationId, body);
@@ -67117,13 +67117,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a conversation by setting its recording state 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<string>> PutConversationsScreenshareRecordingstateAsyncWithHttpInfo (string conversationId, SetRecordingState body)
         { 
             // verify the required parameter 'conversationId' is set

@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CallbackDisconnectIdentifier" /> class.
         /// </summary>
         /// <param name="ConversationId">The Conversation Id. (required).</param>
-        /// <param name="CallbackId">The callback id..</param>
+        /// <param name="CallbackId">The callback id. (required).</param>
         public CallbackDisconnectIdentifier(string ConversationId = null, string CallbackId = null)
         {
             this.ConversationId = ConversationId;

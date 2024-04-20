@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLanguageunderstandingMinerTopicPhrase**](LanguageUnderstandingApi.html#getlanguageunderstandingminertopicphrase) | **Get** /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId} | Retrieves utterances related to a phrase in a topic. |
 | [**GetLanguageunderstandingMinerTopics**](LanguageUnderstandingApi.html#getlanguageunderstandingminertopics) | **Get** /api/v2/languageunderstanding/miners/{minerId}/topics | Retrieve a list of mined topics. |
 | [**GetLanguageunderstandingMiners**](LanguageUnderstandingApi.html#getlanguageunderstandingminers) | **Get** /api/v2/languageunderstanding/miners | Retrieve the list of miners created. |
+| [**GetLanguageunderstandingSettings**](LanguageUnderstandingApi.html#getlanguageunderstandingsettings) | **Get** /api/v2/languageunderstanding/settings | Get Organization Configuration |
 | [**PatchLanguageunderstandingDomain**](LanguageUnderstandingApi.html#patchlanguageunderstandingdomain) | **Patch** /api/v2/languageunderstanding/domains/{domainId} | Update an NLU Domain. |
 | [**PatchLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#patchlanguageunderstandingminerdraft) | **Patch** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Save information for the draft. Either topic draft or intent draft should be sent. |
 | [**PostLanguageunderstandingDomainFeedback**](LanguageUnderstandingApi.html#postlanguageunderstandingdomainfeedback) | **Post** /api/v2/languageunderstanding/domains/{domainId}/feedback | Create feedback for the NLU Domain Version. |
@@ -1437,6 +1438,66 @@ namespace Example
 ### Return type
 
 [**MinerListing**](MinerListing.html)
+
+<a name="getlanguageunderstandingsettings"></a>
+
+## [**NluOrganization**](NluOrganization.html) GetLanguageunderstandingSettings ()
+
+
+
+Get Organization Configuration
+
+GetLanguageunderstandingSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* languageUnderstanding:settings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+
+            try
+            { 
+                // Get Organization Configuration
+                NluOrganization result = apiInstance.GetLanguageunderstandingSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**NluOrganization**](NluOrganization.html)
 
 <a name="patchlanguageunderstandingdomain"></a>
 

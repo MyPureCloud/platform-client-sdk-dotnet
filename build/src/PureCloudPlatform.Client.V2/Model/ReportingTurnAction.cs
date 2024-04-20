@@ -57,6 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Askforslotaction,
             
             /// <summary>
+            /// Enum Asksurveyquestionaction for "AskSurveyQuestionAction"
+            /// </summary>
+            [EnumMember(Value = "AskSurveyQuestionAction")]
+            Asksurveyquestionaction,
+            
+            /// <summary>
             /// Enum Askfornlunextintentaction for "AskForNLUNextIntentAction"
             /// </summary>
             [EnumMember(Value = "AskForNLUNextIntentAction")]
@@ -123,6 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Decisionaction,
             
             /// <summary>
+            /// Enum Findemergencygroupaction for "FindEmergencyGroupAction"
+            /// </summary>
+            [EnumMember(Value = "FindEmergencyGroupAction")]
+            Findemergencygroupaction,
+            
+            /// <summary>
             /// Enum Findgrammaraction for "FindGrammarAction"
             /// </summary>
             [EnumMember(Value = "FindGrammarAction")]
@@ -157,6 +169,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "FindQueueByIdAction")]
             Findqueuebyidaction,
+            
+            /// <summary>
+            /// Enum Findscheduleaction for "FindScheduleAction"
+            /// </summary>
+            [EnumMember(Value = "FindScheduleAction")]
+            Findscheduleaction,
+            
+            /// <summary>
+            /// Enum Findschedulegroupaction for "FindScheduleGroupAction"
+            /// </summary>
+            [EnumMember(Value = "FindScheduleGroupAction")]
+            Findschedulegroupaction,
             
             /// <summary>
             /// Enum Findskillaction for "FindSkillAction"
@@ -321,16 +345,40 @@ namespace PureCloudPlatform.Client.V2.Model
             Waitforinputaction,
             
             /// <summary>
+            /// Enum Evaluatescheduleaction for "EvaluateScheduleAction"
+            /// </summary>
+            [EnumMember(Value = "EvaluateScheduleAction")]
+            Evaluatescheduleaction,
+            
+            /// <summary>
+            /// Enum Evaluateschedulegroupaction for "EvaluateScheduleGroupAction"
+            /// </summary>
+            [EnumMember(Value = "EvaluateScheduleGroupAction")]
+            Evaluateschedulegroupaction,
+            
+            /// <summary>
             /// Enum Showknowledgearticleaction for "ShowKnowledgeArticleAction"
             /// </summary>
             [EnumMember(Value = "ShowKnowledgeArticleAction")]
             Showknowledgearticleaction,
             
             /// <summary>
+            /// Enum Sendknowledgefeedbackaction for "SendKnowledgeFeedbackAction"
+            /// </summary>
+            [EnumMember(Value = "SendKnowledgeFeedbackAction")]
+            Sendknowledgefeedbackaction,
+            
+            /// <summary>
             /// Enum Setlocaleaction for "SetLocaleAction"
             /// </summary>
             [EnumMember(Value = "SetLocaleAction")]
             Setlocaleaction,
+            
+            /// <summary>
+            /// Enum Screenpopaction for "ScreenPopAction"
+            /// </summary>
+            [EnumMember(Value = "ScreenPopAction")]
+            Screenpopaction,
             
             /// <summary>
             /// Enum Setutilizationlabelaction for "SetUtilizationLabelAction"

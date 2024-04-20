@@ -114,11 +114,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Or
         }
         /// <summary>
+        /// The initial direction to filter on
+        /// </summary>
+        /// <value>The initial direction to filter on</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialDirectionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        /// <summary>
         /// A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".
         /// </summary>
         /// <value>A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\".</value>
         [DataMember(Name="topicIdsFilterType", EmitDefaultValue=false)]
         public TopicIdsFilterTypeEnum? TopicIdsFilterType { get; set; }
+        /// <summary>
+        /// The initial direction to filter on
+        /// </summary>
+        /// <value>The initial direction to filter on</value>
+        [DataMember(Name="initialDirection", EmitDefaultValue=false)]
+        public InitialDirectionEnum? InitialDirection { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultObjective" /> class.
         /// </summary>
@@ -130,7 +163,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Topics">A list of topic ids for detected topic metrics.</param>
         /// <param name="TopicIdsFilterType">A filter type for topic Ids. It's only used for objectives with topicIds. Default filter behavior is \"or\"..</param>
         /// <param name="EvaluationFormContextIds">The ids of associated evaluation form context, for Quality Evaluation Score metrics.</param>
-        public DefaultObjective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, List<string> EvaluationFormContextIds = null)
+        /// <param name="InitialDirection">The initial direction to filter on.</param>
+        public DefaultObjective(string TemplateId = null, List<ObjectiveZone> Zones = null, bool? Enabled = null, List<MediaTypesEnum> MediaTypes = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Topics = null, TopicIdsFilterTypeEnum? TopicIdsFilterType = null, List<string> EvaluationFormContextIds = null, InitialDirectionEnum? InitialDirection = null)
         {
             this.TemplateId = TemplateId;
             this.Zones = Zones;
@@ -140,6 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Topics = Topics;
             this.TopicIdsFilterType = TopicIdsFilterType;
             this.EvaluationFormContextIds = EvaluationFormContextIds;
+            this.InitialDirection = InitialDirection;
             
         }
         
@@ -218,6 +253,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> EvaluationFormContextIds { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("  TopicIdsFilterType: ").Append(TopicIdsFilterType).Append("\n");
             sb.Append("  EvaluationFormContextIds: ").Append(EvaluationFormContextIds).Append("\n");
+            sb.Append("  InitialDirection: ").Append(InitialDirection).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -320,6 +358,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluationFormContextIds == other.EvaluationFormContextIds ||
                     this.EvaluationFormContextIds != null &&
                     this.EvaluationFormContextIds.SequenceEqual(other.EvaluationFormContextIds)
+                ) &&
+                (
+                    this.InitialDirection == other.InitialDirection ||
+                    this.InitialDirection != null &&
+                    this.InitialDirection.Equals(other.InitialDirection)
                 );
         }
 
@@ -360,6 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EvaluationFormContextIds != null)
                     hash = hash * 59 + this.EvaluationFormContextIds.GetHashCode();
+
+                if (this.InitialDirection != null)
+                    hash = hash * 59 + this.InitialDirection.GetHashCode();
 
                 return hash;
             }

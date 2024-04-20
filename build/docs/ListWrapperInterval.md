@@ -7,7 +7,7 @@ title: ListWrapperInterval
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Values** | **List&lt;string&gt;** |  | [optional] |
+| **Values** | **List&lt;string&gt;** | Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
 {: class="table table-striped"}
 
 

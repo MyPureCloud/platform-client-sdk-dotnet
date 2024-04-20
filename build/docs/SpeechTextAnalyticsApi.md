@@ -1533,7 +1533,7 @@ namespace Example
 
             var apiInstance = new SpeechTextAnalyticsApi();
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
-            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 500. (optional)  (default to 20)
             var state = state_example;  // string | Topic state. Defaults to latest (optional) 
             var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
             var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
@@ -1562,7 +1562,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
-| **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 500. | [optional] [default to 20] |
 | **state** | **string**| Topic state. Defaults to latest | [optional] <br />**Values**: latest, published |
 | **name** | **string**| Case insensitive partial name to filter by | [optional]  |
 | **ids** | [**List<string>**](string.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |

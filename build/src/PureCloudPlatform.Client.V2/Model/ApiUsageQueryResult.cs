@@ -62,10 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Results">Query results.</param>
         /// <param name="QueryStatus">Query status.</param>
-        public ApiUsageQueryResult(List<ApiUsageRow> Results = null, QueryStatusEnum? QueryStatus = null)
+        /// <param name="Cursors">Cursor tokens to be used for navigating paginated results.</param>
+        public ApiUsageQueryResult(List<ApiUsageRow> Results = null, QueryStatusEnum? QueryStatus = null, Cursors Cursors = null)
         {
             this.Results = Results;
             this.QueryStatus = QueryStatus;
+            this.Cursors = Cursors;
             
         }
         
@@ -81,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Cursor tokens to be used for navigating paginated results
+        /// </summary>
+        /// <value>Cursor tokens to be used for navigating paginated results</value>
+        [DataMember(Name="cursors", EmitDefaultValue=false)]
+        public Cursors Cursors { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  QueryStatus: ").Append(QueryStatus).Append("\n");
+            sb.Append("  Cursors: ").Append(Cursors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryStatus == other.QueryStatus ||
                     this.QueryStatus != null &&
                     this.QueryStatus.Equals(other.QueryStatus)
+                ) &&
+                (
+                    this.Cursors == other.Cursors ||
+                    this.Cursors != null &&
+                    this.Cursors.Equals(other.Cursors)
                 );
         }
 
@@ -160,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryStatus != null)
                     hash = hash * 59 + this.QueryStatus.GetHashCode();
+
+                if (this.Cursors != null)
+                    hash = hash * 59 + this.Cursors.GetHashCode();
 
                 return hash;
             }

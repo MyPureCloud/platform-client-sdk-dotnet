@@ -43,6 +43,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteChatsRoomMessageWithHttpInfo (string roomJid, string messageId);
 
         /// <summary>
+        /// Remove a pinned message from a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns></returns>
+        
+        void DeleteChatsRoomMessagesPin (string roomJid, string pinnedMessageId);
+
+        /// <summary>
+        /// Remove a pinned message from a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteChatsRoomMessagesPinWithHttpInfo (string roomJid, string pinnedMessageId);
+
+        /// <summary>
         /// Remove a user from a room.
         /// </summary>
         /// <remarks>
@@ -69,32 +95,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteChatsRoomParticipantWithHttpInfo (string roomJid, string userId);
 
         /// <summary>
-        /// Remove a pinned message from a room
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns></returns>
-        
-        void DeleteChatsRoomPinnedmessage (string roomJid, string pinnedMessageId);
-
-        /// <summary>
-        /// Remove a pinned message from a room
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        ApiResponse<Object> DeleteChatsRoomPinnedmessageWithHttpInfo (string roomJid, string pinnedMessageId);
-
-        /// <summary>
         /// Delete a message to a user
         /// </summary>
         /// <remarks>
@@ -119,6 +119,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> DeleteChatsUserMessageWithHttpInfo (string userId, string messageId);
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns></returns>
+        
+        void DeleteChatsUserMessagesPin (string userId, string pinnedMessageId);
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteChatsUserMessagesPinWithHttpInfo (string userId, string pinnedMessageId);
 
         /// <summary>
         /// Get a message
@@ -325,6 +353,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
         ApiResponse<ChatMessageEntityListing> GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null);
+
+        /// <summary>
+        /// Get information for a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>OneOnOne</returns>
+        
+        OneOnOne GetChatsUser (string userId);
+
+        /// <summary>
+        /// Get information for a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>ApiResponse of OneOnOne</returns>
+        
+        ApiResponse<OneOnOne> GetChatsUserWithHttpInfo (string userId);
 
         /// <summary>
         /// Get messages by id(s) from a 1on1
@@ -569,6 +623,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatSendMessageResponse> PostChatsRoomMessagesWithHttpInfo (string roomJid, SendMessageBody body);
 
         /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns></returns>
+        
+        void PostChatsRoomMessagesPins (string roomJid, PinnedMessageRequest body);
+
+        /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostChatsRoomMessagesPinsWithHttpInfo (string roomJid, PinnedMessageRequest body);
+
+        /// <summary>
         /// Join a room
         /// </summary>
         /// <remarks>
@@ -593,32 +673,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> PostChatsRoomParticipantWithHttpInfo (string roomJid, string userId);
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns></returns>
-        
-        void PostChatsRoomPinnedmessages (string roomJid, PinnedMessageRequest body);
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        ApiResponse<Object> PostChatsRoomPinnedmessagesWithHttpInfo (string roomJid, PinnedMessageRequest body);
 
         /// <summary>
         /// Create an adhoc room
@@ -669,6 +723,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChatSendMessageResponse</returns>
         
         ApiResponse<ChatSendMessageResponse> PostChatsUserMessagesWithHttpInfo (string userId, SendMessageBody body);
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns></returns>
+        
+        void PostChatsUserMessagesPins (string userId, PinnedMessageRequest body);
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostChatsUserMessagesPinsWithHttpInfo (string userId, PinnedMessageRequest body);
 
         /// <summary>
         /// Update reactions to a message
@@ -751,6 +833,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsRoomMessageAsyncWithHttpInfo (string roomJid, string messageId);
 
         /// <summary>
+        /// Remove a pinned message from a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteChatsRoomMessagesPinAsync (string roomJid, string pinnedMessageId);
+
+        /// <summary>
+        /// Remove a pinned message from a room
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsRoomMessagesPinAsyncWithHttpInfo (string roomJid, string pinnedMessageId);
+
+        /// <summary>
         /// Remove a user from a room.
         /// </summary>
         /// <remarks>
@@ -777,32 +885,6 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsRoomParticipantAsyncWithHttpInfo (string roomJid, string userId);
 
         /// <summary>
-        /// Remove a pinned message from a room
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns>Task of void</returns>
-        
-        System.Threading.Tasks.Task DeleteChatsRoomPinnedmessageAsync (string roomJid, string pinnedMessageId);
-
-        /// <summary>
-        /// Remove a pinned message from a room
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsRoomPinnedmessageAsyncWithHttpInfo (string roomJid, string pinnedMessageId);
-
-        /// <summary>
         /// Delete a message to a user
         /// </summary>
         /// <remarks>
@@ -827,6 +909,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsUserMessageAsyncWithHttpInfo (string userId, string messageId);
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteChatsUserMessagesPinAsync (string userId, string pinnedMessageId);
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsUserMessagesPinAsyncWithHttpInfo (string userId, string pinnedMessageId);
 
         /// <summary>
         /// Get a message
@@ -1033,6 +1143,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null);
+
+        /// <summary>
+        /// Get information for a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>Task of OneOnOne</returns>
+        
+        System.Threading.Tasks.Task<OneOnOne> GetChatsUserAsync (string userId);
+
+        /// <summary>
+        /// Get information for a 1on1
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>Task of ApiResponse (OneOnOne)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OneOnOne>> GetChatsUserAsyncWithHttpInfo (string userId);
 
         /// <summary>
         /// Get messages by id(s) from a 1on1
@@ -1277,6 +1413,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatSendMessageResponse>> PostChatsRoomMessagesAsyncWithHttpInfo (string roomJid, SendMessageBody body);
 
         /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostChatsRoomMessagesPinsAsync (string roomJid, PinnedMessageRequest body);
+
+        /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsRoomMessagesPinsAsyncWithHttpInfo (string roomJid, PinnedMessageRequest body);
+
+        /// <summary>
         /// Join a room
         /// </summary>
         /// <remarks>
@@ -1301,32 +1463,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsRoomParticipantAsyncWithHttpInfo (string roomJid, string userId);
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns>Task of void</returns>
-        
-        System.Threading.Tasks.Task PostChatsRoomPinnedmessagesAsync (string roomJid, PinnedMessageRequest body);
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsRoomPinnedmessagesAsyncWithHttpInfo (string roomJid, PinnedMessageRequest body);
 
         /// <summary>
         /// Create an adhoc room
@@ -1377,6 +1513,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChatSendMessageResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ChatSendMessageResponse>> PostChatsUserMessagesAsyncWithHttpInfo (string userId, SendMessageBody body);
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostChatsUserMessagesPinsAsync (string userId, PinnedMessageRequest body);
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsUserMessagesPinsAsyncWithHttpInfo (string userId, PinnedMessageRequest body);
 
         /// <summary>
         /// Update reactions to a message
@@ -1743,6 +1907,228 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Remove a pinned message from a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns></returns>
+        
+        public void DeleteChatsRoomMessagesPin (string roomJid, string pinnedMessageId)
+        {
+             DeleteChatsRoomMessagesPinWithHttpInfo(roomJid, pinnedMessageId);
+        }
+
+        /// <summary>
+        /// Remove a pinned message from a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteChatsRoomMessagesPinWithHttpInfo (string roomJid, string pinnedMessageId)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->DeleteChatsRoomMessagesPin");
+            // verify the required parameter 'pinnedMessageId' is set
+            if (pinnedMessageId == null)
+                throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsRoomMessagesPin");
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+            if (pinnedMessageId != null) localVarPathParams.Add("pinnedMessageId", this.Configuration.ApiClient.ParameterToString(pinnedMessageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomMessagesPin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomMessagesPin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Remove a pinned message from a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteChatsRoomMessagesPinAsync (string roomJid, string pinnedMessageId)
+        {
+             await DeleteChatsRoomMessagesPinAsyncWithHttpInfo(roomJid, pinnedMessageId);
+
+        }
+
+        /// <summary>
+        /// Remove a pinned message from a room 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsRoomMessagesPinAsyncWithHttpInfo (string roomJid, string pinnedMessageId)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->DeleteChatsRoomMessagesPin");
+            
+            // verify the required parameter 'pinnedMessageId' is set
+            if (pinnedMessageId == null)
+                throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsRoomMessagesPin");
+            
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+            if (pinnedMessageId != null) localVarPathParams.Add("pinnedMessageId", this.Configuration.ApiClient.ParameterToString(pinnedMessageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomMessagesPin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomMessagesPin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Remove a user from a room. 
         /// 
         /// </summary>
@@ -1965,228 +2351,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Remove a pinned message from a room 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns></returns>
-        
-        public void DeleteChatsRoomPinnedmessage (string roomJid, string pinnedMessageId)
-        {
-             DeleteChatsRoomPinnedmessageWithHttpInfo(roomJid, pinnedMessageId);
-        }
-
-        /// <summary>
-        /// Remove a pinned message from a room 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        public ApiResponse<Object> DeleteChatsRoomPinnedmessageWithHttpInfo (string roomJid, string pinnedMessageId)
-        { 
-            // verify the required parameter 'roomJid' is set
-            if (roomJid == null)
-                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->DeleteChatsRoomPinnedmessage");
-            // verify the required parameter 'pinnedMessageId' is set
-            if (pinnedMessageId == null)
-                throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsRoomPinnedmessage");
-
-            var localVarPath = "/api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
-            if (pinnedMessageId != null) localVarPathParams.Add("pinnedMessageId", this.Configuration.ApiClient.ParameterToString(pinnedMessageId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomPinnedmessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomPinnedmessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Remove a pinned message from a room 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns>Task of void</returns>
-        
-        public async System.Threading.Tasks.Task DeleteChatsRoomPinnedmessageAsync (string roomJid, string pinnedMessageId)
-        {
-             await DeleteChatsRoomPinnedmessageAsyncWithHttpInfo(roomJid, pinnedMessageId);
-
-        }
-
-        /// <summary>
-        /// Remove a pinned message from a room 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="pinnedMessageId">pinnedMessageId</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsRoomPinnedmessageAsyncWithHttpInfo (string roomJid, string pinnedMessageId)
-        { 
-            // verify the required parameter 'roomJid' is set
-            if (roomJid == null)
-                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->DeleteChatsRoomPinnedmessage");
-            
-            // verify the required parameter 'pinnedMessageId' is set
-            if (pinnedMessageId == null)
-                throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsRoomPinnedmessage");
-            
-
-            var localVarPath = "/api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
-            if (pinnedMessageId != null) localVarPathParams.Add("pinnedMessageId", this.Configuration.ApiClient.ParameterToString(pinnedMessageId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomPinnedmessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsRoomPinnedmessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
         /// Delete a message to a user 
         /// 
         /// </summary>
@@ -2398,6 +2562,232 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteChatsUserMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteChatsUserMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1 
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns></returns>
+        
+        public void DeleteChatsUserMessagesPin (string userId, string pinnedMessageId)
+        {
+             DeleteChatsUserMessagesPinWithHttpInfo(userId, pinnedMessageId);
+        }
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1 
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteChatsUserMessagesPinWithHttpInfo (string userId, string pinnedMessageId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->DeleteChatsUserMessagesPin");
+            // verify the required parameter 'pinnedMessageId' is set
+            if (pinnedMessageId == null)
+                throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsUserMessagesPin");
+
+            var localVarPath = "/api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (pinnedMessageId != null) localVarPathParams.Add("pinnedMessageId", this.Configuration.ApiClient.ParameterToString(pinnedMessageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsUserMessagesPin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsUserMessagesPin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1 
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteChatsUserMessagesPinAsync (string userId, string pinnedMessageId)
+        {
+             await DeleteChatsUserMessagesPinAsyncWithHttpInfo(userId, pinnedMessageId);
+
+        }
+
+        /// <summary>
+        /// Remove a pinned message from a 1on1 
+        /// 
+        /// DeleteChatsUserMessagesPin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="pinnedMessageId">pinnedMessageId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsUserMessagesPinAsyncWithHttpInfo (string userId, string pinnedMessageId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->DeleteChatsUserMessagesPin");
+            
+            // verify the required parameter 'pinnedMessageId' is set
+            if (pinnedMessageId == null)
+                throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsUserMessagesPin");
+            
+
+            var localVarPath = "/api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (pinnedMessageId != null) localVarPathParams.Add("pinnedMessageId", this.Configuration.ApiClient.ParameterToString(pinnedMessageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsUserMessagesPin: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteChatsUserMessagesPin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -4139,6 +4529,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatMessageEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ChatMessageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatMessageEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get information for a 1on1 
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>OneOnOne</returns>
+        
+        public OneOnOne GetChatsUser (string userId)
+        {
+             ApiResponse<OneOnOne> localVarResponse = GetChatsUserWithHttpInfo(userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get information for a 1on1 
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>ApiResponse of OneOnOne</returns>
+        
+        public ApiResponse< OneOnOne > GetChatsUserWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUser");
+
+            var localVarPath = "/api/v2/chats/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OneOnOne>(localVarStatusCode,
+                localVarHeaders,
+                (OneOnOne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OneOnOne)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get information for a 1on1 
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>Task of OneOnOne</returns>
+        
+        public async System.Threading.Tasks.Task<OneOnOne> GetChatsUserAsync (string userId)
+        {
+             ApiResponse<OneOnOne> localVarResponse = await GetChatsUserAsyncWithHttpInfo(userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get information for a 1on1 
+        /// 
+        /// GetChatsUser is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <returns>Task of ApiResponse (OneOnOne)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OneOnOne>> GetChatsUserAsyncWithHttpInfo (string userId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUser");
+            
+
+            var localVarPath = "/api/v2/chats/users/{userId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OneOnOne>(localVarStatusCode,
+                localVarHeaders,
+                (OneOnOne) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OneOnOne)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6233,6 +6838,238 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns></returns>
+        
+        public void PostChatsRoomMessagesPins (string roomJid, PinnedMessageRequest body)
+        {
+             PostChatsRoomMessagesPinsWithHttpInfo(roomJid, body);
+        }
+
+        /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostChatsRoomMessagesPinsWithHttpInfo (string roomJid, PinnedMessageRequest body)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->PostChatsRoomMessagesPins");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomMessagesPins");
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomMessagesPins: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomMessagesPins: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostChatsRoomMessagesPinsAsync (string roomJid, PinnedMessageRequest body)
+        {
+             await PostChatsRoomMessagesPinsAsyncWithHttpInfo(roomJid, body);
+
+        }
+
+        /// <summary>
+        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="roomJid">roomJid</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsRoomMessagesPinsAsyncWithHttpInfo (string roomJid, PinnedMessageRequest body)
+        { 
+            // verify the required parameter 'roomJid' is set
+            if (roomJid == null)
+                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->PostChatsRoomMessagesPins");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomMessagesPins");
+            
+
+            var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomMessagesPins: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomMessagesPins: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Join a room 
         /// 
         /// </summary>
@@ -6444,238 +7281,6 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomParticipant: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomParticipant: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns></returns>
-        
-        public void PostChatsRoomPinnedmessages (string roomJid, PinnedMessageRequest body)
-        {
-             PostChatsRoomPinnedmessagesWithHttpInfo(roomJid, body);
-        }
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        public ApiResponse<Object> PostChatsRoomPinnedmessagesWithHttpInfo (string roomJid, PinnedMessageRequest body)
-        { 
-            // verify the required parameter 'roomJid' is set
-            if (roomJid == null)
-                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->PostChatsRoomPinnedmessages");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomPinnedmessages");
-
-            var localVarPath = "/api/v2/chats/rooms/{roomJid}/pinnedmessages";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomPinnedmessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomPinnedmessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns>Task of void</returns>
-        
-        public async System.Threading.Tasks.Task PostChatsRoomPinnedmessagesAsync (string roomJid, PinnedMessageRequest body)
-        {
-             await PostChatsRoomPinnedmessagesAsyncWithHttpInfo(roomJid, body);
-
-        }
-
-        /// <summary>
-        /// Add pinned messages for a room, up to a maximum of 5 pinned messages 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="roomJid">roomJid</param>
-        /// <param name="body">Pinned Message Ids</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsRoomPinnedmessagesAsyncWithHttpInfo (string roomJid, PinnedMessageRequest body)
-        { 
-            // verify the required parameter 'roomJid' is set
-            if (roomJid == null)
-                throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->PostChatsRoomPinnedmessages");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomPinnedmessages");
-            
-
-            var localVarPath = "/api/v2/chats/rooms/{roomJid}/pinnedmessages";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (roomJid != null) localVarPathParams.Add("roomJid", this.Configuration.ApiClient.ParameterToString(roomJid));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomPinnedmessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostChatsRoomPinnedmessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -7135,6 +7740,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ChatSendMessageResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ChatSendMessageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSendMessageResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns></returns>
+        
+        public void PostChatsUserMessagesPins (string userId, PinnedMessageRequest body)
+        {
+             PostChatsUserMessagesPinsWithHttpInfo(userId, body);
+        }
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostChatsUserMessagesPinsWithHttpInfo (string userId, PinnedMessageRequest body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->PostChatsUserMessagesPins");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUserMessagesPins");
+
+            var localVarPath = "/api/v2/chats/users/{userId}/messages/pins";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsUserMessagesPins: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsUserMessagesPins: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostChatsUserMessagesPinsAsync (string userId, PinnedMessageRequest body)
+        {
+             await PostChatsUserMessagesPinsAsyncWithHttpInfo(userId, body);
+
+        }
+
+        /// <summary>
+        /// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages 
+        /// 
+        /// PostChatsUserMessagesPins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Pinned Message Ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostChatsUserMessagesPinsAsyncWithHttpInfo (string userId, PinnedMessageRequest body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->PostChatsUserMessagesPins");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUserMessagesPins");
+            
+
+            var localVarPath = "/api/v2/chats/users/{userId}/messages/pins";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsUserMessagesPins: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostChatsUserMessagesPins: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

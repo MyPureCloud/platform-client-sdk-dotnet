@@ -1,7 +1,7 @@
 ---
-title: TranscriptionEngines
+title: SupportedDialectsTranscriptionEngine
 ---
-## ININ.PureCloudApi.Model.TranscriptionEngines
+## ININ.PureCloudApi.Model.SupportedDialectsTranscriptionEngine
 
 ## Properties
 
@@ -9,6 +9,7 @@ title: TranscriptionEngines
 |------------ | ------------- | ------------- | -------------|
 | **Engine** | **string** |  | [optional] |
 | **Dialects** | **List&lt;string&gt;** |  | [optional] |
+| **EngineIntegration** | [**EngineIntegration**](EngineIntegration.html) |  | [optional] |
 {: class="table table-striped"}
 
 

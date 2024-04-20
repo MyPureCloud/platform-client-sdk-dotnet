@@ -100,9 +100,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiUsageQueryResult</returns>
         
-        ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId);
+        ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
@@ -112,9 +114,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
         
-        ApiResponse<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId);
+        ApiResponse<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Query for OAuth client API usage
@@ -278,9 +282,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
-        System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId);
+        System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
@@ -290,9 +296,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId);
+        System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Query for OAuth client API usage
@@ -1118,11 +1126,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiUsageQueryResult</returns>
         
-        public ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId)
+        public ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId, string after = null, int? pageSize = null)
         {
-             ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageSimplesearchExecutionIdResultsWithHttpInfo(executionId);
+             ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageSimplesearchExecutionIdResultsWithHttpInfo(executionId, after, pageSize);
              return localVarResponse.Data;
         }
 
@@ -1132,9 +1142,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>ApiResponse of ApiUsageQueryResult</returns>
         
-        public ApiResponse< ApiUsageQueryResult > GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId)
+        public ApiResponse< ApiUsageQueryResult > GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'executionId' is set
             if (executionId == null)
@@ -1173,6 +1185,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (executionId != null) localVarPathParams.Add("executionId", this.Configuration.ApiClient.ParameterToString(executionId));
 
             // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -1222,11 +1236,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiUsageQueryResult</returns>
         
-        public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId)
+        public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId, string after = null, int? pageSize = null)
         {
-             ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo(executionId);
+             ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo(executionId, after, pageSize);
              return localVarResponse.Data;
 
         }
@@ -1237,9 +1253,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executionId">ID of the search execution</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned (optional)</param>
+        /// <param name="pageSize">The max number of entities to be returned per request. Maximum page size of 1000 (optional)</param>
         /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId, string after = null, int? pageSize = null)
         { 
             // verify the required parameter 'executionId' is set
             if (executionId == null)
@@ -1279,6 +1297,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (executionId != null) localVarPathParams.Add("executionId", this.Configuration.ApiClient.ParameterToString(executionId));
 
             // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 

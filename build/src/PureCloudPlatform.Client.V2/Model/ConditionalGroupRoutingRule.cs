@@ -99,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConditionalGroupRoutingRule" /> class.
         /// </summary>
-        /// <param name="Queue">The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified..</param>
+        /// <param name="Queue">The queue being evaluated for this rule.  If null, the current queue will be used..</param>
         /// <param name="Metric">The queue metric being evaluated.</param>
         /// <param name="Operator">The operator that compares the actual value against the condition value.</param>
         /// <param name="ConditionValue">The limit value, beyond which a rule evaluates as true.</param>
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified.
+        /// The queue being evaluated for this rule.  If null, the current queue will be used.
         /// </summary>
-        /// <value>The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified.</value>
+        /// <value>The queue being evaluated for this rule.  If null, the current queue will be used.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
 
