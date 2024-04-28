@@ -421,13 +421,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="StartAcwTime">StartAcwTime.</param>
         /// <param name="EndAcwTime">EndAcwTime.</param>
+        /// <param name="ResumeTime">ResumeTime.</param>
         /// <param name="MediaRoles">MediaRoles.</param>
         /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
         /// <param name="SocialMediaId">SocialMediaId.</param>
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
         /// <param name="SocialUserName">SocialUserName.</param>
         /// <param name="PreviewText">PreviewText.</param>
-        public ConversationSocialExpressionEventTopicSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationSocialExpressionEventTopicUriReference User = null, ConversationSocialExpressionEventTopicUriReference Queue = null, ConversationSocialExpressionEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationSocialExpressionEventTopicErrorBody ErrorInfo = null, ConversationSocialExpressionEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationSocialExpressionEventTopicUriReference ExternalContact = null, ConversationSocialExpressionEventTopicUriReference ExternalOrganization = null, ConversationSocialExpressionEventTopicWrapup Wrapup = null, ConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, ConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public ConversationSocialExpressionEventTopicSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationSocialExpressionEventTopicUriReference User = null, ConversationSocialExpressionEventTopicUriReference Queue = null, ConversationSocialExpressionEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationSocialExpressionEventTopicErrorBody ErrorInfo = null, ConversationSocialExpressionEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationSocialExpressionEventTopicUriReference ExternalContact = null, ConversationSocialExpressionEventTopicUriReference ExternalOrganization = null, ConversationSocialExpressionEventTopicWrapup Wrapup = null, ConversationSocialExpressionEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationSocialExpressionEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, List<string> MediaRoles = null, ConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -464,6 +465,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyContext = JourneyContext;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.ResumeTime = ResumeTime;
             this.MediaRoles = MediaRoles;
             this.QueueMediaSettings = QueueMediaSettings;
             this.SocialMediaId = SocialMediaId;
@@ -726,6 +728,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ResumeTime
+        /// </summary>
+        [DataMember(Name="resumeTime", EmitDefaultValue=false)]
+        public DateTime? ResumeTime { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets MediaRoles
         /// </summary>
         [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
@@ -816,6 +826,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
             sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
@@ -1038,6 +1049,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
+                    this.ResumeTime == other.ResumeTime ||
+                    this.ResumeTime != null &&
+                    this.ResumeTime.Equals(other.ResumeTime)
+                ) &&
+                (
                     this.MediaRoles == other.MediaRoles ||
                     this.MediaRoles != null &&
                     this.MediaRoles.SequenceEqual(other.MediaRoles)
@@ -1184,6 +1200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+
+                if (this.ResumeTime != null)
+                    hash = hash * 59 + this.ResumeTime.GetHashCode();
 
                 if (this.MediaRoles != null)
                     hash = hash * 59 + this.MediaRoles.GetHashCode();

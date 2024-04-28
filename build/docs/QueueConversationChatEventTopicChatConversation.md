@@ -12,6 +12,7 @@ title: QueueConversationChatEventTopicChatConversation
 | **Participants** | [**List&lt;QueueConversationChatEventTopicChatMediaParticipant&gt;**](QueueConversationChatEventTopicChatMediaParticipant.html) |  | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
+| **UtilizationLabelId** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

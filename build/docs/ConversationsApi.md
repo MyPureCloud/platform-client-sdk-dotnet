@@ -113,6 +113,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationSecureattributes**](ConversationsApi.html#patchconversationsecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
+| [**PatchConversationUtilizationlabel**](ConversationsApi.html#patchconversationutilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsApi.html#patchconversationsaftercallworkconversationidparticipantcommunication) | **Patch** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
 | [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **Patch** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
@@ -7073,6 +7074,73 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="patchconversationutilizationlabel"></a>
+
+## **string** PatchConversationUtilizationlabel (string conversationId, ConversationUtilizationLabelUpdate body)
+
+
+
+Update the utilization label on a conversation. When there is no value provided, the system default label is applied
+
+PatchConversationUtilizationlabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:utilizationLabel:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationUtilizationlabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var body = new ConversationUtilizationLabelUpdate(); // ConversationUtilizationLabelUpdate | Conversation Utilization Label
+
+            try
+            { 
+                // Update the utilization label on a conversation. When there is no value provided, the system default label is applied
+                string result = apiInstance.PatchConversationUtilizationlabel(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationUtilizationlabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **body** | [**ConversationUtilizationLabelUpdate**](ConversationUtilizationLabelUpdate.html)| Conversation Utilization Label |  |
 {: class="table table-striped"}
 
 ### Return type

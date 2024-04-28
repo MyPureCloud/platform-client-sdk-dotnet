@@ -130,6 +130,45 @@ namespace PureCloudPlatform.Client.V2.Model
             Suggestion
         }
         /// <summary>
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// </summary>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SurfacingMethodEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Article for "Article"
+            /// </summary>
+            [EnumMember(Value = "Article")]
+            Article,
+            
+            /// <summary>
+            /// Enum Snippet for "Snippet"
+            /// </summary>
+            [EnumMember(Value = "Snippet")]
+            Snippet,
+            
+            /// <summary>
+            /// Enum Highlight for "Highlight"
+            /// </summary>
+            [EnumMember(Value = "Highlight")]
+            Highlight
+        }
+        /// <summary>
         /// The state of the feedback.
         /// </summary>
         /// <value>The state of the feedback.</value>
@@ -175,6 +214,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="queryType", EmitDefaultValue=false)]
         public QueryTypeEnum? QueryType { get; set; }
         /// <summary>
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// </summary>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        [DataMember(Name="surfacingMethod", EmitDefaultValue=false)]
+        public SurfacingMethodEnum? SurfacingMethod { get; set; }
+        /// <summary>
         /// The state of the feedback.
         /// </summary>
         /// <value>The state of the feedback.</value>
@@ -195,11 +240,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Comment">Free-text comment of the feedback. Maximum length: 2000 characters..</param>
         /// <param name="Search">The search that surfaced the document on which feedback was given..</param>
         /// <param name="QueryType">The type of the query that surfaced the document on which the feedback was given..</param>
+        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
         /// <param name="State">The state of the feedback..</param>
         /// <param name="Document">The document on which feedback was given. (required).</param>
         /// <param name="Application">The client application from which feedback was given. (required).</param>
         /// <param name="ConversationContext">Conversation context information if the feedback is given in the context of a conversation..</param>
-        public KnowledgeDocumentFeedback(EntityReference DocumentVariation = null, RatingEnum? Rating = null, ReasonEnum? Reason = null, string Comment = null, EntityReference Search = null, QueryTypeEnum? QueryType = null, StateEnum? State = null, KnowledgeDocumentVersionReference Document = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null)
+        public KnowledgeDocumentFeedback(EntityReference DocumentVariation = null, RatingEnum? Rating = null, ReasonEnum? Reason = null, string Comment = null, EntityReference Search = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null, StateEnum? State = null, KnowledgeDocumentVersionReference Document = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null)
         {
             this.DocumentVariation = DocumentVariation;
             this.Rating = Rating;
@@ -207,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Comment = Comment;
             this.Search = Search;
             this.QueryType = QueryType;
+            this.SurfacingMethod = SurfacingMethod;
             this.State = State;
             this.Document = Document;
             this.Application = Application;
@@ -278,6 +325,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The document on which feedback was given.
         /// </summary>
@@ -340,6 +389,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  QueryType: ").Append(QueryType).Append("\n");
+            sb.Append("  SurfacingMethod: ").Append(SurfacingMethod).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  Application: ").Append(Application).Append("\n");
@@ -432,6 +482,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryType.Equals(other.QueryType)
                 ) &&
                 (
+                    this.SurfacingMethod == other.SurfacingMethod ||
+                    this.SurfacingMethod != null &&
+                    this.SurfacingMethod.Equals(other.SurfacingMethod)
+                ) &&
+                (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
@@ -500,6 +555,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryType != null)
                     hash = hash * 59 + this.QueryType.GetHashCode();
+
+                if (this.SurfacingMethod != null)
+                    hash = hash * 59 + this.SurfacingMethod.GetHashCode();
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();

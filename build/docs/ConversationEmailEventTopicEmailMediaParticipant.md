@@ -42,6 +42,7 @@ title: ConversationEmailEventTopicEmailMediaParticipant
 | **JourneyContext** | [**ConversationEmailEventTopicJourneyContext**](ConversationEmailEventTopicJourneyContext.html) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
+| **ResumeTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationEmailEventTopicQueueMediaSettings**](ConversationEmailEventTopicQueueMediaSettings.html) |  | [optional] |
 | **Subject** | **string** |  | [optional] |

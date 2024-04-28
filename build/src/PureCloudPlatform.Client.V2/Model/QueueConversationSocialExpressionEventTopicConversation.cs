@@ -28,8 +28,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="Address">Address.</param>
         /// <param name="ExternalTag">ExternalTag.</param>
+        /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
         /// <param name="SecurePause">SecurePause.</param>
-        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicRecentTransfer> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, bool? SecurePause = null)
+        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicRecentTransfer> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecordingState = RecordingState;
             this.Address = Address;
             this.ExternalTag = ExternalTag;
+            this.UtilizationLabelId = UtilizationLabelId;
             this.SecurePause = SecurePause;
             
         }
@@ -101,6 +103,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets UtilizationLabelId
+        /// </summary>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets SecurePause
         /// </summary>
         [DataMember(Name="securePause", EmitDefaultValue=false)]
@@ -123,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -200,6 +211,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalTag.Equals(other.ExternalTag)
                 ) &&
                 (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
+                ) &&
+                (
                     this.SecurePause == other.SecurePause ||
                     this.SecurePause != null &&
                     this.SecurePause.Equals(other.SecurePause)
@@ -237,6 +253,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalTag != null)
                     hash = hash * 59 + this.ExternalTag.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();

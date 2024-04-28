@@ -47,6 +47,7 @@ title: JourneySessionEventsNotificationSessionEvent
 | **App** | [**JourneySessionEventsNotificationApp**](JourneySessionEventsNotificationApp.html) |  | [optional] |
 | **SdkLibrary** | [**JourneySessionEventsNotificationSdkLibrary**](JourneySessionEventsNotificationSdkLibrary.html) |  | [optional] |
 | **NetworkConnectivity** | [**JourneySessionEventsNotificationNetworkConnectivity**](JourneySessionEventsNotificationNetworkConnectivity.html) |  | [optional] |
+| **DivisionIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

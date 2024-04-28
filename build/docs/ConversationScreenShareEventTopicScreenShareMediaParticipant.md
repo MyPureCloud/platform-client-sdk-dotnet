@@ -42,6 +42,7 @@ title: ConversationScreenShareEventTopicScreenShareMediaParticipant
 | **JourneyContext** | [**ConversationScreenShareEventTopicJourneyContext**](ConversationScreenShareEventTopicJourneyContext.html) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
+| **ResumeTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationScreenShareEventTopicQueueMediaSettings**](ConversationScreenShareEventTopicQueueMediaSettings.html) |  | [optional] |
 | **Context** | **string** |  | [optional] |

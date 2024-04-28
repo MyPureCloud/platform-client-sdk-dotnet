@@ -921,7 +921,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ScreenRecordingActiveSessions</returns>
@@ -933,7 +932,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ScreenRecordingActiveSessions</returns>
@@ -2505,7 +2503,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ScreenRecordingActiveSessions</returns>
@@ -2517,7 +2514,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ScreenRecordingActiveSessions)</returns>
@@ -10397,7 +10393,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieves an object containing the total number of concurrent active screen recordings 
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ScreenRecordingActiveSessions</returns>
@@ -10411,7 +10406,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieves an object containing the total number of concurrent active screen recordings 
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ScreenRecordingActiveSessions</returns>
@@ -10497,7 +10491,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieves an object containing the total number of concurrent active screen recordings 
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ScreenRecordingActiveSessions</returns>
@@ -10512,7 +10505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Retrieves an object containing the total number of concurrent active screen recordings 
         /// 
-        /// GetRecordingsScreensessionsDetails is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ScreenRecordingActiveSessions)</returns>

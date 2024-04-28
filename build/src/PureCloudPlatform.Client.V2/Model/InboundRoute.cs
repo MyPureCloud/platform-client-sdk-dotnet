@@ -81,7 +81,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Signature">The configuration for the canned response signature that will be appended to outbound emails sent via this route.</param>
         /// <param name="HistoryInclusion">The configuration to indicate how the history of a conversation has to be included in a draft.</param>
         /// <param name="AllowMultipleActions">Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action.</param>
-        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null, bool? AllowMultipleActions = null)
+        /// <param name="ImapFolder">Imap folder routed to this route.</param>
+        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null, bool? AllowMultipleActions = null, string ImapFolder = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -98,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Signature = Signature;
             this.HistoryInclusion = HistoryInclusion;
             this.AllowMultipleActions = AllowMultipleActions;
+            this.ImapFolder = ImapFolder;
             
         }
         
@@ -240,6 +242,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Imap folder routed to this route
+        /// </summary>
+        /// <value>Imap folder routed to this route</value>
+        [DataMember(Name="imapFolder", EmitDefaultValue=false)]
+        public string ImapFolder { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -272,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Signature: ").Append(Signature).Append("\n");
             sb.Append("  HistoryInclusion: ").Append(HistoryInclusion).Append("\n");
             sb.Append("  AllowMultipleActions: ").Append(AllowMultipleActions).Append("\n");
+            sb.Append("  ImapFolder: ").Append(ImapFolder).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -394,6 +406,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowMultipleActions.Equals(other.AllowMultipleActions)
                 ) &&
                 (
+                    this.ImapFolder == other.ImapFolder ||
+                    this.ImapFolder != null &&
+                    this.ImapFolder.Equals(other.ImapFolder)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -458,6 +475,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowMultipleActions != null)
                     hash = hash * 59 + this.AllowMultipleActions.GetHashCode();
+
+                if (this.ImapFolder != null)
+                    hash = hash * 59 + this.ImapFolder.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

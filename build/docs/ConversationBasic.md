@@ -14,6 +14,7 @@ title: ConversationBasic
 | **EndTime** | **DateTime?** | The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Divisions** | [**List&lt;ConversationDivisionMembership&gt;**](ConversationDivisionMembership.html) | Identifiers of divisions associated with this conversation | [optional] |
 | **SecurePause** | **bool?** | True when the recording of this conversation is in secure pause status. | [optional] |
+| **UtilizationLabelId** | **string** | An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **Participants** | [**List&lt;ParticipantBasic&gt;**](ParticipantBasic.html) |  | [optional] |
 {: class="table table-striped"}

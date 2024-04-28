@@ -42,6 +42,7 @@ title: QueueConversationCobrowseEventTopicCobrowseMediaParticipant
 | **JourneyContext** | [**QueueConversationCobrowseEventTopicJourneyContext**](QueueConversationCobrowseEventTopicJourneyContext.html) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
+| **ResumeTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**QueueConversationCobrowseEventTopicQueueMediaSettings**](QueueConversationCobrowseEventTopicQueueMediaSettings.html) |  | [optional] |
 | **CobrowseSessionId** | **string** |  | [optional] |

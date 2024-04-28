@@ -33,7 +33,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
         /// <param name="SecurePause">True when the recording of this conversation is in secure pause status..</param>
-        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, bool? SecurePause = null)
+        /// <param name="UtilizationLabelId">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
+        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, bool? SecurePause = null, string UtilizationLabelId = null)
         {
             this.Name = Name;
             this.ExternalTag = ExternalTag;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EndTime = EndTime;
             this.Divisions = Divisions;
             this.SecurePause = SecurePause;
+            this.UtilizationLabelId = UtilizationLabelId;
             
         }
         
@@ -109,6 +111,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level
+        /// </summary>
+        /// <value>An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level</value>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -140,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
@@ -218,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SecurePause.Equals(other.SecurePause)
                 ) &&
                 (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -260,6 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -42,6 +42,7 @@ title: ConversationVideoEventTopicVideoMediaParticipant
 | **JourneyContext** | [**ConversationVideoEventTopicJourneyContext**](ConversationVideoEventTopicJourneyContext.html) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
+| **ResumeTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationVideoEventTopicQueueMediaSettings**](ConversationVideoEventTopicQueueMediaSettings.html) |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |

@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">Participants.</param>
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="Address">Address.</param>
-        public QueueConversationMessageEventTopicMessageConversation(string Id = null, string Name = null, List<QueueConversationMessageEventTopicMessageMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null)
+        /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
+        public QueueConversationMessageEventTopicMessageConversation(string Id = null, string Name = null, List<QueueConversationMessageEventTopicMessageMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
             this.Address = Address;
+            this.UtilizationLabelId = UtilizationLabelId;
             
         }
         
@@ -77,6 +79,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Address { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets UtilizationLabelId
+        /// </summary>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
+                ) &&
+                (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 );
         }
 
@@ -183,6 +199,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 return hash;
             }

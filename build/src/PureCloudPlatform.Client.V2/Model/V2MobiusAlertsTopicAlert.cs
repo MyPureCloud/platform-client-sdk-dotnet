@@ -78,7 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum BulkUpdate for "BULK_UPDATE"
             /// </summary>
             [EnumMember(Value = "BULK_UPDATE")]
-            BulkUpdate
+            BulkUpdate,
+            
+            /// <summary>
+            /// Enum UnreadCountUpdate for "UNREAD_COUNT_UPDATE"
+            /// </summary>
+            [EnumMember(Value = "UNREAD_COUNT_UPDATE")]
+            UnreadCountUpdate
         }
         /// <summary>
         /// Gets or Sets Action

@@ -986,6 +986,7 @@ docs/ConversationThreadingWindow.md
 docs/ConversationThreadingWindowSetting.md
 docs/ConversationUser.md
 docs/ConversationUserDisposition.md
+docs/ConversationUtilizationLabelUpdate.md
 docs/ConversationVideoEventTopicConversationRoutingData.md
 docs/ConversationVideoEventTopicDetail.md
 docs/ConversationVideoEventTopicErrorBody.md
@@ -1711,6 +1712,7 @@ docs/EmailConfig.md
 docs/EmailConversation.md
 docs/EmailConversationEntityListing.md
 docs/EmailEndTransferEvent.md
+docs/EmailErrorInfo.md
 docs/EmailExternalEstablishedEvent.md
 docs/EmailFlowEstablishedEvent.md
 docs/EmailHoldUpdatedEvent.md
@@ -3342,6 +3344,7 @@ docs/IdentityProviderEntityListing.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
+docs/ImapSettings.md
 docs/ImportError.md
 docs/ImportForecastResponse.md
 docs/ImportForecastUploadResponse.md
@@ -4229,6 +4232,7 @@ docs/PatchContextPattern.md
 docs/PatchConversationParticipant-example.txt
 docs/PatchConversationParticipantAttributes-example.txt
 docs/PatchConversationSecureattributes-example.txt
+docs/PatchConversationUtilizationlabel-example.txt
 docs/PatchConversationsAftercallworkConversationIdParticipantCommunication-example.txt
 docs/PatchConversationsCall-example.txt
 docs/PatchConversationsCallParticipant-example.txt
@@ -8106,6 +8110,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationThreadingWindow.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationThreadingWindowSetting.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationUser.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationUserDisposition.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationUtilizationLabelUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicConversationRoutingData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicDetail.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationVideoEventTopicErrorBody.cs
@@ -8557,6 +8562,7 @@ src/PureCloudPlatform.Client.V2/Model/EmailConfig.cs
 src/PureCloudPlatform.Client.V2/Model/EmailConversation.cs
 src/PureCloudPlatform.Client.V2/Model/EmailConversationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EmailEndTransferEvent.cs
+src/PureCloudPlatform.Client.V2/Model/EmailErrorInfo.cs
 src/PureCloudPlatform.Client.V2/Model/EmailExternalEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailFlowEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/EmailHoldUpdatedEvent.cs
@@ -8986,6 +8992,7 @@ src/PureCloudPlatform.Client.V2/Model/IdentityProviderEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IdleEventTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/IdleTokenTimeout.cs
 src/PureCloudPlatform.Client.V2/Model/IgnoredActivityCategories.cs
+src/PureCloudPlatform.Client.V2/Model/ImapSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ImportError.cs
 src/PureCloudPlatform.Client.V2/Model/ImportForecastResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ImportForecastUploadResponse.cs

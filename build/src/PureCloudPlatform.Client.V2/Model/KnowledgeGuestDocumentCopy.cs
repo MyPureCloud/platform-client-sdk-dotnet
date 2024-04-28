@@ -76,11 +76,56 @@ namespace PureCloudPlatform.Client.V2.Model
             Suggestion
         }
         /// <summary>
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// </summary>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SurfacingMethodEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Article for "Article"
+            /// </summary>
+            [EnumMember(Value = "Article")]
+            Article,
+            
+            /// <summary>
+            /// Enum Snippet for "Snippet"
+            /// </summary>
+            [EnumMember(Value = "Snippet")]
+            Snippet,
+            
+            /// <summary>
+            /// Enum Highlight for "Highlight"
+            /// </summary>
+            [EnumMember(Value = "Highlight")]
+            Highlight
+        }
+        /// <summary>
         /// The type of the query that surfaced the document.
         /// </summary>
         /// <value>The type of the query that surfaced the document.</value>
         [DataMember(Name="queryType", EmitDefaultValue=false)]
         public QueryTypeEnum? QueryType { get; set; }
+        /// <summary>
+        /// The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.
+        /// </summary>
+        /// <value>The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown.</value>
+        [DataMember(Name="surfacingMethod", EmitDefaultValue=false)]
+        public SurfacingMethodEnum? SurfacingMethod { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeGuestDocumentCopy" /> class.
@@ -94,12 +139,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DocumentVersionId">The version of the document whose content was copied. (required).</param>
         /// <param name="SearchId">The search that surfaced the document whose content was copied..</param>
         /// <param name="QueryType">The type of the query that surfaced the document..</param>
-        public KnowledgeGuestDocumentCopy(string DocumentVariationId = null, string DocumentVersionId = null, string SearchId = null, QueryTypeEnum? QueryType = null)
+        /// <param name="SurfacingMethod">The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown..</param>
+        public KnowledgeGuestDocumentCopy(string DocumentVariationId = null, string DocumentVersionId = null, string SearchId = null, QueryTypeEnum? QueryType = null, SurfacingMethodEnum? SurfacingMethod = null)
         {
             this.DocumentVariationId = DocumentVariationId;
             this.DocumentVersionId = DocumentVersionId;
             this.SearchId = SearchId;
             this.QueryType = QueryType;
+            this.SurfacingMethod = SurfacingMethod;
             
         }
         
@@ -129,6 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The search that surfaced the document whose content was copied.</value>
         [DataMember(Name="searchId", EmitDefaultValue=false)]
         public string SearchId { get; set; }
+
+
 
 
 
@@ -164,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DocumentVersionId: ").Append(DocumentVersionId).Append("\n");
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  QueryType: ").Append(QueryType).Append("\n");
+            sb.Append("  SurfacingMethod: ").Append(SurfacingMethod).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("}\n");
@@ -227,6 +277,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryType.Equals(other.QueryType)
                 ) &&
                 (
+                    this.SurfacingMethod == other.SurfacingMethod ||
+                    this.SurfacingMethod != null &&
+                    this.SurfacingMethod.Equals(other.SurfacingMethod)
+                ) &&
+                (
                     this.SessionId == other.SessionId ||
                     this.SessionId != null &&
                     this.SessionId.Equals(other.SessionId)
@@ -260,6 +315,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryType != null)
                     hash = hash * 59 + this.QueryType.GetHashCode();
+
+                if (this.SurfacingMethod != null)
+                    hash = hash * 59 + this.SurfacingMethod.GetHashCode();
 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();

@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="MailFromSettings">The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false..</param>
         /// <param name="CustomSMTPServer">The custom SMTP server integration to use when sending outbound emails from this domain..</param>
-        public InboundDomainPatchRequest(MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null)
+        /// <param name="ImapSettings">The IMAP server integration and settings to use for processing inbound emails..</param>
+        public InboundDomainPatchRequest(MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null, ImapSettings ImapSettings = null)
         {
             this.MailFromSettings = MailFromSettings;
             this.CustomSMTPServer = CustomSMTPServer;
+            this.ImapSettings = ImapSettings;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DomainEntityRef CustomSMTPServer { get; set; }
 
 
+
+        /// <summary>
+        /// The IMAP server integration and settings to use for processing inbound emails.
+        /// </summary>
+        /// <value>The IMAP server integration and settings to use for processing inbound emails.</value>
+        [DataMember(Name="imapSettings", EmitDefaultValue=false)]
+        public ImapSettings ImapSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  MailFromSettings: ").Append(MailFromSettings).Append("\n");
             sb.Append("  CustomSMTPServer: ").Append(CustomSMTPServer).Append("\n");
+            sb.Append("  ImapSettings: ").Append(ImapSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomSMTPServer == other.CustomSMTPServer ||
                     this.CustomSMTPServer != null &&
                     this.CustomSMTPServer.Equals(other.CustomSMTPServer)
+                ) &&
+                (
+                    this.ImapSettings == other.ImapSettings ||
+                    this.ImapSettings != null &&
+                    this.ImapSettings.Equals(other.ImapSettings)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CustomSMTPServer != null)
                     hash = hash * 59 + this.CustomSMTPServer.GetHashCode();
+
+                if (this.ImapSettings != null)
+                    hash = hash * 59 + this.ImapSettings.GetHashCode();
 
                 return hash;
             }

@@ -63,16 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">Participants.</param>
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="Address">Address.</param>
+        /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="MaxParticipants">MaxParticipants.</param>
-        public QueueConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<QueueConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
+        public QueueConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<QueueConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
             this.Address = Address;
+            this.UtilizationLabelId = UtilizationLabelId;
             this.RecordingState = RecordingState;
             this.SecurePause = SecurePause;
             this.MaxParticipants = MaxParticipants;
@@ -121,6 +123,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets UtilizationLabelId
+        /// </summary>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
+
 
 
         /// <summary>
@@ -152,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
@@ -221,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Address.Equals(other.Address)
                 ) &&
                 (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
+                ) &&
+                (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
@@ -262,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();

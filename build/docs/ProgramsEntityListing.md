@@ -9,8 +9,8 @@ title: ProgramsEntityListing
 |------------ | ------------- | ------------- | -------------|
 | **Entities** | [**List&lt;ListedProgram&gt;**](ListedProgram.html) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

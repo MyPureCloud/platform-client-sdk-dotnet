@@ -14,6 +14,7 @@ title: QueueConversationEventTopicConversation
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |
+| **UtilizationLabelId** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 

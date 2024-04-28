@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">The list of participants involved in the conversation..</param>
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
         /// <param name="RecentTransfers">The list of the most recent 20 transfer commands applied to this conversation..</param>
-        public CobrowseConversation(string Name = null, List<CobrowseMediaParticipant> Participants = null, List<string> OtherMediaUris = null, List<TransferResponse> RecentTransfers = null)
+        /// <param name="UtilizationLabelId">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
+        public CobrowseConversation(string Name = null, List<CobrowseMediaParticipant> Participants = null, List<string> OtherMediaUris = null, List<TransferResponse> RecentTransfers = null, string UtilizationLabelId = null)
         {
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
             this.RecentTransfers = RecentTransfers;
+            this.UtilizationLabelId = UtilizationLabelId;
             
         }
         
@@ -81,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level
+        /// </summary>
+        /// <value>An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level</value>
+        [DataMember(Name="utilizationLabelId", EmitDefaultValue=false)]
+        public string UtilizationLabelId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  RecentTransfers: ").Append(RecentTransfers).Append("\n");
+            sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -169,6 +181,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecentTransfers.SequenceEqual(other.RecentTransfers)
                 ) &&
                 (
+                    this.UtilizationLabelId == other.UtilizationLabelId ||
+                    this.UtilizationLabelId != null &&
+                    this.UtilizationLabelId.Equals(other.UtilizationLabelId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -200,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecentTransfers != null)
                     hash = hash * 59 + this.RecentTransfers.GetHashCode();
+
+                if (this.UtilizationLabelId != null)
+                    hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

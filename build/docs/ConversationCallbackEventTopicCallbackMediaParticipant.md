@@ -42,6 +42,7 @@ title: ConversationCallbackEventTopicCallbackMediaParticipant
 | **JourneyContext** | [**ConversationCallbackEventTopicJourneyContext**](ConversationCallbackEventTopicJourneyContext.html) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
+| **ResumeTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationCallbackEventTopicQueueMediaSettings**](ConversationCallbackEventTopicQueueMediaSettings.html) |  | [optional] |
 | **OutboundPreview** | [**ConversationCallbackEventTopicDialerPreview**](ConversationCallbackEventTopicDialerPreview.html) |  | [optional] |
