@@ -43,6 +43,7 @@ title: ConversationSocialExpressionEventTopicSocialMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
+| **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationSocialExpressionEventTopicQueueMediaSettings**](ConversationSocialExpressionEventTopicQueueMediaSettings.html) |  | [optional] |
 | **SocialMediaId** | **string** |  | [optional] |

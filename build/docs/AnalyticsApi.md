@@ -8,10 +8,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteAnalyticsConversationsDetailsJob**](AnalyticsApi.html#deleteanalyticsconversationsdetailsjob) | **Delete** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
-| [**DeleteAnalyticsReportingSchedule**](AnalyticsApi.html#deleteanalyticsreportingschedule) | **Delete** /api/v2/analytics/reporting/schedules/{scheduleId} | Delete a scheduled report job. |
 | [**DeleteAnalyticsUsersDetailsJob**](AnalyticsApi.html#deleteanalyticsusersdetailsjob) | **Delete** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
 | [**GetAnalyticsActionsAggregatesJob**](AnalyticsApi.html#getanalyticsactionsaggregatesjob) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId} | Get status for async query for action aggregates |
 | [**GetAnalyticsActionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsactionsaggregatesjobresults) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsBotflowDivisionsReportingturns**](AnalyticsApi.html#getanalyticsbotflowdivisionsreportingturns) | **Get** /api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns | Get Reporting Turns (division aware). |
 | [**GetAnalyticsBotflowReportingturns**](AnalyticsApi.html#getanalyticsbotflowreportingturns) | **Get** /api/v2/analytics/botflows/{botFlowId}/reportingturns | Get Reporting Turns. |
 | [**GetAnalyticsBotflowSessions**](AnalyticsApi.html#getanalyticsbotflowsessions) | **Get** /api/v2/analytics/botflows/{botFlowId}/sessions | Get Bot Flow Sessions. |
 | [**GetAnalyticsBotsAggregatesJob**](AnalyticsApi.html#getanalyticsbotsaggregatesjob) | **Get** /api/v2/analytics/bots/aggregates/jobs/{jobId} | Get status for async query for bot aggregates |
@@ -38,17 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsReportingDashboardsUsers**](AnalyticsApi.html#getanalyticsreportingdashboardsusers) | **Get** /api/v2/analytics/reporting/dashboards/users | Get dashboards summary for users in a org |
 | [**GetAnalyticsReportingExports**](AnalyticsApi.html#getanalyticsreportingexports) | **Get** /api/v2/analytics/reporting/exports | Get all view export requests for a user |
 | [**GetAnalyticsReportingExportsMetadata**](AnalyticsApi.html#getanalyticsreportingexportsmetadata) | **Get** /api/v2/analytics/reporting/exports/metadata | Get all export metadata |
-| [**GetAnalyticsReportingMetadata**](AnalyticsApi.html#getanalyticsreportingmetadata) | **Get** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
-| [**GetAnalyticsReportingReportIdMetadata**](AnalyticsApi.html#getanalyticsreportingreportidmetadata) | **Get** /api/v2/analytics/reporting/{reportId}/metadata | Get a reporting metadata. |
-| [**GetAnalyticsReportingReportformats**](AnalyticsApi.html#getanalyticsreportingreportformats) | **Get** /api/v2/analytics/reporting/reportformats | Get a list of report formats |
-| [**GetAnalyticsReportingSchedule**](AnalyticsApi.html#getanalyticsreportingschedule) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId} | Get a scheduled report job. |
-| [**GetAnalyticsReportingScheduleHistory**](AnalyticsApi.html#getanalyticsreportingschedulehistory) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history | Get list of completed scheduled report jobs. |
-| [**GetAnalyticsReportingScheduleHistoryLatest**](AnalyticsApi.html#getanalyticsreportingschedulehistorylatest) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest | Get most recently completed scheduled report job. |
-| [**GetAnalyticsReportingScheduleHistoryRunId**](AnalyticsApi.html#getanalyticsreportingschedulehistoryrunid) | **Get** /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId} | A completed scheduled report job |
-| [**GetAnalyticsReportingSchedules**](AnalyticsApi.html#getanalyticsreportingschedules) | **Get** /api/v2/analytics/reporting/schedules | Get a list of scheduled report jobs |
 | [**GetAnalyticsReportingSettings**](AnalyticsApi.html#getanalyticsreportingsettings) | **Get** /api/v2/analytics/reporting/settings | Get AnalyticsReportingSettings for an organization |
 | [**GetAnalyticsReportingSettingsUserDashboards**](AnalyticsApi.html#getanalyticsreportingsettingsuserdashboards) | **Get** /api/v2/analytics/reporting/settings/users/{userId}/dashboards | Get list of dashboards for an user |
-| [**GetAnalyticsReportingTimeperiods**](AnalyticsApi.html#getanalyticsreportingtimeperiods) | **Get** /api/v2/analytics/reporting/timeperiods | Get a list of report time periods. |
 | [**GetAnalyticsResolutionsAggregatesJob**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjob) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId} | Get status for async query for resolution aggregates |
 | [**GetAnalyticsResolutionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjobresults) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsSurveysAggregatesJob**](AnalyticsApi.html#getanalyticssurveysaggregatesjob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
@@ -90,8 +81,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsRatelimitsAggregatesQuery**](AnalyticsApi.html#postanalyticsratelimitsaggregatesquery) | **Post** /api/v2/analytics/ratelimits/aggregates/query | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
 | [**PostAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsApi.html#postanalyticsreportingdashboardsusersbulkremove) | **Post** /api/v2/analytics/reporting/dashboards/users/bulk/remove | Bulk delete dashboards owned by other user(s) |
 | [**PostAnalyticsReportingExports**](AnalyticsApi.html#postanalyticsreportingexports) | **Post** /api/v2/analytics/reporting/exports | Generate a view export request |
-| [**PostAnalyticsReportingScheduleRunreport**](AnalyticsApi.html#postanalyticsreportingschedulerunreport) | **Post** /api/v2/analytics/reporting/schedules/{scheduleId}/runreport | Place a scheduled report immediately into the reporting queue |
-| [**PostAnalyticsReportingSchedules**](AnalyticsApi.html#postanalyticsreportingschedules) | **Post** /api/v2/analytics/reporting/schedules | Create a scheduled report job |
 | [**PostAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsApi.html#postanalyticsreportingsettingsdashboardsbulkremove) | **Post** /api/v2/analytics/reporting/settings/dashboards/bulk/remove | Bulk remove dashboard configurations |
 | [**PostAnalyticsReportingSettingsDashboardsQuery**](AnalyticsApi.html#postanalyticsreportingsettingsdashboardsquery) | **Post** /api/v2/analytics/reporting/settings/dashboards/query | Query dashboard configurations |
 | [**PostAnalyticsResolutionsAggregatesJobs**](AnalyticsApi.html#postanalyticsresolutionsaggregatesjobs) | **Post** /api/v2/analytics/resolutions/aggregates/jobs | Query for resolution aggregates asynchronously |
@@ -110,7 +99,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersDetailsQuery**](AnalyticsApi.html#postanalyticsusersdetailsquery) | **Post** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](AnalyticsApi.html#postanalyticsusersobservationsquery) | **Post** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PutAnalyticsDataretentionSettings**](AnalyticsApi.html#putanalyticsdataretentionsettings) | **Put** /api/v2/analytics/dataretention/settings | Update analytics data retention setting |
-| [**PutAnalyticsReportingSchedule**](AnalyticsApi.html#putanalyticsreportingschedule) | **Put** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
 {: class="table table-striped"}
 
 <a name="deleteanalyticsconversationsdetailsjob"></a>
@@ -170,67 +158,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deleteanalyticsreportingschedule"></a>
-
-## void DeleteAnalyticsReportingSchedule (string scheduleId)
-
-
-
-Delete a scheduled report job.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteAnalyticsReportingScheduleExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            { 
-                // Delete a scheduled report job.
-                apiInstance.DeleteAnalyticsReportingSchedule(scheduleId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.DeleteAnalyticsReportingSchedule: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -433,15 +360,94 @@ namespace Example
 
 [**ActionAsyncAggregateQueryResponse**](ActionAsyncAggregateQueryResponse.html)
 
+<a name="getanalyticsbotflowdivisionsreportingturns"></a>
+
+## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowDivisionsReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+
+
+
+Get Reporting Turns (division aware).
+
+Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+
+Requires ANY permissions: 
+
+* analytics:botFlowDivisionAwareReportingTurn:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsBotflowDivisionsReportingturnsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var botFlowId = botFlowId_example;  // string | ID of the bot flow.
+            var after = after_example;  // string | The cursor that points to the ID of the last item in the list of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Max number of entities to return. Maximum of 250 (optional)  (default to "50")
+            var interval = 2023-07-17T08:15:44.586Z/2023-07-26T09:22:33.111Z;  // string | Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var actionId = actionId_example;  // string | Optional action ID to get the reporting turns associated to a particular flow action (optional) 
+            var sessionId = sessionId_example;  // string | Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional) 
+            var language = en-us;  // string | Optional language code to get the reporting turns for a particular language (optional) 
+            var askActionResults = askActionResults_example;  // string | Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional) 
+
+            try
+            { 
+                // Get Reporting Turns (division aware).
+                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowDivisionsReportingturns(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsBotflowDivisionsReportingturns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **botFlowId** | **string**| ID of the bot flow. |  |
+| **after** | **string**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Max number of entities to return. Maximum of 250 | [optional] [default to "50"] |
+| **interval** | **string**| Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
+| **actionId** | **string**| Optional action ID to get the reporting turns associated to a particular flow action | [optional]  |
+| **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional]  |
+| **language** | **string**| Optional language code to get the reporting turns for a particular language | [optional]  |
+| **askActionResults** | **string**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional] <br />**Values**: AgentRequestedByUser, ConfirmationRequired, DisambiguationRequired, Error, ExpressionError, NoInputCollection, NoInputConfirmation, NoInputDisambiguation, NoMatchCollection, NoMatchConfirmation, NoMatchDisambiguation, SuccessCollection, SuccessConfirmationNo, SuccessConfirmationYes, SuccessDisambiguation, SuccessDisambiguationNone |
+{: class="table table-striped"}
+
+### Return type
+
+[**ReportingTurnsResponse**](ReportingTurnsResponse.html)
+
 <a name="getanalyticsbotflowreportingturns"></a>
 
 ## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get Reporting Turns.
 
-Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
 
 Requires ANY permissions: 
 
@@ -2144,520 +2150,6 @@ This endpoint does require any parameters.
 
 [**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing.html)
 
-<a name="getanalyticsreportingmetadata"></a>
-
-## [**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html) GetAnalyticsReportingMetadata (int? pageNumber = null, int? pageSize = null, string locale = null)
-
-
-
-Get list of reporting metadata.
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingMetadataExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var locale = locale_example;  // string | Locale (optional) 
-
-            try
-            { 
-                // Get list of reporting metadata.
-                ReportMetaDataEntityListing result = apiInstance.GetAnalyticsReportingMetadata(pageNumber, pageSize, locale);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingMetadata: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **locale** | **string**| Locale | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html)
-
-<a name="getanalyticsreportingreportidmetadata"></a>
-
-## [**ReportMetaData**](ReportMetaData.html) GetAnalyticsReportingReportIdMetadata (string reportId, string locale = null)
-
-
-
-Get a reporting metadata.
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingReportIdMetadataExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var reportId = reportId_example;  // string | Report ID
-            var locale = locale_example;  // string | Locale (optional) 
-
-            try
-            { 
-                // Get a reporting metadata.
-                ReportMetaData result = apiInstance.GetAnalyticsReportingReportIdMetadata(reportId, locale);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingReportIdMetadata: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **reportId** | **string**| Report ID |  |
-| **locale** | **string**| Locale | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportMetaData**](ReportMetaData.html)
-
-<a name="getanalyticsreportingreportformats"></a>
-
-## **List&lt;string&gt;** GetAnalyticsReportingReportformats ()
-
-
-
-Get a list of report formats
-
-Get a list of report formats.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingReportformatsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-
-            try
-            { 
-                // Get a list of report formats
-                List<string> result = apiInstance.GetAnalyticsReportingReportformats();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingReportformats: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-**List<string>**
-
-<a name="getanalyticsreportingschedule"></a>
-
-## [**ReportSchedule**](ReportSchedule.html) GetAnalyticsReportingSchedule (string scheduleId)
-
-
-
-Get a scheduled report job.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingScheduleExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            { 
-                // Get a scheduled report job.
-                ReportSchedule result = apiInstance.GetAnalyticsReportingSchedule(scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingSchedule: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
-
-<a name="getanalyticsreportingschedulehistory"></a>
-
-## [**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) GetAnalyticsReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
-
-
-
-Get list of completed scheduled report jobs.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingScheduleHistoryExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-            var pageNumber = 56;  // int? |  (optional)  (default to 1)
-            var pageSize = 56;  // int? |  (optional)  (default to 25)
-
-            try
-            { 
-                // Get list of completed scheduled report jobs.
-                ReportRunEntryEntityDomainListing result = apiInstance.GetAnalyticsReportingScheduleHistory(scheduleId, pageNumber, pageSize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingScheduleHistory: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-| **pageNumber** | **int?**|  | [optional] [default to 1] |
-| **pageSize** | **int?**|  | [optional] [default to 25] |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html)
-
-<a name="getanalyticsreportingschedulehistorylatest"></a>
-
-## [**ReportRunEntry**](ReportRunEntry.html) GetAnalyticsReportingScheduleHistoryLatest (string scheduleId)
-
-
-
-Get most recently completed scheduled report job.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingScheduleHistoryLatestExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            { 
-                // Get most recently completed scheduled report job.
-                ReportRunEntry result = apiInstance.GetAnalyticsReportingScheduleHistoryLatest(scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingScheduleHistoryLatest: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportRunEntry**](ReportRunEntry.html)
-
-<a name="getanalyticsreportingschedulehistoryrunid"></a>
-
-## [**ReportRunEntry**](ReportRunEntry.html) GetAnalyticsReportingScheduleHistoryRunId (string runId, string scheduleId)
-
-
-
-A completed scheduled report job
-
-A completed scheduled report job.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingScheduleHistoryRunIdExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var runId = runId_example;  // string | Run ID
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            { 
-                // A completed scheduled report job
-                ReportRunEntry result = apiInstance.GetAnalyticsReportingScheduleHistoryRunId(runId, scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingScheduleHistoryRunId: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **runId** | **string**| Run ID |  |
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportRunEntry**](ReportRunEntry.html)
-
-<a name="getanalyticsreportingschedules"></a>
-
-## [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) GetAnalyticsReportingSchedules (int? pageNumber = null, int? pageSize = null)
-
-
-
-Get a list of scheduled report jobs
-
-Get a list of scheduled report jobs.
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingSchedulesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-
-            try
-            { 
-                // Get a list of scheduled report jobs
-                ReportScheduleEntityListing result = apiInstance.GetAnalyticsReportingSchedules(pageNumber, pageSize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingSchedules: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportScheduleEntityListing**](ReportScheduleEntityListing.html)
-
 <a name="getanalyticsreportingsettings"></a>
 
 ## [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html) GetAnalyticsReportingSettings ()
@@ -2717,7 +2209,7 @@ This endpoint does require any parameters.
 
 <a name="getanalyticsreportingsettingsuserdashboards"></a>
 
-## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
 
 
 
@@ -2755,11 +2247,12 @@ namespace Example
             var pageSize = 56;  // int? |  (optional)  (default to 50)
             var publicOnly = true;  // bool? | If true, retrieve only public dashboards (optional) 
             var favoriteOnly = true;  // bool? | If true, retrieve only favorite dashboards (optional) 
+            var name = name_example;  // string | retrieve dashboards that match with given name (optional) 
 
             try
             { 
                 // Get list of dashboards for an user
-                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly);
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2782,68 +2275,12 @@ namespace Example
 | **pageSize** | **int?**|  | [optional] [default to 50] |
 | **publicOnly** | **bool?**| If true, retrieve only public dashboards | [optional]  |
 | **favoriteOnly** | **bool?**| If true, retrieve only favorite dashboards | [optional]  |
+| **name** | **string**| retrieve dashboards that match with given name | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
 [**DashboardConfigurationListing**](DashboardConfigurationListing.html)
-
-<a name="getanalyticsreportingtimeperiods"></a>
-
-## **List&lt;string&gt;** GetAnalyticsReportingTimeperiods ()
-
-
-
-Get a list of report time periods.
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAnalyticsReportingTimeperiodsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-
-            try
-            { 
-                // Get a list of report time periods.
-                List<string> result = apiInstance.GetAnalyticsReportingTimeperiods();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingTimeperiods: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-**List<string>**
 
 <a name="getanalyticsresolutionsaggregatesjob"></a>
 
@@ -4087,8 +3524,6 @@ namespace Example
 
 Query for conversation activity observations
 
-PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:queueObservation:view
@@ -4730,8 +4165,6 @@ namespace Example
 
 
 Query for flow activity observations
-
-PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -5493,136 +4926,6 @@ namespace Example
 
 [**ReportingExportJobResponse**](ReportingExportJobResponse.html)
 
-<a name="postanalyticsreportingschedulerunreport"></a>
-
-## [**RunNowResponse**](RunNowResponse.html) PostAnalyticsReportingScheduleRunreport (string scheduleId)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Place a scheduled report immediately into the reporting queue
-
-This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostAnalyticsReportingScheduleRunreportExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-
-            try
-            { 
-                // Place a scheduled report immediately into the reporting queue
-                RunNowResponse result = apiInstance.PostAnalyticsReportingScheduleRunreport(scheduleId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsReportingScheduleRunreport: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**RunNowResponse**](RunNowResponse.html)
-
-<a name="postanalyticsreportingschedules"></a>
-
-## [**ReportSchedule**](ReportSchedule.html) PostAnalyticsReportingSchedules (ReportSchedule body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Create a scheduled report job
-
-This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostAnalyticsReportingSchedulesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var body = new ReportSchedule(); // ReportSchedule | ReportSchedule
-
-            try
-            { 
-                // Create a scheduled report job
-                ReportSchedule result = apiInstance.PostAnalyticsReportingSchedules(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsReportingSchedules: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
-
 <a name="postanalyticsreportingsettingsdashboardsbulkremove"></a>
 
 ## void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body)
@@ -5820,8 +5123,6 @@ namespace Example
 
 
 Query for user activity observations
-
-PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6148,8 +5449,6 @@ namespace Example
 
 Query for team activity observations
 
-PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:teamObservation:view
@@ -6344,8 +5643,6 @@ namespace Example
 
 
 Query for user activity observations
-
-PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6785,71 +6082,4 @@ namespace Example
 ### Return type
 
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
-
-<a name="putanalyticsreportingschedule"></a>
-
-## [**ReportSchedule**](ReportSchedule.html) PutAnalyticsReportingSchedule (string scheduleId, ReportSchedule body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Update a scheduled report job.
-
-This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutAnalyticsReportingScheduleExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new AnalyticsApi();
-            var scheduleId = scheduleId_example;  // string | Schedule ID
-            var body = new ReportSchedule(); // ReportSchedule | ReportSchedule
-
-            try
-            { 
-                // Update a scheduled report job.
-                ReportSchedule result = apiInstance.PutAnalyticsReportingSchedule(scheduleId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AnalyticsApi.PutAnalyticsReportingSchedule: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **scheduleId** | **string**| Schedule ID |  |
-| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
 

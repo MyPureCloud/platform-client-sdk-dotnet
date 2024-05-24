@@ -43,6 +43,7 @@ title: ConversationChatEventTopicChatMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
+| **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationChatEventTopicQueueMediaSettings**](ConversationChatEventTopicQueueMediaSettings.html) |  | [optional] |
 | **RoomId** | **string** |  | [optional] |

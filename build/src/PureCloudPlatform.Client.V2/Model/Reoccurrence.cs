@@ -109,6 +109,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Alteration> Alterations { get; set; }
 
 
+
+        /// <summary>
+        /// The next occurrence details for the next start and end occurrences for the recurrence
+        /// </summary>
+        /// <value>The next occurrence details for the next start and end occurrences for the recurrence</value>
+        [DataMember(Name="nextOccurrenceDetails", EmitDefaultValue=false)]
+        public NextOccurrenceDetails NextOccurrenceDetails { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -125,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Pattern: ").Append(Pattern).Append("\n");
             sb.Append("  Range: ").Append(Range).Append("\n");
             sb.Append("  Alterations: ").Append(Alterations).Append("\n");
+            sb.Append("  NextOccurrenceDetails: ").Append(NextOccurrenceDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,6 +209,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Alterations == other.Alterations ||
                     this.Alterations != null &&
                     this.Alterations.SequenceEqual(other.Alterations)
+                ) &&
+                (
+                    this.NextOccurrenceDetails == other.NextOccurrenceDetails ||
+                    this.NextOccurrenceDetails != null &&
+                    this.NextOccurrenceDetails.Equals(other.NextOccurrenceDetails)
                 );
         }
 
@@ -233,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Alterations != null)
                     hash = hash * 59 + this.Alterations.GetHashCode();
+
+                if (this.NextOccurrenceDetails != null)
+                    hash = hash * 59 + this.NextOccurrenceDetails.GetHashCode();
 
                 return hash;
             }

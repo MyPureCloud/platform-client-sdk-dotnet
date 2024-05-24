@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "201.2.0");
+            request.AddHeader("purecloud-sdk", "202.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -788,6 +788,7 @@ namespace PureCloudPlatform.Client.V2.Client
             private int retryCount;
             private long retryAfterMs;
             private Stopwatch stopwatch;
+            private long defaultMaxRetry = 180000;
 
             private readonly List<int> statusCodes = new List<int>() { 429, 502, 503, 504 };
 
@@ -828,6 +829,11 @@ namespace PureCloudPlatform.Client.V2.Client
                     //If status code is 429 then wait until retry-after time and retry. OR If status code is retryable then for the first 5 times: wait until retry-after time and retry.
                     if ((int)response.StatusCode == 429 || retryCountBeforeBackOff++ < maxRetriesBeforeBackoff)
                     {
+                        // Some APIs started sending in daily max limit breach with 429 and retry-after that can be anywhere from few minutes to hours. It is not a pausible option
+                        // to retry in such scenarios. For DotNet SDK this retry Max time is set to 3 Minutes.
+                        if (retryAfterMs > defaultMaxRetry) {
+                           return false;
+                        }
                         retryCount++;
                         return waitBeforeRetry(retryAfterMs);
                     }

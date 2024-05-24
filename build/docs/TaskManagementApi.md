@@ -64,8 +64,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a workbin
 
-DeleteTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workbin:delete
@@ -127,8 +125,6 @@ void (empty response body)
 
 
 Delete a workitem
-
-DeleteTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -192,8 +188,6 @@ void (empty response body)
 
 Delete a schema
 
-DeleteTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitemSchema:delete
@@ -256,8 +250,6 @@ void (empty response body)
 
 Delete a worktype
 
-DeleteTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:worktype:delete
@@ -319,8 +311,6 @@ void (empty response body)
 
 
 Delete a status
-
-DeleteTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -385,8 +375,6 @@ void (empty response body)
 
 
 Get a workbin
-
-GetTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -660,8 +648,6 @@ namespace Example
 
 Get a workitem
 
-GetTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitem:view
@@ -797,8 +783,6 @@ namespace Example
 
 
 Get all wrapup codes added for the given user for a workitem.
-
-GetTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1011,8 +995,6 @@ namespace Example
 
 Get all wrapup codes added for all users for a workitem.
 
-GetTaskmanagementWorkitemWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:wrapup:view
@@ -1084,8 +1066,6 @@ namespace Example
 
 Get the workitem query job associated with the job id.
 
-GetTaskmanagementWorkitemsQueryJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * workitems:queryJob:view
@@ -1148,8 +1128,6 @@ namespace Example
 
 
 Get results from for workitem query job 
-
-GetTaskmanagementWorkitemsQueryJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1214,8 +1192,6 @@ namespace Example
 
 Get a schema
 
-GetTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitemSchema:view
@@ -1278,8 +1254,6 @@ namespace Example
 
 
 Get a specific version of a schema
-
-GetTaskmanagementWorkitemsSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1346,8 +1320,6 @@ namespace Example
 
 Get all versions of a schema
 
-GetTaskmanagementWorkitemsSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitemSchema:view
@@ -1411,8 +1383,6 @@ namespace Example
 
 Get a list of schemas.
 
-GetTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitemSchema:view
@@ -1470,8 +1440,6 @@ This endpoint does require any parameters.
 
 
 Get a worktype
-
-GetTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1609,8 +1577,6 @@ namespace Example
 
 Get a status
 
-GetTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:status:view
@@ -1675,8 +1641,6 @@ namespace Example
 
 
 Get list of statuses for this worktype.
-
-GetTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1879,8 +1843,6 @@ namespace Example
 
 Update the attributes of a workbin
 
-PatchTaskmanagementWorkbin is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workbin:edit
@@ -1945,8 +1907,6 @@ namespace Example
 
 
 Update the attributes of a workitem
-
-PatchTaskmanagementWorkitem is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2014,8 +1974,6 @@ namespace Example
 
 Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.
 
-PatchTaskmanagementWorkitemAssignment is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitem:pull
@@ -2080,8 +2038,6 @@ void (empty response body)
 
 
 Add/Remove a wrapup code for a given user in a workitem.
-
-PatchTaskmanagementWorkitemUserWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2150,8 +2106,6 @@ namespace Example
 
 Add/Remove a wrapup code for the current user in a workitem.
 
-PatchTaskmanagementWorkitemUsersMeWrapups is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:wrapupSelf:edit
@@ -2217,8 +2171,6 @@ namespace Example
 
 Update the attributes of a worktype
 
-PatchTaskmanagementWorktype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * workitems:worktype:edit
@@ -2283,8 +2235,6 @@ namespace Example
 
 
 Update the attributes of a status
-
-PatchTaskmanagementWorktypeStatus is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2353,8 +2303,6 @@ namespace Example
 
 Create a workbin
 
-PostTaskmanagementWorkbins is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workbin:add
@@ -2417,8 +2365,6 @@ namespace Example
 
 
 Query for workbins
-
-PostTaskmanagementWorkbinsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2483,8 +2429,6 @@ namespace Example
 
 Cancel the assignment process for a workitem that is currently queued for assignment through ACD.
 
-PostTaskmanagementWorkitemAcdCancel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitem:cancelRouting
@@ -2548,8 +2492,6 @@ namespace Example
 
 Disconnect the assignee of the workitem
 
-PostTaskmanagementWorkitemDisconnect is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitem:disconnect
@@ -2612,8 +2554,6 @@ namespace Example
 
 
 Terminate a workitem
-
-PostTaskmanagementWorkitemTerminate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2679,8 +2619,6 @@ namespace Example
 
 
 Create a workitem
-
-PostTaskmanagementWorkitems is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2812,8 +2750,6 @@ namespace Example
 
 Create a workitem query job
 
-PostTaskmanagementWorkitemsQueryJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:queryJob:add
@@ -2877,8 +2813,6 @@ namespace Example
 
 Create a schema
 
-PostTaskmanagementWorkitemsSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:workitemSchema:add
@@ -2941,8 +2875,6 @@ namespace Example
 
 
 Add a status to a worktype
-
-PostTaskmanagementWorktypeStatuses is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3009,8 +2941,6 @@ namespace Example
 
 Create a worktype
 
-PostTaskmanagementWorktypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * workitems:worktype:add
@@ -3074,8 +3004,6 @@ namespace Example
 
 Query for worktypes
 
-PostTaskmanagementWorktypesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * workitems:worktype:view
@@ -3138,8 +3066,6 @@ namespace Example
 
 
 Update a schema
-
-PutTaskmanagementWorkitemsSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

@@ -480,7 +480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -501,7 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
@@ -512,7 +512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -533,7 +533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
@@ -2190,7 +2190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -2211,7 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
@@ -2222,7 +2222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -2243,7 +2243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
@@ -7130,7 +7130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Queries Evaluations and returns a paged list 
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7151,7 +7151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
@@ -7164,7 +7164,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Queries Evaluations and returns a paged list 
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7185,7 +7185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
@@ -7291,7 +7291,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Queries Evaluations and returns a paged list 
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7312,7 +7312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
@@ -7326,7 +7326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Queries Evaluations and returns a paged list 
-        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -7347,7 +7347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
-        /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
+        /// <param name="expandAnswerTotalScores">get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)</param>
         /// <param name="maximum">the maximum number of results to return (optional)</param>
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>

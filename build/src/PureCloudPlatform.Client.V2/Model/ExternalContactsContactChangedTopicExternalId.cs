@@ -13,46 +13,38 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// RunNowResponse
+    /// ExternalContactsContactChangedTopicExternalId
     /// </summary>
     [DataContract]
-    public partial class RunNowResponse :  IEquatable<RunNowResponse>
+    public partial class ExternalContactsContactChangedTopicExternalId :  IEquatable<ExternalContactsContactChangedTopicExternalId>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RunNowResponse" /> class.
+        /// Initializes a new instance of the <see cref="ExternalContactsContactChangedTopicExternalId" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        public RunNowResponse(string Name = null)
+        /// <param name="ExternalSource">ExternalSource.</param>
+        /// <param name="Value">Value.</param>
+        public ExternalContactsContactChangedTopicExternalId(ExternalContactsContactChangedTopicExternalSource ExternalSource = null, string Value = null)
         {
-            this.Name = Name;
+            this.ExternalSource = ExternalSource;
+            this.Value = Value;
             
         }
         
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets ExternalSource
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        [DataMember(Name="externalSource", EmitDefaultValue=false)]
+        public ExternalContactsContactChangedTopicExternalSource ExternalSource { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        [DataMember(Name="value", EmitDefaultValue=false)]
+        public string Value { get; set; }
 
 
         /// <summary>
@@ -62,11 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RunNowResponse {\n");
+            sb.Append("class ExternalContactsContactChangedTopicExternalId {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  ExternalSource: ").Append(ExternalSource).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RunNowResponse);
+            return this.Equals(obj as ExternalContactsContactChangedTopicExternalId);
         }
 
         /// <summary>
-        /// Returns true if RunNowResponse instances are equal
+        /// Returns true if ExternalContactsContactChangedTopicExternalId instances are equal
         /// </summary>
-        /// <param name="other">Instance of RunNowResponse to be compared</param>
+        /// <param name="other">Instance of ExternalContactsContactChangedTopicExternalId to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RunNowResponse other)
+        public bool Equals(ExternalContactsContactChangedTopicExternalId other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -108,19 +99,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.ExternalSource == other.ExternalSource ||
+                    this.ExternalSource != null &&
+                    this.ExternalSource.Equals(other.ExternalSource)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.Value == other.Value ||
+                    this.Value != null &&
+                    this.Value.Equals(other.Value)
                 );
         }
 
@@ -135,14 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.ExternalSource != null)
+                    hash = hash * 59 + this.ExternalSource.GetHashCode();
 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.Value != null)
+                    hash = hash * 59 + this.Value.GetHashCode();
 
                 return hash;
             }

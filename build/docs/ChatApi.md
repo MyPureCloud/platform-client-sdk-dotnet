@@ -24,11 +24,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetChatsUserMessage**](ChatApi.html#getchatsusermessage) | **Get** /api/v2/chats/users/{userId}/messages/{messageIds} | Get messages by id(s) from a 1on1 |
 | [**GetChatsUserMessages**](ChatApi.html#getchatsusermessages) | **Get** /api/v2/chats/users/{userId}/messages | Get 1on1 History between a user |
 | [**GetChatsUserSettings**](ChatApi.html#getchatsusersettings) | **Get** /api/v2/chats/users/{userId}/settings | Get a user&#39;s chat settings |
+| [**GetChatsUsersMeSettings**](ChatApi.html#getchatsusersmesettings) | **Get** /api/v2/chats/users/me/settings | Get a user&#39;s chat settings |
 | [**PatchChatsRoom**](ChatApi.html#patchchatsroom) | **Patch** /api/v2/chats/rooms/{roomJid} | Set properties for a room |
 | [**PatchChatsRoomMessage**](ChatApi.html#patchchatsroommessage) | **Patch** /api/v2/chats/rooms/{roomJid}/messages/{messageId} | Edit a message in a room |
 | [**PatchChatsSettings**](ChatApi.html#patchchatssettings) | **Patch** /api/v2/chats/settings | Patch Chat Settings. |
 | [**PatchChatsUserMessage**](ChatApi.html#patchchatsusermessage) | **Patch** /api/v2/chats/users/{userId}/messages/{messageId} | Edit a message to a user |
 | [**PatchChatsUserSettings**](ChatApi.html#patchchatsusersettings) | **Patch** /api/v2/chats/users/{userId}/settings | Update a user&#39;s chat settings |
+| [**PatchChatsUsersMeSettings**](ChatApi.html#patchchatsusersmesettings) | **Patch** /api/v2/chats/users/me/settings | Update a user&#39;s chat settings |
 | [**PostChatsRoomMessages**](ChatApi.html#postchatsroommessages) | **Post** /api/v2/chats/rooms/{roomJid}/messages | Send a message to a room |
 | [**PostChatsRoomMessagesPins**](ChatApi.html#postchatsroommessagespins) | **Post** /api/v2/chats/rooms/{roomJid}/messages/pins | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**PostChatsRoomParticipant**](ChatApi.html#postchatsroomparticipant) | **Post** /api/v2/chats/rooms/{roomJid}/participants/{userId} | Join a room |
@@ -1156,6 +1158,65 @@ namespace Example
 
 [**ChatUserSettings**](ChatUserSettings.html)
 
+<a name="getchatsusersmesettings"></a>
+
+## [**ChatUserSettings**](ChatUserSettings.html) GetChatsUsersMeSettings ()
+
+
+
+Get a user's chat settings
+
+GetChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetChatsUsersMeSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+
+            try
+            { 
+                // Get a user's chat settings
+                ChatUserSettings result = apiInstance.GetChatsUsersMeSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.GetChatsUsersMeSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings.html)
+
 <a name="patchchatsroom"></a>
 
 ## void PatchChatsRoom (string roomJid, RoomUpdateRequest body)
@@ -1481,6 +1542,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
+| **body** | [**ChatUserSettings**](ChatUserSettings.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings.html)
+
+<a name="patchchatsusersmesettings"></a>
+
+## [**ChatUserSettings**](ChatUserSettings.html) PatchChatsUsersMeSettings (ChatUserSettings body)
+
+
+
+Update a user's chat settings
+
+PatchChatsUsersMeSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchChatsUsersMeSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var body = new ChatUserSettings(); // ChatUserSettings | 
+
+            try
+            { 
+                // Update a user's chat settings
+                ChatUserSettings result = apiInstance.PatchChatsUsersMeSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.PatchChatsUsersMeSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
 | **body** | [**ChatUserSettings**](ChatUserSettings.html)|  |  |
 {: class="table table-striped"}
 

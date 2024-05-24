@@ -76,12 +76,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="GroupByTime">A time unit to group the metrics by. There is a limit on the number of groupBy properties which can be specified..</param>
         /// <param name="GroupByAttributes">A list of attributes to group the metrics by. There is a limit on the number of groupBy properties which can be specified..</param>
         /// <param name="Metrics">A list of metrics to calculate within the chart by (aka the y axis) (required).</param>
-        public JourneyViewChart(string Name = null, GroupByTimeEnum? GroupByTime = null, List<JourneyViewChartGroupByAttribute> GroupByAttributes = null, List<JourneyViewChartMetric> Metrics = null)
+        /// <param name="DisplayAttributes">Optional display attributes for rendering the chart.</param>
+        /// <param name="GroupByMax">A maximum on the number of values being grouped by.</param>
+        public JourneyViewChart(string Name = null, GroupByTimeEnum? GroupByTime = null, List<JourneyViewChartGroupByAttribute> GroupByAttributes = null, List<JourneyViewChartMetric> Metrics = null, JourneyViewChartDisplayAttributes DisplayAttributes = null, int? GroupByMax = null)
         {
             this.Name = Name;
             this.GroupByTime = GroupByTime;
             this.GroupByAttributes = GroupByAttributes;
             this.Metrics = Metrics;
+            this.DisplayAttributes = DisplayAttributes;
+            this.GroupByMax = GroupByMax;
             
         }
         
@@ -134,6 +138,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Optional display attributes for rendering the chart
+        /// </summary>
+        /// <value>Optional display attributes for rendering the chart</value>
+        [DataMember(Name="displayAttributes", EmitDefaultValue=false)]
+        public JourneyViewChartDisplayAttributes DisplayAttributes { get; set; }
+
+
+
+        /// <summary>
+        /// A maximum on the number of values being grouped by
+        /// </summary>
+        /// <value>A maximum on the number of values being grouped by</value>
+        [DataMember(Name="groupByMax", EmitDefaultValue=false)]
+        public int? GroupByMax { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -156,6 +178,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  GroupByTime: ").Append(GroupByTime).Append("\n");
             sb.Append("  GroupByAttributes: ").Append(GroupByAttributes).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            sb.Append("  DisplayAttributes: ").Append(DisplayAttributes).Append("\n");
+            sb.Append("  GroupByMax: ").Append(GroupByMax).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -228,6 +252,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metrics.SequenceEqual(other.Metrics)
                 ) &&
                 (
+                    this.DisplayAttributes == other.DisplayAttributes ||
+                    this.DisplayAttributes != null &&
+                    this.DisplayAttributes.Equals(other.DisplayAttributes)
+                ) &&
+                (
+                    this.GroupByMax == other.GroupByMax ||
+                    this.GroupByMax != null &&
+                    this.GroupByMax.Equals(other.GroupByMax)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -262,6 +296,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
+
+                if (this.DisplayAttributes != null)
+                    hash = hash * 59 + this.DisplayAttributes.GetHashCode();
+
+                if (this.GroupByMax != null)
+                    hash = hash * 59 + this.GroupByMax.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

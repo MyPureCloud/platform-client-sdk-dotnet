@@ -745,7 +745,55 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueueWorkitemPerformanceDetailView for "QUEUE_WORKITEM_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "QUEUE_WORKITEM_PERFORMANCE_DETAIL_VIEW")]
-            QueueWorkitemPerformanceDetailView
+            QueueWorkitemPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum EmailAgentPerformanceSummaryView for "EMAIL_AGENT_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EMAIL_AGENT_PERFORMANCE_SUMMARY_VIEW")]
+            EmailAgentPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum EmailAgentPerformanceDetailView for "EMAIL_AGENT_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EMAIL_AGENT_PERFORMANCE_DETAIL_VIEW")]
+            EmailAgentPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum MessagingAgentPerformanceSummaryView for "MESSAGING_AGENT_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "MESSAGING_AGENT_PERFORMANCE_SUMMARY_VIEW")]
+            MessagingAgentPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum MessagingAgentPerformanceDetailView for "MESSAGING_AGENT_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "MESSAGING_AGENT_PERFORMANCE_DETAIL_VIEW")]
+            MessagingAgentPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum EmailQueuePerformanceSummaryView for "EMAIL_QUEUE_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EMAIL_QUEUE_PERFORMANCE_SUMMARY_VIEW")]
+            EmailQueuePerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum EmailQueuePerformanceDetailView for "EMAIL_QUEUE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "EMAIL_QUEUE_PERFORMANCE_DETAIL_VIEW")]
+            EmailQueuePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum MessagingQueuePerformanceSummaryView for "MESSAGING_QUEUE_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "MESSAGING_QUEUE_PERFORMANCE_SUMMARY_VIEW")]
+            MessagingQueuePerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum MessagingQueuePerformanceDetailView for "MESSAGING_QUEUE_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "MESSAGING_QUEUE_PERFORMANCE_DETAIL_VIEW")]
+            MessagingQueuePerformanceDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

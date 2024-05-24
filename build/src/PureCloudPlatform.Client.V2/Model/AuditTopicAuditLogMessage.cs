@@ -300,7 +300,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Journeyanalytics for "JourneyAnalytics"
             /// </summary>
             [EnumMember(Value = "JourneyAnalytics")]
-            Journeyanalytics
+            Journeyanalytics,
+            
+            /// <summary>
+            /// Enum Nerservice for "NerService"
+            /// </summary>
+            [EnumMember(Value = "NerService")]
+            Nerservice
         }
         /// <summary>
         /// Gets or Sets Action
@@ -689,6 +695,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Append,
             
             /// <summary>
+            /// Enum Contactsupdated for "ContactsUpdated"
+            /// </summary>
+            [EnumMember(Value = "ContactsUpdated")]
+            Contactsupdated,
+            
+            /// <summary>
+            /// Enum Contactsdeleted for "ContactsDeleted"
+            /// </summary>
+            [EnumMember(Value = "ContactsDeleted")]
+            Contactsdeleted,
+            
+            /// <summary>
             /// Enum Restore for "Restore"
             /// </summary>
             [EnumMember(Value = "Restore")]
@@ -961,6 +979,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Rolesettings,
             
             /// <summary>
+            /// Enum Policy for "Policy"
+            /// </summary>
+            [EnumMember(Value = "Policy")]
+            Policy,
+            
+            /// <summary>
             /// Enum Voicemailuserpolicy for "VoicemailUserPolicy"
             /// </summary>
             [EnumMember(Value = "VoicemailUserPolicy")]
@@ -1109,12 +1133,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OrphanedRecording")]
             Orphanedrecording,
-            
-            /// <summary>
-            /// Enum Policy for "Policy"
-            /// </summary>
-            [EnumMember(Value = "Policy")]
-            Policy,
             
             /// <summary>
             /// Enum Recordingannotation for "RecordingAnnotation"
@@ -1325,6 +1343,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ActivityCode")]
             Activitycode,
+            
+            /// <summary>
+            /// Enum Activityplan for "ActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlan")]
+            Activityplan,
+            
+            /// <summary>
+            /// Enum Activityplanoccurrence for "ActivityPlanOccurrence"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlanOccurrence")]
+            Activityplanoccurrence,
             
             /// <summary>
             /// Enum Adherenceexplanation for "AdherenceExplanation"
@@ -2125,28 +2155,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Softsuspension,
             
             /// <summary>
-            /// Enum Activityplan for "ActivityPlan"
-            /// </summary>
-            [EnumMember(Value = "ActivityPlan")]
-            Activityplan,
-            
-            /// <summary>
-            /// Enum Activityplanoccurrence for "ActivityPlanOccurrence"
-            /// </summary>
-            [EnumMember(Value = "ActivityPlanOccurrence")]
-            Activityplanoccurrence,
-            
-            /// <summary>
             /// Enum Journeyview for "JourneyView"
             /// </summary>
             [EnumMember(Value = "JourneyView")]
             Journeyview,
             
             /// <summary>
-            /// Enum Alternativeshifttrade for "AlternativeShiftTrade"
+            /// Enum Customentity for "CustomEntity"
             /// </summary>
-            [EnumMember(Value = "AlternativeShiftTrade")]
-            Alternativeshifttrade
+            [EnumMember(Value = "CustomEntity")]
+            Customentity
         }
         /// <summary>
         /// Gets or Sets ServiceName

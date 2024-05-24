@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Failed,
             
             /// <summary>
+            /// Enum Published for "Published"
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published,
+            
+            /// <summary>
             /// Enum Queued for "Queued"
             /// </summary>
             [EnumMember(Value = "Queued")]

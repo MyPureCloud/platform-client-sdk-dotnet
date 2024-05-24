@@ -41,30 +41,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAnalyticsConversationsDetailsJobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Delete a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns></returns>
-        
-        void DeleteAnalyticsReportingSchedule (string scheduleId);
-
-        /// <summary>
-        /// Delete a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        ApiResponse<Object> DeleteAnalyticsReportingScheduleWithHttpInfo (string scheduleId);
-
-        /// <summary>
         /// Delete/cancel an async request
         /// </summary>
         /// <remarks>
@@ -143,10 +119,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionAsyncAggregateQueryResponse> GetAnalyticsActionsAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
-        /// Get Reporting Turns.
+        /// Get Reporting Turns (division aware).
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -159,13 +135,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
         
-        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+        ReportingTurnsResponse GetAnalyticsBotflowDivisionsReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
-        /// Get Reporting Turns.
+        /// Get Reporting Turns (division aware).
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -178,6 +154,44 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
         
+        ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowDivisionsReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>ReportingTurnsResponse</returns>
+        [Obsolete]
+        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>ApiResponse of ReportingTurnsResponse</returns>
+        [Obsolete]
         ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
@@ -841,210 +855,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ReportingExportMetadataJobListing> GetAnalyticsReportingExportsMetadataWithHttpInfo ();
 
         /// <summary>
-        /// Get list of reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ReportMetaDataEntityListing</returns>
-        
-        ReportMetaDataEntityListing GetAnalyticsReportingMetadata (int? pageNumber = null, int? pageSize = null, string locale = null);
-
-        /// <summary>
-        /// Get list of reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ApiResponse of ReportMetaDataEntityListing</returns>
-        
-        ApiResponse<ReportMetaDataEntityListing> GetAnalyticsReportingMetadataWithHttpInfo (int? pageNumber = null, int? pageSize = null, string locale = null);
-
-        /// <summary>
-        /// Get a reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ReportMetaData</returns>
-        
-        ReportMetaData GetAnalyticsReportingReportIdMetadata (string reportId, string locale = null);
-
-        /// <summary>
-        /// Get a reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ApiResponse of ReportMetaData</returns>
-        
-        ApiResponse<ReportMetaData> GetAnalyticsReportingReportIdMetadataWithHttpInfo (string reportId, string locale = null);
-
-        /// <summary>
-        /// Get a list of report formats
-        /// </summary>
-        /// <remarks>
-        /// Get a list of report formats.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;string&gt;</returns>
-        
-        List<string> GetAnalyticsReportingReportformats ();
-
-        /// <summary>
-        /// Get a list of report formats
-        /// </summary>
-        /// <remarks>
-        /// Get a list of report formats.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        
-        ApiResponse<List<string>> GetAnalyticsReportingReportformatsWithHttpInfo ();
-
-        /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportSchedule</returns>
-        
-        ReportSchedule GetAnalyticsReportingSchedule (string scheduleId);
-
-        /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        
-        ApiResponse<ReportSchedule> GetAnalyticsReportingScheduleWithHttpInfo (string scheduleId);
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ReportRunEntryEntityDomainListing</returns>
-        
-        ReportRunEntryEntityDomainListing GetAnalyticsReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
-        
-        ApiResponse<ReportRunEntryEntityDomainListing> GetAnalyticsReportingScheduleHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        
-        ReportRunEntry GetAnalyticsReportingScheduleHistoryLatest (string scheduleId);
-
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        
-        ApiResponse<ReportRunEntry> GetAnalyticsReportingScheduleHistoryLatestWithHttpInfo (string scheduleId);
-
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        
-        ReportRunEntry GetAnalyticsReportingScheduleHistoryRunId (string runId, string scheduleId);
-
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        
-        ApiResponse<ReportRunEntry> GetAnalyticsReportingScheduleHistoryRunIdWithHttpInfo (string runId, string scheduleId);
-
-        /// <summary>
-        /// Get a list of scheduled report jobs
-        /// </summary>
-        /// <remarks>
-        /// Get a list of scheduled report jobs.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ReportScheduleEntityListing</returns>
-        
-        ReportScheduleEntityListing GetAnalyticsReportingSchedules (int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get a list of scheduled report jobs
-        /// </summary>
-        /// <remarks>
-        /// Get a list of scheduled report jobs.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ApiResponse of ReportScheduleEntityListing</returns>
-        
-        ApiResponse<ReportScheduleEntityListing> GetAnalyticsReportingSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
         /// Get AnalyticsReportingSettings for an organization
         /// </summary>
         /// <remarks>
@@ -1079,9 +889,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>DashboardConfigurationListing</returns>
         
-        DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
+        DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
 
         /// <summary>
         /// Get list of dashboards for an user
@@ -1096,31 +907,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>ApiResponse of DashboardConfigurationListing</returns>
         
-        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
-
-        /// <summary>
-        /// Get a list of report time periods.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;string&gt;</returns>
-        
-        List<string> GetAnalyticsReportingTimeperiods ();
-
-        /// <summary>
-        /// Get a list of report time periods.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        
-        ApiResponse<List<string>> GetAnalyticsReportingTimeperiodsWithHttpInfo ();
+        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
 
         /// <summary>
         /// Get status for async query for resolution aggregates
@@ -1621,7 +1411,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1636,7 +1425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1873,7 +1661,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1888,7 +1675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2169,54 +1955,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ReportingExportJobResponse> PostAnalyticsReportingExportsWithHttpInfo (ReportingExportJobRequest body);
 
         /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>RunNowResponse</returns>
-        [Obsolete]
-        RunNowResponse PostAnalyticsReportingScheduleRunreport (string scheduleId);
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of RunNowResponse</returns>
-        [Obsolete]
-        ApiResponse<RunNowResponse> PostAnalyticsReportingScheduleRunreportWithHttpInfo (string scheduleId);
-
-        /// <summary>
-        /// Create a scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ReportSchedule</returns>
-        [Obsolete]
-        ReportSchedule PostAnalyticsReportingSchedules (ReportSchedule body);
-
-        /// <summary>
-        /// Create a scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        [Obsolete]
-        ApiResponse<ReportSchedule> PostAnalyticsReportingSchedulesWithHttpInfo (ReportSchedule body);
-
-        /// <summary>
         /// Bulk remove dashboard configurations
         /// </summary>
         /// <remarks>
@@ -2295,7 +2033,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2310,7 +2047,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2427,7 +2163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2442,7 +2177,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2507,7 +2241,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2522,7 +2255,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2678,32 +2410,6 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<AnalyticsDataRetentionResponse> PutAnalyticsDataretentionSettingsWithHttpInfo (UpdateAnalyticsDataRetentionRequest body);
 
-        /// <summary>
-        /// Update a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ReportSchedule</returns>
-        [Obsolete]
-        ReportSchedule PutAnalyticsReportingSchedule (string scheduleId, ReportSchedule body);
-
-        /// <summary>
-        /// Update a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        [Obsolete]
-        ApiResponse<ReportSchedule> PutAnalyticsReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body);
-
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
@@ -2731,30 +2437,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsConversationsDetailsJobAsyncWithHttpInfo (string jobId);
-
-        /// <summary>
-        /// Delete a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of void</returns>
-        
-        System.Threading.Tasks.Task DeleteAnalyticsReportingScheduleAsync (string scheduleId);
-
-        /// <summary>
-        /// Delete a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Delete/cancel an async request
@@ -2835,10 +2517,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActionAsyncAggregateQueryResponse>> GetAnalyticsActionsAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
-        /// Get Reporting Turns.
+        /// Get Reporting Turns (division aware).
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -2851,13 +2533,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
         
-        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowDivisionsReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
-        /// Get Reporting Turns.
+        /// Get Reporting Turns (division aware).
         /// </summary>
         /// <remarks>
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -2870,6 +2552,44 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
         
+        System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowDivisionsReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>Task of ReportingTurnsResponse</returns>
+        [Obsolete]
+        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
+
+        /// <summary>
+        /// Get Reporting Turns.
+        /// </summary>
+        /// <remarks>
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
@@ -3533,210 +3253,6 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ReportingExportMetadataJobListing>> GetAnalyticsReportingExportsMetadataAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get list of reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ReportMetaDataEntityListing</returns>
-        
-        System.Threading.Tasks.Task<ReportMetaDataEntityListing> GetAnalyticsReportingMetadataAsync (int? pageNumber = null, int? pageSize = null, string locale = null);
-
-        /// <summary>
-        /// Get list of reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ApiResponse (ReportMetaDataEntityListing)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportMetaDataEntityListing>> GetAnalyticsReportingMetadataAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string locale = null);
-
-        /// <summary>
-        /// Get a reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ReportMetaData</returns>
-        
-        System.Threading.Tasks.Task<ReportMetaData> GetAnalyticsReportingReportIdMetadataAsync (string reportId, string locale = null);
-
-        /// <summary>
-        /// Get a reporting metadata.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ApiResponse (ReportMetaData)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportMetaData>> GetAnalyticsReportingReportIdMetadataAsyncWithHttpInfo (string reportId, string locale = null);
-
-        /// <summary>
-        /// Get a list of report formats
-        /// </summary>
-        /// <remarks>
-        /// Get a list of report formats.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        
-        System.Threading.Tasks.Task<List<string>> GetAnalyticsReportingReportformatsAsync ();
-
-        /// <summary>
-        /// Get a list of report formats
-        /// </summary>
-        /// <remarks>
-        /// Get a list of report formats.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAnalyticsReportingReportformatsAsyncWithHttpInfo ();
-
-        /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportSchedule</returns>
-        
-        System.Threading.Tasks.Task<ReportSchedule> GetAnalyticsReportingScheduleAsync (string scheduleId);
-
-        /// <summary>
-        /// Get a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId);
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
-        
-        System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetAnalyticsReportingScheduleHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetAnalyticsReportingScheduleHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        
-        System.Threading.Tasks.Task<ReportRunEntry> GetAnalyticsReportingScheduleHistoryLatestAsync (string scheduleId);
-
-        /// <summary>
-        /// Get most recently completed scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetAnalyticsReportingScheduleHistoryLatestAsyncWithHttpInfo (string scheduleId);
-
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        
-        System.Threading.Tasks.Task<ReportRunEntry> GetAnalyticsReportingScheduleHistoryRunIdAsync (string runId, string scheduleId);
-
-        /// <summary>
-        /// A completed scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// A completed scheduled report job.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetAnalyticsReportingScheduleHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId);
-
-        /// <summary>
-        /// Get a list of scheduled report jobs
-        /// </summary>
-        /// <remarks>
-        /// Get a list of scheduled report jobs.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ReportScheduleEntityListing</returns>
-        
-        System.Threading.Tasks.Task<ReportScheduleEntityListing> GetAnalyticsReportingSchedulesAsync (int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Get a list of scheduled report jobs
-        /// </summary>
-        /// <remarks>
-        /// Get a list of scheduled report jobs.
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (ReportScheduleEntityListing)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<ReportScheduleEntityListing>> GetAnalyticsReportingSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
         /// Get AnalyticsReportingSettings for an organization
         /// </summary>
         /// <remarks>
@@ -3771,9 +3287,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of DashboardConfigurationListing</returns>
         
-        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
+        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
 
         /// <summary>
         /// Get list of dashboards for an user
@@ -3788,31 +3305,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null);
-
-        /// <summary>
-        /// Get a list of report time periods.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        
-        System.Threading.Tasks.Task<List<string>> GetAnalyticsReportingTimeperiodsAsync ();
-
-        /// <summary>
-        /// Get a list of report time periods.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAnalyticsReportingTimeperiodsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null);
 
         /// <summary>
         /// Get status for async query for resolution aggregates
@@ -4313,7 +3809,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -4328,7 +3823,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -4565,7 +4059,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -4580,7 +4073,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -4861,54 +4353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ReportingExportJobResponse>> PostAnalyticsReportingExportsAsyncWithHttpInfo (ReportingExportJobRequest body);
 
         /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of RunNowResponse</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<RunNowResponse> PostAnalyticsReportingScheduleRunreportAsync (string scheduleId);
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostAnalyticsReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId);
-
-        /// <summary>
-        /// Create a scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ReportSchedule</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ReportSchedule> PostAnalyticsReportingSchedulesAsync (ReportSchedule body);
-
-        /// <summary>
-        /// Create a scheduled report job
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostAnalyticsReportingSchedulesAsyncWithHttpInfo (ReportSchedule body);
-
-        /// <summary>
         /// Bulk remove dashboard configurations
         /// </summary>
         /// <remarks>
@@ -4987,7 +4431,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5002,7 +4445,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5119,7 +4561,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5134,7 +4575,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5199,7 +4639,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5214,7 +4653,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5369,32 +4807,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AnalyticsDataRetentionResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AnalyticsDataRetentionResponse>> PutAnalyticsDataretentionSettingsAsyncWithHttpInfo (UpdateAnalyticsDataRetentionRequest body);
-
-        /// <summary>
-        /// Update a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ReportSchedule</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ReportSchedule> PutAnalyticsReportingScheduleAsync (string scheduleId, ReportSchedule body);
-
-        /// <summary>
-        /// Update a scheduled report job.
-        /// </summary>
-        /// <remarks>
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body);
 
         #endregion Asynchronous Operations
 
@@ -5687,215 +5099,6 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsConversationsDetailsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Delete a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns></returns>
-        
-        public void DeleteAnalyticsReportingSchedule (string scheduleId)
-        {
-             DeleteAnalyticsReportingScheduleWithHttpInfo(scheduleId);
-        }
-
-        /// <summary>
-        /// Delete a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        
-        public ApiResponse<Object> DeleteAnalyticsReportingScheduleWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteAnalyticsReportingSchedule");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarHeaders,
-                null,
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Delete a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of void</returns>
-        
-        public async System.Threading.Tasks.Task DeleteAnalyticsReportingScheduleAsync (string scheduleId)
-        {
-             await DeleteAnalyticsReportingScheduleAsyncWithHttpInfo(scheduleId);
-
-        }
-
-        /// <summary>
-        /// Delete a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteAnalyticsReportingSchedule");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -6552,8 +5755,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Get Reporting Turns (division aware). 
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6566,15 +5769,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
         
-        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        public ReportingTurnsResponse GetAnalyticsBotflowDivisionsReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         {
-             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
+             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowDivisionsReportingturnsWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Get Reporting Turns (division aware). 
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6587,6 +5790,259 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
         
+        public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowDivisionsReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        { 
+            // verify the required parameter 'botFlowId' is set
+            if (botFlowId == null)
+                throw new ApiException(400, "Missing required parameter 'botFlowId' when calling AnalyticsApi->GetAnalyticsBotflowDivisionsReportingturns");
+
+            var localVarPath = "/api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botFlowId != null) localVarPathParams.Add("botFlowId", this.Configuration.ApiClient.ParameterToString(botFlowId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
+            if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (askActionResults != null) localVarQueryParams.Add(new Tuple<string, string>("askActionResults", this.Configuration.ApiClient.ParameterToString(askActionResults)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowDivisionsReportingturns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowDivisionsReportingturns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportingTurnsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReportingTurnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingTurnsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Reporting Turns (division aware). 
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>Task of ReportingTurnsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowDivisionsReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        {
+             ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowDivisionsReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Reporting Turns (division aware). 
+        /// Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowDivisionsReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        { 
+            // verify the required parameter 'botFlowId' is set
+            if (botFlowId == null)
+                throw new ApiException(400, "Missing required parameter 'botFlowId' when calling AnalyticsApi->GetAnalyticsBotflowDivisionsReportingturns");
+            
+
+            var localVarPath = "/api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (botFlowId != null) localVarPathParams.Add("botFlowId", this.Configuration.ApiClient.ParameterToString(botFlowId));
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
+            if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (askActionResults != null) localVarQueryParams.Add(new Tuple<string, string>("askActionResults", this.Configuration.ApiClient.ParameterToString(askActionResults)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowDivisionsReportingturns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsBotflowDivisionsReportingturns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReportingTurnsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReportingTurnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportingTurnsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Reporting Turns. 
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>ReportingTurnsResponse</returns>
+        [Obsolete]
+        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
+        {
+             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Reporting Turns. 
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="botFlowId">ID of the bot flow.</param>
+        /// <param name="after">The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Max number of entities to return. Maximum of 250 (optional, default to "50")</param>
+        /// <param name="interval">Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
+        /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
+        /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)</param>
+        /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
+        /// <returns>ApiResponse of ReportingTurnsResponse</returns>
+        [Obsolete]
         public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         { 
             // verify the required parameter 'botFlowId' is set
@@ -6678,7 +6134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6690,7 +6146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         {
              ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults);
@@ -6700,7 +6156,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get Reporting Turns. 
-        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+        /// Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -6712,7 +6168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
         /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         { 
             // verify the required parameter 'botFlowId' is set
@@ -12190,1716 +11646,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get list of reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ReportMetaDataEntityListing</returns>
-        
-        public ReportMetaDataEntityListing GetAnalyticsReportingMetadata (int? pageNumber = null, int? pageSize = null, string locale = null)
-        {
-             ApiResponse<ReportMetaDataEntityListing> localVarResponse = GetAnalyticsReportingMetadataWithHttpInfo(pageNumber, pageSize, locale);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get list of reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ApiResponse of ReportMetaDataEntityListing</returns>
-        
-        public ApiResponse< ReportMetaDataEntityListing > GetAnalyticsReportingMetadataWithHttpInfo (int? pageNumber = null, int? pageSize = null, string locale = null)
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/metadata";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportMetaDataEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportMetaDataEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaDataEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get list of reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ReportMetaDataEntityListing</returns>
-        
-        public async System.Threading.Tasks.Task<ReportMetaDataEntityListing> GetAnalyticsReportingMetadataAsync (int? pageNumber = null, int? pageSize = null, string locale = null)
-        {
-             ApiResponse<ReportMetaDataEntityListing> localVarResponse = await GetAnalyticsReportingMetadataAsyncWithHttpInfo(pageNumber, pageSize, locale);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get list of reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ApiResponse (ReportMetaDataEntityListing)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportMetaDataEntityListing>> GetAnalyticsReportingMetadataAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string locale = null)
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/metadata";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportMetaDataEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportMetaDataEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaDataEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get a reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ReportMetaData</returns>
-        
-        public ReportMetaData GetAnalyticsReportingReportIdMetadata (string reportId, string locale = null)
-        {
-             ApiResponse<ReportMetaData> localVarResponse = GetAnalyticsReportingReportIdMetadataWithHttpInfo(reportId, locale);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>ApiResponse of ReportMetaData</returns>
-        
-        public ApiResponse< ReportMetaData > GetAnalyticsReportingReportIdMetadataWithHttpInfo (string reportId, string locale = null)
-        { 
-            // verify the required parameter 'reportId' is set
-            if (reportId == null)
-                throw new ApiException(400, "Missing required parameter 'reportId' when calling AnalyticsApi->GetAnalyticsReportingReportIdMetadata");
-
-            var localVarPath = "/api/v2/analytics/reporting/{reportId}/metadata";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId));
-
-            // Query params
-            if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportIdMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportIdMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportMetaData>(localVarStatusCode,
-                localVarHeaders,
-                (ReportMetaData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaData)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get a reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ReportMetaData</returns>
-        
-        public async System.Threading.Tasks.Task<ReportMetaData> GetAnalyticsReportingReportIdMetadataAsync (string reportId, string locale = null)
-        {
-             ApiResponse<ReportMetaData> localVarResponse = await GetAnalyticsReportingReportIdMetadataAsyncWithHttpInfo(reportId, locale);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a reporting metadata. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reportId">Report ID</param>
-        /// <param name="locale">Locale (optional)</param>
-        /// <returns>Task of ApiResponse (ReportMetaData)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportMetaData>> GetAnalyticsReportingReportIdMetadataAsyncWithHttpInfo (string reportId, string locale = null)
-        { 
-            // verify the required parameter 'reportId' is set
-            if (reportId == null)
-                throw new ApiException(400, "Missing required parameter 'reportId' when calling AnalyticsApi->GetAnalyticsReportingReportIdMetadata");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/{reportId}/metadata";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId));
-
-            // Query params
-            if (locale != null) localVarQueryParams.Add(new Tuple<string, string>("locale", this.Configuration.ApiClient.ParameterToString(locale)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportIdMetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportIdMetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportMetaData>(localVarStatusCode,
-                localVarHeaders,
-                (ReportMetaData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportMetaData)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get a list of report formats 
-        /// Get a list of report formats.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;string&gt;</returns>
-        
-        public List<string> GetAnalyticsReportingReportformats ()
-        {
-             ApiResponse<List<string>> localVarResponse = GetAnalyticsReportingReportformatsWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a list of report formats 
-        /// Get a list of report formats.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        
-        public ApiResponse< List<string> > GetAnalyticsReportingReportformatsWithHttpInfo ()
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/reportformats";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportformats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportformats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get a list of report formats 
-        /// Get a list of report formats.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        
-        public async System.Threading.Tasks.Task<List<string>> GetAnalyticsReportingReportformatsAsync ()
-        {
-             ApiResponse<List<string>> localVarResponse = await GetAnalyticsReportingReportformatsAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a list of report formats 
-        /// Get a list of report formats.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAnalyticsReportingReportformatsAsyncWithHttpInfo ()
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/reportformats";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportformats: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingReportformats: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportSchedule</returns>
-        
-        public ReportSchedule GetAnalyticsReportingSchedule (string scheduleId)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = GetAnalyticsReportingScheduleWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        
-        public ApiResponse< ReportSchedule > GetAnalyticsReportingScheduleWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingSchedule");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportSchedule</returns>
-        
-        public async System.Threading.Tasks.Task<ReportSchedule> GetAnalyticsReportingScheduleAsync (string scheduleId)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = await GetAnalyticsReportingScheduleAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingSchedule");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ReportRunEntryEntityDomainListing</returns>
-        
-        public ReportRunEntryEntityDomainListing GetAnalyticsReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<ReportRunEntryEntityDomainListing> localVarResponse = GetAnalyticsReportingScheduleHistoryWithHttpInfo(scheduleId, pageNumber, pageSize);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
-        
-        public ApiResponse< ReportRunEntryEntityDomainListing > GetAnalyticsReportingScheduleHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistory");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntryEntityDomainListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntryEntityDomainListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntryEntityDomainListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
-        
-        public async System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetAnalyticsReportingScheduleHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<ReportRunEntryEntityDomainListing> localVarResponse = await GetAnalyticsReportingScheduleHistoryAsyncWithHttpInfo(scheduleId, pageNumber, pageSize);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get list of completed scheduled report jobs. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
-        /// <param name="pageSize"> (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetAnalyticsReportingScheduleHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistory");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntryEntityDomainListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntryEntityDomainListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntryEntityDomainListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        
-        public ReportRunEntry GetAnalyticsReportingScheduleHistoryLatest (string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = GetAnalyticsReportingScheduleHistoryLatestWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        
-        public ApiResponse< ReportRunEntry > GetAnalyticsReportingScheduleHistoryLatestWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistoryLatest");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        
-        public async System.Threading.Tasks.Task<ReportRunEntry> GetAnalyticsReportingScheduleHistoryLatestAsync (string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = await GetAnalyticsReportingScheduleHistoryLatestAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get most recently completed scheduled report job. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetAnalyticsReportingScheduleHistoryLatestAsyncWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistoryLatest");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryLatest: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryLatest: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// A completed scheduled report job 
-        /// A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ReportRunEntry</returns>
-        
-        public ReportRunEntry GetAnalyticsReportingScheduleHistoryRunId (string runId, string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = GetAnalyticsReportingScheduleHistoryRunIdWithHttpInfo(runId, scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// A completed scheduled report job 
-        /// A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of ReportRunEntry</returns>
-        
-        public ApiResponse< ReportRunEntry > GetAnalyticsReportingScheduleHistoryRunIdWithHttpInfo (string runId, string scheduleId)
-        { 
-            // verify the required parameter 'runId' is set
-            if (runId == null)
-                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistoryRunId");
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistoryRunId");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryRunId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryRunId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// A completed scheduled report job 
-        /// A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ReportRunEntry</returns>
-        
-        public async System.Threading.Tasks.Task<ReportRunEntry> GetAnalyticsReportingScheduleHistoryRunIdAsync (string runId, string scheduleId)
-        {
-             ApiResponse<ReportRunEntry> localVarResponse = await GetAnalyticsReportingScheduleHistoryRunIdAsyncWithHttpInfo(runId, scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// A completed scheduled report job 
-        /// A completed scheduled report job.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="runId">Run ID</param>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetAnalyticsReportingScheduleHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId)
-        { 
-            // verify the required parameter 'runId' is set
-            if (runId == null)
-                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistoryRunId");
-            
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetAnalyticsReportingScheduleHistoryRunId");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (runId != null) localVarPathParams.Add("runId", this.Configuration.ApiClient.ParameterToString(runId));
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryRunId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingScheduleHistoryRunId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportRunEntry>(localVarStatusCode,
-                localVarHeaders,
-                (ReportRunEntry) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportRunEntry)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get a list of scheduled report jobs 
-        /// Get a list of scheduled report jobs.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ReportScheduleEntityListing</returns>
-        
-        public ReportScheduleEntityListing GetAnalyticsReportingSchedules (int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<ReportScheduleEntityListing> localVarResponse = GetAnalyticsReportingSchedulesWithHttpInfo(pageNumber, pageSize);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a list of scheduled report jobs 
-        /// Get a list of scheduled report jobs.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>ApiResponse of ReportScheduleEntityListing</returns>
-        
-        public ApiResponse< ReportScheduleEntityListing > GetAnalyticsReportingSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportScheduleEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportScheduleEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get a list of scheduled report jobs 
-        /// Get a list of scheduled report jobs.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ReportScheduleEntityListing</returns>
-        
-        public async System.Threading.Tasks.Task<ReportScheduleEntityListing> GetAnalyticsReportingSchedulesAsync (int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<ReportScheduleEntityListing> localVarResponse = await GetAnalyticsReportingSchedulesAsyncWithHttpInfo(pageNumber, pageSize);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a list of scheduled report jobs 
-        /// Get a list of scheduled report jobs.
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <returns>Task of ApiResponse (ReportScheduleEntityListing)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<ReportScheduleEntityListing>> GetAnalyticsReportingSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportScheduleEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (ReportScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportScheduleEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
         /// Get AnalyticsReportingSettings for an organization 
         /// 
         /// </summary>
@@ -14108,11 +11854,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>DashboardConfigurationListing</returns>
         
-        public DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        public DashboardConfigurationListing GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
         {
-             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly);
+             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name);
              return localVarResponse.Data;
         }
 
@@ -14127,9 +11874,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>ApiResponse of DashboardConfigurationListing</returns>
         
-        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsUserDashboardsWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -14173,6 +11921,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (publicOnly != null) localVarQueryParams.Add(new Tuple<string, string>("publicOnly", this.Configuration.ApiClient.ParameterToString(publicOnly)));
             if (favoriteOnly != null) localVarQueryParams.Add(new Tuple<string, string>("favoriteOnly", this.Configuration.ApiClient.ParameterToString(favoriteOnly)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -14227,11 +11976,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of DashboardConfigurationListing</returns>
         
-        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsUserDashboardsAsync (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
         {
-             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly);
+             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name);
              return localVarResponse.Data;
 
         }
@@ -14247,9 +11997,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize"> (optional, default to 50)</param>
         /// <param name="publicOnly">If true, retrieve only public dashboards (optional)</param>
         /// <param name="favoriteOnly">If true, retrieve only favorite dashboards (optional)</param>
+        /// <param name="name">retrieve dashboards that match with given name (optional)</param>
         /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsUserDashboardsAsyncWithHttpInfo (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -14294,6 +12045,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (publicOnly != null) localVarQueryParams.Add(new Tuple<string, string>("publicOnly", this.Configuration.ApiClient.ParameterToString(publicOnly)));
             if (favoriteOnly != null) localVarQueryParams.Add(new Tuple<string, string>("favoriteOnly", this.Configuration.ApiClient.ParameterToString(favoriteOnly)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -14332,204 +12084,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
                 localVarHeaders,
                 (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get a list of report time periods. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;string&gt;</returns>
-        
-        public List<string> GetAnalyticsReportingTimeperiods ()
-        {
-             ApiResponse<List<string>> localVarResponse = GetAnalyticsReportingTimeperiodsWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a list of report time periods. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        
-        public ApiResponse< List<string> > GetAnalyticsReportingTimeperiodsWithHttpInfo ()
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/timeperiods";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingTimeperiods: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingTimeperiods: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get a list of report time periods. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        
-        public async System.Threading.Tasks.Task<List<string>> GetAnalyticsReportingTimeperiodsAsync ()
-        {
-             ApiResponse<List<string>> localVarResponse = await GetAnalyticsReportingTimeperiodsAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a list of report time periods. 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAnalyticsReportingTimeperiodsAsyncWithHttpInfo ()
-        { 
-
-            var localVarPath = "/api/v2/analytics/reporting/timeperiods";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingTimeperiods: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingTimeperiods: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<List<string>>(localVarStatusCode,
-                localVarHeaders,
-                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18698,7 +16252,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for conversation activity observations 
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -18715,7 +16268,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for conversation activity observations 
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -18815,7 +16367,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for conversation activity observations 
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -18833,7 +16384,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for conversation activity observations 
         /// 
-        /// PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -20936,7 +18486,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for flow activity observations 
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -20953,7 +18502,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for flow activity observations 
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -21053,7 +18601,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for flow activity observations 
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -21071,7 +18618,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for flow activity observations 
         /// 
-        /// PostAnalyticsFlowsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -23612,438 +21158,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>RunNowResponse</returns>
-        [Obsolete]
-        public RunNowResponse PostAnalyticsReportingScheduleRunreport (string scheduleId)
-        {
-             ApiResponse<RunNowResponse> localVarResponse = PostAnalyticsReportingScheduleRunreportWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of RunNowResponse</returns>
-        [Obsolete]
-        public ApiResponse< RunNowResponse > PostAnalyticsReportingScheduleRunreportWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostAnalyticsReportingScheduleRunreport");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingScheduleRunreport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingScheduleRunreport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<RunNowResponse>(localVarStatusCode,
-                localVarHeaders,
-                (RunNowResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RunNowResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of RunNowResponse</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<RunNowResponse> PostAnalyticsReportingScheduleRunreportAsync (string scheduleId)
-        {
-             ApiResponse<RunNowResponse> localVarResponse = await PostAnalyticsReportingScheduleRunreportAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Place a scheduled report immediately into the reporting queue 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostAnalyticsReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostAnalyticsReportingScheduleRunreport");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingScheduleRunreport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingScheduleRunreport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<RunNowResponse>(localVarStatusCode,
-                localVarHeaders,
-                (RunNowResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RunNowResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Create a scheduled report job 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ReportSchedule</returns>
-        [Obsolete]
-        public ReportSchedule PostAnalyticsReportingSchedules (ReportSchedule body)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = PostAnalyticsReportingSchedulesWithHttpInfo(body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a scheduled report job 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        [Obsolete]
-        public ApiResponse< ReportSchedule > PostAnalyticsReportingSchedulesWithHttpInfo (ReportSchedule body)
-        { 
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingSchedules");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Create a scheduled report job 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ReportSchedule</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ReportSchedule> PostAnalyticsReportingSchedulesAsync (ReportSchedule body)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = await PostAnalyticsReportingSchedulesAsyncWithHttpInfo(body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create a scheduled report job 
-        /// This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PostAnalyticsReportingSchedulesAsyncWithHttpInfo (ReportSchedule body)
-        { 
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsReportingSchedules");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSchedules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsReportingSchedules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
         /// Bulk remove dashboard configurations 
         /// 
         /// </summary>
@@ -24711,7 +21825,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24728,7 +21841,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24828,7 +21940,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -24846,7 +21957,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsRoutingActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -25844,7 +22954,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for team activity observations 
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -25861,7 +22970,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for team activity observations 
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -25961,7 +23069,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for team activity observations 
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -25979,7 +23086,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for team activity observations 
         /// 
-        /// PostAnalyticsTeamsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -26527,7 +23633,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -26544,7 +23649,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -26644,7 +23748,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -26662,7 +23765,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query for user activity observations 
         /// 
-        /// PostAnalyticsUsersActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -28085,240 +25187,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AnalyticsDataRetentionResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AnalyticsDataRetentionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsDataRetentionResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Update a scheduled report job. 
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ReportSchedule</returns>
-        [Obsolete]
-        public ReportSchedule PutAnalyticsReportingSchedule (string scheduleId, ReportSchedule body)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = PutAnalyticsReportingScheduleWithHttpInfo(scheduleId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Update a scheduled report job. 
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>ApiResponse of ReportSchedule</returns>
-        [Obsolete]
-        public ApiResponse< ReportSchedule > PutAnalyticsReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutAnalyticsReportingSchedule");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutAnalyticsReportingSchedule");
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Update a scheduled report job. 
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ReportSchedule</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ReportSchedule> PutAnalyticsReportingScheduleAsync (string scheduleId, ReportSchedule body)
-        {
-             ApiResponse<ReportSchedule> localVarResponse = await PutAnalyticsReportingScheduleAsyncWithHttpInfo(scheduleId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Update a scheduled report job. 
-        /// This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body">ReportSchedule</param>
-        /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body)
-        { 
-            // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutAnalyticsReportingSchedule");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutAnalyticsReportingSchedule");
-            
-
-            var localVarPath = "/api/v2/analytics/reporting/schedules/{scheduleId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsReportingSchedule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ReportSchedule>(localVarStatusCode,
-                localVarHeaders,
-                (ReportSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportSchedule)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

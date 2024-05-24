@@ -13,48 +13,38 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Structured template button object.
+    /// FreeTrialNamespace
     /// </summary>
     [DataContract]
-    public partial class RecordingButtonComponent :  IEquatable<RecordingButtonComponent>
+    public partial class FreeTrialNamespace :  IEquatable<FreeTrialNamespace>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RecordingButtonComponent" /> class.
+        /// Initializes a new instance of the <see cref="FreeTrialNamespace" /> class.
         /// </summary>
-        /// <param name="Title">Title.</param>
-        /// <param name="Actions">Actions.</param>
-        /// <param name="IsSelected">IsSelected.</param>
-        public RecordingButtonComponent(string Title = null, RecordingContentActions Actions = null, bool? IsSelected = null)
+        /// <param name="FriendlyName">FriendlyName.</param>
+        /// <param name="Limits">Limits.</param>
+        public FreeTrialNamespace(string FriendlyName = null, List<FreeTrialLimit> Limits = null)
         {
-            this.Title = Title;
-            this.Actions = Actions;
-            this.IsSelected = IsSelected;
+            this.FriendlyName = FriendlyName;
+            this.Limits = Limits;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Title
+        /// Gets or Sets FriendlyName
         /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
+        [DataMember(Name="friendlyName", EmitDefaultValue=false)]
+        public string FriendlyName { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Actions
+        /// Gets or Sets Limits
         /// </summary>
-        [DataMember(Name="actions", EmitDefaultValue=false)]
-        public RecordingContentActions Actions { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets IsSelected
-        /// </summary>
-        [DataMember(Name="isSelected", EmitDefaultValue=false)]
-        public bool? IsSelected { get; set; }
+        [DataMember(Name="limits", EmitDefaultValue=false)]
+        public List<FreeTrialLimit> Limits { get; set; }
 
 
         /// <summary>
@@ -64,11 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RecordingButtonComponent {\n");
+            sb.Append("class FreeTrialNamespace {\n");
 
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Actions: ").Append(Actions).Append("\n");
-            sb.Append("  IsSelected: ").Append(IsSelected).Append("\n");
+            sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
+            sb.Append("  Limits: ").Append(Limits).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RecordingButtonComponent);
+            return this.Equals(obj as FreeTrialNamespace);
         }
 
         /// <summary>
-        /// Returns true if RecordingButtonComponent instances are equal
+        /// Returns true if FreeTrialNamespace instances are equal
         /// </summary>
-        /// <param name="other">Instance of RecordingButtonComponent to be compared</param>
+        /// <param name="other">Instance of FreeTrialNamespace to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RecordingButtonComponent other)
+        public bool Equals(FreeTrialNamespace other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,19 +99,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Title == other.Title ||
-                    this.Title != null &&
-                    this.Title.Equals(other.Title)
+                    this.FriendlyName == other.FriendlyName ||
+                    this.FriendlyName != null &&
+                    this.FriendlyName.Equals(other.FriendlyName)
                 ) &&
                 (
-                    this.Actions == other.Actions ||
-                    this.Actions != null &&
-                    this.Actions.Equals(other.Actions)
-                ) &&
-                (
-                    this.IsSelected == other.IsSelected ||
-                    this.IsSelected != null &&
-                    this.IsSelected.Equals(other.IsSelected)
+                    this.Limits == other.Limits ||
+                    this.Limits != null &&
+                    this.Limits.SequenceEqual(other.Limits)
                 );
         }
 
@@ -137,14 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Title != null)
-                    hash = hash * 59 + this.Title.GetHashCode();
+                if (this.FriendlyName != null)
+                    hash = hash * 59 + this.FriendlyName.GetHashCode();
 
-                if (this.Actions != null)
-                    hash = hash * 59 + this.Actions.GetHashCode();
-
-                if (this.IsSelected != null)
-                    hash = hash * 59 + this.IsSelected.GetHashCode();
+                if (this.Limits != null)
+                    hash = hash * 59 + this.Limits.GetHashCode();
 
                 return hash;
             }

@@ -43,6 +43,7 @@ title: ConversationCobrowseEventTopicCobrowseMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
+| **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**ConversationCobrowseEventTopicQueueMediaSettings**](ConversationCobrowseEventTopicQueueMediaSettings.html) |  | [optional] |
 | **CobrowseSessionId** | **string** |  | [optional] |

@@ -43,6 +43,7 @@ title: QueueConversationEmailEventTopicEmailMediaParticipant
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
 | **ResumeTime** | **DateTime?** |  | [optional] |
+| **ParkTime** | **DateTime?** |  | [optional] |
 | **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **QueueMediaSettings** | [**QueueConversationEmailEventTopicQueueMediaSettings**](QueueConversationEmailEventTopicQueueMediaSettings.html) |  | [optional] |
 | **Subject** | **string** |  | [optional] |

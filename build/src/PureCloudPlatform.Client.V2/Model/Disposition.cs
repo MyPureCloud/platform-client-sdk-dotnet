@@ -30,11 +30,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name of the disposition. Either a platform predefined value, or the name of the disposition in the disposition table.. (required).</param>
         /// <param name="Analyzer">The final media analyzer result that triggered the disposition result, if any..</param>
         /// <param name="DispositionParameters">Contains various parameters related to call analysis..</param>
-        public Disposition(string Name = null, string Analyzer = null, DispositionParameters DispositionParameters = null)
+        /// <param name="DetectedSpeechStart">Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DetectedSpeechEnd">Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public Disposition(string Name = null, string Analyzer = null, DispositionParameters DispositionParameters = null, DateTime? DetectedSpeechStart = null, DateTime? DetectedSpeechEnd = null)
         {
             this.Name = Name;
             this.Analyzer = Analyzer;
             this.DispositionParameters = DispositionParameters;
+            this.DetectedSpeechStart = DetectedSpeechStart;
+            this.DetectedSpeechEnd = DetectedSpeechEnd;
             
         }
         
@@ -66,6 +70,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public DispositionParameters DispositionParameters { get; set; }
 
 
+
+        /// <summary>
+        /// Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="detectedSpeechStart", EmitDefaultValue=false)]
+        public DateTime? DetectedSpeechStart { get; set; }
+
+
+
+        /// <summary>
+        /// Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="detectedSpeechEnd", EmitDefaultValue=false)]
+        public DateTime? DetectedSpeechEnd { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,6 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Analyzer: ").Append(Analyzer).Append("\n");
             sb.Append("  DispositionParameters: ").Append(DispositionParameters).Append("\n");
+            sb.Append("  DetectedSpeechStart: ").Append(DetectedSpeechStart).Append("\n");
+            sb.Append("  DetectedSpeechEnd: ").Append(DetectedSpeechEnd).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +156,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DispositionParameters == other.DispositionParameters ||
                     this.DispositionParameters != null &&
                     this.DispositionParameters.Equals(other.DispositionParameters)
+                ) &&
+                (
+                    this.DetectedSpeechStart == other.DetectedSpeechStart ||
+                    this.DetectedSpeechStart != null &&
+                    this.DetectedSpeechStart.Equals(other.DetectedSpeechStart)
+                ) &&
+                (
+                    this.DetectedSpeechEnd == other.DetectedSpeechEnd ||
+                    this.DetectedSpeechEnd != null &&
+                    this.DetectedSpeechEnd.Equals(other.DetectedSpeechEnd)
                 );
         }
 
@@ -154,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DispositionParameters != null)
                     hash = hash * 59 + this.DispositionParameters.GetHashCode();
+
+                if (this.DetectedSpeechStart != null)
+                    hash = hash * 59 + this.DetectedSpeechStart.GetHashCode();
+
+                if (this.DetectedSpeechEnd != null)
+                    hash = hash * 59 + this.DetectedSpeechEnd.GetHashCode();
 
                 return hash;
             }

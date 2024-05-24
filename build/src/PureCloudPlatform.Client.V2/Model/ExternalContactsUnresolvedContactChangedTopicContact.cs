@@ -82,11 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
         /// <param name="InstagramId">InstagramId.</param>
+        /// <param name="ExternalIds">ExternalIds.</param>
         /// <param name="Schema">Schema.</param>
         /// <param name="CustomFields">CustomFields.</param>
         /// <param name="CreateDate">CreateDate.</param>
         /// <param name="ModifyDate">ModifyDate.</param>
-        public ExternalContactsUnresolvedContactChangedTopicContact(string Id = null, ExternalContactsUnresolvedContactChangedTopicDivision Division = null, ExternalContactsUnresolvedContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, ExternalContactsUnresolvedContactChangedTopicLineId LineId = null, ExternalContactsUnresolvedContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsUnresolvedContactChangedTopicFacebookId FacebookId = null, ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId = null, ExternalContactsUnresolvedContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
+        public ExternalContactsUnresolvedContactChangedTopicContact(string Id = null, ExternalContactsUnresolvedContactChangedTopicDivision Division = null, ExternalContactsUnresolvedContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, ExternalContactsUnresolvedContactChangedTopicLineId LineId = null, ExternalContactsUnresolvedContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsUnresolvedContactChangedTopicFacebookId FacebookId = null, ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId = null, List<ExternalContactsUnresolvedContactChangedTopicExternalId> ExternalIds = null, ExternalContactsUnresolvedContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -112,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
             this.InstagramId = InstagramId;
+            this.ExternalIds = ExternalIds;
             this.Schema = Schema;
             this.CustomFields = CustomFields;
             this.CreateDate = CreateDate;
@@ -308,6 +310,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ExternalIds
+        /// </summary>
+        [DataMember(Name="externalIds", EmitDefaultValue=false)]
+        public List<ExternalContactsUnresolvedContactChangedTopicExternalId> ExternalIds { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Schema
         /// </summary>
         [DataMember(Name="schema", EmitDefaultValue=false)]
@@ -371,6 +381,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
             sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
+            sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
@@ -536,6 +547,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InstagramId.Equals(other.InstagramId)
                 ) &&
                 (
+                    this.ExternalIds == other.ExternalIds ||
+                    this.ExternalIds != null &&
+                    this.ExternalIds.SequenceEqual(other.ExternalIds)
+                ) &&
+                (
                     this.Schema == other.Schema ||
                     this.Schema != null &&
                     this.Schema.Equals(other.Schema)
@@ -639,6 +655,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InstagramId != null)
                     hash = hash * 59 + this.InstagramId.GetHashCode();
+
+                if (this.ExternalIds != null)
+                    hash = hash * 59 + this.ExternalIds.GetHashCode();
 
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();

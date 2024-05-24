@@ -73,7 +73,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Setcampaigndialingmode for "setCampaignDialingMode"
             /// </summary>
             [EnumMember(Value = "setCampaignDialingMode")]
-            Setcampaigndialingmode
+            Setcampaigndialingmode,
+            
+            /// <summary>
+            /// Enum Setcampaignabandonrate for "setCampaignAbandonRate"
+            /// </summary>
+            [EnumMember(Value = "setCampaignAbandonRate")]
+            Setcampaignabandonrate,
+            
+            /// <summary>
+            /// Enum Setcampaignnumberoflines for "setCampaignNumberOfLines"
+            /// </summary>
+            [EnumMember(Value = "setCampaignNumberOfLines")]
+            Setcampaignnumberoflines,
+            
+            /// <summary>
+            /// Enum Setcampaignweight for "setCampaignWeight"
+            /// </summary>
+            [EnumMember(Value = "setCampaignWeight")]
+            Setcampaignweight,
+            
+            /// <summary>
+            /// Enum Setcampaignmaxcallsperagent for "setCampaignMaxCallsPerAgent"
+            /// </summary>
+            [EnumMember(Value = "setCampaignMaxCallsPerAgent")]
+            Setcampaignmaxcallsperagent,
+            
+            /// <summary>
+            /// Enum Changecampaignqueue for "changeCampaignQueue"
+            /// </summary>
+            [EnumMember(Value = "changeCampaignQueue")]
+            Changecampaignqueue
         }
         /// <summary>
         /// The action to take on the campaignRuleActionEntities.

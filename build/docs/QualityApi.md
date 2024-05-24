@@ -1165,7 +1165,7 @@ namespace Example
 
 Queries Evaluations and returns a paged list
 
-Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch.
+Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date. NOTE: The count for total and pageCount might not be accurate when querying for a large number of evaluations. nextUri, if present, will indicate that there are more evaluations to fetch. The evaluation entities contained in the response might only contain a subset of all the properties listed below. It is often because a given property's value has not yet been populated or is not applicable in the current state of the evaluation. It might also be because the missing property in the response was not requested by the user.
 
 Requires ANY permissions: 
 
@@ -1211,7 +1211,7 @@ namespace Example
             var evaluationState = new List<string>(); // List<string> |  (optional) 
             var isReleased = true;  // bool? | the evaluation has been released (optional) 
             var agentHasRead = true;  // bool? | agent has the evaluation (optional) 
-            var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations (optional) 
+            var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional) 
             var maximum = 56;  // int? | the maximum number of results to return (optional) 
             var sortOrder = sortOrder_example;  // string | NOTE: Does not work when conversationId is supplied. (optional) 
 
@@ -1253,7 +1253,7 @@ namespace Example
 | **evaluationState** | [**List<string>**](string.html)|  | [optional]  |
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |
-| **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations | [optional]  |
+| **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. | [optional]  |
 | **maximum** | **int?**| the maximum number of results to return | [optional]  |
 | **sortOrder** | **string**| NOTE: Does not work when conversationId is supplied. | [optional]  |
 {: class="table table-striped"}

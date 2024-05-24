@@ -25,17 +25,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WorkPlan">The work plan associated with this agent, if applicable.</param>
         /// <param name="WorkPlanRotation">The work plan rotation associated with this agent, if applicable.</param>
         /// <param name="AcceptDirectShiftTrades">Whether the agent accepts direct shift trade requests.</param>
+        /// <param name="WorkPlanOverrides">The work plan overrides associated with this agent. Populate with expand=workPlanOverrides.</param>
         /// <param name="Queues">List of queues to which this agent is capable of handling.</param>
         /// <param name="Languages">The list of languages this agent is capable of handling.</param>
         /// <param name="Skills">The list of skills this agent is capable of handling.</param>
         /// <param name="Schedulable">Whether the agent can be included in schedule generation.</param>
         /// <param name="Metadata">Metadata for this agent.</param>
-        public WfmAgent(UserReference User = null, WorkPlanReference WorkPlan = null, WorkPlanRotationReference WorkPlanRotation = null, bool? AcceptDirectShiftTrades = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, bool? Schedulable = null, WfmVersionedEntityMetadata Metadata = null)
+        public WfmAgent(UserReference User = null, WorkPlanReference WorkPlan = null, WorkPlanRotationReference WorkPlanRotation = null, bool? AcceptDirectShiftTrades = null, List<WorkPlanOverride> WorkPlanOverrides = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, bool? Schedulable = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.User = User;
             this.WorkPlan = WorkPlan;
             this.WorkPlanRotation = WorkPlanRotation;
             this.AcceptDirectShiftTrades = AcceptDirectShiftTrades;
+            this.WorkPlanOverrides = WorkPlanOverrides;
             this.Queues = Queues;
             this.Languages = Languages;
             this.Skills = Skills;
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether the agent accepts direct shift trade requests</value>
         [DataMember(Name="acceptDirectShiftTrades", EmitDefaultValue=false)]
         public bool? AcceptDirectShiftTrades { get; set; }
+
+
+
+        /// <summary>
+        /// The work plan overrides associated with this agent. Populate with expand=workPlanOverrides
+        /// </summary>
+        /// <value>The work plan overrides associated with this agent. Populate with expand=workPlanOverrides</value>
+        [DataMember(Name="workPlanOverrides", EmitDefaultValue=false)]
+        public List<WorkPlanOverride> WorkPlanOverrides { get; set; }
 
 
 
@@ -158,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WorkPlan: ").Append(WorkPlan).Append("\n");
             sb.Append("  WorkPlanRotation: ").Append(WorkPlanRotation).Append("\n");
             sb.Append("  AcceptDirectShiftTrades: ").Append(AcceptDirectShiftTrades).Append("\n");
+            sb.Append("  WorkPlanOverrides: ").Append(WorkPlanOverrides).Append("\n");
             sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
@@ -230,6 +242,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AcceptDirectShiftTrades.Equals(other.AcceptDirectShiftTrades)
                 ) &&
                 (
+                    this.WorkPlanOverrides == other.WorkPlanOverrides ||
+                    this.WorkPlanOverrides != null &&
+                    this.WorkPlanOverrides.SequenceEqual(other.WorkPlanOverrides)
+                ) &&
+                (
                     this.Queues == other.Queues ||
                     this.Queues != null &&
                     this.Queues.SequenceEqual(other.Queues)
@@ -286,6 +303,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AcceptDirectShiftTrades != null)
                     hash = hash * 59 + this.AcceptDirectShiftTrades.GetHashCode();
+
+                if (this.WorkPlanOverrides != null)
+                    hash = hash * 59 + this.WorkPlanOverrides.GetHashCode();
 
                 if (this.Queues != null)
                     hash = hash * 59 + this.Queues.GetHashCode();

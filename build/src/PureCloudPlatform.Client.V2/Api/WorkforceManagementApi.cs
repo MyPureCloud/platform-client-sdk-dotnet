@@ -1800,9 +1800,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>WfmAgent</returns>
         
-        WfmAgent GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null);
+        WfmAgent GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null);
 
         /// <summary>
         /// Get data for agent in the management unit
@@ -1814,9 +1815,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
         
-        ApiResponse<WfmAgent> GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null);
+        ApiResponse<WfmAgent> GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all the shift trades for a given agent
@@ -2283,9 +2285,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
         
-        WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null);
+        WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null);
 
         /// <summary>
         /// Get work plans
@@ -2296,9 +2299,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
         
-        ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null);
+        ApiResponse<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null);
 
         /// <summary>
         /// Get management units
@@ -6932,9 +6936,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of WfmAgent</returns>
         
-        System.Threading.Tasks.Task<WfmAgent> GetWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, bool? excludeCapabilities = null);
+        System.Threading.Tasks.Task<WfmAgent> GetWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null);
 
         /// <summary>
         /// Get data for agent in the management unit
@@ -6946,9 +6951,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null);
+        System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all the shift trades for a given agent
@@ -7415,9 +7421,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
         
-        System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null);
+        System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null, List<string> exclude = null);
 
         /// <summary>
         /// Get work plans
@@ -7428,9 +7435,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null);
 
         /// <summary>
         /// Get management units
@@ -25435,11 +25443,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>WfmAgent</returns>
         
-        public WfmAgent GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null)
+        public WfmAgent GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null)
         {
-             ApiResponse<WfmAgent> localVarResponse = GetWorkforcemanagementManagementunitAgentWithHttpInfo(managementUnitId, agentId, excludeCapabilities);
+             ApiResponse<WfmAgent> localVarResponse = GetWorkforcemanagementManagementunitAgentWithHttpInfo(managementUnitId, agentId, excludeCapabilities, expand);
              return localVarResponse.Data;
         }
 
@@ -25451,9 +25460,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of WfmAgent</returns>
         
-        public ApiResponse< WfmAgent > GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null)
+        public ApiResponse< WfmAgent > GetWorkforcemanagementManagementunitAgentWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -25497,6 +25507,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (excludeCapabilities != null) localVarQueryParams.Add(new Tuple<string, string>("excludeCapabilities", this.Configuration.ApiClient.ParameterToString(excludeCapabilities)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -25548,11 +25559,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of WfmAgent</returns>
         
-        public async System.Threading.Tasks.Task<WfmAgent> GetWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, bool? excludeCapabilities = null)
+        public async System.Threading.Tasks.Task<WfmAgent> GetWorkforcemanagementManagementunitAgentAsync (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null)
         {
-             ApiResponse<WfmAgent> localVarResponse = await GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo(managementUnitId, agentId, excludeCapabilities);
+             ApiResponse<WfmAgent> localVarResponse = await GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo(managementUnitId, agentId, excludeCapabilities, expand);
              return localVarResponse.Data;
 
         }
@@ -25565,9 +25577,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="agentId">The agent id</param>
         /// <param name="excludeCapabilities">Excludes all capabilities of the agent such as queues, languages, and skills (optional)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (WfmAgent)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WfmAgent>> GetWorkforcemanagementManagementunitAgentAsyncWithHttpInfo (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -25613,6 +25626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (excludeCapabilities != null) localVarQueryParams.Add(new Tuple<string, string>("excludeCapabilities", this.Configuration.ApiClient.ParameterToString(excludeCapabilities)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -29493,11 +29507,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>WorkPlanListResponse</returns>
         
-        public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null)
+        public WorkPlanListResponse GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null)
         {
-             ApiResponse<WorkPlanListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, expand);
+             ApiResponse<WorkPlanListResponse> localVarResponse = GetWorkforcemanagementManagementunitWorkplansWithHttpInfo(managementUnitId, expand, exclude);
              return localVarResponse.Data;
         }
 
@@ -29508,9 +29523,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>ApiResponse of WorkPlanListResponse</returns>
         
-        public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null)
+        public ApiResponse< WorkPlanListResponse > GetWorkforcemanagementManagementunitWorkplansWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -29550,6 +29566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (exclude != null) exclude.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("exclude", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -29600,11 +29617,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>Task of WorkPlanListResponse</returns>
         
-        public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<WorkPlanListResponse> GetWorkforcemanagementManagementunitWorkplansAsync (string managementUnitId, List<string> expand = null, List<string> exclude = null)
         {
-             ApiResponse<WorkPlanListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, expand);
+             ApiResponse<WorkPlanListResponse> localVarResponse = await GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo(managementUnitId, expand, exclude);
              return localVarResponse.Data;
 
         }
@@ -29616,9 +29634,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="managementUnitId">The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="expand">Include to access additional data on the work plans (optional)</param>
+        /// <param name="exclude">Exclude specific data on the work plans from the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkPlanListResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkPlanListResponse>> GetWorkforcemanagementManagementunitWorkplansAsyncWithHttpInfo (string managementUnitId, List<string> expand = null, List<string> exclude = null)
         { 
             // verify the required parameter 'managementUnitId' is set
             if (managementUnitId == null)
@@ -29659,6 +29678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (exclude != null) exclude.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("exclude", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

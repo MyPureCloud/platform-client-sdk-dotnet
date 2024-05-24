@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Recipient">Recipient.</param>
         /// <param name="NotificationTypes">NotificationTypes.</param>
         /// <param name="Locale">Locale.</param>
-        public V2MobiusAlertsTopicAlertNotification(string Recipient = null, List<NotificationTypesEnum> NotificationTypes = null, string Locale = null)
+        public V2MobiusAlertsTopicAlertNotification(V2MobiusAlertsTopicAlertNotificationRecipient Recipient = null, List<NotificationTypesEnum> NotificationTypes = null, string Locale = null)
         {
             this.Recipient = Recipient;
             this.NotificationTypes = NotificationTypes;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Recipient
         /// </summary>
         [DataMember(Name="recipient", EmitDefaultValue=false)]
-        public string Recipient { get; set; }
+        public V2MobiusAlertsTopicAlertNotificationRecipient Recipient { get; set; }
 
 
 

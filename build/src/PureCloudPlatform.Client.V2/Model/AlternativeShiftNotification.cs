@@ -37,13 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Daily for "Daily"
             /// </summary>
             [EnumMember(Value = "Daily")]
-            Daily,
-            
-            /// <summary>
-            /// Enum Weekly for "Weekly"
-            /// </summary>
-            [EnumMember(Value = "Weekly")]
-            Weekly
+            Daily
         }
         /// <summary>
         /// The new state of the alternative shift trade, null if there was no change

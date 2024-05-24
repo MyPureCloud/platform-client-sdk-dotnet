@@ -225,7 +225,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="JourneyContext">JourneyContext.</param>
-        public CustomerStartDetailEventTopicCustomerStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string ExternalOrganizationId = null, string ExternalContactId = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, CustomerStartDetailEventTopicJourneyContext JourneyContext = null)
+        /// <param name="DivisionId">DivisionId.</param>
+        public CustomerStartDetailEventTopicCustomerStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string ExternalOrganizationId = null, string ExternalContactId = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, CustomerStartDetailEventTopicJourneyContext JourneyContext = null, string DivisionId = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -248,6 +249,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
             this.JourneyContext = JourneyContext;
+            this.DivisionId = DivisionId;
             
         }
         
@@ -402,6 +404,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public CustomerStartDetailEventTopicJourneyContext JourneyContext { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets DivisionId
+        /// </summary>
+        [DataMember(Name="divisionId", EmitDefaultValue=false)]
+        public string DivisionId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -432,6 +442,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
+            sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -576,6 +587,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.JourneyContext == other.JourneyContext ||
                     this.JourneyContext != null &&
                     this.JourneyContext.Equals(other.JourneyContext)
+                ) &&
+                (
+                    this.DivisionId == other.DivisionId ||
+                    this.DivisionId != null &&
+                    this.DivisionId.Equals(other.DivisionId)
                 );
         }
 
@@ -652,6 +668,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.JourneyContext != null)
                     hash = hash * 59 + this.JourneyContext.GetHashCode();
+
+                if (this.DivisionId != null)
+                    hash = hash * 59 + this.DivisionId.GetHashCode();
 
                 return hash;
             }

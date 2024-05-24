@@ -49,13 +49,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Enabled">Whether or not cobrowse is enabled.</param>
         /// <param name="AllowAgentControl">Whether the viewer should have option to request control.</param>
+        /// <param name="AllowAgentNavigation">Whether the viewer should have option to request navigation.</param>
         /// <param name="MaskSelectors">Mask patterns that will apply to pages being shared.</param>
         /// <param name="Channels">Cobrowse channels for web messenger.</param>
         /// <param name="ReadonlySelectors">Readonly patterns that will apply to pages being shared.</param>
-        public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, List<string> MaskSelectors = null, List<ChannelsEnum> Channels = null, List<string> ReadonlySelectors = null)
+        public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, bool? AllowAgentNavigation = null, List<string> MaskSelectors = null, List<ChannelsEnum> Channels = null, List<string> ReadonlySelectors = null)
         {
             this.Enabled = Enabled;
             this.AllowAgentControl = AllowAgentControl;
+            this.AllowAgentNavigation = AllowAgentNavigation;
             this.MaskSelectors = MaskSelectors;
             this.Channels = Channels;
             this.ReadonlySelectors = ReadonlySelectors;
@@ -79,6 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether the viewer should have option to request control</value>
         [DataMember(Name="allowAgentControl", EmitDefaultValue=false)]
         public bool? AllowAgentControl { get; set; }
+
+
+
+        /// <summary>
+        /// Whether the viewer should have option to request navigation
+        /// </summary>
+        /// <value>Whether the viewer should have option to request navigation</value>
+        [DataMember(Name="allowAgentNavigation", EmitDefaultValue=false)]
+        public bool? AllowAgentNavigation { get; set; }
 
 
 
@@ -119,6 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  AllowAgentControl: ").Append(AllowAgentControl).Append("\n");
+            sb.Append("  AllowAgentNavigation: ").Append(AllowAgentNavigation).Append("\n");
             sb.Append("  MaskSelectors: ").Append(MaskSelectors).Append("\n");
             sb.Append("  Channels: ").Append(Channels).Append("\n");
             sb.Append("  ReadonlySelectors: ").Append(ReadonlySelectors).Append("\n");
@@ -173,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowAgentControl.Equals(other.AllowAgentControl)
                 ) &&
                 (
+                    this.AllowAgentNavigation == other.AllowAgentNavigation ||
+                    this.AllowAgentNavigation != null &&
+                    this.AllowAgentNavigation.Equals(other.AllowAgentNavigation)
+                ) &&
+                (
                     this.MaskSelectors == other.MaskSelectors ||
                     this.MaskSelectors != null &&
                     this.MaskSelectors.SequenceEqual(other.MaskSelectors)
@@ -205,6 +222,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowAgentControl != null)
                     hash = hash * 59 + this.AllowAgentControl.GetHashCode();
+
+                if (this.AllowAgentNavigation != null)
+                    hash = hash * 59 + this.AllowAgentNavigation.GetHashCode();
 
                 if (this.MaskSelectors != null)
                     hash = hash * 59 + this.MaskSelectors.GetHashCode();

@@ -249,6 +249,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Endpoint,
             
             /// <summary>
+            /// Enum Endpointdnd for "endpoint.dnd"
+            /// </summary>
+            [EnumMember(Value = "endpoint.dnd")]
+            Endpointdnd,
+            
+            /// <summary>
             /// Enum Client for "client"
             /// </summary>
             [EnumMember(Value = "client")]
@@ -301,6 +307,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "transfer.notavailable")]
             Transfernotavailable,
+            
+            /// <summary>
+            /// Enum Transferdnd for "transfer.dnd"
+            /// </summary>
+            [EnumMember(Value = "transfer.dnd")]
+            Transferdnd,
             
             /// <summary>
             /// Enum Transportfailure for "transport.failure"
@@ -422,11 +434,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartAcwTime">StartAcwTime.</param>
         /// <param name="EndAcwTime">EndAcwTime.</param>
         /// <param name="ResumeTime">ResumeTime.</param>
+        /// <param name="ParkTime">ParkTime.</param>
         /// <param name="MediaRoles">MediaRoles.</param>
         /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
         /// <param name="RoomId">RoomId.</param>
         /// <param name="AvatarImageUrl">AvatarImageUrl.</param>
-        public QueueConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationChatEventTopicUriReference User = null, QueueConversationChatEventTopicUriReference Queue = null, QueueConversationChatEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationChatEventTopicErrorBody ErrorInfo = null, QueueConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationChatEventTopicUriReference ExternalContact = null, QueueConversationChatEventTopicUriReference ExternalOrganization = null, QueueConversationChatEventTopicWrapup Wrapup = null, QueueConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationChatEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, List<string> MediaRoles = null, QueueConversationChatEventTopicQueueMediaSettings QueueMediaSettings = null, string RoomId = null, string AvatarImageUrl = null)
+        public QueueConversationChatEventTopicChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationChatEventTopicUriReference User = null, QueueConversationChatEventTopicUriReference Queue = null, QueueConversationChatEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationChatEventTopicErrorBody ErrorInfo = null, QueueConversationChatEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationChatEventTopicUriReference ExternalContact = null, QueueConversationChatEventTopicUriReference ExternalOrganization = null, QueueConversationChatEventTopicWrapup Wrapup = null, QueueConversationChatEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationChatEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationChatEventTopicQueueMediaSettings QueueMediaSettings = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -464,6 +477,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
             this.ResumeTime = ResumeTime;
+            this.ParkTime = ParkTime;
             this.MediaRoles = MediaRoles;
             this.QueueMediaSettings = QueueMediaSettings;
             this.RoomId = RoomId;
@@ -732,6 +746,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ParkTime
+        /// </summary>
+        [DataMember(Name="parkTime", EmitDefaultValue=false)]
+        public DateTime? ParkTime { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets MediaRoles
         /// </summary>
         [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
@@ -807,6 +829,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
             sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
+            sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
             sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
@@ -1032,6 +1055,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ResumeTime.Equals(other.ResumeTime)
                 ) &&
                 (
+                    this.ParkTime == other.ParkTime ||
+                    this.ParkTime != null &&
+                    this.ParkTime.Equals(other.ParkTime)
+                ) &&
+                (
                     this.MediaRoles == other.MediaRoles ||
                     this.MediaRoles != null &&
                     this.MediaRoles.SequenceEqual(other.MediaRoles)
@@ -1171,6 +1199,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ResumeTime != null)
                     hash = hash * 59 + this.ResumeTime.GetHashCode();
+
+                if (this.ParkTime != null)
+                    hash = hash * 59 + this.ParkTime.GetHashCode();
 
                 if (this.MediaRoles != null)
                     hash = hash * 59 + this.MediaRoles.GetHashCode();

@@ -13,40 +13,28 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// CopilotScoring
+    /// FreeTrialLimitDocs
     /// </summary>
     [DataContract]
-    public partial class CopilotScoring :  IEquatable<CopilotScoring>
+    public partial class FreeTrialLimitDocs :  IEquatable<FreeTrialLimitDocs>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CopilotScoring" /> class.
+        /// Initializes a new instance of the <see cref="FreeTrialLimitDocs" /> class.
         /// </summary>
-        /// <param name="Enabled">True if copilot feature is configured, false if not..</param>
-        /// <param name="Prompt">The prompt text that would be used by a LLM..</param>
-        public CopilotScoring(bool? Enabled = null, string Prompt = null)
+        /// <param name="Namespaces">Namespaces.</param>
+        public FreeTrialLimitDocs(List<FreeTrialNamespace> Namespaces = null)
         {
-            this.Enabled = Enabled;
-            this.Prompt = Prompt;
+            this.Namespaces = Namespaces;
             
         }
         
 
 
         /// <summary>
-        /// True if copilot feature is configured, false if not.
+        /// Gets or Sets Namespaces
         /// </summary>
-        /// <value>True if copilot feature is configured, false if not.</value>
-        [DataMember(Name="enabled", EmitDefaultValue=false)]
-        public bool? Enabled { get; set; }
-
-
-
-        /// <summary>
-        /// The prompt text that would be used by a LLM.
-        /// </summary>
-        /// <value>The prompt text that would be used by a LLM.</value>
-        [DataMember(Name="prompt", EmitDefaultValue=false)]
-        public string Prompt { get; set; }
+        [DataMember(Name="namespaces", EmitDefaultValue=false)]
+        public List<FreeTrialNamespace> Namespaces { get; set; }
 
 
         /// <summary>
@@ -56,10 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CopilotScoring {\n");
+            sb.Append("class FreeTrialLimitDocs {\n");
 
-            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            sb.Append("  Prompt: ").Append(Prompt).Append("\n");
+            sb.Append("  Namespaces: ").Append(Namespaces).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CopilotScoring);
+            return this.Equals(obj as FreeTrialLimitDocs);
         }
 
         /// <summary>
-        /// Returns true if CopilotScoring instances are equal
+        /// Returns true if FreeTrialLimitDocs instances are equal
         /// </summary>
-        /// <param name="other">Instance of CopilotScoring to be compared</param>
+        /// <param name="other">Instance of FreeTrialLimitDocs to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CopilotScoring other)
+        public bool Equals(FreeTrialLimitDocs other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -101,14 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Enabled == other.Enabled ||
-                    this.Enabled != null &&
-                    this.Enabled.Equals(other.Enabled)
-                ) &&
-                (
-                    this.Prompt == other.Prompt ||
-                    this.Prompt != null &&
-                    this.Prompt.Equals(other.Prompt)
+                    this.Namespaces == other.Namespaces ||
+                    this.Namespaces != null &&
+                    this.Namespaces.SequenceEqual(other.Namespaces)
                 );
         }
 
@@ -123,11 +105,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Enabled != null)
-                    hash = hash * 59 + this.Enabled.GetHashCode();
-
-                if (this.Prompt != null)
-                    hash = hash * 59 + this.Prompt.GetHashCode();
+                if (this.Namespaces != null)
+                    hash = hash * 59 + this.Namespaces.GetHashCode();
 
                 return hash;
             }

@@ -355,7 +355,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Arae for "ar-AE"
             /// </summary>
             [EnumMember(Value = "ar-AE")]
-            Arae
+            Arae,
+            
+            /// <summary>
+            /// Enum Zhcn for "zh-CN"
+            /// </summary>
+            [EnumMember(Value = "zh-CN")]
+            Zhcn,
+            
+            /// <summary>
+            /// Enum Zhtw for "zh-TW"
+            /// </summary>
+            [EnumMember(Value = "zh-TW")]
+            Zhtw,
+            
+            /// <summary>
+            /// Enum Zhhk for "zh-HK"
+            /// </summary>
+            [EnumMember(Value = "zh-HK")]
+            Zhhk,
+            
+            /// <summary>
+            /// Enum Kokr for "ko-KR"
+            /// </summary>
+            [EnumMember(Value = "ko-KR")]
+            Kokr,
+            
+            /// <summary>
+            /// Enum Plpl for "pl-PL"
+            /// </summary>
+            [EnumMember(Value = "pl-PL")]
+            Plpl
         }
         /// <summary>
         /// file type of the document

@@ -81,6 +81,42 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ModifiedDate { get; private set; }
 
 
+
+        /// <summary>
+        /// The date of the most recent unread voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date of the most recent unread voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="newestUnreadDate", EmitDefaultValue=false)]
+        public DateTime? NewestUnreadDate { get; private set; }
+
+
+
+        /// <summary>
+        /// The date of the most oldest unread voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date of the most oldest unread voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="oldestUnreadDate", EmitDefaultValue=false)]
+        public DateTime? OldestUnreadDate { get; private set; }
+
+
+
+        /// <summary>
+        /// The date of the most recent read voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date of the most recent read voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="newestReadDate", EmitDefaultValue=false)]
+        public DateTime? NewestReadDate { get; private set; }
+
+
+
+        /// <summary>
+        /// The date of the most oldest read voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date of the most oldest read voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="oldestReadDate", EmitDefaultValue=false)]
+        public DateTime? OldestReadDate { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +132,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DeletedCount: ").Append(DeletedCount).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            sb.Append("  NewestUnreadDate: ").Append(NewestUnreadDate).Append("\n");
+            sb.Append("  OldestUnreadDate: ").Append(OldestUnreadDate).Append("\n");
+            sb.Append("  NewestReadDate: ").Append(NewestReadDate).Append("\n");
+            sb.Append("  OldestReadDate: ").Append(OldestReadDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,6 +205,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
+                ) &&
+                (
+                    this.NewestUnreadDate == other.NewestUnreadDate ||
+                    this.NewestUnreadDate != null &&
+                    this.NewestUnreadDate.Equals(other.NewestUnreadDate)
+                ) &&
+                (
+                    this.OldestUnreadDate == other.OldestUnreadDate ||
+                    this.OldestUnreadDate != null &&
+                    this.OldestUnreadDate.Equals(other.OldestUnreadDate)
+                ) &&
+                (
+                    this.NewestReadDate == other.NewestReadDate ||
+                    this.NewestReadDate != null &&
+                    this.NewestReadDate.Equals(other.NewestReadDate)
+                ) &&
+                (
+                    this.OldestReadDate == other.OldestReadDate ||
+                    this.OldestReadDate != null &&
+                    this.OldestReadDate.Equals(other.OldestReadDate)
                 );
         }
 
@@ -196,6 +256,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+
+                if (this.NewestUnreadDate != null)
+                    hash = hash * 59 + this.NewestUnreadDate.GetHashCode();
+
+                if (this.OldestUnreadDate != null)
+                    hash = hash * 59 + this.OldestUnreadDate.GetHashCode();
+
+                if (this.NewestReadDate != null)
+                    hash = hash * 59 + this.NewestReadDate.GetHashCode();
+
+                if (this.OldestReadDate != null)
+                    hash = hash * 59 + this.OldestReadDate.GetHashCode();
 
                 return hash;
             }

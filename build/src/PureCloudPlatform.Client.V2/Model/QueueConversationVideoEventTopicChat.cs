@@ -164,6 +164,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Endpoint,
             
             /// <summary>
+            /// Enum Endpointdnd for "endpoint.dnd"
+            /// </summary>
+            [EnumMember(Value = "endpoint.dnd")]
+            Endpointdnd,
+            
+            /// <summary>
             /// Enum Client for "client"
             /// </summary>
             [EnumMember(Value = "client")]
@@ -200,6 +206,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Transferconsult,
             
             /// <summary>
+            /// Enum Transferforward for "transfer.forward"
+            /// </summary>
+            [EnumMember(Value = "transfer.forward")]
+            Transferforward,
+            
+            /// <summary>
             /// Enum Transfernoanswer for "transfer.noanswer"
             /// </summary>
             [EnumMember(Value = "transfer.noanswer")]
@@ -212,10 +224,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Transfernotavailable,
             
             /// <summary>
-            /// Enum Transferforward for "transfer.forward"
+            /// Enum Transferdnd for "transfer.dnd"
             /// </summary>
-            [EnumMember(Value = "transfer.forward")]
-            Transferforward,
+            [EnumMember(Value = "transfer.dnd")]
+            Transferdnd,
             
             /// <summary>
             /// Enum Transportfailure for "transport.failure"

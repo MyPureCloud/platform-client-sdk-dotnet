@@ -31,6 +31,7 @@ title: ExternalContactsContactChangedTopicContact
 | **WhatsAppId** | [**ExternalContactsContactChangedTopicWhatsAppId**](ExternalContactsContactChangedTopicWhatsAppId.html) |  | [optional] |
 | **FacebookId** | [**ExternalContactsContactChangedTopicFacebookId**](ExternalContactsContactChangedTopicFacebookId.html) |  | [optional] |
 | **InstagramId** | [**ExternalContactsContactChangedTopicInstagramId**](ExternalContactsContactChangedTopicInstagramId.html) |  | [optional] |
+| **ExternalIds** | [**List&lt;ExternalContactsContactChangedTopicExternalId&gt;**](ExternalContactsContactChangedTopicExternalId.html) |  | [optional] |
 | **Schema** | [**ExternalContactsContactChangedTopicDataSchema**](ExternalContactsContactChangedTopicDataSchema.html) |  | [optional] |
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **CreateDate** | **DateTime?** |  | [optional] |

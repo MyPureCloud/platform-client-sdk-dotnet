@@ -9672,8 +9672,6 @@ namespace Example
 
 Query for conversation activity observations
 
-PostAnalyticsConversationsActivityQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * analytics:queueObservation:view

@@ -4927,7 +4927,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitagent"></a>
 
-## [**WfmAgent**](WfmAgent.html) GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null)
+## [**WfmAgent**](WfmAgent.html) GetWorkforcemanagementManagementunitAgent (string managementUnitId, string agentId, bool? excludeCapabilities = null, List<string> expand = null)
 
 
 
@@ -4962,11 +4962,12 @@ namespace Example
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var agentId = agentId_example;  // string | The agent id
             var excludeCapabilities = true;  // bool? | Excludes all capabilities of the agent such as queues, languages, and skills (optional) 
+            var expand = new List<string>(); // List<string> |  (optional) 
 
             try
             { 
                 // Get data for agent in the management unit
-                WfmAgent result = apiInstance.GetWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities);
+                WfmAgent result = apiInstance.GetWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4986,6 +4987,7 @@ namespace Example
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **agentId** | **string**| The agent id |  |
 | **excludeCapabilities** | **bool?**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional]  |
+| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: workPlanOverrides |
 {: class="table table-striped"}
 
 ### Return type
@@ -6135,7 +6137,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunitworkplans"></a>
 
-## [**WorkPlanListResponse**](WorkPlanListResponse.html) GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null)
+## [**WorkPlanListResponse**](WorkPlanListResponse.html) GetWorkforcemanagementManagementunitWorkplans (string managementUnitId, List<string> expand = null, List<string> exclude = null)
 
 
 
@@ -6175,11 +6177,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
             var expand = new List<string>(); // List<string> | Include to access additional data on the work plans (optional) 
+            var exclude = new List<string>(); // List<string> | Exclude specific data on the work plans from the response (optional) 
 
             try
             { 
                 // Get work plans
-                WorkPlanListResponse result = apiInstance.GetWorkforcemanagementManagementunitWorkplans(managementUnitId, expand);
+                WorkPlanListResponse result = apiInstance.GetWorkforcemanagementManagementunitWorkplans(managementUnitId, expand, exclude);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6198,6 +6201,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **expand** | [**List<string>**](string.html)| Include to access additional data on the work plans | [optional] <br />**Values**: agentCount, agents, optionalDays, shifts, shiftStartVariances, details |
+| **exclude** | [**List<string>**](string.html)| Exclude specific data on the work plans from the response | [optional] <br />**Values**: shifts.activities |
 {: class="table table-striped"}
 
 ### Return type
