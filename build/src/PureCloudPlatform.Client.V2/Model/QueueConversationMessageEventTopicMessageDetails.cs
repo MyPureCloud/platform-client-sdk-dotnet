@@ -78,7 +78,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Removed for "removed"
             /// </summary>
             [EnumMember(Value = "removed")]
-            Removed
+            Removed,
+            
+            /// <summary>
+            /// Enum Published for "published"
+            /// </summary>
+            [EnumMember(Value = "published")]
+            Published
         }
         /// <summary>
         /// Gets or Sets MessageStatus

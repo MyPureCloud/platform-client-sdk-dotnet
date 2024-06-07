@@ -91,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Botfinalintent,
             
             /// <summary>
+            /// Enum Botflowtype for "botFlowType"
+            /// </summary>
+            [EnumMember(Value = "botFlowType")]
+            Botflowtype,
+            
+            /// <summary>
             /// Enum Botid for "botId"
             /// </summary>
             [EnumMember(Value = "botId")]
@@ -101,12 +107,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "botIntent")]
             Botintent,
-            
-            /// <summary>
-            /// Enum Botflowtype for "botFlowType"
-            /// </summary>
-            [EnumMember(Value = "botFlowType")]
-            Botflowtype,
             
             /// <summary>
             /// Enum Botproduct for "botProduct"

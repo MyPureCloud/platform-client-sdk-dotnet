@@ -28,8 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Reoccurrence" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="Start">The  start date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-11-21T16:30:25.000Z (required).</param>
-        /// <param name="End">The end date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z (required).</param>
+        /// <param name="Start">The start date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss (required).</param>
+        /// <param name="End">The end date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="TimeZone">The time zone of the schedule e.g.:  America/New_York (required).</param>
         /// <param name="Pattern">The schedule pattern e.g.: Daily/Weekly (required).</param>
         /// <param name="Range">The schedule range e.g.: EndDate/NoEnd/Numbered (required).</param>
@@ -57,18 +57,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The  start date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-11-21T16:30:25.000Z
+        /// The start date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss
         /// </summary>
-        /// <value>The  start date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-11-21T16:30:25.000Z</value>
+        /// <value>The start date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
 
 
 
         /// <summary>
-        /// The end date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z
+        /// The end date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss
         /// </summary>
-        /// <value>The end date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z</value>
+        /// <value>The end date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
 

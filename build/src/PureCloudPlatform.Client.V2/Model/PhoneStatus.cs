@@ -144,7 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneStatus" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        /// <param name="Id">Id.</param>
         /// <param name="OperationalStatus">The Operational Status of this phone.</param>
         /// <param name="EdgesStatus">The status of the primary or secondary Edges assigned to the phone lines..</param>
         /// <param name="EventCreationTime">Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
@@ -153,9 +153,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneAssignmentToEdgeType">The phone status's edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
         /// <param name="SelfUri">The URI for this object. Deprecated. Do not use..</param>
-        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, DomainEntityRef Edge = null, string SelfUri = null)
+        public PhoneStatus(string Id = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, DomainEntityRef Edge = null, string SelfUri = null)
         {
-            this.Name = Name;
+            this.Id = Id;
             this.OperationalStatus = OperationalStatus;
             this.EdgesStatus = EdgesStatus;
             this.EventCreationTime = EventCreationTime;
@@ -170,19 +170,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        public string Id { get; set; }
 
 
 
@@ -246,7 +237,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PhoneStatus {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OperationalStatus: ").Append(OperationalStatus).Append("\n");
             sb.Append("  EdgesStatus: ").Append(EdgesStatus).Append("\n");
             sb.Append("  EventCreationTime: ").Append(EventCreationTime).Append("\n");
@@ -299,11 +289,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.OperationalStatus == other.OperationalStatus ||
@@ -360,9 +345,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
 
                 if (this.OperationalStatus != null)
                     hash = hash * 59 + this.OperationalStatus.GetHashCode();

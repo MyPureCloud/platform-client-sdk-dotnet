@@ -1254,7 +1254,7 @@ This endpoint does require any parameters.
 
 <a name="getexternalcontactsorganization"></a>
 
-## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
+## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
 
 
 
@@ -1288,7 +1288,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
-            var expand = expand_example;  // string | which fields, if any, to expand (externalDataSources) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalDataSources) (optional) 
             var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
 
             try
@@ -1312,7 +1312,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **expand** | **string**| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 {: class="table table-striped"}
 
@@ -1536,7 +1536,7 @@ namespace Example
 
 <a name="getexternalcontactsorganizationrelationships"></a>
 
-## [**RelationshipListing**](RelationshipListing.html) GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
+## [**RelationshipListing**](RelationshipListing.html) GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null)
 
 
 
@@ -1572,7 +1572,7 @@ namespace Example
             var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
             var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
             var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
-            var expand = expand_example;  // string | which fields, if any, to expand (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
             var sortOrder = sortOrder_example;  // string | The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\" (optional) 
 
             try
@@ -1598,7 +1598,7 @@ namespace Example
 | **externalOrganizationId** | **string**| External Organization ID |  |
 | **pageSize** | **int?**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
-| **expand** | **string**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 | **sortOrder** | **string**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; | [optional]  |
 {: class="table table-striped"}
 
@@ -1933,7 +1933,7 @@ This endpoint does require any parameters.
 
 <a name="getexternalcontactsrelationship"></a>
 
-## [**Relationship**](Relationship.html) GetExternalcontactsRelationship (string relationshipId, string expand = null)
+## [**Relationship**](Relationship.html) GetExternalcontactsRelationship (string relationshipId, List<string> expand = null)
 
 
 
@@ -1967,7 +1967,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var relationshipId = relationshipId_example;  // string | Relationship Id
-            var expand = expand_example;  // string | which fields, if any, to expand (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
             { 
@@ -1990,7 +1990,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
-| **expand** | **string**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 {: class="table table-striped"}
 
 ### Return type

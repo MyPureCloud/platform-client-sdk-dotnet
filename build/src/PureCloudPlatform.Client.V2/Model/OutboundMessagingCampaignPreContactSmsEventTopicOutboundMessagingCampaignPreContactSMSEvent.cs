@@ -176,7 +176,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum IninOutboundNotCallableTime for "ININ_OUTBOUND_NOT_CALLABLE_TIME"
             /// </summary>
             [EnumMember(Value = "ININ_OUTBOUND_NOT_CALLABLE_TIME")]
-            IninOutboundNotCallableTime
+            IninOutboundNotCallableTime,
+            
+            /// <summary>
+            /// Enum OutboundMaxMessageLengthExceeded for "OUTBOUND_MAX_MESSAGE_LENGTH_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_MAX_MESSAGE_LENGTH_EXCEEDED")]
+            OutboundMaxMessageLengthExceeded
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

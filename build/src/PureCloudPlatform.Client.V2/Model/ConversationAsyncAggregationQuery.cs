@@ -501,6 +501,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Userid,
             
             /// <summary>
+            /// Enum Videopresent for "videoPresent"
+            /// </summary>
+            [EnumMember(Value = "videoPresent")]
+            Videopresent,
+            
+            /// <summary>
             /// Enum Waitinginteractioncount for "waitingInteractionCount"
             /// </summary>
             [EnumMember(Value = "waitingInteractionCount")]

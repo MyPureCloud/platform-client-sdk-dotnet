@@ -494,7 +494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         
-        ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
+        ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Fetch an external organization
@@ -508,7 +508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         
-        ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
+        ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Search for external contacts in an external organization
@@ -618,7 +618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>RelationshipListing</returns>
         
-        RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
+        RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null);
 
         /// <summary>
         /// Fetch a relationship for an external organization
@@ -634,7 +634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         
-        ApiResponse<RelationshipListing> GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
+        ApiResponse<RelationshipListing> GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null);
 
         /// <summary>
         /// Search for external organizations
@@ -779,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Relationship</returns>
         
-        Relationship GetExternalcontactsRelationship (string relationshipId, string expand = null);
+        Relationship GetExternalcontactsRelationship (string relationshipId, List<string> expand = null);
 
         /// <summary>
         /// Fetch a relationship
@@ -792,7 +792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         
-        ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, string expand = null);
+        ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, List<string> expand = null);
 
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
@@ -2322,7 +2322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         
-        System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
+        System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Fetch an external organization
@@ -2336,7 +2336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Search for external contacts in an external organization
@@ -2446,7 +2446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
         
-        System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
+        System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null);
 
         /// <summary>
         /// Fetch a relationship for an external organization
@@ -2462,7 +2462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null);
 
         /// <summary>
         /// Search for external organizations
@@ -2607,7 +2607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Relationship</returns>
         
-        System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId, string expand = null);
+        System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId, List<string> expand = null);
 
         /// <summary>
         /// Fetch a relationship
@@ -2620,7 +2620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, List<string> expand = null);
 
         /// <summary>
         /// Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
@@ -7680,7 +7680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
         
-        public ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
+        public ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
         {
              ApiResponse<ExternalOrganization> localVarResponse = GetExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, expand, includeTrustors);
              return localVarResponse.Data;
@@ -7696,7 +7696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
         
-        public ApiResponse< ExternalOrganization > GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
+        public ApiResponse< ExternalOrganization > GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -7735,7 +7735,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", this.Configuration.ApiClient.ParameterToString(externalOrganizationId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeTrustors != null) localVarQueryParams.Add(new Tuple<string, string>("includeTrustors", this.Configuration.ApiClient.ParameterToString(includeTrustors)));
 
             // Header params
@@ -7790,7 +7790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
         
-        public async System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
+        public async System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
         {
              ApiResponse<ExternalOrganization> localVarResponse = await GetExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, expand, includeTrustors);
              return localVarResponse.Data;
@@ -7807,7 +7807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -7847,7 +7847,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", this.Configuration.ApiClient.ParameterToString(externalOrganizationId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeTrustors != null) localVarQueryParams.Add(new Tuple<string, string>("includeTrustors", this.Configuration.ApiClient.ParameterToString(includeTrustors)));
 
             // Header params
@@ -8611,7 +8611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>RelationshipListing</returns>
         
-        public RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
+        public RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null)
         {
              ApiResponse<RelationshipListing> localVarResponse = GetExternalcontactsOrganizationRelationshipsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, expand, sortOrder);
              return localVarResponse.Data;
@@ -8629,7 +8629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
         
-        public ApiResponse< RelationshipListing > GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
+        public ApiResponse< RelationshipListing > GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -8670,7 +8670,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
@@ -8727,7 +8727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
         
-        public async System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null)
         {
              ApiResponse<RelationshipListing> localVarResponse = await GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, expand, sortOrder);
              return localVarResponse.Data;
@@ -8746,7 +8746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -8788,7 +8788,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
@@ -9927,7 +9927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Relationship</returns>
         
-        public Relationship GetExternalcontactsRelationship (string relationshipId, string expand = null)
+        public Relationship GetExternalcontactsRelationship (string relationshipId, List<string> expand = null)
         {
              ApiResponse<Relationship> localVarResponse = GetExternalcontactsRelationshipWithHttpInfo(relationshipId, expand);
              return localVarResponse.Data;
@@ -9942,7 +9942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
         
-        public ApiResponse< Relationship > GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, string expand = null)
+        public ApiResponse< Relationship > GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, List<string> expand = null)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
@@ -9981,7 +9981,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (relationshipId != null) localVarPathParams.Add("relationshipId", this.Configuration.ApiClient.ParameterToString(relationshipId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -10034,7 +10034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Relationship</returns>
         
-        public async System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId, string expand = null)
+        public async System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId, List<string> expand = null)
         {
              ApiResponse<Relationship> localVarResponse = await GetExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId, expand);
              return localVarResponse.Data;
@@ -10050,7 +10050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, List<string> expand = null)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
@@ -10090,7 +10090,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (relationshipId != null) localVarPathParams.Add("relationshipId", this.Configuration.ApiClient.ParameterToString(relationshipId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

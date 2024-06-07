@@ -55,8 +55,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Alteration" /> class.
         /// </summary>
         /// <param name="Type">Range type (Exclusion: used to exclude a specific time within the recurrence. Inclusion: used to include a specific time within the recurrence which will execute in addition to the normal recurrence. If both an exclusion and inclusion are specified, the inclusion will take precedence over the exclusion.).</param>
-        /// <param name="Start">The start date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z.</param>
-        /// <param name="End">The end date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T18:30:25.000Z.</param>
+        /// <param name="Start">The start date of an alteration range as an ISO-8601 string.</param>
+        /// <param name="End">The end date of an alteration range as an ISO-8601 string.</param>
         public Alteration(TypeEnum? Type = null, string Start = null, string End = null)
         {
             this.Type = Type;
@@ -70,18 +70,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The start date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z
+        /// The start date of an alteration range as an ISO-8601 string
         /// </summary>
-        /// <value>The start date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z</value>
+        /// <value>The start date of an alteration range as an ISO-8601 string</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
 
 
 
         /// <summary>
-        /// The end date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T18:30:25.000Z
+        /// The end date of an alteration range as an ISO-8601 string
         /// </summary>
-        /// <value>The end date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T18:30:25.000Z</value>
+        /// <value>The end date of an alteration range as an ISO-8601 string</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
 

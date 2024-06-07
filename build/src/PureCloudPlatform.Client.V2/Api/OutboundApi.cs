@@ -1023,6 +1023,42 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CampaignInteractions> GetOutboundCampaignInteractionsWithHttpInfo (string campaignId);
 
         /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>CampaignOutboundLinesDistribution</returns>
+        
+        CampaignOutboundLinesDistribution GetOutboundCampaignLinedistribution (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null);
+
+        /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>ApiResponse of CampaignOutboundLinesDistribution</returns>
+        
+        ApiResponse<CampaignOutboundLinesDistribution> GetOutboundCampaignLinedistributionWithHttpInfo (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null);
+
+        /// <summary>
         /// Get campaign progress
         /// </summary>
         /// <remarks>
@@ -3067,6 +3103,84 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
         
         ApiResponse<List<DialerContact>> PostOutboundContactlistContactsBulkWithHttpInfo (string contactListId, List<string> body);
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>ContactsBulkOperationJob</returns>
+        
+        ContactsBulkOperationJob PostOutboundContactlistContactsBulkRemove (string contactListId, ContactBulkSearchParameters body);
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJob</returns>
+        
+        ApiResponse<ContactsBulkOperationJob> PostOutboundContactlistContactsBulkRemoveWithHttpInfo (string contactListId, ContactBulkSearchParameters body);
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>ContactsBulkOperationJob</returns>
+        
+        ContactsBulkOperationJob PostOutboundContactlistContactsBulkUpdate (string contactListId, ContactBulkEditRequest body);
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJob</returns>
+        
+        ApiResponse<ContactsBulkOperationJob> PostOutboundContactlistContactsBulkUpdateWithHttpInfo (string contactListId, ContactBulkEditRequest body);
+
+        /// <summary>
+        /// Query contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>ContactListingResponse</returns>
+        
+        ContactListingResponse PostOutboundContactlistContactsSearch (string contactListId, ContactListingRequest body);
+
+        /// <summary>
+        /// Query contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>ApiResponse of ContactListingResponse</returns>
+        
+        ApiResponse<ContactListingResponse> PostOutboundContactlistContactsSearchWithHttpInfo (string contactListId, ContactListingRequest body);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -5165,6 +5279,42 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CampaignInteractions>> GetOutboundCampaignInteractionsAsyncWithHttpInfo (string campaignId);
 
         /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>Task of CampaignOutboundLinesDistribution</returns>
+        
+        System.Threading.Tasks.Task<CampaignOutboundLinesDistribution> GetOutboundCampaignLinedistributionAsync (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null);
+
+        /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignOutboundLinesDistribution)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CampaignOutboundLinesDistribution>> GetOutboundCampaignLinedistributionAsyncWithHttpInfo (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null);
+
+        /// <summary>
         /// Get campaign progress
         /// </summary>
         /// <remarks>
@@ -7209,6 +7359,84 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsBulkAsyncWithHttpInfo (string contactListId, List<string> body);
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>Task of ContactsBulkOperationJob</returns>
+        
+        System.Threading.Tasks.Task<ContactsBulkOperationJob> PostOutboundContactlistContactsBulkRemoveAsync (string contactListId, ContactBulkSearchParameters body);
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJob>> PostOutboundContactlistContactsBulkRemoveAsyncWithHttpInfo (string contactListId, ContactBulkSearchParameters body);
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>Task of ContactsBulkOperationJob</returns>
+        
+        System.Threading.Tasks.Task<ContactsBulkOperationJob> PostOutboundContactlistContactsBulkUpdateAsync (string contactListId, ContactBulkEditRequest body);
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJob>> PostOutboundContactlistContactsBulkUpdateAsyncWithHttpInfo (string contactListId, ContactBulkEditRequest body);
+
+        /// <summary>
+        /// Query contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>Task of ContactListingResponse</returns>
+        
+        System.Threading.Tasks.Task<ContactListingResponse> PostOutboundContactlistContactsSearchAsync (string contactListId, ContactListingRequest body);
+
+        /// <summary>
+        /// Query contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>Task of ApiResponse (ContactListingResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactListingResponse>> PostOutboundContactlistContactsSearchAsyncWithHttpInfo (string contactListId, ContactListingRequest body);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -16897,6 +17125,253 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CampaignInteractions>(localVarStatusCode,
                 localVarHeaders,
                 (CampaignInteractions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignInteractions)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>CampaignOutboundLinesDistribution</returns>
+        
+        public CampaignOutboundLinesDistribution GetOutboundCampaignLinedistribution (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null)
+        {
+             ApiResponse<CampaignOutboundLinesDistribution> localVarResponse = GetOutboundCampaignLinedistributionWithHttpInfo(campaignId, includeOnlyActiveCampaigns, edgeGroupId, siteId, useWeight, relativeWeight, outboundLineCount);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>ApiResponse of CampaignOutboundLinesDistribution</returns>
+        
+        public ApiResponse< CampaignOutboundLinesDistribution > GetOutboundCampaignLinedistributionWithHttpInfo (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignLinedistribution");
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/linedistribution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+            if (includeOnlyActiveCampaigns != null) localVarQueryParams.Add(new Tuple<string, string>("includeOnlyActiveCampaigns", this.Configuration.ApiClient.ParameterToString(includeOnlyActiveCampaigns)));
+            if (edgeGroupId != null) localVarQueryParams.Add(new Tuple<string, string>("edgeGroupId", this.Configuration.ApiClient.ParameterToString(edgeGroupId)));
+            if (siteId != null) localVarQueryParams.Add(new Tuple<string, string>("siteId", this.Configuration.ApiClient.ParameterToString(siteId)));
+            if (useWeight != null) localVarQueryParams.Add(new Tuple<string, string>("useWeight", this.Configuration.ApiClient.ParameterToString(useWeight)));
+            if (relativeWeight != null) localVarQueryParams.Add(new Tuple<string, string>("relativeWeight", this.Configuration.ApiClient.ParameterToString(relativeWeight)));
+            if (outboundLineCount != null) localVarQueryParams.Add(new Tuple<string, string>("outboundLineCount", this.Configuration.ApiClient.ParameterToString(outboundLineCount)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignLinedistribution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignLinedistribution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignOutboundLinesDistribution>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignOutboundLinesDistribution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignOutboundLinesDistribution)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>Task of CampaignOutboundLinesDistribution</returns>
+        
+        public async System.Threading.Tasks.Task<CampaignOutboundLinesDistribution> GetOutboundCampaignLinedistributionAsync (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null)
+        {
+             ApiResponse<CampaignOutboundLinesDistribution> localVarResponse = await GetOutboundCampaignLinedistributionAsyncWithHttpInfo(campaignId, includeOnlyActiveCampaigns, edgeGroupId, siteId, useWeight, relativeWeight, outboundLineCount);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get line distribution information for campaigns using same Edge Group or Site as given campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="includeOnlyActiveCampaigns">If true will return only active Campaigns (optional, default to true)</param>
+        /// <param name="edgeGroupId">Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="siteId">Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. (optional)</param>
+        /// <param name="useWeight">Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations (optional)</param>
+        /// <param name="relativeWeight">Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight (optional)</param>
+        /// <param name="outboundLineCount">The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count (optional)</param>
+        /// <returns>Task of ApiResponse (CampaignOutboundLinesDistribution)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignOutboundLinesDistribution>> GetOutboundCampaignLinedistributionAsyncWithHttpInfo (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignLinedistribution");
+            
+
+            var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/linedistribution";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+            if (includeOnlyActiveCampaigns != null) localVarQueryParams.Add(new Tuple<string, string>("includeOnlyActiveCampaigns", this.Configuration.ApiClient.ParameterToString(includeOnlyActiveCampaigns)));
+            if (edgeGroupId != null) localVarQueryParams.Add(new Tuple<string, string>("edgeGroupId", this.Configuration.ApiClient.ParameterToString(edgeGroupId)));
+            if (siteId != null) localVarQueryParams.Add(new Tuple<string, string>("siteId", this.Configuration.ApiClient.ParameterToString(siteId)));
+            if (useWeight != null) localVarQueryParams.Add(new Tuple<string, string>("useWeight", this.Configuration.ApiClient.ParameterToString(useWeight)));
+            if (relativeWeight != null) localVarQueryParams.Add(new Tuple<string, string>("relativeWeight", this.Configuration.ApiClient.ParameterToString(relativeWeight)));
+            if (outboundLineCount != null) localVarQueryParams.Add(new Tuple<string, string>("outboundLineCount", this.Configuration.ApiClient.ParameterToString(outboundLineCount)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignLinedistribution: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignLinedistribution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignOutboundLinesDistribution>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignOutboundLinesDistribution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignOutboundLinesDistribution)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33047,6 +33522,708 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<DialerContact>>(localVarStatusCode,
                 localVarHeaders,
                 (List<DialerContact>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DialerContact>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>ContactsBulkOperationJob</returns>
+        
+        public ContactsBulkOperationJob PostOutboundContactlistContactsBulkRemove (string contactListId, ContactBulkSearchParameters body)
+        {
+             ApiResponse<ContactsBulkOperationJob> localVarResponse = PostOutboundContactlistContactsBulkRemoveWithHttpInfo(contactListId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJob</returns>
+        
+        public ApiResponse< ContactsBulkOperationJob > PostOutboundContactlistContactsBulkRemoveWithHttpInfo (string contactListId, ContactBulkSearchParameters body)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistContactsBulkRemove");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkRemove");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJob>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>Task of ContactsBulkOperationJob</returns>
+        
+        public async System.Threading.Tasks.Task<ContactsBulkOperationJob> PostOutboundContactlistContactsBulkRemoveAsync (string contactListId, ContactBulkSearchParameters body)
+        {
+             ApiResponse<ContactsBulkOperationJob> localVarResponse = await PostOutboundContactlistContactsBulkRemoveAsyncWithHttpInfo(contactListId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Start an async job to delete contacts using a filter. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact filter information.</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJob>> PostOutboundContactlistContactsBulkRemoveAsyncWithHttpInfo (string contactListId, ContactBulkSearchParameters body)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistContactsBulkRemove");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkRemove");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJob>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>ContactsBulkOperationJob</returns>
+        
+        public ContactsBulkOperationJob PostOutboundContactlistContactsBulkUpdate (string contactListId, ContactBulkEditRequest body)
+        {
+             ApiResponse<ContactsBulkOperationJob> localVarResponse = PostOutboundContactlistContactsBulkUpdateWithHttpInfo(contactListId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJob</returns>
+        
+        public ApiResponse< ContactsBulkOperationJob > PostOutboundContactlistContactsBulkUpdateWithHttpInfo (string contactListId, ContactBulkEditRequest body)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistContactsBulkUpdate");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkUpdate");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJob>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>Task of ContactsBulkOperationJob</returns>
+        
+        public async System.Threading.Tasks.Task<ContactsBulkOperationJob> PostOutboundContactlistContactsBulkUpdateAsync (string contactListId, ContactBulkEditRequest body)
+        {
+             ApiResponse<ContactsBulkOperationJob> localVarResponse = await PostOutboundContactlistContactsBulkUpdateAsyncWithHttpInfo(contactListId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Start an async job to bulk edit contacts. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact bulk edit request information.</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJob>> PostOutboundContactlistContactsBulkUpdateAsyncWithHttpInfo (string contactListId, ContactBulkEditRequest body)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistContactsBulkUpdate");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkUpdate");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkUpdate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsBulkUpdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJob>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query contacts from a contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>ContactListingResponse</returns>
+        
+        public ContactListingResponse PostOutboundContactlistContactsSearch (string contactListId, ContactListingRequest body)
+        {
+             ApiResponse<ContactListingResponse> localVarResponse = PostOutboundContactlistContactsSearchWithHttpInfo(contactListId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query contacts from a contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>ApiResponse of ContactListingResponse</returns>
+        
+        public ApiResponse< ContactListingResponse > PostOutboundContactlistContactsSearchWithHttpInfo (string contactListId, ContactListingRequest body)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistContactsSearch");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsSearch");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListingResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query contacts from a contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>Task of ContactListingResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ContactListingResponse> PostOutboundContactlistContactsSearchAsync (string contactListId, ContactListingRequest body)
+        {
+             ApiResponse<ContactListingResponse> localVarResponse = await PostOutboundContactlistContactsSearchAsyncWithHttpInfo(contactListId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query contacts from a contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="body">Contact search parameters.</param>
+        /// <returns>Task of ApiResponse (ContactListingResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListingResponse>> PostOutboundContactlistContactsSearchAsyncWithHttpInfo (string contactListId, ContactListingRequest body)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistContactsSearch");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsSearch");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistContactsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListingResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

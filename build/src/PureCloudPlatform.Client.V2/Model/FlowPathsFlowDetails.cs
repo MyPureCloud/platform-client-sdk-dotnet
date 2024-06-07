@@ -55,7 +55,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Securecall for "SecureCall"
             /// </summary>
             [EnumMember(Value = "SecureCall")]
-            Securecall
+            Securecall,
+            
+            /// <summary>
+            /// Enum Inboundshortmessage for "InboundShortMessage"
+            /// </summary>
+            [EnumMember(Value = "InboundShortMessage")]
+            Inboundshortmessage,
+            
+            /// <summary>
+            /// Enum Inboundemail for "InboundEmail"
+            /// </summary>
+            [EnumMember(Value = "InboundEmail")]
+            Inboundemail,
+            
+            /// <summary>
+            /// Enum Outboundcall for "OutboundCall"
+            /// </summary>
+            [EnumMember(Value = "OutboundCall")]
+            Outboundcall
         }
         /// <summary>
         /// The type of the flow.

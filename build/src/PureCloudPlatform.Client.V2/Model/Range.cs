@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Range" /> class.
         /// </summary>
         /// <param name="Type">Range type (NoEnd: without an end date. EndDate: with an end date. Numbered: with a specific number of occurrences) (required).</param>
-        /// <param name="End">The end date time of the last occurrence of the range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z, Required to set for EndDate range type..</param>
+        /// <param name="End">The end date time of the last occurrence of the range as an ISO-8601 string. Required for EndDate range type..</param>
         /// <param name="NumberOfOccurrences">The number of times the schedule will be repeated, e.g: 2. Required to set for Numbered range type..</param>
         public Range(TypeEnum? Type = null, string End = null, int? NumberOfOccurrences = null)
         {
@@ -82,9 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The end date time of the last occurrence of the range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z, Required to set for EndDate range type.
+        /// The end date time of the last occurrence of the range as an ISO-8601 string. Required for EndDate range type.
         /// </summary>
-        /// <value>The end date time of the last occurrence of the range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z, Required to set for EndDate range type.</value>
+        /// <value>The end date time of the last occurrence of the range as an ISO-8601 string. Required for EndDate range type.</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
 

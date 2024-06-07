@@ -30,9 +30,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsVoicemail">Indicates filtering for Voice mail.</param>
         /// <param name="IsFlagged">Indicates filtering for flagged.</param>
         /// <param name="IsMonitored">Indicates filtering for monitored.</param>
+        /// <param name="IsScreenMonitored">Indicates filtering for screenMonitored.</param>
         /// <param name="FilterWrapUpNotes">Indicates filtering for WrapUpNotes.</param>
         /// <param name="MatchAll">Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic.</param>
-        public ConversationProperties(bool? IsWaiting = null, bool? IsActive = null, bool? IsAcd = null, bool? IsPreferred = null, bool? IsScreenshare = null, bool? IsCobrowse = null, bool? IsVoicemail = null, bool? IsFlagged = null, bool? IsMonitored = null, bool? FilterWrapUpNotes = null, bool? MatchAll = null)
+        public ConversationProperties(bool? IsWaiting = null, bool? IsActive = null, bool? IsAcd = null, bool? IsPreferred = null, bool? IsScreenshare = null, bool? IsCobrowse = null, bool? IsVoicemail = null, bool? IsFlagged = null, bool? IsMonitored = null, bool? IsScreenMonitored = null, bool? FilterWrapUpNotes = null, bool? MatchAll = null)
         {
             this.IsWaiting = IsWaiting;
             this.IsActive = IsActive;
@@ -43,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsVoicemail = IsVoicemail;
             this.IsFlagged = IsFlagged;
             this.IsMonitored = IsMonitored;
+            this.IsScreenMonitored = IsScreenMonitored;
             this.FilterWrapUpNotes = FilterWrapUpNotes;
             this.MatchAll = MatchAll;
             
@@ -132,6 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates filtering for screenMonitored
+        /// </summary>
+        /// <value>Indicates filtering for screenMonitored</value>
+        [DataMember(Name="isScreenMonitored", EmitDefaultValue=false)]
+        public bool? IsScreenMonitored { get; set; }
+
+
+
+        /// <summary>
         /// Indicates filtering for WrapUpNotes
         /// </summary>
         /// <value>Indicates filtering for WrapUpNotes</value>
@@ -166,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsVoicemail: ").Append(IsVoicemail).Append("\n");
             sb.Append("  IsFlagged: ").Append(IsFlagged).Append("\n");
             sb.Append("  IsMonitored: ").Append(IsMonitored).Append("\n");
+            sb.Append("  IsScreenMonitored: ").Append(IsScreenMonitored).Append("\n");
             sb.Append("  FilterWrapUpNotes: ").Append(FilterWrapUpNotes).Append("\n");
             sb.Append("  MatchAll: ").Append(MatchAll).Append("\n");
             sb.Append("}\n");
@@ -254,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsMonitored.Equals(other.IsMonitored)
                 ) &&
                 (
+                    this.IsScreenMonitored == other.IsScreenMonitored ||
+                    this.IsScreenMonitored != null &&
+                    this.IsScreenMonitored.Equals(other.IsScreenMonitored)
+                ) &&
+                (
                     this.FilterWrapUpNotes == other.FilterWrapUpNotes ||
                     this.FilterWrapUpNotes != null &&
                     this.FilterWrapUpNotes.Equals(other.FilterWrapUpNotes)
@@ -302,6 +319,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsMonitored != null)
                     hash = hash * 59 + this.IsMonitored.GetHashCode();
+
+                if (this.IsScreenMonitored != null)
+                    hash = hash * 59 + this.IsScreenMonitored.GetHashCode();
 
                 if (this.FilterWrapUpNotes != null)
                     hash = hash * 59 + this.FilterWrapUpNotes.GetHashCode();

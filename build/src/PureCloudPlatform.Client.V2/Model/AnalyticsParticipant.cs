@@ -157,16 +157,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Voicemail,
             
             /// <summary>
-            /// Enum Workflow for "workflow"
-            /// </summary>
-            [EnumMember(Value = "workflow")]
-            Workflow,
-            
-            /// <summary>
             /// Enum Voicesurveyflow for "voicesurveyflow"
             /// </summary>
             [EnumMember(Value = "voicesurveyflow")]
-            Voicesurveyflow
+            Voicesurveyflow,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
         }
         /// <summary>
         /// Reason for which participant flagged conversation

@@ -90,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? TimeZoneRescheduledCalls { get; private set; }
 
 
+
+        /// <summary>
+        /// Information on the campaign's lines utilization
+        /// </summary>
+        /// <value>Information on the campaign's lines utilization</value>
+        [DataMember(Name="linesUtilization", EmitDefaultValue=false)]
+        public CampaignLinesUtilization LinesUtilization { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutstandingCalls: ").Append(OutstandingCalls).Append("\n");
             sb.Append("  ScheduledCalls: ").Append(ScheduledCalls).Append("\n");
             sb.Append("  TimeZoneRescheduledCalls: ").Append(TimeZoneRescheduledCalls).Append("\n");
+            sb.Append("  LinesUtilization: ").Append(LinesUtilization).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -180,6 +190,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZoneRescheduledCalls == other.TimeZoneRescheduledCalls ||
                     this.TimeZoneRescheduledCalls != null &&
                     this.TimeZoneRescheduledCalls.Equals(other.TimeZoneRescheduledCalls)
+                ) &&
+                (
+                    this.LinesUtilization == other.LinesUtilization ||
+                    this.LinesUtilization != null &&
+                    this.LinesUtilization.Equals(other.LinesUtilization)
                 );
         }
 
@@ -214,6 +229,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeZoneRescheduledCalls != null)
                     hash = hash * 59 + this.TimeZoneRescheduledCalls.GetHashCode();
+
+                if (this.LinesUtilization != null)
+                    hash = hash * 59 + this.LinesUtilization.GetHashCode();
 
                 return hash;
             }

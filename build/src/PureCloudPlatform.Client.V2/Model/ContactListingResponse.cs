@@ -13,30 +13,32 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// TwitterIntegrationEntityListing
+    /// ContactListingResponse
     /// </summary>
     [DataContract]
-    public partial class TwitterIntegrationEntityListing :  IEquatable<TwitterIntegrationEntityListing>, IPagedResource<TwitterIntegration>
+    public partial class ContactListingResponse :  IEquatable<ContactListingResponse>, IPagedResource<DialerContact>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TwitterIntegrationEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="ContactListingResponse" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="Total">Total.</param>
+        /// <param name="ContactsCount">ContactsCount.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="LastUri">LastUri.</param>
         /// <param name="FirstUri">FirstUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="NextUri">NextUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public TwitterIntegrationEntityListing(List<TwitterIntegration> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string PreviousUri = null, string LastUri = null, string FirstUri = null, string SelfUri = null, string NextUri = null, int? PageCount = null)
+        public ContactListingResponse(List<DialerContact> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, long? ContactsCount = null, string PreviousUri = null, string LastUri = null, string FirstUri = null, string SelfUri = null, string NextUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Total = Total;
+            this.ContactsCount = ContactsCount;
             this.PreviousUri = PreviousUri;
             this.LastUri = LastUri;
             this.FirstUri = FirstUri;
@@ -52,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<TwitterIntegration> Entities { get; set; }
+        public List<DialerContact> Entities { get; set; }
 
 
 
@@ -77,6 +79,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ContactsCount
+        /// </summary>
+        [DataMember(Name="contactsCount", EmitDefaultValue=false)]
+        public long? ContactsCount { get; set; }
 
 
 
@@ -134,12 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TwitterIntegrationEntityListing {\n");
+            sb.Append("class ContactListingResponse {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
+            sb.Append("  ContactsCount: ").Append(ContactsCount).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
@@ -171,15 +182,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TwitterIntegrationEntityListing);
+            return this.Equals(obj as ContactListingResponse);
         }
 
         /// <summary>
-        /// Returns true if TwitterIntegrationEntityListing instances are equal
+        /// Returns true if ContactListingResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TwitterIntegrationEntityListing to be compared</param>
+        /// <param name="other">Instance of ContactListingResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TwitterIntegrationEntityListing other)
+        public bool Equals(ContactListingResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -205,6 +216,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
+                ) &&
+                (
+                    this.ContactsCount == other.ContactsCount ||
+                    this.ContactsCount != null &&
+                    this.ContactsCount.Equals(other.ContactsCount)
                 ) &&
                 (
                     this.PreviousUri == other.PreviousUri ||
@@ -260,6 +276,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
+
+                if (this.ContactsCount != null)
+                    hash = hash * 59 + this.ContactsCount.GetHashCode();
 
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();

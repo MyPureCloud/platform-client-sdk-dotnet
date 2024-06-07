@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Audiohook,
             
             /// <summary>
+            /// Enum Openmessaging for "open-messaging"
+            /// </summary>
+            [EnumMember(Value = "open-messaging")]
+            Openmessaging,
+            
+            /// <summary>
             /// Enum Api for "api"
             /// </summary>
             [EnumMember(Value = "api")]

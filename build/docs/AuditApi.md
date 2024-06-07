@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuditsQueryTransactionIdResults**](AuditApi.html#getauditsquerytransactionidresults) | **Get** /api/v2/audits/query/{transactionId}/results | Get results of audit query |
 | [**PostAuditsQuery**](AuditApi.html#postauditsquery) | **Post** /api/v2/audits/query | Create audit query execution |
 | [**PostAuditsQueryRealtime**](AuditApi.html#postauditsqueryrealtime) | **Post** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
+| [**PostAuditsQueryRealtimeRelated**](AuditApi.html#postauditsqueryrealtimerelated) | **Post** /api/v2/audits/query/realtime/related | Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id. |
 {: class="table table-striped"}
 
 <a name="getauditsqueryrealtimeservicemapping"></a>
@@ -394,4 +395,69 @@ namespace Example
 ### Return type
 
 [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html)
+
+<a name="postauditsqueryrealtimerelated"></a>
+
+## [**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse.html) PostAuditsQueryRealtimeRelated (AuditRealtimeRelatedRequest body, List<string> expand = null)
+
+
+
+Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAuditsQueryRealtimeRelatedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuditApi();
+            var body = new AuditRealtimeRelatedRequest(); // AuditRealtimeRelatedRequest | query
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
+                AuditRealtimeRelatedResultsResponse result = apiInstance.PostAuditsQueryRealtimeRelated(body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuditApi.PostAuditsQueryRealtimeRelated: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AuditRealtimeRelatedRequest**](AuditRealtimeRelatedRequest.html)| query |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse.html)
 

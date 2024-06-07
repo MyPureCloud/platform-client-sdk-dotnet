@@ -273,6 +273,18 @@ namespace PureCloudPlatform.Client.V2.Model
             DataActionTooManyRequestsRemote,
             
             /// <summary>
+            /// Enum ActionExecutionFailed for "ACTION_EXECUTION_FAILED"
+            /// </summary>
+            [EnumMember(Value = "ACTION_EXECUTION_FAILED")]
+            ActionExecutionFailed,
+            
+            /// <summary>
+            /// Enum ActionExecutionFailedInvalidParameter for "ACTION_EXECUTION_FAILED_INVALID_PARAMETER"
+            /// </summary>
+            [EnumMember(Value = "ACTION_EXECUTION_FAILED_INVALID_PARAMETER")]
+            ActionExecutionFailedInvalidParameter,
+            
+            /// <summary>
             /// Enum DigitalRuleEvaluationFailed for "DIGITAL_RULE_EVALUATION_FAILED"
             /// </summary>
             [EnumMember(Value = "DIGITAL_RULE_EVALUATION_FAILED")]

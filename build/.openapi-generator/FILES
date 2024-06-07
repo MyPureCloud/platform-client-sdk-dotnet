@@ -124,6 +124,8 @@ docs/AggregateViewData.md
 docs/AggregationRange.md
 docs/AggregationResult.md
 docs/AggregationResultEntry.md
+docs/AiAnswer.md
+docs/AiScoring.md
 docs/AiScoringSettings.md
 docs/AlertListing.md
 docs/AlertNotification.md
@@ -274,6 +276,8 @@ docs/AuditQueryServiceMapping.md
 docs/AuditQuerySort.md
 docs/AuditRealtimeQueryRequest.md
 docs/AuditRealtimeQueryResultsResponse.md
+docs/AuditRealtimeRelatedRequest.md
+docs/AuditRealtimeRelatedResultsResponse.md
 docs/AuditSearchResult.md
 docs/AuditTopicAddressableEntityRef.md
 docs/AuditTopicAuditLogMessage.md
@@ -530,6 +534,9 @@ docs/CampaignEntityListing.md
 docs/CampaignInteraction.md
 docs/CampaignInteractions.md
 docs/CampaignLinesUtilization.md
+docs/CampaignOutboundLinesAllocation.md
+docs/CampaignOutboundLinesDistribution.md
+docs/CampaignOutboundLinesReservation.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -645,7 +652,6 @@ docs/Compliance.md
 docs/ComplianceResponse.md
 docs/Condition.md
 docs/ConditionalGroupRouting.md
-docs/ConditionalGroupRoutingCondition.md
 docs/ConditionalGroupRoutingRule.md
 docs/ConfigurationOverrides.md
 docs/ConfusionDetails.md
@@ -672,7 +678,9 @@ docs/ContactAddress.md
 docs/ContactAddressConditionSettings.md
 docs/ContactAddressTypeConditionSettings.md
 docs/ContactAddressableEntityRef.md
+docs/ContactBulkEditRequest.md
 docs/ContactBulkSearchCriteria.md
+docs/ContactBulkSearchParameters.md
 docs/ContactCallbackRequest.md
 docs/ContactCenterSettings.md
 docs/ContactColumnConditionSettings.md
@@ -694,6 +702,8 @@ docs/ContactListTemplate.md
 docs/ContactListTemplateBulkRetrieveBody.md
 docs/ContactListTemplateEntityListing.md
 docs/ContactListing.md
+docs/ContactListingRequest.md
+docs/ContactListingResponse.md
 docs/ContactPhoneNumberColumn.md
 docs/ContactSort.md
 docs/ContactableStatus.md
@@ -701,6 +711,7 @@ docs/ContactlistDownloadReadyExportUri.md
 docs/ContactlistDownloadReadyObject.md
 docs/ContactlistImportStatusImportStatus.md
 docs/ContactlistImportStatusObject.md
+docs/ContactsBulkOperationJob.md
 docs/ContactsExportRequest.md
 docs/ContentActions.md
 docs/ContentAttachment.md
@@ -1179,9 +1190,7 @@ docs/DeleteConversationsEmailMessagesDraftAttachment-example.txt
 docs/DeleteConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/DeleteConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
-docs/DeleteConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
-docs/DeleteConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/DeleteConversationsMessagingSetting-example.txt
 docs/DeleteConversationsMessagingSettingsDefault-example.txt
@@ -2075,8 +2084,6 @@ docs/GeneralTopic.md
 docs/GeneralTopicsEntityListing.md
 docs/GenerateBuForecastRequest.md
 docs/GenerateMeetingIdRequest.md
-docs/GenericActionEvent.md
-docs/GenericEventAction.md
 docs/GenericSAML.md
 docs/GenesysBotConnector.md
 docs/Geolocation.md
@@ -2331,12 +2338,8 @@ docs/GetConversationsMessagingIntegrationsFacebook-example.txt
 docs/GetConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsInstagram-example.txt
 docs/GetConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
-docs/GetConversationsMessagingIntegrationsLine-example.txt
-docs/GetConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsOpen-example.txt
 docs/GetConversationsMessagingIntegrationsOpenIntegrationId-example.txt
-docs/GetConversationsMessagingIntegrationsTwitter-example.txt
-docs/GetConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/GetConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/GetConversationsMessagingSetting-example.txt
@@ -2751,6 +2754,7 @@ docs/GetOutboundCampaign-example.txt
 docs/GetOutboundCampaignAgentownedmappingpreviewResults-example.txt
 docs/GetOutboundCampaignDiagnostics-example.txt
 docs/GetOutboundCampaignInteractions-example.txt
+docs/GetOutboundCampaignLinedistribution-example.txt
 docs/GetOutboundCampaignProgress-example.txt
 docs/GetOutboundCampaignStats-example.txt
 docs/GetOutboundCampaignrule-example.txt
@@ -3797,9 +3801,6 @@ docs/LineBase.md
 docs/LineBaseEntityListing.md
 docs/LineEntityListing.md
 docs/LineId.md
-docs/LineIntegration.md
-docs/LineIntegrationEntityListing.md
-docs/LineIntegrationRequest.md
 docs/LineStatus.md
 docs/LineUserId.md
 docs/LinkConfiguration.md
@@ -4266,7 +4267,6 @@ docs/PatchConversationsMessageParticipantCommunication-example.txt
 docs/PatchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
-docs/PatchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/PatchConversationsMessagingSetting-example.txt
@@ -4548,6 +4548,7 @@ docs/PostArchitectSystempromptHistory-example.txt
 docs/PostArchitectSystempromptResources-example.txt
 docs/PostAuditsQuery-example.txt
 docs/PostAuditsQueryRealtime-example.txt
+docs/PostAuditsQueryRealtimeRelated-example.txt
 docs/PostAuthorizationDivisionObject-example.txt
 docs/PostAuthorizationDivisionObject-example.txt
 docs/PostAuthorizationDivisionRestore-example.txt
@@ -4649,9 +4650,7 @@ docs/PostConversationsMessagesAgentless-example.txt
 docs/PostConversationsMessagesInboundOpen-example.txt
 docs/PostConversationsMessagingIntegrationsFacebook-example.txt
 docs/PostConversationsMessagingIntegrationsInstagram-example.txt
-docs/PostConversationsMessagingIntegrationsLine-example.txt
 docs/PostConversationsMessagingIntegrationsOpen-example.txt
-docs/PostConversationsMessagingIntegrationsTwitter-example.txt
 docs/PostConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup-example.txt
 docs/PostConversationsMessagingSettings-example.txt
@@ -4864,6 +4863,9 @@ docs/PostOutboundCampaignsProgress-example.txt
 docs/PostOutboundContactlistClear-example.txt
 docs/PostOutboundContactlistContacts-example.txt
 docs/PostOutboundContactlistContactsBulk-example.txt
+docs/PostOutboundContactlistContactsBulkRemove-example.txt
+docs/PostOutboundContactlistContactsBulkUpdate-example.txt
+docs/PostOutboundContactlistContactsSearch-example.txt
 docs/PostOutboundContactlistExport-example.txt
 docs/PostOutboundContactlistfilters-example.txt
 docs/PostOutboundContactlistfiltersBulkRetrieve-example.txt
@@ -5215,7 +5217,6 @@ docs/PutConversationsEmailMessagesDraft-example.txt
 docs/PutConversationsEmailRecordingstate-example.txt
 docs/PutConversationsKeyconfiguration-example.txt
 docs/PutConversationsMessageRecordingstate-example.txt
-docs/PutConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/PutConversationsMessagingSettingsDefault-example.txt
 docs/PutConversationsMessagingSupportedcontentDefault-example.txt
 docs/PutConversationsMessagingThreadingtimeline-example.txt
@@ -5748,8 +5749,11 @@ docs/ReportingTurnIntent.md
 docs/ReportingTurnIntentSlot.md
 docs/ReportingTurnKnowledge.md
 docs/ReportingTurnKnowledgeDocument.md
+docs/ReportingTurnKnowledgeEvents.md
 docs/ReportingTurnKnowledgeFeedback.md
+docs/ReportingTurnKnowledgeFeedbackEvent.md
 docs/ReportingTurnKnowledgeSearch.md
+docs/ReportingTurnKnowledgeSearchEvent.md
 docs/ReportingTurnsResponse.md
 docs/RequestConfig.md
 docs/RequestContext.md
@@ -6360,9 +6364,6 @@ docs/TtsSettings.md
 docs/TtsVoiceEntity.md
 docs/TtsVoiceEntityListing.md
 docs/TwitterId.md
-docs/TwitterIntegration.md
-docs/TwitterIntegrationEntityListing.md
-docs/TwitterIntegrationRequest.md
 docs/TypingSetting.md
 docs/UCI10n.md
 docs/UCIcon.md
@@ -7262,6 +7263,8 @@ src/PureCloudPlatform.Client.V2/Model/AggregateViewData.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationRange.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationResult.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationResultEntry.cs
+src/PureCloudPlatform.Client.V2/Model/AiAnswer.cs
+src/PureCloudPlatform.Client.V2/Model/AiScoring.cs
 src/PureCloudPlatform.Client.V2/Model/AiScoringSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AlertListing.cs
 src/PureCloudPlatform.Client.V2/Model/AlertNotification.cs
@@ -7404,6 +7407,8 @@ src/PureCloudPlatform.Client.V2/Model/AuditQueryServiceMapping.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQuerySort.cs
 src/PureCloudPlatform.Client.V2/Model/AuditRealtimeQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AuditRealtimeQueryResultsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AuditRealtimeRelatedRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AuditRealtimeRelatedResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AuditSearchResult.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicAuditLogMessage.cs
@@ -7656,6 +7661,9 @@ src/PureCloudPlatform.Client.V2/Model/CampaignEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignInteraction.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignInteractions.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignLinesUtilization.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesAllocation.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesDistribution.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesReservation.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignProgress.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRule.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRuleAction.cs
@@ -7765,7 +7773,6 @@ src/PureCloudPlatform.Client.V2/Model/Compliance.cs
 src/PureCloudPlatform.Client.V2/Model/ComplianceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Condition.cs
 src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRouting.cs
-src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRoutingCondition.cs
 src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRoutingRule.cs
 src/PureCloudPlatform.Client.V2/Model/ConfigurationOverrides.cs
 src/PureCloudPlatform.Client.V2/Model/ConfusionDetails.cs
@@ -7792,7 +7799,9 @@ src/PureCloudPlatform.Client.V2/Model/ContactAddress.cs
 src/PureCloudPlatform.Client.V2/Model/ContactAddressConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ContactAddressTypeConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ContactAddressableEntityRef.cs
+src/PureCloudPlatform.Client.V2/Model/ContactBulkEditRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactBulkSearchCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/ContactBulkSearchParameters.cs
 src/PureCloudPlatform.Client.V2/Model/ContactCallbackRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactCenterSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ContactColumnConditionSettings.cs
@@ -7814,6 +7823,8 @@ src/PureCloudPlatform.Client.V2/Model/ContactListTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListTemplateBulkRetrieveBody.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListTemplateEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ContactListing.cs
+src/PureCloudPlatform.Client.V2/Model/ContactListingRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ContactListingResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContactPhoneNumberColumn.cs
 src/PureCloudPlatform.Client.V2/Model/ContactSort.cs
 src/PureCloudPlatform.Client.V2/Model/ContactableStatus.cs
@@ -7821,6 +7832,7 @@ src/PureCloudPlatform.Client.V2/Model/ContactlistDownloadReadyExportUri.cs
 src/PureCloudPlatform.Client.V2/Model/ContactlistDownloadReadyObject.cs
 src/PureCloudPlatform.Client.V2/Model/ContactlistImportStatusImportStatus.cs
 src/PureCloudPlatform.Client.V2/Model/ContactlistImportStatusObject.cs
+src/PureCloudPlatform.Client.V2/Model/ContactsBulkOperationJob.cs
 src/PureCloudPlatform.Client.V2/Model/ContactsExportRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContentActions.cs
 src/PureCloudPlatform.Client.V2/Model/ContentAttachment.cs
@@ -8906,8 +8918,6 @@ src/PureCloudPlatform.Client.V2/Model/GeneralTopic.cs
 src/PureCloudPlatform.Client.V2/Model/GeneralTopicsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/GenerateBuForecastRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GenerateMeetingIdRequest.cs
-src/PureCloudPlatform.Client.V2/Model/GenericActionEvent.cs
-src/PureCloudPlatform.Client.V2/Model/GenericEventAction.cs
 src/PureCloudPlatform.Client.V2/Model/GenericSAML.cs
 src/PureCloudPlatform.Client.V2/Model/GenesysBotConnector.cs
 src/PureCloudPlatform.Client.V2/Model/Geolocation.cs
@@ -9430,9 +9440,6 @@ src/PureCloudPlatform.Client.V2/Model/LineBase.cs
 src/PureCloudPlatform.Client.V2/Model/LineBaseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LineEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LineId.cs
-src/PureCloudPlatform.Client.V2/Model/LineIntegration.cs
-src/PureCloudPlatform.Client.V2/Model/LineIntegrationEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/LineIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LineStatus.cs
 src/PureCloudPlatform.Client.V2/Model/LineUserId.cs
 src/PureCloudPlatform.Client.V2/Model/LinkConfiguration.cs
@@ -10300,8 +10307,11 @@ src/PureCloudPlatform.Client.V2/Model/ReportingTurnIntent.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnIntentSlot.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledge.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeDocument.cs
+src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeEvents.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeFeedback.cs
+src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeFeedbackEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeSearch.cs
+src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledgeSearchEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RequestConfig.cs
 src/PureCloudPlatform.Client.V2/Model/RequestContext.cs
@@ -10880,9 +10890,6 @@ src/PureCloudPlatform.Client.V2/Model/TtsSettings.cs
 src/PureCloudPlatform.Client.V2/Model/TtsVoiceEntity.cs
 src/PureCloudPlatform.Client.V2/Model/TtsVoiceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterId.cs
-src/PureCloudPlatform.Client.V2/Model/TwitterIntegration.cs
-src/PureCloudPlatform.Client.V2/Model/TwitterIntegrationEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/TwitterIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TypingSetting.cs
 src/PureCloudPlatform.Client.V2/Model/UCI10n.cs
 src/PureCloudPlatform.Client.V2/Model/UCIcon.cs

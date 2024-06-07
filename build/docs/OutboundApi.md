@@ -47,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignAgentownedmappingpreviewResults**](OutboundApi.html#getoutboundcampaignagentownedmappingpreviewresults) | **Get** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results | Get a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**GetOutboundCampaignDiagnostics**](OutboundApi.html#getoutboundcampaigndiagnostics) | **Get** /api/v2/outbound/campaigns/{campaignId}/diagnostics | Get campaign diagnostics |
 | [**GetOutboundCampaignInteractions**](OutboundApi.html#getoutboundcampaigninteractions) | **Get** /api/v2/outbound/campaigns/{campaignId}/interactions | Get dialer campaign interactions. |
+| [**GetOutboundCampaignLinedistribution**](OutboundApi.html#getoutboundcampaignlinedistribution) | **Get** /api/v2/outbound/campaigns/{campaignId}/linedistribution | Get line distribution information for campaigns using same Edge Group or Site as given campaign |
 | [**GetOutboundCampaignProgress**](OutboundApi.html#getoutboundcampaignprogress) | **Get** /api/v2/outbound/campaigns/{campaignId}/progress | Get campaign progress |
 | [**GetOutboundCampaignStats**](OutboundApi.html#getoutboundcampaignstats) | **Get** /api/v2/outbound/campaigns/{campaignId}/stats | Get statistics about a Dialer Campaign |
 | [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **Get** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
@@ -119,6 +120,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlistClear**](OutboundApi.html#postoutboundcontactlistclear) | **Post** /api/v2/outbound/contactlists/{contactListId}/clear | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
 | [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
 | [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
+| [**PostOutboundContactlistContactsBulkRemove**](OutboundApi.html#postoutboundcontactlistcontactsbulkremove) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/remove | Start an async job to delete contacts using a filter. |
+| [**PostOutboundContactlistContactsBulkUpdate**](OutboundApi.html#postoutboundcontactlistcontactsbulkupdate) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/update | Start an async job to bulk edit contacts. |
+| [**PostOutboundContactlistContactsSearch**](OutboundApi.html#postoutboundcontactlistcontactssearch) | **Post** /api/v2/outbound/contactlists/{contactListId}/contacts/search | Query contacts from a contact list. |
 | [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **Post** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
 | [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **Post** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
 | [**PostOutboundContactlistfiltersBulkRetrieve**](OutboundApi.html#postoutboundcontactlistfiltersbulkretrieve) | **Post** /api/v2/outbound/contactlistfilters/bulk/retrieve | Retrieve multiple contact list filters |
@@ -2711,6 +2715,81 @@ namespace Example
 ### Return type
 
 [**CampaignInteractions**](CampaignInteractions.html)
+
+<a name="getoutboundcampaignlinedistribution"></a>
+
+## [**CampaignOutboundLinesDistribution**](CampaignOutboundLinesDistribution.html) GetOutboundCampaignLinedistribution (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null)
+
+
+
+Get line distribution information for campaigns using same Edge Group or Site as given campaign
+
+Requires ANY permissions: 
+
+* outbound:lineDistribution:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignLinedistributionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var includeOnlyActiveCampaigns = true;  // bool? | If true will return only active Campaigns (optional)  (default to true)
+            var edgeGroupId = edgeGroupId_example;  // string | Edge group to be used in line distribution calculations instead of current Campaign's Edge Group. Campaign's Site and Edge Group are mutually exclusive. (optional) 
+            var siteId = siteId_example;  // string | Site to be used in line distribution calculations instead of current Campaign's Site.  Campaign's Site and Edge Group are mutually exclusive. (optional) 
+            var useWeight = true;  // bool? | Enable usage of weight, this value overrides current Campaign's setting in line distribution calculations (optional) 
+            var relativeWeight = 56;  // int? | Relative weight to be used in line distribution calculations instead of current Campaign's relative weight (optional) 
+            var outboundLineCount = 56;  // int? | The number of outbound lines to be used in line distribution calculations, instead of current Campaign's Outbound Lines Count (optional) 
+
+            try
+            { 
+                // Get line distribution information for campaigns using same Edge Group or Site as given campaign
+                CampaignOutboundLinesDistribution result = apiInstance.GetOutboundCampaignLinedistribution(campaignId, includeOnlyActiveCampaigns, edgeGroupId, siteId, useWeight, relativeWeight, outboundLineCount);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignLinedistribution: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **includeOnlyActiveCampaigns** | **bool?**| If true will return only active Campaigns | [optional] [default to true] |
+| **edgeGroupId** | **string**| Edge group to be used in line distribution calculations instead of current Campaign&#39;s Edge Group. Campaign&#39;s Site and Edge Group are mutually exclusive. | [optional]  |
+| **siteId** | **string**| Site to be used in line distribution calculations instead of current Campaign&#39;s Site.  Campaign&#39;s Site and Edge Group are mutually exclusive. | [optional]  |
+| **useWeight** | **bool?**| Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations | [optional]  |
+| **relativeWeight** | **int?**| Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight | [optional]  |
+| **outboundLineCount** | **int?**| The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignOutboundLinesDistribution**](CampaignOutboundLinesDistribution.html)
 
 <a name="getoutboundcampaignprogress"></a>
 
@@ -7581,6 +7660,201 @@ namespace Example
 ### Return type
 
 [**List<DialerContact>**](DialerContact.html)
+
+<a name="postoutboundcontactlistcontactsbulkremove"></a>
+
+## [**ContactsBulkOperationJob**](ContactsBulkOperationJob.html) PostOutboundContactlistContactsBulkRemove (string contactListId, ContactBulkSearchParameters body)
+
+
+
+Start an async job to delete contacts using a filter.
+
+Requires ANY permissions: 
+
+* outbound:contact:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistContactsBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var body = new ContactBulkSearchParameters(); // ContactBulkSearchParameters | Contact filter information.
+
+            try
+            { 
+                // Start an async job to delete contacts using a filter.
+                ContactsBulkOperationJob result = apiInstance.PostOutboundContactlistContactsBulkRemove(contactListId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistContactsBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **body** | [**ContactBulkSearchParameters**](ContactBulkSearchParameters.html)| Contact filter information. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactsBulkOperationJob**](ContactsBulkOperationJob.html)
+
+<a name="postoutboundcontactlistcontactsbulkupdate"></a>
+
+## [**ContactsBulkOperationJob**](ContactsBulkOperationJob.html) PostOutboundContactlistContactsBulkUpdate (string contactListId, ContactBulkEditRequest body)
+
+
+
+Start an async job to bulk edit contacts.
+
+Requires ANY permissions: 
+
+* outbound:contact:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistContactsBulkUpdateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var body = new ContactBulkEditRequest(); // ContactBulkEditRequest | Contact bulk edit request information.
+
+            try
+            { 
+                // Start an async job to bulk edit contacts.
+                ContactsBulkOperationJob result = apiInstance.PostOutboundContactlistContactsBulkUpdate(contactListId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistContactsBulkUpdate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **body** | [**ContactBulkEditRequest**](ContactBulkEditRequest.html)| Contact bulk edit request information. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactsBulkOperationJob**](ContactsBulkOperationJob.html)
+
+<a name="postoutboundcontactlistcontactssearch"></a>
+
+## [**ContactListingResponse**](ContactListingResponse.html) PostOutboundContactlistContactsSearch (string contactListId, ContactListingRequest body)
+
+
+
+Query contacts from a contact list.
+
+Requires ANY permissions: 
+
+* outbound:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistContactsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var body = new ContactListingRequest(); // ContactListingRequest | Contact search parameters.
+
+            try
+            { 
+                // Query contacts from a contact list.
+                ContactListingResponse result = apiInstance.PostOutboundContactlistContactsSearch(contactListId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistContactsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **body** | [**ContactListingRequest**](ContactListingRequest.html)| Contact search parameters. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListingResponse**](ContactListingResponse.html)
 
 <a name="postoutboundcontactlistexport"></a>
 
