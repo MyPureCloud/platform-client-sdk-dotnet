@@ -20,7 +20,7 @@ namespace PureCloudPlatform.Client.V2.Client
         [Description("https://api.mypurecloud.jp")]
         ap_northeast_1,
         [Description("https://api.mypurecloud.com.au")]
-        ap_southeast_1,
+        ap_southeast_2,
         [Description("https://api.usw2.pure.cloud")]
         us_west_2,
         [Description("https://api.cac1.pure.cloud")]

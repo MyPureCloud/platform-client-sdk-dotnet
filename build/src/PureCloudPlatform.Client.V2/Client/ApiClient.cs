@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "203.0.0");
+            request.AddHeader("purecloud-sdk", "204.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -433,6 +433,10 @@ namespace PureCloudPlatform.Client.V2.Client
                     flattenedString.Append(param);
                 }
                 return flattenedString.ToString();
+            }
+            else if (obj is bool)
+            {
+                return Convert.ToString(obj).ToLower();
             }
             else
                 return Convert.ToString (obj);

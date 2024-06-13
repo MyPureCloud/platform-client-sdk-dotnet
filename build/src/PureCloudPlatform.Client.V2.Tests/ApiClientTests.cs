@@ -394,7 +394,7 @@ public class ApiClientTests
             case "mypurecloud.jp":
                 return PureCloudRegionHosts.ap_northeast_1;
             case "mypurecloud.com.au":
-                return PureCloudRegionHosts.ap_southeast_1;
+                return PureCloudRegionHosts.ap_southeast_2;
             case "usw2.pure.cloud":
                 return PureCloudRegionHosts.us_west_2;
             case "cac1.pure.cloud":
