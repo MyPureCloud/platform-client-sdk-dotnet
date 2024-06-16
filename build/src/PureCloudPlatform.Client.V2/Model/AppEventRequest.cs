@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. These attributes provide additional context about the event. For example, items_in_cart or subscription_level..</param>
         /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events, (e.g. email, lastName, cellPhone). Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions..</param>
-        /// <param name="CustomerCookieId">Cookie ID of the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution. (required).</param>
+        /// <param name="CustomerCookieId">A UUID representing the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution. (required).</param>
         /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         public AppEventRequest(string EventName = null, string ScreenName = null, JourneyApp App = null, RequestDevice Device = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, string ReferrerUrl = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, string CustomerCookieId = null, DateTime? CreatedDate = null)
         {
@@ -149,9 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Cookie ID of the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution.
+        /// A UUID representing the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution.
         /// </summary>
-        /// <value>Cookie ID of the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution.</value>
+        /// <value>A UUID representing the customer associated with the app event. This is expected to be set per application install or device and can be used to identify a single customer across multiple sessions. This identifier, along with others passed as traits, is used for identity resolution.</value>
         [DataMember(Name="customerCookieId", EmitDefaultValue=false)]
         public string CustomerCookieId { get; set; }
 

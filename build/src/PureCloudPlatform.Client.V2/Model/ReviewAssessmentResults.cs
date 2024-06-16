@@ -21,11 +21,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReviewAssessmentResults" /> class.
         /// </summary>
-        public ReviewAssessmentResults()
+        /// <param name="ByAssignees">If true, learning assignment results can be seen in detail by assignees.</param>
+        /// <param name="ByViewers">If true, learning assignment results can be seen in detail by people who are eligible to view.</param>
+        public ReviewAssessmentResults(bool? ByAssignees = null, bool? ByViewers = null)
         {
+            this.ByAssignees = ByAssignees;
+            this.ByViewers = ByViewers;
             
         }
         
+
+
+        /// <summary>
+        /// If true, learning assignment results can be seen in detail by assignees
+        /// </summary>
+        /// <value>If true, learning assignment results can be seen in detail by assignees</value>
+        [DataMember(Name="byAssignees", EmitDefaultValue=false)]
+        public bool? ByAssignees { get; set; }
+
+
+
+        /// <summary>
+        /// If true, learning assignment results can be seen in detail by people who are eligible to view
+        /// </summary>
+        /// <value>If true, learning assignment results can be seen in detail by people who are eligible to view</value>
+        [DataMember(Name="byViewers", EmitDefaultValue=false)]
+        public bool? ByViewers { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +58,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ReviewAssessmentResults {\n");
 
+            sb.Append("  ByAssignees: ").Append(ByAssignees).Append("\n");
+            sb.Append("  ByViewers: ").Append(ByViewers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.ByAssignees == other.ByAssignees ||
+                    this.ByAssignees != null &&
+                    this.ByAssignees.Equals(other.ByAssignees)
+                ) &&
+                (
+                    this.ByViewers == other.ByViewers ||
+                    this.ByViewers != null &&
+                    this.ByViewers.Equals(other.ByViewers)
+                );
         }
 
         /// <summary>
@@ -89,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.ByAssignees != null)
+                    hash = hash * 59 + this.ByAssignees.GetHashCode();
+
+                if (this.ByViewers != null)
+                    hash = hash * 59 + this.ByViewers.GetHashCode();
+
                 return hash;
             }
         }

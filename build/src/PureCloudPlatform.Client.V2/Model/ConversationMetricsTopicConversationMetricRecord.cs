@@ -547,6 +547,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Failed,
             
             /// <summary>
+            /// Enum Published for "Published"
+            /// </summary>
+            [EnumMember(Value = "Published")]
+            Published,
+            
+            /// <summary>
             /// Enum Queued for "Queued"
             /// </summary>
             [EnumMember(Value = "Queued")]
@@ -1295,11 +1301,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TeamId">The team ID the user is a member of.</param>
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="UserId">Unique identifier for the user.</param>
+        /// <param name="VideoPresent">Flag indicating if video is present.</param>
         /// <param name="WaitingInteractionCounts">Number of waiting interactions for each predictive routing attempt.</param>
         /// <param name="WrapUpCode">Wrap up code.</param>
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ErrorCode = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
+        public ConversationMetricsTopicConversationMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ErrorCode = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowInType = null, string FlowOutType = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, List<string> KnowledgeBaseIds = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StationId = null, string TeamId = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<ConversationMetricsTopicConversationProposedAgent> ProposedAgents = null, List<ConversationMetricsTopicConversationScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1379,6 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TeamId = TeamId;
             this.UsedRouting = UsedRouting;
             this.UserId = UserId;
+            this.VideoPresent = VideoPresent;
             this.WaitingInteractionCounts = WaitingInteractionCounts;
             this.WrapUpCode = WrapUpCode;
             this.ProposedAgents = ProposedAgents;
@@ -2007,6 +2015,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag indicating if video is present
+        /// </summary>
+        /// <value>Flag indicating if video is present</value>
+        [DataMember(Name="videoPresent", EmitDefaultValue=false)]
+        public bool? VideoPresent { get; set; }
+
+
+
+        /// <summary>
         /// Number of waiting interactions for each predictive routing attempt
         /// </summary>
         /// <value>Number of waiting interactions for each predictive routing attempt</value>
@@ -2128,6 +2145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  VideoPresent: ").Append(VideoPresent).Append("\n");
             sb.Append("  WaitingInteractionCounts: ").Append(WaitingInteractionCounts).Append("\n");
             sb.Append("  WrapUpCode: ").Append(WrapUpCode).Append("\n");
             sb.Append("  ProposedAgents: ").Append(ProposedAgents).Append("\n");
@@ -2563,6 +2581,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserId.Equals(other.UserId)
                 ) &&
                 (
+                    this.VideoPresent == other.VideoPresent ||
+                    this.VideoPresent != null &&
+                    this.VideoPresent.Equals(other.VideoPresent)
+                ) &&
+                (
                     this.WaitingInteractionCounts == other.WaitingInteractionCounts ||
                     this.WaitingInteractionCounts != null &&
                     this.WaitingInteractionCounts.SequenceEqual(other.WaitingInteractionCounts)
@@ -2828,6 +2851,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+
+                if (this.VideoPresent != null)
+                    hash = hash * 59 + this.VideoPresent.GetHashCode();
 
                 if (this.WaitingInteractionCounts != null)
                     hash = hash * 59 + this.WaitingInteractionCounts.GetHashCode();

@@ -53,7 +53,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaskSelectors">Mask patterns that will apply to pages being shared.</param>
         /// <param name="Channels">Cobrowse channels for web messenger.</param>
         /// <param name="ReadonlySelectors">Readonly patterns that will apply to pages being shared.</param>
-        public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, bool? AllowAgentNavigation = null, List<string> MaskSelectors = null, List<ChannelsEnum> Channels = null, List<string> ReadonlySelectors = null)
+        /// <param name="PauseCriteria">Pause criteria that will pause cobrowse if some of them are met in the user's URL.</param>
+        public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, bool? AllowAgentNavigation = null, List<string> MaskSelectors = null, List<ChannelsEnum> Channels = null, List<string> ReadonlySelectors = null, List<PauseCriteria> PauseCriteria = null)
         {
             this.Enabled = Enabled;
             this.AllowAgentControl = AllowAgentControl;
@@ -61,6 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaskSelectors = MaskSelectors;
             this.Channels = Channels;
             this.ReadonlySelectors = ReadonlySelectors;
+            this.PauseCriteria = PauseCriteria;
             
         }
         
@@ -119,6 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ReadonlySelectors { get; set; }
 
 
+
+        /// <summary>
+        /// Pause criteria that will pause cobrowse if some of them are met in the user's URL
+        /// </summary>
+        /// <value>Pause criteria that will pause cobrowse if some of them are met in the user's URL</value>
+        [DataMember(Name="pauseCriteria", EmitDefaultValue=false)]
+        public List<PauseCriteria> PauseCriteria { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaskSelectors: ").Append(MaskSelectors).Append("\n");
             sb.Append("  Channels: ").Append(Channels).Append("\n");
             sb.Append("  ReadonlySelectors: ").Append(ReadonlySelectors).Append("\n");
+            sb.Append("  PauseCriteria: ").Append(PauseCriteria).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReadonlySelectors == other.ReadonlySelectors ||
                     this.ReadonlySelectors != null &&
                     this.ReadonlySelectors.SequenceEqual(other.ReadonlySelectors)
+                ) &&
+                (
+                    this.PauseCriteria == other.PauseCriteria ||
+                    this.PauseCriteria != null &&
+                    this.PauseCriteria.SequenceEqual(other.PauseCriteria)
                 );
         }
 
@@ -234,6 +251,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ReadonlySelectors != null)
                     hash = hash * 59 + this.ReadonlySelectors.GetHashCode();
+
+                if (this.PauseCriteria != null)
+                    hash = hash * 59 + this.PauseCriteria.GetHashCode();
 
                 return hash;
             }

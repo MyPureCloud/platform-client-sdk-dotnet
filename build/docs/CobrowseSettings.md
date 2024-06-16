@@ -13,6 +13,7 @@ title: CobrowseSettings
 | **MaskSelectors** | **List&lt;string&gt;** | Mask patterns that will apply to pages being shared | [optional] |
 | **Channels** | **List&lt;string&gt;** | Cobrowse channels for web messenger | [optional] |
 | **ReadonlySelectors** | **List&lt;string&gt;** | Readonly patterns that will apply to pages being shared | [optional] |
+| **PauseCriteria** | [**List&lt;PauseCriteria&gt;**](PauseCriteria.html) | Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL | [optional] |
 {: class="table table-striped"}
 
 

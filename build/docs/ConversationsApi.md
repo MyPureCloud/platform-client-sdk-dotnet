@@ -93,7 +93,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingSetting**](ConversationsApi.html#getconversationsmessagingsetting) | **Get** /api/v2/conversations/messaging/settings/{messageSettingId} | Get a messaging setting |
 | [**GetConversationsMessagingSettings**](ConversationsApi.html#getconversationsmessagingsettings) | **Get** /api/v2/conversations/messaging/settings | Get a list of messaging settings |
 | [**GetConversationsMessagingSettingsDefault**](ConversationsApi.html#getconversationsmessagingsettingsdefault) | **Get** /api/v2/conversations/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
-| [**GetConversationsMessagingSticker**](ConversationsApi.html#getconversationsmessagingsticker) | **Get** /api/v2/conversations/messaging/stickers/{messengerType} | Get a list of Messaging Stickers (Deprecated) |
 | [**GetConversationsMessagingSupportedcontent**](ConversationsApi.html#getconversationsmessagingsupportedcontent) | **Get** /api/v2/conversations/messaging/supportedcontent | Get a list of Supported Content profiles |
 | [**GetConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#getconversationsmessagingsupportedcontentdefault) | **Get** /api/v2/conversations/messaging/supportedcontent/default | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
 | [**GetConversationsMessagingSupportedcontentSupportedContentId**](ConversationsApi.html#getconversationsmessagingsupportedcontentsupportedcontentid) | **Get** /api/v2/conversations/messaging/supportedcontent/{supportedContentId} | Get a supported content profile |
@@ -191,6 +190,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsApi.html#postconversationsemailmessagesdraftattachmentscopy) | **Post** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy | Copy attachments from an email message to the current draft. |
 | [**PostConversationsEmailParticipantCommunicationWrapup**](ConversationsApi.html#postconversationsemailparticipantcommunicationwrapup) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **Post** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsEmailReconnect**](ConversationsApi.html#postconversationsemailreconnect) | **Post** /api/v2/conversations/emails/{conversationId}/reconnect | Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **Post** /api/v2/conversations/emails | Create an email conversation |
 | [**PostConversationsEmailsAgentless**](ConversationsApi.html#postconversationsemailsagentless) | **Post** /api/v2/conversations/emails/agentless | Create an email conversation, per API |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **Post** /api/v2/conversations/faxes | Create Fax Conversation |
@@ -5752,75 +5752,6 @@ This endpoint does require any parameters.
 ### Return type
 
 [**MessagingSetting**](MessagingSetting.html)
-
-<a name="getconversationsmessagingsticker"></a>
-
-## [**MessagingStickerEntityListing**](MessagingStickerEntityListing.html) GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get a list of Messaging Stickers (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-Requires ALL permissions: 
-
-* conversation:message:create
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetConversationsMessagingStickerExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new ConversationsApi();
-            var messengerType = messengerType_example;  // string | Messenger Type
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            { 
-                // Get a list of Messaging Stickers (Deprecated)
-                MessagingStickerEntityListing result = apiInstance.GetConversationsMessagingSticker(messengerType, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingSticker: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **messengerType** | **string**| Messenger Type | <br />**Values**: line |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**MessagingStickerEntityListing**](MessagingStickerEntityListing.html)
 
 <a name="getconversationsmessagingsupportedcontent"></a>
 
@@ -12194,6 +12125,68 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postconversationsemailreconnect"></a>
+
+## void PostConversationsEmailReconnect (string conversationId)
+
+
+
+Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+
+Requires ANY permissions: 
+
+* conversation:communication:reconnect
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsEmailReconnectExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+
+            try
+            { 
+                // Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+                apiInstance.PostConversationsEmailReconnect(conversationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsEmailReconnect: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type

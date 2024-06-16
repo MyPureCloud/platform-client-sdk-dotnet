@@ -2241,34 +2241,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessagingSetting> GetConversationsMessagingSettingsDefaultWithHttpInfo ();
 
         /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated)
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>MessagingStickerEntityListing</returns>
-        [Obsolete]
-        MessagingStickerEntityListing GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated)
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of MessagingStickerEntityListing</returns>
-        [Obsolete]
-        ApiResponse<MessagingStickerEntityListing> GetConversationsMessagingStickerWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
         /// Get a list of Supported Content profiles
         /// </summary>
         /// <remarks>
@@ -4887,6 +4859,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> PostConversationsEmailParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body);
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns></returns>
+        
+        void PostConversationsEmailReconnect (string conversationId);
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostConversationsEmailReconnectWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Create an email conversation
@@ -8357,34 +8353,6 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<MessagingSetting>> GetConversationsMessagingSettingsDefaultAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated)
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of MessagingStickerEntityListing</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<MessagingStickerEntityListing> GetConversationsMessagingStickerAsync (string messengerType, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated)
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (MessagingStickerEntityListing)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<MessagingStickerEntityListing>> GetConversationsMessagingStickerAsyncWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
         /// Get a list of Supported Content profiles
         /// </summary>
         /// <remarks>
@@ -11003,6 +10971,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body);
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostConversationsEmailReconnectAsync (string conversationId);
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailReconnectAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Create an email conversation
@@ -31040,229 +31032,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MessagingSetting>(localVarStatusCode,
                 localVarHeaders,
                 (MessagingSetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingSetting)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated) 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>MessagingStickerEntityListing</returns>
-        [Obsolete]
-        public MessagingStickerEntityListing GetConversationsMessagingSticker (string messengerType, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<MessagingStickerEntityListing> localVarResponse = GetConversationsMessagingStickerWithHttpInfo(messengerType, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated) 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of MessagingStickerEntityListing</returns>
-        [Obsolete]
-        public ApiResponse< MessagingStickerEntityListing > GetConversationsMessagingStickerWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null)
-        { 
-            // verify the required parameter 'messengerType' is set
-            if (messengerType == null)
-                throw new ApiException(400, "Missing required parameter 'messengerType' when calling ConversationsApi->GetConversationsMessagingSticker");
-
-            var localVarPath = "/api/v2/conversations/messaging/stickers/{messengerType}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (messengerType != null) localVarPathParams.Add("messengerType", this.Configuration.ApiClient.ParameterToString(messengerType));
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSticker: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSticker: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<MessagingStickerEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (MessagingStickerEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingStickerEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated) 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of MessagingStickerEntityListing</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<MessagingStickerEntityListing> GetConversationsMessagingStickerAsync (string messengerType, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<MessagingStickerEntityListing> localVarResponse = await GetConversationsMessagingStickerAsyncWithHttpInfo(messengerType, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a list of Messaging Stickers (Deprecated) 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="messengerType">Messenger Type</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (MessagingStickerEntityListing)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<MessagingStickerEntityListing>> GetConversationsMessagingStickerAsyncWithHttpInfo (string messengerType, int? pageSize = null, int? pageNumber = null)
-        { 
-            // verify the required parameter 'messengerType' is set
-            if (messengerType == null)
-                throw new ApiException(400, "Missing required parameter 'messengerType' when calling ConversationsApi->GetConversationsMessagingSticker");
-            
-
-            var localVarPath = "/api/v2/conversations/messaging/stickers/{messengerType}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (messengerType != null) localVarPathParams.Add("messengerType", this.Configuration.ApiClient.ParameterToString(messengerType));
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
-                                                             .Select(header => new
-                                                         {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
-                                                        ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSticker: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingSticker: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<MessagingStickerEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (MessagingStickerEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingStickerEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -54140,6 +53909,215 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailParticipantReplace: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailParticipantReplace: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns></returns>
+        
+        public void PostConversationsEmailReconnect (string conversationId)
+        {
+             PostConversationsEmailReconnectWithHttpInfo(conversationId);
+        }
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostConversationsEmailReconnectWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailReconnect");
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/reconnect";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailReconnect: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailReconnect: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostConversationsEmailReconnectAsync (string conversationId)
+        {
+             await PostConversationsEmailReconnectAsyncWithHttpInfo(conversationId);
+
+        }
+
+        /// <summary>
+        /// Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailReconnectAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailReconnect");
+            
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/reconnect";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailReconnect: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailReconnect: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,

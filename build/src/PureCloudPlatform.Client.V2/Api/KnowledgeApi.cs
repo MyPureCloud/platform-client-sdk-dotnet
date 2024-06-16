@@ -1204,9 +1204,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>OperationListing</returns>
         
-        OperationListing GetKnowledgeKnowledgebaseOperations (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null);
+        OperationListing GetKnowledgeKnowledgebaseOperations (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null);
 
         /// <summary>
         /// Get operations
@@ -1224,9 +1225,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of OperationListing</returns>
         
-        ApiResponse<OperationListing> GetKnowledgeKnowledgebaseOperationsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null);
+        ApiResponse<OperationListing> GetKnowledgeKnowledgebaseOperationsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null);
 
         /// <summary>
         /// Get ids of operation creator users and oauth clients
@@ -3994,9 +3996,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>Task of OperationListing</returns>
         
-        System.Threading.Tasks.Task<OperationListing> GetKnowledgeKnowledgebaseOperationsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null);
+        System.Threading.Tasks.Task<OperationListing> GetKnowledgeKnowledgebaseOperationsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null);
 
         /// <summary>
         /// Get operations
@@ -4014,9 +4017,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (OperationListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OperationListing>> GetKnowledgeKnowledgebaseOperationsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null);
+        System.Threading.Tasks.Task<ApiResponse<OperationListing>> GetKnowledgeKnowledgebaseOperationsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null);
 
         /// <summary>
         /// Get ids of operation creator users and oauth clients
@@ -14771,11 +14775,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>OperationListing</returns>
         
-        public OperationListing GetKnowledgeKnowledgebaseOperations (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null)
+        public OperationListing GetKnowledgeKnowledgebaseOperations (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null)
         {
-             ApiResponse<OperationListing> localVarResponse = GetKnowledgeKnowledgebaseOperationsWithHttpInfo(knowledgeBaseId, before, after, pageSize, userId, type, status, interval);
+             ApiResponse<OperationListing> localVarResponse = GetKnowledgeKnowledgebaseOperationsWithHttpInfo(knowledgeBaseId, before, after, pageSize, userId, type, status, interval, sourceId);
              return localVarResponse.Data;
         }
 
@@ -14793,9 +14798,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of OperationListing</returns>
         
-        public ApiResponse< OperationListing > GetKnowledgeKnowledgebaseOperationsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null)
+        public ApiResponse< OperationListing > GetKnowledgeKnowledgebaseOperationsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -14841,6 +14847,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (type != null) type.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (sourceId != null) sourceId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("sourceId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -14898,11 +14905,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>Task of OperationListing</returns>
         
-        public async System.Threading.Tasks.Task<OperationListing> GetKnowledgeKnowledgebaseOperationsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null)
+        public async System.Threading.Tasks.Task<OperationListing> GetKnowledgeKnowledgebaseOperationsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null)
         {
-             ApiResponse<OperationListing> localVarResponse = await GetKnowledgeKnowledgebaseOperationsAsyncWithHttpInfo(knowledgeBaseId, before, after, pageSize, userId, type, status, interval);
+             ApiResponse<OperationListing> localVarResponse = await GetKnowledgeKnowledgebaseOperationsAsyncWithHttpInfo(knowledgeBaseId, before, after, pageSize, userId, type, status, interval, sourceId);
              return localVarResponse.Data;
 
         }
@@ -14921,9 +14929,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">If specified, retrieves operations with specified operation type, comma separated values expected. (optional)</param>
         /// <param name="status">If specified, retrieves operations with specified operation status, comma separated values expected. (optional)</param>
         /// <param name="interval">Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="sourceId">If specified, retrieves operations associated with source ids, comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (OperationListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OperationListing>> GetKnowledgeKnowledgebaseOperationsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OperationListing>> GetKnowledgeKnowledgebaseOperationsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -14970,6 +14979,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (type != null) type.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (status != null) status.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("status", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (sourceId != null) sourceId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("sourceId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

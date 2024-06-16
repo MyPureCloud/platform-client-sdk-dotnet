@@ -948,9 +948,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>AddressableEntityListing</returns>
+        /// <returns>JourneyViewListing</returns>
         
-        AddressableEntityListing GetJourneyViews ();
+        JourneyViewListing GetJourneyViews ();
 
         /// <summary>
         /// Get a list of Journey Views
@@ -960,9 +960,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of AddressableEntityListing</returns>
+        /// <returns>ApiResponse of JourneyViewListing</returns>
         
-        ApiResponse<AddressableEntityListing> GetJourneyViewsWithHttpInfo ();
+        ApiResponse<JourneyViewListing> GetJourneyViewsWithHttpInfo ();
 
         /// <summary>
         /// Get an Event Definition
@@ -2484,9 +2484,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of AddressableEntityListing</returns>
+        /// <returns>Task of JourneyViewListing</returns>
         
-        System.Threading.Tasks.Task<AddressableEntityListing> GetJourneyViewsAsync ();
+        System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync ();
 
         /// <summary>
         /// Get a list of Journey Views
@@ -2496,9 +2496,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (AddressableEntityListing)</returns>
+        /// <returns>Task of ApiResponse (JourneyViewListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AddressableEntityListing>> GetJourneyViewsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get an Event Definition
@@ -10639,11 +10639,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>AddressableEntityListing</returns>
+        /// <returns>JourneyViewListing</returns>
         
-        public AddressableEntityListing GetJourneyViews ()
+        public JourneyViewListing GetJourneyViews ()
         {
-             ApiResponse<AddressableEntityListing> localVarResponse = GetJourneyViewsWithHttpInfo();
+             ApiResponse<JourneyViewListing> localVarResponse = GetJourneyViewsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -10653,9 +10653,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of AddressableEntityListing</returns>
+        /// <returns>ApiResponse of JourneyViewListing</returns>
         
-        public ApiResponse< AddressableEntityListing > GetJourneyViewsWithHttpInfo ()
+        public ApiResponse< JourneyViewListing > GetJourneyViewsWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/journey/views";
@@ -10725,9 +10725,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetJourneyViews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AddressableEntityListing>(localVarStatusCode,
+            return new ApiResponse<JourneyViewListing>(localVarStatusCode,
                 localVarHeaders,
-                (AddressableEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddressableEntityListing)),
+                (JourneyViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10739,11 +10739,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of AddressableEntityListing</returns>
+        /// <returns>Task of JourneyViewListing</returns>
         
-        public async System.Threading.Tasks.Task<AddressableEntityListing> GetJourneyViewsAsync ()
+        public async System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync ()
         {
-             ApiResponse<AddressableEntityListing> localVarResponse = await GetJourneyViewsAsyncWithHttpInfo();
+             ApiResponse<JourneyViewListing> localVarResponse = await GetJourneyViewsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -10754,9 +10754,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (AddressableEntityListing)</returns>
+        /// <returns>Task of ApiResponse (JourneyViewListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AddressableEntityListing>> GetJourneyViewsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/journey/views";
@@ -10826,9 +10826,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetJourneyViews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AddressableEntityListing>(localVarStatusCode,
+            return new ApiResponse<JourneyViewListing>(localVarStatusCode,
                 localVarHeaders,
-                (AddressableEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddressableEntityListing)),
+                (JourneyViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyViewListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

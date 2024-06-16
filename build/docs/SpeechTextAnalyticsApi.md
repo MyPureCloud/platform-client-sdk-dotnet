@@ -7,12 +7,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteSpeechandtextanalyticsCategory**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticscategory) | **Delete** /api/v2/speechandtextanalytics/categories/{categoryId} | Delete a Speech &amp; Text Analytics category by ID |
 | [**DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid) | **Delete** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Delete a Speech &amp; Text Analytics DictionaryFeedback by Id |
 | [**DeleteSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticsprogram) | **Delete** /api/v2/speechandtextanalytics/programs/{programId} | Delete a Speech &amp; Text Analytics program by id |
 | [**DeleteSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticssentimentfeedback) | **Delete** /api/v2/speechandtextanalytics/sentimentfeedback | Delete All Speech &amp; Text Analytics SentimentFeedback |
 | [**DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticssentimentfeedbacksentimentfeedbackid) | **Delete** /api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId} | Delete a Speech &amp; Text Analytics SentimentFeedback by Id |
 | [**DeleteSpeechandtextanalyticsTopic**](SpeechTextAnalyticsApi.html#deletespeechandtextanalyticstopic) | **Delete** /api/v2/speechandtextanalytics/topics/{topicId} | Delete a Speech &amp; Text Analytics topic by id |
+| [**GetSpeechandtextanalyticsCategories**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticscategories) | **Get** /api/v2/speechandtextanalytics/categories | Get the list of Speech and Text Analytics categories |
+| [**GetSpeechandtextanalyticsCategory**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticscategory) | **Get** /api/v2/speechandtextanalytics/categories/{categoryId} | Get a Speech &amp; Text Analytics Category by ID |
 | [**GetSpeechandtextanalyticsConversation**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversation) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId} | Get Speech and Text Analytics for a specific conversation |
+| [**GetSpeechandtextanalyticsConversationCategories**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversationcategories) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/categories | Get the list of detected Speech and Text Analytics categories of conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversationcommunicationtranscripturl) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturls**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversationcommunicationtranscripturls) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsdictionaryfeedback) | **Get** /api/v2/speechandtextanalytics/dictionaryfeedback | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
@@ -36,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicsgeneralstatus) | **Get** /api/v2/speechandtextanalytics/topics/general/status | Get the list of general topics from the org and the system with their current status |
 | [**GetSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicspublishjob) | **Get** /api/v2/speechandtextanalytics/topics/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**PatchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#patchspeechandtextanalyticssettings) | **Patch** /api/v2/speechandtextanalytics/settings | Patch Speech And Text Analytics Settings |
+| [**PostSpeechandtextanalyticsCategories**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticscategories) | **Post** /api/v2/speechandtextanalytics/categories | Create new Speech &amp; Text Analytics category |
 | [**PostSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticsdictionaryfeedback) | **Post** /api/v2/speechandtextanalytics/dictionaryfeedback | Create a Speech &amp; Text Analytics DictionaryFeedback |
 | [**PostSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticsprograms) | **Post** /api/v2/speechandtextanalytics/programs | Create new Speech &amp; Text Analytics program |
 | [**PostSpeechandtextanalyticsProgramsGeneralJobs**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticsprogramsgeneraljobs) | **Post** /api/v2/speechandtextanalytics/programs/general/jobs | Create new Speech &amp; Text Analytics general program job |
@@ -44,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsTopics**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticstopics) | **Post** /api/v2/speechandtextanalytics/topics | Create new Speech &amp; Text Analytics topic |
 | [**PostSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticstopicspublishjobs) | **Post** /api/v2/speechandtextanalytics/topics/publishjobs | Create new Speech &amp; Text Analytics publish topics job |
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticstranscriptssearch) | **Post** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
+| [**PutSpeechandtextanalyticsCategory**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticscategory) | **Put** /api/v2/speechandtextanalytics/categories/{categoryId} | Update a Speech &amp; Text Analytics category by ID |
 | [**PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid) | **Put** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Update existing Speech &amp; Text Analytics dictionary feedback by id |
 | [**PutSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogram) | **Put** /api/v2/speechandtextanalytics/programs/{programId} | Update existing Speech &amp; Text Analytics program |
 | [**PutSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogrammappings) | **Put** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Set Speech &amp; Text Analytics program mappings to queues and flows |
@@ -51,6 +57,68 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticssettings) | **Put** /api/v2/speechandtextanalytics/settings | Update Speech And Text Analytics Settings |
 | [**PutSpeechandtextanalyticsTopic**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticstopic) | **Put** /api/v2/speechandtextanalytics/topics/{topicId} | Update existing Speech &amp; Text Analytics topic |
 {: class="table table-striped"}
+
+<a name="deletespeechandtextanalyticscategory"></a>
+
+## void DeleteSpeechandtextanalyticsCategory (string categoryId)
+
+
+
+Delete a Speech & Text Analytics category by ID
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteSpeechandtextanalyticsCategoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var categoryId = categoryId_example;  // string | The id of the category
+
+            try
+            { 
+                // Delete a Speech & Text Analytics category by ID
+                apiInstance.DeleteSpeechandtextanalyticsCategory(categoryId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.DeleteSpeechandtextanalyticsCategory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **string**| The id of the category |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletespeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid"></a>
 
@@ -359,6 +427,142 @@ namespace Example
 
 void (empty response body)
 
+<a name="getspeechandtextanalyticscategories"></a>
+
+## [**CategoriesEntityListing**](CategoriesEntityListing.html) GetSpeechandtextanalyticsCategories (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
+
+
+
+Get the list of Speech and Text Analytics categories
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsCategoriesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 50. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
+            var name = name_example;  // string | The category name filter applied to the listing (optional) 
+            var sortOrder = sortOrder_example;  // string | The sort order for the listing (optional)  (default to asc)
+            var sortBy = sortBy_example;  // string | The field to sort by for the listing (optional)  (default to name)
+            var ids = new List<string>(); // List<string> | Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
+
+            try
+            { 
+                // Get the list of Speech and Text Analytics categories
+                CategoriesEntityListing result = apiInstance.GetSpeechandtextanalyticsCategories(pageSize, pageNumber, name, sortOrder, sortBy, ids);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsCategories: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 50. | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
+| **name** | **string**| The category name filter applied to the listing | [optional]  |
+| **sortOrder** | **string**| The sort order for the listing | [optional] [default to asc]<br />**Values**: asc, desc |
+| **sortBy** | **string**| The field to sort by for the listing | [optional] [default to name]<br />**Values**: name, description |
+| **ids** | [**List<string>**](string.html)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CategoriesEntityListing**](CategoriesEntityListing.html)
+
+<a name="getspeechandtextanalyticscategory"></a>
+
+## [**StaCategory**](StaCategory.html) GetSpeechandtextanalyticsCategory (string categoryId)
+
+
+
+Get a Speech & Text Analytics Category by ID
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsCategoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var categoryId = categoryId_example;  // string | The id of the category
+
+            try
+            { 
+                // Get a Speech & Text Analytics Category by ID
+                StaCategory result = apiInstance.GetSpeechandtextanalyticsCategory(categoryId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsCategory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **string**| The id of the category |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaCategory**](StaCategory.html)
+
 <a name="getspeechandtextanalyticsconversation"></a>
 
 ## [**ConversationMetrics**](ConversationMetrics.html) GetSpeechandtextanalyticsConversation (string conversationId)
@@ -422,6 +626,73 @@ namespace Example
 ### Return type
 
 [**ConversationMetrics**](ConversationMetrics.html)
+
+<a name="getspeechandtextanalyticsconversationcategories"></a>
+
+## [**ConversationCategoriesEntityListing**](ConversationCategoriesEntityListing.html) GetSpeechandtextanalyticsConversationCategories (string conversationId, int? pageSize = null, int? pageNumber = null)
+
+
+
+Get the list of detected Speech and Text Analytics categories of conversation
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:data:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsConversationCategoriesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var conversationId = conversationId_example;  // string | The id of the conversation
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 50. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
+
+            try
+            { 
+                // Get the list of detected Speech and Text Analytics categories of conversation
+                ConversationCategoriesEntityListing result = apiInstance.GetSpeechandtextanalyticsConversationCategories(conversationId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsConversationCategories: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| The id of the conversation |  |
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 50. | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationCategoriesEntityListing**](ConversationCategoriesEntityListing.html)
 
 <a name="getspeechandtextanalyticsconversationcommunicationtranscripturl"></a>
 
@@ -1884,6 +2155,69 @@ namespace Example
 
 [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse.html)
 
+<a name="postspeechandtextanalyticscategories"></a>
+
+## [**StaCategory**](StaCategory.html) PostSpeechandtextanalyticsCategories (CategoryRequest body)
+
+
+
+Create new Speech & Text Analytics category
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSpeechandtextanalyticsCategoriesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var body = new CategoryRequest(); // CategoryRequest | The category to create
+
+            try
+            { 
+                // Create new Speech & Text Analytics category
+                StaCategory result = apiInstance.PostSpeechandtextanalyticsCategories(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PostSpeechandtextanalyticsCategories: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CategoryRequest**](CategoryRequest.html)| The category to create |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaCategory**](StaCategory.html)
+
 <a name="postspeechandtextanalyticsdictionaryfeedback"></a>
 
 ## [**DictionaryFeedback**](DictionaryFeedback.html) PostSpeechandtextanalyticsDictionaryfeedback (DictionaryFeedback body)
@@ -2391,6 +2725,71 @@ namespace Example
 ### Return type
 
 [**JsonSearchResponse**](JsonSearchResponse.html)
+
+<a name="putspeechandtextanalyticscategory"></a>
+
+## [**StaCategory**](StaCategory.html) PutSpeechandtextanalyticsCategory (string categoryId, CategoryRequest body)
+
+
+
+Update a Speech & Text Analytics category by ID
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutSpeechandtextanalyticsCategoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var categoryId = categoryId_example;  // string | The id of the category
+            var body = new CategoryRequest(); // CategoryRequest | The updated category
+
+            try
+            { 
+                // Update a Speech & Text Analytics category by ID
+                StaCategory result = apiInstance.PutSpeechandtextanalyticsCategory(categoryId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PutSpeechandtextanalyticsCategory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **categoryId** | **string**| The id of the category |  |
+| **body** | [**CategoryRequest**](CategoryRequest.html)| The updated category |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StaCategory**](StaCategory.html)
 
 <a name="putspeechandtextanalyticsdictionaryfeedbackdictionaryfeedbackid"></a>
 

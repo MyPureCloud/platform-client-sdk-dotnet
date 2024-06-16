@@ -306,7 +306,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nerservice for "NerService"
             /// </summary>
             [EnumMember(Value = "NerService")]
-            Nerservice
+            Nerservice,
+            
+            /// <summary>
+            /// Enum Onboarding for "Onboarding"
+            /// </summary>
+            [EnumMember(Value = "Onboarding")]
+            Onboarding
         }
         /// <summary>
         /// Gets or Sets Action
@@ -1435,6 +1441,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Workplan,
             
             /// <summary>
+            /// Enum Workplanbid for "WorkPlanBid"
+            /// </summary>
+            [EnumMember(Value = "WorkPlanBid")]
+            Workplanbid,
+            
+            /// <summary>
+            /// Enum Workplanbidgroup for "WorkPlanBidGroup"
+            /// </summary>
+            [EnumMember(Value = "WorkPlanBidGroup")]
+            Workplanbidgroup,
+            
+            /// <summary>
             /// Enum Workplanrotation for "WorkPlanRotation"
             /// </summary>
             [EnumMember(Value = "WorkPlanRotation")]
@@ -2164,7 +2182,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Customentity for "CustomEntity"
             /// </summary>
             [EnumMember(Value = "CustomEntity")]
-            Customentity
+            Customentity,
+            
+            /// <summary>
+            /// Enum Directoryfeature for "DirectoryFeature"
+            /// </summary>
+            [EnumMember(Value = "DirectoryFeature")]
+            Directoryfeature
         }
         /// <summary>
         /// Gets or Sets ServiceName

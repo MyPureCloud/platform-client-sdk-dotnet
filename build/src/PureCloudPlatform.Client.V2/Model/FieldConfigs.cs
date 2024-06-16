@@ -24,13 +24,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Org">Org.</param>
         /// <param name="Person">Person.</param>
         /// <param name="Group">Group.</param>
-        /// <param name="ExternalContact">ExternalContact.</param>
-        public FieldConfigs(FieldConfig Org = null, FieldConfig Person = null, FieldConfig Group = null, FieldConfig ExternalContact = null)
+        public FieldConfigs(FieldConfig Org = null, FieldConfig Person = null, FieldConfig Group = null)
         {
             this.Org = Org;
             this.Person = Person;
             this.Group = Group;
-            this.ExternalContact = ExternalContact;
             
         }
         
@@ -59,14 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public FieldConfig Group { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets ExternalContact
-        /// </summary>
-        [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public FieldConfig ExternalContact { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,7 +69,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Org: ").Append(Org).Append("\n");
             sb.Append("  Person: ").Append(Person).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
-            sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,11 +123,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Group == other.Group ||
                     this.Group != null &&
                     this.Group.Equals(other.Group)
-                ) &&
-                (
-                    this.ExternalContact == other.ExternalContact ||
-                    this.ExternalContact != null &&
-                    this.ExternalContact.Equals(other.ExternalContact)
                 );
         }
 
@@ -161,9 +145,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
-
-                if (this.ExternalContact != null)
-                    hash = hash * 59 + this.ExternalContact.GetHashCode();
 
                 return hash;
             }

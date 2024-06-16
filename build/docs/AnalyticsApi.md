@@ -11,6 +11,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAnalyticsUsersDetailsJob**](AnalyticsApi.html#deleteanalyticsusersdetailsjob) | **Delete** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
 | [**GetAnalyticsActionsAggregatesJob**](AnalyticsApi.html#getanalyticsactionsaggregatesjob) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId} | Get status for async query for action aggregates |
 | [**GetAnalyticsActionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsactionsaggregatesjobresults) | **Get** /api/v2/analytics/actions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsAgentcopilotsAggregatesJob**](AnalyticsApi.html#getanalyticsagentcopilotsaggregatesjob) | **Get** /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId} | Get status for async query for agent copilot aggregates |
+| [**GetAnalyticsAgentcopilotsAggregatesJobResults**](AnalyticsApi.html#getanalyticsagentcopilotsaggregatesjobresults) | **Get** /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsBotflowDivisionsReportingturns**](AnalyticsApi.html#getanalyticsbotflowdivisionsreportingturns) | **Get** /api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns | Get Reporting Turns (division aware). |
 | [**GetAnalyticsBotflowReportingturns**](AnalyticsApi.html#getanalyticsbotflowreportingturns) | **Get** /api/v2/analytics/botflows/{botFlowId}/reportingturns | Get Reporting Turns. |
 | [**GetAnalyticsBotflowSessions**](AnalyticsApi.html#getanalyticsbotflowsessions) | **Get** /api/v2/analytics/botflows/{botFlowId}/sessions | Get Bot Flow Sessions. |
@@ -39,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsReportingExports**](AnalyticsApi.html#getanalyticsreportingexports) | **Get** /api/v2/analytics/reporting/exports | Get all view export requests for a user |
 | [**GetAnalyticsReportingExportsMetadata**](AnalyticsApi.html#getanalyticsreportingexportsmetadata) | **Get** /api/v2/analytics/reporting/exports/metadata | Get all export metadata |
 | [**GetAnalyticsReportingSettings**](AnalyticsApi.html#getanalyticsreportingsettings) | **Get** /api/v2/analytics/reporting/settings | Get AnalyticsReportingSettings for an organization |
+| [**GetAnalyticsReportingSettingsDashboardsQuery**](AnalyticsApi.html#getanalyticsreportingsettingsdashboardsquery) | **Get** /api/v2/analytics/reporting/settings/dashboards/query | Get list of dashboard configurations |
 | [**GetAnalyticsReportingSettingsUserDashboards**](AnalyticsApi.html#getanalyticsreportingsettingsuserdashboards) | **Get** /api/v2/analytics/reporting/settings/users/{userId}/dashboards | Get list of dashboards for an user |
 | [**GetAnalyticsResolutionsAggregatesJob**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjob) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId} | Get status for async query for resolution aggregates |
 | [**GetAnalyticsResolutionsAggregatesJobResults**](AnalyticsApi.html#getanalyticsresolutionsaggregatesjobresults) | **Get** /api/v2/analytics/resolutions/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
@@ -56,6 +59,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchAnalyticsReportingSettings**](AnalyticsApi.html#patchanalyticsreportingsettings) | **Patch** /api/v2/analytics/reporting/settings | Patch AnalyticsReportingSettings values for an organization |
 | [**PostAnalyticsActionsAggregatesJobs**](AnalyticsApi.html#postanalyticsactionsaggregatesjobs) | **Post** /api/v2/analytics/actions/aggregates/jobs | Query for action aggregates asynchronously |
 | [**PostAnalyticsActionsAggregatesQuery**](AnalyticsApi.html#postanalyticsactionsaggregatesquery) | **Post** /api/v2/analytics/actions/aggregates/query | Query for action aggregates |
+| [**PostAnalyticsAgentcopilotsAggregatesJobs**](AnalyticsApi.html#postanalyticsagentcopilotsaggregatesjobs) | **Post** /api/v2/analytics/agentcopilots/aggregates/jobs | Query for agent copilot aggregates asynchronously |
+| [**PostAnalyticsAgentcopilotsAggregatesQuery**](AnalyticsApi.html#postanalyticsagentcopilotsaggregatesquery) | **Post** /api/v2/analytics/agentcopilots/aggregates/query | Query for agent copilot aggregates |
 | [**PostAnalyticsBotsAggregatesJobs**](AnalyticsApi.html#postanalyticsbotsaggregatesjobs) | **Post** /api/v2/analytics/bots/aggregates/jobs | Query for bot aggregates asynchronously |
 | [**PostAnalyticsBotsAggregatesQuery**](AnalyticsApi.html#postanalyticsbotsaggregatesquery) | **Post** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
 | [**PostAnalyticsConversationDetailsProperties**](AnalyticsApi.html#postanalyticsconversationdetailsproperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
@@ -78,7 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsKnowledgeAggregatesJobs**](AnalyticsApi.html#postanalyticsknowledgeaggregatesjobs) | **Post** /api/v2/analytics/knowledge/aggregates/jobs | Query for knowledge aggregates asynchronously |
 | [**PostAnalyticsKnowledgeAggregatesQuery**](AnalyticsApi.html#postanalyticsknowledgeaggregatesquery) | **Post** /api/v2/analytics/knowledge/aggregates/query | Query for knowledge aggregates |
 | [**PostAnalyticsQueuesObservationsQuery**](AnalyticsApi.html#postanalyticsqueuesobservationsquery) | **Post** /api/v2/analytics/queues/observations/query | Query for queue observations |
-| [**PostAnalyticsRatelimitsAggregatesQuery**](AnalyticsApi.html#postanalyticsratelimitsaggregatesquery) | **Post** /api/v2/analytics/ratelimits/aggregates/query | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
+| [**PostAnalyticsRatelimitsAggregatesQuery**](AnalyticsApi.html#postanalyticsratelimitsaggregatesquery) | **Post** /api/v2/analytics/ratelimits/aggregates/query | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. |
 | [**PostAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsApi.html#postanalyticsreportingdashboardsusersbulkremove) | **Post** /api/v2/analytics/reporting/dashboards/users/bulk/remove | Bulk delete dashboards owned by other user(s) |
 | [**PostAnalyticsReportingExports**](AnalyticsApi.html#postanalyticsreportingexports) | **Post** /api/v2/analytics/reporting/exports | Generate a view export request |
 | [**PostAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsApi.html#postanalyticsreportingsettingsdashboardsbulkremove) | **Post** /api/v2/analytics/reporting/settings/dashboards/bulk/remove | Bulk remove dashboard configurations |
@@ -359,6 +364,138 @@ namespace Example
 ### Return type
 
 [**ActionAsyncAggregateQueryResponse**](ActionAsyncAggregateQueryResponse.html)
+
+<a name="getanalyticsagentcopilotsaggregatesjob"></a>
+
+## [**AsyncQueryStatus**](AsyncQueryStatus.html) GetAnalyticsAgentcopilotsAggregatesJob (string jobId)
+
+
+
+Get status for async query for agent copilot aggregates
+
+GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsAgentcopilotsAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for agent copilot aggregates
+                AsyncQueryStatus result = apiInstance.GetAnalyticsAgentcopilotsAggregatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsAgentcopilotsAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus.html)
+
+<a name="getanalyticsagentcopilotsaggregatesjobresults"></a>
+
+## [**AgentCopilotAsyncAggregateQueryResponse**](AgentCopilotAsyncAggregateQueryResponse.html) GetAnalyticsAgentcopilotsAggregatesJobResults (string jobId, string cursor = null)
+
+
+
+Fetch a page of results for an async aggregates query
+
+GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsAgentcopilotsAggregatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async aggregates query
+                AgentCopilotAsyncAggregateQueryResponse result = apiInstance.GetAnalyticsAgentcopilotsAggregatesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsAgentcopilotsAggregatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentCopilotAsyncAggregateQueryResponse**](AgentCopilotAsyncAggregateQueryResponse.html)
 
 <a name="getanalyticsbotflowdivisionsreportingturns"></a>
 
@@ -2207,6 +2344,77 @@ This endpoint does require any parameters.
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
 
+<a name="getanalyticsreportingsettingsdashboardsquery"></a>
+
+## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+
+
+
+Get list of dashboard configurations
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsReportingSettingsDashboardsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var dashboardType = dashboardType_example;  // string | List dashboard of given type
+            var dashboardAccessFilter = dashboardAccessFilter_example;  // string | Filter dashboard based on the owner of dashboard
+            var sortBy = sortBy_example;  // string |  (optional)  (default to "desc")
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 9)
+
+            try
+            { 
+                // Get list of dashboard configurations
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsReportingSettingsDashboardsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites |
+| **dashboardAccessFilter** | **string**| Filter dashboard based on the owner of dashboard | <br />**Values**: OwnedByMe, OwnedByAnyone, NotOwnedByMe |
+| **sortBy** | **string**|  | [optional] [default to "desc"] |
+| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageSize** | **int?**|  | [optional] [default to 9] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DashboardConfigurationListing**](DashboardConfigurationListing.html)
+
 <a name="getanalyticsreportingsettingsuserdashboards"></a>
 
 ## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
@@ -3322,6 +3530,136 @@ namespace Example
 ### Return type
 
 [**ActionAggregateQueryResponse**](ActionAggregateQueryResponse.html)
+
+<a name="postanalyticsagentcopilotsaggregatesjobs"></a>
+
+## [**AsyncQueryResponse**](AsyncQueryResponse.html) PostAnalyticsAgentcopilotsAggregatesJobs (AgentCopilotAsyncAggregationQuery body)
+
+
+
+Query for agent copilot aggregates asynchronously
+
+PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsAgentcopilotsAggregatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new AgentCopilotAsyncAggregationQuery(); // AgentCopilotAsyncAggregationQuery | query
+
+            try
+            { 
+                // Query for agent copilot aggregates asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsAgentcopilotsAggregatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsAgentcopilotsAggregatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentCopilotAsyncAggregationQuery**](AgentCopilotAsyncAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse.html)
+
+<a name="postanalyticsagentcopilotsaggregatesquery"></a>
+
+## [**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse.html) PostAnalyticsAgentcopilotsAggregatesQuery (AgentCopilotAggregationQuery body)
+
+
+
+Query for agent copilot aggregates
+
+PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsAgentcopilotsAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new AgentCopilotAggregationQuery(); // AgentCopilotAggregationQuery | query
+
+            try
+            { 
+                // Query for agent copilot aggregates
+                AgentCopilotAggregateQueryResponse result = apiInstance.PostAnalyticsAgentcopilotsAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsAgentcopilotsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentCopilotAggregationQuery**](AgentCopilotAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse.html)
 
 <a name="postanalyticsbotsaggregatesjobs"></a>
 
@@ -4741,7 +5079,9 @@ namespace Example
 
 
 
-Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
+
+The 'max' property can be used to determine estimated rate limit value hit.
 
 Requires ANY permissions: 
 
@@ -4773,7 +5113,7 @@ namespace Example
 
             try
             { 
-                // Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+                // Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
                 RateLimitAggregateQueryResponse result = apiInstance.PostAnalyticsRatelimitsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }

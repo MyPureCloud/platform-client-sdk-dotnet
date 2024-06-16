@@ -165,7 +165,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The timestamp of when the export stopped. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ErrorInformation">Any error information, or null of the processing is not in failed state..</param>
-        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? JsonFileVersion = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
+        /// <param name="Source">Source of the export job..</param>
+        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? JsonFileVersion = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null, KnowledgeOperationSource Source = null)
         {
             this.Id = Id;
             this.DownloadURL = DownloadURL;
@@ -179,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.ErrorInformation = ErrorInformation;
+            this.Source = Source;
             
         }
         
@@ -279,6 +281,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Source of the export job.
+        /// </summary>
+        /// <value>Source of the export job.</value>
+        [DataMember(Name="source", EmitDefaultValue=false)]
+        public KnowledgeOperationSource Source { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -307,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ErrorInformation: ").Append(ErrorInformation).Append("\n");
+            sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -409,6 +421,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorInformation.Equals(other.ErrorInformation)
                 ) &&
                 (
+                    this.Source == other.Source ||
+                    this.Source != null &&
+                    this.Source.Equals(other.Source)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -461,6 +478,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorInformation != null)
                     hash = hash * 59 + this.ErrorInformation.GetHashCode();
+
+                if (this.Source != null)
+                    hash = hash * 59 + this.Source.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

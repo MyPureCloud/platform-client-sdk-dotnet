@@ -71,13 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">The user who created the operation..</param>
         /// <param name="DateCreated">Operation creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Operation last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public OperationResponse(string Status = null, TypeEnum? Type = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null)
+        /// <param name="Source">Source of the operation..</param>
+        public OperationResponse(string Status = null, TypeEnum? Type = null, UserReference CreatedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, KnowledgeOperationSource Source = null)
         {
             this.Status = Status;
             this.Type = Type;
             this.CreatedBy = CreatedBy;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
+            this.Source = Source;
             
         }
         
@@ -131,6 +133,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Source of the operation.
+        /// </summary>
+        /// <value>Source of the operation.</value>
+        [DataMember(Name="source", EmitDefaultValue=false)]
+        public KnowledgeOperationSource Source { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -153,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -225,6 +237,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
+                    this.Source == other.Source ||
+                    this.Source != null &&
+                    this.Source.Equals(other.Source)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -259,6 +276,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.Source != null)
+                    hash = hash * 59 + this.Source.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

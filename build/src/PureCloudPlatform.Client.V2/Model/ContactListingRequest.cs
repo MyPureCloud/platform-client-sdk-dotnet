@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListFilterId">Contact List Filter ID..</param>
         /// <param name="Criteria">Criteria to filter the contacts by..</param>
         /// <param name="PageNumber">Page number. (required).</param>
-        /// <param name="PageSize">Page size. The max that will be returned is 50. (required).</param>
+        /// <param name="PageSize">Page size. The max that will be returned is 100. (required).</param>
         /// <param name="ContactSorts">The order in which to sort contacts..</param>
         public ContactListingRequest(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, int? PageNumber = null, int? PageSize = null, List<ContactSort> ContactSorts = null)
         {
@@ -72,9 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Page size. The max that will be returned is 50.
+        /// Page size. The max that will be returned is 100.
         /// </summary>
-        /// <value>Page size. The max that will be returned is 50.</value>
+        /// <value>Page size. The max that will be returned is 100.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
 

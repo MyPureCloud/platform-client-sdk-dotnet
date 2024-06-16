@@ -85,6 +85,7 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **TeamId** | **string** | The team ID the user is a member of | [optional] |
 | **UsedRouting** | **string** | Complete routing method | [optional] |
 | **UserId** | **string** | Unique identifier for the user | [optional] |
+| **VideoPresent** | **bool?** | Flag indicating if video is present | [optional] |
 | **WaitingInteractionCounts** | **List&lt;int?&gt;** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **WrapUpCode** | **string** | Wrap up code | [optional] |
 | **ProposedAgents** | [**List&lt;ConversationMetricsTopicConversationProposedAgent&gt;**](ConversationMetricsTopicConversationProposedAgent.html) | Proposed agents | [optional] |

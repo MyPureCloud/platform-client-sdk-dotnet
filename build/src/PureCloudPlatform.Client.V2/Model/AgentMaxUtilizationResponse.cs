@@ -53,10 +53,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AgentMaxUtilizationResponse" /> class.
         /// </summary>
         /// <param name="Utilization">Map of media type to utilization settings..</param>
+        /// <param name="LabelUtilizations">Map of label ids to utilization settings..</param>
         /// <param name="Level">Level.</param>
-        public AgentMaxUtilizationResponse(Dictionary<string, MediaUtilization> Utilization = null, LevelEnum? Level = null)
+        public AgentMaxUtilizationResponse(Dictionary<string, MediaUtilization> Utilization = null, Dictionary<string, LabelUtilizationResponse> LabelUtilizations = null, LevelEnum? Level = null)
         {
             this.Utilization = Utilization;
+            this.LabelUtilizations = LabelUtilizations;
             this.Level = Level;
             
         }
@@ -72,6 +74,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Map of label ids to utilization settings.
+        /// </summary>
+        /// <value>Map of label ids to utilization settings.</value>
+        [DataMember(Name="labelUtilizations", EmitDefaultValue=false)]
+        public Dictionary<string, LabelUtilizationResponse> LabelUtilizations { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AgentMaxUtilizationResponse {\n");
 
             sb.Append("  Utilization: ").Append(Utilization).Append("\n");
+            sb.Append("  LabelUtilizations: ").Append(LabelUtilizations).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -130,6 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Utilization.SequenceEqual(other.Utilization)
                 ) &&
                 (
+                    this.LabelUtilizations == other.LabelUtilizations ||
+                    this.LabelUtilizations != null &&
+                    this.LabelUtilizations.SequenceEqual(other.LabelUtilizations)
+                ) &&
+                (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
@@ -149,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Utilization != null)
                     hash = hash * 59 + this.Utilization.GetHashCode();
+
+                if (this.LabelUtilizations != null)
+                    hash = hash * 59 + this.LabelUtilizations.GetHashCode();
 
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();

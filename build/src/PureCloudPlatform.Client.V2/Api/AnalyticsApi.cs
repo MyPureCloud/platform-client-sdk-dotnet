@@ -119,6 +119,60 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionAsyncAggregateQueryResponse> GetAnalyticsActionsAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
+        /// Get status for async query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>AsyncQueryStatus</returns>
+        
+        AsyncQueryStatus GetAnalyticsAgentcopilotsAggregatesJob (string jobId);
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        
+        ApiResponse<AsyncQueryStatus> GetAnalyticsAgentcopilotsAggregatesJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>AgentCopilotAsyncAggregateQueryResponse</returns>
+        
+        AgentCopilotAsyncAggregateQueryResponse GetAnalyticsAgentcopilotsAggregatesJobResults (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>ApiResponse of AgentCopilotAsyncAggregateQueryResponse</returns>
+        
+        ApiResponse<AgentCopilotAsyncAggregateQueryResponse> GetAnalyticsAgentcopilotsAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
+
+        /// <summary>
         /// Get Reporting Turns (division aware).
         /// </summary>
         /// <remarks>
@@ -877,6 +931,38 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AnalyticsReportingSettings> GetAnalyticsReportingSettingsWithHttpInfo ();
 
         /// <summary>
+        /// Get list of dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>DashboardConfigurationListing</returns>
+        
+        DashboardConfigurationListing GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get list of dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>ApiResponse of DashboardConfigurationListing</returns>
+        
+        ApiResponse<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
         /// Get list of dashboards for an user
         /// </summary>
         /// <remarks>
@@ -1329,6 +1415,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActionAggregateQueryResponse</returns>
         
         ApiResponse<ActionAggregateQueryResponse> PostAnalyticsActionsAggregatesQueryWithHttpInfo (ActionAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AsyncQueryResponse</returns>
+        
+        AsyncQueryResponse PostAnalyticsAgentcopilotsAggregatesJobs (AgentCopilotAsyncAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        
+        ApiResponse<AsyncQueryResponse> PostAnalyticsAgentcopilotsAggregatesJobsWithHttpInfo (AgentCopilotAsyncAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AgentCopilotAggregateQueryResponse</returns>
+        
+        AgentCopilotAggregateQueryResponse PostAnalyticsAgentcopilotsAggregatesQuery (AgentCopilotAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AgentCopilotAggregateQueryResponse</returns>
+        
+        ApiResponse<AgentCopilotAggregateQueryResponse> PostAnalyticsAgentcopilotsAggregatesQueryWithHttpInfo (AgentCopilotAggregationQuery body);
 
         /// <summary>
         /// Query for bot aggregates asynchronously
@@ -1883,10 +2021,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueueObservationQueryResponse> PostAnalyticsQueuesObservationsQueryWithHttpInfo (QueueObservationQuery body);
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1895,10 +2033,10 @@ namespace PureCloudPlatform.Client.V2.Api
         RateLimitAggregateQueryResponse PostAnalyticsRatelimitsAggregatesQuery (RateLimitAggregationQuery body);
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -2515,6 +2653,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActionAsyncAggregateQueryResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionAsyncAggregateQueryResponse>> GetAnalyticsActionsAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of AsyncQueryStatus</returns>
+        
+        System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsAgentcopilotsAggregatesJobAsync (string jobId);
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsAgentcopilotsAggregatesJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of AgentCopilotAsyncAggregateQueryResponse</returns>
+        
+        System.Threading.Tasks.Task<AgentCopilotAsyncAggregateQueryResponse> GetAnalyticsAgentcopilotsAggregatesJobResultsAsync (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of ApiResponse (AgentCopilotAsyncAggregateQueryResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentCopilotAsyncAggregateQueryResponse>> GetAnalyticsAgentcopilotsAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
 
         /// <summary>
         /// Get Reporting Turns (division aware).
@@ -3275,6 +3467,38 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AnalyticsReportingSettings>> GetAnalyticsReportingSettingsAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get list of dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>Task of DashboardConfigurationListing</returns>
+        
+        System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryAsync (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get list of dashboard configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
         /// Get list of dashboards for an user
         /// </summary>
         /// <remarks>
@@ -3727,6 +3951,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActionAggregateQueryResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionAggregateQueryResponse>> PostAnalyticsActionsAggregatesQueryAsyncWithHttpInfo (ActionAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AsyncQueryResponse</returns>
+        
+        System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsAgentcopilotsAggregatesJobsAsync (AgentCopilotAsyncAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsAgentcopilotsAggregatesJobsAsyncWithHttpInfo (AgentCopilotAsyncAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AgentCopilotAggregateQueryResponse</returns>
+        
+        System.Threading.Tasks.Task<AgentCopilotAggregateQueryResponse> PostAnalyticsAgentcopilotsAggregatesQueryAsync (AgentCopilotAggregationQuery body);
+
+        /// <summary>
+        /// Query for agent copilot aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AgentCopilotAggregateQueryResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentCopilotAggregateQueryResponse>> PostAnalyticsAgentcopilotsAggregatesQueryAsyncWithHttpInfo (AgentCopilotAggregationQuery body);
 
         /// <summary>
         /// Query for bot aggregates asynchronously
@@ -4281,10 +4557,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<QueueObservationQueryResponse>> PostAnalyticsQueuesObservationsQueryAsyncWithHttpInfo (QueueObservationQuery body);
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -4293,10 +4569,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RateLimitAggregateQueryResponse> PostAnalyticsRatelimitsAggregatesQueryAsync (RateLimitAggregationQuery body);
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
         /// </summary>
         /// <remarks>
-        /// 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -5748,6 +6024,442 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActionAsyncAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ActionAsyncAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionAsyncAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>AsyncQueryStatus</returns>
+        
+        public AsyncQueryStatus GetAnalyticsAgentcopilotsAggregatesJob (string jobId)
+        {
+             ApiResponse<AsyncQueryStatus> localVarResponse = GetAnalyticsAgentcopilotsAggregatesJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of AsyncQueryStatus</returns>
+        
+        public ApiResponse< AsyncQueryStatus > GetAnalyticsAgentcopilotsAggregatesJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsAgentcopilotsAggregatesJob");
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryStatus>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of AsyncQueryStatus</returns>
+        
+        public async System.Threading.Tasks.Task<AsyncQueryStatus> GetAnalyticsAgentcopilotsAggregatesJobAsync (string jobId)
+        {
+             ApiResponse<AsyncQueryStatus> localVarResponse = await GetAnalyticsAgentcopilotsAggregatesJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get status for async query for agent copilot aggregates 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse (AsyncQueryStatus)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsAgentcopilotsAggregatesJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsAgentcopilotsAggregatesJob");
+            
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryStatus>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>AgentCopilotAsyncAggregateQueryResponse</returns>
+        
+        public AgentCopilotAsyncAggregateQueryResponse GetAnalyticsAgentcopilotsAggregatesJobResults (string jobId, string cursor = null)
+        {
+             ApiResponse<AgentCopilotAsyncAggregateQueryResponse> localVarResponse = GetAnalyticsAgentcopilotsAggregatesJobResultsWithHttpInfo(jobId, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>ApiResponse of AgentCopilotAsyncAggregateQueryResponse</returns>
+        
+        public ApiResponse< AgentCopilotAsyncAggregateQueryResponse > GetAnalyticsAgentcopilotsAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsAgentcopilotsAggregatesJobResults");
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentCopilotAsyncAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AgentCopilotAsyncAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentCopilotAsyncAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of AgentCopilotAsyncAggregateQueryResponse</returns>
+        
+        public async System.Threading.Tasks.Task<AgentCopilotAsyncAggregateQueryResponse> GetAnalyticsAgentcopilotsAggregatesJobResultsAsync (string jobId, string cursor = null)
+        {
+             ApiResponse<AgentCopilotAsyncAggregateQueryResponse> localVarResponse = await GetAnalyticsAgentcopilotsAggregatesJobResultsAsyncWithHttpInfo(jobId, cursor);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch a page of results for an async aggregates query 
+        /// 
+        /// GetAnalyticsAgentcopilotsAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
+        /// <returns>Task of ApiResponse (AgentCopilotAsyncAggregateQueryResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentCopilotAsyncAggregateQueryResponse>> GetAnalyticsAgentcopilotsAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AnalyticsApi->GetAnalyticsAgentcopilotsAggregatesJobResults");
+            
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/jobs/{jobId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJobResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsAgentcopilotsAggregatesJobResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentCopilotAsyncAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AgentCopilotAsyncAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentCopilotAsyncAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -11844,6 +12556,248 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get list of dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>DashboardConfigurationListing</returns>
+        
+        public DashboardConfigurationListing GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<DashboardConfigurationListing> localVarResponse = GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>ApiResponse of DashboardConfigurationListing</returns>
+        
+        public ApiResponse< DashboardConfigurationListing > GetAnalyticsReportingSettingsDashboardsQueryWithHttpInfo (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'dashboardType' is set
+            if (dashboardType == null)
+                throw new ApiException(400, "Missing required parameter 'dashboardType' when calling AnalyticsApi->GetAnalyticsReportingSettingsDashboardsQuery");
+            // verify the required parameter 'dashboardAccessFilter' is set
+            if (dashboardAccessFilter == null)
+                throw new ApiException(400, "Missing required parameter 'dashboardAccessFilter' when calling AnalyticsApi->GetAnalyticsReportingSettingsDashboardsQuery");
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/dashboards/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (dashboardType != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardType", this.Configuration.ApiClient.ParameterToString(dashboardType)));
+            if (dashboardAccessFilter != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardAccessFilter", this.Configuration.ApiClient.ParameterToString(dashboardAccessFilter)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>Task of DashboardConfigurationListing</returns>
+        
+        public async System.Threading.Tasks.Task<DashboardConfigurationListing> GetAnalyticsReportingSettingsDashboardsQueryAsync (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<DashboardConfigurationListing> localVarResponse = await GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of dashboard configurations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dashboardType">List dashboard of given type</param>
+        /// <param name="dashboardAccessFilter">Filter dashboard based on the owner of dashboard</param>
+        /// <param name="sortBy"> (optional, default to "desc")</param>
+        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 9)</param>
+        /// <returns>Task of ApiResponse (DashboardConfigurationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DashboardConfigurationListing>> GetAnalyticsReportingSettingsDashboardsQueryAsyncWithHttpInfo (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'dashboardType' is set
+            if (dashboardType == null)
+                throw new ApiException(400, "Missing required parameter 'dashboardType' when calling AnalyticsApi->GetAnalyticsReportingSettingsDashboardsQuery");
+            
+            // verify the required parameter 'dashboardAccessFilter' is set
+            if (dashboardAccessFilter == null)
+                throw new ApiException(400, "Missing required parameter 'dashboardAccessFilter' when calling AnalyticsApi->GetAnalyticsReportingSettingsDashboardsQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/reporting/settings/dashboards/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (dashboardType != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardType", this.Configuration.ApiClient.ParameterToString(dashboardType)));
+            if (dashboardAccessFilter != null) localVarQueryParams.Add(new Tuple<string, string>("dashboardAccessFilter", this.Configuration.ApiClient.ParameterToString(dashboardAccessFilter)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsReportingSettingsDashboardsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DashboardConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (DashboardConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DashboardConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get list of dashboards for an user 
         /// 
         /// </summary>
@@ -15563,6 +16517,456 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActionAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ActionAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AsyncQueryResponse</returns>
+        
+        public AsyncQueryResponse PostAnalyticsAgentcopilotsAggregatesJobs (AgentCopilotAsyncAggregationQuery body)
+        {
+             ApiResponse<AsyncQueryResponse> localVarResponse = PostAnalyticsAgentcopilotsAggregatesJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AsyncQueryResponse</returns>
+        
+        public ApiResponse< AsyncQueryResponse > PostAnalyticsAgentcopilotsAggregatesJobsWithHttpInfo (AgentCopilotAsyncAggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsAgentcopilotsAggregatesJobs");
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AsyncQueryResponse</returns>
+        
+        public async System.Threading.Tasks.Task<AsyncQueryResponse> PostAnalyticsAgentcopilotsAggregatesJobsAsync (AgentCopilotAsyncAggregationQuery body)
+        {
+             ApiResponse<AsyncQueryResponse> localVarResponse = await PostAnalyticsAgentcopilotsAggregatesJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for agent copilot aggregates asynchronously 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AsyncQueryResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AsyncQueryResponse>> PostAnalyticsAgentcopilotsAggregatesJobsAsyncWithHttpInfo (AgentCopilotAsyncAggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsAgentcopilotsAggregatesJobs");
+            
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AsyncQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AsyncQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AsyncQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query for agent copilot aggregates 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>AgentCopilotAggregateQueryResponse</returns>
+        
+        public AgentCopilotAggregateQueryResponse PostAnalyticsAgentcopilotsAggregatesQuery (AgentCopilotAggregationQuery body)
+        {
+             ApiResponse<AgentCopilotAggregateQueryResponse> localVarResponse = PostAnalyticsAgentcopilotsAggregatesQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for agent copilot aggregates 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of AgentCopilotAggregateQueryResponse</returns>
+        
+        public ApiResponse< AgentCopilotAggregateQueryResponse > PostAnalyticsAgentcopilotsAggregatesQueryWithHttpInfo (AgentCopilotAggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsAgentcopilotsAggregatesQuery");
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentCopilotAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AgentCopilotAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentCopilotAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for agent copilot aggregates 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of AgentCopilotAggregateQueryResponse</returns>
+        
+        public async System.Threading.Tasks.Task<AgentCopilotAggregateQueryResponse> PostAnalyticsAgentcopilotsAggregatesQueryAsync (AgentCopilotAggregationQuery body)
+        {
+             ApiResponse<AgentCopilotAggregateQueryResponse> localVarResponse = await PostAnalyticsAgentcopilotsAggregatesQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for agent copilot aggregates 
+        /// 
+        /// PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (AgentCopilotAggregateQueryResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentCopilotAggregateQueryResponse>> PostAnalyticsAgentcopilotsAggregatesQueryAsyncWithHttpInfo (AgentCopilotAggregationQuery body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsAgentcopilotsAggregatesQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/agentcopilots/aggregates/query";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsAgentcopilotsAggregatesQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentCopilotAggregateQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AgentCopilotAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentCopilotAggregateQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -20497,8 +21901,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded 
-        /// 
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -20511,8 +21915,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded 
-        /// 
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -20606,8 +22010,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded 
-        /// 
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -20621,8 +22025,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded 
-        /// 
+        /// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. 
+        /// The 'max' property can be used to determine estimated rate limit value hit.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>

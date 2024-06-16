@@ -184,6 +184,21 @@ title: ViewFilter
 | **SurveyTypes** | **List&lt;string&gt;** | The surveyTypes is used to filter the view | [optional] |
 | **SurveyResponseStatuses** | **List&lt;string&gt;** | The list of Survey Response Status | [optional] |
 | **BotFlowTypes** | **List&lt;string&gt;** | The botFlowTypes is used to filter the view | [optional] |
+| **AgentTalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The agent talk durations in milliseconds used to filter the view | [optional] |
+| **CustomerTalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The customer talk durations in milliseconds used to filter the view | [optional] |
+| **OvertalkDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The overtalk durations in milliseconds used to filter the view | [optional] |
+| **SilenceDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The silence durations in milliseconds used to filter the view | [optional] |
+| **AcdDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The acd durations in milliseconds used to filter the view | [optional] |
+| **IvrDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The ivr durations in milliseconds used to filter the view | [optional] |
+| **OtherDurationMilliseconds** | [**List&lt;NumericRange&gt;**](NumericRange.html) | The other (hold/music) durations in milliseconds used to filter the view | [optional] |
+| **AgentTalkPercentage** | [**NumericRange**](NumericRange.html) | The agent talk percentage used to filter the view | [optional] |
+| **CustomerTalkPercentage** | [**NumericRange**](NumericRange.html) | The customer talk percentage used to filter the view | [optional] |
+| **OvertalkPercentage** | [**NumericRange**](NumericRange.html) | The overtalk percentage used to filter the view | [optional] |
+| **SilencePercentage** | [**NumericRange**](NumericRange.html) | The silence percentage used to filter the view | [optional] |
+| **AcdPercentage** | [**NumericRange**](NumericRange.html) | The acd percentage used to filter the view | [optional] |
+| **IvrPercentage** | [**NumericRange**](NumericRange.html) | The ivr percentage used to filter the view | [optional] |
+| **OtherPercentage** | [**NumericRange**](NumericRange.html) | The other (hold/music percentage used to filter the view | [optional] |
+| **OvertalkInstances** | [**NumericRange**](NumericRange.html) | The overtalk instance range used to filter the view | [optional] |
 | **IsScreenRecorded** | **bool?** | Filter to indicate if the screen is recorded | [optional] |
 | **ScreenMonitorUserIds** | **List&lt;string&gt;** | The list of Screen Monitor User Ids | [optional] |
 {: class="table table-striped"}

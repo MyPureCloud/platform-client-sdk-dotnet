@@ -115,13 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Handletime for "HandleTime"
             /// </summary>
             [EnumMember(Value = "HandleTime")]
-            Handletime,
-            
-            /// <summary>
-            /// Enum Numberoftransfers for "NumberOfTransfers"
-            /// </summary>
-            [EnumMember(Value = "NumberOfTransfers")]
-            Numberoftransfers
+            Handletime
         }
         /// <summary>
         /// Source of values for Key Performance Indicator.

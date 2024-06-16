@@ -74,9 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Labels">The references to labels associated with the document..</param>
         /// <param name="KnowledgeBase">Knowledge base to which the document belongs to..</param>
         /// <param name="ExternalId">The reference to external id associated with the document..</param>
+        /// <param name="Source">The reference to source associated with the document..</param>
+        /// <param name="Readonly">Whether the document is read-only..</param>
         /// <param name="Variations">Variations of the document..</param>
         /// <param name="Answer">The answer to the query..</param>
-        public KnowledgeSearchDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, List<DocumentVariationAnswer> Variations = null, string Answer = null)
+        public KnowledgeSearchDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, AddressableEntityRef Source = null, bool? Readonly = null, List<DocumentVariationAnswer> Variations = null, string Answer = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -92,6 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Labels = Labels;
             this.KnowledgeBase = KnowledgeBase;
             this.ExternalId = ExternalId;
+            this.Source = Source;
+            this.Readonly = Readonly;
             this.Variations = Variations;
             this.Answer = Answer;
             
@@ -246,6 +250,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The reference to source associated with the document.
+        /// </summary>
+        /// <value>The reference to source associated with the document.</value>
+        [DataMember(Name="source", EmitDefaultValue=false)]
+        public AddressableEntityRef Source { get; set; }
+
+
+
+        /// <summary>
+        /// Whether the document is read-only.
+        /// </summary>
+        /// <value>Whether the document is read-only.</value>
+        [DataMember(Name="readonly", EmitDefaultValue=false)]
+        public bool? Readonly { get; set; }
+
+
+
+        /// <summary>
         /// Variations of the document.
         /// </summary>
         /// <value>Variations of the document.</value>
@@ -297,6 +319,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
+            sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  Readonly: ").Append(Readonly).Append("\n");
             sb.Append("  Variations: ").Append(Variations).Append("\n");
             sb.Append("  Answer: ").Append(Answer).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -426,6 +450,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalId.Equals(other.ExternalId)
                 ) &&
                 (
+                    this.Source == other.Source ||
+                    this.Source != null &&
+                    this.Source.Equals(other.Source)
+                ) &&
+                (
+                    this.Readonly == other.Readonly ||
+                    this.Readonly != null &&
+                    this.Readonly.Equals(other.Readonly)
+                ) &&
+                (
                     this.Variations == other.Variations ||
                     this.Variations != null &&
                     this.Variations.SequenceEqual(other.Variations)
@@ -503,6 +537,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
+
+                if (this.Source != null)
+                    hash = hash * 59 + this.Source.GetHashCode();
+
+                if (this.Readonly != null)
+                    hash = hash * 59 + this.Readonly.GetHashCode();
 
                 if (this.Variations != null)
                     hash = hash * 59 + this.Variations.GetHashCode();

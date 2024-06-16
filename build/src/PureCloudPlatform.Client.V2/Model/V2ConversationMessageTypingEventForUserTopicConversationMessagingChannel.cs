@@ -90,24 +90,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Platform">Platform.</param>
-        /// <param name="MessageId">MessageId.</param>
         /// <param name="To">To.</param>
         /// <param name="From">From.</param>
         /// <param name="Time">Time.</param>
-        /// <param name="DateModified">DateModified.</param>
-        /// <param name="DateDeleted">DateDeleted.</param>
-        /// <param name="Metadata">Metadata.</param>
-        public V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel(string Id = null, PlatformEnum? Platform = null, string MessageId = null, V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient To = null, V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient From = null, DateTime? Time = null, DateTime? DateModified = null, DateTime? DateDeleted = null, V2ConversationMessageTypingEventForUserTopicConversationMessagingChannelMetadata Metadata = null)
+        public V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel(string Id = null, PlatformEnum? Platform = null, V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient To = null, V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient From = null, DateTime? Time = null)
         {
             this.Id = Id;
             this.Platform = Platform;
-            this.MessageId = MessageId;
             this.To = To;
             this.From = From;
             this.Time = Time;
-            this.DateModified = DateModified;
-            this.DateDeleted = DateDeleted;
-            this.Metadata = Metadata;
             
         }
         
@@ -120,14 +112,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
-
-
-
-        /// <summary>
-        /// Gets or Sets MessageId
-        /// </summary>
-        [DataMember(Name="messageId", EmitDefaultValue=false)]
-        public string MessageId { get; set; }
 
 
 
@@ -154,30 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? Time { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets DateModified
-        /// </summary>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets DateDeleted
-        /// </summary>
-        [DataMember(Name="dateDeleted", EmitDefaultValue=false)]
-        public DateTime? DateDeleted { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Metadata
-        /// </summary>
-        [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public V2ConversationMessageTypingEventForUserTopicConversationMessagingChannelMetadata Metadata { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -189,13 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
-            sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  DateDeleted: ").Append(DateDeleted).Append("\n");
-            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -247,11 +203,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Platform.Equals(other.Platform)
                 ) &&
                 (
-                    this.MessageId == other.MessageId ||
-                    this.MessageId != null &&
-                    this.MessageId.Equals(other.MessageId)
-                ) &&
-                (
                     this.To == other.To ||
                     this.To != null &&
                     this.To.Equals(other.To)
@@ -265,21 +216,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Time == other.Time ||
                     this.Time != null &&
                     this.Time.Equals(other.Time)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.DateDeleted == other.DateDeleted ||
-                    this.DateDeleted != null &&
-                    this.DateDeleted.Equals(other.DateDeleted)
-                ) &&
-                (
-                    this.Metadata == other.Metadata ||
-                    this.Metadata != null &&
-                    this.Metadata.Equals(other.Metadata)
                 );
         }
 
@@ -300,9 +236,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
 
-                if (this.MessageId != null)
-                    hash = hash * 59 + this.MessageId.GetHashCode();
-
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
 
@@ -311,15 +244,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-
-                if (this.DateDeleted != null)
-                    hash = hash * 59 + this.DateDeleted.GetHashCode();
-
-                if (this.Metadata != null)
-                    hash = hash * 59 + this.Metadata.GetHashCode();
 
                 return hash;
             }

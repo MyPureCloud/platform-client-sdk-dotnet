@@ -53,25 +53,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent" /> class.
         /// </summary>
         /// <param name="EventType">EventType.</param>
-        /// <param name="CoBrowse">CoBrowse.</param>
         /// <param name="Typing">Typing.</param>
-        public V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent(EventTypeEnum? EventType = null, V2ConversationMessageTypingEventForWorkflowTopicConversationEventCoBrowse CoBrowse = null, V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping Typing = null)
+        public V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent(EventTypeEnum? EventType = null, V2ConversationMessageTypingEventForWorkflowTopicConversationEventTyping Typing = null)
         {
             this.EventType = EventType;
-            this.CoBrowse = CoBrowse;
             this.Typing = Typing;
             
         }
         
 
-
-
-
-        /// <summary>
-        /// Gets or Sets CoBrowse
-        /// </summary>
-        [DataMember(Name="coBrowse", EmitDefaultValue=false)]
-        public V2ConversationMessageTypingEventForWorkflowTopicConversationEventCoBrowse CoBrowse { get; set; }
 
 
 
@@ -92,7 +82,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent {\n");
 
             sb.Append("  EventType: ").Append(EventType).Append("\n");
-            sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
             sb.Append("  Typing: ").Append(Typing).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -140,11 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EventType.Equals(other.EventType)
                 ) &&
                 (
-                    this.CoBrowse == other.CoBrowse ||
-                    this.CoBrowse != null &&
-                    this.CoBrowse.Equals(other.CoBrowse)
-                ) &&
-                (
                     this.Typing == other.Typing ||
                     this.Typing != null &&
                     this.Typing.Equals(other.Typing)
@@ -164,9 +148,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.EventType != null)
                     hash = hash * 59 + this.EventType.GetHashCode();
-
-                if (this.CoBrowse != null)
-                    hash = hash * 59 + this.CoBrowse.GetHashCode();
 
                 if (this.Typing != null)
                     hash = hash * 59 + this.Typing.GetHashCode();

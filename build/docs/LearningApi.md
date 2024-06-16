@@ -10,17 +10,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteLearningAssignment**](LearningApi.html#deletelearningassignment) | **Delete** /api/v2/learning/assignments/{assignmentId} | Delete a learning assignment |
 | [**DeleteLearningModule**](LearningApi.html#deletelearningmodule) | **Delete** /api/v2/learning/modules/{moduleId} | Delete a learning module |
 | [**GetLearningAssignment**](LearningApi.html#getlearningassignment) | **Get** /api/v2/learning/assignments/{assignmentId} | Get Learning Assignment |
+| [**GetLearningAssignmentStep**](LearningApi.html#getlearningassignmentstep) | **Get** /api/v2/learning/assignments/{assignmentId}/steps/{stepId} | Get Learning Assignment Step |
 | [**GetLearningAssignments**](LearningApi.html#getlearningassignments) | **Get** /api/v2/learning/assignments | List of Learning module Assignments |
 | [**GetLearningAssignmentsMe**](LearningApi.html#getlearningassignmentsme) | **Get** /api/v2/learning/assignments/me | List of Learning Assignments assigned to current user |
 | [**GetLearningModule**](LearningApi.html#getlearningmodule) | **Get** /api/v2/learning/modules/{moduleId} | Get a learning module |
 | [**GetLearningModuleJob**](LearningApi.html#getlearningmodulejob) | **Get** /api/v2/learning/modules/{moduleId}/jobs/{jobId} | Get a specific Learning Module job status |
+| [**GetLearningModulePreview**](LearningApi.html#getlearningmodulepreview) | **Get** /api/v2/learning/modules/{moduleId}/preview | Get a learning module preview |
 | [**GetLearningModuleRule**](LearningApi.html#getlearningmodulerule) | **Get** /api/v2/learning/modules/{moduleId}/rule | Get a learning module rule |
 | [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **Get** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
 | [**GetLearningModules**](LearningApi.html#getlearningmodules) | **Get** /api/v2/learning/modules | Get all learning modules of an organization |
 | [**GetLearningModulesAssignments**](LearningApi.html#getlearningmodulesassignments) | **Get** /api/v2/learning/modules/assignments | Get all learning modules of an organization including assignments for a specific user |
 | [**GetLearningModulesCoverartCoverArtId**](LearningApi.html#getlearningmodulescoverartcoverartid) | **Get** /api/v2/learning/modules/coverart/{coverArtId} | Get a specific Learning Module cover art using ID |
+| [**GetLearningScormScormId**](LearningApi.html#getlearningscormscormid) | **Get** /api/v2/learning/scorm/{scormId} | Get Learning SCORM Result |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **Patch** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
 | [**PatchLearningAssignmentReschedule**](LearningApi.html#patchlearningassignmentreschedule) | **Patch** /api/v2/learning/assignments/{assignmentId}/reschedule | Reschedule Learning Assignment |
+| [**PatchLearningAssignmentStep**](LearningApi.html#patchlearningassignmentstep) | **Patch** /api/v2/learning/assignments/{assignmentId}/steps/{stepId} | Update Learning Assignment Step |
 | [**PatchLearningModuleUserAssignments**](LearningApi.html#patchlearningmoduleuserassignments) | **Patch** /api/v2/learning/modules/{moduleId}/users/{userId}/assignments | Update an external assignment for a specific user |
 | [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **Post** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
 | [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **Post** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
@@ -34,7 +38,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLearningModules**](LearningApi.html#postlearningmodules) | **Post** /api/v2/learning/modules | Create a new learning module |
 | [**PostLearningRulesQuery**](LearningApi.html#postlearningrulesquery) | **Post** /api/v2/learning/rules/query | Get users for learning module rule |
 | [**PostLearningScheduleslotsQuery**](LearningApi.html#postlearningscheduleslotsquery) | **Post** /api/v2/learning/scheduleslots/query | Get list of possible slots where a learning activity can be scheduled. |
+| [**PostLearningScorm**](LearningApi.html#postlearningscorm) | **Post** /api/v2/learning/scorm | Create a SCORM package upload request |
 | [**PutLearningModule**](LearningApi.html#putlearningmodule) | **Put** /api/v2/learning/modules/{moduleId} | Update a learning module |
+| [**PutLearningModulePreview**](LearningApi.html#putlearningmodulepreview) | **Put** /api/v2/learning/modules/{moduleId}/preview | Update a learning module preview |
 | [**PutLearningModuleRule**](LearningApi.html#putlearningmodulerule) | **Put** /api/v2/learning/modules/{moduleId}/rule | Update a learning module rule |
 {: class="table table-striped"}
 
@@ -230,6 +236,77 @@ namespace Example
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="getlearningassignmentstep"></a>
+
+## [**LearningAssignmentStep**](LearningAssignmentStep.html) GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+
+
+
+Get Learning Assignment Step
+
+Permission not required if you are the assigned user of the learning assignment
+
+Requires ANY permissions: 
+
+* learning:assignment:viewOwn
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLearningAssignmentStepExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var assignmentId = assignmentId_example;  // string | The ID of Learning Assignment
+            var stepId = stepId_example;  // string | The ID of Learning Assignment Step
+            var shareableContentObjectId = shareableContentObjectId_example;  // string | The ID of SCO to load (optional) 
+            var expand = new List<string>(); // List<string> | Fields to expand in response (optional) 
+
+            try
+            { 
+                // Get Learning Assignment Step
+                LearningAssignmentStep result = apiInstance.GetLearningAssignmentStep(assignmentId, stepId, shareableContentObjectId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.GetLearningAssignmentStep: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignmentId** | **string**| The ID of Learning Assignment |  |
+| **stepId** | **string**| The ID of Learning Assignment Step |  |
+| **shareableContentObjectId** | **string**| The ID of SCO to load | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in response | [optional] <br />**Values**: moduleStep |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignmentStep**](LearningAssignmentStep.html)
 
 <a name="getlearningassignments"></a>
 
@@ -541,6 +618,69 @@ namespace Example
 ### Return type
 
 [**LearningModuleJobResponse**](LearningModuleJobResponse.html)
+
+<a name="getlearningmodulepreview"></a>
+
+## [**LearningModulePreviewGetResponse**](LearningModulePreviewGetResponse.html) GetLearningModulePreview (string moduleId)
+
+
+
+Get a learning module preview
+
+Requires ANY permissions: 
+
+* learning:module:preview
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLearningModulePreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var moduleId = moduleId_example;  // string | The ID of the learning module
+
+            try
+            { 
+                // Get a learning module preview
+                LearningModulePreviewGetResponse result = apiInstance.GetLearningModulePreview(moduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.GetLearningModulePreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **moduleId** | **string**| The ID of the learning module |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningModulePreviewGetResponse**](LearningModulePreviewGetResponse.html)
 
 <a name="getlearningmodulerule"></a>
 
@@ -894,6 +1034,69 @@ namespace Example
 
 [**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse.html)
 
+<a name="getlearningscormscormid"></a>
+
+## [**LearningScormResponse**](LearningScormResponse.html) GetLearningScormScormId (string scormId)
+
+
+
+Get Learning SCORM Result
+
+Requires ANY permissions: 
+
+* learning:scorm:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLearningScormScormIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var scormId = scormId_example;  // string | The ID of the SCORM package
+
+            try
+            { 
+                // Get Learning SCORM Result
+                LearningScormResponse result = apiInstance.GetLearningScormScormId(scormId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.GetLearningScormScormId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scormId** | **string**| The ID of the SCORM package |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningScormResponse**](LearningScormResponse.html)
+
 <a name="patchlearningassignment"></a>
 
 ## [**LearningAssignment**](LearningAssignment.html) PatchLearningAssignment (string assignmentId, LearningAssignmentUpdate body = null)
@@ -1022,6 +1225,75 @@ namespace Example
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="patchlearningassignmentstep"></a>
+
+## [**LearningAssignmentStep**](LearningAssignmentStep.html) PatchLearningAssignmentStep (string assignmentId, string stepId, LearningAssignmentStep body = null)
+
+
+
+Update Learning Assignment Step
+
+Permission not required if you are the assigned user of the learning assignment
+
+Requires ANY permissions: 
+
+* learning:assignment:editOwn
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchLearningAssignmentStepExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var assignmentId = assignmentId_example;  // string | The ID of Learning Assignment
+            var stepId = stepId_example;  // string | The ID of Learning Assignment Step
+            var body = new LearningAssignmentStep(); // LearningAssignmentStep | The Learning Assignment Step to be updated (optional) 
+
+            try
+            { 
+                // Update Learning Assignment Step
+                LearningAssignmentStep result = apiInstance.PatchLearningAssignmentStep(assignmentId, stepId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PatchLearningAssignmentStep: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignmentId** | **string**| The ID of Learning Assignment |  |
+| **stepId** | **string**| The ID of Learning Assignment Step |  |
+| **body** | [**LearningAssignmentStep**](LearningAssignmentStep.html)| The Learning Assignment Step to be updated | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignmentStep**](LearningAssignmentStep.html)
 
 <a name="patchlearningmoduleuserassignments"></a>
 
@@ -1866,6 +2138,69 @@ namespace Example
 
 [**LearningScheduleSlotsQueryResponse**](LearningScheduleSlotsQueryResponse.html)
 
+<a name="postlearningscorm"></a>
+
+## [**LearningScormUploadResponse**](LearningScormUploadResponse.html) PostLearningScorm (LearningScormUploadRequest body = null)
+
+
+
+Create a SCORM package upload request
+
+Requires ANY permissions: 
+
+* learning:scorm:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningScormExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var body = new LearningScormUploadRequest(); // LearningScormUploadRequest | The SCORM package to be uploaded (optional) 
+
+            try
+            { 
+                // Create a SCORM package upload request
+                LearningScormUploadResponse result = apiInstance.PostLearningScorm(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningScorm: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LearningScormUploadRequest**](LearningScormUploadRequest.html)| The SCORM package to be uploaded | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningScormUploadResponse**](LearningScormUploadResponse.html)
+
 <a name="putlearningmodule"></a>
 
 ## [**LearningModule**](LearningModule.html) PutLearningModule (string moduleId, LearningModuleRequest body)
@@ -1932,6 +2267,73 @@ namespace Example
 ### Return type
 
 [**LearningModule**](LearningModule.html)
+
+<a name="putlearningmodulepreview"></a>
+
+## [**LearningModulePreviewUpdateResponse**](LearningModulePreviewUpdateResponse.html) PutLearningModulePreview (string moduleId, LearningModulePreviewUpdateRequest body)
+
+
+
+Update a learning module preview
+
+This will update a learning module preview
+
+Requires ANY permissions: 
+
+* learning:module:preview
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutLearningModulePreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var moduleId = moduleId_example;  // string | The ID of the learning module
+            var body = new LearningModulePreviewUpdateRequest(); // LearningModulePreviewUpdateRequest | The learning module to be updated
+
+            try
+            { 
+                // Update a learning module preview
+                LearningModulePreviewUpdateResponse result = apiInstance.PutLearningModulePreview(moduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PutLearningModulePreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **moduleId** | **string**| The ID of the learning module |  |
+| **body** | [**LearningModulePreviewUpdateRequest**](LearningModulePreviewUpdateRequest.html)| The learning module to be updated |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningModulePreviewUpdateResponse**](LearningModulePreviewUpdateResponse.html)
 
 <a name="putlearningmodulerule"></a>
 

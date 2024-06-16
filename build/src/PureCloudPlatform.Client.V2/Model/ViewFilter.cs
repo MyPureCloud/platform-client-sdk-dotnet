@@ -1740,9 +1740,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SurveyTypes">The surveyTypes is used to filter the view.</param>
         /// <param name="SurveyResponseStatuses">The list of Survey Response Status.</param>
         /// <param name="BotFlowTypes">The botFlowTypes is used to filter the view.</param>
+        /// <param name="AgentTalkDurationMilliseconds">The agent talk durations in milliseconds used to filter the view.</param>
+        /// <param name="CustomerTalkDurationMilliseconds">The customer talk durations in milliseconds used to filter the view.</param>
+        /// <param name="OvertalkDurationMilliseconds">The overtalk durations in milliseconds used to filter the view.</param>
+        /// <param name="SilenceDurationMilliseconds">The silence durations in milliseconds used to filter the view.</param>
+        /// <param name="AcdDurationMilliseconds">The acd durations in milliseconds used to filter the view.</param>
+        /// <param name="IvrDurationMilliseconds">The ivr durations in milliseconds used to filter the view.</param>
+        /// <param name="OtherDurationMilliseconds">The other (hold/music) durations in milliseconds used to filter the view.</param>
+        /// <param name="AgentTalkPercentage">The agent talk percentage used to filter the view.</param>
+        /// <param name="CustomerTalkPercentage">The customer talk percentage used to filter the view.</param>
+        /// <param name="OvertalkPercentage">The overtalk percentage used to filter the view.</param>
+        /// <param name="SilencePercentage">The silence percentage used to filter the view.</param>
+        /// <param name="AcdPercentage">The acd percentage used to filter the view.</param>
+        /// <param name="IvrPercentage">The ivr percentage used to filter the view.</param>
+        /// <param name="OtherPercentage">The other (hold/music percentage used to filter the view.</param>
+        /// <param name="OvertalkInstances">The overtalk instance range used to filter the view.</param>
         /// <param name="IsScreenRecorded">Filter to indicate if the screen is recorded.</param>
         /// <param name="ScreenMonitorUserIds">The list of Screen Monitor User Ids.</param>
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> ManagementUnitIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null, List<string> FlowMilestoneIds = null, bool? IsAssessmentPassed = null, List<string> ConversationInitiators = null, bool? HasCustomerParticipated = null, bool? IsAcdInteraction = null, bool? HasFax = null, List<string> DataActionIds = null, string ActionCategoryName = null, List<string> IntegrationIds = null, List<string> ResponseStatuses = null, AvailableDashboardEnum? AvailableDashboard = null, bool? FavouriteDashboard = null, bool? MyDashboard = null, List<string> StationErrors = null, List<string> CanonicalContactIds = null, List<string> AlertRuleIds = null, List<string> EvaluationFormContextIds = null, List<EvaluationStatusesEnum> EvaluationStatuses = null, List<string> WorkbinIds = null, List<string> WorktypeIds = null, List<string> WorkitemIds = null, List<string> WorkitemAssigneeIds = null, List<string> WorkitemStatuses = null, bool? IsAnalyzedForSensitiveData = null, bool? HasSensitiveData = null, bool? HasPciData = null, bool? HasPiiData = null, string SubPath = null, UserStateEnum? UserState = null, bool? IsClearedByCustomer = null, List<string> EvaluationAssigneeIds = null, bool? EvaluationAssigned = null, List<string> AssistantIds = null, List<string> KnowledgeBaseIds = null, bool? IsParked = null, NumericRange AgentEmpathyScore = null, List<SurveyTypesEnum> SurveyTypes = null, List<SurveyResponseStatusesEnum> SurveyResponseStatuses = null, List<BotFlowTypesEnum> BotFlowTypes = null, bool? IsScreenRecorded = null, List<string> ScreenMonitorUserIds = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<OriginatingDirectionsEnum> OriginatingDirections = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> SessionDnisList = null, List<string> FilterQueuesByUserIds = null, List<string> FilterUsersByQueueIds = null, List<string> UserIds = null, List<string> ManagementUnitIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> ExternalContactIds = null, List<string> ExternalOrgIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, List<NumericRange> AcdDurationsMilliseconds = null, List<NumericRange> TalkDurationsMilliseconds = null, List<NumericRange> AcwDurationsMilliseconds = null, List<NumericRange> HandleDurationsMilliseconds = null, List<NumericRange> HoldDurationsMilliseconds = null, List<NumericRange> AbandonDurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, bool? Answered = null, List<MessageTypesEnum> MessageTypes = null, List<string> DivisionIds = null, List<string> SurveyFormIds = null, NumericRange SurveyTotalScore = null, NumericRange SurveyNpsScore = null, NumericRange Mos = null, NumericRange SurveyQuestionGroupScore = null, NumericRange SurveyPromoterScore = null, List<string> SurveyFormContextIds = null, List<string> ConversationIds = null, List<string> SipCallIds = null, bool? IsEnded = null, bool? IsSurveyed = null, List<NumericRange> SurveyScores = null, List<NumericRange> PromoterScores = null, bool? IsCampaign = null, List<string> SurveyStatuses = null, ConversationProperties ConversationProperties = null, bool? IsBlindTransferred = null, bool? IsConsulted = null, bool? IsConsultTransferred = null, List<string> RemoteParticipants = null, List<string> FlowIds = null, List<string> FlowOutcomeIds = null, List<FlowOutcomeValuesEnum> FlowOutcomeValues = null, List<FlowDestinationTypesEnum> FlowDestinationTypes = null, List<FlowDisconnectReasonsEnum> FlowDisconnectReasons = null, List<FlowTypesEnum> FlowTypes = null, List<FlowEntryTypesEnum> FlowEntryTypes = null, List<string> FlowEntryReasons = null, List<string> FlowVersions = null, List<string> GroupIds = null, bool? HasJourneyCustomerId = null, bool? HasJourneyActionMapId = null, bool? HasJourneyVisitId = null, bool? HasMedia = null, List<string> RoleIds = null, List<string> ReportsTos = null, List<string> LocationIds = null, List<string> FlowOutTypes = null, List<string> ProviderList = null, List<string> CallbackNumberList = null, string CallbackInterval = null, List<UsedRoutingTypesEnum> UsedRoutingTypes = null, List<RequestedRoutingTypesEnum> RequestedRoutingTypes = null, bool? HasAgentAssistId = null, List<Transcripts> Transcripts = null, List<string> TranscriptLanguages = null, List<ParticipantPurposesEnum> ParticipantPurposes = null, bool? ShowFirstQueue = null, List<string> TeamIds = null, List<string> FilterUsersByTeamIds = null, List<string> JourneyActionMapIds = null, List<string> JourneyOutcomeIds = null, List<string> JourneySegmentIds = null, List<JourneyActionMapTypesEnum> JourneyActionMapTypes = null, List<DevelopmentRoleListEnum> DevelopmentRoleList = null, List<DevelopmentTypeListEnum> DevelopmentTypeList = null, List<DevelopmentStatusListEnum> DevelopmentStatusList = null, List<string> DevelopmentModuleIds = null, bool? DevelopmentActivityOverdue = null, NumericRange CustomerSentimentScore = null, NumericRange CustomerSentimentTrend = null, List<string> FlowTransferTargets = null, string DevelopmentName = null, List<string> TopicIds = null, List<string> ExternalTags = null, bool? IsNotResponding = null, bool? IsAuthenticated = null, List<string> BotIds = null, List<string> BotVersions = null, List<BotMessageTypesEnum> BotMessageTypes = null, List<BotProviderListEnum> BotProviderList = null, List<BotProductListEnum> BotProductList = null, List<BotRecognitionFailureReasonListEnum> BotRecognitionFailureReasonList = null, List<string> BotIntentList = null, List<string> BotFinalIntentList = null, List<string> BotSlotList = null, List<BotResultListEnum> BotResultList = null, List<BlockedReasonsEnum> BlockedReasons = null, bool? IsRecorded = null, bool? HasEvaluation = null, bool? HasScoredEvaluation = null, List<EmailDeliveryStatusListEnum> EmailDeliveryStatusList = null, bool? IsAgentOwnedCallback = null, List<string> AgentCallbackOwnerIds = null, List<TranscriptTopics> TranscriptTopics = null, List<string> JourneyFrequencyCapReasons = null, List<string> JourneyBlockingActionMapIds = null, List<string> JourneyActionTargetIds = null, List<string> JourneyBlockingScheduleGroupIds = null, List<string> JourneyBlockingEmergencyScheduleGroupIds = null, List<string> JourneyUrlEqualConditions = null, List<string> JourneyUrlNotEqualConditions = null, List<string> JourneyUrlStartsWithConditions = null, List<string> JourneyUrlEndsWithConditions = null, List<string> JourneyUrlContainsAnyConditions = null, List<string> JourneyUrlNotContainsAnyConditions = null, List<string> JourneyUrlContainsAllConditions = null, List<string> JourneyUrlNotContainsAllConditions = null, List<string> FlowMilestoneIds = null, bool? IsAssessmentPassed = null, List<string> ConversationInitiators = null, bool? HasCustomerParticipated = null, bool? IsAcdInteraction = null, bool? HasFax = null, List<string> DataActionIds = null, string ActionCategoryName = null, List<string> IntegrationIds = null, List<string> ResponseStatuses = null, AvailableDashboardEnum? AvailableDashboard = null, bool? FavouriteDashboard = null, bool? MyDashboard = null, List<string> StationErrors = null, List<string> CanonicalContactIds = null, List<string> AlertRuleIds = null, List<string> EvaluationFormContextIds = null, List<EvaluationStatusesEnum> EvaluationStatuses = null, List<string> WorkbinIds = null, List<string> WorktypeIds = null, List<string> WorkitemIds = null, List<string> WorkitemAssigneeIds = null, List<string> WorkitemStatuses = null, bool? IsAnalyzedForSensitiveData = null, bool? HasSensitiveData = null, bool? HasPciData = null, bool? HasPiiData = null, string SubPath = null, UserStateEnum? UserState = null, bool? IsClearedByCustomer = null, List<string> EvaluationAssigneeIds = null, bool? EvaluationAssigned = null, List<string> AssistantIds = null, List<string> KnowledgeBaseIds = null, bool? IsParked = null, NumericRange AgentEmpathyScore = null, List<SurveyTypesEnum> SurveyTypes = null, List<SurveyResponseStatusesEnum> SurveyResponseStatuses = null, List<BotFlowTypesEnum> BotFlowTypes = null, List<NumericRange> AgentTalkDurationMilliseconds = null, List<NumericRange> CustomerTalkDurationMilliseconds = null, List<NumericRange> OvertalkDurationMilliseconds = null, List<NumericRange> SilenceDurationMilliseconds = null, List<NumericRange> AcdDurationMilliseconds = null, List<NumericRange> IvrDurationMilliseconds = null, List<NumericRange> OtherDurationMilliseconds = null, NumericRange AgentTalkPercentage = null, NumericRange CustomerTalkPercentage = null, NumericRange OvertalkPercentage = null, NumericRange SilencePercentage = null, NumericRange AcdPercentage = null, NumericRange IvrPercentage = null, NumericRange OtherPercentage = null, NumericRange OvertalkInstances = null, bool? IsScreenRecorded = null, List<string> ScreenMonitorUserIds = null)
         {
             this.MediaTypes = MediaTypes;
             this.QueueIds = QueueIds;
@@ -1921,6 +1936,21 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SurveyTypes = SurveyTypes;
             this.SurveyResponseStatuses = SurveyResponseStatuses;
             this.BotFlowTypes = BotFlowTypes;
+            this.AgentTalkDurationMilliseconds = AgentTalkDurationMilliseconds;
+            this.CustomerTalkDurationMilliseconds = CustomerTalkDurationMilliseconds;
+            this.OvertalkDurationMilliseconds = OvertalkDurationMilliseconds;
+            this.SilenceDurationMilliseconds = SilenceDurationMilliseconds;
+            this.AcdDurationMilliseconds = AcdDurationMilliseconds;
+            this.IvrDurationMilliseconds = IvrDurationMilliseconds;
+            this.OtherDurationMilliseconds = OtherDurationMilliseconds;
+            this.AgentTalkPercentage = AgentTalkPercentage;
+            this.CustomerTalkPercentage = CustomerTalkPercentage;
+            this.OvertalkPercentage = OvertalkPercentage;
+            this.SilencePercentage = SilencePercentage;
+            this.AcdPercentage = AcdPercentage;
+            this.IvrPercentage = IvrPercentage;
+            this.OtherPercentage = OtherPercentage;
+            this.OvertalkInstances = OvertalkInstances;
             this.IsScreenRecorded = IsScreenRecorded;
             this.ScreenMonitorUserIds = ScreenMonitorUserIds;
             
@@ -3508,6 +3538,141 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The agent talk durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The agent talk durations in milliseconds used to filter the view</value>
+        [DataMember(Name="agentTalkDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> AgentTalkDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The customer talk durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The customer talk durations in milliseconds used to filter the view</value>
+        [DataMember(Name="customerTalkDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> CustomerTalkDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The overtalk durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The overtalk durations in milliseconds used to filter the view</value>
+        [DataMember(Name="overtalkDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> OvertalkDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The silence durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The silence durations in milliseconds used to filter the view</value>
+        [DataMember(Name="silenceDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> SilenceDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The acd durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The acd durations in milliseconds used to filter the view</value>
+        [DataMember(Name="acdDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> AcdDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The ivr durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The ivr durations in milliseconds used to filter the view</value>
+        [DataMember(Name="ivrDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> IvrDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The other (hold/music) durations in milliseconds used to filter the view
+        /// </summary>
+        /// <value>The other (hold/music) durations in milliseconds used to filter the view</value>
+        [DataMember(Name="otherDurationMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> OtherDurationMilliseconds { get; set; }
+
+
+
+        /// <summary>
+        /// The agent talk percentage used to filter the view
+        /// </summary>
+        /// <value>The agent talk percentage used to filter the view</value>
+        [DataMember(Name="agentTalkPercentage", EmitDefaultValue=false)]
+        public NumericRange AgentTalkPercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The customer talk percentage used to filter the view
+        /// </summary>
+        /// <value>The customer talk percentage used to filter the view</value>
+        [DataMember(Name="customerTalkPercentage", EmitDefaultValue=false)]
+        public NumericRange CustomerTalkPercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The overtalk percentage used to filter the view
+        /// </summary>
+        /// <value>The overtalk percentage used to filter the view</value>
+        [DataMember(Name="overtalkPercentage", EmitDefaultValue=false)]
+        public NumericRange OvertalkPercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The silence percentage used to filter the view
+        /// </summary>
+        /// <value>The silence percentage used to filter the view</value>
+        [DataMember(Name="silencePercentage", EmitDefaultValue=false)]
+        public NumericRange SilencePercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The acd percentage used to filter the view
+        /// </summary>
+        /// <value>The acd percentage used to filter the view</value>
+        [DataMember(Name="acdPercentage", EmitDefaultValue=false)]
+        public NumericRange AcdPercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The ivr percentage used to filter the view
+        /// </summary>
+        /// <value>The ivr percentage used to filter the view</value>
+        [DataMember(Name="ivrPercentage", EmitDefaultValue=false)]
+        public NumericRange IvrPercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The other (hold/music percentage used to filter the view
+        /// </summary>
+        /// <value>The other (hold/music percentage used to filter the view</value>
+        [DataMember(Name="otherPercentage", EmitDefaultValue=false)]
+        public NumericRange OtherPercentage { get; set; }
+
+
+
+        /// <summary>
+        /// The overtalk instance range used to filter the view
+        /// </summary>
+        /// <value>The overtalk instance range used to filter the view</value>
+        [DataMember(Name="overtalkInstances", EmitDefaultValue=false)]
+        public NumericRange OvertalkInstances { get; set; }
+
+
+
+        /// <summary>
         /// Filter to indicate if the screen is recorded
         /// </summary>
         /// <value>Filter to indicate if the screen is recorded</value>
@@ -3710,6 +3875,21 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SurveyTypes: ").Append(SurveyTypes).Append("\n");
             sb.Append("  SurveyResponseStatuses: ").Append(SurveyResponseStatuses).Append("\n");
             sb.Append("  BotFlowTypes: ").Append(BotFlowTypes).Append("\n");
+            sb.Append("  AgentTalkDurationMilliseconds: ").Append(AgentTalkDurationMilliseconds).Append("\n");
+            sb.Append("  CustomerTalkDurationMilliseconds: ").Append(CustomerTalkDurationMilliseconds).Append("\n");
+            sb.Append("  OvertalkDurationMilliseconds: ").Append(OvertalkDurationMilliseconds).Append("\n");
+            sb.Append("  SilenceDurationMilliseconds: ").Append(SilenceDurationMilliseconds).Append("\n");
+            sb.Append("  AcdDurationMilliseconds: ").Append(AcdDurationMilliseconds).Append("\n");
+            sb.Append("  IvrDurationMilliseconds: ").Append(IvrDurationMilliseconds).Append("\n");
+            sb.Append("  OtherDurationMilliseconds: ").Append(OtherDurationMilliseconds).Append("\n");
+            sb.Append("  AgentTalkPercentage: ").Append(AgentTalkPercentage).Append("\n");
+            sb.Append("  CustomerTalkPercentage: ").Append(CustomerTalkPercentage).Append("\n");
+            sb.Append("  OvertalkPercentage: ").Append(OvertalkPercentage).Append("\n");
+            sb.Append("  SilencePercentage: ").Append(SilencePercentage).Append("\n");
+            sb.Append("  AcdPercentage: ").Append(AcdPercentage).Append("\n");
+            sb.Append("  IvrPercentage: ").Append(IvrPercentage).Append("\n");
+            sb.Append("  OtherPercentage: ").Append(OtherPercentage).Append("\n");
+            sb.Append("  OvertalkInstances: ").Append(OvertalkInstances).Append("\n");
             sb.Append("  IsScreenRecorded: ").Append(IsScreenRecorded).Append("\n");
             sb.Append("  ScreenMonitorUserIds: ").Append(ScreenMonitorUserIds).Append("\n");
             sb.Append("}\n");
@@ -4638,6 +4818,81 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BotFlowTypes.SequenceEqual(other.BotFlowTypes)
                 ) &&
                 (
+                    this.AgentTalkDurationMilliseconds == other.AgentTalkDurationMilliseconds ||
+                    this.AgentTalkDurationMilliseconds != null &&
+                    this.AgentTalkDurationMilliseconds.SequenceEqual(other.AgentTalkDurationMilliseconds)
+                ) &&
+                (
+                    this.CustomerTalkDurationMilliseconds == other.CustomerTalkDurationMilliseconds ||
+                    this.CustomerTalkDurationMilliseconds != null &&
+                    this.CustomerTalkDurationMilliseconds.SequenceEqual(other.CustomerTalkDurationMilliseconds)
+                ) &&
+                (
+                    this.OvertalkDurationMilliseconds == other.OvertalkDurationMilliseconds ||
+                    this.OvertalkDurationMilliseconds != null &&
+                    this.OvertalkDurationMilliseconds.SequenceEqual(other.OvertalkDurationMilliseconds)
+                ) &&
+                (
+                    this.SilenceDurationMilliseconds == other.SilenceDurationMilliseconds ||
+                    this.SilenceDurationMilliseconds != null &&
+                    this.SilenceDurationMilliseconds.SequenceEqual(other.SilenceDurationMilliseconds)
+                ) &&
+                (
+                    this.AcdDurationMilliseconds == other.AcdDurationMilliseconds ||
+                    this.AcdDurationMilliseconds != null &&
+                    this.AcdDurationMilliseconds.SequenceEqual(other.AcdDurationMilliseconds)
+                ) &&
+                (
+                    this.IvrDurationMilliseconds == other.IvrDurationMilliseconds ||
+                    this.IvrDurationMilliseconds != null &&
+                    this.IvrDurationMilliseconds.SequenceEqual(other.IvrDurationMilliseconds)
+                ) &&
+                (
+                    this.OtherDurationMilliseconds == other.OtherDurationMilliseconds ||
+                    this.OtherDurationMilliseconds != null &&
+                    this.OtherDurationMilliseconds.SequenceEqual(other.OtherDurationMilliseconds)
+                ) &&
+                (
+                    this.AgentTalkPercentage == other.AgentTalkPercentage ||
+                    this.AgentTalkPercentage != null &&
+                    this.AgentTalkPercentage.Equals(other.AgentTalkPercentage)
+                ) &&
+                (
+                    this.CustomerTalkPercentage == other.CustomerTalkPercentage ||
+                    this.CustomerTalkPercentage != null &&
+                    this.CustomerTalkPercentage.Equals(other.CustomerTalkPercentage)
+                ) &&
+                (
+                    this.OvertalkPercentage == other.OvertalkPercentage ||
+                    this.OvertalkPercentage != null &&
+                    this.OvertalkPercentage.Equals(other.OvertalkPercentage)
+                ) &&
+                (
+                    this.SilencePercentage == other.SilencePercentage ||
+                    this.SilencePercentage != null &&
+                    this.SilencePercentage.Equals(other.SilencePercentage)
+                ) &&
+                (
+                    this.AcdPercentage == other.AcdPercentage ||
+                    this.AcdPercentage != null &&
+                    this.AcdPercentage.Equals(other.AcdPercentage)
+                ) &&
+                (
+                    this.IvrPercentage == other.IvrPercentage ||
+                    this.IvrPercentage != null &&
+                    this.IvrPercentage.Equals(other.IvrPercentage)
+                ) &&
+                (
+                    this.OtherPercentage == other.OtherPercentage ||
+                    this.OtherPercentage != null &&
+                    this.OtherPercentage.Equals(other.OtherPercentage)
+                ) &&
+                (
+                    this.OvertalkInstances == other.OvertalkInstances ||
+                    this.OvertalkInstances != null &&
+                    this.OvertalkInstances.Equals(other.OvertalkInstances)
+                ) &&
+                (
                     this.IsScreenRecorded == other.IsScreenRecorded ||
                     this.IsScreenRecorded != null &&
                     this.IsScreenRecorded.Equals(other.IsScreenRecorded)
@@ -5190,6 +5445,51 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.BotFlowTypes != null)
                     hash = hash * 59 + this.BotFlowTypes.GetHashCode();
+
+                if (this.AgentTalkDurationMilliseconds != null)
+                    hash = hash * 59 + this.AgentTalkDurationMilliseconds.GetHashCode();
+
+                if (this.CustomerTalkDurationMilliseconds != null)
+                    hash = hash * 59 + this.CustomerTalkDurationMilliseconds.GetHashCode();
+
+                if (this.OvertalkDurationMilliseconds != null)
+                    hash = hash * 59 + this.OvertalkDurationMilliseconds.GetHashCode();
+
+                if (this.SilenceDurationMilliseconds != null)
+                    hash = hash * 59 + this.SilenceDurationMilliseconds.GetHashCode();
+
+                if (this.AcdDurationMilliseconds != null)
+                    hash = hash * 59 + this.AcdDurationMilliseconds.GetHashCode();
+
+                if (this.IvrDurationMilliseconds != null)
+                    hash = hash * 59 + this.IvrDurationMilliseconds.GetHashCode();
+
+                if (this.OtherDurationMilliseconds != null)
+                    hash = hash * 59 + this.OtherDurationMilliseconds.GetHashCode();
+
+                if (this.AgentTalkPercentage != null)
+                    hash = hash * 59 + this.AgentTalkPercentage.GetHashCode();
+
+                if (this.CustomerTalkPercentage != null)
+                    hash = hash * 59 + this.CustomerTalkPercentage.GetHashCode();
+
+                if (this.OvertalkPercentage != null)
+                    hash = hash * 59 + this.OvertalkPercentage.GetHashCode();
+
+                if (this.SilencePercentage != null)
+                    hash = hash * 59 + this.SilencePercentage.GetHashCode();
+
+                if (this.AcdPercentage != null)
+                    hash = hash * 59 + this.AcdPercentage.GetHashCode();
+
+                if (this.IvrPercentage != null)
+                    hash = hash * 59 + this.IvrPercentage.GetHashCode();
+
+                if (this.OtherPercentage != null)
+                    hash = hash * 59 + this.OtherPercentage.GetHashCode();
+
+                if (this.OvertalkInstances != null)
+                    hash = hash * 59 + this.OvertalkInstances.GetHashCode();
 
                 if (this.IsScreenRecorded != null)
                     hash = hash * 59 + this.IsScreenRecorded.GetHashCode();

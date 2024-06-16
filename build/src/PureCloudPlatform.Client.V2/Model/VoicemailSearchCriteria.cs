@@ -112,7 +112,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum MatchAll for "MATCH_ALL"
             /// </summary>
             [EnumMember(Value = "MATCH_ALL")]
-            MatchAll
+            MatchAll,
+            
+            /// <summary>
+            /// Enum DateRange for "DATE_RANGE"
+            /// </summary>
+            [EnumMember(Value = "DATE_RANGE")]
+            DateRange
         }
         /// <summary>
         /// How to apply this search criteria against other criteria

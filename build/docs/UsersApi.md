@@ -1375,7 +1375,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **string**| Field type | <br />**Values**: person, group, org, externalContact |
+| **type** | **string**| Field type | <br />**Values**: person, group, org |
 {: class="table table-striped"}
 
 ### Return type

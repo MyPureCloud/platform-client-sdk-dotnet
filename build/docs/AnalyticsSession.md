@@ -32,6 +32,8 @@ title: AnalyticsSession
 | **DeliveryStatus** | **string** | The email or SMS delivery status | [optional] |
 | **DeliveryStatusChangeDate** | **DateTime?** | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DestinationAddresses** | **List&lt;string&gt;** | Destination address(es) of transfers or consults | [optional] |
+| **DetectedSpeechEnd** | **DateTime?** | Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DetectedSpeechStart** | **DateTime?** | Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Direction** | **string** | The direction of the communication | [optional] |
 | **DispositionAnalyzer** | **string** | (Dialer) Analyzer (for example speech.person) | [optional] |
 | **DispositionName** | **string** | (Dialer) Result of the analysis (for example disposition.classification.callable.machine) | [optional] |

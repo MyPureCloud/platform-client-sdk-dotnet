@@ -1217,8 +1217,6 @@ void (empty response body)
 
 Delete a utilization label
 
-DeleteRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * routing:utilization:manage
@@ -4925,8 +4923,6 @@ This endpoint does require any parameters.
 
 Get details about this utilization label
 
-GetRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * routing:utilization:view
@@ -4990,8 +4986,6 @@ namespace Example
 
 Get list of agent ids associated with a utilization label
 
-GetRoutingUtilizationLabelAgents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * routing:utilization:view
@@ -5054,8 +5048,6 @@ namespace Example
 
 
 Get list of utilization labels
-
-GetRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -8346,8 +8338,6 @@ namespace Example
 
 Create a utilization label
 
-PostRoutingUtilizationLabels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * routing:utilization:manage
@@ -9248,8 +9238,6 @@ namespace Example
 
 
 Update a utilization label
-
-PutRoutingUtilizationLabel is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 

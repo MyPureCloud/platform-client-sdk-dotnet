@@ -37,9 +37,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultQueueId">DefaultQueueId.</param>
         /// <param name="SchemaId">SchemaId.</param>
         /// <param name="SchemaVersion">SchemaVersion.</param>
+        /// <param name="ServiceLevelTarget">ServiceLevelTarget.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WorktypeDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeList Statuses = null, WorkitemsAttributeChangeString DefaultWorkbinId = null, WorkitemsAttributeChangeInteger DefaultDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultExpirationSeconds = null, WorkitemsAttributeChangeInteger DefaultDueDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultPriority = null, WorkitemsAttributeChangeList DefaultSkillIds = null, WorkitemsAttributeChangeString DefaultStatusId = null, WorkitemsAttributeChangeString DefaultLanguageId = null, WorkitemsAttributeChangeInteger DefaultTtlSeconds = null, WorkitemsAttributeChangeBoolean AssignmentEnabled = null, WorkitemsAttributeChangeString DefaultQueueId = null, WorkitemsAttributeChangeString SchemaId = null, WorkitemsAttributeChangeString SchemaVersion = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null)
+        public WorktypeDelta(WorkitemsAttributeChangeString Name = null, WorkitemsAttributeChangeString Description = null, WorkitemsAttributeChangeList Statuses = null, WorkitemsAttributeChangeString DefaultWorkbinId = null, WorkitemsAttributeChangeInteger DefaultDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultExpirationSeconds = null, WorkitemsAttributeChangeInteger DefaultDueDurationSeconds = null, WorkitemsAttributeChangeInteger DefaultPriority = null, WorkitemsAttributeChangeList DefaultSkillIds = null, WorkitemsAttributeChangeString DefaultStatusId = null, WorkitemsAttributeChangeString DefaultLanguageId = null, WorkitemsAttributeChangeInteger DefaultTtlSeconds = null, WorkitemsAttributeChangeBoolean AssignmentEnabled = null, WorkitemsAttributeChangeString DefaultQueueId = null, WorkitemsAttributeChangeString SchemaId = null, WorkitemsAttributeChangeString SchemaVersion = null, WorkitemsAttributeChangeInteger ServiceLevelTarget = null, WorkitemsAttributeChangeInstant DateModified = null, WorkitemsAttributeChangeString ModifiedBy = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -57,6 +58,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultQueueId = DefaultQueueId;
             this.SchemaId = SchemaId;
             this.SchemaVersion = SchemaVersion;
+            this.ServiceLevelTarget = ServiceLevelTarget;
             this.DateModified = DateModified;
             this.ModifiedBy = ModifiedBy;
             
@@ -193,6 +195,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ServiceLevelTarget
+        /// </summary>
+        [DataMember(Name="serviceLevelTarget", EmitDefaultValue=false)]
+        public WorkitemsAttributeChangeInteger ServiceLevelTarget { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
@@ -232,6 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultQueueId: ").Append(DefaultQueueId).Append("\n");
             sb.Append("  SchemaId: ").Append(SchemaId).Append("\n");
             sb.Append("  SchemaVersion: ").Append(SchemaVersion).Append("\n");
+            sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("}\n");
@@ -355,6 +366,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SchemaVersion.Equals(other.SchemaVersion)
                 ) &&
                 (
+                    this.ServiceLevelTarget == other.ServiceLevelTarget ||
+                    this.ServiceLevelTarget != null &&
+                    this.ServiceLevelTarget.Equals(other.ServiceLevelTarget)
+                ) &&
+                (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
@@ -424,6 +440,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SchemaVersion != null)
                     hash = hash * 59 + this.SchemaVersion.GetHashCode();
+
+                if (this.ServiceLevelTarget != null)
+                    hash = hash * 59 + this.ServiceLevelTarget.GetHashCode();
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();

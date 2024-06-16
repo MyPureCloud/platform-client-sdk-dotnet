@@ -277,7 +277,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Plpl for "pl-PL"
             /// </summary>
             [EnumMember(Value = "pl-PL")]
-            Plpl
+            Plpl,
+            
+            /// <summary>
+            /// Enum Hiin for "hi-IN"
+            /// </summary>
+            [EnumMember(Value = "hi-IN")]
+            Hiin,
+            
+            /// <summary>
+            /// Enum Thth for "th-TH"
+            /// </summary>
+            [EnumMember(Value = "th-TH")]
+            Thth,
+            
+            /// <summary>
+            /// Enum Huhu for "hu-HU"
+            /// </summary>
+            [EnumMember(Value = "hu-HU")]
+            Huhu,
+            
+            /// <summary>
+            /// Enum Vivn for "vi-VN"
+            /// </summary>
+            [EnumMember(Value = "vi-VN")]
+            Vivn,
+            
+            /// <summary>
+            /// Enum Ukua for "uk-UA"
+            /// </summary>
+            [EnumMember(Value = "uk-UA")]
+            Ukua
         }
         /// <summary>
         /// Document type

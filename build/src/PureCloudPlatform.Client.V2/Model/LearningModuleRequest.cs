@@ -82,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LengthInMinutes">The recommended time in minutes to complete the module.</param>
         /// <param name="ExcludedFromCatalog">If true, learning module is excluded when retrieving modules for manual assignment.</param>
         /// <param name="ExternalId">The external ID of the learning module. Maximum length: 50 characters..</param>
-        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null, int? LengthInMinutes = null, bool? ExcludedFromCatalog = null, string ExternalId = null)
+        /// <param name="EnforceContentOrder">If true, learning module content should be viewed one by one in order.</param>
+        /// <param name="ReviewAssessmentResults">Allows to view Assessment results in detail.</param>
+        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null, int? LengthInMinutes = null, bool? ExcludedFromCatalog = null, string ExternalId = null, bool? EnforceContentOrder = null, ReviewAssessmentResults ReviewAssessmentResults = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -94,6 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LengthInMinutes = LengthInMinutes;
             this.ExcludedFromCatalog = ExcludedFromCatalog;
             this.ExternalId = ExternalId;
+            this.EnforceContentOrder = EnforceContentOrder;
+            this.ReviewAssessmentResults = ReviewAssessmentResults;
             
         }
         
@@ -181,6 +185,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExternalId { get; set; }
 
 
+
+        /// <summary>
+        /// If true, learning module content should be viewed one by one in order
+        /// </summary>
+        /// <value>If true, learning module content should be viewed one by one in order</value>
+        [DataMember(Name="enforceContentOrder", EmitDefaultValue=false)]
+        public bool? EnforceContentOrder { get; set; }
+
+
+
+        /// <summary>
+        /// Allows to view Assessment results in detail
+        /// </summary>
+        /// <value>Allows to view Assessment results in detail</value>
+        [DataMember(Name="reviewAssessmentResults", EmitDefaultValue=false)]
+        public ReviewAssessmentResults ReviewAssessmentResults { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,6 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("  ExcludedFromCatalog: ").Append(ExcludedFromCatalog).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
+            sb.Append("  EnforceContentOrder: ").Append(EnforceContentOrder).Append("\n");
+            sb.Append("  ReviewAssessmentResults: ").Append(ReviewAssessmentResults).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -289,6 +313,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalId == other.ExternalId ||
                     this.ExternalId != null &&
                     this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
+                    this.EnforceContentOrder == other.EnforceContentOrder ||
+                    this.EnforceContentOrder != null &&
+                    this.EnforceContentOrder.Equals(other.EnforceContentOrder)
+                ) &&
+                (
+                    this.ReviewAssessmentResults == other.ReviewAssessmentResults ||
+                    this.ReviewAssessmentResults != null &&
+                    this.ReviewAssessmentResults.Equals(other.ReviewAssessmentResults)
                 );
         }
 
@@ -332,6 +366,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
+
+                if (this.EnforceContentOrder != null)
+                    hash = hash * 59 + this.EnforceContentOrder.GetHashCode();
+
+                if (this.ReviewAssessmentResults != null)
+                    hash = hash * 59 + this.ReviewAssessmentResults.GetHashCode();
 
                 return hash;
             }

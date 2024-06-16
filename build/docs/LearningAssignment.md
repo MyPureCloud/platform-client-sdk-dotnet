@@ -15,10 +15,15 @@ title: LearningAssignment
 | **DateModified** | **DateTime?** | The date when the assignment was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **IsOverdue** | **bool?** | True if the assignment is overdue | [optional] |
 | **PercentageScore** | **float?** | The user&#39;s percentage score for this assignment | [optional] |
+| **AssessmentPercentageScore** | **float?** | The user&#39;s percentage score for this assignment&#39;s assessment | [optional] |
 | **IsRule** | **bool?** | True if this assignment was created by a Rule | [optional] |
 | **IsManual** | **bool?** | True if this assignment was created manually | [optional] |
 | **IsPassed** | **bool?** | True if the assessment was passed | [optional] |
 | **IsLatest** | **bool?** | True if the assignment is based on latest module | [optional] |
+| **AssessmentCompletionPercentage** | **float?** | The assessment completion percentage of assignment | [optional] |
+| **CompletionPercentage** | **float?** | The overall completion percentage of assignment | [optional] |
+| **Steps** | [**List&lt;LearningAssignmentStep&gt;**](LearningAssignmentStep.html) | List of assignment steps | [optional] |
+| **NextStep** | [**LearningAssignmentStep**](LearningAssignmentStep.html) | The next assignment step | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **State** | **string** | The Learning Assignment state | [optional] |
 | **DateRecommendedForCompletion** | **DateTime?** | The recommended completion date of the assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

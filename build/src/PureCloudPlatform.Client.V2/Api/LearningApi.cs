@@ -91,6 +91,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningAssignment> GetLearningAssignmentWithHttpInfo (string assignmentId, List<string> expand = null);
 
         /// <summary>
+        /// Get Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>LearningAssignmentStep</returns>
+        
+        LearningAssignmentStep GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>ApiResponse of LearningAssignmentStep</returns>
+        
+        ApiResponse<LearningAssignmentStep> GetLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+
+        /// <summary>
         /// List of Learning module Assignments
         /// </summary>
         /// <remarks>
@@ -243,6 +273,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LearningModuleJobResponse</returns>
         
         ApiResponse<LearningModuleJobResponse> GetLearningModuleJobWithHttpInfo (string moduleId, string jobId);
+
+        /// <summary>
+        /// Get a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>LearningModulePreviewGetResponse</returns>
+        
+        LearningModulePreviewGetResponse GetLearningModulePreview (string moduleId);
+
+        /// <summary>
+        /// Get a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>ApiResponse of LearningModulePreviewGetResponse</returns>
+        
+        ApiResponse<LearningModulePreviewGetResponse> GetLearningModulePreviewWithHttpInfo (string moduleId);
 
         /// <summary>
         /// Get a learning module rule
@@ -401,6 +455,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdWithHttpInfo (string coverArtId);
 
         /// <summary>
+        /// Get Learning SCORM Result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>LearningScormResponse</returns>
+        
+        LearningScormResponse GetLearningScormScormId (string scormId);
+
+        /// <summary>
+        /// Get Learning SCORM Result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>ApiResponse of LearningScormResponse</returns>
+        
+        ApiResponse<LearningScormResponse> GetLearningScormScormIdWithHttpInfo (string scormId);
+
+        /// <summary>
         /// Update Learning Assignment
         /// </summary>
         /// <remarks>
@@ -451,6 +529,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LearningAssignment</returns>
         
         ApiResponse<LearningAssignment> PatchLearningAssignmentRescheduleWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null);
+
+        /// <summary>
+        /// Update Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>LearningAssignmentStep</returns>
+        
+        LearningAssignmentStep PatchLearningAssignmentStep (string assignmentId, string stepId, LearningAssignmentStep body = null);
+
+        /// <summary>
+        /// Update Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>ApiResponse of LearningAssignmentStep</returns>
+        
+        ApiResponse<LearningAssignmentStep> PatchLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, LearningAssignmentStep body = null);
 
         /// <summary>
         /// Update an external assignment for a specific user
@@ -777,6 +883,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningScheduleSlotsQueryResponse> PostLearningScheduleslotsQueryWithHttpInfo (LearningScheduleSlotsQueryRequest body);
 
         /// <summary>
+        /// Create a SCORM package upload request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>LearningScormUploadResponse</returns>
+        
+        LearningScormUploadResponse PostLearningScorm (LearningScormUploadRequest body = null);
+
+        /// <summary>
+        /// Create a SCORM package upload request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>ApiResponse of LearningScormUploadResponse</returns>
+        
+        ApiResponse<LearningScormUploadResponse> PostLearningScormWithHttpInfo (LearningScormUploadRequest body = null);
+
+        /// <summary>
         /// Update a learning module
         /// </summary>
         /// <remarks>
@@ -801,6 +931,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LearningModule</returns>
         
         ApiResponse<LearningModule> PutLearningModuleWithHttpInfo (string moduleId, LearningModuleRequest body);
+
+        /// <summary>
+        /// Update a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// This will update a learning module preview
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>LearningModulePreviewUpdateResponse</returns>
+        
+        LearningModulePreviewUpdateResponse PutLearningModulePreview (string moduleId, LearningModulePreviewUpdateRequest body);
+
+        /// <summary>
+        /// Update a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// This will update a learning module preview
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>ApiResponse of LearningModulePreviewUpdateResponse</returns>
+        
+        ApiResponse<LearningModulePreviewUpdateResponse> PutLearningModulePreviewWithHttpInfo (string moduleId, LearningModulePreviewUpdateRequest body);
 
         /// <summary>
         /// Update a learning module rule
@@ -905,6 +1061,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> GetLearningAssignmentAsyncWithHttpInfo (string assignmentId, List<string> expand = null);
+
+        /// <summary>
+        /// Get Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>Task of LearningAssignmentStep</returns>
+        
+        System.Threading.Tasks.Task<LearningAssignmentStep> GetLearningAssignmentStepAsync (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>Task of ApiResponse (LearningAssignmentStep)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> GetLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning module Assignments
@@ -1059,6 +1245,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningModuleJobResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningModuleJobResponse>> GetLearningModuleJobAsyncWithHttpInfo (string moduleId, string jobId);
+
+        /// <summary>
+        /// Get a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of LearningModulePreviewGetResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningModulePreviewGetResponse> GetLearningModulePreviewAsync (string moduleId);
+
+        /// <summary>
+        /// Get a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of ApiResponse (LearningModulePreviewGetResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningModulePreviewGetResponse>> GetLearningModulePreviewAsyncWithHttpInfo (string moduleId);
 
         /// <summary>
         /// Get a learning module rule
@@ -1217,6 +1427,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LearningModuleCoverArtResponse>> GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo (string coverArtId);
 
         /// <summary>
+        /// Get Learning SCORM Result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>Task of LearningScormResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningScormResponse> GetLearningScormScormIdAsync (string scormId);
+
+        /// <summary>
+        /// Get Learning SCORM Result
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>Task of ApiResponse (LearningScormResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningScormResponse>> GetLearningScormScormIdAsyncWithHttpInfo (string scormId);
+
+        /// <summary>
         /// Update Learning Assignment
         /// </summary>
         /// <remarks>
@@ -1267,6 +1501,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningAssignment)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PatchLearningAssignmentRescheduleAsyncWithHttpInfo (string assignmentId, LearningAssignmentReschedule body = null);
+
+        /// <summary>
+        /// Update Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>Task of LearningAssignmentStep</returns>
+        
+        System.Threading.Tasks.Task<LearningAssignmentStep> PatchLearningAssignmentStepAsync (string assignmentId, string stepId, LearningAssignmentStep body = null);
+
+        /// <summary>
+        /// Update Learning Assignment Step
+        /// </summary>
+        /// <remarks>
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>Task of ApiResponse (LearningAssignmentStep)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> PatchLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, LearningAssignmentStep body = null);
 
         /// <summary>
         /// Update an external assignment for a specific user
@@ -1593,6 +1855,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsQueryResponse>> PostLearningScheduleslotsQueryAsyncWithHttpInfo (LearningScheduleSlotsQueryRequest body);
 
         /// <summary>
+        /// Create a SCORM package upload request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>Task of LearningScormUploadResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningScormUploadResponse> PostLearningScormAsync (LearningScormUploadRequest body = null);
+
+        /// <summary>
+        /// Create a SCORM package upload request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>Task of ApiResponse (LearningScormUploadResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningScormUploadResponse>> PostLearningScormAsyncWithHttpInfo (LearningScormUploadRequest body = null);
+
+        /// <summary>
         /// Update a learning module
         /// </summary>
         /// <remarks>
@@ -1617,6 +1903,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningModule)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningModule>> PutLearningModuleAsyncWithHttpInfo (string moduleId, LearningModuleRequest body);
+
+        /// <summary>
+        /// Update a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// This will update a learning module preview
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>Task of LearningModulePreviewUpdateResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningModulePreviewUpdateResponse> PutLearningModulePreviewAsync (string moduleId, LearningModulePreviewUpdateRequest body);
+
+        /// <summary>
+        /// Update a learning module preview
+        /// </summary>
+        /// <remarks>
+        /// This will update a learning module preview
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>Task of ApiResponse (LearningModulePreviewUpdateResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningModulePreviewUpdateResponse>> PutLearningModulePreviewAsyncWithHttpInfo (string moduleId, LearningModulePreviewUpdateRequest body);
 
         /// <summary>
         /// Update a learning module rule
@@ -2365,6 +2677,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningAssignment>(localVarStatusCode,
                 localVarHeaders,
                 (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>LearningAssignmentStep</returns>
+        
+        public LearningAssignmentStep GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        {
+             ApiResponse<LearningAssignmentStep> localVarResponse = GetLearningAssignmentStepWithHttpInfo(assignmentId, stepId, shareableContentObjectId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>ApiResponse of LearningAssignmentStep</returns>
+        
+        public ApiResponse< LearningAssignmentStep > GetLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->GetLearningAssignmentStep");
+            // verify the required parameter 'stepId' is set
+            if (stepId == null)
+                throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->GetLearningAssignmentStep");
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+            if (stepId != null) localVarPathParams.Add("stepId", this.Configuration.ApiClient.ParameterToString(stepId));
+
+            // Query params
+            if (shareableContentObjectId != null) localVarQueryParams.Add(new Tuple<string, string>("shareableContentObjectId", this.Configuration.ApiClient.ParameterToString(shareableContentObjectId)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningAssignmentStep: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningAssignmentStep: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignmentStep>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignmentStep) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentStep)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>Task of LearningAssignmentStep</returns>
+        
+        public async System.Threading.Tasks.Task<LearningAssignmentStep> GetLearningAssignmentStepAsync (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        {
+             ApiResponse<LearningAssignmentStep> localVarResponse = await GetLearningAssignmentStepAsyncWithHttpInfo(assignmentId, stepId, shareableContentObjectId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <returns>Task of ApiResponse (LearningAssignmentStep)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> GetLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->GetLearningAssignmentStep");
+            
+            // verify the required parameter 'stepId' is set
+            if (stepId == null)
+                throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->GetLearningAssignmentStep");
+            
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+            if (stepId != null) localVarPathParams.Add("stepId", this.Configuration.ApiClient.ParameterToString(stepId));
+
+            // Query params
+            if (shareableContentObjectId != null) localVarQueryParams.Add(new Tuple<string, string>("shareableContentObjectId", this.Configuration.ApiClient.ParameterToString(shareableContentObjectId)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningAssignmentStep: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningAssignmentStep: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignmentStep>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignmentStep) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentStep)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3376,6 +3924,217 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningModuleJobResponse>(localVarStatusCode,
                 localVarHeaders,
                 (LearningModuleJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a learning module preview 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>LearningModulePreviewGetResponse</returns>
+        
+        public LearningModulePreviewGetResponse GetLearningModulePreview (string moduleId)
+        {
+             ApiResponse<LearningModulePreviewGetResponse> localVarResponse = GetLearningModulePreviewWithHttpInfo(moduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a learning module preview 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>ApiResponse of LearningModulePreviewGetResponse</returns>
+        
+        public ApiResponse< LearningModulePreviewGetResponse > GetLearningModulePreviewWithHttpInfo (string moduleId)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModulePreview");
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulePreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulePreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModulePreviewGetResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModulePreviewGetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModulePreviewGetResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a learning module preview 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of LearningModulePreviewGetResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningModulePreviewGetResponse> GetLearningModulePreviewAsync (string moduleId)
+        {
+             ApiResponse<LearningModulePreviewGetResponse> localVarResponse = await GetLearningModulePreviewAsyncWithHttpInfo(moduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a learning module preview 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of ApiResponse (LearningModulePreviewGetResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModulePreviewGetResponse>> GetLearningModulePreviewAsyncWithHttpInfo (string moduleId)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModulePreview");
+            
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulePreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulePreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModulePreviewGetResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModulePreviewGetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModulePreviewGetResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4546,6 +5305,217 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get Learning SCORM Result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>LearningScormResponse</returns>
+        
+        public LearningScormResponse GetLearningScormScormId (string scormId)
+        {
+             ApiResponse<LearningScormResponse> localVarResponse = GetLearningScormScormIdWithHttpInfo(scormId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Learning SCORM Result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>ApiResponse of LearningScormResponse</returns>
+        
+        public ApiResponse< LearningScormResponse > GetLearningScormScormIdWithHttpInfo (string scormId)
+        { 
+            // verify the required parameter 'scormId' is set
+            if (scormId == null)
+                throw new ApiException(400, "Missing required parameter 'scormId' when calling LearningApi->GetLearningScormScormId");
+
+            var localVarPath = "/api/v2/learning/scorm/{scormId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scormId != null) localVarPathParams.Add("scormId", this.Configuration.ApiClient.ParameterToString(scormId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScormScormId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScormScormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScormResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScormResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Learning SCORM Result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>Task of LearningScormResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningScormResponse> GetLearningScormScormIdAsync (string scormId)
+        {
+             ApiResponse<LearningScormResponse> localVarResponse = await GetLearningScormScormIdAsyncWithHttpInfo(scormId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Learning SCORM Result 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scormId">The ID of the SCORM package</param>
+        /// <returns>Task of ApiResponse (LearningScormResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningScormResponse>> GetLearningScormScormIdAsyncWithHttpInfo (string scormId)
+        { 
+            // verify the required parameter 'scormId' is set
+            if (scormId == null)
+                throw new ApiException(400, "Missing required parameter 'scormId' when calling LearningApi->GetLearningScormScormId");
+            
+
+            var localVarPath = "/api/v2/learning/scorm/{scormId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scormId != null) localVarPathParams.Add("scormId", this.Configuration.ApiClient.ParameterToString(scormId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScormScormId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScormScormId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScormResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScormResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScormResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update Learning Assignment 
         /// 
         /// </summary>
@@ -4993,6 +5963,246 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningAssignment>(localVarStatusCode,
                 localVarHeaders,
                 (LearningAssignment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>LearningAssignmentStep</returns>
+        
+        public LearningAssignmentStep PatchLearningAssignmentStep (string assignmentId, string stepId, LearningAssignmentStep body = null)
+        {
+             ApiResponse<LearningAssignmentStep> localVarResponse = PatchLearningAssignmentStepWithHttpInfo(assignmentId, stepId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>ApiResponse of LearningAssignmentStep</returns>
+        
+        public ApiResponse< LearningAssignmentStep > PatchLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, LearningAssignmentStep body = null)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PatchLearningAssignmentStep");
+            // verify the required parameter 'stepId' is set
+            if (stepId == null)
+                throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->PatchLearningAssignmentStep");
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+            if (stepId != null) localVarPathParams.Add("stepId", this.Configuration.ApiClient.ParameterToString(stepId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningAssignmentStep: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningAssignmentStep: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignmentStep>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignmentStep) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentStep)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>Task of LearningAssignmentStep</returns>
+        
+        public async System.Threading.Tasks.Task<LearningAssignmentStep> PatchLearningAssignmentStepAsync (string assignmentId, string stepId, LearningAssignmentStep body = null)
+        {
+             ApiResponse<LearningAssignmentStep> localVarResponse = await PatchLearningAssignmentStepAsyncWithHttpInfo(assignmentId, stepId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Learning Assignment Step 
+        /// Permission not required if you are the assigned user of the learning assignment
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assignmentId">The ID of Learning Assignment</param>
+        /// <param name="stepId">The ID of Learning Assignment Step</param>
+        /// <param name="body">The Learning Assignment Step to be updated (optional)</param>
+        /// <returns>Task of ApiResponse (LearningAssignmentStep)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> PatchLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, LearningAssignmentStep body = null)
+        { 
+            // verify the required parameter 'assignmentId' is set
+            if (assignmentId == null)
+                throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PatchLearningAssignmentStep");
+            
+            // verify the required parameter 'stepId' is set
+            if (stepId == null)
+                throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->PatchLearningAssignmentStep");
+            
+
+            var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assignmentId != null) localVarPathParams.Add("assignmentId", this.Configuration.ApiClient.ParameterToString(assignmentId));
+            if (stepId != null) localVarPathParams.Add("stepId", this.Configuration.ApiClient.ParameterToString(stepId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningAssignmentStep: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchLearningAssignmentStep: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningAssignmentStep>(localVarStatusCode,
+                localVarHeaders,
+                (LearningAssignmentStep) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentStep)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7903,6 +9113,220 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create a SCORM package upload request 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>LearningScormUploadResponse</returns>
+        
+        public LearningScormUploadResponse PostLearningScorm (LearningScormUploadRequest body = null)
+        {
+             ApiResponse<LearningScormUploadResponse> localVarResponse = PostLearningScormWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a SCORM package upload request 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>ApiResponse of LearningScormUploadResponse</returns>
+        
+        public ApiResponse< LearningScormUploadResponse > PostLearningScormWithHttpInfo (LearningScormUploadRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/learning/scorm";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScorm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScorm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScormUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScormUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScormUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a SCORM package upload request 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>Task of LearningScormUploadResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningScormUploadResponse> PostLearningScormAsync (LearningScormUploadRequest body = null)
+        {
+             ApiResponse<LearningScormUploadResponse> localVarResponse = await PostLearningScormAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a SCORM package upload request 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The SCORM package to be uploaded (optional)</param>
+        /// <returns>Task of ApiResponse (LearningScormUploadResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningScormUploadResponse>> PostLearningScormAsyncWithHttpInfo (LearningScormUploadRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/learning/scorm";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScorm: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScorm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScormUploadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScormUploadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScormUploadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update a learning module 
         /// This will update the name, description, completion time in days and inform steps for a learning module
         /// </summary>
@@ -8130,6 +9554,240 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningModule>(localVarStatusCode,
                 localVarHeaders,
                 (LearningModule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a learning module preview 
+        /// This will update a learning module preview
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>LearningModulePreviewUpdateResponse</returns>
+        
+        public LearningModulePreviewUpdateResponse PutLearningModulePreview (string moduleId, LearningModulePreviewUpdateRequest body)
+        {
+             ApiResponse<LearningModulePreviewUpdateResponse> localVarResponse = PutLearningModulePreviewWithHttpInfo(moduleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a learning module preview 
+        /// This will update a learning module preview
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>ApiResponse of LearningModulePreviewUpdateResponse</returns>
+        
+        public ApiResponse< LearningModulePreviewUpdateResponse > PutLearningModulePreviewWithHttpInfo (string moduleId, LearningModulePreviewUpdateRequest body)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PutLearningModulePreview");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModulePreview");
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutLearningModulePreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutLearningModulePreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModulePreviewUpdateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModulePreviewUpdateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModulePreviewUpdateResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a learning module preview 
+        /// This will update a learning module preview
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>Task of LearningModulePreviewUpdateResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningModulePreviewUpdateResponse> PutLearningModulePreviewAsync (string moduleId, LearningModulePreviewUpdateRequest body)
+        {
+             ApiResponse<LearningModulePreviewUpdateResponse> localVarResponse = await PutLearningModulePreviewAsyncWithHttpInfo(moduleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a learning module preview 
+        /// This will update a learning module preview
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <param name="body">The learning module to be updated</param>
+        /// <returns>Task of ApiResponse (LearningModulePreviewUpdateResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModulePreviewUpdateResponse>> PutLearningModulePreviewAsyncWithHttpInfo (string moduleId, LearningModulePreviewUpdateRequest body)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PutLearningModulePreview");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModulePreview");
+            
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutLearningModulePreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutLearningModulePreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModulePreviewUpdateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModulePreviewUpdateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModulePreviewUpdateResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

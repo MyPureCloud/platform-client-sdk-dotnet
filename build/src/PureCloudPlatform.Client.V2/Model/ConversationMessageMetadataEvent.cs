@@ -52,6 +52,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Presence,
             
             /// <summary>
+            /// Enum Video for "Video"
+            /// </summary>
+            [EnumMember(Value = "Video")]
+            Video,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

@@ -19,6 +19,8 @@ title: DashboardConfiguration
 | **DateCreated** | **DateTime?** | The created date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **DateModified** | **DateTime?** | The last modified date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **CreatedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) | The id of user who created the dashboard | [optional] |
+| **Shared** | **bool?** | The flag to indicate if the dashboard is shared | [optional] |
+| **DashboardsSharedWith** | [**DashboardsSharedWith**](DashboardsSharedWith.html) | The list of users and teams the dashboard is shared with | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

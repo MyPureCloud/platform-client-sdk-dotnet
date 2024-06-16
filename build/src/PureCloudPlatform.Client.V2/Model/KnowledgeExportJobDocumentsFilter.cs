@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Interval">Retrieves the documents modified in specified date and time range. Cannot be used together with entities filter. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="Entities">Retrieves the documents with the given ids. Cannot be used together with internal filter..</param>
-        public KnowledgeExportJobDocumentsFilter(string Interval = null, List<Entity> Entities = null)
+        /// <param name="SourceId">SourceId.</param>
+        public KnowledgeExportJobDocumentsFilter(string Interval = null, List<Entity> Entities = null, string SourceId = null)
         {
             this.Interval = Interval;
             this.Entities = Entities;
+            this.SourceId = SourceId;
             
         }
         
@@ -49,6 +51,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<Entity> Entities { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SourceId
+        /// </summary>
+        [DataMember(Name="sourceId", EmitDefaultValue=false)]
+        public string SourceId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  SourceId: ").Append(SourceId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +120,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
+                    this.SourceId == other.SourceId ||
+                    this.SourceId != null &&
+                    this.SourceId.Equals(other.SourceId)
                 );
         }
 
@@ -128,6 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.SourceId != null)
+                    hash = hash * 59 + this.SourceId.GetHashCode();
 
                 return hash;
             }

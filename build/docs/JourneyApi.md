@@ -2314,7 +2314,7 @@ namespace Example
 
 <a name="getjourneyviews"></a>
 
-## [**AddressableEntityListing**](AddressableEntityListing.html) GetJourneyViews ()
+## [**JourneyViewListing**](JourneyViewListing.html) GetJourneyViews ()
 
 
 
@@ -2352,7 +2352,7 @@ namespace Example
             try
             { 
                 // Get a list of Journey Views
-                AddressableEntityListing result = apiInstance.GetJourneyViews();
+                JourneyViewListing result = apiInstance.GetJourneyViews();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2370,7 +2370,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**AddressableEntityListing**](AddressableEntityListing.html)
+[**JourneyViewListing**](JourneyViewListing.html)
 
 <a name="getjourneyviewseventdefinition"></a>
 

@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KnowledgeBase :  IEquatable<KnowledgeBase>
     {
         /// <summary>
-        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL] which might have a lower accuracy.
+        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy.
         /// </summary>
-        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL] which might have a lower accuracy.</value>
+        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CoreLanguageEnum
         {
@@ -277,12 +277,42 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Plpl for "pl-PL"
             /// </summary>
             [EnumMember(Value = "pl-PL")]
-            Plpl
+            Plpl,
+            
+            /// <summary>
+            /// Enum Hiin for "hi-IN"
+            /// </summary>
+            [EnumMember(Value = "hi-IN")]
+            Hiin,
+            
+            /// <summary>
+            /// Enum Thth for "th-TH"
+            /// </summary>
+            [EnumMember(Value = "th-TH")]
+            Thth,
+            
+            /// <summary>
+            /// Enum Huhu for "hu-HU"
+            /// </summary>
+            [EnumMember(Value = "hu-HU")]
+            Huhu,
+            
+            /// <summary>
+            /// Enum Vivn for "vi-VN"
+            /// </summary>
+            [EnumMember(Value = "vi-VN")]
+            Vivn,
+            
+            /// <summary>
+            /// Enum Ukua for "uk-UA"
+            /// </summary>
+            [EnumMember(Value = "uk-UA")]
+            Ukua
         }
         /// <summary>
-        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL] which might have a lower accuracy.
+        /// Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy.
         /// </summary>
-        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL] which might have a lower accuracy.</value>
+        /// <value>Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy.</value>
         [DataMember(Name="coreLanguage", EmitDefaultValue=false)]
         public CoreLanguageEnum? CoreLanguage { get; set; }
 
@@ -296,7 +326,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Description">Knowledge base description.</param>
-        /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL] which might have a lower accuracy. (required).</param>
+        /// <param name="CoreLanguage">Core language for knowledge base in which initial content must be created, language codes [en-US, en-UK, en-AU, de-DE] are supported currently. However, the new DX knowledge will support all these language codes, along with 'early preview' language codes [ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA] which might have a lower accuracy. (required).</param>
         public KnowledgeBase(string Name = null, string Description = null, CoreLanguageEnum? CoreLanguage = null)
         {
             this.Name = Name;

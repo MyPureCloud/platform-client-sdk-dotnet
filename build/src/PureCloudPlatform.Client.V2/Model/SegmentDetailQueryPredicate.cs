@@ -163,6 +163,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Destinationconversationid,
             
             /// <summary>
+            /// Enum Detectedspeechend for "detectedSpeechEnd"
+            /// </summary>
+            [EnumMember(Value = "detectedSpeechEnd")]
+            Detectedspeechend,
+            
+            /// <summary>
+            /// Enum Detectedspeechstart for "detectedSpeechStart"
+            /// </summary>
+            [EnumMember(Value = "detectedSpeechStart")]
+            Detectedspeechstart,
+            
+            /// <summary>
             /// Enum Direction for "direction"
             /// </summary>
             [EnumMember(Value = "direction")]

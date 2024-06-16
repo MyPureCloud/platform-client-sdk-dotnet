@@ -24,6 +24,8 @@ title: KnowledgeDocumentResponse
 | **Labels** | [**List&lt;LabelResponse&gt;**](LabelResponse.html) | The references to labels associated with the document. | [optional] |
 | **KnowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference.html) | Knowledge base to which the document belongs to. | [optional] |
 | **ExternalId** | **string** | The reference to external id associated with the document. | [optional] |
+| **Source** | [**AddressableEntityRef**](AddressableEntityRef.html) | The reference to source associated with the document. | [optional] |
+| **Readonly** | **bool?** | Whether the document is read-only. | [optional] |
 | **Variations** | [**List&lt;DocumentVariation&gt;**](DocumentVariation.html) | Variations of the document. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -93,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserQueue" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">Name.</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The queue description..</param>
@@ -126,8 +127,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, bool? Joined = null)
+        public UserQueue(string Id = null, string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, bool? Joined = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Division = Division;
             this.Description = Description;
@@ -171,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

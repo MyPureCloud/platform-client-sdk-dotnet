@@ -11,6 +11,7 @@ title: ConversationMessageEvent
 | **CoBrowse** | [**ConversationEventCoBrowse**](ConversationEventCoBrowse.html) | CoBrowse event. | [optional] |
 | **Typing** | [**ConversationEventTyping**](ConversationEventTyping.html) | Typing event. | [optional] |
 | **Presence** | [**ConversationEventPresence**](ConversationEventPresence.html) | Presence event. | [optional] |
+| **Video** | [**ConversationEventVideo**](ConversationEventVideo.html) | Video event. | [optional] |
 {: class="table table-striped"}
 
 

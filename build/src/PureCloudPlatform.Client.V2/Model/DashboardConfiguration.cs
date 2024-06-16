@@ -69,7 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LayoutType">The layout type of the dashboard.</param>
         /// <param name="DateCreated">The created date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="DateModified">The last modified date of the dashboard. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public DashboardConfiguration(string Name = null, int? Rows = null, int? Columns = null, List<Widget> Widgets = null, bool? Favorite = null, bool? PublicDashboard = null, LayoutTypeEnum? LayoutType = null, DateTime? DateCreated = null, DateTime? DateModified = null)
+        /// <param name="Shared">The flag to indicate if the dashboard is shared.</param>
+        /// <param name="DashboardsSharedWith">The list of users and teams the dashboard is shared with.</param>
+        public DashboardConfiguration(string Name = null, int? Rows = null, int? Columns = null, List<Widget> Widgets = null, bool? Favorite = null, bool? PublicDashboard = null, LayoutTypeEnum? LayoutType = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Shared = null, DashboardsSharedWith DashboardsSharedWith = null)
         {
             this.Name = Name;
             this.Rows = Rows;
@@ -80,6 +82,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LayoutType = LayoutType;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
+            this.Shared = Shared;
+            this.DashboardsSharedWith = DashboardsSharedWith;
             
         }
         
@@ -187,6 +191,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The flag to indicate if the dashboard is shared
+        /// </summary>
+        /// <value>The flag to indicate if the dashboard is shared</value>
+        [DataMember(Name="shared", EmitDefaultValue=false)]
+        public bool? Shared { get; set; }
+
+
+
+        /// <summary>
+        /// The list of users and teams the dashboard is shared with
+        /// </summary>
+        /// <value>The list of users and teams the dashboard is shared with</value>
+        [DataMember(Name="dashboardsSharedWith", EmitDefaultValue=false)]
+        public DashboardsSharedWith DashboardsSharedWith { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -215,6 +237,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            sb.Append("  Shared: ").Append(Shared).Append("\n");
+            sb.Append("  DashboardsSharedWith: ").Append(DashboardsSharedWith).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -317,6 +341,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreatedBy.Equals(other.CreatedBy)
                 ) &&
                 (
+                    this.Shared == other.Shared ||
+                    this.Shared != null &&
+                    this.Shared.Equals(other.Shared)
+                ) &&
+                (
+                    this.DashboardsSharedWith == other.DashboardsSharedWith ||
+                    this.DashboardsSharedWith != null &&
+                    this.DashboardsSharedWith.Equals(other.DashboardsSharedWith)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -369,6 +403,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+
+                if (this.Shared != null)
+                    hash = hash * 59 + this.Shared.GetHashCode();
+
+                if (this.DashboardsSharedWith != null)
+                    hash = hash * 59 + this.DashboardsSharedWith.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

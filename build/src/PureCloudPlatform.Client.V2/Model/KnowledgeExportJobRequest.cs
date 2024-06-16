@@ -68,11 +68,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ExportFilter">What to export. (required).</param>
         /// <param name="FileType">File type of the document (required).</param>
+        /// <param name="SourceId">Knowledge integration source id..</param>
         /// <param name="JsonFileVersion">Requested version of the exported json file. Available versions are 2 and 3, default is 2.</param>
-        public KnowledgeExportJobRequest(KnowledgeExportJobFilter ExportFilter = null, FileTypeEnum? FileType = null, int? JsonFileVersion = null)
+        public KnowledgeExportJobRequest(KnowledgeExportJobFilter ExportFilter = null, FileTypeEnum? FileType = null, string SourceId = null, int? JsonFileVersion = null)
         {
             this.ExportFilter = ExportFilter;
             this.FileType = FileType;
+            this.SourceId = SourceId;
             this.JsonFileVersion = JsonFileVersion;
             
         }
@@ -87,6 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeExportJobFilter ExportFilter { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Knowledge integration source id.
+        /// </summary>
+        /// <value>Knowledge integration source id.</value>
+        [DataMember(Name="sourceId", EmitDefaultValue=false)]
+        public string SourceId { get; set; }
 
 
 
@@ -109,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ExportFilter: ").Append(ExportFilter).Append("\n");
             sb.Append("  FileType: ").Append(FileType).Append("\n");
+            sb.Append("  SourceId: ").Append(SourceId).Append("\n");
             sb.Append("  JsonFileVersion: ").Append(JsonFileVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -161,6 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FileType.Equals(other.FileType)
                 ) &&
                 (
+                    this.SourceId == other.SourceId ||
+                    this.SourceId != null &&
+                    this.SourceId.Equals(other.SourceId)
+                ) &&
+                (
                     this.JsonFileVersion == other.JsonFileVersion ||
                     this.JsonFileVersion != null &&
                     this.JsonFileVersion.Equals(other.JsonFileVersion)
@@ -183,6 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FileType != null)
                     hash = hash * 59 + this.FileType.GetHashCode();
+
+                if (this.SourceId != null)
+                    hash = hash * 59 + this.SourceId.GetHashCode();
 
                 if (this.JsonFileVersion != null)
                     hash = hash * 59 + this.JsonFileVersion.GetHashCode();

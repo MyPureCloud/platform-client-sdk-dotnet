@@ -7,6 +7,8 @@ title: ReviewAssessmentResults
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **ByAssignees** | **bool?** | If true, learning assignment results can be seen in detail by assignees | [optional] |
+| **ByViewers** | **bool?** | If true, learning assignment results can be seen in detail by people who are eligible to view | [optional] |
 {: class="table table-striped"}
 
 

@@ -351,6 +351,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Skills,
             
             /// <summary>
+            /// Enum Socialmedia for "social.media"
+            /// </summary>
+            [EnumMember(Value = "social.media")]
+            Socialmedia,
+            
+            /// <summary>
             /// Enum Speechandtextanalytics for "speech.and.text.analytics"
             /// </summary>
             [EnumMember(Value = "speech.and.text.analytics")]

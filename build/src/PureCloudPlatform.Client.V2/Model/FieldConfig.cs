@@ -48,13 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Org for "org"
             /// </summary>
             [EnumMember(Value = "org")]
-            Org,
-            
-            /// <summary>
-            /// Enum Externalcontact for "externalContact"
-            /// </summary>
-            [EnumMember(Value = "externalContact")]
-            Externalcontact
+            Org
         }
         /// <summary>
         /// Gets or Sets EntityType

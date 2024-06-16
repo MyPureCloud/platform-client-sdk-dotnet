@@ -73,7 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Cookie for "Cookie"
             /// </summary>
             [EnumMember(Value = "Cookie")]
-            Cookie
+            Cookie,
+            
+            /// <summary>
+            /// Enum Externalid for "ExternalId"
+            /// </summary>
+            [EnumMember(Value = "ExternalId")]
+            Externalid
         }
         /// <summary>
         /// The type of this identifier

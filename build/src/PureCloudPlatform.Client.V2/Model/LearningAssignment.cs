@@ -174,6 +174,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user's percentage score for this assignment's assessment
+        /// </summary>
+        /// <value>The user's percentage score for this assignment's assessment</value>
+        [DataMember(Name="assessmentPercentageScore", EmitDefaultValue=false)]
+        public float? AssessmentPercentageScore { get; private set; }
+
+
+
+        /// <summary>
         /// True if this assignment was created by a Rule
         /// </summary>
         /// <value>True if this assignment was created by a Rule</value>
@@ -206,6 +215,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if the assignment is based on latest module</value>
         [DataMember(Name="isLatest", EmitDefaultValue=false)]
         public bool? IsLatest { get; private set; }
+
+
+
+        /// <summary>
+        /// The assessment completion percentage of assignment
+        /// </summary>
+        /// <value>The assessment completion percentage of assignment</value>
+        [DataMember(Name="assessmentCompletionPercentage", EmitDefaultValue=false)]
+        public float? AssessmentCompletionPercentage { get; private set; }
+
+
+
+        /// <summary>
+        /// The overall completion percentage of assignment
+        /// </summary>
+        /// <value>The overall completion percentage of assignment</value>
+        [DataMember(Name="completionPercentage", EmitDefaultValue=false)]
+        public float? CompletionPercentage { get; private set; }
+
+
+
+        /// <summary>
+        /// List of assignment steps
+        /// </summary>
+        /// <value>List of assignment steps</value>
+        [DataMember(Name="steps", EmitDefaultValue=false)]
+        public List<LearningAssignmentStep> Steps { get; private set; }
+
+
+
+        /// <summary>
+        /// The next assignment step
+        /// </summary>
+        /// <value>The next assignment step</value>
+        [DataMember(Name="nextStep", EmitDefaultValue=false)]
+        public LearningAssignmentStep NextStep { get; private set; }
 
 
 
@@ -290,10 +335,15 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  IsOverdue: ").Append(IsOverdue).Append("\n");
             sb.Append("  PercentageScore: ").Append(PercentageScore).Append("\n");
+            sb.Append("  AssessmentPercentageScore: ").Append(AssessmentPercentageScore).Append("\n");
             sb.Append("  IsRule: ").Append(IsRule).Append("\n");
             sb.Append("  IsManual: ").Append(IsManual).Append("\n");
             sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
             sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
+            sb.Append("  AssessmentCompletionPercentage: ").Append(AssessmentCompletionPercentage).Append("\n");
+            sb.Append("  CompletionPercentage: ").Append(CompletionPercentage).Append("\n");
+            sb.Append("  Steps: ").Append(Steps).Append("\n");
+            sb.Append("  NextStep: ").Append(NextStep).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DateRecommendedForCompletion: ").Append(DateRecommendedForCompletion).Append("\n");
@@ -383,6 +433,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PercentageScore.Equals(other.PercentageScore)
                 ) &&
                 (
+                    this.AssessmentPercentageScore == other.AssessmentPercentageScore ||
+                    this.AssessmentPercentageScore != null &&
+                    this.AssessmentPercentageScore.Equals(other.AssessmentPercentageScore)
+                ) &&
+                (
                     this.IsRule == other.IsRule ||
                     this.IsRule != null &&
                     this.IsRule.Equals(other.IsRule)
@@ -401,6 +456,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsLatest == other.IsLatest ||
                     this.IsLatest != null &&
                     this.IsLatest.Equals(other.IsLatest)
+                ) &&
+                (
+                    this.AssessmentCompletionPercentage == other.AssessmentCompletionPercentage ||
+                    this.AssessmentCompletionPercentage != null &&
+                    this.AssessmentCompletionPercentage.Equals(other.AssessmentCompletionPercentage)
+                ) &&
+                (
+                    this.CompletionPercentage == other.CompletionPercentage ||
+                    this.CompletionPercentage != null &&
+                    this.CompletionPercentage.Equals(other.CompletionPercentage)
+                ) &&
+                (
+                    this.Steps == other.Steps ||
+                    this.Steps != null &&
+                    this.Steps.SequenceEqual(other.Steps)
+                ) &&
+                (
+                    this.NextStep == other.NextStep ||
+                    this.NextStep != null &&
+                    this.NextStep.Equals(other.NextStep)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -479,6 +554,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PercentageScore != null)
                     hash = hash * 59 + this.PercentageScore.GetHashCode();
 
+                if (this.AssessmentPercentageScore != null)
+                    hash = hash * 59 + this.AssessmentPercentageScore.GetHashCode();
+
                 if (this.IsRule != null)
                     hash = hash * 59 + this.IsRule.GetHashCode();
 
@@ -490,6 +568,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsLatest != null)
                     hash = hash * 59 + this.IsLatest.GetHashCode();
+
+                if (this.AssessmentCompletionPercentage != null)
+                    hash = hash * 59 + this.AssessmentCompletionPercentage.GetHashCode();
+
+                if (this.CompletionPercentage != null)
+                    hash = hash * 59 + this.CompletionPercentage.GetHashCode();
+
+                if (this.Steps != null)
+                    hash = hash * 59 + this.Steps.GetHashCode();
+
+                if (this.NextStep != null)
+                    hash = hash * 59 + this.NextStep.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

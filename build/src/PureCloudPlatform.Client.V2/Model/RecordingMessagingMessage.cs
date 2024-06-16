@@ -126,6 +126,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="To">The message recipient..</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="Purpose">A well known string that specifies the purpose or type of the participant on this communication..</param>
+        /// <param name="ParticipantId">A globally unique identifier for the participant on this communication..</param>
+        /// <param name="Queue">A globally unique identifier for the queue involved in this communication..</param>
+        /// <param name="Workflow">A globally unique identifier for the workflow involved in this communication..</param>
         /// <param name="MessageText">The content of this message..</param>
         /// <param name="MessageMediaAttachments">List of media objects attached  with this message..</param>
         /// <param name="MessageStickerAttachments">List of message stickers attached with this message..</param>
@@ -134,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Story">Ephemeral story content..</param>
         /// <param name="Cards">List of cards offered for this message.</param>
         /// <param name="ContentType">Indicates the content type for this message.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, ContentTypeEnum? ContentType = null)
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, ContentTypeEnum? ContentType = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -142,6 +146,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.To = To;
             this.Timestamp = Timestamp;
             this.Id = Id;
+            this.Purpose = Purpose;
+            this.ParticipantId = ParticipantId;
+            this.Queue = Queue;
+            this.Workflow = Workflow;
             this.MessageText = MessageText;
             this.MessageMediaAttachments = MessageMediaAttachments;
             this.MessageStickerAttachments = MessageStickerAttachments;
@@ -206,6 +214,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// A well known string that specifies the purpose or type of the participant on this communication.
+        /// </summary>
+        /// <value>A well known string that specifies the purpose or type of the participant on this communication.</value>
+        [DataMember(Name="purpose", EmitDefaultValue=false)]
+        public string Purpose { get; set; }
+
+
+
+        /// <summary>
+        /// A globally unique identifier for the participant on this communication.
+        /// </summary>
+        /// <value>A globally unique identifier for the participant on this communication.</value>
+        [DataMember(Name="participantId", EmitDefaultValue=false)]
+        public string ParticipantId { get; set; }
+
+
+
+        /// <summary>
+        /// A globally unique identifier for the queue involved in this communication.
+        /// </summary>
+        /// <value>A globally unique identifier for the queue involved in this communication.</value>
+        [DataMember(Name="queue", EmitDefaultValue=false)]
+        public AddressableEntityRef Queue { get; set; }
+
+
+
+        /// <summary>
+        /// A globally unique identifier for the workflow involved in this communication.
+        /// </summary>
+        /// <value>A globally unique identifier for the workflow involved in this communication.</value>
+        [DataMember(Name="workflow", EmitDefaultValue=false)]
+        public AddressableEntityRef Workflow { get; set; }
 
 
 
@@ -288,6 +332,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
+            sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Workflow: ").Append(Workflow).Append("\n");
             sb.Append("  MessageText: ").Append(MessageText).Append("\n");
             sb.Append("  MessageMediaAttachments: ").Append(MessageMediaAttachments).Append("\n");
             sb.Append("  MessageStickerAttachments: ").Append(MessageStickerAttachments).Append("\n");
@@ -367,6 +415,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Purpose == other.Purpose ||
+                    this.Purpose != null &&
+                    this.Purpose.Equals(other.Purpose)
+                ) &&
+                (
+                    this.ParticipantId == other.ParticipantId ||
+                    this.ParticipantId != null &&
+                    this.ParticipantId.Equals(other.ParticipantId)
+                ) &&
+                (
+                    this.Queue == other.Queue ||
+                    this.Queue != null &&
+                    this.Queue.Equals(other.Queue)
+                ) &&
+                (
+                    this.Workflow == other.Workflow ||
+                    this.Workflow != null &&
+                    this.Workflow.Equals(other.Workflow)
+                ) &&
+                (
                     this.MessageText == other.MessageText ||
                     this.MessageText != null &&
                     this.MessageText.Equals(other.MessageText)
@@ -436,6 +504,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Purpose != null)
+                    hash = hash * 59 + this.Purpose.GetHashCode();
+
+                if (this.ParticipantId != null)
+                    hash = hash * 59 + this.ParticipantId.GetHashCode();
+
+                if (this.Queue != null)
+                    hash = hash * 59 + this.Queue.GetHashCode();
+
+                if (this.Workflow != null)
+                    hash = hash * 59 + this.Workflow.GetHashCode();
 
                 if (this.MessageText != null)
                     hash = hash * 59 + this.MessageText.GetHashCode();
