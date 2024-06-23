@@ -2678,7 +2678,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **messengerType** | **string**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, line, whatsapp, open, instagram |
+| **messengerType** | **string**| Messenger Type | [optional] <br />**Values**: sms, facebook, twitter, whatsapp, open, instagram |
 | **name** | **string**| Recipient Name | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |

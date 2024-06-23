@@ -158,8 +158,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">The id of the conversation that executed this flow..</param>
         /// <param name="FlowType">The type of flow..</param>
         /// <param name="FlowErrorReason">If the flow errored out this is the reason..</param>
+        /// <param name="FlowWarningReason">If the flow had a warning, this is the reason..</param>
         /// <param name="FlowName">The name of the flow..</param>
-        public FlowExecutionDataQueryResult(string Name = null, DateTime? StartDateTime = null, DateTime? EndDateTime = null, string FlowId = null, string FlowVersion = null, string ConversationId = null, FlowTypeEnum? FlowType = null, string FlowErrorReason = null, string FlowName = null)
+        public FlowExecutionDataQueryResult(string Name = null, DateTime? StartDateTime = null, DateTime? EndDateTime = null, string FlowId = null, string FlowVersion = null, string ConversationId = null, FlowTypeEnum? FlowType = null, string FlowErrorReason = null, string FlowWarningReason = null, string FlowName = null)
         {
             this.Name = Name;
             this.StartDateTime = StartDateTime;
@@ -169,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationId = ConversationId;
             this.FlowType = FlowType;
             this.FlowErrorReason = FlowErrorReason;
+            this.FlowWarningReason = FlowWarningReason;
             this.FlowName = FlowName;
             
         }
@@ -249,6 +251,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// If the flow had a warning, this is the reason.
+        /// </summary>
+        /// <value>If the flow had a warning, this is the reason.</value>
+        [DataMember(Name="flowWarningReason", EmitDefaultValue=false)]
+        public string FlowWarningReason { get; set; }
+
+
+
+        /// <summary>
         /// The name of the flow.
         /// </summary>
         /// <value>The name of the flow.</value>
@@ -283,6 +294,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  FlowType: ").Append(FlowType).Append("\n");
             sb.Append("  FlowErrorReason: ").Append(FlowErrorReason).Append("\n");
+            sb.Append("  FlowWarningReason: ").Append(FlowWarningReason).Append("\n");
             sb.Append("  FlowName: ").Append(FlowName).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -371,6 +383,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowErrorReason.Equals(other.FlowErrorReason)
                 ) &&
                 (
+                    this.FlowWarningReason == other.FlowWarningReason ||
+                    this.FlowWarningReason != null &&
+                    this.FlowWarningReason.Equals(other.FlowWarningReason)
+                ) &&
+                (
                     this.FlowName == other.FlowName ||
                     this.FlowName != null &&
                     this.FlowName.Equals(other.FlowName)
@@ -419,6 +436,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FlowErrorReason != null)
                     hash = hash * 59 + this.FlowErrorReason.GetHashCode();
+
+                if (this.FlowWarningReason != null)
+                    hash = hash * 59 + this.FlowWarningReason.GetHashCode();
 
                 if (this.FlowName != null)
                     hash = hash * 59 + this.FlowName.GetHashCode();

@@ -4121,7 +4121,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| The field to sort by | [optional] [default to name]<br />**Values**: name, status.operationalStatus, secondaryStatus.operationalStatus |
+| **sortBy** | **string**| The field to sort by | [optional] [default to name]<br />**Values**: id, name, status.operationalStatus, secondaryStatus.operationalStatus |
 | **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **siteId** | **string**| Filter by site.id | [optional]  |
 | **webRtcUserId** | **string**| Filter by webRtcUser.id | [optional]  |

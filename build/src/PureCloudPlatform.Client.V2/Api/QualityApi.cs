@@ -485,9 +485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -506,7 +504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
         
-        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -517,9 +515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -538,7 +534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
-        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -2195,9 +2191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -2216,7 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
-        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -2227,9 +2221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -2248,7 +2240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -7135,9 +7127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7156,9 +7146,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
         
-        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7169,9 +7159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7190,7 +7178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
         
-        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -7227,9 +7215,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (conversationId != null) localVarQueryParams.Add(new Tuple<string, string>("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId)));
             if (agentUserId != null) localVarQueryParams.Add(new Tuple<string, string>("agentUserId", this.Configuration.ApiClient.ParameterToString(agentUserId)));
@@ -7296,9 +7282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7317,9 +7301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7331,9 +7315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
         /// <param name="pageNumber">The page number requested (optional, default to 1)</param>
-        /// <param name="sortBy">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="expand">variable name requested by expand list (optional)</param>
-        /// <param name="nextPage">NOTE: Does not work when querying evaluations (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
@@ -7352,7 +7334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">NOTE: Does not work when conversationId is supplied. (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -7389,9 +7371,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
             if (conversationId != null) localVarQueryParams.Add(new Tuple<string, string>("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId)));
             if (agentUserId != null) localVarQueryParams.Add(new Tuple<string, string>("agentUserId", this.Configuration.ApiClient.ParameterToString(agentUserId)));

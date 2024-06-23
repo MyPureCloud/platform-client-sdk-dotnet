@@ -16,6 +16,7 @@ title: FlowExecutionDataQueryResult
 | **ConversationId** | **string** | The id of the conversation that executed this flow. | [optional] |
 | **FlowType** | **string** | The type of flow. | [optional] |
 | **FlowErrorReason** | **string** | If the flow errored out this is the reason. | [optional] |
+| **FlowWarningReason** | **string** | If the flow had a warning, this is the reason. | [optional] |
 | **FlowName** | **string** | The name of the flow. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

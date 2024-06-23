@@ -28,7 +28,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallQueueId">The queue ID to call..</param>
         /// <param name="CallUserId">The user ID to call..</param>
         /// <param name="Priority">The priority to assign to this call (if calling a queue)..</param>
-        /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
         /// <param name="LanguageId">The language skill ID to use for routing this call (if calling a queue)..</param>
         /// <param name="RoutingSkillsIds">The skill ID's to use for routing this call (if calling a queue)..</param>
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
@@ -36,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         /// <param name="ExternalContactId">The external contact with which to associate the call..</param>
         /// <param name="Label">An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level.</param>
-        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, Dictionary<string, string> Attributes = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null, string Label = null)
+        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null, string UuiData = null, string ExternalContactId = null, string Label = null)
         {
             this.PhoneNumber = PhoneNumber;
             this.CallerId = CallerId;
@@ -45,7 +44,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallQueueId = CallQueueId;
             this.CallUserId = CallUserId;
             this.Priority = Priority;
-            this.Attributes = Attributes;
             this.LanguageId = LanguageId;
             this.RoutingSkillsIds = RoutingSkillsIds;
             this.ConversationIds = ConversationIds;
@@ -118,15 +116,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The priority to assign to this call (if calling a queue).</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-
-
-
-        /// <summary>
-        /// The list of attributes to associate with the customer participant.
-        /// </summary>
-        /// <value>The list of attributes to associate with the customer participant.</value>
-        [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public Dictionary<string, string> Attributes { get; set; }
 
 
 
@@ -208,7 +197,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallQueueId: ").Append(CallQueueId).Append("\n");
             sb.Append("  CallUserId: ").Append(CallUserId).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  RoutingSkillsIds: ").Append(RoutingSkillsIds).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
@@ -292,11 +280,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Priority.Equals(other.Priority)
                 ) &&
                 (
-                    this.Attributes == other.Attributes ||
-                    this.Attributes != null &&
-                    this.Attributes.SequenceEqual(other.Attributes)
-                ) &&
-                (
                     this.LanguageId == other.LanguageId ||
                     this.LanguageId != null &&
                     this.LanguageId.Equals(other.LanguageId)
@@ -364,9 +347,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
-
-                if (this.Attributes != null)
-                    hash = hash * 59 + this.Attributes.GetHashCode();
 
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();

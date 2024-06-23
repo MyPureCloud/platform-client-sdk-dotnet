@@ -44,6 +44,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyViews**](JourneyApi.html#getjourneyviews) | **Get** /api/v2/journey/views | Get a list of Journey Views |
 | [**GetJourneyViewsEventdefinition**](JourneyApi.html#getjourneyviewseventdefinition) | **Get** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Get an Event Definition |
 | [**GetJourneyViewsEventdefinitions**](JourneyApi.html#getjourneyviewseventdefinitions) | **Get** /api/v2/journey/views/eventdefinitions | Get a list of Event Definitions |
+| [**GetJourneyViewsJobs**](JourneyApi.html#getjourneyviewsjobs) | **Get** /api/v2/journey/views/jobs | Get the jobs for an organization. |
 | [**PatchJourneyActionmap**](JourneyApi.html#patchjourneyactionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](JourneyApi.html#patchjourneyactiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](JourneyApi.html#patchjourneyactiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
@@ -2496,6 +2497,77 @@ This endpoint does require any parameters.
 ### Return type
 
 [**JourneyEventDefinitionListing**](JourneyEventDefinitionListing.html)
+
+<a name="getjourneyviewsjobs"></a>
+
+## [**JourneyViewJobListing**](JourneyViewJobListing.html) GetJourneyViewsJobs (int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
+
+
+
+Get the jobs for an organization.
+
+GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var pageNumber = 56;  // int? | The number of the page to return (optional)  (default to 1)
+            var pageSize = 56;  // int? | Max number of entities to return (optional)  (default to 25)
+            var interval = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z;  // string | An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional) 
+            var statuses = statuses&#x3D;Accepted,Executing,Complete,Failed;  // string | Job statuses to filter for (optional) 
+
+            try
+            { 
+                // Get the jobs for an organization.
+                JourneyViewJobListing result = apiInstance.GetJourneyViewsJobs(pageNumber, pageSize, interval, statuses);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| The number of the page to return | [optional] [default to 1] |
+| **pageSize** | **int?**| Max number of entities to return | [optional] [default to 25] |
+| **interval** | **string**| An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. | [optional]  |
+| **statuses** | **string**| Job statuses to filter for | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JourneyViewJobListing**](JourneyViewJobListing.html)
 
 <a name="patchjourneyactionmap"></a>
 

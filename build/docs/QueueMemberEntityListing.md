@@ -10,10 +10,10 @@ title: QueueMemberEntityListing
 | **Entities** | [**List&lt;QueueMember&gt;**](QueueMember.html) |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

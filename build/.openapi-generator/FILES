@@ -535,6 +535,7 @@ docs/CallbackMediaSettings.md
 docs/Callheader.md
 docs/Callmessage.md
 docs/Campaign.md
+docs/CampaignBusinessCategoryMetrics.md
 docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
 docs/CampaignDivisionViewListing.md
@@ -2624,6 +2625,7 @@ docs/GetJourneyViewVersionJobsLatest-example.txt
 docs/GetJourneyViews-example.txt
 docs/GetJourneyViewsEventdefinition-example.txt
 docs/GetJourneyViewsEventdefinitions-example.txt
+docs/GetJourneyViewsJobs-example.txt
 docs/GetKnowledgeGuestSessionCategories-example.txt
 docs/GetKnowledgeGuestSessionDocument-example.txt
 docs/GetKnowledgeGuestSessionDocuments-example.txt
@@ -3545,6 +3547,7 @@ docs/JourneyViewElementAttributes.md
 docs/JourneyViewElementFilter.md
 docs/JourneyViewElementFilterPredicate.md
 docs/JourneyViewJob.md
+docs/JourneyViewJobListing.md
 docs/JourneyViewLink.md
 docs/JourneyViewLinkTimeConstraint.md
 docs/JourneyViewListing.md
@@ -7679,6 +7682,7 @@ src/PureCloudPlatform.Client.V2/Model/CallbackMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Callheader.cs
 src/PureCloudPlatform.Client.V2/Model/Callmessage.cs
 src/PureCloudPlatform.Client.V2/Model/Campaign.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignBusinessCategoryMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDiagnostics.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDivisionViewListing.cs
@@ -9202,6 +9206,7 @@ src/PureCloudPlatform.Client.V2/Model/JourneyViewElementAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewElementFilter.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewElementFilterPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewJob.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyViewJobListing.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewLink.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewLinkTimeConstraint.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewListing.cs

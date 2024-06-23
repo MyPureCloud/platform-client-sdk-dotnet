@@ -55,7 +55,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
-            Unknown
+            Unknown,
+            
+            /// <summary>
+            /// Enum Invalid for "Invalid"
+            /// </summary>
+            [EnumMember(Value = "Invalid")]
+            Invalid,
+            
+            /// <summary>
+            /// Enum Invalidformat for "InvalidFormat"
+            /// </summary>
+            [EnumMember(Value = "InvalidFormat")]
+            Invalidformat,
+            
+            /// <summary>
+            /// Enum Invalidfile for "InvalidFile"
+            /// </summary>
+            [EnumMember(Value = "InvalidFile")]
+            Invalidfile
         }
         /// <summary>
         /// Status of zip upload.

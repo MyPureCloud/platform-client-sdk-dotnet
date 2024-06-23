@@ -109,12 +109,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Twitter,
             
             /// <summary>
-            /// Enum Line for "line"
-            /// </summary>
-            [EnumMember(Value = "line")]
-            Line,
-            
-            /// <summary>
             /// Enum Whatsapp for "whatsapp"
             /// </summary>
             [EnumMember(Value = "whatsapp")]

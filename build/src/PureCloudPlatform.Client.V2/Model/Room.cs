@@ -80,7 +80,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ParticipantLimit">Room's size limit.</param>
         /// <param name="Owners">Room's owners.</param>
         /// <param name="PinnedMessages">Room's pinned messages.</param>
-        public Room(string Name = null, DateTime? DateCreated = null, RoomTypeEnum? RoomType = null, string Description = null, string Subject = null, int? ParticipantLimit = null, List<UserReference> Owners = null, List<AddressableEntityRef> PinnedMessages = null)
+        /// <param name="Jid">The jid of the room.</param>
+        public Room(string Name = null, DateTime? DateCreated = null, RoomTypeEnum? RoomType = null, string Description = null, string Subject = null, int? ParticipantLimit = null, List<UserReference> Owners = null, List<AddressableEntityRef> PinnedMessages = null, string Jid = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -90,15 +91,16 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ParticipantLimit = ParticipantLimit;
             this.Owners = Owners;
             this.PinnedMessages = PinnedMessages;
+            this.Jid = Jid;
             
         }
         
 
 
         /// <summary>
-        /// The jid of the room
+        /// The jid of the room if adhoc, the id of the group for group rooms
         /// </summary>
-        /// <value>The jid of the room</value>
+        /// <value>The jid of the room if adhoc, the id of the group for group rooms</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
 
@@ -169,6 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The jid of the room
+        /// </summary>
+        /// <value>The jid of the room</value>
+        [DataMember(Name="jid", EmitDefaultValue=false)]
+        public string Jid { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -194,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ParticipantLimit: ").Append(ParticipantLimit).Append("\n");
             sb.Append("  Owners: ").Append(Owners).Append("\n");
             sb.Append("  PinnedMessages: ").Append(PinnedMessages).Append("\n");
+            sb.Append("  Jid: ").Append(Jid).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -281,6 +293,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PinnedMessages.SequenceEqual(other.PinnedMessages)
                 ) &&
                 (
+                    this.Jid == other.Jid ||
+                    this.Jid != null &&
+                    this.Jid.Equals(other.Jid)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -324,6 +341,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PinnedMessages != null)
                     hash = hash * 59 + this.PinnedMessages.GetHashCode();
+
+                if (this.Jid != null)
+                    hash = hash * 59 + this.Jid.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
