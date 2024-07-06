@@ -196,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>ExternalContact</returns>
         
         ExternalContact GetExternalcontactsContact (string contactId, List<string> expand = null);
@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
         ApiResponse<ExternalContact> GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null);
@@ -1464,9 +1464,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         
-        ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier);
+        ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
         /// Fetch a contact using an identifier type and value.
@@ -1476,9 +1477,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
-        ApiResponse<ExternalContact> PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier);
+        ApiResponse<ExternalContact> PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
         /// Merge two contacts into a new contact record
@@ -2024,7 +2026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
         System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId, List<string> expand = null);
@@ -2037,7 +2039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null);
@@ -3292,9 +3294,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
-        System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier);
+        System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
         /// Fetch a contact using an identifier type and value.
@@ -3304,9 +3307,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier, List<string> expand = null);
 
         /// <summary>
         /// Merge two contacts into a new contact record
@@ -5265,7 +5269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>ExternalContact</returns>
         
         public ExternalContact GetExternalcontactsContact (string contactId, List<string> expand = null)
@@ -5280,7 +5284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
         public ApiResponse< ExternalContact > GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null)
@@ -5372,7 +5376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
         public async System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId, List<string> expand = null)
@@ -5388,7 +5392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null)
@@ -16076,11 +16080,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         
-        public ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier)
+        public ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null)
         {
-             ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsIdentifierlookupWithHttpInfo(identifier);
+             ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsIdentifierlookupWithHttpInfo(identifier, expand);
              return localVarResponse.Data;
         }
 
@@ -16090,9 +16095,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
-        public ApiResponse< ExternalContact > PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier)
+        public ApiResponse< ExternalContact > PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier, List<string> expand = null)
         { 
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -16131,6 +16137,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16185,11 +16192,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
-        public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier)
+        public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier, List<string> expand = null)
         {
-             ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsIdentifierlookupAsyncWithHttpInfo(identifier);
+             ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsIdentifierlookupAsyncWithHttpInfo(identifier, expand);
              return localVarResponse.Data;
 
         }
@@ -16200,9 +16208,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
+        /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier, List<string> expand = null)
         { 
             // verify the required parameter 'identifier' is set
             if (identifier == null)
@@ -16242,6 +16251,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

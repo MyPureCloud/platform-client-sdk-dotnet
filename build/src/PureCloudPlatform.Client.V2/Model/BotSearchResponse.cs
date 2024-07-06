@@ -73,7 +73,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Genesysbotflow for "GenesysBotFlow"
             /// </summary>
             [EnumMember(Value = "GenesysBotFlow")]
-            Genesysbotflow
+            Genesysbotflow,
+            
+            /// <summary>
+            /// Enum Genesysdigitalbotflow for "GenesysDigitalBotFlow"
+            /// </summary>
+            [EnumMember(Value = "GenesysDigitalBotFlow")]
+            Genesysdigitalbotflow,
+            
+            /// <summary>
+            /// Enum Genesysvoicesurveyflow for "GenesysVoiceSurveyFlow"
+            /// </summary>
+            [EnumMember(Value = "GenesysVoiceSurveyFlow")]
+            Genesysvoicesurveyflow
         }
         /// <summary>
         /// The provider of the bot

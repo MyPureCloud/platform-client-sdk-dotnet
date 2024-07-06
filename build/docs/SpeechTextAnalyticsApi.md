@@ -184,7 +184,7 @@ void (empty response body)
 
 <a name="deletespeechandtextanalyticsprogram"></a>
 
-## void DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null)
+## [**DeleteProgramResponse**](DeleteProgramResponse.html) DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null)
 
 
 
@@ -222,7 +222,8 @@ namespace Example
             try
             { 
                 // Delete a Speech & Text Analytics program by id
-                apiInstance.DeleteSpeechandtextanalyticsProgram(programId, forceDelete);
+                DeleteProgramResponse result = apiInstance.DeleteSpeechandtextanalyticsProgram(programId, forceDelete);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -244,7 +245,7 @@ namespace Example
 
 ### Return type
 
-void (empty response body)
+[**DeleteProgramResponse**](DeleteProgramResponse.html)
 
 <a name="deletespeechandtextanalyticssentimentfeedback"></a>
 

@@ -4704,7 +4704,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
-| **expand** | **string**| Expand response with additional information | [optional] <br />**Values**: compliance |
+| **expand** | **string**| Expand response with additional information | [optional] <br />**Values**: compliance, supportedContent |
 {: class="table table-striped"}
 
 ### Return type
@@ -4713,7 +4713,7 @@ namespace Example
 
 <a name="getroutingsmsphonenumbers"></a>
 
-## [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
+## [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null, string supportedContentId = null)
 
 
 
@@ -4755,11 +4755,12 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
             var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations (optional)  (default to "en-US")
             var integrationId = integrationId_example;  // string | Filter on the Genesys Cloud integration id to which the phone number belongs to (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter based on the supported content ID (optional) 
 
             try
             { 
                 // Get a list of provisioned phone numbers.
-                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);
+                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4786,6 +4787,7 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: ascending, descending |
 | **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations | [optional] [default to "en-US"] |
 | **integrationId** | **string**| Filter on the Genesys Cloud integration id to which the phone number belongs to | [optional]  |
+| **supportedContentId** | **string**| Filter based on the supported content ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

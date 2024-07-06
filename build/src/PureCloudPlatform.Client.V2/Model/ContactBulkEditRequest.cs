@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Criteria">Criteria to filter the contacts by..</param>
         /// <param name="ContactIds">Contact IDs to be bulk edited..</param>
         /// <param name="Contact">Contact object with details of fields used for patching..</param>
-        public ContactBulkEditRequest(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, List<string> ContactIds = null, DialerContact Contact = null)
+        /// <param name="GenerateDownloadUri">GenerateDownloadUri.</param>
+        public ContactBulkEditRequest(string ContactListFilterId = null, ContactBulkSearchCriteria Criteria = null, List<string> ContactIds = null, DialerContact Contact = null, bool? GenerateDownloadUri = null)
         {
             this.ContactListFilterId = ContactListFilterId;
             this.Criteria = Criteria;
             this.ContactIds = ContactIds;
             this.Contact = Contact;
+            this.GenerateDownloadUri = GenerateDownloadUri;
             
         }
         
@@ -71,6 +73,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DialerContact Contact { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets GenerateDownloadUri
+        /// </summary>
+        [DataMember(Name="generateDownloadUri", EmitDefaultValue=false)]
+        public bool? GenerateDownloadUri { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Criteria: ").Append(Criteria).Append("\n");
             sb.Append("  ContactIds: ").Append(ContactIds).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
+            sb.Append("  GenerateDownloadUri: ").Append(GenerateDownloadUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +154,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Contact == other.Contact ||
                     this.Contact != null &&
                     this.Contact.Equals(other.Contact)
+                ) &&
+                (
+                    this.GenerateDownloadUri == other.GenerateDownloadUri ||
+                    this.GenerateDownloadUri != null &&
+                    this.GenerateDownloadUri.Equals(other.GenerateDownloadUri)
                 );
         }
 
@@ -168,6 +184,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Contact != null)
                     hash = hash * 59 + this.Contact.GetHashCode();
+
+                if (this.GenerateDownloadUri != null)
+                    hash = hash * 59 + this.GenerateDownloadUri.GetHashCode();
 
                 return hash;
             }

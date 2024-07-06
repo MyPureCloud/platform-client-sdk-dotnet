@@ -33,6 +33,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationSecureattributes**](ConversationsApi.html#getconversationsecureattributes) | **Get** /api/v2/conversations/{conversationId}/secureattributes | Get the secure attributes on a conversation. |
+| [**GetConversationSuggestion**](ConversationsApi.html#getconversationsuggestion) | **Get** /api/v2/conversations/{conversationId}/suggestions/{suggestionId} | Get Suggestion. |
+| [**GetConversationSuggestions**](ConversationsApi.html#getconversationsuggestions) | **Get** /api/v2/conversations/{conversationId}/suggestions | Get all suggestions for a conversation. |
 | [**GetConversations**](ConversationsApi.html#getconversations) | **Get** /api/v2/conversations | Get active conversations for the logged in user |
 | [**GetConversationsCall**](ConversationsApi.html#getconversationscall) | **Get** /api/v2/conversations/calls/{conversationId} | Get call conversation |
 | [**GetConversationsCallParticipantCommunicationWrapup**](ConversationsApi.html#getconversationscallparticipantcommunicationwrapup) | **Get** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Get the wrap-up for this conversation communication.  |
@@ -160,6 +162,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationParticipantReplaceExternal**](ConversationsApi.html#postconversationparticipantreplaceexternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
 | [**PostConversationParticipantReplaceQueue**](ConversationsApi.html#postconversationparticipantreplacequeue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
 | [**PostConversationParticipantSecureivrsessions**](ConversationsApi.html#postconversationparticipantsecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
+| [**PostConversationSuggestionEngagement**](ConversationsApi.html#postconversationsuggestionengagement) | **Post** /api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement | Save an engagement on the suggestion. |
+| [**PostConversationSuggestionsFeedback**](ConversationsApi.html#postconversationsuggestionsfeedback) | **Post** /api/v2/conversations/{conversationId}/suggestions/feedback | Suggestion feedback. |
 | [**PostConversationSummaryFeedback**](ConversationsApi.html#postconversationsummaryfeedback) | **Post** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Submit feedback for the summary. |
 | [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **Post** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantBarge**](ConversationsApi.html#postconversationscallparticipantbarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
@@ -1889,6 +1893,144 @@ namespace Example
 ### Return type
 
 [**ConversationSecureAttributes**](ConversationSecureAttributes.html)
+
+<a name="getconversationsuggestion"></a>
+
+## [**Suggestion**](Suggestion.html) GetConversationSuggestion (string conversationId, string suggestionId)
+
+
+
+Get Suggestion.
+
+Requires ALL permissions: 
+
+* conversation:suggestion:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationSuggestionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var suggestionId = suggestionId_example;  // string | Suggestion ID
+
+            try
+            { 
+                // Get Suggestion.
+                Suggestion result = apiInstance.GetConversationSuggestion(conversationId, suggestionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationSuggestion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **suggestionId** | **string**| Suggestion ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Suggestion**](Suggestion.html)
+
+<a name="getconversationsuggestions"></a>
+
+## [**SuggestionListing**](SuggestionListing.html) GetConversationSuggestions (string conversationId, string before = null, string after = null, string pageSize = null, string type = null, string state = null)
+
+
+
+Get all suggestions for a conversation.
+
+Requires ALL permissions: 
+
+* conversation:suggestion:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationSuggestionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var type = type_example;  // string | Suggestion type to filter by. (optional) 
+            var state = state_example;  // string | Suggestion state to filter Copilot suggestions. (optional) 
+
+            try
+            { 
+                // Get all suggestions for a conversation.
+                SuggestionListing result = apiInstance.GetConversationSuggestions(conversationId, before, after, pageSize, type, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationSuggestions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script |
+| **state** | **string**| Suggestion state to filter Copilot suggestions. | [optional] <br />**Values**: Suggested, Accepted, Dismissed, Failed |
+{: class="table table-striped"}
+
+### Return type
+
+[**SuggestionListing**](SuggestionListing.html)
 
 <a name="getconversations"></a>
 
@@ -10161,6 +10303,137 @@ namespace Example
 ### Return type
 
 [**SecureSession**](SecureSession.html)
+
+<a name="postconversationsuggestionengagement"></a>
+
+## [**SuggestionEngagement**](SuggestionEngagement.html) PostConversationSuggestionEngagement (string conversationId, string suggestionId, SuggestionEngagement body)
+
+
+
+Save an engagement on the suggestion.
+
+Requires ALL permissions: 
+
+* conversation:suggestionEngagement:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationSuggestionEngagementExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var suggestionId = suggestionId_example;  // string | Suggestion ID
+            var body = new SuggestionEngagement(); // SuggestionEngagement | 
+
+            try
+            { 
+                // Save an engagement on the suggestion.
+                SuggestionEngagement result = apiInstance.PostConversationSuggestionEngagement(conversationId, suggestionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationSuggestionEngagement: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **suggestionId** | **string**| Suggestion ID |  |
+| **body** | [**SuggestionEngagement**](SuggestionEngagement.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SuggestionEngagement**](SuggestionEngagement.html)
+
+<a name="postconversationsuggestionsfeedback"></a>
+
+## void PostConversationSuggestionsFeedback (string conversationId, Feedback body)
+
+
+
+Suggestion feedback.
+
+Requires ANY permissions: 
+
+* conversation:suggestionFeedback:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationSuggestionsFeedbackExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var body = new Feedback(); // Feedback | SuggestionFeedback
+
+            try
+            { 
+                // Suggestion feedback.
+                apiInstance.PostConversationSuggestionsFeedback(conversationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationSuggestionsFeedback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **body** | [**Feedback**](Feedback.html)| SuggestionFeedback |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postconversationsummaryfeedback"></a>
 

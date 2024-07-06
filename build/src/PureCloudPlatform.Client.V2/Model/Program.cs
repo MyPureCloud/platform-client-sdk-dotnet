@@ -30,7 +30,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="DatePublished">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Program(string Name = null, string Description = null, bool? Published = null, List<BaseTopicEntitiy> Topics = null, List<string> Tags = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null, AddressableEntityRef PublishedBy = null, DateTime? DatePublished = null)
+        /// <param name="TopicLinksJob">TopicLinksJob.</param>
+        public Program(string Name = null, string Description = null, bool? Published = null, List<BaseTopicEntitiy> Topics = null, List<string> Tags = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null, AddressableEntityRef PublishedBy = null, DateTime? DatePublished = null, AddressableEntityRef TopicLinksJob = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -41,6 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.PublishedBy = PublishedBy;
             this.DatePublished = DatePublished;
+            this.TopicLinksJob = TopicLinksJob;
             
         }
         
@@ -130,6 +132,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets TopicLinksJob
+        /// </summary>
+        [DataMember(Name="topicLinksJob", EmitDefaultValue=false)]
+        public AddressableEntityRef TopicLinksJob { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -156,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
+            sb.Append("  TopicLinksJob: ").Append(TopicLinksJob).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -248,6 +259,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DatePublished.Equals(other.DatePublished)
                 ) &&
                 (
+                    this.TopicLinksJob == other.TopicLinksJob ||
+                    this.TopicLinksJob != null &&
+                    this.TopicLinksJob.Equals(other.TopicLinksJob)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -294,6 +310,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DatePublished != null)
                     hash = hash * 59 + this.DatePublished.GetHashCode();
+
+                if (this.TopicLinksJob != null)
+                    hash = hash * 59 + this.TopicLinksJob.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

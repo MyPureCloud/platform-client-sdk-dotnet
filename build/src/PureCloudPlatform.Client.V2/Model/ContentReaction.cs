@@ -85,7 +85,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Care for "Care"
             /// </summary>
             [EnumMember(Value = "Care")]
-            Care
+            Care,
+            
+            /// <summary>
+            /// Enum Share for "Share"
+            /// </summary>
+            [EnumMember(Value = "Share")]
+            Share,
+            
+            /// <summary>
+            /// Enum Comment for "Comment"
+            /// </summary>
+            [EnumMember(Value = "Comment")]
+            Comment,
+            
+            /// <summary>
+            /// Enum View for "View"
+            /// </summary>
+            [EnumMember(Value = "View")]
+            View
         }
         /// <summary>
         /// Type of reaction.

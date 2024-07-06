@@ -184,12 +184,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">The value for comparison. Required for a CampaignRuleCondition..</param>
         /// <param name="Priority">The priority to set a campaign to. Required for the 'setCampaignPriority' action..</param>
         /// <param name="DialingMode">The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action..</param>
-        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null)
+        /// <param name="AbandonRate">The abandon rate to set a campaign to. Required for the 'setCampaignAbandonRate' action..</param>
+        /// <param name="OutboundLineCount">The  number of outbound lines to set a campaign to. Required for the 'setCampaignNumberOfLines' action..</param>
+        /// <param name="RelativeWeight">The relative weight to set a campaign to. Required for the 'setCampaignWeight' action..</param>
+        /// <param name="MaxCallsPerAgent">The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action..</param>
+        /// <param name="Queue">The queue a campaign to. Required for the 'changeCampaignQueue' action..</param>
+        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null)
         {
             this.Operator = Operator;
             this.Value = Value;
             this.Priority = Priority;
             this.DialingMode = DialingMode;
+            this.AbandonRate = AbandonRate;
+            this.OutboundLineCount = OutboundLineCount;
+            this.RelativeWeight = RelativeWeight;
+            this.MaxCallsPerAgent = MaxCallsPerAgent;
+            this.Queue = Queue;
             
         }
         
@@ -209,6 +219,51 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// The abandon rate to set a campaign to. Required for the 'setCampaignAbandonRate' action.
+        /// </summary>
+        /// <value>The abandon rate to set a campaign to. Required for the 'setCampaignAbandonRate' action.</value>
+        [DataMember(Name="abandonRate", EmitDefaultValue=false)]
+        public double? AbandonRate { get; set; }
+
+
+
+        /// <summary>
+        /// The  number of outbound lines to set a campaign to. Required for the 'setCampaignNumberOfLines' action.
+        /// </summary>
+        /// <value>The  number of outbound lines to set a campaign to. Required for the 'setCampaignNumberOfLines' action.</value>
+        [DataMember(Name="outboundLineCount", EmitDefaultValue=false)]
+        public int? OutboundLineCount { get; set; }
+
+
+
+        /// <summary>
+        /// The relative weight to set a campaign to. Required for the 'setCampaignWeight' action.
+        /// </summary>
+        /// <value>The relative weight to set a campaign to. Required for the 'setCampaignWeight' action.</value>
+        [DataMember(Name="relativeWeight", EmitDefaultValue=false)]
+        public int? RelativeWeight { get; set; }
+
+
+
+        /// <summary>
+        /// The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action.
+        /// </summary>
+        /// <value>The maximum number of calls per agent to set a campaign to. Required for the 'setCampaignMaxCallsPerAgent' action.</value>
+        [DataMember(Name="maxCallsPerAgent", EmitDefaultValue=false)]
+        public double? MaxCallsPerAgent { get; set; }
+
+
+
+        /// <summary>
+        /// The queue a campaign to. Required for the 'changeCampaignQueue' action.
+        /// </summary>
+        /// <value>The queue a campaign to. Required for the 'changeCampaignQueue' action.</value>
+        [DataMember(Name="queue", EmitDefaultValue=false)]
+        public DomainEntityRef Queue { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -222,6 +277,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
+            sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
+            sb.Append("  OutboundLineCount: ").Append(OutboundLineCount).Append("\n");
+            sb.Append("  RelativeWeight: ").Append(RelativeWeight).Append("\n");
+            sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
+            sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -281,6 +341,31 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DialingMode == other.DialingMode ||
                     this.DialingMode != null &&
                     this.DialingMode.Equals(other.DialingMode)
+                ) &&
+                (
+                    this.AbandonRate == other.AbandonRate ||
+                    this.AbandonRate != null &&
+                    this.AbandonRate.Equals(other.AbandonRate)
+                ) &&
+                (
+                    this.OutboundLineCount == other.OutboundLineCount ||
+                    this.OutboundLineCount != null &&
+                    this.OutboundLineCount.Equals(other.OutboundLineCount)
+                ) &&
+                (
+                    this.RelativeWeight == other.RelativeWeight ||
+                    this.RelativeWeight != null &&
+                    this.RelativeWeight.Equals(other.RelativeWeight)
+                ) &&
+                (
+                    this.MaxCallsPerAgent == other.MaxCallsPerAgent ||
+                    this.MaxCallsPerAgent != null &&
+                    this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
+                ) &&
+                (
+                    this.Queue == other.Queue ||
+                    this.Queue != null &&
+                    this.Queue.Equals(other.Queue)
                 );
         }
 
@@ -306,6 +391,21 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DialingMode != null)
                     hash = hash * 59 + this.DialingMode.GetHashCode();
+
+                if (this.AbandonRate != null)
+                    hash = hash * 59 + this.AbandonRate.GetHashCode();
+
+                if (this.OutboundLineCount != null)
+                    hash = hash * 59 + this.OutboundLineCount.GetHashCode();
+
+                if (this.RelativeWeight != null)
+                    hash = hash * 59 + this.RelativeWeight.GetHashCode();
+
+                if (this.MaxCallsPerAgent != null)
+                    hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
+
+                if (this.Queue != null)
+                    hash = hash * 59 + this.Queue.GetHashCode();
 
                 return hash;
             }

@@ -1838,7 +1838,7 @@ namespace Example
 
 <a name="getjourneysessionevents"></a>
 
-## [**EventListing**](EventListing.html) GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null)
+## [**EventListing**](EventListing.html) GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null, string eventType = null)
 
 
 
@@ -1875,11 +1875,12 @@ namespace Example
             var sessionId = sessionId_example;  // string | System-generated UUID that represents the session the event is a part of.
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var eventType = eventType_example;  // string | A comma separated list of journey event types to include in the results. (optional) 
 
             try
             { 
                 // Retrieve all events for a given session.
-                EventListing result = apiInstance.GetJourneySessionEvents(sessionId, pageSize, after);
+                EventListing result = apiInstance.GetJourneySessionEvents(sessionId, pageSize, after, eventType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1899,6 +1900,7 @@ namespace Example
 | **sessionId** | **string**| System-generated UUID that represents the session the event is a part of. |  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **eventType** | **string**| A comma separated list of journey event types to include in the results. | [optional] <br />**Values**: com.genesys.journey.OutcomeAchievedEvent, com.genesys.journey.SegmentAssignmentEvent, com.genesys.journey.WebActionEvent, com.genesys.journey.WebEvent, com.genesys.journey.AppEvent |
 {: class="table table-striped"}
 
 ### Return type

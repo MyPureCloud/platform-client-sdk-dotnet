@@ -100,10 +100,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>LearningAssignmentStep</returns>
         
-        LearningAssignmentStep GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+        LearningAssignmentStep GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null);
 
         /// <summary>
         /// Get Learning Assignment Step
@@ -115,10 +116,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentStep</returns>
         
-        ApiResponse<LearningAssignmentStep> GetLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+        ApiResponse<LearningAssignmentStep> GetLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning module Assignments
@@ -1072,10 +1074,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of LearningAssignmentStep</returns>
         
-        System.Threading.Tasks.Task<LearningAssignmentStep> GetLearningAssignmentStepAsync (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+        System.Threading.Tasks.Task<LearningAssignmentStep> GetLearningAssignmentStepAsync (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null);
 
         /// <summary>
         /// Get Learning Assignment Step
@@ -1087,10 +1090,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentStep)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> GetLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> GetLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null);
 
         /// <summary>
         /// List of Learning module Assignments
@@ -2691,12 +2695,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>LearningAssignmentStep</returns>
         
-        public LearningAssignmentStep GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        public LearningAssignmentStep GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null)
         {
-             ApiResponse<LearningAssignmentStep> localVarResponse = GetLearningAssignmentStepWithHttpInfo(assignmentId, stepId, shareableContentObjectId, expand);
+             ApiResponse<LearningAssignmentStep> localVarResponse = GetLearningAssignmentStepWithHttpInfo(assignmentId, stepId, shareableContentObjectId, defaultShareableContentObject, expand);
              return localVarResponse.Data;
         }
 
@@ -2708,10 +2713,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentStep</returns>
         
-        public ApiResponse< LearningAssignmentStep > GetLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        public ApiResponse< LearningAssignmentStep > GetLearningAssignmentStepWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null)
         { 
             // verify the required parameter 'assignmentId' is set
             if (assignmentId == null)
@@ -2755,6 +2761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (shareableContentObjectId != null) localVarQueryParams.Add(new Tuple<string, string>("shareableContentObjectId", this.Configuration.ApiClient.ParameterToString(shareableContentObjectId)));
+            if (defaultShareableContentObject != null) localVarQueryParams.Add(new Tuple<string, string>("defaultShareableContentObject", this.Configuration.ApiClient.ParameterToString(defaultShareableContentObject)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -2807,12 +2814,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of LearningAssignmentStep</returns>
         
-        public async System.Threading.Tasks.Task<LearningAssignmentStep> GetLearningAssignmentStepAsync (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<LearningAssignmentStep> GetLearningAssignmentStepAsync (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null)
         {
-             ApiResponse<LearningAssignmentStep> localVarResponse = await GetLearningAssignmentStepAsyncWithHttpInfo(assignmentId, stepId, shareableContentObjectId, expand);
+             ApiResponse<LearningAssignmentStep> localVarResponse = await GetLearningAssignmentStepAsyncWithHttpInfo(assignmentId, stepId, shareableContentObjectId, defaultShareableContentObject, expand);
              return localVarResponse.Data;
 
         }
@@ -2825,10 +2833,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignmentId">The ID of Learning Assignment</param>
         /// <param name="stepId">The ID of Learning Assignment Step</param>
         /// <param name="shareableContentObjectId">The ID of SCO to load (optional)</param>
+        /// <param name="defaultShareableContentObject">The default SCO to retrieve (optional)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentStep)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> GetLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentStep>> GetLearningAssignmentStepAsyncWithHttpInfo (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null)
         { 
             // verify the required parameter 'assignmentId' is set
             if (assignmentId == null)
@@ -2874,6 +2883,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (shareableContentObjectId != null) localVarQueryParams.Add(new Tuple<string, string>("shareableContentObjectId", this.Configuration.ApiClient.ParameterToString(shareableContentObjectId)));
+            if (defaultShareableContentObject != null) localVarQueryParams.Add(new Tuple<string, string>("defaultShareableContentObject", this.Configuration.ApiClient.ParameterToString(defaultShareableContentObject)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params

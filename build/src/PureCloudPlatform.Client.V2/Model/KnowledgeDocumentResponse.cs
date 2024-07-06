@@ -74,10 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Labels">The references to labels associated with the document..</param>
         /// <param name="KnowledgeBase">Knowledge base to which the document belongs to..</param>
         /// <param name="ExternalId">The reference to external id associated with the document..</param>
+        /// <param name="ExternalUrl">The URL to external document..</param>
         /// <param name="Source">The reference to source associated with the document..</param>
         /// <param name="Readonly">Whether the document is read-only..</param>
         /// <param name="Variations">Variations of the document..</param>
-        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, AddressableEntityRef Source = null, bool? Readonly = null, List<DocumentVariation> Variations = null)
+        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, string ExternalUrl = null, AddressableEntityRef Source = null, bool? Readonly = null, List<DocumentVariation> Variations = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -93,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Labels = Labels;
             this.KnowledgeBase = KnowledgeBase;
             this.ExternalId = ExternalId;
+            this.ExternalUrl = ExternalUrl;
             this.Source = Source;
             this.Readonly = Readonly;
             this.Variations = Variations;
@@ -248,6 +250,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The URL to external document.
+        /// </summary>
+        /// <value>The URL to external document.</value>
+        [DataMember(Name="externalUrl", EmitDefaultValue=false)]
+        public string ExternalUrl { get; set; }
+
+
+
+        /// <summary>
         /// The reference to source associated with the document.
         /// </summary>
         /// <value>The reference to source associated with the document.</value>
@@ -308,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Labels: ").Append(Labels).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
+            sb.Append("  ExternalUrl: ").Append(ExternalUrl).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Readonly: ").Append(Readonly).Append("\n");
             sb.Append("  Variations: ").Append(Variations).Append("\n");
@@ -438,6 +450,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalId.Equals(other.ExternalId)
                 ) &&
                 (
+                    this.ExternalUrl == other.ExternalUrl ||
+                    this.ExternalUrl != null &&
+                    this.ExternalUrl.Equals(other.ExternalUrl)
+                ) &&
+                (
                     this.Source == other.Source ||
                     this.Source != null &&
                     this.Source.Equals(other.Source)
@@ -520,6 +537,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalId != null)
                     hash = hash * 59 + this.ExternalId.GetHashCode();
+
+                if (this.ExternalUrl != null)
+                    hash = hash * 59 + this.ExternalUrl.GetHashCode();
 
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();

@@ -239,7 +239,7 @@ namespace Example
 
 <a name="getlearningassignmentstep"></a>
 
-## [**LearningAssignmentStep**](LearningAssignmentStep.html) GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, List<string> expand = null)
+## [**LearningAssignmentStep**](LearningAssignmentStep.html) GetLearningAssignmentStep (string assignmentId, string stepId, string shareableContentObjectId = null, string defaultShareableContentObject = null, List<string> expand = null)
 
 
 
@@ -276,12 +276,13 @@ namespace Example
             var assignmentId = assignmentId_example;  // string | The ID of Learning Assignment
             var stepId = stepId_example;  // string | The ID of Learning Assignment Step
             var shareableContentObjectId = shareableContentObjectId_example;  // string | The ID of SCO to load (optional) 
+            var defaultShareableContentObject = defaultShareableContentObject_example;  // string | The default SCO to retrieve (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in response (optional) 
 
             try
             { 
                 // Get Learning Assignment Step
-                LearningAssignmentStep result = apiInstance.GetLearningAssignmentStep(assignmentId, stepId, shareableContentObjectId, expand);
+                LearningAssignmentStep result = apiInstance.GetLearningAssignmentStep(assignmentId, stepId, shareableContentObjectId, defaultShareableContentObject, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -301,6 +302,7 @@ namespace Example
 | **assignmentId** | **string**| The ID of Learning Assignment |  |
 | **stepId** | **string**| The ID of Learning Assignment Step |  |
 | **shareableContentObjectId** | **string**| The ID of SCO to load | [optional]  |
+| **defaultShareableContentObject** | **string**| The default SCO to retrieve | [optional] <br />**Values**: First, Last, Next |
 | **expand** | [**List<string>**](string.html)| Fields to expand in response | [optional] <br />**Values**: moduleStep |
 {: class="table table-striped"}
 

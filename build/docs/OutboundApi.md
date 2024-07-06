@@ -104,12 +104,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundSequences**](OutboundApi.html#getoutboundsequences) | **Get** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
 | [**GetOutboundSettings**](OutboundApi.html#getoutboundsettings) | **Get** /api/v2/outbound/settings | Get the outbound settings for this organization |
 | [**GetOutboundWrapupcodemappings**](OutboundApi.html#getoutboundwrapupcodemappings) | **Get** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PatchOutboundCampaign**](OutboundApi.html#patchoutboundcampaign) | **Patch** /api/v2/outbound/campaigns/{campaignId} | Update a campaign. |
 | [**PatchOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#patchoutbounddnclistcustomexclusioncolumns) | **Patch** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Add entries to or delete entries from a DNC list. |
 | [**PatchOutboundDnclistEmailaddresses**](OutboundApi.html#patchoutbounddnclistemailaddresses) | **Patch** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add emails to or Delete emails from a DNC list. |
 | [**PatchOutboundDnclistPhonenumbers**](OutboundApi.html#patchoutbounddnclistphonenumbers) | **Patch** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add numbers to or delete numbers from a DNC list. |
 | [**PatchOutboundSettings**](OutboundApi.html#patchoutboundsettings) | **Patch** /api/v2/outbound/settings | Update the outbound settings for this organization |
 | [**PostOutboundAttemptlimits**](OutboundApi.html#postoutboundattemptlimits) | **Post** /api/v2/outbound/attemptlimits | Create attempt limits |
-| [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **Post** /api/v2/outbound/audits | Retrieves audits for dialer. (Deprecated) |
 | [**PostOutboundCallabletimesets**](OutboundApi.html#postoutboundcallabletimesets) | **Post** /api/v2/outbound/callabletimesets | Create callable time set |
 | [**PostOutboundCallanalysisresponsesets**](OutboundApi.html#postoutboundcallanalysisresponsesets) | **Post** /api/v2/outbound/callanalysisresponsesets | Create a dialer call analysis response set. |
 | [**PostOutboundCampaignAgentownedmappingpreview**](OutboundApi.html#postoutboundcampaignagentownedmappingpreview) | **Post** /api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
@@ -6619,6 +6619,70 @@ This endpoint does require any parameters.
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping.html)
 
+<a name="patchoutboundcampaign"></a>
+
+## void PatchOutboundCampaign (string campaignId, CampaignPatchRequest body)
+
+
+
+Update a campaign.
+
+Requires ALL permissions: 
+
+* outbound:campaign:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchOutboundCampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var body = new CampaignPatchRequest(); // CampaignPatchRequest | CampaignPatchRequest
+
+            try
+            { 
+                // Update a campaign.
+                apiInstance.PatchOutboundCampaign(campaignId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PatchOutboundCampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **body** | [**CampaignPatchRequest**](CampaignPatchRequest.html)| CampaignPatchRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="patchoutbounddnclistcustomexclusioncolumns"></a>
 
 ## void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body)
@@ -6941,81 +7005,6 @@ namespace Example
 ### Return type
 
 [**AttemptLimits**](AttemptLimits.html)
-
-<a name="postoutboundaudits"></a>
-
-## [**AuditSearchResult**](AuditSearchResult.html) PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Retrieves audits for dialer. (Deprecated)
-
-This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \"/api/v2/audits/query\" instead.
-
-Requires ANY permissions: 
-
-* outbound:audit:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostOutboundAuditsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new OutboundApi();
-            var body = new DialerAuditRequest(); // DialerAuditRequest | AuditSearch
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "entity.name")
-            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
-            var facetsOnly = true;  // bool? | Facets only (optional)  (default to false)
-
-            try
-            { 
-                // Retrieves audits for dialer. (Deprecated)
-                AuditSearchResult result = apiInstance.PostOutboundAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling OutboundApi.PostOutboundAudits: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to "entity.name"] |
-| **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
-| **facetsOnly** | **bool?**| Facets only | [optional] [default to false] |
-{: class="table table-striped"}
-
-### Return type
-
-[**AuditSearchResult**](AuditSearchResult.html)
 
 <a name="postoutboundcallabletimesets"></a>
 

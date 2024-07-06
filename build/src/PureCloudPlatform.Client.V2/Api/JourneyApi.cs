@@ -755,9 +755,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>EventListing</returns>
         
-        EventListing GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null);
+        EventListing GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null, string eventType = null);
 
         /// <summary>
         /// Retrieve all events for a given session.
@@ -770,9 +771,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>ApiResponse of EventListing</returns>
         
-        ApiResponse<EventListing> GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null);
+        ApiResponse<EventListing> GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null, string eventType = null);
 
         /// <summary>
         /// Retrieve latest outcome score associated with a session for all outcomes.
@@ -2323,9 +2325,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>Task of EventListing</returns>
         
-        System.Threading.Tasks.Task<EventListing> GetJourneySessionEventsAsync (string sessionId, string pageSize = null, string after = null);
+        System.Threading.Tasks.Task<EventListing> GetJourneySessionEventsAsync (string sessionId, string pageSize = null, string after = null, string eventType = null);
 
         /// <summary>
         /// Retrieve all events for a given session.
@@ -2338,9 +2341,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>Task of ApiResponse (EventListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null, string eventType = null);
 
         /// <summary>
         /// Retrieve latest outcome score associated with a session for all outcomes.
@@ -9115,11 +9119,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>EventListing</returns>
         
-        public EventListing GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null)
+        public EventListing GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null, string eventType = null)
         {
-             ApiResponse<EventListing> localVarResponse = GetJourneySessionEventsWithHttpInfo(sessionId, pageSize, after);
+             ApiResponse<EventListing> localVarResponse = GetJourneySessionEventsWithHttpInfo(sessionId, pageSize, after, eventType);
              return localVarResponse.Data;
         }
 
@@ -9132,9 +9137,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>ApiResponse of EventListing</returns>
         
-        public ApiResponse< EventListing > GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null)
+        public ApiResponse< EventListing > GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null, string eventType = null)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -9175,6 +9181,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (eventType != null) localVarQueryParams.Add(new Tuple<string, string>("eventType", this.Configuration.ApiClient.ParameterToString(eventType)));
 
             // Header params
 
@@ -9227,11 +9234,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>Task of EventListing</returns>
         
-        public async System.Threading.Tasks.Task<EventListing> GetJourneySessionEventsAsync (string sessionId, string pageSize = null, string after = null)
+        public async System.Threading.Tasks.Task<EventListing> GetJourneySessionEventsAsync (string sessionId, string pageSize = null, string after = null, string eventType = null)
         {
-             ApiResponse<EventListing> localVarResponse = await GetJourneySessionEventsAsyncWithHttpInfo(sessionId, pageSize, after);
+             ApiResponse<EventListing> localVarResponse = await GetJourneySessionEventsAsyncWithHttpInfo(sessionId, pageSize, after, eventType);
              return localVarResponse.Data;
 
         }
@@ -9245,9 +9253,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">System-generated UUID that represents the session the event is a part of.</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="eventType">A comma separated list of journey event types to include in the results. (optional)</param>
         /// <returns>Task of ApiResponse (EventListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null, string eventType = null)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -9289,6 +9298,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (eventType != null) localVarQueryParams.Add(new Tuple<string, string>("eventType", this.Configuration.ApiClient.ParameterToString(eventType)));
 
             // Header params
 

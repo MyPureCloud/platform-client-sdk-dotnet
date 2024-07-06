@@ -123,6 +123,8 @@ docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
 docs/AgentTimeOffRequestPatch.md
+docs/AgentUIApi.json
+docs/AgentUIApi.md
 docs/AgentVideoSettings.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
@@ -226,6 +228,7 @@ docs/ArchitectPromptResourceNotificationPromptResourceNotification.md
 docs/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.md
 docs/ArchiveRetention.md
 docs/ArrayNode.md
+docs/Article.md
 docs/ArticleContent.md
 docs/ArticleContentBody.md
 docs/AssessmentForm.md
@@ -268,11 +271,7 @@ docs/AudioState.md
 docs/AudioUpdatedEvent.md
 docs/AuditApi.json
 docs/AuditApi.md
-docs/AuditEntity.md
-docs/AuditFacet.md
-docs/AuditFilter.md
 docs/AuditLogMessage.md
-docs/AuditMessage.md
 docs/AuditQueryEntity.md
 docs/AuditQueryExecutionResultsResponse.md
 docs/AuditQueryExecutionStatusResponse.md
@@ -286,13 +285,11 @@ docs/AuditRealtimeQueryRequest.md
 docs/AuditRealtimeQueryResultsResponse.md
 docs/AuditRealtimeRelatedRequest.md
 docs/AuditRealtimeRelatedResultsResponse.md
-docs/AuditSearchResult.md
 docs/AuditTopicAddressableEntityRef.md
 docs/AuditTopicAuditLogMessage.md
 docs/AuditTopicDomainEntityRef.md
 docs/AuditTopicMessageInfo.md
 docs/AuditTopicPropertyChange.md
-docs/AuditUser.md
 docs/AuthenticationSettings.md
 docs/AuthorizationApi.json
 docs/AuthorizationApi.md
@@ -304,6 +301,8 @@ docs/AuthzGrant.md
 docs/AuthzGrantPolicy.md
 docs/AuthzGrantRole.md
 docs/AuthzSubject.md
+docs/AutoAnswerSetting.md
+docs/AutoAnswerSettings.md
 docs/AutoStart.md
 docs/AutoStatusTransitionDetail.md
 docs/AutomaticTimeZoneMappingSettings.md
@@ -546,6 +545,7 @@ docs/CampaignLinesUtilization.md
 docs/CampaignOutboundLinesAllocation.md
 docs/CampaignOutboundLinesDistribution.md
 docs/CampaignOutboundLinesReservation.md
+docs/CampaignPatchRequest.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -575,10 +575,11 @@ docs/CategoryRequest.md
 docs/CategoryResponse.md
 docs/CategoryResponseListing.md
 docs/CategoryUpdateRequest.md
+docs/Celebration.md
+docs/CelebrationStateParam.md
 docs/Certificate.md
 docs/CertificateAuthorityEntityListing.md
 docs/CertificateDetails.md
-docs/Change.md
 docs/ChangeMyPasswordRequest.md
 docs/ChangePasswordRequest.md
 docs/Channel.md
@@ -1062,6 +1063,7 @@ docs/CreatePerformanceProfile.md
 docs/CreatePlanningGroupRequest.md
 docs/CreatePredictorRequest.md
 docs/CreateQueueRequest.md
+docs/CreateRecognition.md
 docs/CreateResponseAssetRequest.md
 docs/CreateResponseAssetResponse.md
 docs/CreateRoomRequest.md
@@ -1211,6 +1213,7 @@ docs/DeleteConversationsMessagingSetting-example.txt
 docs/DeleteConversationsMessagingSettingsDefault-example.txt
 docs/DeleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/DeleteDiagnosticsLogcaptureBrowserUser-example.txt
+docs/DeleteEmployeeengagementCelebration-example.txt
 docs/DeleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/DeleteExternalcontactsContact-example.txt
 docs/DeleteExternalcontactsContactNote-example.txt
@@ -1325,6 +1328,7 @@ docs/DeletePresenceDefinition0-example.txt
 docs/DeletePresenceSource-example.txt
 docs/DeletePresencedefinition-example.txt
 docs/DeleteProcessautomationTrigger-example.txt
+docs/DeleteProgramResponse.md
 docs/DeleteQualityCalibration-example.txt
 docs/DeleteQualityConversationEvaluation-example.txt
 docs/DeleteQualityForm-example.txt
@@ -1399,6 +1403,8 @@ docs/DeleteUserStationAssociatedstation-example.txt
 docs/DeleteUserStationDefaultstation-example.txt
 docs/DeleteUserVerifier-example.txt
 docs/DeleteUserrecording-example.txt
+docs/DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/DeleteVoicemailMessage-example.txt
 docs/DeleteVoicemailMessages-example.txt
 docs/DeleteWebchatDeployment-example.txt
@@ -1455,7 +1461,6 @@ docs/DialerAction.md
 docs/DialerAttemptLimitsConfigChangeAttemptLimits.md
 docs/DialerAttemptLimitsConfigChangeObject.md
 docs/DialerAttemptLimitsConfigChangeRecallEntry.md
-docs/DialerAuditRequest.md
 docs/DialerCallabletimesetConfigChangeCallableTime.md
 docs/DialerCallabletimesetConfigChangeCallableTimeSet.md
 docs/DialerCallabletimesetConfigChangeObject.md
@@ -1681,6 +1686,7 @@ docs/DynamicGroupQueryPreview.md
 docs/DynamicGroupRoutingSkillCondition.md
 docs/DynamicGroupSkillCondition.md
 docs/DynamicLineBalancingSettings.md
+docs/DynamicLineBalancingSettingsPatchRequest.md
 docs/Edge.md
 docs/EdgeAutoUpdateConfig.md
 docs/EdgeChangeTopicEdge.md
@@ -1767,6 +1773,8 @@ docs/EmergencyGroupDivisionViewEntityListing.md
 docs/EmergencyGroupListing.md
 docs/EmergencyLocation.md
 docs/EmpathyScore.md
+docs/EmployeeEngagementApi.json
+docs/EmployeeEngagementApi.md
 docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
@@ -1780,7 +1788,6 @@ docs/EntityChange.md
 docs/EntityListing.md
 docs/EntityReference.md
 docs/EntityTypeCriteria.md
-docs/Entry.md
 docs/ErrorBody.md
 docs/ErrorDetails.md
 docs/ErrorInfo.md
@@ -1936,12 +1943,12 @@ docs/FacebookPermissionEntityListing.md
 docs/FacebookScopedId.md
 docs/Facet.md
 docs/FacetEntry.md
-docs/FacetInfo.md
 docs/FacetKeyAttribute.md
 docs/FacetStatistics.md
 docs/FacetTerm.md
 docs/FailedObject.md
 docs/FailedRecordingEntityListing.md
+docs/Faq.md
 docs/FaxApi.json
 docs/FaxApi.md
 docs/FaxConfig.md
@@ -1956,6 +1963,7 @@ docs/FaxTopicLockData.md
 docs/FaxTopicUserData.md
 docs/FaxTopicWorkspaceData.md
 docs/FeatureState.md
+docs/Feedback.md
 docs/FeedbackAddRequest.md
 docs/FieldConfig.md
 docs/FieldConfigs.md
@@ -2252,6 +2260,7 @@ docs/GetAuthorizationSubjectsRolecounts-example.txt
 docs/GetBillingReportsBillableusage-example.txt
 docs/GetBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/GetCarrierservicesIntegrationsEmergencylocationsMe-example.txt
+docs/GetCelebrationListing.md
 docs/GetChatsMessage-example.txt
 docs/GetChatsRoom-example.txt
 docs/GetChatsRoomMessage-example.txt
@@ -2304,6 +2313,8 @@ docs/GetConversationRecordingmetadata-example.txt
 docs/GetConversationRecordingmetadataRecordingId-example.txt
 docs/GetConversationRecordings-example.txt
 docs/GetConversationSecureattributes-example.txt
+docs/GetConversationSuggestion-example.txt
+docs/GetConversationSuggestions-example.txt
 docs/GetConversations-example.txt
 docs/GetConversationsCall-example.txt
 docs/GetConversationsCallParticipantCommunicationWrapup-example.txt
@@ -2386,6 +2397,8 @@ docs/GetDocumentationSearch-example.txt
 docs/GetDownload-example.txt
 docs/GetEmailsSettings-example.txt
 docs/GetEmailsSettings-example.txt
+docs/GetEmployeeengagementCelebrations-example.txt
+docs/GetEmployeeengagementRecognition-example.txt
 docs/GetEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/GetEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/GetExternalcontactsContact-example.txt
@@ -3170,6 +3183,8 @@ docs/GetUserrecordingMedia-example.txt
 docs/GetUserrecordings-example.txt
 docs/GetUserrecordingsSummary-example.txt
 docs/GetUsers-example.txt
+docs/GetUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/GetUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/GetUsersDevelopmentActivities-example.txt
 docs/GetUsersDevelopmentActivitiesMe-example.txt
 docs/GetUsersDevelopmentActivity-example.txt
@@ -3989,6 +4004,7 @@ docs/MessengerSettings.md
 docs/MessengerStyles.md
 docs/MetaData.md
 docs/Metabase.md
+docs/MetadataAttribute.md
 docs/MetadataDocumentation.md
 docs/MetadataItem.md
 docs/MetadataPresentation.md
@@ -4320,6 +4336,7 @@ docs/PatchCriteria.md
 docs/PatchCtaButtonStyleProperties.md
 docs/PatchEmailsSettings-example.txt
 docs/PatchEmailsSettings-example.txt
+docs/PatchEmployeeengagementCelebration-example.txt
 docs/PatchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/PatchEntityTypeCriteria.md
 docs/PatchExternalSegment.md
@@ -4363,6 +4380,7 @@ docs/PatchMessagingSetting-example.txt
 docs/PatchMessagingSupportedcontentSupportedContentId-example.txt
 docs/PatchOrganizationsAuthenticationSettings-example.txt
 docs/PatchOrganizationsFeature-example.txt
+docs/PatchOutboundCampaign-example.txt
 docs/PatchOutboundDnclistCustomexclusioncolumns-example.txt
 docs/PatchOutboundDnclistEmailaddresses-example.txt
 docs/PatchOutboundDnclistPhonenumbers-example.txt
@@ -4420,6 +4438,8 @@ docs/PatchUserRoutinglanguagesBulk-example.txt
 docs/PatchUserRoutinglanguagesBulk-example.txt
 docs/PatchUserRoutingskillsBulk-example.txt
 docs/PatchUserRoutingskillsBulk-example.txt
+docs/PatchUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/PatchUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/PatchUsersBulk-example.txt
 docs/PatchVoicemailGroupPolicy-example.txt
 docs/PatchVoicemailMePolicy-example.txt
@@ -4647,6 +4667,8 @@ docs/PostConversationParticipantReplaceExternal-example.txt
 docs/PostConversationParticipantReplaceQueue-example.txt
 docs/PostConversationParticipantSecureivrsessions-example.txt
 docs/PostConversationRecordingAnnotations-example.txt
+docs/PostConversationSuggestionEngagement-example.txt
+docs/PostConversationSuggestionsFeedback-example.txt
 docs/PostConversationSummaryFeedback-example.txt
 docs/PostConversationsCall-example.txt
 docs/PostConversationsCallParticipantBarge-example.txt
@@ -4715,6 +4737,7 @@ docs/PostDiagnosticsLogcaptureBrowserUser-example.txt
 docs/PostDocumentationAllSearch-example.txt
 docs/PostDocumentationGknSearch-example.txt
 docs/PostDocumentationSearch-example.txt
+docs/PostEmployeeengagementRecognitions-example.txt
 docs/PostEmployeeperformanceExternalmetricsData-example.txt
 docs/PostEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/PostEventsConversations-example.txt
@@ -4901,7 +4924,6 @@ docs/PostOrgauthorizationTrusteesAudits-example.txt
 docs/PostOrgauthorizationTrusteesDefault-example.txt
 docs/PostOrgauthorizationTrustorAudits-example.txt
 docs/PostOutboundAttemptlimits-example.txt
-docs/PostOutboundAudits-example.txt
 docs/PostOutboundCallabletimesets-example.txt
 docs/PostOutboundCallanalysisresponsesets-example.txt
 docs/PostOutboundCampaignAgentownedmappingpreview-example.txt
@@ -5438,6 +5460,8 @@ docs/PutUserStationAssociatedstationStationId-example.txt
 docs/PutUserStationDefaultstationStationId-example.txt
 docs/PutUserVerifier-example.txt
 docs/PutUserrecording-example.txt
+docs/PutUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/PutUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/PutUsersPresencesBulk-example.txt
 docs/PutVoicemailMessage-example.txt
 docs/PutVoicemailPolicy-example.txt
@@ -5751,6 +5775,8 @@ docs/RecipientAdditionalIdentifier.md
 docs/RecipientFlow.md
 docs/RecipientListing.md
 docs/RecipientRequest.md
+docs/Recognition.md
+docs/RecognitionBase.md
 docs/Record.md
 docs/Recording.md
 docs/RecordingAnnotationFlow.md
@@ -6010,7 +6036,6 @@ docs/SentimentFeedback.md
 docs/SentimentFeedbackEntityListing.md
 docs/SequenceSchedule.md
 docs/ServerDate.md
-docs/ServiceContext.md
 docs/ServiceGoalTemplate.md
 docs/ServiceGoalTemplateImpactOverride.md
 docs/ServiceGoalTemplateList.md
@@ -6096,6 +6121,7 @@ docs/SocialHandle.md
 docs/SortItem.md
 docs/Source.md
 docs/SourceConfiguration.md
+docs/SourceEntity.md
 docs/SourceEntityListing.md
 docs/SourcePlanningGroupRequest.md
 docs/SpeechTextAnalyticsApi.json
@@ -6149,6 +6175,16 @@ docs/SuggestApi.json
 docs/SuggestApi.md
 docs/SuggestSearchCriteria.md
 docs/SuggestSearchRequest.md
+docs/Suggestion.md
+docs/SuggestionCannedResponse.md
+docs/SuggestionContext.md
+docs/SuggestionEngagement.md
+docs/SuggestionFeedback.md
+docs/SuggestionKnowledgeAnswer.md
+docs/SuggestionKnowledgeArticle.md
+docs/SuggestionKnowledgeSearch.md
+docs/SuggestionListing.md
+docs/SuggestionScript.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
 docs/SupportCenterCustomMessage.md
@@ -7083,6 +7119,7 @@ src/PureCloudPlatform.Client.V2.Tests/Properties/AssemblyInfo.cs
 src/PureCloudPlatform.Client.V2.Tests/PureCloudPlatform.Client.V2.Tests.csproj
 src/PureCloudPlatform.Client.V2.Tests/SdkTests.cs
 src/PureCloudPlatform.Client.V2.Tests/packages.config
+src/PureCloudPlatform.Client.V2/Api/AgentUIApi.cs
 src/PureCloudPlatform.Client.V2/Api/AlertingApi.cs
 src/PureCloudPlatform.Client.V2/Api/AnalyticsApi.cs
 src/PureCloudPlatform.Client.V2/Api/ArchitectApi.cs
@@ -7097,6 +7134,7 @@ src/PureCloudPlatform.Client.V2/Api/ConversationsApi.cs
 src/PureCloudPlatform.Client.V2/Api/DataExtensionsApi.cs
 src/PureCloudPlatform.Client.V2/Api/DownloadsApi.cs
 src/PureCloudPlatform.Client.V2/Api/EmailsApi.cs
+src/PureCloudPlatform.Client.V2/Api/EmployeeEngagementApi.cs
 src/PureCloudPlatform.Client.V2/Api/EventsApi.cs
 src/PureCloudPlatform.Client.V2/Api/ExternalContactsApi.cs
 src/PureCloudPlatform.Client.V2/Api/FaxApi.cs
@@ -7379,6 +7417,7 @@ src/PureCloudPlatform.Client.V2/Model/ArchitectPromptResourceNotificationPromptR
 src/PureCloudPlatform.Client.V2/Model/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.cs
 src/PureCloudPlatform.Client.V2/Model/ArchiveRetention.cs
 src/PureCloudPlatform.Client.V2/Model/ArrayNode.cs
+src/PureCloudPlatform.Client.V2/Model/Article.cs
 src/PureCloudPlatform.Client.V2/Model/ArticleContent.cs
 src/PureCloudPlatform.Client.V2/Model/ArticleContentBody.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentForm.cs
@@ -7419,11 +7458,7 @@ src/PureCloudPlatform.Client.V2/Model/AtzmTimeSlot.cs
 src/PureCloudPlatform.Client.V2/Model/AtzmTimeSlotWithTimeZone.cs
 src/PureCloudPlatform.Client.V2/Model/AudioState.cs
 src/PureCloudPlatform.Client.V2/Model/AudioUpdatedEvent.cs
-src/PureCloudPlatform.Client.V2/Model/AuditEntity.cs
-src/PureCloudPlatform.Client.V2/Model/AuditFacet.cs
-src/PureCloudPlatform.Client.V2/Model/AuditFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AuditLogMessage.cs
-src/PureCloudPlatform.Client.V2/Model/AuditMessage.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryExecutionResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryExecutionStatusResponse.cs
@@ -7437,13 +7472,11 @@ src/PureCloudPlatform.Client.V2/Model/AuditRealtimeQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AuditRealtimeQueryResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AuditRealtimeRelatedRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AuditRealtimeRelatedResultsResponse.cs
-src/PureCloudPlatform.Client.V2/Model/AuditSearchResult.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicAuditLogMessage.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicDomainEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicMessageInfo.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicPropertyChange.cs
-src/PureCloudPlatform.Client.V2/Model/AuditUser.cs
 src/PureCloudPlatform.Client.V2/Model/AuthenticationSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AuthorizationSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzDivision.cs
@@ -7453,6 +7486,8 @@ src/PureCloudPlatform.Client.V2/Model/AuthzGrant.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzGrantPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzGrantRole.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzSubject.cs
+src/PureCloudPlatform.Client.V2/Model/AutoAnswerSetting.cs
+src/PureCloudPlatform.Client.V2/Model/AutoAnswerSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AutoStart.cs
 src/PureCloudPlatform.Client.V2/Model/AutoStatusTransitionDetail.cs
 src/PureCloudPlatform.Client.V2/Model/AutomaticTimeZoneMappingSettings.cs
@@ -7693,6 +7728,7 @@ src/PureCloudPlatform.Client.V2/Model/CampaignLinesUtilization.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesAllocation.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesDistribution.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesReservation.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignProgress.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRule.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRuleAction.cs
@@ -7720,10 +7756,11 @@ src/PureCloudPlatform.Client.V2/Model/CategoryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryResponseListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/Celebration.cs
+src/PureCloudPlatform.Client.V2/Model/CelebrationStateParam.cs
 src/PureCloudPlatform.Client.V2/Model/Certificate.cs
 src/PureCloudPlatform.Client.V2/Model/CertificateAuthorityEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CertificateDetails.cs
-src/PureCloudPlatform.Client.V2/Model/Change.cs
 src/PureCloudPlatform.Client.V2/Model/ChangeMyPasswordRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ChangePasswordRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Channel.cs
@@ -8199,6 +8236,7 @@ src/PureCloudPlatform.Client.V2/Model/CreatePerformanceProfile.cs
 src/PureCloudPlatform.Client.V2/Model/CreatePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreatePredictorRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateQueueRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateRecognition.cs
 src/PureCloudPlatform.Client.V2/Model/CreateResponseAssetRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateResponseAssetResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateRoomRequest.cs
@@ -8293,6 +8331,7 @@ src/PureCloudPlatform.Client.V2/Model/DateRangeWithOptionalEnd.cs
 src/PureCloudPlatform.Client.V2/Model/DefaultGreetingList.cs
 src/PureCloudPlatform.Client.V2/Model/DefaultObjective.cs
 src/PureCloudPlatform.Client.V2/Model/DeletableUserReference.cs
+src/PureCloudPlatform.Client.V2/Model/DeleteProgramResponse.cs
 src/PureCloudPlatform.Client.V2/Model/DeleteRetention.cs
 src/PureCloudPlatform.Client.V2/Model/Dependency.cs
 src/PureCloudPlatform.Client.V2/Model/DependencyObject.cs
@@ -8324,7 +8363,6 @@ src/PureCloudPlatform.Client.V2/Model/DialerAction.cs
 src/PureCloudPlatform.Client.V2/Model/DialerAttemptLimitsConfigChangeAttemptLimits.cs
 src/PureCloudPlatform.Client.V2/Model/DialerAttemptLimitsConfigChangeObject.cs
 src/PureCloudPlatform.Client.V2/Model/DialerAttemptLimitsConfigChangeRecallEntry.cs
-src/PureCloudPlatform.Client.V2/Model/DialerAuditRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCallabletimesetConfigChangeCallableTime.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCallabletimesetConfigChangeCallableTimeSet.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCallabletimesetConfigChangeObject.cs
@@ -8548,6 +8586,7 @@ src/PureCloudPlatform.Client.V2/Model/DynamicGroupQueryPreview.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicGroupRoutingSkillCondition.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicGroupSkillCondition.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicLineBalancingSettings.cs
+src/PureCloudPlatform.Client.V2/Model/DynamicLineBalancingSettingsPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Edge.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeAutoUpdateConfig.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeChangeTopicEdge.cs
@@ -8645,7 +8684,6 @@ src/PureCloudPlatform.Client.V2/Model/EntityChange.cs
 src/PureCloudPlatform.Client.V2/Model/EntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EntityReference.cs
 src/PureCloudPlatform.Client.V2/Model/EntityTypeCriteria.cs
-src/PureCloudPlatform.Client.V2/Model/Entry.cs
 src/PureCloudPlatform.Client.V2/Model/ErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/ErrorDetails.cs
 src/PureCloudPlatform.Client.V2/Model/ErrorInfo.cs
@@ -8797,12 +8835,12 @@ src/PureCloudPlatform.Client.V2/Model/FacebookPermissionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/Facet.cs
 src/PureCloudPlatform.Client.V2/Model/FacetEntry.cs
-src/PureCloudPlatform.Client.V2/Model/FacetInfo.cs
 src/PureCloudPlatform.Client.V2/Model/FacetKeyAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/FacetStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/FacetTerm.cs
 src/PureCloudPlatform.Client.V2/Model/FailedObject.cs
 src/PureCloudPlatform.Client.V2/Model/FailedRecordingEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/Faq.cs
 src/PureCloudPlatform.Client.V2/Model/FaxConfig.cs
 src/PureCloudPlatform.Client.V2/Model/FaxDocument.cs
 src/PureCloudPlatform.Client.V2/Model/FaxDocumentEntityListing.cs
@@ -8815,6 +8853,7 @@ src/PureCloudPlatform.Client.V2/Model/FaxTopicLockData.cs
 src/PureCloudPlatform.Client.V2/Model/FaxTopicUserData.cs
 src/PureCloudPlatform.Client.V2/Model/FaxTopicWorkspaceData.cs
 src/PureCloudPlatform.Client.V2/Model/FeatureState.cs
+src/PureCloudPlatform.Client.V2/Model/Feedback.cs
 src/PureCloudPlatform.Client.V2/Model/FeedbackAddRequest.cs
 src/PureCloudPlatform.Client.V2/Model/FieldConfig.cs
 src/PureCloudPlatform.Client.V2/Model/FieldConfigs.cs
@@ -8959,6 +8998,7 @@ src/PureCloudPlatform.Client.V2/Model/Geolocation.cs
 src/PureCloudPlatform.Client.V2/Model/GeolocationEventGeolocation.cs
 src/PureCloudPlatform.Client.V2/Model/GeolocationSettings.cs
 src/PureCloudPlatform.Client.V2/Model/GetAlertQuery.cs
+src/PureCloudPlatform.Client.V2/Model/GetCelebrationListing.cs
 src/PureCloudPlatform.Client.V2/Model/GetFlowExecutionDataJobResult.cs
 src/PureCloudPlatform.Client.V2/Model/GetMetricDefinitionsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetMetricResponse.cs
@@ -9632,6 +9672,7 @@ src/PureCloudPlatform.Client.V2/Model/MessengerSettings.cs
 src/PureCloudPlatform.Client.V2/Model/MessengerStyles.cs
 src/PureCloudPlatform.Client.V2/Model/MetaData.cs
 src/PureCloudPlatform.Client.V2/Model/Metabase.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/MetadataDocumentation.cs
 src/PureCloudPlatform.Client.V2/Model/MetadataItem.cs
 src/PureCloudPlatform.Client.V2/Model/MetadataPresentation.cs
@@ -10313,6 +10354,8 @@ src/PureCloudPlatform.Client.V2/Model/RecipientAdditionalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/RecipientFlow.cs
 src/PureCloudPlatform.Client.V2/Model/RecipientListing.cs
 src/PureCloudPlatform.Client.V2/Model/RecipientRequest.cs
+src/PureCloudPlatform.Client.V2/Model/Recognition.cs
+src/PureCloudPlatform.Client.V2/Model/RecognitionBase.cs
 src/PureCloudPlatform.Client.V2/Model/Record.cs
 src/PureCloudPlatform.Client.V2/Model/Recording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationFlow.cs
@@ -10558,7 +10601,6 @@ src/PureCloudPlatform.Client.V2/Model/SentimentFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/SentimentFeedbackEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SequenceSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/ServerDate.cs
-src/PureCloudPlatform.Client.V2/Model/ServiceContext.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateImpactOverride.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateList.cs
@@ -10642,6 +10684,7 @@ src/PureCloudPlatform.Client.V2/Model/SocialHandle.cs
 src/PureCloudPlatform.Client.V2/Model/SortItem.cs
 src/PureCloudPlatform.Client.V2/Model/Source.cs
 src/PureCloudPlatform.Client.V2/Model/SourceConfiguration.cs
+src/PureCloudPlatform.Client.V2/Model/SourceEntity.cs
 src/PureCloudPlatform.Client.V2/Model/SourceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SourcePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsRequest.cs
@@ -10689,6 +10732,16 @@ src/PureCloudPlatform.Client.V2/Model/Subscription.cs
 src/PureCloudPlatform.Client.V2/Model/SubscriptionOverviewUsage.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestSearchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/Suggestion.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionCannedResponse.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionContext.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionEngagement.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionFeedback.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeAnswer.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeArticle.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeSearch.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionListing.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionScript.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCategory.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCompactCategoryModuleTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterCustomMessage.cs

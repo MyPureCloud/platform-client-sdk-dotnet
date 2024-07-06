@@ -85,7 +85,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text associated with attachment such as an image caption..</param>
         /// <param name="Sha256">Secure hash of the attachment content..</param>
         /// <param name="Filename">Suggested file name for attachment..</param>
-        public ContentAttachment(string Id = null, MediaTypeEnum? MediaType = null, string Url = null, string Mime = null, string Text = null, string Sha256 = null, string Filename = null)
+        /// <param name="ContentSizeBytes">Size in bytes of the attachment content..</param>
+        public ContentAttachment(string Id = null, MediaTypeEnum? MediaType = null, string Url = null, string Mime = null, string Text = null, string Sha256 = null, string Filename = null, long? ContentSizeBytes = null)
         {
             this.Id = Id;
             this.MediaType = MediaType;
@@ -94,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Text = Text;
             this.Sha256 = Sha256;
             this.Filename = Filename;
+            this.ContentSizeBytes = ContentSizeBytes;
             
         }
         
@@ -154,6 +156,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Filename { get; set; }
 
 
+
+        /// <summary>
+        /// Size in bytes of the attachment content.
+        /// </summary>
+        /// <value>Size in bytes of the attachment content.</value>
+        [DataMember(Name="contentSizeBytes", EmitDefaultValue=false)]
+        public long? ContentSizeBytes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Sha256: ").Append(Sha256).Append("\n");
             sb.Append("  Filename: ").Append(Filename).Append("\n");
+            sb.Append("  ContentSizeBytes: ").Append(ContentSizeBytes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -244,6 +256,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
+                ) &&
+                (
+                    this.ContentSizeBytes == other.ContentSizeBytes ||
+                    this.ContentSizeBytes != null &&
+                    this.ContentSizeBytes.Equals(other.ContentSizeBytes)
                 );
         }
 
@@ -278,6 +295,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Filename != null)
                     hash = hash * 59 + this.Filename.GetHashCode();
+
+                if (this.ContentSizeBytes != null)
+                    hash = hash * 59 + this.ContentSizeBytes.GetHashCode();
 
                 return hash;
             }

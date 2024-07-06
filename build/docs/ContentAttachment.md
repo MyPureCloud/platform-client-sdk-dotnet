@@ -14,6 +14,7 @@ title: ContentAttachment
 | **Text** | **string** | Text associated with attachment such as an image caption. | [optional] |
 | **Sha256** | **string** | Secure hash of the attachment content. | [optional] |
 | **Filename** | **string** | Suggested file name for attachment. | [optional] |
+| **ContentSizeBytes** | **long?** | Size in bytes of the attachment content. | [optional] |
 {: class="table table-striped"}
 
 

@@ -73,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns></returns>
+        /// <returns>DeleteProgramResponse</returns>
         
-        void DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null);
+        DeleteProgramResponse DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a Speech & Text Analytics program by id
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of DeleteProgramResponse</returns>
         
-        ApiResponse<Object> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null);
+        ApiResponse<DeleteProgramResponse> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete All Speech & Text Analytics SentimentFeedback
@@ -1301,9 +1301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of DeleteProgramResponse</returns>
         
-        System.Threading.Tasks.Task DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null);
+        System.Threading.Tasks.Task<DeleteProgramResponse> DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a Speech & Text Analytics program by id
@@ -1314,9 +1314,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (DeleteProgramResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null);
+        System.Threading.Tasks.Task<ApiResponse<DeleteProgramResponse>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete All Speech & Text Analytics SentimentFeedback
@@ -2985,11 +2985,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns></returns>
+        /// <returns>DeleteProgramResponse</returns>
         
-        public void DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null)
+        public DeleteProgramResponse DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null)
         {
-             DeleteSpeechandtextanalyticsProgramWithHttpInfo(programId, forceDelete);
+             ApiResponse<DeleteProgramResponse> localVarResponse = DeleteSpeechandtextanalyticsProgramWithHttpInfo(programId, forceDelete);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -2999,9 +3000,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
+        /// <returns>ApiResponse of DeleteProgramResponse</returns>
         
-        public ApiResponse<Object> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null)
+        public ApiResponse< DeleteProgramResponse > DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null)
         { 
             // verify the required parameter 'programId' is set
             if (programId == null)
@@ -3076,9 +3077,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSpeechandtextanalyticsProgram: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DeleteProgramResponse>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (DeleteProgramResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteProgramResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -3091,11 +3092,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns>Task of void</returns>
+        /// <returns>Task of DeleteProgramResponse</returns>
         
-        public async System.Threading.Tasks.Task DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null)
+        public async System.Threading.Tasks.Task<DeleteProgramResponse> DeleteSpeechandtextanalyticsProgramAsync (string programId, bool? forceDelete = null)
         {
-             await DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo(programId, forceDelete);
+             ApiResponse<DeleteProgramResponse> localVarResponse = await DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo(programId, forceDelete);
+             return localVarResponse.Data;
 
         }
 
@@ -3106,9 +3108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="forceDelete">Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse</returns>
+        /// <returns>Task of ApiResponse (DeleteProgramResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteProgramResponse>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null)
         { 
             // verify the required parameter 'programId' is set
             if (programId == null)
@@ -3184,9 +3186,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSpeechandtextanalyticsProgram: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DeleteProgramResponse>(localVarStatusCode,
                 localVarHeaders,
-                null,
+                (DeleteProgramResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteProgramResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

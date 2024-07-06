@@ -74,7 +74,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **botType** | [**List<string>**](string.html)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow |
+| **botType** | [**List<string>**](string.html)| Bot types | [optional] <br />**Values**: GenesysBotConnector, GenesysDialogEngine, AmazonLex, GoogleDialogFlowES, GoogleDialogFlowCX, NuanceDlg, GenesysBotFlow, GenesysDigitalBotFlow, GenesysVoiceSurveyFlow |
 | **botName** | **string**| Bot name | [optional]  |
 | **botId** | [**List<string>**](string.html)| Bot IDs | [optional]  |
 | **pageSize** | **int?**| The maximum results to return | [optional] [default to 25] |

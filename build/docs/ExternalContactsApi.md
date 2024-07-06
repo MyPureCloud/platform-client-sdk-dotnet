@@ -564,7 +564,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var contactId = contactId_example;  // string | ExternalContact ID
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional) 
 
             try
             { 
@@ -587,7 +587,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional] <br />**Values**: externalOrganization, externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
 {: class="table table-striped"}
 
 ### Return type
@@ -3728,7 +3728,7 @@ namespace Example
 
 <a name="postexternalcontactsidentifierlookup"></a>
 
-## [**ExternalContact**](ExternalContact.html) PostExternalcontactsIdentifierlookup (ContactIdentifier identifier)
+## [**ExternalContact**](ExternalContact.html) PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null)
 
 
 
@@ -3764,11 +3764,12 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var identifier = new ContactIdentifier(); // ContactIdentifier | 
+            var expand = new List<string>(); // List<string> | which field, if any, to expand (optional) 
 
             try
             { 
                 // Fetch a contact using an identifier type and value.
-                ExternalContact result = apiInstance.PostExternalcontactsIdentifierlookup(identifier);
+                ExternalContact result = apiInstance.PostExternalcontactsIdentifierlookup(identifier, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3786,6 +3787,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **identifier** | [**ContactIdentifier**](ContactIdentifier.html)|  |  |
+| **expand** | [**List<string>**](string.html)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers |
 {: class="table table-striped"}
 
 ### Return type
