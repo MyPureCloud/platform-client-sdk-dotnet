@@ -48,7 +48,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum RightPartyContact for "RIGHT_PARTY_CONTACT"
             /// </summary>
             [EnumMember(Value = "RIGHT_PARTY_CONTACT")]
-            RightPartyContact
+            RightPartyContact,
+            
+            /// <summary>
+            /// Enum BusinessSuccess for "BUSINESS_SUCCESS"
+            /// </summary>
+            [EnumMember(Value = "BUSINESS_SUCCESS")]
+            BusinessSuccess,
+            
+            /// <summary>
+            /// Enum BusinessFailure for "BUSINESS_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "BUSINESS_FAILURE")]
+            BusinessFailure,
+            
+            /// <summary>
+            /// Enum BusinessNeutral for "BUSINESS_NEUTRAL"
+            /// </summary>
+            [EnumMember(Value = "BUSINESS_NEUTRAL")]
+            BusinessNeutral
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="WrapUpCodeMapping" /> class.

@@ -427,6 +427,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Scoredagentid,
             
             /// <summary>
+            /// Enum Screenrecording for "screenRecording"
+            /// </summary>
+            [EnumMember(Value = "screenRecording")]
+            Screenrecording,
+            
+            /// <summary>
             /// Enum Scriptid for "scriptId"
             /// </summary>
             [EnumMember(Value = "scriptId")]

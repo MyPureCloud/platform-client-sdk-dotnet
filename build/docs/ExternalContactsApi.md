@@ -901,7 +901,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var contactId = contactId_example;  // string | ExternalContact ID
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional) 
 
             try
             { 
@@ -924,7 +924,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional] <br />**Values**: externalOrganization, externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
 {: class="table table-striped"}
 
 ### Return type
@@ -996,7 +996,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1387,7 +1387,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
 {: class="table table-striped"}
 
 ### Return type

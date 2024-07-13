@@ -582,7 +582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Reset messaging campaign progress and recycle the messaging campaign
         /// </summary>
         /// <remarks>
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -594,7 +594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Reset messaging campaign progress and recycle the messaging campaign
         /// </summary>
         /// <remarks>
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -4830,7 +4830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Reset messaging campaign progress and recycle the messaging campaign
         /// </summary>
         /// <remarks>
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -4842,7 +4842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Reset messaging campaign progress and recycle the messaging campaign
         /// </summary>
         /// <remarks>
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -13457,7 +13457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -13470,7 +13470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -13560,7 +13560,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>
@@ -13574,7 +13574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Reset messaging campaign progress and recycle the messaging campaign 
-        /// 
+        /// Documented permissions are applicable based on campaign type.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messagingCampaignId">The Messaging Campaign ID</param>

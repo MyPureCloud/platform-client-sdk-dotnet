@@ -130,6 +130,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Omediacount,
             
             /// <summary>
+            /// Enum Omessagecount for "oMessageCount"
+            /// </summary>
+            [EnumMember(Value = "oMessageCount")]
+            Omessagecount,
+            
+            /// <summary>
+            /// Enum Omessagesegmentcount for "oMessageSegmentCount"
+            /// </summary>
+            [EnumMember(Value = "oMessageSegmentCount")]
+            Omessagesegmentcount,
+            
+            /// <summary>
             /// Enum Omessageturn for "oMessageTurn"
             /// </summary>
             [EnumMember(Value = "oMessageTurn")]

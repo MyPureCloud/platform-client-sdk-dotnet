@@ -33,6 +33,7 @@ title: Email
 | **AfterCallWork** | [**AfterCallWork**](AfterCallWork.html) | After-call work for the communication. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **QueueMediaSettings** | [**ConversationQueueMediaSettings**](ConversationQueueMediaSettings.html) | Represents the queue settings for this media type. | [optional] |
+| **ParkTime** | **DateTime?** | Represents the time when an email was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 {: class="table table-striped"}
 
 

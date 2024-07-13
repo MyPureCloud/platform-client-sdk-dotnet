@@ -66,6 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **Put** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
 | [**PutQualityForm**](QualityApi.html#putqualityform) | **Put** /api/v2/quality/forms/{formId} | Update an evaluation form. |
 | [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **Put** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
+| [**PutQualityFormsEvaluationPredictivescoringSettings**](QualityApi.html#putqualityformsevaluationpredictivescoringsettings) | **Put** /api/v2/quality/forms/evaluations/{formId}/predictivescoring/settings | Update the Predictive Scoring settings of an evaluation form. |
 | [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **Put** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
 | [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **Put** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table table-striped"}
@@ -4021,6 +4022,73 @@ namespace Example
 ### Return type
 
 [**EvaluationFormResponse**](EvaluationFormResponse.html)
+
+<a name="putqualityformsevaluationpredictivescoringsettings"></a>
+
+## [**PredictiveScoringSettings**](PredictiveScoringSettings.html) PutQualityFormsEvaluationPredictivescoringSettings (string formId, PredictiveScoringSettings body)
+
+
+
+Update the Predictive Scoring settings of an evaluation form.
+
+PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:predictiveScoringEdit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutQualityFormsEvaluationPredictivescoringSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var formId = formId_example;  // string | Form ID
+            var body = new PredictiveScoringSettings(); // PredictiveScoringSettings | Predictive Scoring Settings
+
+            try
+            { 
+                // Update the Predictive Scoring settings of an evaluation form.
+                PredictiveScoringSettings result = apiInstance.PutQualityFormsEvaluationPredictivescoringSettings(formId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PutQualityFormsEvaluationPredictivescoringSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **body** | [**PredictiveScoringSettings**](PredictiveScoringSettings.html)| Predictive Scoring Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PredictiveScoringSettings**](PredictiveScoringSettings.html)
 
 <a name="putqualityformssurvey"></a>
 

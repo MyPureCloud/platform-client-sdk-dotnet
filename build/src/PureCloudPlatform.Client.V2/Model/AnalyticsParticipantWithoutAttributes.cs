@@ -189,10 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ParticipantId">Unique identifier for the participant.</param>
         /// <param name="ParticipantName">A human readable name identifying the participant.</param>
         /// <param name="Purpose">The participant's purpose.</param>
+        /// <param name="ScreenRecording">Flag determining if a screen recording was started or not.</param>
         /// <param name="TeamId">The team ID the user is a member of.</param>
         /// <param name="UserId">Unique identifier for the user.</param>
         /// <param name="Sessions">List of sessions associated to this participant.</param>
-        public AnalyticsParticipantWithoutAttributes(string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string ParticipantId = null, string ParticipantName = null, PurposeEnum? Purpose = null, string TeamId = null, string UserId = null, List<AnalyticsSession> Sessions = null)
+        public AnalyticsParticipantWithoutAttributes(string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, string ParticipantId = null, string ParticipantName = null, PurposeEnum? Purpose = null, bool? ScreenRecording = null, string TeamId = null, string UserId = null, List<AnalyticsSession> Sessions = null)
         {
             this.ExternalContactId = ExternalContactId;
             this.ExternalOrganizationId = ExternalOrganizationId;
@@ -200,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ParticipantId = ParticipantId;
             this.ParticipantName = ParticipantName;
             this.Purpose = Purpose;
+            this.ScreenRecording = ScreenRecording;
             this.TeamId = TeamId;
             this.UserId = UserId;
             this.Sessions = Sessions;
@@ -249,6 +251,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag determining if a screen recording was started or not
+        /// </summary>
+        /// <value>Flag determining if a screen recording was started or not</value>
+        [DataMember(Name="screenRecording", EmitDefaultValue=false)]
+        public bool? ScreenRecording { get; set; }
+
+
+
+        /// <summary>
         /// The team ID the user is a member of
         /// </summary>
         /// <value>The team ID the user is a member of</value>
@@ -289,6 +300,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
             sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            sb.Append("  ScreenRecording: ").Append(ScreenRecording).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
@@ -363,6 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Purpose.Equals(other.Purpose)
                 ) &&
                 (
+                    this.ScreenRecording == other.ScreenRecording ||
+                    this.ScreenRecording != null &&
+                    this.ScreenRecording.Equals(other.ScreenRecording)
+                ) &&
+                (
                     this.TeamId == other.TeamId ||
                     this.TeamId != null &&
                     this.TeamId.Equals(other.TeamId)
@@ -407,6 +424,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
+
+                if (this.ScreenRecording != null)
+                    hash = hash * 59 + this.ScreenRecording.GetHashCode();
 
                 if (this.TeamId != null)
                     hash = hash * 59 + this.TeamId.GetHashCode();

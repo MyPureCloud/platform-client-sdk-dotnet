@@ -95,18 +95,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The success status of this SCO</value>
         [DataMember(Name="successStatus", EmitDefaultValue=false)]
-        public SuccessStatusEnum? SuccessStatus { get; private set; }
+        public SuccessStatusEnum? SuccessStatus { get; set; }
         /// <summary>
         /// The completion status of this SCO
         /// </summary>
         /// <value>The completion status of this SCO</value>
         [DataMember(Name="completionStatus", EmitDefaultValue=false)]
-        public CompletionStatusEnum? CompletionStatus { get; private set; }
+        public CompletionStatusEnum? CompletionStatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModulePreviewUpdateScoStructure" /> class.
         /// </summary>
-        public LearningModulePreviewUpdateScoStructure()
+        /// <param name="Id">The id of this SCO in the course manifest.</param>
+        /// <param name="Name">The name of this SCO in the course manifest.</param>
+        /// <param name="SuccessStatus">The success status of this SCO.</param>
+        /// <param name="CompletionStatus">The completion status of this SCO.</param>
+        /// <param name="PercentageScore">Percentage Score.</param>
+        /// <param name="Children">Child items belonging to this SCO in the course manifest.</param>
+        public LearningModulePreviewUpdateScoStructure(string Id = null, string Name = null, SuccessStatusEnum? SuccessStatus = null, CompletionStatusEnum? CompletionStatus = null, float? PercentageScore = null, List<LearningModulePreviewUpdateScoStructure> Children = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.SuccessStatus = SuccessStatus;
+            this.CompletionStatus = CompletionStatus;
+            this.PercentageScore = PercentageScore;
+            this.Children = Children;
             
         }
         
@@ -117,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The id of this SCO in the course manifest</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 
@@ -126,7 +138,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The name of this SCO in the course manifest</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
 
 
@@ -139,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Percentage Score</value>
         [DataMember(Name="percentageScore", EmitDefaultValue=false)]
-        public float? PercentageScore { get; private set; }
+        public float? PercentageScore { get; set; }
 
 
 
@@ -148,7 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Child items belonging to this SCO in the course manifest</value>
         [DataMember(Name="children", EmitDefaultValue=false)]
-        public List<LearningModulePreviewUpdateScoStructure> Children { get; private set; }
+        public List<LearningModulePreviewUpdateScoStructure> Children { get; set; }
 
 
         /// <summary>

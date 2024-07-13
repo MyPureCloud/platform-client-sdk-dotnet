@@ -152,9 +152,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
         /// <param name="KnowledgeBaseEvents">The knowledge data captured during this reporting turn..</param>
         /// <param name="DateCreated">Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateCompleted">Timestamp indicating when the original turn was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AskActionResult">Result of the bot flow 'ask' action..</param>
         /// <param name="SessionEndDetails">The details related to end of bot flow session..</param>
-        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, DateTime? DateCreated = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
+        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, DateTime? DateCreated = null, DateTime? DateCompleted = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
         {
             this.UserInput = UserInput;
             this.BotPrompts = BotPrompts;
@@ -164,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Knowledge = Knowledge;
             this.KnowledgeBaseEvents = KnowledgeBaseEvents;
             this.DateCreated = DateCreated;
+            this.DateCompleted = DateCompleted;
             this.AskActionResult = AskActionResult;
             this.SessionEndDetails = SessionEndDetails;
             
@@ -243,6 +245,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Timestamp indicating when the original turn was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating when the original turn was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
+        public DateTime? DateCompleted { get; set; }
+
+
+
 
 
         /// <summary>
@@ -279,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Knowledge: ").Append(Knowledge).Append("\n");
             sb.Append("  KnowledgeBaseEvents: ").Append(KnowledgeBaseEvents).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  AskActionResult: ").Append(AskActionResult).Append("\n");
             sb.Append("  SessionEndDetails: ").Append(SessionEndDetails).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
@@ -363,6 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.DateCompleted == other.DateCompleted ||
+                    this.DateCompleted != null &&
+                    this.DateCompleted.Equals(other.DateCompleted)
+                ) &&
+                (
                     this.AskActionResult == other.AskActionResult ||
                     this.AskActionResult != null &&
                     this.AskActionResult.Equals(other.AskActionResult)
@@ -413,6 +430,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.DateCompleted != null)
+                    hash = hash * 59 + this.DateCompleted.GetHashCode();
 
                 if (this.AskActionResult != null)
                     hash = hash * 59 + this.AskActionResult.GetHashCode();

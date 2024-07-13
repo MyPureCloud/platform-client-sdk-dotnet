@@ -17,7 +17,7 @@ title: WorktypeUpdate
 | **AssignmentEnabled** | **bool?** | When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false. | [optional] |
 | **SchemaId** | **string** | The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 | **ServiceLevelTarget** | **int?** | The target service level for Workitems created from the Worktype. The default value is 100. | [optional] |
-| **Description** | **string** | The description of the Worktype. Maximum length of 4096 characters. | [optional] |
+| **Description** | **string** | The description of the Worktype. Maximum length of 512 characters. | [optional] |
 | **DefaultStatusId** | **string** | The ID of the default status for Workitems created from the Worktype. | [optional] |
 | **SchemaVersion** | **int?** | The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set. | [optional] |
 | **DefaultLanguageId** | **string** | The ID of the default language for Workitems created from the Worktype. Must be a valid UUID. | [optional] |

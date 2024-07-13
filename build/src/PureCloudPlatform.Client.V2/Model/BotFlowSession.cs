@@ -191,7 +191,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BotResult">The reason for session termination..</param>
         /// <param name="BotResultCategory">The category of result for the session..</param>
         /// <param name="DateCreated">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public BotFlowSession(string Id = null, Entity Flow = null, BotChannel Channel = null, string Language = null, string EndLanguage = null, BotResultEnum? BotResult = null, BotResultCategoryEnum? BotResultCategory = null, DateTime? DateCreated = null)
+        /// <param name="DateCompleted">Timestamp indicating when the session was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public BotFlowSession(string Id = null, Entity Flow = null, BotChannel Channel = null, string Language = null, string EndLanguage = null, BotResultEnum? BotResult = null, BotResultCategoryEnum? BotResultCategory = null, DateTime? DateCreated = null, DateTime? DateCompleted = null)
         {
             this.Id = Id;
             this.Flow = Flow;
@@ -201,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.BotResult = BotResult;
             this.BotResultCategory = BotResultCategory;
             this.DateCreated = DateCreated;
+            this.DateCompleted = DateCompleted;
             
         }
         
@@ -265,6 +267,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Timestamp indicating when the session was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp indicating when the session was completed. Note: The 'interval' query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCompleted", EmitDefaultValue=false)]
+        public DateTime? DateCompleted { get; set; }
+
+
+
+        /// <summary>
         /// The conversation details, across potentially multiple Bot Flow sessions.
         /// </summary>
         /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
@@ -289,6 +300,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BotResult: ").Append(BotResult).Append("\n");
             sb.Append("  BotResultCategory: ").Append(BotResultCategory).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -371,6 +383,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.DateCompleted == other.DateCompleted ||
+                    this.DateCompleted != null &&
+                    this.DateCompleted.Equals(other.DateCompleted)
+                ) &&
+                (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
@@ -411,6 +428,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.DateCompleted != null)
+                    hash = hash * 59 + this.DateCompleted.GetHashCode();
 
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();

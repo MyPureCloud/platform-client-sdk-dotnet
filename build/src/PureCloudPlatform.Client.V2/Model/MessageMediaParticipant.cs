@@ -412,6 +412,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ParkTime">The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ToAddress">Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended..</param>
         /// <param name="FromAddress">Address for the participant on the sending side of the message conversation. If the address is a phone number, E.164 format is recommended..</param>
         /// <param name="Messages">Message instance details on the communication..</param>
@@ -421,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Authenticated">If true, the participant member is authenticated..</param>
         /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a message monitor..</param>
         /// <param name="MonitoredParticipant">The participant being monitored when performing a message monitor..</param>
-        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, bool? Authenticated = null, string MonitoredParticipantId = null, AddressableEntityRef MonitoredParticipant = null)
+        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, bool? Authenticated = null, string MonitoredParticipantId = null, AddressableEntityRef MonitoredParticipant = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -457,6 +458,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationRoutingData = ConversationRoutingData;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.ParkTime = ParkTime;
             this.ToAddress = ToAddress;
             this.FromAddress = FromAddress;
             this.Messages = Messages;
@@ -750,6 +752,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="parkTime", EmitDefaultValue=false)]
+        public DateTime? ParkTime { get; set; }
+
+
+
+        /// <summary>
         /// Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended.
         /// </summary>
         /// <value>Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended.</value>
@@ -865,6 +876,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
@@ -1085,6 +1097,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
+                    this.ParkTime == other.ParkTime ||
+                    this.ParkTime != null &&
+                    this.ParkTime.Equals(other.ParkTime)
+                ) &&
+                (
                     this.ToAddress == other.ToAddress ||
                     this.ToAddress != null &&
                     this.ToAddress.Equals(other.ToAddress)
@@ -1243,6 +1260,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+
+                if (this.ParkTime != null)
+                    hash = hash * 59 + this.ParkTime.GetHashCode();
 
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();

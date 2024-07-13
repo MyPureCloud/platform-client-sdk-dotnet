@@ -57,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **Post** /api/v2/journey/actiontemplates | Create a single action template. |
 | [**PostJourneyDeploymentActionevent**](JourneyApi.html#postjourneydeploymentactionevent) | **Post** /api/v2/journey/deployments/{deploymentId}/actionevent | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**PostJourneyDeploymentAppevents**](JourneyApi.html#postjourneydeploymentappevents) | **Post** /api/v2/journey/deployments/{deploymentId}/appevents | Send a journey app event, used for tracking customer activity on an application. |
+| [**PostJourneyDeploymentWebevents**](JourneyApi.html#postjourneydeploymentwebevents) | **Post** /api/v2/journey/deployments/{deploymentId}/webevents | Send a journey web event, used for tracking customer activity on a website. |
 | [**PostJourneyFlowsPathsQuery**](JourneyApi.html#postjourneyflowspathsquery) | **Post** /api/v2/journey/flows/paths/query | Query for flow paths. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **Post** /api/v2/journey/outcomes | Create an outcome. |
 | [**PostJourneyOutcomesAttributionsJobs**](JourneyApi.html#postjourneyoutcomesattributionsjobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
@@ -1844,8 +1845,6 @@ namespace Example
 
 Retrieve all events for a given session.
 
-GetJourneySessionEvents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * journey:event:view
@@ -3327,6 +3326,64 @@ namespace Example
 ### Return type
 
 [**AppEventResponse**](AppEventResponse.html)
+
+<a name="postjourneydeploymentwebevents"></a>
+
+## [**WebEventResponse**](WebEventResponse.html) PostJourneyDeploymentWebevents (string deploymentId, WebEventRequest body = null)
+
+
+
+Send a journey web event, used for tracking customer activity on a website.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyDeploymentWebeventsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new JourneyApi();
+            var deploymentId = deploymentId_example;  // string | The ID of the deployment sending the web event.
+            var body = new WebEventRequest(); // WebEventRequest |  (optional) 
+
+            try
+            { 
+                // Send a journey web event, used for tracking customer activity on a website.
+                WebEventResponse result = apiInstance.PostJourneyDeploymentWebevents(deploymentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyDeploymentWebevents: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The ID of the deployment sending the web event. |  |
+| **body** | [**WebEventRequest**](WebEventRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebEventResponse**](WebEventResponse.html)
 
 <a name="postjourneyflowspathsquery"></a>
 

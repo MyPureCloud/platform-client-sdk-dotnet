@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileUploadSettings" /> class.
         /// </summary>
-        /// <param name="EnableAttachments">whether or not attachments is enabled.</param>
+        /// <param name="EnableAttachments">whether or not attachments are enabled.</param>
         /// <param name="Modes">The list of supported file upload modes.</param>
         public FileUploadSettings(bool? EnableAttachments = null, List<FileUploadMode> Modes = null)
         {
@@ -33,9 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// whether or not attachments is enabled
+        /// whether or not attachments are enabled
         /// </summary>
-        /// <value>whether or not attachments is enabled</value>
+        /// <value>whether or not attachments are enabled</value>
         [DataMember(Name="enableAttachments", EmitDefaultValue=false)]
         public bool? EnableAttachments { get; set; }
 

@@ -28,13 +28,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ActivityCodeReference" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object. (required).</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="SecondaryPresences">The secondary presences of this activity code..</param>
-        public ActivityCodeReference(string Id = null, string Name = null, List<SecondaryPresence> SecondaryPresences = null)
+        public ActivityCodeReference(string Id = null)
         {
             this.Id = Id;
-            this.Name = Name;
-            this.SecondaryPresences = SecondaryPresences;
             
         }
         
@@ -46,23 +42,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-
-
-        /// <summary>
-        /// The secondary presences of this activity code.
-        /// </summary>
-        /// <value>The secondary presences of this activity code.</value>
-        [DataMember(Name="secondaryPresences", EmitDefaultValue=false)]
-        public List<SecondaryPresence> SecondaryPresences { get; set; }
 
 
 
@@ -84,8 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ActivityCodeReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -133,16 +110,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.SecondaryPresences == other.SecondaryPresences ||
-                    this.SecondaryPresences != null &&
-                    this.SecondaryPresences.SequenceEqual(other.SecondaryPresences)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -162,12 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-
-                if (this.SecondaryPresences != null)
-                    hash = hash * 59 + this.SecondaryPresences.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -15,6 +15,7 @@ title: BotFlowSession
 | **BotResult** | **string** | The reason for session termination. | [optional] |
 | **BotResultCategory** | **string** | The category of result for the session. | [optional] |
 | **DateCreated** | **DateTime?** | Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateCompleted** | **DateTime?** | Timestamp indicating when the session was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Conversation** | [**AddressableEntityRef**](AddressableEntityRef.html) | The conversation details, across potentially multiple Bot Flow sessions. | [optional] |
 {: class="table table-striped"}
 

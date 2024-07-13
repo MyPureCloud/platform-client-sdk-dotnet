@@ -16,7 +16,7 @@ title: WorkitemCreate
 | **StatusId** | **string** | The ID of the Status of the Workitem. | [optional] |
 | **WorkbinId** | **string** | The ID of Workbin that contains the Workitem. | [optional] |
 | **AutoStatusTransition** | **bool?** | Set it to false to disable auto status transition. By default, it is enabled. | [optional] |
-| **Description** | **string** | The description of the Workitem. Maximum length of 4096 characters. | [optional] |
+| **Description** | **string** | The description of the Workitem. Maximum length of 512 characters. | [optional] |
 | **TypeId** | **string** | The ID of the Worktype of the Workitem. | |
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** | Custom fields defined in the schema referenced by the worktype of the workitem. | [optional] |
 | **QueueId** | **string** | The ID of the Workitems queue. Must be a valid UUID. | [optional] |

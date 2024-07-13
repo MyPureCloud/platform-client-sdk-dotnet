@@ -325,9 +325,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ParkTime">The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="RoomId">The ID of the chat room..</param>
         /// <param name="AvatarImageUrl">If available, the URI to the avatar image of this communication..</param>
-        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string RoomId = null, string AvatarImageUrl = null)
+        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -363,6 +364,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationRoutingData = ConversationRoutingData;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.ParkTime = ParkTime;
             this.RoomId = RoomId;
             this.AvatarImageUrl = AvatarImageUrl;
             
@@ -649,6 +651,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="parkTime", EmitDefaultValue=false)]
+        public DateTime? ParkTime { get; set; }
+
+
+
+        /// <summary>
         /// The ID of the chat room.
         /// </summary>
         /// <value>The ID of the chat room.</value>
@@ -708,6 +719,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  AvatarImageUrl: ").Append(AvatarImageUrl).Append("\n");
             sb.Append("}\n");
@@ -921,6 +933,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
+                    this.ParkTime == other.ParkTime ||
+                    this.ParkTime != null &&
+                    this.ParkTime.Equals(other.ParkTime)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -1044,6 +1061,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+
+                if (this.ParkTime != null)
+                    hash = hash * 59 + this.ParkTime.GetHashCode();
 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();

@@ -546,7 +546,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum ScheduleUnknownError for "SCHEDULE_UNKNOWN_ERROR"
             /// </summary>
             [EnumMember(Value = "SCHEDULE_UNKNOWN_ERROR")]
-            ScheduleUnknownError
+            ScheduleUnknownError,
+            
+            /// <summary>
+            /// Enum RecurringScheduleNextOccurrenceFailure for "RECURRING_SCHEDULE_NEXT_OCCURRENCE_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "RECURRING_SCHEDULE_NEXT_OCCURRENCE_FAILURE")]
+            RecurringScheduleNextOccurrenceFailure,
+            
+            /// <summary>
+            /// Enum RecurringScheduleEnded for "RECURRING_SCHEDULE_ENDED"
+            /// </summary>
+            [EnumMember(Value = "RECURRING_SCHEDULE_ENDED")]
+            RecurringScheduleEnded,
+            
+            /// <summary>
+            /// Enum RecurringScheduleMissedOccurrences for "RECURRING_SCHEDULE_MISSED_OCCURRENCES"
+            /// </summary>
+            [EnumMember(Value = "RECURRING_SCHEDULE_MISSED_OCCURRENCES")]
+            RecurringScheduleMissedOccurrences
         }
         /// <summary>
         /// Gets or Sets Code

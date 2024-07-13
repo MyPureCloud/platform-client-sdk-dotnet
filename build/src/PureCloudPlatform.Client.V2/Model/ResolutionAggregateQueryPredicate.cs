@@ -67,10 +67,34 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Conversationid for "conversationId"
+            /// </summary>
+            [EnumMember(Value = "conversationId")]
+            Conversationid,
+            
+            /// <summary>
+            /// Enum Mediatype for "mediaType"
+            /// </summary>
+            [EnumMember(Value = "mediaType")]
+            Mediatype,
+            
+            /// <summary>
             /// Enum Queueid for "queueId"
             /// </summary>
             [EnumMember(Value = "queueId")]
             Queueid,
+            
+            /// <summary>
+            /// Enum Requestedrouting for "requestedRouting"
+            /// </summary>
+            [EnumMember(Value = "requestedRouting")]
+            Requestedrouting,
+            
+            /// <summary>
+            /// Enum Usedrouting for "usedRouting"
+            /// </summary>
+            [EnumMember(Value = "usedRouting")]
+            Usedrouting,
             
             /// <summary>
             /// Enum Userid for "userId"

@@ -474,7 +474,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Activity code for which the user is currently scheduled</value>
         [DataMember(Name="scheduledActivityCode", EmitDefaultValue=false)]
-        public ActivityCodeReference ScheduledActivityCode { get; private set; }
+        public ActivityCodeSummary ScheduledActivityCode { get; private set; }
 
 
 

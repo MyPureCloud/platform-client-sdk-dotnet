@@ -28,13 +28,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementApi.html#getworkforcemanagementadherenceexplanationsjob) | **Get** /api/v2/workforcemanagement/adherence/explanations/jobs/{jobId} | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementApi.html#getworkforcemanagementadherencehistoricalbulkjob) | **Get** /api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId} | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementApi.html#getworkforcemanagementadherencehistoricaljob) | **Get** /api/v2/workforcemanagement/adherence/historical/jobs/{jobId} | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
-| [**GetWorkforcemanagementAdhocmodelingjob**](WorkforceManagementApi.html#getworkforcemanagementadhocmodelingjob) | **Get** /api/v2/workforcemanagement/adhocmodelingjobs/{jobId} | To get status of the modeling job. |
 | [**GetWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementApi.html#getworkforcemanagementagentadherenceexplanation) | **Get** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Get an adherence explanation |
 | [**GetWorkforcemanagementAgentManagementunit**](WorkforceManagementApi.html#getworkforcemanagementagentmanagementunit) | **Get** /api/v2/workforcemanagement/agents/{agentId}/managementunit | Get the management unit to which the agent belongs |
 | [**GetWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementApi.html#getworkforcemanagementagentsmemanagementunit) | **Get** /api/v2/workforcemanagement/agents/me/managementunit | Get the management unit to which the currently logged in agent belongs |
 | [**GetWorkforcemanagementBusinessunit**](WorkforceManagementApi.html#getworkforcemanagementbusinessunit) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Get business unit |
 | [**GetWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivitycode) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Get an activity code |
 | [**GetWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivitycodes) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Get activity codes |
+| [**GetWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Get an activity plan |
+| [**GetWorkforcemanagementBusinessunitActivityplanRunsJob**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplanrunsjob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId} | Gets an activity plan run job |
+| [**GetWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Get activity plans |
+| [**GetWorkforcemanagementBusinessunitActivityplansJobs**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplansjobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs | Gets the latest job for all activity plans in the business unit |
 | [**GetWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitintradayplanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups | Get intraday planning groups for the given date |
 | [**GetWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitmanagementunits) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits | Get all authorized management units in the business unit |
 | [**GetWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitplanninggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Get a planning group |
@@ -107,6 +110,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementApi.html#patchworkforcemanagementagentadherenceexplanation) | **Patch** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Update an adherence explanation |
 | [**PatchWorkforcemanagementBusinessunit**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunit) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Update business unit |
 | [**PatchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitactivitycode) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Update an activity code |
+| [**PatchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitactivityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Update an activity plan |
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitplanninggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitschedulingrun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitservicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
@@ -133,6 +137,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementApi.html#postworkforcemanagementagentsmepossibleworkshifts) | **Post** /api/v2/workforcemanagement/agents/me/possibleworkshifts | Get agent possible work shifts for requested time frame |
 | [**PostWorkforcemanagementAgentschedulesMine**](WorkforceManagementApi.html#postworkforcemanagementagentschedulesmine) | **Post** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
 | [**PostWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivitycodes) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Create a new activity code |
+| [**PostWorkforcemanagementBusinessunitActivityplanRunsJobs**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivityplanrunsjobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs | Run an activity plan manually |
+| [**PostWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Create an activity plan |
 | [**PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitadherenceexplanationsquery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query | Query adherence explanations across an entire business unit for the requested period |
 | [**PostWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitagentschedulessearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search | Search published schedules |
 | [**PostWorkforcemanagementBusinessunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitintraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
@@ -1543,71 +1549,6 @@ namespace Example
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
 
-<a name="getworkforcemanagementadhocmodelingjob"></a>
-
-## [**ModelingStatusResponse**](ModelingStatusResponse.html) GetWorkforcemanagementAdhocmodelingjob (string jobId)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-To get status of the modeling job.
-
-This Endpoint is Deprecated, and not recommended to be used.
-
-Requires ANY permissions: 
-
-* wfm:adhocModel:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetWorkforcemanagementAdhocmodelingjobExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new WorkforceManagementApi();
-            var jobId = jobId_example;  // string | The id of the modeling job
-
-            try
-            { 
-                // To get status of the modeling job.
-                ModelingStatusResponse result = apiInstance.GetWorkforcemanagementAdhocmodelingjob(jobId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAdhocmodelingjob: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **jobId** | **string**| The id of the modeling job |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**ModelingStatusResponse**](ModelingStatusResponse.html)
-
 <a name="getworkforcemanagementagentadherenceexplanation"></a>
 
 ## [**AdherenceExplanationResponse**](AdherenceExplanationResponse.html) GetWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId)
@@ -2181,6 +2122,274 @@ namespace Example
 ### Return type
 
 [**BusinessUnitActivityCodeListing**](BusinessUnitActivityCodeListing.html)
+
+<a name="getworkforcemanagementbusinessunitactivityplan"></a>
+
+## [**ActivityPlanResponse**](ActivityPlanResponse.html) GetWorkforcemanagementBusinessunitActivityplan (string businessUnitId, string activityPlanId)
+
+
+
+Get an activity plan
+
+GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan to fetch
+
+            try
+            { 
+                // Get an activity plan
+                ActivityPlanResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan to fetch |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanResponse**](ActivityPlanResponse.html)
+
+<a name="getworkforcemanagementbusinessunitactivityplanrunsjob"></a>
+
+## [**ActivityPlanRunJobResponse**](ActivityPlanRunJobResponse.html) GetWorkforcemanagementBusinessunitActivityplanRunsJob (string businessUnitId, string activityPlanId, string jobId)
+
+
+
+Gets an activity plan run job
+
+GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlanRunJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplanRunsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan associated with the run job
+            var jobId = jobId_example;  // string | The ID of the activity plan run job
+
+            try
+            { 
+                // Gets an activity plan run job
+                ActivityPlanRunJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId, activityPlanId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplanRunsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan associated with the run job |  |
+| **jobId** | **string**| The ID of the activity plan run job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanRunJobResponse**](ActivityPlanRunJobResponse.html)
+
+<a name="getworkforcemanagementbusinessunitactivityplans"></a>
+
+## [**ActivityPlanListing**](ActivityPlanListing.html) GetWorkforcemanagementBusinessunitActivityplans (string businessUnitId, string state = null)
+
+
+
+Get activity plans
+
+GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var state = state_example;  // string | Optionally filter by activity plan state (optional) 
+
+            try
+            { 
+                // Get activity plans
+                ActivityPlanListing result = apiInstance.GetWorkforcemanagementBusinessunitActivityplans(businessUnitId, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **state** | **string**| Optionally filter by activity plan state | [optional] <br />**Values**: Active, Inactive |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanListing**](ActivityPlanListing.html)
+
+<a name="getworkforcemanagementbusinessunitactivityplansjobs"></a>
+
+## [**ActivityPlanJobListing**](ActivityPlanJobListing.html) GetWorkforcemanagementBusinessunitActivityplansJobs (string businessUnitId)
+
+
+
+Gets the latest job for all activity plans in the business unit
+
+GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitActivityplansJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Gets the latest job for all activity plans in the business unit
+                ActivityPlanJobListing result = apiInstance.GetWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitActivityplansJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanJobListing**](ActivityPlanJobListing.html)
 
 <a name="getworkforcemanagementbusinessunitintradayplanninggroups"></a>
 
@@ -7037,6 +7246,77 @@ namespace Example
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
 
+<a name="patchworkforcemanagementbusinessunitactivityplan"></a>
+
+## [**ActivityPlanResponse**](ActivityPlanResponse.html) PatchWorkforcemanagementBusinessunitActivityplan (string businessUnitId, string activityPlanId, UpdateActivityPlanRequest body)
+
+
+
+Update an activity plan
+
+If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
+
+PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitActivityplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan to update
+            var body = new UpdateActivityPlanRequest(); // UpdateActivityPlanRequest | body
+
+            try
+            { 
+                // Update an activity plan
+                ActivityPlanResponse result = apiInstance.PatchWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitActivityplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan to update |  |
+| **body** | [**UpdateActivityPlanRequest**](UpdateActivityPlanRequest.html)| body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanResponse**](ActivityPlanResponse.html)
+
 <a name="patchworkforcemanagementbusinessunitplanninggroup"></a>
 
 ## [**PlanningGroup**](PlanningGroup.html) PatchWorkforcemanagementBusinessunitPlanninggroup (string businessUnitId, string planningGroupId, UpdatePlanningGroupRequest body = null)
@@ -8750,6 +9030,142 @@ namespace Example
 ### Return type
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
+
+<a name="postworkforcemanagementbusinessunitactivityplanrunsjobs"></a>
+
+## [**ActivityPlanJobResponse**](ActivityPlanJobResponse.html) PostWorkforcemanagementBusinessunitActivityplanRunsJobs (string businessUnitId, string activityPlanId)
+
+
+
+Run an activity plan manually
+
+Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
+
+PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlanRunJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplanRunsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var activityPlanId = activityPlanId_example;  // string | The ID of the activity plan to run
+
+            try
+            { 
+                // Run an activity plan manually
+                ActivityPlanJobResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId, activityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplanRunsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **activityPlanId** | **string**| The ID of the activity plan to run |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse.html)
+
+<a name="postworkforcemanagementbusinessunitactivityplans"></a>
+
+## [**ActivityPlanResponse**](ActivityPlanResponse.html) PostWorkforcemanagementBusinessunitActivityplans (string businessUnitId, CreateActivityPlanRequest body)
+
+
+
+Create an activity plan
+
+PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitActivityplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CreateActivityPlanRequest(); // CreateActivityPlanRequest | body
+
+            try
+            { 
+                // Create an activity plan
+                ActivityPlanResponse result = apiInstance.PostWorkforcemanagementBusinessunitActivityplans(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitActivityplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CreateActivityPlanRequest**](CreateActivityPlanRequest.html)| body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityPlanResponse**](ActivityPlanResponse.html)
 
 <a name="postworkforcemanagementbusinessunitadherenceexplanationsquery"></a>
 

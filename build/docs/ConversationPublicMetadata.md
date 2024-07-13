@@ -1,0 +1,14 @@
+---
+title: ConversationPublicMetadata
+---
+## ININ.PureCloudApi.Model.ConversationPublicMetadata
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **RootId** | **string** | The id of the root public message. | [optional] |
+| **ReplyToId** | **string** | The id of the message this public message is replying to. | [optional] |
+{: class="table table-striped"}
+
+

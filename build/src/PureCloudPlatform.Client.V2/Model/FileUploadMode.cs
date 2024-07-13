@@ -53,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileUploadMode" /> class.
         /// </summary>
-        /// <param name="FileTypes">A list of supported content types for uploading files.</param>
+        /// <param name="FileTypes">A list of supported content types for uploading files..</param>
         /// <param name="MaxFileSizeKB">The maximum file size for file uploads in kilobytes. Default is 10240 (10 MB).</param>
         public FileUploadMode(List<FileTypesEnum> FileTypes = null, long? MaxFileSizeKB = null)
         {
@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of supported content types for uploading files
+        /// A list of supported content types for uploading files.
         /// </summary>
-        /// <value>A list of supported content types for uploading files</value>
+        /// <value>A list of supported content types for uploading files.</value>
         [DataMember(Name="fileTypes", EmitDefaultValue=false)]
         public List<FileTypesEnum> FileTypes { get; set; }
 

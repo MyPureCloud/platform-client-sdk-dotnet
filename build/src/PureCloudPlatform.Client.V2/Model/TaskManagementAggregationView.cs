@@ -82,6 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nworkitemsdisconnected,
             
             /// <summary>
+            /// Enum Nworkitemsoffered for "nWorkitemsOffered"
+            /// </summary>
+            [EnumMember(Value = "nWorkitemsOffered")]
+            Nworkitemsoffered,
+            
+            /// <summary>
             /// Enum Nworkitemsoversla for "nWorkitemsOverSla"
             /// </summary>
             [EnumMember(Value = "nWorkitemsOverSla")]

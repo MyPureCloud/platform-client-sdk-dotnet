@@ -325,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ParkTime">The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="OutboundPreview">The outbound preview associated with this callback..</param>
         /// <param name="Voicemail">The voicemail associated with this callback..</param>
         /// <param name="CallbackNumbers">The list of phone number to use for this callback..</param>
@@ -334,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -370,6 +371,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationRoutingData = ConversationRoutingData;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.ParkTime = ParkTime;
             this.OutboundPreview = OutboundPreview;
             this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
@@ -663,6 +665,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The time when this participant's communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="parkTime", EmitDefaultValue=false)]
+        public DateTime? ParkTime { get; set; }
+
+
+
+        /// <summary>
         /// The outbound preview associated with this callback.
         /// </summary>
         /// <value>The outbound preview associated with this callback.</value>
@@ -785,6 +796,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
@@ -1005,6 +1017,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
+                    this.ParkTime == other.ParkTime ||
+                    this.ParkTime != null &&
+                    this.ParkTime.Equals(other.ParkTime)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -1163,6 +1180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+
+                if (this.ParkTime != null)
+                    hash = hash * 59 + this.ParkTime.GetHashCode();
 
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();

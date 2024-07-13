@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Status. Valid length between 3 and 256 characters..</param>
         /// <param name="DestinationStatusIds">A list of destination Statuses where a Workitem with this Status can transition to. If the list is empty Workitems with this Status can transition to all other Statuses defined on the Worktype. A Status can have a maximum of 24 destinations..</param>
-        /// <param name="Description">The description of the Status. Maximum length of 4096 characters..</param>
+        /// <param name="Description">The description of the Status. Maximum length of 512 characters..</param>
         /// <param name="DefaultDestinationStatusId">Default destination status to which this Status will transition to if auto status transition enabled..</param>
         /// <param name="StatusTransitionDelaySeconds">Delay in seconds for auto status transition. Required if defaultDestinationStatusId is provided..</param>
         /// <param name="StatusTransitionTime">Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS.</param>
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The description of the Status. Maximum length of 4096 characters.
+        /// The description of the Status. Maximum length of 512 characters.
         /// </summary>
-        /// <value>The description of the Status. Maximum length of 4096 characters.</value>
+        /// <value>The description of the Status. Maximum length of 512 characters.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

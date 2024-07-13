@@ -133,6 +133,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsEmailParticipant**](ConversationsApi.html#patchconversationsemailparticipant) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsEmailParticipantAttributes**](ConversationsApi.html#patchconversationsemailparticipantattributes) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsEmailParticipantCommunication**](ConversationsApi.html#patchconversationsemailparticipantcommunication) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsEmailParticipantParkingstate**](ConversationsApi.html#patchconversationsemailparticipantparkingstate) | **Patch** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate | Update conversation by setting its parking state |
 | [**PatchConversationsMessage**](ConversationsApi.html#patchconversationsmessage) | **Patch** /api/v2/conversations/messages/{conversationId} | Update a conversation by disconnecting all of the participants |
 | [**PatchConversationsMessageParticipant**](ConversationsApi.html#patchconversationsmessageparticipant) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsMessageParticipantAttributes**](ConversationsApi.html#patchconversationsmessageparticipantattributes) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -8401,6 +8402,74 @@ namespace Example
 
 **Object**
 
+<a name="patchconversationsemailparticipantparkingstate"></a>
+
+## void PatchConversationsEmailParticipantParkingstate (string conversationId, string participantId, ParkingStateRequest body)
+
+
+
+Update conversation by setting its parking state
+
+PatchConversationsEmailParticipantParkingstate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:email:park
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsEmailParticipantParkingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ParkingStateRequest(); // ParkingStateRequest | Parking update request
+
+            try
+            { 
+                // Update conversation by setting its parking state
+                apiInstance.PatchConversationsEmailParticipantParkingstate(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsEmailParticipantParkingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ParkingStateRequest**](ParkingStateRequest.html)| Parking update request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="patchconversationsmessage"></a>
 
 ## [**Conversation**](Conversation.html) PatchConversationsMessage (string conversationId, Conversation body)
@@ -12869,6 +12938,7 @@ Requires ANY permissions:
 
 * conversation:message:create
 * conversation:webmessaging:create
+* conversation:socialmedia:create
 
 ### Example
 ```{"language":"csharp"}
@@ -13463,7 +13533,7 @@ void (empty response body)
 
 <a name="postconversationsmessages"></a>
 
-## [**MessageConversation**](MessageConversation.html) PostConversationsMessages (CreateOutboundMessagingConversationRequest body)
+## [**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse.html) PostConversationsMessages (CreateOutboundMessagingConversationRequest body)
 
 
 
@@ -13502,7 +13572,7 @@ namespace Example
             try
             { 
                 // Create an outbound messaging conversation.
-                MessageConversation result = apiInstance.PostConversationsMessages(body);
+                CreateOutboundMessagingConversationResponse result = apiInstance.PostConversationsMessages(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -13524,7 +13594,7 @@ namespace Example
 
 ### Return type
 
-[**MessageConversation**](MessageConversation.html)
+[**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse.html)
 
 <a name="postconversationsmessagesagentless"></a>
 

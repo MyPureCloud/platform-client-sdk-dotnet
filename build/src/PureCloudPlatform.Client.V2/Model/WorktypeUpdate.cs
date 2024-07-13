@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignmentEnabled">When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false..</param>
         /// <param name="SchemaId">The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
-        /// <param name="Description">The description of the Worktype. Maximum length of 4096 characters..</param>
+        /// <param name="Description">The description of the Worktype. Maximum length of 512 characters..</param>
         /// <param name="DefaultStatusId">The ID of the default status for Workitems created from the Worktype..</param>
         /// <param name="SchemaVersion">The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set..</param>
         /// <param name="DefaultLanguageId">The ID of the default language for Workitems created from the Worktype. Must be a valid UUID..</param>
@@ -151,9 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The description of the Worktype. Maximum length of 4096 characters.
+        /// The description of the Worktype. Maximum length of 512 characters.
         /// </summary>
-        /// <value>The description of the Worktype. Maximum length of 4096 characters.</value>
+        /// <value>The description of the Worktype. Maximum length of 512 characters.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

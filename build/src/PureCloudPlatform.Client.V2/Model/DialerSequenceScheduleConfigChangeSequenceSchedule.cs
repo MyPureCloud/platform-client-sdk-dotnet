@@ -22,6 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DialerSequenceScheduleConfigChangeSequenceSchedule" /> class.
         /// </summary>
         /// <param name="Intervals">a list of start and end times.</param>
+        /// <param name="Recurrences">a list of recurrences for a schedule.</param>
         /// <param name="TimeZone">time zone identifier to be applied to the intervals; for example Africa/Abidjan.</param>
         /// <param name="Sequence">Sequence.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
@@ -30,9 +31,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerSequenceScheduleConfigChangeSequenceSchedule(List<DialerSequenceScheduleConfigChangeScheduleInterval> Intervals = null, string TimeZone = null, DialerSequenceScheduleConfigChangeUriReference Sequence = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerSequenceScheduleConfigChangeSequenceSchedule(List<DialerSequenceScheduleConfigChangeScheduleInterval> Intervals = null, List<DialerSequenceScheduleConfigChangeScheduleRecurrence> Recurrences = null, string TimeZone = null, DialerSequenceScheduleConfigChangeUriReference Sequence = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.Intervals = Intervals;
+            this.Recurrences = Recurrences;
             this.TimeZone = TimeZone;
             this.Sequence = Sequence;
             this.AdditionalProperties = AdditionalProperties;
@@ -52,6 +54,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>a list of start and end times</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
         public List<DialerSequenceScheduleConfigChangeScheduleInterval> Intervals { get; set; }
+
+
+
+        /// <summary>
+        /// a list of recurrences for a schedule
+        /// </summary>
+        /// <value>a list of recurrences for a schedule</value>
+        [DataMember(Name="recurrences", EmitDefaultValue=false)]
+        public List<DialerSequenceScheduleConfigChangeScheduleRecurrence> Recurrences { get; set; }
 
 
 
@@ -134,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DialerSequenceScheduleConfigChangeSequenceSchedule {\n");
 
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
+            sb.Append("  Recurrences: ").Append(Recurrences).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Sequence: ").Append(Sequence).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Intervals == other.Intervals ||
                     this.Intervals != null &&
                     this.Intervals.SequenceEqual(other.Intervals)
+                ) &&
+                (
+                    this.Recurrences == other.Recurrences ||
+                    this.Recurrences != null &&
+                    this.Recurrences.SequenceEqual(other.Recurrences)
                 ) &&
                 (
                     this.TimeZone == other.TimeZone ||
@@ -242,6 +259,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Intervals != null)
                     hash = hash * 59 + this.Intervals.GetHashCode();
+
+                if (this.Recurrences != null)
+                    hash = hash * 59 + this.Recurrences.GetHashCode();
 
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();

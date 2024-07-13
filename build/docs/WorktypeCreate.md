@@ -7,7 +7,7 @@ title: WorktypeCreate
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Name** | **string** | The name of the Worktype. Length between 3 and 256 characters. | |
+| **Name** | **string** | The name of the Worktype. Valid length between 3 and 256 characters. | |
 | **DefaultWorkbinId** | **string** | The ID of the default Workbin for Workitems created from the Worktype. | |
 | **DefaultDurationSeconds** | **int?** | The default duration in seconds for Workitems created from the Worktype. Maximum of 365 days. | [optional] |
 | **DefaultExpirationSeconds** | **int?** | The default expiration time in seconds for Workitems created from the Worktype. Maximum of 365 days. | [optional] |
@@ -17,7 +17,7 @@ title: WorktypeCreate
 | **AssignmentEnabled** | **bool?** | When set to true, Workitems will be sent to the queue of the Worktype as they are created. Default value is false. | [optional] |
 | **SchemaId** | **string** | The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 | **ServiceLevelTarget** | **int?** | The target service level for Workitems created from the Worktype. The default value is 100. | [optional] |
-| **Description** | **string** | The description of the Worktype. Maximum length of 4096 characters. | [optional] |
+| **Description** | **string** | The description of the Worktype. Maximum length of 512 characters. | [optional] |
 | **DivisionId** | **string** | The ID of the division the Worktype belongs to. Defaults to the default Workbin division ID. The Worktype must be in the same division as its default Workbin. | [optional] |
 | **DisableDefaultStatusCreation** | **bool?** | Set to true to disable default status creation. Default statuses are created with the Worktype by default | [optional] |
 | **SchemaVersion** | **int?** | The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set. | [optional] |

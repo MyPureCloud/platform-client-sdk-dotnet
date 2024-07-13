@@ -41,6 +41,7 @@ title: CallMediaParticipant
 | **ConversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
 | **StartAcwTime** | **DateTime?** | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **EndAcwTime** | **DateTime?** | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ParkTime** | **DateTime?** | The time when this participant&#39;s communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Muted** | **bool?** | Value is true when the call is muted. | [optional] |
 | **Confined** | **bool?** | Value is true when the call is confined. | [optional] |
 | **Recording** | **bool?** | Value is true when the call is being recorded. | [optional] |

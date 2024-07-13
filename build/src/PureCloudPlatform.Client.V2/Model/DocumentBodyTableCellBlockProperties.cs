@@ -265,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentBodyTableCellBlockProperties" /> class.
         /// </summary>
         /// <param name="CellType">The type of the table cell..</param>
-        /// <param name="Width">The width for the table cell..</param>
+        /// <param name="Width">The width of the table cell converted to em unit..</param>
         /// <param name="Height">The height for the table cell..</param>
         /// <param name="HorizontalAlign">The horizontal alignment for the table cell..</param>
         /// <param name="VerticalAlign">The vertical alignment for the table cell..</param>
@@ -298,9 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The width for the table cell.
+        /// The width of the table cell converted to em unit.
         /// </summary>
-        /// <value>The width for the table cell.</value>
+        /// <value>The width of the table cell converted to em unit.</value>
         [DataMember(Name="width", EmitDefaultValue=false)]
         public float? Width { get; set; }
 

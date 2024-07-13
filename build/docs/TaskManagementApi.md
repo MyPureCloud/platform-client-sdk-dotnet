@@ -1500,7 +1500,7 @@ namespace Example
 
 <a name="gettaskmanagementworktypehistory"></a>
 
-## [**WorktypeChangeListing**](WorktypeChangeListing.html) GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
+## [**WorktypeChangeListing**](WorktypeChangeListing.html) GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
 
 
 
@@ -1538,11 +1538,12 @@ namespace Example
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = 56;  // int? | Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)  (default to 25)
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to descending)
+            var fields = new List<string>(); // List<string> | Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional) 
 
             try
             { 
                 // Get a listing of a worktype's attribute change history
-                WorktypeChangeListing result = apiInstance.GetTaskmanagementWorktypeHistory(worktypeId, after, pageSize, sortOrder);
+                WorktypeChangeListing result = apiInstance.GetTaskmanagementWorktypeHistory(worktypeId, after, pageSize, sortOrder, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1563,6 +1564,7 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
+| **fields** | [**List<string>**](string.html)| Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. | [optional] <br />**Values**: name, serviceLevelTarget, defaultWorkbinId, defaultDueDurationSeconds, defaultExpirationSeconds, defaultPriority, defaultLanguageId, defaultSkillIds, defaultQueueId, assignmentEnabled, defaultStatusId, statuses |
 {: class="table table-striped"}
 
 ### Return type

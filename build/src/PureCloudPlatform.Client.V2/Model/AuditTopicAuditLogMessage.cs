@@ -719,6 +719,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Restore,
             
             /// <summary>
+            /// Enum Block for "Block"
+            /// </summary>
+            [EnumMember(Value = "Block")]
+            Block,
+            
+            /// <summary>
+            /// Enum Unblock for "Unblock"
+            /// </summary>
+            [EnumMember(Value = "Unblock")]
+            Unblock,
+            
+            /// <summary>
             /// Enum Open for "Open"
             /// </summary>
             [EnumMember(Value = "Open")]
@@ -890,7 +902,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Reversemanually for "ReverseManually"
             /// </summary>
             [EnumMember(Value = "ReverseManually")]
-            Reversemanually
+            Reversemanually,
+            
+            /// <summary>
+            /// Enum Provisioned for "Provisioned"
+            /// </summary>
+            [EnumMember(Value = "Provisioned")]
+            Provisioned
         }
         /// <summary>
         /// Gets or Sets EntityType
@@ -1565,6 +1583,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "IVR")]
             Ivr,
+            
+            /// <summary>
+            /// Enum Alertablepresencesoverrides for "AlertablePresencesOverrides"
+            /// </summary>
+            [EnumMember(Value = "AlertablePresencesOverrides")]
+            Alertablepresencesoverrides,
             
             /// <summary>
             /// Enum Did for "DID"

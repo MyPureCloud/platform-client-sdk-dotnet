@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StatusId">The ID of the Status of the Workitem..</param>
         /// <param name="WorkbinId">The ID of Workbin that contains the Workitem..</param>
         /// <param name="AutoStatusTransition">Set it to false to disable auto status transition. By default, it is enabled..</param>
-        /// <param name="Description">The description of the Workitem. Maximum length of 4096 characters..</param>
+        /// <param name="Description">The description of the Workitem. Maximum length of 512 characters..</param>
         /// <param name="TypeId">The ID of the Worktype of the Workitem. (required).</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by the worktype of the workitem..</param>
         /// <param name="QueueId">The ID of the Workitems queue. Must be a valid UUID..</param>
@@ -160,9 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The description of the Workitem. Maximum length of 4096 characters.
+        /// The description of the Workitem. Maximum length of 512 characters.
         /// </summary>
-        /// <value>The description of the Workitem. Maximum length of 4096 characters.</value>
+        /// <value>The description of the Workitem. Maximum length of 512 characters.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

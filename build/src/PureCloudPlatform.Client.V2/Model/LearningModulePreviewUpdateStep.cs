@@ -95,18 +95,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The success status of the step</value>
         [DataMember(Name="successStatus", EmitDefaultValue=false)]
-        public SuccessStatusEnum? SuccessStatus { get; private set; }
+        public SuccessStatusEnum? SuccessStatus { get; set; }
         /// <summary>
         /// The completion status of the step
         /// </summary>
         /// <value>The completion status of the step</value>
         [DataMember(Name="completionStatus", EmitDefaultValue=false)]
-        public CompletionStatusEnum? CompletionStatus { get; private set; }
+        public CompletionStatusEnum? CompletionStatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModulePreviewUpdateStep" /> class.
         /// </summary>
-        public LearningModulePreviewUpdateStep()
+        /// <param name="Id">The id of the step.</param>
+        /// <param name="SuccessStatus">The success status of the step.</param>
+        /// <param name="CompletionStatus">The completion status of the step.</param>
+        /// <param name="CompletionPercentage">The completion percentage of the step.</param>
+        /// <param name="PercentageScore">Percentage Score.</param>
+        /// <param name="Structure">The structure for any SCO associated with this step.</param>
+        public LearningModulePreviewUpdateStep(string Id = null, SuccessStatusEnum? SuccessStatus = null, CompletionStatusEnum? CompletionStatus = null, float? CompletionPercentage = null, float? PercentageScore = null, List<LearningModulePreviewUpdateScoStructure> Structure = null)
         {
+            this.Id = Id;
+            this.SuccessStatus = SuccessStatus;
+            this.CompletionStatus = CompletionStatus;
+            this.CompletionPercentage = CompletionPercentage;
+            this.PercentageScore = PercentageScore;
+            this.Structure = Structure;
             
         }
         
@@ -117,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The id of the step</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 
@@ -130,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The completion percentage of the step</value>
         [DataMember(Name="completionPercentage", EmitDefaultValue=false)]
-        public float? CompletionPercentage { get; private set; }
+        public float? CompletionPercentage { get; set; }
 
 
 
@@ -139,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Percentage Score</value>
         [DataMember(Name="percentageScore", EmitDefaultValue=false)]
-        public float? PercentageScore { get; private set; }
+        public float? PercentageScore { get; set; }
 
 
 
@@ -148,7 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The structure for any SCO associated with this step</value>
         [DataMember(Name="structure", EmitDefaultValue=false)]
-        public List<LearningModulePreviewUpdateScoStructure> Structure { get; private set; }
+        public List<LearningModulePreviewUpdateScoStructure> Structure { get; set; }
 
 
         /// <summary>

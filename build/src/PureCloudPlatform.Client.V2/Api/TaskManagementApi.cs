@@ -620,9 +620,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>WorktypeChangeListing</returns>
         
-        WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
+        WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null);
 
         /// <summary>
         /// Get a listing of a worktype's attribute change history
@@ -636,9 +637,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>ApiResponse of WorktypeChangeListing</returns>
         
-        ApiResponse<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
+        ApiResponse<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null);
 
         /// <summary>
         /// Get a status
@@ -1864,9 +1866,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>Task of WorktypeChangeListing</returns>
         
-        System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
+        System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null);
 
         /// <summary>
         /// Get a listing of a worktype's attribute change history
@@ -1880,9 +1883,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>Task of ApiResponse (WorktypeChangeListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorktypeChangeListing>> GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<WorktypeChangeListing>> GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null);
 
         /// <summary>
         /// Get a status
@@ -7442,11 +7446,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>WorktypeChangeListing</returns>
         
-        public WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
+        public WorktypeChangeListing GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
         {
-             ApiResponse<WorktypeChangeListing> localVarResponse = GetTaskmanagementWorktypeHistoryWithHttpInfo(worktypeId, after, pageSize, sortOrder);
+             ApiResponse<WorktypeChangeListing> localVarResponse = GetTaskmanagementWorktypeHistoryWithHttpInfo(worktypeId, after, pageSize, sortOrder, fields);
              return localVarResponse.Data;
         }
 
@@ -7460,9 +7465,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>ApiResponse of WorktypeChangeListing</returns>
         
-        public ApiResponse< WorktypeChangeListing > GetTaskmanagementWorktypeHistoryWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
+        public ApiResponse< WorktypeChangeListing > GetTaskmanagementWorktypeHistoryWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
@@ -7504,6 +7510,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (fields != null) fields.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("fields", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7557,11 +7564,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>Task of WorktypeChangeListing</returns>
         
-        public async System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<WorktypeChangeListing> GetTaskmanagementWorktypeHistoryAsync (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
         {
-             ApiResponse<WorktypeChangeListing> localVarResponse = await GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo(worktypeId, after, pageSize, sortOrder);
+             ApiResponse<WorktypeChangeListing> localVarResponse = await GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo(worktypeId, after, pageSize, sortOrder, fields);
              return localVarResponse.Data;
 
         }
@@ -7576,9 +7584,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
+        /// <param name="fields">Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. (optional)</param>
         /// <returns>Task of ApiResponse (WorktypeChangeListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorktypeChangeListing>> GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorktypeChangeListing>> GetTaskmanagementWorktypeHistoryAsyncWithHttpInfo (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
@@ -7621,6 +7630,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (fields != null) fields.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("fields", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

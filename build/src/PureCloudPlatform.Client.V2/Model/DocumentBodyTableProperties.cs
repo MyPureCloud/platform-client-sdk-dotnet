@@ -141,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentBodyTableProperties" /> class.
         /// </summary>
-        /// <param name="Width">The width for the table. The valid values in 'em'..</param>
+        /// <param name="Width">The width of the table converted to em unit..</param>
         /// <param name="Height">The height for the table..</param>
         /// <param name="CellSpacing">The cell spacing for the table. The valid values in 'em'..</param>
         /// <param name="CellPadding">The cell padding for the table. The valid values in 'em'..</param>
@@ -169,9 +169,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The width for the table. The valid values in 'em'.
+        /// The width of the table converted to em unit.
         /// </summary>
-        /// <value>The width for the table. The valid values in 'em'.</value>
+        /// <value>The width of the table converted to em unit.</value>
         [DataMember(Name="width", EmitDefaultValue=false)]
         public float? Width { get; set; }
 

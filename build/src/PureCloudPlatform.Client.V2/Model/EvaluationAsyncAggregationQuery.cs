@@ -93,6 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Formid,
             
             /// <summary>
+            /// Enum Mediatype for "mediaType"
+            /// </summary>
+            [EnumMember(Value = "mediaType")]
+            Mediatype,
+            
+            /// <summary>
             /// Enum Queueid for "queueId"
             /// </summary>
             [EnumMember(Value = "queueId")]

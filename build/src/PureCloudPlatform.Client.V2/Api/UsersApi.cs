@@ -596,7 +596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
@@ -611,7 +611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
@@ -1136,7 +1136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
@@ -1155,7 +1155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
@@ -3036,7 +3036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
@@ -3051,7 +3051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
@@ -3576,7 +3576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
@@ -3595,7 +3595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
@@ -9765,7 +9765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
@@ -9782,7 +9782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
@@ -9878,7 +9878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
@@ -9896,7 +9896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
@@ -14164,7 +14164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
@@ -14185,7 +14185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
@@ -14286,7 +14286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
@@ -14308,7 +14308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of user IDs to fetch by bulk (optional)</param>
         /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
-        /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>

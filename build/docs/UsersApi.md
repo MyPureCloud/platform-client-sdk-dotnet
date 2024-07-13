@@ -1556,7 +1556,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. (optional) 
             var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for a user instead of their default. (optional) 
             var state = state_example;  // string | Search for a user with this state (optional)  (default to active)
 
@@ -1581,7 +1581,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
 | **integrationPresenceSource** | **string**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
 | **state** | **string**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
@@ -2867,7 +2867,7 @@ namespace Example
             var id = new List<string>(); // List<string> | A list of user IDs to fetch by bulk (optional) 
             var jabberId = new List<string>(); // List<string> | A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) (optional) 
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
-            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. (optional) 
             var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. (optional) 
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
 
@@ -2896,7 +2896,7 @@ namespace Example
 | **id** | [**List<string>**](string.html)| A list of user IDs to fetch by bulk | [optional]  |
 | **jabberId** | [**List<string>**](string.html)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
 | **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
 {: class="table table-striped"}

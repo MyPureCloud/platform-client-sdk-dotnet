@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WorkbinUpdate" /> class.
         /// </summary>
         /// <param name="Name">Workbin name. Valid length between 3 and 256 characters..</param>
-        /// <param name="Description">Workbin description. Maximum length of 4096 characters..</param>
+        /// <param name="Description">Workbin description. Maximum length of 512 characters..</param>
         public WorkbinUpdate(string Name = null, string Description = null)
         {
             this.Name = Name;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Workbin description. Maximum length of 4096 characters.
+        /// Workbin description. Maximum length of 512 characters.
         /// </summary>
-        /// <value>Workbin description. Maximum length of 4096 characters.</value>
+        /// <value>Workbin description. Maximum length of 512 characters.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

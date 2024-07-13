@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StatusId">The ID of the Status of the Workitem..</param>
         /// <param name="WorkbinId">The ID of Workbin that contains the Workitem..</param>
         /// <param name="AutoStatusTransition">Set it to false to disable auto status transition. By default, it is enabled..</param>
-        /// <param name="Description">The description of the Workitem. Maximum length of 4096 characters..</param>
+        /// <param name="Description">The description of the Workitem. Maximum length of 512 characters..</param>
         /// <param name="DateClosed">The closed date of the Workitem. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignmentState">The assignment state of the Workitem..</param>
         /// <param name="AssignmentOperation">Set this value to AgentAssignmentAlerting and supply an 'assigneeId' to assign the workitem to an agent and alert the agent of the assignment. Set this value to QueueAssignmentAlerting and supply a 'queueId' to route the workitem to an agent who is a member of the queue and alert the agent..</param>
@@ -288,9 +288,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The description of the Workitem. Maximum length of 4096 characters.
+        /// The description of the Workitem. Maximum length of 512 characters.
         /// </summary>
-        /// <value>The description of the Workitem. Maximum length of 4096 characters.</value>
+        /// <value>The description of the Workitem. Maximum length of 512 characters.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

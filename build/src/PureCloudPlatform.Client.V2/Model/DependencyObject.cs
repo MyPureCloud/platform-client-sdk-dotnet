@@ -444,7 +444,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Workitemflow for "WORKITEMFLOW"
             /// </summary>
             [EnumMember(Value = "WORKITEMFLOW")]
-            Workitemflow
+            Workitemflow,
+            
+            /// <summary>
+            /// Enum Worktype for "WORKTYPE"
+            /// </summary>
+            [EnumMember(Value = "WORKTYPE")]
+            Worktype
         }
         /// <summary>
         /// Gets or Sets Type

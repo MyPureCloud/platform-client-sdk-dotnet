@@ -8,7 +8,7 @@ title: DocumentBodyTableCellBlockProperties
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **CellType** | **string** | The type of the table cell. | [optional] |
-| **Width** | **float?** | The width for the table cell. | [optional] |
+| **Width** | **float?** | The width of the table cell converted to em unit. | [optional] |
 | **Height** | **float?** | The height for the table cell. | [optional] |
 | **HorizontalAlign** | **string** | The horizontal alignment for the table cell. | [optional] |
 | **VerticalAlign** | **string** | The vertical alignment for the table cell. | [optional] |

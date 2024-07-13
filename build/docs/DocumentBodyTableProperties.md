@@ -7,7 +7,7 @@ title: DocumentBodyTableProperties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Width** | **float?** | The width for the table. The valid values in &#39;em&#39;. | [optional] |
+| **Width** | **float?** | The width of the table converted to em unit. | [optional] |
 | **Height** | **float?** | The height for the table. | [optional] |
 | **CellSpacing** | **float?** | The cell spacing for the table. The valid values in &#39;em&#39;. | [optional] |
 | **CellPadding** | **float?** | The cell padding for the table. The valid values in &#39;em&#39;. | [optional] |
