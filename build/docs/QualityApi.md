@@ -66,7 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **Put** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
 | [**PutQualityForm**](QualityApi.html#putqualityform) | **Put** /api/v2/quality/forms/{formId} | Update an evaluation form. |
 | [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **Put** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
-| [**PutQualityFormsEvaluationPredictivescoringSettings**](QualityApi.html#putqualityformsevaluationpredictivescoringsettings) | **Put** /api/v2/quality/forms/evaluations/{formId}/predictivescoring/settings | Update the Predictive Scoring settings of an evaluation form. |
+| [**PutQualityFormsEvaluationAiscoringSettings**](QualityApi.html#putqualityformsevaluationaiscoringsettings) | **Put** /api/v2/quality/forms/evaluations/{formId}/aiscoring/settings | Update the AI Scoring settings of an evaluation form. |
 | [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **Put** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
 | [**PutQualitySurveysScorable**](QualityApi.html#putqualitysurveysscorable) | **Put** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table table-striped"}
@@ -4023,19 +4023,19 @@ namespace Example
 
 [**EvaluationFormResponse**](EvaluationFormResponse.html)
 
-<a name="putqualityformsevaluationpredictivescoringsettings"></a>
+<a name="putqualityformsevaluationaiscoringsettings"></a>
 
-## [**PredictiveScoringSettings**](PredictiveScoringSettings.html) PutQualityFormsEvaluationPredictivescoringSettings (string formId, PredictiveScoringSettings body)
+## [**AiScoringSettings**](AiScoringSettings.html) PutQualityFormsEvaluationAiscoringSettings (string formId, AiScoringSettings body)
 
 
 
-Update the Predictive Scoring settings of an evaluation form.
+Update the AI Scoring settings of an evaluation form.
 
-PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
-* quality:evaluationForm:predictiveScoringEdit
+* quality:evaluationForm:aiScoringEdit
 
 ### Example
 ```{"language":"csharp"}
@@ -4047,7 +4047,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class PutQualityFormsEvaluationPredictivescoringSettingsExample
+    public class PutQualityFormsEvaluationAiscoringSettingsExample
     {
         public void main()
         { 
@@ -4060,17 +4060,17 @@ namespace Example
 
             var apiInstance = new QualityApi();
             var formId = formId_example;  // string | Form ID
-            var body = new PredictiveScoringSettings(); // PredictiveScoringSettings | Predictive Scoring Settings
+            var body = new AiScoringSettings(); // AiScoringSettings | AI Scoring Settings
 
             try
             { 
-                // Update the Predictive Scoring settings of an evaluation form.
-                PredictiveScoringSettings result = apiInstance.PutQualityFormsEvaluationPredictivescoringSettings(formId, body);
+                // Update the AI Scoring settings of an evaluation form.
+                AiScoringSettings result = apiInstance.PutQualityFormsEvaluationAiscoringSettings(formId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling QualityApi.PutQualityFormsEvaluationPredictivescoringSettings: " + e.Message );
+                Debug.Print("Exception when calling QualityApi.PutQualityFormsEvaluationAiscoringSettings: " + e.Message );
             }
         }
     }
@@ -4083,12 +4083,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
-| **body** | [**PredictiveScoringSettings**](PredictiveScoringSettings.html)| Predictive Scoring Settings |  |
+| **body** | [**AiScoringSettings**](AiScoringSettings.html)| AI Scoring Settings |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**PredictiveScoringSettings**](PredictiveScoringSettings.html)
+[**AiScoringSettings**](AiScoringSettings.html)
 
 <a name="putqualityformssurvey"></a>
 

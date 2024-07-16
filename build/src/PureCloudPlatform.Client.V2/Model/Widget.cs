@@ -1740,6 +1740,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Offline
         }
         /// <summary>
+        /// The sort order of the interactions in the agent status widget.
+        /// </summary>
+        /// <value>The sort order of the interactions in the agent status widget.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AgentInteractionSortOrderEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Ascending for "ascending"
+            /// </summary>
+            [EnumMember(Value = "ascending")]
+            Ascending,
+            
+            /// <summary>
+            /// Enum Descending for "descending"
+            /// </summary>
+            [EnumMember(Value = "descending")]
+            Descending
+        }
+        /// <summary>
         /// The type of dashboard widget configuration.
         /// </summary>
         /// <value>The type of dashboard widget configuration.</value>
@@ -1757,6 +1784,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The sort key of the table.</value>
         [DataMember(Name="sortKey", EmitDefaultValue=false)]
         public SortKeyEnum? SortKey { get; set; }
+        /// <summary>
+        /// The sort order of the interactions in the agent status widget.
+        /// </summary>
+        /// <value>The sort order of the interactions in the agent status widget.</value>
+        [DataMember(Name="agentInteractionSortOrder", EmitDefaultValue=false)]
+        public AgentInteractionSortOrderEnum? AgentInteractionSortOrder { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Widget" /> class.
@@ -1793,7 +1826,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ShowTimeInStatus">Indicates the show time in status of a widget configuration..</param>
         /// <param name="ShowOfflineAgents">Indicates to show offline agent widget..</param>
         /// <param name="SelectedStatuses">Indicates the selected statuses used to filter the agent widget in the dashboard..</param>
-        public Widget(int? Row = null, int? Column = null, string Title = null, TypeEnum? Type = null, List<MetricsEnum> Metrics = null, string DisplayText = null, string DisplayTextColor = null, string WebContentUrl = null, bool? SplitFilters = null, bool? SplitByMediaType = null, bool? ShowLongest = null, bool? DisplayAsTable = null, bool? ShowDuration = null, SortOrderEnum? SortOrder = null, SortKeyEnum? SortKey = null, int? EntityLimit = null, bool? DisplayAggregates = null, bool? IsFullWidth = null, bool? ShowPercentageChange = null, bool? ShowProfilePicture = null, ViewFilter Filter = null, List<PeriodsEnum> Periods = null, List<MediaTypesEnum> MediaTypes = null, List<Warning> Warnings = null, bool? ShowTimeInStatus = null, bool? ShowOfflineAgents = null, List<SelectedStatusesEnum> SelectedStatuses = null)
+        /// <param name="AgentInteractionSortOrder">The sort order of the interactions in the agent status widget..</param>
+        public Widget(int? Row = null, int? Column = null, string Title = null, TypeEnum? Type = null, List<MetricsEnum> Metrics = null, string DisplayText = null, string DisplayTextColor = null, string WebContentUrl = null, bool? SplitFilters = null, bool? SplitByMediaType = null, bool? ShowLongest = null, bool? DisplayAsTable = null, bool? ShowDuration = null, SortOrderEnum? SortOrder = null, SortKeyEnum? SortKey = null, int? EntityLimit = null, bool? DisplayAggregates = null, bool? IsFullWidth = null, bool? ShowPercentageChange = null, bool? ShowProfilePicture = null, ViewFilter Filter = null, List<PeriodsEnum> Periods = null, List<MediaTypesEnum> MediaTypes = null, List<Warning> Warnings = null, bool? ShowTimeInStatus = null, bool? ShowOfflineAgents = null, List<SelectedStatusesEnum> SelectedStatuses = null, AgentInteractionSortOrderEnum? AgentInteractionSortOrder = null)
         {
             this.Row = Row;
             this.Column = Column;
@@ -1822,6 +1856,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ShowTimeInStatus = ShowTimeInStatus;
             this.ShowOfflineAgents = ShowOfflineAgents;
             this.SelectedStatuses = SelectedStatuses;
+            this.AgentInteractionSortOrder = AgentInteractionSortOrder;
             
         }
         
@@ -2048,6 +2083,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<SelectedStatusesEnum> SelectedStatuses { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -2084,6 +2121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ShowTimeInStatus: ").Append(ShowTimeInStatus).Append("\n");
             sb.Append("  ShowOfflineAgents: ").Append(ShowOfflineAgents).Append("\n");
             sb.Append("  SelectedStatuses: ").Append(SelectedStatuses).Append("\n");
+            sb.Append("  AgentInteractionSortOrder: ").Append(AgentInteractionSortOrder).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2258,6 +2296,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelectedStatuses == other.SelectedStatuses ||
                     this.SelectedStatuses != null &&
                     this.SelectedStatuses.SequenceEqual(other.SelectedStatuses)
+                ) &&
+                (
+                    this.AgentInteractionSortOrder == other.AgentInteractionSortOrder ||
+                    this.AgentInteractionSortOrder != null &&
+                    this.AgentInteractionSortOrder.Equals(other.AgentInteractionSortOrder)
                 );
         }
 
@@ -2352,6 +2395,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelectedStatuses != null)
                     hash = hash * 59 + this.SelectedStatuses.GetHashCode();
+
+                if (this.AgentInteractionSortOrder != null)
+                    hash = hash * 59 + this.AgentInteractionSortOrder.GetHashCode();
 
                 return hash;
             }

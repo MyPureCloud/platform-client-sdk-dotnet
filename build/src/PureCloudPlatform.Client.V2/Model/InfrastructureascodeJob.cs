@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class InfrastructureascodeJob :  IEquatable<InfrastructureascodeJob>
     {
         /// <summary>
-        /// status
+        /// Job status
         /// </summary>
-        /// <value>status</value>
+        /// <value>Job status</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Incomplete
         }
         /// <summary>
-        /// status
+        /// Job status
         /// </summary>
-        /// <value>status</value>
+        /// <value>Job status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; private set; }
 
@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InfrastructureascodeJob" /> class.
         /// </summary>
-        /// <param name="DryRun">dryRun (required).</param>
+        /// <param name="DryRun">Whether or not the job was a dry run (required).</param>
         public InfrastructureascodeJob(bool? DryRun = null)
         {
             this.DryRun = DryRun;
@@ -103,36 +103,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// dryRun
+        /// Whether or not the job was a dry run
         /// </summary>
-        /// <value>dryRun</value>
+        /// <value>Whether or not the job was a dry run</value>
         [DataMember(Name="dryRun", EmitDefaultValue=false)]
         public bool? DryRun { get; set; }
 
 
 
         /// <summary>
-        /// acceleratorId
+        /// Accelerator associated with the job
         /// </summary>
-        /// <value>acceleratorId</value>
+        /// <value>Accelerator associated with the job</value>
         [DataMember(Name="acceleratorId", EmitDefaultValue=false)]
         public string AcceleratorId { get; private set; }
 
 
 
         /// <summary>
-        /// dateSubmitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Date and time on which job was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>dateSubmitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Date and time on which job was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateSubmitted", EmitDefaultValue=false)]
         public DateTime? DateSubmitted { get; private set; }
 
 
 
         /// <summary>
-        /// submittedBy
+        /// User who submitted the job
         /// </summary>
-        /// <value>submittedBy</value>
+        /// <value>User who submitted the job</value>
         [DataMember(Name="submittedBy", EmitDefaultValue=false)]
         public UserReference SubmittedBy { get; private set; }
 
@@ -141,20 +141,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// errorInfo
+        /// Information about errors, if any
         /// </summary>
-        /// <value>errorInfo</value>
+        /// <value>Information about errors, if any</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorInfo ErrorInfo { get; private set; }
 
 
 
         /// <summary>
-        /// results
+        /// The output results of the terraform job
         /// </summary>
-        /// <value>results</value>
+        /// <value>The output results of the terraform job</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public string Results { get; private set; }
+
+
+
+        /// <summary>
+        /// The results of rolling back the job if there were errors.  Not returned if job was successful.
+        /// </summary>
+        /// <value>The results of rolling back the job if there were errors.  Not returned if job was successful.</value>
+        [DataMember(Name="rollbackResults", EmitDefaultValue=false)]
+        public string RollbackResults { get; private set; }
 
 
 
@@ -183,6 +192,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
+            sb.Append("  RollbackResults: ").Append(RollbackResults).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -265,6 +275,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Results.Equals(other.Results)
                 ) &&
                 (
+                    this.RollbackResults == other.RollbackResults ||
+                    this.RollbackResults != null &&
+                    this.RollbackResults.Equals(other.RollbackResults)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -305,6 +320,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+
+                if (this.RollbackResults != null)
+                    hash = hash * 59 + this.RollbackResults.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

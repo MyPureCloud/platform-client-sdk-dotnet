@@ -286,8 +286,9 @@ void (empty response body)
 
 Delete a set of credentials
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -1933,8 +1934,9 @@ namespace Example
 
 Get a single credential with sensitive fields redacted
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1995,8 +1997,9 @@ namespace Example
 
 List multiple sets of credentials
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2059,8 +2062,9 @@ namespace Example
 
 List all credential types
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4841,8 +4845,9 @@ namespace Example
 
 Create a set of credentials
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:add
 
 ### Example
 ```{"language":"csharp"}
@@ -5301,8 +5306,9 @@ void (empty response body)
 
 Update a set of credentials
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:edit
 
 ### Example
 ```{"language":"csharp"}

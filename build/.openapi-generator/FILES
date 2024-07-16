@@ -148,6 +148,10 @@ docs/AggregateViewData.md
 docs/AggregationRange.md
 docs/AggregationResult.md
 docs/AggregationResultEntry.md
+docs/AiAnswer.md
+docs/AiScoring.md
+docs/AiScoringSetting.md
+docs/AiScoringSettings.md
 docs/AlertListing.md
 docs/AlertNotification.md
 docs/AlertRequest.md
@@ -5229,12 +5233,8 @@ docs/PostWorkforcemanagementTimeofflimitsAvailableQuery-example.txt
 docs/PostWorkforcemanagementTimeoffrequests-example.txt
 docs/PostWorkforcemanagementTimeoffrequestsEstimate-example.txt
 docs/PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery-example.txt
-docs/PredictedAnswer.md
-docs/PredictedScoring.md
 docs/PredictionResults.md
 docs/PredictiveRouting.md
-docs/PredictiveScoringSetting.md
-docs/PredictiveScoringSettings.md
 docs/Predictor.md
 docs/PredictorListing.md
 docs/PredictorModel.md
@@ -5430,7 +5430,7 @@ docs/PutQualityCalibration-example.txt
 docs/PutQualityConversationEvaluation-example.txt
 docs/PutQualityForm-example.txt
 docs/PutQualityFormsEvaluation-example.txt
-docs/PutQualityFormsEvaluationPredictivescoringSettings-example.txt
+docs/PutQualityFormsEvaluationAiscoringSettings-example.txt
 docs/PutQualityFormsSurvey-example.txt
 docs/PutQualitySurveysScorable-example.txt
 docs/PutRecordingCrossplatformMediaretentionpolicy-example.txt
@@ -7416,6 +7416,10 @@ src/PureCloudPlatform.Client.V2/Model/AggregateViewData.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationRange.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationResult.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationResultEntry.cs
+src/PureCloudPlatform.Client.V2/Model/AiAnswer.cs
+src/PureCloudPlatform.Client.V2/Model/AiScoring.cs
+src/PureCloudPlatform.Client.V2/Model/AiScoringSetting.cs
+src/PureCloudPlatform.Client.V2/Model/AiScoringSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AlertListing.cs
 src/PureCloudPlatform.Client.V2/Model/AlertNotification.cs
 src/PureCloudPlatform.Client.V2/Model/AlertRequest.cs
@@ -10101,12 +10105,8 @@ src/PureCloudPlatform.Client.V2/Model/PostOutputContract.cs
 src/PureCloudPlatform.Client.V2/Model/PostTextMessage.cs
 src/PureCloudPlatform.Client.V2/Model/PostTextRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PostTextResponse.cs
-src/PureCloudPlatform.Client.V2/Model/PredictedAnswer.cs
-src/PureCloudPlatform.Client.V2/Model/PredictedScoring.cs
 src/PureCloudPlatform.Client.V2/Model/PredictionResults.cs
 src/PureCloudPlatform.Client.V2/Model/PredictiveRouting.cs
-src/PureCloudPlatform.Client.V2/Model/PredictiveScoringSetting.cs
-src/PureCloudPlatform.Client.V2/Model/PredictiveScoringSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Predictor.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorListing.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorModel.cs

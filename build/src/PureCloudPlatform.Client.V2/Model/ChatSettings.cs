@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSettings" /> class.
         /// </summary>
-        /// <param name="MessageRetentionPeriodDays">Retention time for messages in days.</param>
+        /// <param name="MessageRetentionPeriodDays">Retention time for messages in days, expressed as int in the range [10,3650].</param>
         public ChatSettings(int? MessageRetentionPeriodDays = null)
         {
             this.MessageRetentionPeriodDays = MessageRetentionPeriodDays;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Retention time for messages in days
+        /// Retention time for messages in days, expressed as int in the range [10,3650]
         /// </summary>
-        /// <value>Retention time for messages in days</value>
+        /// <value>Retention time for messages in days, expressed as int in the range [10,3650]</value>
         [DataMember(Name="messageRetentionPeriodDays", EmitDefaultValue=false)]
         public int? MessageRetentionPeriodDays { get; set; }
 

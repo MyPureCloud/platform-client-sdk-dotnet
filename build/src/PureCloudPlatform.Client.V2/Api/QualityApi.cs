@@ -1667,32 +1667,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EvaluationFormResponse> PutQualityFormsEvaluationWithHttpInfo (string formId, EvaluationForm body);
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form.
+        /// Update the AI Scoring settings of an evaluation form.
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>PredictiveScoringSettings</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>AiScoringSettings</returns>
         
-        PredictiveScoringSettings PutQualityFormsEvaluationPredictivescoringSettings (string formId, PredictiveScoringSettings body);
+        AiScoringSettings PutQualityFormsEvaluationAiscoringSettings (string formId, AiScoringSettings body);
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form.
+        /// Update the AI Scoring settings of an evaluation form.
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>ApiResponse of PredictiveScoringSettings</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>ApiResponse of AiScoringSettings</returns>
         
-        ApiResponse<PredictiveScoringSettings> PutQualityFormsEvaluationPredictivescoringSettingsWithHttpInfo (string formId, PredictiveScoringSettings body);
+        ApiResponse<AiScoringSettings> PutQualityFormsEvaluationAiscoringSettingsWithHttpInfo (string formId, AiScoringSettings body);
 
         /// <summary>
         /// Update a survey form.
@@ -3401,32 +3401,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponse>> PutQualityFormsEvaluationAsyncWithHttpInfo (string formId, EvaluationForm body);
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form.
+        /// Update the AI Scoring settings of an evaluation form.
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>Task of PredictiveScoringSettings</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>Task of AiScoringSettings</returns>
         
-        System.Threading.Tasks.Task<PredictiveScoringSettings> PutQualityFormsEvaluationPredictivescoringSettingsAsync (string formId, PredictiveScoringSettings body);
+        System.Threading.Tasks.Task<AiScoringSettings> PutQualityFormsEvaluationAiscoringSettingsAsync (string formId, AiScoringSettings body);
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form.
+        /// Update the AI Scoring settings of an evaluation form.
         /// </summary>
         /// <remarks>
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>Task of ApiResponse (PredictiveScoringSettings)</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>Task of ApiResponse (AiScoringSettings)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<PredictiveScoringSettings>> PutQualityFormsEvaluationPredictivescoringSettingsAsyncWithHttpInfo (string formId, PredictiveScoringSettings body);
+        System.Threading.Tasks.Task<ApiResponse<AiScoringSettings>> PutQualityFormsEvaluationAiscoringSettingsAsyncWithHttpInfo (string formId, AiScoringSettings body);
 
         /// <summary>
         /// Update a survey form.
@@ -16909,41 +16909,41 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form. 
+        /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>PredictiveScoringSettings</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>AiScoringSettings</returns>
         
-        public PredictiveScoringSettings PutQualityFormsEvaluationPredictivescoringSettings (string formId, PredictiveScoringSettings body)
+        public AiScoringSettings PutQualityFormsEvaluationAiscoringSettings (string formId, AiScoringSettings body)
         {
-             ApiResponse<PredictiveScoringSettings> localVarResponse = PutQualityFormsEvaluationPredictivescoringSettingsWithHttpInfo(formId, body);
+             ApiResponse<AiScoringSettings> localVarResponse = PutQualityFormsEvaluationAiscoringSettingsWithHttpInfo(formId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form. 
+        /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>ApiResponse of PredictiveScoringSettings</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>ApiResponse of AiScoringSettings</returns>
         
-        public ApiResponse< PredictiveScoringSettings > PutQualityFormsEvaluationPredictivescoringSettingsWithHttpInfo (string formId, PredictiveScoringSettings body)
+        public ApiResponse< AiScoringSettings > PutQualityFormsEvaluationAiscoringSettingsWithHttpInfo (string formId, AiScoringSettings body)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutQualityFormsEvaluationPredictivescoringSettings");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutQualityFormsEvaluationAiscoringSettings");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluationPredictivescoringSettings");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluationAiscoringSettings");
 
-            var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/predictivescoring/settings";
+            var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/aiscoring/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -17013,57 +17013,57 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationPredictivescoringSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationAiscoringSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationPredictivescoringSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationAiscoringSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PredictiveScoringSettings>(localVarStatusCode,
+            return new ApiResponse<AiScoringSettings>(localVarStatusCode,
                 localVarHeaders,
-                (PredictiveScoringSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictiveScoringSettings)),
+                (AiScoringSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AiScoringSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
 
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form. 
+        /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>Task of PredictiveScoringSettings</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>Task of AiScoringSettings</returns>
         
-        public async System.Threading.Tasks.Task<PredictiveScoringSettings> PutQualityFormsEvaluationPredictivescoringSettingsAsync (string formId, PredictiveScoringSettings body)
+        public async System.Threading.Tasks.Task<AiScoringSettings> PutQualityFormsEvaluationAiscoringSettingsAsync (string formId, AiScoringSettings body)
         {
-             ApiResponse<PredictiveScoringSettings> localVarResponse = await PutQualityFormsEvaluationPredictivescoringSettingsAsyncWithHttpInfo(formId, body);
+             ApiResponse<AiScoringSettings> localVarResponse = await PutQualityFormsEvaluationAiscoringSettingsAsyncWithHttpInfo(formId, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Update the Predictive Scoring settings of an evaluation form. 
+        /// Update the AI Scoring settings of an evaluation form. 
         /// 
-        /// PutQualityFormsEvaluationPredictivescoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// PutQualityFormsEvaluationAiscoringSettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <param name="body">Predictive Scoring Settings</param>
-        /// <returns>Task of ApiResponse (PredictiveScoringSettings)</returns>
+        /// <param name="body">AI Scoring Settings</param>
+        /// <returns>Task of ApiResponse (AiScoringSettings)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<PredictiveScoringSettings>> PutQualityFormsEvaluationPredictivescoringSettingsAsyncWithHttpInfo (string formId, PredictiveScoringSettings body)
+        public async System.Threading.Tasks.Task<ApiResponse<AiScoringSettings>> PutQualityFormsEvaluationAiscoringSettingsAsyncWithHttpInfo (string formId, AiScoringSettings body)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutQualityFormsEvaluationPredictivescoringSettings");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->PutQualityFormsEvaluationAiscoringSettings");
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluationPredictivescoringSettings");
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluationAiscoringSettings");
             
 
-            var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/predictivescoring/settings";
+            var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/aiscoring/settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -17133,13 +17133,13 @@ namespace PureCloudPlatform.Client.V2.Api
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationPredictivescoringSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationAiscoringSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationPredictivescoringSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityFormsEvaluationAiscoringSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PredictiveScoringSettings>(localVarStatusCode,
+            return new ApiResponse<AiScoringSettings>(localVarStatusCode,
                 localVarHeaders,
-                (PredictiveScoringSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictiveScoringSettings)),
+                (AiScoringSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AiScoringSettings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

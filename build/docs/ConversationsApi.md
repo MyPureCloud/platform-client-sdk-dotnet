@@ -9726,8 +9726,6 @@ namespace Example
 
 Barge a conversation creating a barged in conference of connected participants.
 
-PostConversationBarge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:call:barge
@@ -10641,8 +10639,6 @@ namespace Example
 
 
 Barge a given participant's call creating a barged in conference of connected participants.
-
-PostConversationsCallParticipantBarge is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

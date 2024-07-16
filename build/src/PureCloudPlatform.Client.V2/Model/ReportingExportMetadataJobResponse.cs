@@ -709,7 +709,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum MessagingQueuePerformanceDetailView for "MESSAGING_QUEUE_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "MESSAGING_QUEUE_PERFORMANCE_DETAIL_VIEW")]
-            MessagingQueuePerformanceDetailView
+            MessagingQueuePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum SocialListeningView for "SOCIAL_LISTENING_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SOCIAL_LISTENING_VIEW")]
+            SocialListeningView
         }
         /// <summary>
         /// The view type of the export metadata

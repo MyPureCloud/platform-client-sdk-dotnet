@@ -29,11 +29,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Enabled">If disabled no trustee user will have access, even if they were previously added. (required).</param>
         /// <param name="UsesDefaultRole">Denotes if trustee uses admin role by default..</param>
+        /// <param name="HasFullAccess">Denotes if trustee uses full access role by default..</param>
+        /// <param name="IsTrustedUser">Denotes if trustee is given Trusted User access by default..</param>
         /// <param name="DateExpired">The expiration date of the trust. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, DateTime? DateExpired = null)
+        public Trustee(bool? Enabled = null, bool? UsesDefaultRole = null, bool? HasFullAccess = null, bool? IsTrustedUser = null, DateTime? DateExpired = null)
         {
             this.Enabled = Enabled;
             this.UsesDefaultRole = UsesDefaultRole;
+            this.HasFullAccess = HasFullAccess;
+            this.IsTrustedUser = IsTrustedUser;
             this.DateExpired = DateExpired;
             
         }
@@ -64,6 +68,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Denotes if trustee uses admin role by default.</value>
         [DataMember(Name="usesDefaultRole", EmitDefaultValue=false)]
         public bool? UsesDefaultRole { get; set; }
+
+
+
+        /// <summary>
+        /// Denotes if trustee uses full access role by default.
+        /// </summary>
+        /// <value>Denotes if trustee uses full access role by default.</value>
+        [DataMember(Name="hasFullAccess", EmitDefaultValue=false)]
+        public bool? HasFullAccess { get; set; }
+
+
+
+        /// <summary>
+        /// Denotes if trustee is given Trusted User access by default.
+        /// </summary>
+        /// <value>Denotes if trustee is given Trusted User access by default.</value>
+        [DataMember(Name="isTrustedUser", EmitDefaultValue=false)]
+        public bool? IsTrustedUser { get; set; }
 
 
 
@@ -123,6 +145,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  UsesDefaultRole: ").Append(UsesDefaultRole).Append("\n");
+            sb.Append("  HasFullAccess: ").Append(HasFullAccess).Append("\n");
+            sb.Append("  IsTrustedUser: ").Append(IsTrustedUser).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateExpired: ").Append(DateExpired).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -184,6 +208,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UsesDefaultRole.Equals(other.UsesDefaultRole)
                 ) &&
                 (
+                    this.HasFullAccess == other.HasFullAccess ||
+                    this.HasFullAccess != null &&
+                    this.HasFullAccess.Equals(other.HasFullAccess)
+                ) &&
+                (
+                    this.IsTrustedUser == other.IsTrustedUser ||
+                    this.IsTrustedUser != null &&
+                    this.IsTrustedUser.Equals(other.IsTrustedUser)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -229,6 +263,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UsesDefaultRole != null)
                     hash = hash * 59 + this.UsesDefaultRole.GetHashCode();
+
+                if (this.HasFullAccess != null)
+                    hash = hash * 59 + this.HasFullAccess.GetHashCode();
+
+                if (this.IsTrustedUser != null)
+                    hash = hash * 59 + this.IsTrustedUser.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

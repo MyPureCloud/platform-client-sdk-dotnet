@@ -57,6 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Botfinalintent,
             
             /// <summary>
+            /// Enum Botflowsubtype for "botFlowSubType"
+            /// </summary>
+            [EnumMember(Value = "botFlowSubType")]
+            Botflowsubtype,
+            
+            /// <summary>
             /// Enum Botflowtype for "botFlowType"
             /// </summary>
             [EnumMember(Value = "botFlowType")]
@@ -169,6 +175,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "messageType")]
             Messagetype,
+            
+            /// <summary>
+            /// Enum Previewmode for "previewMode"
+            /// </summary>
+            [EnumMember(Value = "previewMode")]
+            Previewmode,
             
             /// <summary>
             /// Enum Selfserved for "selfServed"

@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QuestionIndex">This field represents the location of the Question in the form. Note: Indexes are zero-based.</param>
         /// <param name="Settings">Settings.</param>
-        public QuestionSettings(int? QuestionIndex = null, PredictiveScoringSetting Settings = null)
+        public QuestionSettings(int? QuestionIndex = null, AiScoringSetting Settings = null)
         {
             this.QuestionIndex = QuestionIndex;
             this.Settings = Settings;
@@ -45,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Settings
         /// </summary>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public PredictiveScoringSetting Settings { get; set; }
+        public AiScoringSetting Settings { get; set; }
 
 
         /// <summary>
