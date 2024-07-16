@@ -265,8 +265,8 @@ namespace PureCloudPlatform.Client.V2.Client
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>());
 
@@ -287,8 +287,8 @@ namespace PureCloudPlatform.Client.V2.Client
                 Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, (int)response.StatusCode, headerParams, response.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>());
 
@@ -358,8 +358,8 @@ namespace PureCloudPlatform.Client.V2.Client
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>());
             }while(retry.ShouldRetry(response));
@@ -817,8 +817,8 @@ namespace PureCloudPlatform.Client.V2.Client
                    var retryAfterHeader = response.Headers
     .Select(header => new 
     { 
-        Name = header.GetType().GetProperty("Name").GetValue(header), 
-        Value = header.GetType().GetProperty("Value").GetValue(header) 
+        Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"), 
+        Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value") 
     })
     .FirstOrDefault(header => header.Name.ToString().Equals("Retry-After"));
 

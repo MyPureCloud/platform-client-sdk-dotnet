@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers
-                 .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                 .Select(header => new { Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"), Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value") })
                                     .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
                 authTokenInfo,
                 response.Content,
@@ -184,7 +184,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
             apiClient.Configuration.AuthTokenInfo = authTokenInfo;
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
-                response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                response.Headers.Select(header => new { Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"), Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value") })
                                     .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
                 authTokenInfo,
                 response.Content,
@@ -307,7 +307,7 @@ namespace PureCloudPlatform.Client.V2.Extensions
             apiClient.Configuration.AuthTokenInfo = authTokenInfo;
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
-                response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
+                response.Headers.Select(header => new { Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"), Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value") })
                                     .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
                 authTokenInfo,
                 response.Content,
@@ -347,8 +347,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
             apiClient.Configuration.Logger.Trace(method.ToString(), url, postBody, statusCode, headerParams, response.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>());
             apiClient.Configuration.Logger.Debug(method.ToString(), url, postBody, statusCode, headerParams);
@@ -358,8 +358,8 @@ namespace PureCloudPlatform.Client.V2.Extensions
                 apiClient.Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, statusCode, headerParams, response.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>());
             return (Object) response;

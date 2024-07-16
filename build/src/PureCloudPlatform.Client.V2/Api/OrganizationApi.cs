@@ -1106,8 +1106,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1212,8 +1212,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1311,8 +1311,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1410,8 +1410,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1509,8 +1509,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1608,8 +1608,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1707,8 +1707,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1806,8 +1806,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -1911,8 +1911,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2017,8 +2017,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2131,8 +2131,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2245,8 +2245,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2344,8 +2344,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2443,8 +2443,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2542,8 +2542,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2641,8 +2641,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2746,8 +2746,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2852,8 +2852,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -2957,8 +2957,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3063,8 +3063,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3168,8 +3168,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3273,8 +3273,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3372,8 +3372,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3471,8 +3471,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3570,8 +3570,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3669,8 +3669,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3779,8 +3779,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -3890,8 +3890,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4006,8 +4006,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4124,8 +4124,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4234,8 +4234,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4345,8 +4345,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4455,8 +4455,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4566,8 +4566,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4673,8 +4673,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4780,8 +4780,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -4890,8 +4890,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
@@ -5001,8 +5001,8 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            Name = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Name"),
+                                                            Value = Extensions.ReflectionUtils.GetSafePropertyValue(header, "Value")
                                                             }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
                                                         ?? new Dictionary<string, string>();
 
