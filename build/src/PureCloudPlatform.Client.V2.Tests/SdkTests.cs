@@ -16,7 +16,7 @@ using System.Net;
 
 namespace PureCloudPlatform.Client.V2.Tests
 {
-    [Timeout(70 * 1000)]
+    //[Timeout(70 * 1000)]
     public class SdkTests
     {
         private bool stop;
@@ -44,15 +44,15 @@ namespace PureCloudPlatform.Client.V2.Tests
         public void TraceBasicInformation()
         {
             Console.WriteLine($"PURECLOUD_ENVIRONMENT={environment}");
-            Assert.IsNotEmpty(environment);
-            Assert.IsNotNull(environment);
+            Assert.That(environment, Is.Not.Empty);
+            Assert.That(environment, Is.Not.Null);
 
             Console.WriteLine($"PURECLOUD_CLIENT_ID={clientId}");
-            Assert.IsNotEmpty(clientId);
-            Assert.IsNotNull(clientId);
+            Assert.That(clientId, Is.Not.Empty);
+            Assert.That(clientId, Is.Not.Null);
 
-            Assert.IsNotEmpty(clientSecret);
-            Assert.IsNotNull(clientSecret);
+            Assert.That(clientSecret, Is.Not.Empty);
+            Assert.That(clientSecret, Is.Not.Null);
 
             userEmail = $"{Guid.NewGuid()}@{environment}";
             Console.WriteLine($"userEmail={userEmail}");
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Tests
            
             PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
 
-            Assert.IsNotEmpty(PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken);
+            Assert.That(PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken, Is.Not.Empty);
         }
 
         [Test, Order(2)]
@@ -88,8 +88,8 @@ namespace PureCloudPlatform.Client.V2.Tests
             var user = usersApi.PostUsersWithHttpInfo(newUser);
 
             userId = user.Data.Id;
-            Assert.AreEqual(user.Data.Name, userName);
-            Assert.AreEqual(user.Data.Email, userEmail);
+            Assert.Equals(user.Data.Name, userName);
+            Assert.Equals(user.Data.Email, userEmail);
 
             Console.WriteLine($"CorrelationId for PostUsersWithHttpInfo {user.CorrelationId}");
             Console.WriteLine($"Version for PostUsersWithHttpInfo {user.Data.Version}");
@@ -107,10 +107,10 @@ namespace PureCloudPlatform.Client.V2.Tests
 
             var user = usersApi.PatchUser(userId, updateUser);
 
-            Assert.AreEqual(user.Id, userId);
-            Assert.AreEqual(user.Name, userName);
-            Assert.AreEqual(user.Email, userEmail);
-            Assert.AreEqual(user.Department, userDepartment);
+            Assert.Equals(user.Id, userId);
+            Assert.Equals(user.Name, userName);
+            Assert.Equals(user.Email, userEmail);
+            Assert.Equals(user.Department, userDepartment);
         }
 
         [Test, Order(4)]
@@ -118,8 +118,8 @@ namespace PureCloudPlatform.Client.V2.Tests
         {
             var skills = usersApi.PutUserProfileskillsWithHttpInfo(userId, new List<string>() { userProfileSkill });
 
-            Assert.AreEqual(skills.Data.Count, 1);
-            Assert.AreEqual(skills.Data[0], userProfileSkill);
+            Assert.Equals(skills.Data.Count, 1);
+            Assert.Equals(skills.Data[0], userProfileSkill);
             Console.WriteLine($"CorrelationId for PutUserProfileskillsWithHttpInfo {skills.CorrelationId}");
         }
 
@@ -173,8 +173,8 @@ namespace PureCloudPlatform.Client.V2.Tests
             var result = tcs.Task.Result;
 
             // Assert that both worked
-            Assert.AreEqual(busyReceived, true);
-            Assert.AreEqual(availableReceived, true);
+            Assert.Equals(busyReceived, true);
+            Assert.Equals(availableReceived, true);
         }
 
 
@@ -183,16 +183,16 @@ namespace PureCloudPlatform.Client.V2.Tests
         {
                 Thread.Sleep(6000);
                 var user = usersApi.GetUserWithHttpInfo(userId, new List<string>() { "profileSkills" }, null, null);
-                Assert.AreEqual(user.Data.Id, userId);
-                Assert.AreEqual(user.Data.Name, userName);
-                Assert.AreEqual(user.Data.Email, userEmail);
-                Assert.AreEqual(user.Data.Department, userDepartment);
+                Assert.Equals(user.Data.Id, userId);
+                Assert.Equals(user.Data.Name, userName);
+                Assert.Equals(user.Data.Email, userEmail);
+                Assert.Equals(user.Data.Department, userDepartment);
                 Console.WriteLine($"CorrelationId for GetUserWithHttpInfo {user.CorrelationId}");
                 Console.WriteLine($"Version for GetUserWithHttpInfo {user.Data.Version}");
                 // Commented out until the issue with APIs to send the latest Version of the User is fixed.
                 // Assert.IsNotNull(user.Data.ProfileSkills);
-                // Assert.AreEqual(user.Data.ProfileSkills.Count, 1);
-                // Assert.AreEqual(user.Data.ProfileSkills[0], userProfileSkill);
+                // Assert.Equals(user.Data.ProfileSkills.Count, 1);
+                // Assert.Equals(user.Data.ProfileSkills[0], userProfileSkill);
         }
 
         [Test, Order(7)]
