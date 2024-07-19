@@ -948,9 +948,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>JourneyViewListing</returns>
         
-        JourneyViewListing GetJourneyViews ();
+        JourneyViewListing GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
 
         /// <summary>
         /// Get a list of Journey Views
@@ -960,9 +964,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>ApiResponse of JourneyViewListing</returns>
         
-        ApiResponse<JourneyViewListing> GetJourneyViewsWithHttpInfo ();
+        ApiResponse<JourneyViewListing> GetJourneyViewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
 
         /// <summary>
         /// Get an Event Definition
@@ -2542,9 +2550,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>Task of JourneyViewListing</returns>
         
-        System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync ();
+        System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
 
         /// <summary>
         /// Get a list of Journey Views
@@ -2554,9 +2566,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>Task of ApiResponse (JourneyViewListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
 
         /// <summary>
         /// Get an Event Definition
@@ -10757,11 +10773,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>JourneyViewListing</returns>
         
-        public JourneyViewListing GetJourneyViews ()
+        public JourneyViewListing GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
         {
-             ApiResponse<JourneyViewListing> localVarResponse = GetJourneyViewsWithHttpInfo();
+             ApiResponse<JourneyViewListing> localVarResponse = GetJourneyViewsWithHttpInfo(pageNumber, pageSize, nameOrCreatedBy, expand);
              return localVarResponse.Data;
         }
 
@@ -10771,9 +10791,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>ApiResponse of JourneyViewListing</returns>
         
-        public ApiResponse< JourneyViewListing > GetJourneyViewsWithHttpInfo ()
+        public ApiResponse< JourneyViewListing > GetJourneyViewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/journey/views";
@@ -10808,6 +10832,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (nameOrCreatedBy != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrCreatedBy", this.Configuration.ApiClient.ParameterToString(nameOrCreatedBy)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -10857,11 +10885,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>Task of JourneyViewListing</returns>
         
-        public async System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync ()
+        public async System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
         {
-             ApiResponse<JourneyViewListing> localVarResponse = await GetJourneyViewsAsyncWithHttpInfo();
+             ApiResponse<JourneyViewListing> localVarResponse = await GetJourneyViewsAsyncWithHttpInfo(pageNumber, pageSize, nameOrCreatedBy, expand);
              return localVarResponse.Data;
 
         }
@@ -10872,9 +10904,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
         /// <returns>Task of ApiResponse (JourneyViewListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/journey/views";
@@ -10909,6 +10945,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (nameOrCreatedBy != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrCreatedBy", this.Configuration.ApiClient.ParameterToString(nameOrCreatedBy)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 

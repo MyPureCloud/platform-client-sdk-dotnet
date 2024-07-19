@@ -112,7 +112,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Waitlisted for "Waitlisted"
             /// </summary>
             [EnumMember(Value = "Waitlisted")]
-            Waitlisted
+            Waitlisted,
+            
+            /// <summary>
+            /// Enum Overlapsrestrictedactivitycode for "OverlapsRestrictedActivityCode"
+            /// </summary>
+            [EnumMember(Value = "OverlapsRestrictedActivityCode")]
+            Overlapsrestrictedactivitycode
         }
         /// <summary>
         /// The status of this time off request

@@ -197,7 +197,7 @@ namespace Example
 
 <a name="getauditsquerytransactionidresults"></a>
 
-## [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse.html) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+## [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse.html) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
 
 
 
@@ -233,11 +233,12 @@ namespace Example
             var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
             var pageSize = 56;  // int? | Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional)  (default to 25)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var allowRedirect = true;  // bool? | Result sets with large amounts of data will respond with a download url (optional) 
 
             try
             { 
                 // Get results of audit query
-                AuditQueryExecutionResultsResponse result = apiInstance.GetAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand);
+                AuditQueryExecutionResultsResponse result = apiInstance.GetAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand, allowRedirect);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -258,6 +259,7 @@ namespace Example
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. | [optional] [default to 25] |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: user |
+| **allowRedirect** | **bool?**| Result sets with large amounts of data will respond with a download url | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

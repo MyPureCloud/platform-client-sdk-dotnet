@@ -994,26 +994,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a screen recording session
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
         /// Update a screen recording session
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> PatchRecordingsScreensessionWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
@@ -2576,26 +2576,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a screen recording session
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task PatchRecordingsScreensessionAsync (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
         /// Update a screen recording session
         /// </summary>
         /// <remarks>
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRecordingsScreensessionAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
@@ -11058,13 +11058,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a screen recording session 
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         {
              PatchRecordingsScreensessionWithHttpInfo(recordingSessionId, body);
@@ -11072,13 +11072,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a screen recording session 
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> PatchRecordingsScreensessionWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         { 
             // verify the required parameter 'recordingSessionId' is set
@@ -11169,13 +11169,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a screen recording session 
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task PatchRecordingsScreensessionAsync (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         {
              await PatchRecordingsScreensessionAsyncWithHttpInfo(recordingSessionId, body);
@@ -11184,13 +11184,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a screen recording session 
-        /// 
+        /// This API is deprecated and the functionality to stop screen recording will be no longer supported.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRecordingsScreensessionAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         { 
             // verify the required parameter 'recordingSessionId' is set

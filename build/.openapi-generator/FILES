@@ -56,6 +56,7 @@ docs/ActivityCode.md
 docs/ActivityCodeContainer.md
 docs/ActivityCodeReference.md
 docs/ActivityCodeSummary.md
+docs/ActivityCodesReference.md
 docs/ActivityPlanAbandonRateImpactOverride.md
 docs/ActivityPlanAsaImpactOverride.md
 docs/ActivityPlanJobException.md
@@ -121,6 +122,7 @@ docs/AgentCopilotAggregationQuery.md
 docs/AgentCopilotAggregationView.md
 docs/AgentCopilotAsyncAggregateQueryResponse.md
 docs/AgentCopilotAsyncAggregationQuery.md
+docs/AgentDirectRoutingBackupSettings.md
 docs/AgentEvaluatorActivity.md
 docs/AgentIntegrationAssociationRequest.md
 docs/AgentIntegrationAssociationResponse.md
@@ -288,6 +290,7 @@ docs/AuditApi.json
 docs/AuditApi.md
 docs/AuditLogMessage.md
 docs/AuditQueryEntity.md
+docs/AuditQueryExecutionLargeResultsResponse.md
 docs/AuditQueryExecutionResultsResponse.md
 docs/AuditQueryExecutionStatusResponse.md
 docs/AuditQueryFilter.md
@@ -1363,6 +1366,8 @@ docs/DeleteResponsemanagementResponse-example.txt
 docs/DeleteResponsemanagementResponseasset-example.txt
 docs/DeleteRetention.md
 docs/DeleteRoutingAssessment-example.txt
+docs/DeleteRoutingDirectroutingbackupSettingsMe-example.txt
+docs/DeleteRoutingDirectroutingbackupSettingsMe-example.txt
 docs/DeleteRoutingEmailDomain-example.txt
 docs/DeleteRoutingEmailDomainRoute-example.txt
 docs/DeleteRoutingEmailOutboundDomain-example.txt
@@ -1377,6 +1382,8 @@ docs/DeleteRoutingSkill-example.txt
 docs/DeleteRoutingSkillgroup-example.txt
 docs/DeleteRoutingSmsAddress-example.txt
 docs/DeleteRoutingSmsPhonenumber-example.txt
+docs/DeleteRoutingUserDirectroutingbackupSettings-example.txt
+docs/DeleteRoutingUserDirectroutingbackupSettings-example.txt
 docs/DeleteRoutingUserUtilization-example.txt
 docs/DeleteRoutingUserUtilization-example.txt
 docs/DeleteRoutingUtilization-example.txt
@@ -2943,6 +2950,8 @@ docs/GetRoutingAssessments-example.txt
 docs/GetRoutingAssessmentsJob-example.txt
 docs/GetRoutingAssessmentsJobs-example.txt
 docs/GetRoutingAvailablemediatypes-example.txt
+docs/GetRoutingDirectroutingbackupSettingsMe-example.txt
+docs/GetRoutingDirectroutingbackupSettingsMe-example.txt
 docs/GetRoutingEmailDomain-example.txt
 docs/GetRoutingEmailDomainRoute-example.txt
 docs/GetRoutingEmailDomainRoutes-example.txt
@@ -2987,6 +2996,8 @@ docs/GetRoutingSmsAddresses-example.txt
 docs/GetRoutingSmsAvailablephonenumbers-example.txt
 docs/GetRoutingSmsPhonenumber-example.txt
 docs/GetRoutingSmsPhonenumbers-example.txt
+docs/GetRoutingUserDirectroutingbackupSettings-example.txt
+docs/GetRoutingUserDirectroutingbackupSettings-example.txt
 docs/GetRoutingUserUtilization-example.txt
 docs/GetRoutingUserUtilization-example.txt
 docs/GetRoutingUtilization-example.txt
@@ -3414,6 +3425,7 @@ docs/IdentityProvider.md
 docs/IdentityProviderApi.json
 docs/IdentityProviderApi.md
 docs/IdentityProviderEntityListing.md
+docs/IdentityResolutionConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
@@ -5443,6 +5455,8 @@ docs/PutRecordingsDeletionprotection-example.txt
 docs/PutResponsemanagementLibrary-example.txt
 docs/PutResponsemanagementResponse-example.txt
 docs/PutResponsemanagementResponseasset-example.txt
+docs/PutRoutingDirectroutingbackupSettingsMe-example.txt
+docs/PutRoutingDirectroutingbackupSettingsMe-example.txt
 docs/PutRoutingEmailDomainRoute-example.txt
 docs/PutRoutingEmailOutboundDomainActivation-example.txt
 docs/PutRoutingMessageRecipient-example.txt
@@ -5450,6 +5464,8 @@ docs/PutRoutingQueue-example.txt
 docs/PutRoutingSettings-example.txt
 docs/PutRoutingSettingsTranscription-example.txt
 docs/PutRoutingSmsPhonenumber-example.txt
+docs/PutRoutingUserDirectroutingbackupSettings-example.txt
+docs/PutRoutingUserDirectroutingbackupSettings-example.txt
 docs/PutRoutingUserUtilization-example.txt
 docs/PutRoutingUserUtilization-example.txt
 docs/PutRoutingUtilization-example.txt
@@ -7326,6 +7342,7 @@ src/PureCloudPlatform.Client.V2/Model/ActivityCode.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityCodeContainer.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityCodeReference.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityCodeSummary.cs
+src/PureCloudPlatform.Client.V2/Model/ActivityCodesReference.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityPlanAbandonRateImpactOverride.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityPlanAsaImpactOverride.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityPlanJobException.cs
@@ -7391,6 +7408,7 @@ src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAsyncAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/AgentDirectRoutingBackupSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AgentEvaluatorActivity.cs
 src/PureCloudPlatform.Client.V2/Model/AgentIntegrationAssociationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentIntegrationAssociationResponse.cs
@@ -7548,6 +7566,7 @@ src/PureCloudPlatform.Client.V2/Model/AudioState.cs
 src/PureCloudPlatform.Client.V2/Model/AudioUpdatedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/AuditLogMessage.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryEntity.cs
+src/PureCloudPlatform.Client.V2/Model/AuditQueryExecutionLargeResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryExecutionResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryExecutionStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AuditQueryFilter.cs
@@ -9174,6 +9193,7 @@ src/PureCloudPlatform.Client.V2/Model/IdentifierClaimRequest.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityNow.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProvider.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProviderEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/IdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdleEventTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/IdleTokenTimeout.cs
 src/PureCloudPlatform.Client.V2/Model/IgnoredActivityCategories.cs

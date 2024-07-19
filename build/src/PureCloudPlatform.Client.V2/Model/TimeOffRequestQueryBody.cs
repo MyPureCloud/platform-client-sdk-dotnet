@@ -92,7 +92,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Waitlisted for "Waitlisted"
             /// </summary>
             [EnumMember(Value = "Waitlisted")]
-            Waitlisted
+            Waitlisted,
+            
+            /// <summary>
+            /// Enum Overlapsrestrictedactivitycode for "OverlapsRestrictedActivityCode"
+            /// </summary>
+            [EnumMember(Value = "OverlapsRestrictedActivityCode")]
+            Overlapsrestrictedactivitycode
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestQueryBody" /> class.

@@ -95,9 +95,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
         
-        AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
+        AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null);
 
         /// <summary>
         /// Get results of audit query
@@ -110,9 +111,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
         
-        ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
+        ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null);
 
         /// <summary>
         /// Create audit query execution
@@ -273,9 +275,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
         
-        System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
+        System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null);
 
         /// <summary>
         /// Get results of audit query
@@ -288,9 +291,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null);
 
         /// <summary>
         /// Create audit query execution
@@ -1076,11 +1080,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
         
-        public AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        public AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
         {
-             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = GetAuditsQueryTransactionIdResultsWithHttpInfo(transactionId, cursor, pageSize, expand);
+             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = GetAuditsQueryTransactionIdResultsWithHttpInfo(transactionId, cursor, pageSize, expand, allowRedirect);
              return localVarResponse.Data;
         }
 
@@ -1093,9 +1098,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
         
-        public ApiResponse< AuditQueryExecutionResultsResponse > GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        public ApiResponse< AuditQueryExecutionResultsResponse > GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
         { 
             // verify the required parameter 'transactionId' is set
             if (transactionId == null)
@@ -1137,6 +1143,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (allowRedirect != null) localVarQueryParams.Add(new Tuple<string, string>("allowRedirect", this.Configuration.ApiClient.ParameterToString(allowRedirect)));
 
             // Header params
 
@@ -1189,11 +1196,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
         
-        public async System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
         {
-             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = await GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo(transactionId, cursor, pageSize, expand);
+             ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = await GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo(transactionId, cursor, pageSize, expand, allowRedirect);
              return localVarResponse.Data;
 
         }
@@ -1207,9 +1215,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="allowRedirect">Result sets with large amounts of data will respond with a download url (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
         { 
             // verify the required parameter 'transactionId' is set
             if (transactionId == null)
@@ -1252,6 +1261,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (allowRedirect != null) localVarQueryParams.Add(new Tuple<string, string>("allowRedirect", this.Configuration.ApiClient.ParameterToString(allowRedirect)));
 
             // Header params
 

@@ -387,6 +387,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Setutilizationlabelaction,
             
             /// <summary>
+            /// Enum Setwrapupcodeaction for "SetWrapupCodeAction"
+            /// </summary>
+            [EnumMember(Value = "SetWrapupCodeAction")]
+            Setwrapupcodeaction,
+            
+            /// <summary>
             /// Enum Transferpurematchaction for "TransferPureMatchAction"
             /// </summary>
             [EnumMember(Value = "TransferPureMatchAction")]

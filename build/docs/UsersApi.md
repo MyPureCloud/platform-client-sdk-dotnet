@@ -9,6 +9,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAnalyticsUsersDetailsJob**](UsersApi.html#deleteanalyticsusersdetailsjob) | **Delete** /api/v2/analytics/users/details/jobs/{jobId} | Delete/cancel an async request |
 | [**DeleteAuthorizationSubjectDivisionRole**](UsersApi.html#deleteauthorizationsubjectdivisionrole) | **Delete** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Delete a grant of a role in a division |
+| [**DeleteRoutingDirectroutingbackupSettingsMe**](UsersApi.html#deleteroutingdirectroutingbackupsettingsme) | **Delete** /api/v2/routing/directroutingbackup/settings/me | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
+| [**DeleteRoutingUserDirectroutingbackupSettings**](UsersApi.html#deleteroutinguserdirectroutingbackupsettings) | **Delete** /api/v2/routing/users/{userId}/directroutingbackup/settings | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
 | [**DeleteRoutingUserUtilization**](UsersApi.html#deleteroutinguserutilization) | **Delete** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**DeleteUser**](UsersApi.html#deleteuser) | **Delete** /api/v2/users/{userId} | Delete user |
 | [**DeleteUserRoutinglanguage**](UsersApi.html#deleteuserroutinglanguage) | **Delete** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
@@ -28,6 +30,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationSubjectsMe**](UsersApi.html#getauthorizationsubjectsme) | **Get** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **Get** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetProfilesUsers**](UsersApi.html#getprofilesusers) | **Get** /api/v2/profiles/users | Get a user profile listing |
+| [**GetRoutingDirectroutingbackupSettingsMe**](UsersApi.html#getroutingdirectroutingbackupsettingsme) | **Get** /api/v2/routing/directroutingbackup/settings/me | Get the user&#39;s Direct Routing Backup settings. |
+| [**GetRoutingUserDirectroutingbackupSettings**](UsersApi.html#getroutinguserdirectroutingbackupsettings) | **Get** /api/v2/routing/users/{userId}/directroutingbackup/settings | Get the user&#39;s Direct Routing Backup settings. |
 | [**GetRoutingUserUtilization**](UsersApi.html#getroutinguserutilization) | **Get** /api/v2/routing/users/{userId}/utilization | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**GetUser**](UsersApi.html#getuser) | **Get** /api/v2/users/{userId} | Get user. |
 | [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **Get** /api/v2/users/{userId}/adjacents | Get adjacents |
@@ -86,6 +90,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersSearchConversationTarget**](UsersApi.html#postuserssearchconversationtarget) | **Post** /api/v2/users/search/conversation/target | Search users as conversation targets |
 | [**PostUsersSearchQueuemembersManage**](UsersApi.html#postuserssearchqueuemembersmanage) | **Post** /api/v2/users/search/queuemembers/manage | Search manage queue member |
 | [**PostUsersSearchTeamsAssign**](UsersApi.html#postuserssearchteamsassign) | **Post** /api/v2/users/search/teams/assign | Search users assigned to teams |
+| [**PutRoutingDirectroutingbackupSettingsMe**](UsersApi.html#putroutingdirectroutingbackupsettingsme) | **Put** /api/v2/routing/directroutingbackup/settings/me | Update the user&#39;s Direct Routing Backup settings. |
+| [**PutRoutingUserDirectroutingbackupSettings**](UsersApi.html#putroutinguserdirectroutingbackupsettings) | **Put** /api/v2/routing/users/{userId}/directroutingbackup/settings | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingUserUtilization**](UsersApi.html#putroutinguserutilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **Put** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **Put** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
@@ -222,6 +228,125 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division of the grant |  |
 | **roleId** | **string**| the id of the role of the grant |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingdirectroutingbackupsettingsme"></a>
+
+## void DeleteRoutingDirectroutingbackupSettingsMe ()
+
+
+
+Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfDelete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingDirectroutingbackupSettingsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+                apiInstance.DeleteRoutingDirectroutingbackupSettingsMe();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteRoutingDirectroutingbackupSettingsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutinguserdirectroutingbackupsettings"></a>
+
+## void DeleteRoutingUserDirectroutingbackupSettings (string userId)
+
+
+
+Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingUserDirectroutingbackupSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+                apiInstance.DeleteRoutingUserDirectroutingbackupSettings(userId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteRoutingUserDirectroutingbackupSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1457,6 +1582,127 @@ namespace Example
 ### Return type
 
 [**UserProfileEntityListing**](UserProfileEntityListing.html)
+
+<a name="getroutingdirectroutingbackupsettingsme"></a>
+
+## [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html) GetRoutingDirectroutingbackupSettingsMe ()
+
+
+
+Get the user's Direct Routing Backup settings.
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfView
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingDirectroutingbackupSettingsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Get the user's Direct Routing Backup settings.
+                AgentDirectRoutingBackupSettings result = apiInstance.GetRoutingDirectroutingbackupSettingsMe();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetRoutingDirectroutingbackupSettingsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
+
+<a name="getroutinguserdirectroutingbackupsettings"></a>
+
+## [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html) GetRoutingUserDirectroutingbackupSettings (string userId)
+
+
+
+Get the user's Direct Routing Backup settings.
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingUserDirectroutingbackupSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+
+            try
+            { 
+                // Get the user's Direct Routing Backup settings.
+                AgentDirectRoutingBackupSettings result = apiInstance.GetRoutingUserDirectroutingbackupSettings(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetRoutingUserDirectroutingbackupSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="getroutinguserutilization"></a>
 
@@ -5302,6 +5548,134 @@ namespace Example
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="putroutingdirectroutingbackupsettingsme"></a>
+
+## [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html) PutRoutingDirectroutingbackupSettingsMe (AgentDirectRoutingBackupSettings body)
+
+
+
+Update the user's Direct Routing Backup settings.
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfEdit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingDirectroutingbackupSettingsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var body = new AgentDirectRoutingBackupSettings(); // AgentDirectRoutingBackupSettings | directRoutingBackup
+
+            try
+            { 
+                // Update the user's Direct Routing Backup settings.
+                AgentDirectRoutingBackupSettings result = apiInstance.PutRoutingDirectroutingbackupSettingsMe(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutRoutingDirectroutingbackupSettingsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)| directRoutingBackup |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
+
+<a name="putroutinguserdirectroutingbackupsettings"></a>
+
+## [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html) PutRoutingUserDirectroutingbackupSettings (string userId, AgentDirectRoutingBackupSettings body)
+
+
+
+Update the user's Direct Routing Backup settings.
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingUserDirectroutingbackupSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var body = new AgentDirectRoutingBackupSettings(); // AgentDirectRoutingBackupSettings | directRoutingBackup
+
+            try
+            { 
+                // Update the user's Direct Routing Backup settings.
+                AgentDirectRoutingBackupSettings result = apiInstance.PutRoutingUserDirectroutingbackupSettings(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutRoutingUserDirectroutingbackupSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)| directRoutingBackup |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="putroutinguserutilization"></a>
 

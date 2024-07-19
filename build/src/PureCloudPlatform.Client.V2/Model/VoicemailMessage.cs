@@ -82,6 +82,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The transcription of the voicemail's audio
+        /// </summary>
+        /// <value>The transcription of the voicemail's audio</value>
+        [DataMember(Name="transcription", EmitDefaultValue=false)]
+        public string Transcription { get; private set; }
+
+
+
+        /// <summary>
         /// The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -229,6 +238,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Read: ").Append(Read).Append("\n");
             sb.Append("  AudioRecordingDurationSeconds: ").Append(AudioRecordingDurationSeconds).Append("\n");
             sb.Append("  AudioRecordingSizeBytes: ").Append(AudioRecordingSizeBytes).Append("\n");
+            sb.Append("  Transcription: ").Append(Transcription).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  DeletedDate: ").Append(DeletedDate).Append("\n");
@@ -308,6 +318,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AudioRecordingSizeBytes == other.AudioRecordingSizeBytes ||
                     this.AudioRecordingSizeBytes != null &&
                     this.AudioRecordingSizeBytes.Equals(other.AudioRecordingSizeBytes)
+                ) &&
+                (
+                    this.Transcription == other.Transcription ||
+                    this.Transcription != null &&
+                    this.Transcription.Equals(other.Transcription)
                 ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
@@ -411,6 +426,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AudioRecordingSizeBytes != null)
                     hash = hash * 59 + this.AudioRecordingSizeBytes.GetHashCode();
+
+                if (this.Transcription != null)
+                    hash = hash * 59 + this.Transcription.GetHashCode();
 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();

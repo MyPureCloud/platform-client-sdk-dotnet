@@ -49,7 +49,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Checklimits for "CheckLimits"
             /// </summary>
             [EnumMember(Value = "CheckLimits")]
-            Checklimits
+            Checklimits,
+            
+            /// <summary>
+            /// Enum Checkactivitycodes for "CheckActivityCodes"
+            /// </summary>
+            [EnumMember(Value = "CheckActivityCodes")]
+            Checkactivitycodes,
+            
+            /// <summary>
+            /// Enum Checklimitsandactivitycodes for "CheckLimitsAndActivityCodes"
+            /// </summary>
+            [EnumMember(Value = "CheckLimitsAndActivityCodes")]
+            Checklimitsandactivitycodes
         }
         /// <summary>
         /// Auto approval rule for the time off plan.

@@ -2316,7 +2316,7 @@ namespace Example
 
 <a name="getjourneyviews"></a>
 
-## [**JourneyViewListing**](JourneyViewListing.html) GetJourneyViews ()
+## [**JourneyViewListing**](JourneyViewListing.html) GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
 
 
 
@@ -2350,11 +2350,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new JourneyApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var nameOrCreatedBy = nameOrCreatedBy_example;  // string | Journey View Name or Created By (optional) 
+            var expand = expand_example;  // string | Parameter to request additional data to return in Journey payload (optional) 
 
             try
             { 
                 // Get a list of Journey Views
-                JourneyViewListing result = apiInstance.GetJourneyViews();
+                JourneyViewListing result = apiInstance.GetJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2367,8 +2371,15 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **nameOrCreatedBy** | **string**| Journey View Name or Created By | [optional]  |
+| **expand** | **string**| Parameter to request additional data to return in Journey payload | [optional] <br />**Values**: charts |
+{: class="table table-striped"}
 
 ### Return type
 

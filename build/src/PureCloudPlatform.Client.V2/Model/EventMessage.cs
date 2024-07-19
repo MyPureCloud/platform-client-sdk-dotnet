@@ -45,6 +45,12 @@ namespace PureCloudPlatform.Client.V2.Model
             AllCampaignsBlacklisted,
             
             /// <summary>
+            /// Enum AnotherCampaignStarting for "ANOTHER_CAMPAIGN_STARTING"
+            /// </summary>
+            [EnumMember(Value = "ANOTHER_CAMPAIGN_STARTING")]
+            AnotherCampaignStarting,
+            
+            /// <summary>
             /// Enum ApproachingContactLimit for "APPROACHING_CONTACT_LIMIT"
             /// </summary>
             [EnumMember(Value = "APPROACHING_CONTACT_LIMIT")]
@@ -531,6 +537,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OrganizationHasNoDomainSet,
             
             /// <summary>
+            /// Enum QueueNotFound for "QUEUE_NOT_FOUND"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_NOT_FOUND")]
+            QueueNotFound,
+            
+            /// <summary>
             /// Enum RecycleCampaign for "RECYCLE_CAMPAIGN"
             /// </summary>
             [EnumMember(Value = "RECYCLE_CAMPAIGN")]
@@ -549,6 +561,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ScheduleUnknownError,
             
             /// <summary>
+            /// Enum SmsContentTemplateNotFound for "SMS_CONTENT_TEMPLATE_NOT_FOUND"
+            /// </summary>
+            [EnumMember(Value = "SMS_CONTENT_TEMPLATE_NOT_FOUND")]
+            SmsContentTemplateNotFound,
+            
+            /// <summary>
             /// Enum RecurringScheduleNextOccurrenceFailure for "RECURRING_SCHEDULE_NEXT_OCCURRENCE_FAILURE"
             /// </summary>
             [EnumMember(Value = "RECURRING_SCHEDULE_NEXT_OCCURRENCE_FAILURE")]
@@ -564,7 +582,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum RecurringScheduleMissedOccurrences for "RECURRING_SCHEDULE_MISSED_OCCURRENCES"
             /// </summary>
             [EnumMember(Value = "RECURRING_SCHEDULE_MISSED_OCCURRENCES")]
-            RecurringScheduleMissedOccurrences
+            RecurringScheduleMissedOccurrences,
+            
+            /// <summary>
+            /// Enum VersionConflict for "VERSION_CONFLICT"
+            /// </summary>
+            [EnumMember(Value = "VERSION_CONFLICT")]
+            VersionConflict
         }
         /// <summary>
         /// Gets or Sets Code
