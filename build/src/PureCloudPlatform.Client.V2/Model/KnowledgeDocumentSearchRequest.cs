@@ -124,6 +124,32 @@ namespace PureCloudPlatform.Client.V2.Model
             Labelname
         }
         /// <summary>
+        /// Gets or Sets AnswerMode
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AnswerModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Answerhighlight for "AnswerHighlight"
+            /// </summary>
+            [EnumMember(Value = "AnswerHighlight")]
+            Answerhighlight,
+            
+            /// <summary>
+            /// Enum Answergeneration for "AnswerGeneration"
+            /// </summary>
+            [EnumMember(Value = "AnswerGeneration")]
+            Answergeneration
+        }
+        /// <summary>
         /// The type of the query that initiates the search.
         /// </summary>
         /// <value>The type of the query that initiates the search.</value>
@@ -163,7 +189,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
         /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1..</param>
         /// <param name="AnswerHighlightTopResults">The number of articles to be sent for answer-highlighting. Can range from 1-5..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null, int? AnswerHighlightTopResults = null)
+        /// <param name="AnswerMode">Allows extracted answers from an article (AnswerHighlight) and/or AI-generated answers (AnswerGeneration). Default mode: AnswerHighlight. Use this property with answerHighlightTopResults..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null, float? ConfidenceThreshold = null, int? AnswerHighlightTopResults = null, List<AnswerModeEnum> AnswerMode = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -178,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationContext = ConversationContext;
             this.ConfidenceThreshold = ConfidenceThreshold;
             this.AnswerHighlightTopResults = AnswerHighlightTopResults;
+            this.AnswerMode = AnswerMode;
             
         }
         
@@ -305,6 +333,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? AnswerHighlightTopResults { get; set; }
 
 
+
+        /// <summary>
+        /// Allows extracted answers from an article (AnswerHighlight) and/or AI-generated answers (AnswerGeneration). Default mode: AnswerHighlight. Use this property with answerHighlightTopResults.
+        /// </summary>
+        /// <value>Allows extracted answers from an article (AnswerHighlight) and/or AI-generated answers (AnswerGeneration). Default mode: AnswerHighlight. Use this property with answerHighlightTopResults.</value>
+        [DataMember(Name="answerMode", EmitDefaultValue=false)]
+        public List<AnswerModeEnum> AnswerMode { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -330,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
             sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
             sb.Append("  AnswerHighlightTopResults: ").Append(AnswerHighlightTopResults).Append("\n");
+            sb.Append("  AnswerMode: ").Append(AnswerMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -449,6 +487,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AnswerHighlightTopResults == other.AnswerHighlightTopResults ||
                     this.AnswerHighlightTopResults != null &&
                     this.AnswerHighlightTopResults.Equals(other.AnswerHighlightTopResults)
+                ) &&
+                (
+                    this.AnswerMode == other.AnswerMode ||
+                    this.AnswerMode != null &&
+                    this.AnswerMode.SequenceEqual(other.AnswerMode)
                 );
         }
 
@@ -510,6 +553,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AnswerHighlightTopResults != null)
                     hash = hash * 59 + this.AnswerHighlightTopResults.GetHashCode();
+
+                if (this.AnswerMode != null)
+                    hash = hash * 59 + this.AnswerMode.GetHashCode();
 
                 return hash;
             }

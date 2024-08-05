@@ -2167,7 +2167,7 @@ namespace Example
 
 <a name="patchtaskmanagementworktype"></a>
 
-## [**Worktype**](Worktype.html) PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body = null)
+## [**Worktype**](Worktype.html) PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body)
 
 
 
@@ -2200,7 +2200,7 @@ namespace Example
 
             var apiInstance = new TaskManagementApi();
             var worktypeId = worktypeId_example;  // string | Worktype id
-            var body = new WorktypeUpdate(); // WorktypeUpdate | body (optional) 
+            var body = new WorktypeUpdate(); // WorktypeUpdate | Worktype
 
             try
             { 
@@ -2223,7 +2223,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
-| **body** | [**WorktypeUpdate**](WorktypeUpdate.html)| body | [optional]  |
+| **body** | [**WorktypeUpdate**](WorktypeUpdate.html)| Worktype |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2232,7 +2232,7 @@ namespace Example
 
 <a name="patchtaskmanagementworktypestatus"></a>
 
-## [**WorkitemStatus**](WorkitemStatus.html) PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
+## [**WorkitemStatus**](WorkitemStatus.html) PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body)
 
 
 
@@ -2266,7 +2266,7 @@ namespace Example
             var apiInstance = new TaskManagementApi();
             var worktypeId = worktypeId_example;  // string | Worktype id
             var statusId = statusId_example;  // string | Status id
-            var body = new WorkitemStatusUpdate(); // WorkitemStatusUpdate | body (optional) 
+            var body = new WorkitemStatusUpdate(); // WorkitemStatusUpdate | Status
 
             try
             { 
@@ -2290,7 +2290,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
 | **statusId** | **string**| Status id |  |
-| **body** | [**WorkitemStatusUpdate**](WorkitemStatusUpdate.html)| body | [optional]  |
+| **body** | [**WorkitemStatusUpdate**](WorkitemStatusUpdate.html)| Status |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2299,7 +2299,7 @@ namespace Example
 
 <a name="posttaskmanagementworkbins"></a>
 
-## [**Workbin**](Workbin.html) PostTaskmanagementWorkbins (WorkbinCreate body = null)
+## [**Workbin**](Workbin.html) PostTaskmanagementWorkbins (WorkbinCreate body)
 
 
 
@@ -2331,7 +2331,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TaskManagementApi();
-            var body = new WorkbinCreate(); // WorkbinCreate | body (optional) 
+            var body = new WorkbinCreate(); // WorkbinCreate | Workbin
 
             try
             { 
@@ -2353,7 +2353,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WorkbinCreate**](WorkbinCreate.html)| body | [optional]  |
+| **body** | [**WorkbinCreate**](WorkbinCreate.html)| Workbin |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2872,7 +2872,7 @@ namespace Example
 
 <a name="posttaskmanagementworktypestatuses"></a>
 
-## [**WorkitemStatus**](WorkitemStatus.html) PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body = null)
+## [**WorkitemStatus**](WorkitemStatus.html) PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body)
 
 
 
@@ -2905,7 +2905,7 @@ namespace Example
 
             var apiInstance = new TaskManagementApi();
             var worktypeId = worktypeId_example;  // string | Worktype id
-            var body = new WorkitemStatusCreate(); // WorkitemStatusCreate | body (optional) 
+            var body = new WorkitemStatusCreate(); // WorkitemStatusCreate | Status
 
             try
             { 
@@ -2928,7 +2928,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
-| **body** | [**WorkitemStatusCreate**](WorkitemStatusCreate.html)| body | [optional]  |
+| **body** | [**WorkitemStatusCreate**](WorkitemStatusCreate.html)| Status |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2937,7 +2937,7 @@ namespace Example
 
 <a name="posttaskmanagementworktypes"></a>
 
-## [**Worktype**](Worktype.html) PostTaskmanagementWorktypes (WorktypeCreate body = null)
+## [**Worktype**](Worktype.html) PostTaskmanagementWorktypes (WorktypeCreate body)
 
 
 
@@ -2969,7 +2969,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new TaskManagementApi();
-            var body = new WorktypeCreate(); // WorktypeCreate | body (optional) 
+            var body = new WorktypeCreate(); // WorktypeCreate | Worktype
 
             try
             { 
@@ -2991,7 +2991,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WorktypeCreate**](WorktypeCreate.html)| body | [optional]  |
+| **body** | [**WorktypeCreate**](WorktypeCreate.html)| Worktype |  |
 {: class="table table-striped"}
 
 ### Return type

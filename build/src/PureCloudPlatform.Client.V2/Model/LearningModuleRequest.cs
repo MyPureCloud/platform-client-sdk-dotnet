@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class LearningModuleRequest :  IEquatable<LearningModuleRequest>
     {
         /// <summary>
-        /// The type for the learning module
+        /// The type for the learning module. Informational, AssessedContent and Assessment are deprecated
         /// </summary>
-        /// <value>The type for the learning module</value>
+        /// <value>The type for the learning module. Informational, AssessedContent and Assessment are deprecated</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -55,12 +55,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum External for "External"
             /// </summary>
             [EnumMember(Value = "External")]
-            External
+            External,
+            
+            /// <summary>
+            /// Enum Native for "Native"
+            /// </summary>
+            [EnumMember(Value = "Native")]
+            Native
         }
         /// <summary>
-        /// The type for the learning module
+        /// The type for the learning module. Informational, AssessedContent and Assessment are deprecated
         /// </summary>
-        /// <value>The type for the learning module</value>
+        /// <value>The type for the learning module. Informational, AssessedContent and Assessment are deprecated</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
 
@@ -76,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of learning module.</param>
         /// <param name="CompletionTimeInDays">The completion time of learning module in days (required).</param>
         /// <param name="InformSteps">The list of inform steps in a learning module.</param>
-        /// <param name="Type">The type for the learning module.</param>
+        /// <param name="Type">The type for the learning module. Informational, AssessedContent and Assessment are deprecated.</param>
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
         /// <param name="CoverArt">The cover art for the learning module.</param>
         /// <param name="LengthInMinutes">The recommended time in minutes to complete the module.</param>

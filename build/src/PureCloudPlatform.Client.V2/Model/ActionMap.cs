@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisplayName">Display name of the action map. (required).</param>
         /// <param name="TriggerWithSegments">Trigger action map if any segment in the list is assigned to a given customer. (required).</param>
         /// <param name="TriggerWithEventConditions">List of event conditions that must be satisfied to trigger the action map..</param>
-        /// <param name="TriggerWithOutcomeProbabilityConditions">Probability conditions for outcomes that must be satisfied to trigger the action map..</param>
+        /// <param name="TriggerWithOutcomeProbabilityConditions">(deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map..</param>
         /// <param name="TriggerWithOutcomePercentileConditions">(deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map..</param>
         /// <param name="TriggerWithOutcomeQuantileConditions">Quantile conditions for outcomes that must be satisfied to trigger the action map..</param>
         /// <param name="PageUrlConditions">URL conditions that a page must match for web actions to be displayable. (required).</param>
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Probability conditions for outcomes that must be satisfied to trigger the action map.
+        /// (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map.
         /// </summary>
-        /// <value>Probability conditions for outcomes that must be satisfied to trigger the action map.</value>
+        /// <value>(deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map.</value>
         [DataMember(Name="triggerWithOutcomeProbabilityConditions", EmitDefaultValue=false)]
         public List<OutcomeProbabilityCondition> TriggerWithOutcomeProbabilityConditions { get; set; }
 

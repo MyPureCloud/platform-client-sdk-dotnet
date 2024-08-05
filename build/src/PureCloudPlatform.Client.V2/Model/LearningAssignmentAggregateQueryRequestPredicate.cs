@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="LearningAssignmentAggregateQueryRequestPredicate" /> class.
         /// </summary>
         /// <param name="Dimension">Each predicates specifies a dimension. (required).</param>
-        /// <param name="Value">Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, External (required).</param>
+        /// <param name="Value">Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational (deprecated), AssessedContent (deprecated), Assessment (deprecated), External, Native (required).</param>
         public LearningAssignmentAggregateQueryRequestPredicate(DimensionEnum? Dimension = null, string Value = null)
         {
             this.Dimension = Dimension;
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, External
+        /// Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational (deprecated), AssessedContent (deprecated), Assessment (deprecated), External, Native
         /// </summary>
-        /// <value>Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational, AssessedContent, Assessment, External</value>
+        /// <value>Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational (deprecated), AssessedContent (deprecated), Assessment (deprecated), External, Native</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

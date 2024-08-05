@@ -55,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyViewElementFilter" /> class.
         /// </summary>
         /// <param name="Type">Boolean operation to apply to the provided predicates and clauses. Valid values: And (required).</param>
-        /// <param name="Predicates">predicates (required).</param>
+        /// <param name="Predicates">predicates.</param>
         public JourneyViewElementFilter(TypeEnum? Type = null, List<JourneyViewElementFilterPredicate> Predicates = null)
         {
             this.Type = Type;

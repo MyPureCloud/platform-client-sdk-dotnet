@@ -69,19 +69,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Channel">Channel.</param>
         /// <param name="Alternatives">Alternatives.</param>
         /// <param name="AgentAssistantId">AgentAssistantId.</param>
+        /// <param name="EngineProvider">EngineProvider.</param>
         /// <param name="EngineId">EngineId.</param>
+        /// <param name="EngineName">EngineName.</param>
         /// <param name="Dialect">Dialect.</param>
         /// <param name="SpeechTextAnalyticsProgramId">SpeechTextAnalyticsProgramId.</param>
         /// <param name="AgentAssistEnabled">AgentAssistEnabled.</param>
         /// <param name="VoiceTranscriptionEnabled">VoiceTranscriptionEnabled.</param>
-        public TranscriptionTopicTranscriptResult(string UtteranceId = null, bool? IsFinal = null, ChannelEnum? Channel = null, List<TranscriptionTopicTranscriptAlternative> Alternatives = null, string AgentAssistantId = null, string EngineId = null, string Dialect = null, string SpeechTextAnalyticsProgramId = null, bool? AgentAssistEnabled = null, bool? VoiceTranscriptionEnabled = null)
+        public TranscriptionTopicTranscriptResult(string UtteranceId = null, bool? IsFinal = null, ChannelEnum? Channel = null, List<TranscriptionTopicTranscriptAlternative> Alternatives = null, string AgentAssistantId = null, string EngineProvider = null, string EngineId = null, string EngineName = null, string Dialect = null, string SpeechTextAnalyticsProgramId = null, bool? AgentAssistEnabled = null, bool? VoiceTranscriptionEnabled = null)
         {
             this.UtteranceId = UtteranceId;
             this.IsFinal = IsFinal;
             this.Channel = Channel;
             this.Alternatives = Alternatives;
             this.AgentAssistantId = AgentAssistantId;
+            this.EngineProvider = EngineProvider;
             this.EngineId = EngineId;
+            this.EngineName = EngineName;
             this.Dialect = Dialect;
             this.SpeechTextAnalyticsProgramId = SpeechTextAnalyticsProgramId;
             this.AgentAssistEnabled = AgentAssistEnabled;
@@ -126,10 +130,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets EngineProvider
+        /// </summary>
+        [DataMember(Name="engineProvider", EmitDefaultValue=false)]
+        public string EngineProvider { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets EngineId
         /// </summary>
         [DataMember(Name="engineId", EmitDefaultValue=false)]
         public string EngineId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets EngineName
+        /// </summary>
+        [DataMember(Name="engineName", EmitDefaultValue=false)]
+        public string EngineName { get; set; }
 
 
 
@@ -178,7 +198,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Channel: ").Append(Channel).Append("\n");
             sb.Append("  Alternatives: ").Append(Alternatives).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  EngineProvider: ").Append(EngineProvider).Append("\n");
             sb.Append("  EngineId: ").Append(EngineId).Append("\n");
+            sb.Append("  EngineName: ").Append(EngineName).Append("\n");
             sb.Append("  Dialect: ").Append(Dialect).Append("\n");
             sb.Append("  SpeechTextAnalyticsProgramId: ").Append(SpeechTextAnalyticsProgramId).Append("\n");
             sb.Append("  AgentAssistEnabled: ").Append(AgentAssistEnabled).Append("\n");
@@ -249,9 +271,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentAssistantId.Equals(other.AgentAssistantId)
                 ) &&
                 (
+                    this.EngineProvider == other.EngineProvider ||
+                    this.EngineProvider != null &&
+                    this.EngineProvider.Equals(other.EngineProvider)
+                ) &&
+                (
                     this.EngineId == other.EngineId ||
                     this.EngineId != null &&
                     this.EngineId.Equals(other.EngineId)
+                ) &&
+                (
+                    this.EngineName == other.EngineName ||
+                    this.EngineName != null &&
+                    this.EngineName.Equals(other.EngineName)
                 ) &&
                 (
                     this.Dialect == other.Dialect ||
@@ -301,8 +333,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
 
+                if (this.EngineProvider != null)
+                    hash = hash * 59 + this.EngineProvider.GetHashCode();
+
                 if (this.EngineId != null)
                     hash = hash * 59 + this.EngineId.GetHashCode();
+
+                if (this.EngineName != null)
+                    hash = hash * 59 + this.EngineName.GetHashCode();
 
                 if (this.Dialect != null)
                     hash = hash * 59 + this.Dialect.GetHashCode();

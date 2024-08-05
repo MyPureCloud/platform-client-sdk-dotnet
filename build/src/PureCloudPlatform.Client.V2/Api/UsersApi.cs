@@ -1270,7 +1270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
@@ -1293,7 +1293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
@@ -1315,7 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
@@ -1337,7 +1337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
@@ -1352,7 +1352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>DevelopmentActivity</returns>
         
         DevelopmentActivity GetUsersDevelopmentActivity (string activityId, string type);
@@ -1365,7 +1365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>ApiResponse of DevelopmentActivity</returns>
         
         ApiResponse<DevelopmentActivity> GetUsersDevelopmentActivityWithHttpInfo (string activityId, string type);
@@ -3852,7 +3852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
@@ -3875,7 +3875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
@@ -3897,7 +3897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
@@ -3919,7 +3919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
@@ -3934,7 +3934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>Task of DevelopmentActivity</returns>
         
         System.Threading.Tasks.Task<DevelopmentActivity> GetUsersDevelopmentActivityAsync (string activityId, string type);
@@ -3947,7 +3947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>Task of ApiResponse (DevelopmentActivity)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DevelopmentActivity>> GetUsersDevelopmentActivityAsyncWithHttpInfo (string activityId, string type);
@@ -15512,7 +15512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
@@ -15537,7 +15537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
@@ -15646,7 +15646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
@@ -15672,7 +15672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
@@ -15781,7 +15781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
@@ -15805,7 +15805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
@@ -15912,7 +15912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
@@ -15937,7 +15937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
-        /// <param name="types">Specifies the activity types. (optional)</param>
+        /// <param name="types">Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
@@ -16038,7 +16038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>DevelopmentActivity</returns>
         
         public DevelopmentActivity GetUsersDevelopmentActivity (string activityId, string type)
@@ -16053,7 +16053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>ApiResponse of DevelopmentActivity</returns>
         
         public ApiResponse< DevelopmentActivity > GetUsersDevelopmentActivityWithHttpInfo (string activityId, string type)
@@ -16148,7 +16148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>Task of DevelopmentActivity</returns>
         
         public async System.Threading.Tasks.Task<DevelopmentActivity> GetUsersDevelopmentActivityAsync (string activityId, string type)
@@ -16164,7 +16164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityId">Specifies the activity ID, maps to either assignment or appointment ID</param>
-        /// <param name="type">Specifies the activity type.</param>
+        /// <param name="type">Specifies the activity type. Informational, AssessedContent and Assessment are deprecated</param>
         /// <returns>Task of ApiResponse (DevelopmentActivity)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivity>> GetUsersDevelopmentActivityAsyncWithHttpInfo (string activityId, string type)

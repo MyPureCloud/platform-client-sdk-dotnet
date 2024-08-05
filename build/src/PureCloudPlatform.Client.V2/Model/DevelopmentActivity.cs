@@ -88,7 +88,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum External for "External"
             /// </summary>
             [EnumMember(Value = "External")]
-            External
+            External,
+            
+            /// <summary>
+            /// Enum Native for "Native"
+            /// </summary>
+            [EnumMember(Value = "Native")]
+            Native
         }
         /// <summary>
         /// The status of the activity

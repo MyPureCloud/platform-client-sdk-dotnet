@@ -157,7 +157,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Failed for "Failed"
             /// </summary>
             [EnumMember(Value = "Failed")]
-            Failed
+            Failed,
+            
+            /// <summary>
+            /// Enum Rated for "Rated"
+            /// </summary>
+            [EnumMember(Value = "Rated")]
+            Rated
         }
         /// <summary>
         /// The type of the documents for which the suggestion is.

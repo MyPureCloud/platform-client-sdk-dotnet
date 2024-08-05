@@ -549,6 +549,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionCertificateListing> GetIntegrationsActionsCertificatesWithHttpInfo (string status = null, string type = null);
 
         /// <summary>
+        /// Retrieves basic info about trusted root CA certificates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TrustedCertificates</returns>
+        
+        TrustedCertificates GetIntegrationsActionsCertificatesTruststore ();
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TrustedCertificates</returns>
+        
+        ApiResponse<TrustedCertificates> GetIntegrationsActionsCertificatesTruststoreWithHttpInfo ();
+
+        /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
         /// </summary>
         /// <remarks>
@@ -2815,6 +2837,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ActionCertificateListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionCertificateListing>> GetIntegrationsActionsCertificatesAsyncWithHttpInfo (string status = null, string type = null);
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TrustedCertificates</returns>
+        
+        System.Threading.Tasks.Task<TrustedCertificates> GetIntegrationsActionsCertificatesTruststoreAsync ();
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TrustedCertificates)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TrustedCertificates>> GetIntegrationsActionsCertificatesTruststoreAsyncWithHttpInfo ();
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -8861,6 +8905,204 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActionCertificateListing>(localVarStatusCode,
                 localVarHeaders,
                 (ActionCertificateListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActionCertificateListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>TrustedCertificates</returns>
+        
+        public TrustedCertificates GetIntegrationsActionsCertificatesTruststore ()
+        {
+             ApiResponse<TrustedCertificates> localVarResponse = GetIntegrationsActionsCertificatesTruststoreWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of TrustedCertificates</returns>
+        
+        public ApiResponse< TrustedCertificates > GetIntegrationsActionsCertificatesTruststoreWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/integrations/actions/certificates/truststore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificatesTruststore: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificatesTruststore: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustedCertificates>(localVarStatusCode,
+                localVarHeaders,
+                (TrustedCertificates) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustedCertificates)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of TrustedCertificates</returns>
+        
+        public async System.Threading.Tasks.Task<TrustedCertificates> GetIntegrationsActionsCertificatesTruststoreAsync ()
+        {
+             ApiResponse<TrustedCertificates> localVarResponse = await GetIntegrationsActionsCertificatesTruststoreAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves basic info about trusted root CA certificates 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (TrustedCertificates)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TrustedCertificates>> GetIntegrationsActionsCertificatesTruststoreAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/integrations/actions/certificates/truststore";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificatesTruststore: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsActionsCertificatesTruststore: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustedCertificates>(localVarStatusCode,
+                localVarHeaders,
+                (TrustedCertificates) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustedCertificates)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -141,7 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
@@ -167,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
@@ -192,7 +192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
@@ -217,7 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
@@ -360,7 +360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -382,7 +382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -1115,7 +1115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
@@ -1141,7 +1141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
@@ -1166,7 +1166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
@@ -1191,7 +1191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
@@ -1334,7 +1334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -1356,7 +1356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -2946,7 +2946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
@@ -2974,7 +2974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
@@ -3089,7 +3089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
@@ -3118,7 +3118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
         /// <param name="userId">Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
@@ -3233,7 +3233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>LearningAssignmentsDomainEntity</returns>
@@ -3260,7 +3260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>ApiResponse of LearningAssignmentsDomainEntity</returns>
@@ -3373,7 +3373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of LearningAssignmentsDomainEntity</returns>
@@ -3401,7 +3401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maxPercentageScore">The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)</param>
         /// <param name="sortOrder">Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
         /// <param name="sortBy">Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)</param>
-        /// <param name="types">Specifies the module types to filter by (optional)</param>
+        /// <param name="types">Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="states">Specifies the assignment states to filter by (optional)</param>
         /// <param name="expand">Specifies the expand option for returning additional information (optional)</param>
         /// <returns>Task of ApiResponse (LearningAssignmentsDomainEntity)</returns>
@@ -4598,7 +4598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -4622,7 +4622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -4729,7 +4729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
@@ -4754,7 +4754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isArchived">Archive status (optional, default to false)</param>
-        /// <param name="types">Specifies the module types. (optional)</param>
+        /// <param name="types">Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>

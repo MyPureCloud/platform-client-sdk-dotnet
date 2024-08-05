@@ -73,7 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Application">The client application details from which search happened..</param>
         /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
         /// <param name="ConfidenceThreshold">The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold..</param>
-        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null, float? ConfidenceThreshold = null)
+        /// <param name="AnswerGeneration">The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\"..</param>
+        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null, float? ConfidenceThreshold = null, KnowledgeAnswerGenerationResponse AnswerGeneration = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -82,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Application = Application;
             this.ConversationContext = ConversationContext;
             this.ConfidenceThreshold = ConfidenceThreshold;
+            this.AnswerGeneration = AnswerGeneration;
             
         }
         
@@ -178,6 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public float? ConfidenceThreshold { get; set; }
 
 
+
+        /// <summary>
+        /// The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\".
+        /// </summary>
+        /// <value>The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\".</value>
+        [DataMember(Name="answerGeneration", EmitDefaultValue=false)]
+        public KnowledgeAnswerGenerationResponse AnswerGeneration { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -198,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
             sb.Append("  ConfidenceThreshold: ").Append(ConfidenceThreshold).Append("\n");
+            sb.Append("  AnswerGeneration: ").Append(AnswerGeneration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -292,6 +304,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConfidenceThreshold == other.ConfidenceThreshold ||
                     this.ConfidenceThreshold != null &&
                     this.ConfidenceThreshold.Equals(other.ConfidenceThreshold)
+                ) &&
+                (
+                    this.AnswerGeneration == other.AnswerGeneration ||
+                    this.AnswerGeneration != null &&
+                    this.AnswerGeneration.Equals(other.AnswerGeneration)
                 );
         }
 
@@ -338,6 +355,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConfidenceThreshold != null)
                     hash = hash * 59 + this.ConfidenceThreshold.GetHashCode();
+
+                if (this.AnswerGeneration != null)
+                    hash = hash * 59 + this.AnswerGeneration.GetHashCode();
 
                 return hash;
             }

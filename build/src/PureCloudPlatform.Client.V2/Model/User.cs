@@ -360,6 +360,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The WFM work plan bid rank settings for the user
+        /// </summary>
+        /// <value>The WFM work plan bid rank settings for the user</value>
+        [DataMember(Name="workPlanBidRanks", EmitDefaultValue=false)]
+        public WorkPlanBidRanks WorkPlanBidRanks { get; private set; }
+
+
+
+        /// <summary>
         /// Routing (ACD) skills possessed by the user
         /// </summary>
         /// <value>Routing (ACD) skills possessed by the user</value>
@@ -459,6 +468,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
+            sb.Append("  WorkPlanBidRanks: ").Append(WorkPlanBidRanks).Append("\n");
             sb.Append("  Skills: ").Append(Skills).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
@@ -657,6 +667,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Team.Equals(other.Team)
                 ) &&
                 (
+                    this.WorkPlanBidRanks == other.WorkPlanBidRanks ||
+                    this.WorkPlanBidRanks != null &&
+                    this.WorkPlanBidRanks.Equals(other.WorkPlanBidRanks)
+                ) &&
+                (
                     this.Skills == other.Skills ||
                     this.Skills != null &&
                     this.Skills.SequenceEqual(other.Skills)
@@ -793,6 +808,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();
+
+                if (this.WorkPlanBidRanks != null)
+                    hash = hash * 59 + this.WorkPlanBidRanks.GetHashCode();
 
                 if (this.Skills != null)
                     hash = hash * 59 + this.Skills.GetHashCode();

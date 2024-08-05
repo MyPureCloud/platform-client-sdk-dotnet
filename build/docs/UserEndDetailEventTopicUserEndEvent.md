@@ -32,6 +32,7 @@ title: UserEndDetailEventTopicUserEndEvent
 | **AlertingDurationMs** | **int?** |  | [optional] |
 | **ContactingDurationMs** | **int?** |  | [optional] |
 | **DialingDurationMs** | **int?** |  | [optional] |
+| **CallbackDurationMs** | **int?** |  | [optional] |
 | **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}

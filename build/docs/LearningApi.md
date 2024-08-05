@@ -358,7 +358,7 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
             var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. (optional) 
-            var types = new List<string>(); // List<string> | Specifies the module types to filter by (optional) 
+            var types = new List<string>(); // List<string> | Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional) 
             var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) 
             var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) 
 
@@ -394,7 +394,7 @@ namespace Example
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **userId** | [**List<string>**](string.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional]  |
-| **types** | [**List<string>**](string.html)| Specifies the module types to filter by | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External |
+| **types** | [**List<string>**](string.html)| Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External, Native |
 | **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted, InvalidSchedule |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
@@ -447,7 +447,7 @@ namespace Example
             var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
-            var types = new List<string>(); // List<string> | Specifies the module types to filter by (optional) 
+            var types = new List<string>(); // List<string> | Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional) 
             var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) 
             var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) 
 
@@ -482,7 +482,7 @@ namespace Example
 | **maxPercentageScore** | **float?**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional]  |
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
-| **types** | [**List<string>**](string.html)| Specifies the module types to filter by | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External |
+| **types** | [**List<string>**](string.html)| Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External, Native |
 | **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted, InvalidSchedule |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
@@ -849,7 +849,7 @@ namespace Example
 
             var apiInstance = new LearningApi();
             var isArchived = true;  // bool? | Archive status (optional)  (default to false)
-            var types = new List<string>(); // List<string> | Specifies the module types. (optional) 
+            var types = new List<string>(); // List<string> | Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional) 
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
@@ -881,7 +881,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **isArchived** | **bool?**| Archive status | [optional] [default to false] |
-| **types** | [**List<string>**](string.html)| Specifies the module types. | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External |
+| **types** | [**List<string>**](string.html)| Specifies the module types. Informational, AssessedContent and Assessment are deprecated | [optional] <br />**Values**: Informational, AssessedContent, Assessment, External, Native |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |

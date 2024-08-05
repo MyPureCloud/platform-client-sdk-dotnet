@@ -17,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunittimeoffplan) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Deletes a time-off plan |
 | [**DeleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekschedule) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId} | Delete a schedule |
 | [**DeleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitweekshorttermforecast) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId} | Delete a short term forecast |
+| [**DeleteWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitworkplanbid) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId} | Delete a work plan bid |
+| [**DeleteWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementApi.html#deleteworkforcemanagementbusinessunitworkplanbidgroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId} | Delete a bid group by bid group Id |
 | [**DeleteWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#deleteworkforcemanagementcalendarurlics) | **Delete** /api/v2/workforcemanagement/calendar/url/ics | Disable generated calendar link for the current user |
 | [**DeleteWorkforcemanagementManagementunit**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunit) | **Delete** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Delete management unit |
 | [**DeleteWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementApi.html#deleteworkforcemanagementmanagementunittimeofflimit) | **Delete** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Deletes a time off limit object |
@@ -31,6 +33,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementApi.html#getworkforcemanagementagentadherenceexplanation) | **Get** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Get an adherence explanation |
 | [**GetWorkforcemanagementAgentManagementunit**](WorkforceManagementApi.html#getworkforcemanagementagentmanagementunit) | **Get** /api/v2/workforcemanagement/agents/{agentId}/managementunit | Get the management unit to which the agent belongs |
 | [**GetWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementApi.html#getworkforcemanagementagentsmemanagementunit) | **Get** /api/v2/workforcemanagement/agents/me/managementunit | Get the management unit to which the currently logged in agent belongs |
+| [**GetWorkforcemanagementAlternativeshiftsOffersJob**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftsoffersjob) | **Get** /api/v2/workforcemanagement/alternativeshifts/offers/jobs/{jobId} | Query the status of an alternative shift offers operation. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementAlternativeshiftsOffersSearchJob**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftsofferssearchjob) | **Get** /api/v2/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId} | Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementAlternativeshiftsSettings**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftssettings) | **Get** /api/v2/workforcemanagement/alternativeshifts/settings | Get alternative shifts settings from the current logged in agent’s business unit |
+| [**GetWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftstrade) | **Get** /api/v2/workforcemanagement/alternativeshifts/trades/{tradeId} | Get my alternative shift trade by trade ID |
+| [**GetWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftstrades) | **Get** /api/v2/workforcemanagement/alternativeshifts/trades | Get a list of my alternative shifts trades |
+| [**GetWorkforcemanagementAlternativeshiftsTradesJob**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftstradesjob) | **Get** /api/v2/workforcemanagement/alternativeshifts/trades/jobs/{jobId} | Query the status of an alternative shift trades operation. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementAlternativeshiftsTradesStateJob**](WorkforceManagementApi.html#getworkforcemanagementalternativeshiftstradesstatejob) | **Get** /api/v2/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId} | Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementBusinessunit**](WorkforceManagementApi.html#getworkforcemanagementbusinessunit) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Get business unit |
 | [**GetWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivitycode) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Get an activity code |
 | [**GetWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivitycodes) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Get activity codes |
@@ -38,6 +47,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitActivityplanRunsJob**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplanrunsjob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId} | Gets an activity plan run job |
 | [**GetWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Get activity plans |
 | [**GetWorkforcemanagementBusinessunitActivityplansJobs**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitactivityplansjobs) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs | Gets the latest job for all activity plans in the business unit |
+| [**GetWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitalternativeshiftssettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Get alternative shifts settings for a business unit |
+| [**GetWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitalternativeshiftstrade) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId} | Get an alternative shifts trade in a business unit for a given trade ID |
+| [**GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitalternativeshiftstradessearchjob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId} | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitintradayplanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups | Get intraday planning groups for the given date |
 | [**GetWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitmanagementunits) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits | Get all authorized management units in the business unit |
 | [**GetWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitplanninggroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Get a planning group |
@@ -67,6 +79,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecastplanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups | Gets the forecast planning group snapshot |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecaststaffingrequirement) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement | Get the staffing requirement by planning group for a forecast |
 | [**GetWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitweekshorttermforecasts) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts | Get short term forecasts |
+| [**GetWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitworkplanbid) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId} | Get a work plan bid |
+| [**GetWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitworkplanbidgroup) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId} | Get a bid group by bid group Id |
+| [**GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitworkplanbidgrouppreferences) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences | Gets the work plan preferences of all the agents in the work plan bid group |
+| [**GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummary**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitworkplanbidgroupssummary) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary | Get summary of bid groups that belong to a work plan bid |
+| [**GetWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitworkplanbids) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids | Get list of work plan bids |
 | [**GetWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#getworkforcemanagementbusinessunits) | **Get** /api/v2/workforcemanagement/businessunits | Get business units |
 | [**GetWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementApi.html#getworkforcemanagementbusinessunitsdivisionviews) | **Get** /api/v2/workforcemanagement/businessunits/divisionviews | Get business units across divisions |
 | [**GetWorkforcemanagementCalendarDataIcs**](WorkforceManagementApi.html#getworkforcemanagementcalendardataics) | **Get** /api/v2/workforcemanagement/calendar/data/ics | Get ics formatted calendar based on shareable link |
@@ -107,15 +124,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequestwaitlistpositions) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions | Get the daily waitlist positions of a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **Get** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
+| [**GetWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementApi.html#getworkforcemanagementuserworkplanbidranks) | **Get** /api/v2/workforcemanagement/users/{userId}/workplanbidranks | Get work plan bid ranks for a user |
+| [**GetWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementApi.html#getworkforcemanagementworkplanbidpreferences) | **Get** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Gets an agent&#39;s work plan bidding preference |
+| [**GetWorkforcemanagementWorkplanbidWorkplans**](WorkforceManagementApi.html#getworkforcemanagementworkplanbidworkplans) | **Get** /api/v2/workforcemanagement/workplanbids/{bidId}/workplans | Gets an agent&#39;s work plans for a bid |
+| [**GetWorkforcemanagementWorkplanbids**](WorkforceManagementApi.html#getworkforcemanagementworkplanbids) | **Get** /api/v2/workforcemanagement/workplanbids | Gets the list of work plan bids that belong to an agent |
 | [**PatchWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementApi.html#patchworkforcemanagementagentadherenceexplanation) | **Patch** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Update an adherence explanation |
+| [**PatchWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementApi.html#patchworkforcemanagementalternativeshiftstrade) | **Patch** /api/v2/workforcemanagement/alternativeshifts/trades/{tradeId} | Update my alternative shifts trade by trade ID |
+| [**PatchWorkforcemanagementAlternativeshiftsTradesStateJobs**](WorkforceManagementApi.html#patchworkforcemanagementalternativeshiftstradesstatejobs) | **Patch** /api/v2/workforcemanagement/alternativeshifts/trades/state/jobs | Bulk update alternative shift trade states |
 | [**PatchWorkforcemanagementBusinessunit**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunit) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Update business unit |
 | [**PatchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitactivitycode) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Update an activity code |
 | [**PatchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitactivityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Update an activity plan |
+| [**PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitalternativeshiftssettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Update alternative shifts settings for a business unit |
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitplanninggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitschedulingrun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitservicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
 | [**PatchWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitstaffinggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId} | Updates a staffing group |
 | [**PatchWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunittimeoffplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId} | Updates a time-off plan |
+| [**PatchWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitworkplanbid) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId} | Update work plan bid |
+| [**PatchWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitworkplanbidgroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId} | Update a bid group by bid group Id |
+| [**PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementApi.html#patchworkforcemanagementbusinessunitworkplanbidgrouppreferences) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences | Overrides the assigned work plan for the specified agents |
 | [**PatchWorkforcemanagementManagementunit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId} | Update the requested management unit |
 | [**PatchWorkforcemanagementManagementunitAgents**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitagents) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents | Update agent configurations |
 | [**PatchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunittimeofflimit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Updates a time off limit object. |
@@ -126,6 +153,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitworkplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
 | [**PatchWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementApi.html#patchworkforcemanagementmanagementunitworkplanrotation) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId} | Update a work plan rotation |
 | [**PatchWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementtimeoffrequest) | **Patch** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Update a time off request for the current user |
+| [**PatchWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementApi.html#patchworkforcemanagementuserworkplanbidranks) | **Patch** /api/v2/workforcemanagement/users/{userId}/workplanbidranks | Update work plan bid ranks for a user |
+| [**PatchWorkforcemanagementUsersWorkplanbidranksBulk**](WorkforceManagementApi.html#patchworkforcemanagementusersworkplanbidranksbulk) | **Patch** /api/v2/workforcemanagement/users/workplanbidranks/bulk | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
+| [**PatchWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementApi.html#patchworkforcemanagementworkplanbidpreferences) | **Patch** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Update an agent&#39;s work plan bidding preference |
 | [**PostWorkforcemanagementAdherenceExplanations**](WorkforceManagementApi.html#postworkforcemanagementadherenceexplanations) | **Post** /api/v2/workforcemanagement/adherence/explanations | Submit an adherence explanation for the current user |
 | [**PostWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementadherenceexplanationsquery) | **Post** /api/v2/workforcemanagement/adherence/explanations/query | Query adherence explanations for the current user |
 | [**PostWorkforcemanagementAdherenceHistorical**](WorkforceManagementApi.html#postworkforcemanagementadherencehistorical) | **Post** /api/v2/workforcemanagement/adherence/historical | Deprecated. Use bulk routes instead (/adherence/historical/bulk) |
@@ -136,11 +166,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementApi.html#postworkforcemanagementagentsintegrationshrisquery) | **Post** /api/v2/workforcemanagement/agents/integrations/hris/query | Query integrations for agents |
 | [**PostWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementApi.html#postworkforcemanagementagentsmepossibleworkshifts) | **Post** /api/v2/workforcemanagement/agents/me/possibleworkshifts | Get agent possible work shifts for requested time frame |
 | [**PostWorkforcemanagementAgentschedulesMine**](WorkforceManagementApi.html#postworkforcemanagementagentschedulesmine) | **Post** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
+| [**PostWorkforcemanagementAlternativeshiftsOffersJobs**](WorkforceManagementApi.html#postworkforcemanagementalternativeshiftsoffersjobs) | **Post** /api/v2/workforcemanagement/alternativeshifts/offers/jobs | Request a list of alternative shift offers for a given schedule |
+| [**PostWorkforcemanagementAlternativeshiftsOffersSearchJobs**](WorkforceManagementApi.html#postworkforcemanagementalternativeshiftsofferssearchjobs) | **Post** /api/v2/workforcemanagement/alternativeshifts/offers/search/jobs | Request a search of alternative shift offers for a given shift |
+| [**PostWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementApi.html#postworkforcemanagementalternativeshiftstrades) | **Post** /api/v2/workforcemanagement/alternativeshifts/trades | Create my alternative shift trade using an existing offer&#39;s jobId |
 | [**PostWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivitycodes) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Create a new activity code |
 | [**PostWorkforcemanagementBusinessunitActivityplanRunsJobs**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivityplanrunsjobs) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs | Run an activity plan manually |
 | [**PostWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans | Create an activity plan |
 | [**PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitadherenceexplanationsquery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query | Query adherence explanations across an entire business unit for the requested period |
 | [**PostWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitagentschedulessearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search | Search published schedules |
+| [**PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitalternativeshiftstradessearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search | List alternative shifts trades for a given management unit or agent |
 | [**PostWorkforcemanagementBusinessunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitintraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
 | [**PostWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitplanninggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Adds a new planning group |
 | [**PostWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitservicegoaltemplates) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Adds a new service goal template |
@@ -164,6 +198,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastsgenerate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate | Generate a short term forecast |
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastsimport) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import | Starts importing the uploaded short term forecast |
 | [**PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitweekshorttermforecastsimportuploadurl) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl | Creates a signed upload URL for importing a short term forecast |
+| [**PostWorkforcemanagementBusinessunitWorkplanbidCopy**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitworkplanbidcopy) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy | Copy a work plan bid |
+| [**PostWorkforcemanagementBusinessunitWorkplanbidGroups**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitworkplanbidgroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups | Add a bid group in a given work plan bid |
+| [**PostWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitworkplanbids) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids | Create a new work plan bid |
 | [**PostWorkforcemanagementBusinessunits**](WorkforceManagementApi.html#postworkforcemanagementbusinessunits) | **Post** /api/v2/workforcemanagement/businessunits | Add a new business unit |
 | [**PostWorkforcemanagementCalendarUrlIcs**](WorkforceManagementApi.html#postworkforcemanagementcalendarurlics) | **Post** /api/v2/workforcemanagement/calendar/url/ics | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
 | [**PostWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementApi.html#postworkforcemanagementhistoricaldatadeletejob) | **Post** /api/v2/workforcemanagement/historicaldata/deletejob | Delete the entries of the historical data imports in the organization |
@@ -849,6 +886,136 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteworkforcemanagementbusinessunitworkplanbid"></a>
+
+## void DeleteWorkforcemanagementBusinessunitWorkplanbid (string businessUnitId, string bidId)
+
+
+
+Delete a work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitWorkplanbidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the work plan bid
+
+            try
+            { 
+                // Delete a work plan bid
+                apiInstance.DeleteWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitWorkplanbid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the work plan bid |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteworkforcemanagementbusinessunitworkplanbidgroup"></a>
+
+## void DeleteWorkforcemanagementBusinessunitWorkplanbidGroup (string businessUnitId, string bidId, string bidGroupId)
+
+
+
+Delete a bid group by bid group Id
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitWorkplanbidGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+            var bidGroupId = bidGroupId_example;  // string | Work Plan Bid Group id
+
+            try
+            { 
+                // Delete a bid group by bid group Id
+                apiInstance.DeleteWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitWorkplanbidGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+| **bidGroupId** | **string**| Work Plan Bid Group id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1798,6 +1965,450 @@ This endpoint does require any parameters.
 
 [**AgentManagementUnitReference**](AgentManagementUnitReference.html)
 
+<a name="getworkforcemanagementalternativeshiftsoffersjob"></a>
+
+## [**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html) GetWorkforcemanagementAlternativeshiftsOffersJob (string jobId)
+
+
+
+Query the status of an alternative shift offers operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsOffersJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job
+
+            try
+            { 
+                // Query the status of an alternative shift offers operation. Only the user who started the operation can query the status
+                AlternativeShiftJobResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsOffersJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsOffersJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
+
+<a name="getworkforcemanagementalternativeshiftsofferssearchjob"></a>
+
+## [**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html) GetWorkforcemanagementAlternativeshiftsOffersSearchJob (string jobId)
+
+
+
+Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsOffersSearchJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job
+
+            try
+            { 
+                // Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status
+                AlternativeShiftJobResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsOffersSearchJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsOffersSearchJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
+
+<a name="getworkforcemanagementalternativeshiftssettings"></a>
+
+## [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html) GetWorkforcemanagementAlternativeshiftsSettings ()
+
+
+
+Get alternative shifts settings from the current logged in agent’s business unit
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Get alternative shifts settings from the current logged in agent’s business unit
+                AlternativeShiftBuSettingsResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html)
+
+<a name="getworkforcemanagementalternativeshiftstrade"></a>
+
+## [**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html) GetWorkforcemanagementAlternativeshiftsTrade (string tradeId)
+
+
+
+Get my alternative shift trade by trade ID
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsTradeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var tradeId = tradeId_example;  // string | The ID of the alternative shift trade
+
+            try
+            { 
+                // Get my alternative shift trade by trade ID
+                AlternativeShiftTradeResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsTrade(tradeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsTrade: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tradeId** | **string**| The ID of the alternative shift trade |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
+
+<a name="getworkforcemanagementalternativeshiftstrades"></a>
+
+## [**ListAlternativeShiftTradesResponse**](ListAlternativeShiftTradesResponse.html) GetWorkforcemanagementAlternativeshiftsTrades (bool? forceAsync = null)
+
+
+
+Get a list of my alternative shifts trades
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsTradesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Get a list of my alternative shifts trades
+                ListAlternativeShiftTradesResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsTrades(forceAsync);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsTrades: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ListAlternativeShiftTradesResponse**](ListAlternativeShiftTradesResponse.html)
+
+<a name="getworkforcemanagementalternativeshiftstradesjob"></a>
+
+## [**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html) GetWorkforcemanagementAlternativeshiftsTradesJob (string jobId)
+
+
+
+Query the status of an alternative shift trades operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsTradesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job
+
+            try
+            { 
+                // Query the status of an alternative shift trades operation. Only the user who started the operation can query the status
+                AlternativeShiftJobResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsTradesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsTradesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
+
+<a name="getworkforcemanagementalternativeshiftstradesstatejob"></a>
+
+## [**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html) GetWorkforcemanagementAlternativeshiftsTradesStateJob (string jobId)
+
+
+
+Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires ANY permissions: 
+
+* wfm:alternativeShift:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAlternativeshiftsTradesStateJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job
+
+            try
+            { 
+                // Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status
+                AlternativeShiftJobResponse result = apiInstance.GetWorkforcemanagementAlternativeshiftsTradesStateJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAlternativeshiftsTradesStateJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
+
 <a name="getworkforcemanagementbusinessunit"></a>
 
 ## [**BusinessUnitResponse**](BusinessUnitResponse.html) GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
@@ -2390,6 +3001,201 @@ namespace Example
 ### Return type
 
 [**ActivityPlanJobListing**](ActivityPlanJobListing.html)
+
+<a name="getworkforcemanagementbusinessunitalternativeshiftssettings"></a>
+
+## [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html) GetWorkforcemanagementBusinessunitAlternativeshiftsSettings (string businessUnitId)
+
+
+
+Get alternative shifts settings for a business unit
+
+Requires ANY permissions: 
+
+* wfm:businessUnit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAlternativeshiftsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get alternative shifts settings for a business unit
+                AlternativeShiftBuSettingsResponse result = apiInstance.GetWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAlternativeshiftsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html)
+
+<a name="getworkforcemanagementbusinessunitalternativeshiftstrade"></a>
+
+## [**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html) GetWorkforcemanagementBusinessunitAlternativeshiftsTrade (string businessUnitId, string tradeId)
+
+
+
+Get an alternative shifts trade in a business unit for a given trade ID
+
+Requires ANY permissions: 
+
+* wfm:alternativeShift:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAlternativeshiftsTradeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var tradeId = tradeId_example;  // string | The ID of the alternative shift trade
+
+            try
+            { 
+                // Get an alternative shifts trade in a business unit for a given trade ID
+                AlternativeShiftTradeResponse result = apiInstance.GetWorkforcemanagementBusinessunitAlternativeshiftsTrade(businessUnitId, tradeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAlternativeshiftsTrade: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **tradeId** | **string**| The ID of the alternative shift trade |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
+
+<a name="getworkforcemanagementbusinessunitalternativeshiftstradessearchjob"></a>
+
+## [**BuAlternativeShiftJobResponse**](BuAlternativeShiftJobResponse.html) GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob (string businessUnitId, string jobId)
+
+
+
+Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires ANY permissions: 
+
+* wfm:alternativeShift:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var jobId = jobId_example;  // string | The ID of the job
+
+            try
+            { 
+                // Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status
+                BuAlternativeShiftJobResponse result = apiInstance.GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob(businessUnitId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **jobId** | **string**| The ID of the job |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuAlternativeShiftJobResponse**](BuAlternativeShiftJobResponse.html)
 
 <a name="getworkforcemanagementbusinessunitintradayplanninggroups"></a>
 
@@ -4357,6 +5163,333 @@ namespace Example
 ### Return type
 
 [**BuShortTermForecastListing**](BuShortTermForecastListing.html)
+
+<a name="getworkforcemanagementbusinessunitworkplanbid"></a>
+
+## [**WorkPlanBid**](WorkPlanBid.html) GetWorkforcemanagementBusinessunitWorkplanbid (string businessUnitId, string bidId)
+
+
+
+Get a work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWorkplanbidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The id of the workplanbid
+
+            try
+            { 
+                // Get a work plan bid
+                WorkPlanBid result = apiInstance.GetWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWorkplanbid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The id of the workplanbid |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBid**](WorkPlanBid.html)
+
+<a name="getworkforcemanagementbusinessunitworkplanbidgroup"></a>
+
+## [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html) GetWorkforcemanagementBusinessunitWorkplanbidGroup (string businessUnitId, string bidId, string bidGroupId)
+
+
+
+Get a bid group by bid group Id
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWorkplanbidGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+            var bidGroupId = bidGroupId_example;  // string | Work Plan Bid Group id
+
+            try
+            { 
+                // Get a bid group by bid group Id
+                WorkPlanBidGroupResponse result = apiInstance.GetWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWorkplanbidGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+| **bidGroupId** | **string**| Work Plan Bid Group id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html)
+
+<a name="getworkforcemanagementbusinessunitworkplanbidgrouppreferences"></a>
+
+## [**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse.html) GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferences (string businessUnitId, string bidId, string bidGroupId)
+
+
+
+Gets the work plan preferences of all the agents in the work plan bid group
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+            var bidGroupId = bidGroupId_example;  // string | The ID of the work plan bid group
+
+            try
+            { 
+                // Gets the work plan preferences of all the agents in the work plan bid group
+                AdminAgentWorkPlanPreferenceResponse result = apiInstance.GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+| **bidGroupId** | **string**| The ID of the work plan bid group |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse.html)
+
+<a name="getworkforcemanagementbusinessunitworkplanbidgroupssummary"></a>
+
+## [**WorkPlanBidGroupSummaryList**](WorkPlanBidGroupSummaryList.html) GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummary (string businessUnitId, string bidId)
+
+
+
+Get summary of bid groups that belong to a work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummaryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+
+            try
+            { 
+                // Get summary of bid groups that belong to a work plan bid
+                WorkPlanBidGroupSummaryList result = apiInstance.GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummary(businessUnitId, bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummary: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidGroupSummaryList**](WorkPlanBidGroupSummaryList.html)
+
+<a name="getworkforcemanagementbusinessunitworkplanbids"></a>
+
+## [**WorkPlanBidListResponse**](WorkPlanBidListResponse.html) GetWorkforcemanagementBusinessunitWorkplanbids (string businessUnitId)
+
+
+
+Get list of work plan bids
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitWorkplanbidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get list of work plan bids
+                WorkPlanBidListResponse result = apiInstance.GetWorkforcemanagementBusinessunitWorkplanbids(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitWorkplanbids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidListResponse**](WorkPlanBidListResponse.html)
 
 <a name="getworkforcemanagementbusinessunits"></a>
 
@@ -7047,6 +8180,253 @@ namespace Example
 
 [**TimeOffRequestList**](TimeOffRequestList.html)
 
+<a name="getworkforcemanagementuserworkplanbidranks"></a>
+
+## [**WorkPlanBidRanks**](WorkPlanBidRanks.html) GetWorkforcemanagementUserWorkplanbidranks (string userId)
+
+
+
+Get work plan bid ranks for a user
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementUserWorkplanbidranksExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var userId = userId_example;  // string | The userId to whom the work plan bid ranks apply.
+
+            try
+            { 
+                // Get work plan bid ranks for a user
+                WorkPlanBidRanks result = apiInstance.GetWorkforcemanagementUserWorkplanbidranks(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementUserWorkplanbidranks: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| The userId to whom the work plan bid ranks apply. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidRanks**](WorkPlanBidRanks.html)
+
+<a name="getworkforcemanagementworkplanbidpreferences"></a>
+
+## [**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse.html) GetWorkforcemanagementWorkplanbidPreferences (string bidId)
+
+
+
+Gets an agent's work plan bidding preference
+
+Requires ANY permissions: 
+
+* wfm:agentWorkPlanBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementWorkplanbidPreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var bidId = bidId_example;  // string | The ID of the work plan bid
+
+            try
+            { 
+                // Gets an agent's work plan bidding preference
+                AgentWorkPlanBiddingPreferenceResponse result = apiInstance.GetWorkforcemanagementWorkplanbidPreferences(bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementWorkplanbidPreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bidId** | **string**| The ID of the work plan bid |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse.html)
+
+<a name="getworkforcemanagementworkplanbidworkplans"></a>
+
+## [**AgentWorkPlanListResponse**](AgentWorkPlanListResponse.html) GetWorkforcemanagementWorkplanbidWorkplans (string bidId)
+
+
+
+Gets an agent's work plans for a bid
+
+Requires ANY permissions: 
+
+* wfm:agentWorkPlanBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementWorkplanbidWorkplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var bidId = bidId_example;  // string | The ID of the work plan bid
+
+            try
+            { 
+                // Gets an agent's work plans for a bid
+                AgentWorkPlanListResponse result = apiInstance.GetWorkforcemanagementWorkplanbidWorkplans(bidId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementWorkplanbidWorkplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bidId** | **string**| The ID of the work plan bid |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentWorkPlanListResponse**](AgentWorkPlanListResponse.html)
+
+<a name="getworkforcemanagementworkplanbids"></a>
+
+## [**AgentWorkPlanBids**](AgentWorkPlanBids.html) GetWorkforcemanagementWorkplanbids ()
+
+
+
+Gets the list of work plan bids that belong to an agent
+
+Requires ANY permissions: 
+
+* wfm:agentWorkPlanBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementWorkplanbidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Gets the list of work plan bids that belong to an agent
+                AgentWorkPlanBids result = apiInstance.GetWorkforcemanagementWorkplanbids();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementWorkplanbids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**AgentWorkPlanBids**](AgentWorkPlanBids.html)
+
 <a name="patchworkforcemanagementagentadherenceexplanation"></a>
 
 ## [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html) PatchWorkforcemanagementAgentAdherenceExplanation (string agentId, string explanationId, UpdateAdherenceExplanationStatusRequest body)
@@ -7113,6 +8493,134 @@ namespace Example
 ### Return type
 
 [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
+
+<a name="patchworkforcemanagementalternativeshiftstrade"></a>
+
+## [**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html) PatchWorkforcemanagementAlternativeshiftsTrade (string tradeId, AgentUpdateAlternativeShiftTradeRequest body = null)
+
+
+
+Update my alternative shifts trade by trade ID
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementAlternativeshiftsTradeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var tradeId = tradeId_example;  // string | The ID of the alternative shift trade
+            var body = new AgentUpdateAlternativeShiftTradeRequest(); // AgentUpdateAlternativeShiftTradeRequest | body (optional) 
+
+            try
+            { 
+                // Update my alternative shifts trade by trade ID
+                AlternativeShiftTradeResponse result = apiInstance.PatchWorkforcemanagementAlternativeshiftsTrade(tradeId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementAlternativeshiftsTrade: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **tradeId** | **string**| The ID of the alternative shift trade |  |
+| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
+
+<a name="patchworkforcemanagementalternativeshiftstradesstatejobs"></a>
+
+## [**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html) PatchWorkforcemanagementAlternativeshiftsTradesStateJobs (AdminBulkUpdateAlternativeShiftTradeStateRequest body)
+
+
+
+Bulk update alternative shift trade states
+
+Requires ANY permissions: 
+
+* wfm:alternativeShift:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementAlternativeshiftsTradesStateJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AdminBulkUpdateAlternativeShiftTradeStateRequest(); // AdminBulkUpdateAlternativeShiftTradeStateRequest | The request body
+
+            try
+            { 
+                // Bulk update alternative shift trade states
+                AlternativeShiftAsyncResponse result = apiInstance.PatchWorkforcemanagementAlternativeshiftsTradesStateJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementAlternativeshiftsTradesStateJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AdminBulkUpdateAlternativeShiftTradeStateRequest**](AdminBulkUpdateAlternativeShiftTradeStateRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html)
 
 <a name="patchworkforcemanagementbusinessunit"></a>
 
@@ -7316,6 +8824,71 @@ namespace Example
 ### Return type
 
 [**ActivityPlanResponse**](ActivityPlanResponse.html)
+
+<a name="patchworkforcemanagementbusinessunitalternativeshiftssettings"></a>
+
+## [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html) PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings (string businessUnitId, UpdateAlternativeShiftBuSettingsRequest body = null)
+
+
+
+Update alternative shifts settings for a business unit
+
+Requires ANY permissions: 
+
+* wfm:businessUnit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitAlternativeshiftsSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new UpdateAlternativeShiftBuSettingsRequest(); // UpdateAlternativeShiftBuSettingsRequest | body (optional) 
+
+            try
+            { 
+                // Update alternative shifts settings for a business unit
+                AlternativeShiftBuSettingsResponse result = apiInstance.PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html)
 
 <a name="patchworkforcemanagementbusinessunitplanninggroup"></a>
 
@@ -7650,6 +9223,211 @@ namespace Example
 ### Return type
 
 [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
+
+<a name="patchworkforcemanagementbusinessunitworkplanbid"></a>
+
+## [**WorkPlanBid**](WorkPlanBid.html) PatchWorkforcemanagementBusinessunitWorkplanbid (string businessUnitId, string bidId, UpdateWorkPlanBid body)
+
+
+
+Update work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitWorkplanbidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The id of the workplanbid
+            var body = new UpdateWorkPlanBid(); // UpdateWorkPlanBid | The work plan bid to be updated
+
+            try
+            { 
+                // Update work plan bid
+                WorkPlanBid result = apiInstance.PatchWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitWorkplanbid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The id of the workplanbid |  |
+| **body** | [**UpdateWorkPlanBid**](UpdateWorkPlanBid.html)| The work plan bid to be updated |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBid**](WorkPlanBid.html)
+
+<a name="patchworkforcemanagementbusinessunitworkplanbidgroup"></a>
+
+## [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html) PatchWorkforcemanagementBusinessunitWorkplanbidGroup (string businessUnitId, string bidId, string bidGroupId, WorkPlanBidGroupUpdate body = null)
+
+
+
+Update a bid group by bid group Id
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitWorkplanbidGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+            var bidGroupId = bidGroupId_example;  // string | Work Plan Bid Group id
+            var body = new WorkPlanBidGroupUpdate(); // WorkPlanBidGroupUpdate | body (optional) 
+
+            try
+            { 
+                // Update a bid group by bid group Id
+                WorkPlanBidGroupResponse result = apiInstance.PatchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitWorkplanbidGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+| **bidGroupId** | **string**| Work Plan Bid Group id |  |
+| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html)
+
+<a name="patchworkforcemanagementbusinessunitworkplanbidgrouppreferences"></a>
+
+## [**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse.html) PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences (string businessUnitId, string bidId, string bidGroupId, AgentsBidAssignedWorkPlanOverrideRequest body = null)
+
+
+
+Overrides the assigned work plan for the specified agents
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+            var bidGroupId = bidGroupId_example;  // string | The ID of the work plan bid group
+            var body = new AgentsBidAssignedWorkPlanOverrideRequest(); // AgentsBidAssignedWorkPlanOverrideRequest | body (optional) 
+
+            try
+            { 
+                // Overrides the assigned work plan for the specified agents
+                AdminAgentWorkPlanPreferenceResponse result = apiInstance.PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+| **bidGroupId** | **string**| The ID of the work plan bid group |  |
+| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse.html)
 
 <a name="patchworkforcemanagementmanagementunit"></a>
 
@@ -8324,6 +10102,199 @@ namespace Example
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse.html)
 
+<a name="patchworkforcemanagementuserworkplanbidranks"></a>
+
+## [**WorkPlanBidRanks**](WorkPlanBidRanks.html) PatchWorkforcemanagementUserWorkplanbidranks (string userId, WorkPlanBidRanks body = null)
+
+
+
+Update work plan bid ranks for a user
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementUserWorkplanbidranksExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var userId = userId_example;  // string | The userId to whom the work plan bid ranks apply.
+            var body = new WorkPlanBidRanks(); // WorkPlanBidRanks | body (optional) 
+
+            try
+            { 
+                // Update work plan bid ranks for a user
+                WorkPlanBidRanks result = apiInstance.PatchWorkforcemanagementUserWorkplanbidranks(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementUserWorkplanbidranks: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| The userId to whom the work plan bid ranks apply. |  |
+| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidRanks**](WorkPlanBidRanks.html)
+
+<a name="patchworkforcemanagementusersworkplanbidranksbulk"></a>
+
+## [**EntityListing**](EntityListing.html) PatchWorkforcemanagementUsersWorkplanbidranksBulk (List<WorkPlanBidRanks> body)
+
+
+
+Update bulk work plan bid ranks on users. Max 50 users can be updated at a time.
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementUsersWorkplanbidranksBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new List<WorkPlanBidRanks>(); // List<WorkPlanBidRanks> | Users
+
+            try
+            { 
+                // Update bulk work plan bid ranks on users. Max 50 users can be updated at a time.
+                EntityListing result = apiInstance.PatchWorkforcemanagementUsersWorkplanbidranksBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementUsersWorkplanbidranksBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<WorkPlanBidRanks>**](WorkPlanBidRanks.html)| Users |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
+
+<a name="patchworkforcemanagementworkplanbidpreferences"></a>
+
+## [**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse.html) PatchWorkforcemanagementWorkplanbidPreferences (string bidId, UpdateAgentWorkPlanBiddingPreference body = null)
+
+
+
+Update an agent's work plan bidding preference
+
+Requires ANY permissions: 
+
+* wfm:agentWorkPlanBid:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementWorkplanbidPreferencesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var bidId = bidId_example;  // string | The ID of the work plan bid
+            var body = new UpdateAgentWorkPlanBiddingPreference(); // UpdateAgentWorkPlanBiddingPreference | body (optional) 
+
+            try
+            { 
+                // Update an agent's work plan bidding preference
+                AgentWorkPlanBiddingPreferenceResponse result = apiInstance.PatchWorkforcemanagementWorkplanbidPreferences(bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementWorkplanbidPreferences: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **bidId** | **string**| The ID of the work plan bid |  |
+| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse.html)
+
 <a name="postworkforcemanagementadherenceexplanations"></a>
 
 ## [**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html) PostWorkforcemanagementAdherenceExplanations (AddAdherenceExplanationAgentRequest body)
@@ -8966,6 +10937,195 @@ namespace Example
 
 [**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse.html)
 
+<a name="postworkforcemanagementalternativeshiftsoffersjobs"></a>
+
+## [**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html) PostWorkforcemanagementAlternativeshiftsOffersJobs (AlternativeShiftOffersRequest body)
+
+
+
+Request a list of alternative shift offers for a given schedule
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAlternativeshiftsOffersJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AlternativeShiftOffersRequest(); // AlternativeShiftOffersRequest | The request body
+
+            try
+            { 
+                // Request a list of alternative shift offers for a given schedule
+                AlternativeShiftAsyncResponse result = apiInstance.PostWorkforcemanagementAlternativeshiftsOffersJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAlternativeshiftsOffersJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AlternativeShiftOffersRequest**](AlternativeShiftOffersRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html)
+
+<a name="postworkforcemanagementalternativeshiftsofferssearchjobs"></a>
+
+## [**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html) PostWorkforcemanagementAlternativeshiftsOffersSearchJobs (AlternativeShiftSearchOffersRequest body)
+
+
+
+Request a search of alternative shift offers for a given shift
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAlternativeshiftsOffersSearchJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AlternativeShiftSearchOffersRequest(); // AlternativeShiftSearchOffersRequest | The request body
+
+            try
+            { 
+                // Request a search of alternative shift offers for a given shift
+                AlternativeShiftAsyncResponse result = apiInstance.PostWorkforcemanagementAlternativeshiftsOffersSearchJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAlternativeshiftsOffersSearchJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AlternativeShiftSearchOffersRequest**](AlternativeShiftSearchOffersRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html)
+
+<a name="postworkforcemanagementalternativeshiftstrades"></a>
+
+## [**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html) PostWorkforcemanagementAlternativeshiftsTrades (CreateAlternativeShiftTradeRequest body)
+
+
+
+Create my alternative shift trade using an existing offer's jobId
+
+Requires ANY permissions: 
+
+* wfm:agentAlternativeShift:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAlternativeshiftsTradesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new CreateAlternativeShiftTradeRequest(); // CreateAlternativeShiftTradeRequest | The request body
+
+            try
+            { 
+                // Create my alternative shift trade using an existing offer's jobId
+                AlternativeShiftTradeResponse result = apiInstance.PostWorkforcemanagementAlternativeshiftsTrades(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAlternativeshiftsTrades: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateAlternativeShiftTradeRequest**](CreateAlternativeShiftTradeRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
+
 <a name="postworkforcemanagementbusinessunitactivitycodes"></a>
 
 ## [**BusinessUnitActivityCode**](BusinessUnitActivityCode.html) PostWorkforcemanagementBusinessunitActivitycodes (string businessUnitId, CreateActivityCodeRequest body = null)
@@ -9305,6 +11465,73 @@ namespace Example
 ### Return type
 
 [**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html)
+
+<a name="postworkforcemanagementbusinessunitalternativeshiftstradessearch"></a>
+
+## [**BuListAlternativeShiftTradesResponse**](BuListAlternativeShiftTradesResponse.html) PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch (string businessUnitId, SearchAlternativeShiftTradesRequest body, bool? forceAsync = null)
+
+
+
+List alternative shifts trades for a given management unit or agent
+
+Requires ANY permissions: 
+
+* wfm:alternativeShift:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new SearchAlternativeShiftTradesRequest(); // SearchAlternativeShiftTradesRequest | The request body
+            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
+
+            try
+            { 
+                // List alternative shifts trades for a given management unit or agent
+                BuListAlternativeShiftTradesResponse result = apiInstance.PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch(businessUnitId, body, forceAsync);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**SearchAlternativeShiftTradesRequest**](SearchAlternativeShiftTradesRequest.html)| The request body |  |
+| **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BuListAlternativeShiftTradesResponse**](BuListAlternativeShiftTradesResponse.html)
 
 <a name="postworkforcemanagementbusinessunitintraday"></a>
 
@@ -10869,6 +13096,205 @@ namespace Example
 ### Return type
 
 [**ImportForecastUploadResponse**](ImportForecastUploadResponse.html)
+
+<a name="postworkforcemanagementbusinessunitworkplanbidcopy"></a>
+
+## [**WorkPlanBid**](WorkPlanBid.html) PostWorkforcemanagementBusinessunitWorkplanbidCopy (string businessUnitId, string bidId, CopyWorkPlanBid body = null)
+
+
+
+Copy a work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWorkplanbidCopyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The ID of the work plan bid to copy
+            var body = new CopyWorkPlanBid(); // CopyWorkPlanBid | body (optional) 
+
+            try
+            { 
+                // Copy a work plan bid
+                WorkPlanBid result = apiInstance.PostWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId, bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitWorkplanbidCopy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The ID of the work plan bid to copy |  |
+| **body** | [**CopyWorkPlanBid**](CopyWorkPlanBid.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBid**](WorkPlanBid.html)
+
+<a name="postworkforcemanagementbusinessunitworkplanbidgroups"></a>
+
+## [**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html) PostWorkforcemanagementBusinessunitWorkplanbidGroups (string businessUnitId, string bidId, WorkPlanBidGroupCreate body = null)
+
+
+
+Add a bid group in a given work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBidGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWorkplanbidGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var bidId = bidId_example;  // string | The work plan bid id of the bid groups
+            var body = new WorkPlanBidGroupCreate(); // WorkPlanBidGroupCreate | body (optional) 
+
+            try
+            { 
+                // Add a bid group in a given work plan bid
+                WorkPlanBidGroupResponse result = apiInstance.PostWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId, bidId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitWorkplanbidGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **bidId** | **string**| The work plan bid id of the bid groups |  |
+| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html)
+
+<a name="postworkforcemanagementbusinessunitworkplanbids"></a>
+
+## [**WorkPlanBid**](WorkPlanBid.html) PostWorkforcemanagementBusinessunitWorkplanbids (string businessUnitId, CreateWorkPlanBid body = null)
+
+
+
+Create a new work plan bid
+
+Requires ANY permissions: 
+
+* wfm:workPlanBid:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWorkplanbidsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CreateWorkPlanBid(); // CreateWorkPlanBid | The work plan bid to be created (optional) 
+
+            try
+            { 
+                // Create a new work plan bid
+                WorkPlanBid result = apiInstance.PostWorkforcemanagementBusinessunitWorkplanbids(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitWorkplanbids: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid.html)| The work plan bid to be created | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WorkPlanBid**](WorkPlanBid.html)
 
 <a name="postworkforcemanagementbusinessunits"></a>
 

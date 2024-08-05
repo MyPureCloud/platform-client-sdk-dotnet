@@ -306,7 +306,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DebugVersion">DebugVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        /// <param name="WorktypeId">WorktypeId.</param>
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, string WorktypeId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -326,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DebugVersion = DebugVersion;
             this.PublishedBy = PublishedBy;
             this.CurrentOperation = CurrentOperation;
+            this.WorktypeId = WorktypeId;
             
         }
         
@@ -504,6 +506,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets WorktypeId
+        /// </summary>
+        [DataMember(Name="worktypeId", EmitDefaultValue=false)]
+        public string WorktypeId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -541,6 +551,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
             sb.Append("  SupportedLanguages: ").Append(SupportedLanguages).Append("\n");
             sb.Append("  CompatibleFlowTypes: ").Append(CompatibleFlowTypes).Append("\n");
+            sb.Append("  WorktypeId: ").Append(WorktypeId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -688,6 +699,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CompatibleFlowTypes.SequenceEqual(other.CompatibleFlowTypes)
                 ) &&
                 (
+                    this.WorktypeId == other.WorktypeId ||
+                    this.WorktypeId != null &&
+                    this.WorktypeId.Equals(other.WorktypeId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -767,6 +783,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CompatibleFlowTypes != null)
                     hash = hash * 59 + this.CompatibleFlowTypes.GetHashCode();
+
+                if (this.WorktypeId != null)
+                    hash = hash * 59 + this.WorktypeId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

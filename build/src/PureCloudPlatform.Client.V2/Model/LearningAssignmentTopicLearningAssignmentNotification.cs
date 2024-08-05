@@ -69,10 +69,47 @@ namespace PureCloudPlatform.Client.V2.Model
             Invalidschedule
         }
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Native for "Native"
+            /// </summary>
+            [EnumMember(Value = "Native")]
+            Native,
+            
+            /// <summary>
+            /// Enum External for "External"
+            /// </summary>
+            [EnumMember(Value = "External")]
+            External
+        }
+        /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentTopicLearningAssignmentNotification" /> class.
         /// </summary>
@@ -88,7 +125,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">DateModified.</param>
         /// <param name="IsOverdue">IsOverdue.</param>
         /// <param name="LengthInMinutes">LengthInMinutes.</param>
-        public LearningAssignmentTopicLearningAssignmentNotification(string Id = null, LearningAssignmentTopicUserReference User = null, LearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, LearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, LearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null, int? LengthInMinutes = null)
+        /// <param name="PercentageScore">PercentageScore.</param>
+        /// <param name="IsPassed">IsPassed.</param>
+        /// <param name="Type">Type.</param>
+        public LearningAssignmentTopicLearningAssignmentNotification(string Id = null, LearningAssignmentTopicUserReference User = null, LearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, LearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, LearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null, int? LengthInMinutes = null, double? PercentageScore = null, bool? IsPassed = null, TypeEnum? Type = null)
         {
             this.Id = Id;
             this.User = User;
@@ -102,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.IsOverdue = IsOverdue;
             this.LengthInMinutes = LengthInMinutes;
+            this.PercentageScore = PercentageScore;
+            this.IsPassed = IsPassed;
+            this.Type = Type;
             
         }
         
@@ -196,6 +239,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? LengthInMinutes { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets PercentageScore
+        /// </summary>
+        [DataMember(Name="percentageScore", EmitDefaultValue=false)]
+        public double? PercentageScore { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets IsPassed
+        /// </summary>
+        [DataMember(Name="isPassed", EmitDefaultValue=false)]
+        public bool? IsPassed { get; set; }
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -217,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  IsOverdue: ").Append(IsOverdue).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
+            sb.Append("  PercentageScore: ").Append(PercentageScore).Append("\n");
+            sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -316,6 +380,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LengthInMinutes == other.LengthInMinutes ||
                     this.LengthInMinutes != null &&
                     this.LengthInMinutes.Equals(other.LengthInMinutes)
+                ) &&
+                (
+                    this.PercentageScore == other.PercentageScore ||
+                    this.PercentageScore != null &&
+                    this.PercentageScore.Equals(other.PercentageScore)
+                ) &&
+                (
+                    this.IsPassed == other.IsPassed ||
+                    this.IsPassed != null &&
+                    this.IsPassed.Equals(other.IsPassed)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 );
         }
 
@@ -365,6 +444,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
+
+                if (this.PercentageScore != null)
+                    hash = hash * 59 + this.PercentageScore.GetHashCode();
+
+                if (this.IsPassed != null)
+                    hash = hash * 59 + this.IsPassed.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
 
                 return hash;
             }

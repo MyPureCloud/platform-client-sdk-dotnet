@@ -54,7 +54,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Directassignment for "DirectAssignment"
             /// </summary>
             [EnumMember(Value = "DirectAssignment")]
-            Directassignment
+            Directassignment,
+            
+            /// <summary>
+            /// Enum Agentcomplete for "AgentComplete"
+            /// </summary>
+            [EnumMember(Value = "AgentComplete")]
+            Agentcomplete
         }
         /// <summary>
         /// Gets or Sets Status

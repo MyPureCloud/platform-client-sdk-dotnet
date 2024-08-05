@@ -43,7 +43,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Campaignagents for "campaignAgents"
             /// </summary>
             [EnumMember(Value = "campaignAgents")]
-            Campaignagents
+            Campaignagents,
+            
+            /// <summary>
+            /// Enum Campaignrecordsattempted for "campaignRecordsAttempted"
+            /// </summary>
+            [EnumMember(Value = "campaignRecordsAttempted")]
+            Campaignrecordsattempted,
+            
+            /// <summary>
+            /// Enum Campaignbusinesssuccess for "campaignBusinessSuccess"
+            /// </summary>
+            [EnumMember(Value = "campaignBusinessSuccess")]
+            Campaignbusinesssuccess,
+            
+            /// <summary>
+            /// Enum Campaignbusinessfailure for "campaignBusinessFailure"
+            /// </summary>
+            [EnumMember(Value = "campaignBusinessFailure")]
+            Campaignbusinessfailure,
+            
+            /// <summary>
+            /// Enum Campaignbusinessneutral for "campaignBusinessNeutral"
+            /// </summary>
+            [EnumMember(Value = "campaignBusinessNeutral")]
+            Campaignbusinessneutral,
+            
+            /// <summary>
+            /// Enum Campaignvalidattempts for "campaignValidAttempts"
+            /// </summary>
+            [EnumMember(Value = "campaignValidAttempts")]
+            Campaignvalidattempts,
+            
+            /// <summary>
+            /// Enum Campaignrightpartycontacts for "campaignRightPartyContacts"
+            /// </summary>
+            [EnumMember(Value = "campaignRightPartyContacts")]
+            Campaignrightpartycontacts
         }
         /// <summary>
         /// The type of condition to evaluate.

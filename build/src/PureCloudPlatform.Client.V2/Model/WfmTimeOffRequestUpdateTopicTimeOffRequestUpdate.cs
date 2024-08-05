@@ -101,6 +101,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Outsideshift,
             
             /// <summary>
+            /// Enum Overlapsrestrictedactivitycode for "OverlapsRestrictedActivityCode"
+            /// </summary>
+            [EnumMember(Value = "OverlapsRestrictedActivityCode")]
+            Overlapsrestrictedactivitycode,
+            
+            /// <summary>
             /// Enum Removedfromwaitlist for "RemovedFromWaitlist"
             /// </summary>
             [EnumMember(Value = "RemovedFromWaitlist")]

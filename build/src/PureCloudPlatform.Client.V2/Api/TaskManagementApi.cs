@@ -892,10 +892,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Worktype</returns>
         
-        Worktype PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body = null);
+        Worktype PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
         /// Update the attributes of a worktype
@@ -905,10 +905,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        ApiResponse<Worktype> PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body = null);
+        ApiResponse<Worktype> PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
         /// Update the attributes of a status
@@ -919,10 +919,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>WorkitemStatus</returns>
         
-        WorkitemStatus PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
+        WorkitemStatus PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body);
 
         /// <summary>
         /// Update the attributes of a status
@@ -933,10 +933,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        ApiResponse<WorkitemStatus> PatchTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
+        ApiResponse<WorkitemStatus> PatchTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body);
 
         /// <summary>
         /// Create a workbin
@@ -945,10 +945,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>Workbin</returns>
         
-        Workbin PostTaskmanagementWorkbins (WorkbinCreate body = null);
+        Workbin PostTaskmanagementWorkbins (WorkbinCreate body);
 
         /// <summary>
         /// Create a workbin
@@ -957,10 +957,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        ApiResponse<Workbin> PostTaskmanagementWorkbinsWithHttpInfo (WorkbinCreate body = null);
+        ApiResponse<Workbin> PostTaskmanagementWorkbinsWithHttpInfo (WorkbinCreate body);
 
         /// <summary>
         /// Query for workbins
@@ -1166,10 +1166,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>WorkitemStatus</returns>
         
-        WorkitemStatus PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body = null);
+        WorkitemStatus PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body);
 
         /// <summary>
         /// Add a status to a worktype
@@ -1179,10 +1179,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        ApiResponse<WorkitemStatus> PostTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null);
+        ApiResponse<WorkitemStatus> PostTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId, WorkitemStatusCreate body);
 
         /// <summary>
         /// Create a worktype
@@ -1191,10 +1191,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Worktype</returns>
         
-        Worktype PostTaskmanagementWorktypes (WorktypeCreate body = null);
+        Worktype PostTaskmanagementWorktypes (WorktypeCreate body);
 
         /// <summary>
         /// Create a worktype
@@ -1203,10 +1203,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        ApiResponse<Worktype> PostTaskmanagementWorktypesWithHttpInfo (WorktypeCreate body = null);
+        ApiResponse<Worktype> PostTaskmanagementWorktypesWithHttpInfo (WorktypeCreate body);
 
         /// <summary>
         /// Query for worktypes
@@ -2138,10 +2138,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of Worktype</returns>
         
-        System.Threading.Tasks.Task<Worktype> PatchTaskmanagementWorktypeAsync (string worktypeId, WorktypeUpdate body = null);
+        System.Threading.Tasks.Task<Worktype> PatchTaskmanagementWorktypeAsync (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
         /// Update the attributes of a worktype
@@ -2151,10 +2151,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body);
 
         /// <summary>
         /// Update the attributes of a status
@@ -2165,10 +2165,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        System.Threading.Tasks.Task<WorkitemStatus> PatchTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
+        System.Threading.Tasks.Task<WorkitemStatus> PatchTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId, WorkitemStatusUpdate body);
 
         /// <summary>
         /// Update the attributes of a status
@@ -2179,10 +2179,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body);
 
         /// <summary>
         /// Create a workbin
@@ -2191,10 +2191,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>Task of Workbin</returns>
         
-        System.Threading.Tasks.Task<Workbin> PostTaskmanagementWorkbinsAsync (WorkbinCreate body = null);
+        System.Threading.Tasks.Task<Workbin> PostTaskmanagementWorkbinsAsync (WorkbinCreate body);
 
         /// <summary>
         /// Create a workbin
@@ -2203,10 +2203,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Workbin>> PostTaskmanagementWorkbinsAsyncWithHttpInfo (WorkbinCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workbin>> PostTaskmanagementWorkbinsAsyncWithHttpInfo (WorkbinCreate body);
 
         /// <summary>
         /// Query for workbins
@@ -2412,10 +2412,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        System.Threading.Tasks.Task<WorkitemStatus> PostTaskmanagementWorktypeStatusesAsync (string worktypeId, WorkitemStatusCreate body = null);
+        System.Threading.Tasks.Task<WorkitemStatus> PostTaskmanagementWorktypeStatusesAsync (string worktypeId, WorkitemStatusCreate body);
 
         /// <summary>
         /// Add a status to a worktype
@@ -2425,10 +2425,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId, WorkitemStatusCreate body);
 
         /// <summary>
         /// Create a worktype
@@ -2437,10 +2437,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of Worktype</returns>
         
-        System.Threading.Tasks.Task<Worktype> PostTaskmanagementWorktypesAsync (WorktypeCreate body = null);
+        System.Threading.Tasks.Task<Worktype> PostTaskmanagementWorktypesAsync (WorktypeCreate body);
 
         /// <summary>
         /// Create a worktype
@@ -2449,10 +2449,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Worktype>> PostTaskmanagementWorktypesAsyncWithHttpInfo (WorktypeCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Worktype>> PostTaskmanagementWorktypesAsyncWithHttpInfo (WorktypeCreate body);
 
         /// <summary>
         /// Query for worktypes
@@ -9758,10 +9758,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Worktype</returns>
         
-        public Worktype PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body = null)
+        public Worktype PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body)
         {
              ApiResponse<Worktype> localVarResponse = PatchTaskmanagementWorktypeWithHttpInfo(worktypeId, body);
              return localVarResponse.Data;
@@ -9773,14 +9773,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        public ApiResponse< Worktype > PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body = null)
+        public ApiResponse< Worktype > PatchTaskmanagementWorktypeWithHttpInfo (string worktypeId, WorktypeUpdate body)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
                 throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktype");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktype");
 
             var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9870,10 +9873,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of Worktype</returns>
         
-        public async System.Threading.Tasks.Task<Worktype> PatchTaskmanagementWorktypeAsync (string worktypeId, WorktypeUpdate body = null)
+        public async System.Threading.Tasks.Task<Worktype> PatchTaskmanagementWorktypeAsync (string worktypeId, WorktypeUpdate body)
         {
              ApiResponse<Worktype> localVarResponse = await PatchTaskmanagementWorktypeAsyncWithHttpInfo(worktypeId, body);
              return localVarResponse.Data;
@@ -9886,14 +9889,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Worktype>> PatchTaskmanagementWorktypeAsyncWithHttpInfo (string worktypeId, WorktypeUpdate body)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
                 throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PatchTaskmanagementWorktype");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktype");
             
 
             var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}";
@@ -9986,10 +9993,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>WorkitemStatus</returns>
         
-        public WorkitemStatus PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
+        public WorkitemStatus PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body)
         {
              ApiResponse<WorkitemStatus> localVarResponse = PatchTaskmanagementWorktypeStatusWithHttpInfo(worktypeId, statusId, body);
              return localVarResponse.Data;
@@ -10002,10 +10009,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        public ApiResponse< WorkitemStatus > PatchTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
+        public ApiResponse< WorkitemStatus > PatchTaskmanagementWorktypeStatusWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
@@ -10013,6 +10020,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'statusId' is set
             if (statusId == null)
                 throw new ApiException(400, "Missing required parameter 'statusId' when calling TaskManagementApi->PatchTaskmanagementWorktypeStatus");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeStatus");
 
             var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10104,10 +10114,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        public async System.Threading.Tasks.Task<WorkitemStatus> PatchTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
+        public async System.Threading.Tasks.Task<WorkitemStatus> PatchTaskmanagementWorktypeStatusAsync (string worktypeId, string statusId, WorkitemStatusUpdate body)
         {
              ApiResponse<WorkitemStatus> localVarResponse = await PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo(worktypeId, statusId, body);
              return localVarResponse.Data;
@@ -10121,10 +10131,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
         /// <param name="statusId">Status id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PatchTaskmanagementWorktypeStatusAsyncWithHttpInfo (string worktypeId, string statusId, WorkitemStatusUpdate body)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
@@ -10133,6 +10143,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'statusId' is set
             if (statusId == null)
                 throw new ApiException(400, "Missing required parameter 'statusId' when calling TaskManagementApi->PatchTaskmanagementWorktypeStatus");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PatchTaskmanagementWorktypeStatus");
             
 
             var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId}";
@@ -10224,10 +10238,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>Workbin</returns>
         
-        public Workbin PostTaskmanagementWorkbins (WorkbinCreate body = null)
+        public Workbin PostTaskmanagementWorkbins (WorkbinCreate body)
         {
              ApiResponse<Workbin> localVarResponse = PostTaskmanagementWorkbinsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10238,11 +10252,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>ApiResponse of Workbin</returns>
         
-        public ApiResponse< Workbin > PostTaskmanagementWorkbinsWithHttpInfo (WorkbinCreate body = null)
+        public ApiResponse< Workbin > PostTaskmanagementWorkbinsWithHttpInfo (WorkbinCreate body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorkbins");
 
             var localVarPath = "/api/v2/taskmanagement/workbins";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10330,10 +10347,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>Task of Workbin</returns>
         
-        public async System.Threading.Tasks.Task<Workbin> PostTaskmanagementWorkbinsAsync (WorkbinCreate body = null)
+        public async System.Threading.Tasks.Task<Workbin> PostTaskmanagementWorkbinsAsync (WorkbinCreate body)
         {
              ApiResponse<Workbin> localVarResponse = await PostTaskmanagementWorkbinsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -10345,11 +10362,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Workbin</param>
         /// <returns>Task of ApiResponse (Workbin)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Workbin>> PostTaskmanagementWorkbinsAsyncWithHttpInfo (WorkbinCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workbin>> PostTaskmanagementWorkbinsAsyncWithHttpInfo (WorkbinCreate body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorkbins");
+            
 
             var localVarPath = "/api/v2/taskmanagement/workbins";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12197,10 +12218,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>WorkitemStatus</returns>
         
-        public WorkitemStatus PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body = null)
+        public WorkitemStatus PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body)
         {
              ApiResponse<WorkitemStatus> localVarResponse = PostTaskmanagementWorktypeStatusesWithHttpInfo(worktypeId, body);
              return localVarResponse.Data;
@@ -12212,14 +12233,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>ApiResponse of WorkitemStatus</returns>
         
-        public ApiResponse< WorkitemStatus > PostTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null)
+        public ApiResponse< WorkitemStatus > PostTaskmanagementWorktypeStatusesWithHttpInfo (string worktypeId, WorkitemStatusCreate body)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
                 throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeStatuses");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeStatuses");
 
             var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12309,10 +12333,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of WorkitemStatus</returns>
         
-        public async System.Threading.Tasks.Task<WorkitemStatus> PostTaskmanagementWorktypeStatusesAsync (string worktypeId, WorkitemStatusCreate body = null)
+        public async System.Threading.Tasks.Task<WorkitemStatus> PostTaskmanagementWorktypeStatusesAsync (string worktypeId, WorkitemStatusCreate body)
         {
              ApiResponse<WorkitemStatus> localVarResponse = await PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo(worktypeId, body);
              return localVarResponse.Data;
@@ -12325,14 +12349,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="worktypeId">Worktype id</param>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Status</param>
         /// <returns>Task of ApiResponse (WorkitemStatus)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId, WorkitemStatusCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemStatus>> PostTaskmanagementWorktypeStatusesAsyncWithHttpInfo (string worktypeId, WorkitemStatusCreate body)
         { 
             // verify the required parameter 'worktypeId' is set
             if (worktypeId == null)
                 throw new ApiException(400, "Missing required parameter 'worktypeId' when calling TaskManagementApi->PostTaskmanagementWorktypeStatuses");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypeStatuses");
             
 
             var localVarPath = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses";
@@ -12423,10 +12451,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Worktype</returns>
         
-        public Worktype PostTaskmanagementWorktypes (WorktypeCreate body = null)
+        public Worktype PostTaskmanagementWorktypes (WorktypeCreate body)
         {
              ApiResponse<Worktype> localVarResponse = PostTaskmanagementWorktypesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -12437,11 +12465,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>ApiResponse of Worktype</returns>
         
-        public ApiResponse< Worktype > PostTaskmanagementWorktypesWithHttpInfo (WorktypeCreate body = null)
+        public ApiResponse< Worktype > PostTaskmanagementWorktypesWithHttpInfo (WorktypeCreate body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypes");
 
             var localVarPath = "/api/v2/taskmanagement/worktypes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12529,10 +12560,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of Worktype</returns>
         
-        public async System.Threading.Tasks.Task<Worktype> PostTaskmanagementWorktypesAsync (WorktypeCreate body = null)
+        public async System.Threading.Tasks.Task<Worktype> PostTaskmanagementWorktypesAsync (WorktypeCreate body)
         {
              ApiResponse<Worktype> localVarResponse = await PostTaskmanagementWorktypesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -12544,11 +12575,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">body (optional)</param>
+        /// <param name="body">Worktype</param>
         /// <returns>Task of ApiResponse (Worktype)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Worktype>> PostTaskmanagementWorktypesAsyncWithHttpInfo (WorktypeCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Worktype>> PostTaskmanagementWorktypesAsyncWithHttpInfo (WorktypeCreate body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TaskManagementApi->PostTaskmanagementWorktypes");
+            
 
             var localVarPath = "/api/v2/taskmanagement/worktypes";
             var localVarPathParams = new Dictionary<String, String>();

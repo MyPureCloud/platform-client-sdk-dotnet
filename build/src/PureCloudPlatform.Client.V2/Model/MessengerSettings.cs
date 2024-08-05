@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class MessengerSettings :  IEquatable<MessengerSettings>
     {
         /// <summary>
+        /// The session persistence type for messenger
+        /// </summary>
+        /// <value>The session persistence type for messenger</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SessionPersistenceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Acrosssubdomains for "AcrossSubdomains"
+            /// </summary>
+            [EnumMember(Value = "AcrossSubdomains")]
+            Acrosssubdomains,
+            
+            /// <summary>
+            /// Enum Domainorsubdomainonly for "DomainOrSubdomainOnly"
+            /// </summary>
+            [EnumMember(Value = "DomainOrSubdomainOnly")]
+            Domainorsubdomainonly
+        }
+        /// <summary>
+        /// The session persistence type for messenger
+        /// </summary>
+        /// <value>The session persistence type for messenger</value>
+        [DataMember(Name="sessionPersistenceType", EmitDefaultValue=false)]
+        public SessionPersistenceTypeEnum? SessionPersistenceType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="MessengerSettings" /> class.
         /// </summary>
         /// <param name="Enabled">Whether or not messenger is enabled.</param>
@@ -27,7 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FileUpload">The file upload settings for messenger.</param>
         /// <param name="Apps">The apps embedded in the messenger.</param>
         /// <param name="HomeScreen">The homescreen settings for messenger.</param>
-        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null, MessengerHomeScreen HomeScreen = null)
+        /// <param name="SessionPersistenceType">The session persistence type for messenger.</param>
+        public MessengerSettings(bool? Enabled = null, MessengerStyles Styles = null, LauncherButtonSettings LauncherButton = null, FileUploadSettings FileUpload = null, MessengerApps Apps = null, MessengerHomeScreen HomeScreen = null, SessionPersistenceTypeEnum? SessionPersistenceType = null)
         {
             this.Enabled = Enabled;
             this.Styles = Styles;
@@ -35,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FileUpload = FileUpload;
             this.Apps = Apps;
             this.HomeScreen = HomeScreen;
+            this.SessionPersistenceType = SessionPersistenceType;
             
         }
         
@@ -93,6 +128,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public MessengerHomeScreen HomeScreen { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FileUpload: ").Append(FileUpload).Append("\n");
             sb.Append("  Apps: ").Append(Apps).Append("\n");
             sb.Append("  HomeScreen: ").Append(HomeScreen).Append("\n");
+            sb.Append("  SessionPersistenceType: ").Append(SessionPersistenceType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HomeScreen == other.HomeScreen ||
                     this.HomeScreen != null &&
                     this.HomeScreen.Equals(other.HomeScreen)
+                ) &&
+                (
+                    this.SessionPersistenceType == other.SessionPersistenceType ||
+                    this.SessionPersistenceType != null &&
+                    this.SessionPersistenceType.Equals(other.SessionPersistenceType)
                 );
         }
 
@@ -208,6 +251,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HomeScreen != null)
                     hash = hash * 59 + this.HomeScreen.GetHashCode();
+
+                if (this.SessionPersistenceType != null)
+                    hash = hash * 59 + this.SessionPersistenceType.GetHashCode();
 
                 return hash;
             }

@@ -231,6 +231,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceWithHttpInfo (string namespaceName);
 
         /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>LimitCountListing</returns>
+        
+        LimitCountListing GetOrganizationsLimitsNamespaceCounts (string namespaceName, string cursor = null, string entityId = null, string userId = null);
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>ApiResponse of LimitCountListing</returns>
+        
+        ApiResponse<LimitCountListing> GetOrganizationsLimitsNamespaceCountsWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null);
+
+        /// <summary>
         /// Get the default limits in a namespace for an organization
         /// </summary>
         /// <remarks>
@@ -253,6 +283,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LimitsEntityListing</returns>
         
         ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo (string namespaceName);
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>LimitCountListing</returns>
+        
+        LimitCountListing GetOrganizationsLimitsNamespaceLimitCounts (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>ApiResponse of LimitCountListing</returns>
+        
+        ApiResponse<LimitCountListing> GetOrganizationsLimitsNamespaceLimitCountsWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
 
         /// <summary>
         /// Get the available limit namespaces
@@ -689,6 +751,36 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceAsyncWithHttpInfo (string namespaceName);
 
         /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>Task of LimitCountListing</returns>
+        
+        System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceCountsAsync (string namespaceName, string cursor = null, string entityId = null, string userId = null);
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>Task of ApiResponse (LimitCountListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceCountsAsyncWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null);
+
+        /// <summary>
         /// Get the default limits in a namespace for an organization
         /// </summary>
         /// <remarks>
@@ -711,6 +803,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo (string namespaceName);
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>Task of LimitCountListing</returns>
+        
+        System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceLimitCountsAsync (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
+        /// </summary>
+        /// <remarks>
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>Task of ApiResponse (LimitCountListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceLimitCountsAsyncWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null);
 
         /// <summary>
         /// Get the available limit namespaces
@@ -2872,6 +2996,235 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>LimitCountListing</returns>
+        
+        public LimitCountListing GetOrganizationsLimitsNamespaceCounts (string namespaceName, string cursor = null, string entityId = null, string userId = null)
+        {
+             ApiResponse<LimitCountListing> localVarResponse = GetOrganizationsLimitsNamespaceCountsWithHttpInfo(namespaceName, cursor, entityId, userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>ApiResponse of LimitCountListing</returns>
+        
+        public ApiResponse< LimitCountListing > GetOrganizationsLimitsNamespaceCountsWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceCounts");
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/counts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (entityId != null) localVarQueryParams.Add(new Tuple<string, string>("entityId", this.Configuration.ApiClient.ParameterToString(entityId)));
+            if (userId != null) localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(userId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceCounts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitCountListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitCountListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitCountListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>Task of LimitCountListing</returns>
+        
+        public async System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceCountsAsync (string namespaceName, string cursor = null, string entityId = null, string userId = null)
+        {
+             ApiResponse<LimitCountListing> localVarResponse = await GetOrganizationsLimitsNamespaceCountsAsyncWithHttpInfo(namespaceName, cursor, entityId, userId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <returns>Task of ApiResponse (LimitCountListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceCountsAsyncWithHttpInfo (string namespaceName, string cursor = null, string entityId = null, string userId = null)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceCounts");
+            
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/counts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (entityId != null) localVarQueryParams.Add(new Tuple<string, string>("entityId", this.Configuration.ApiClient.ParameterToString(entityId)));
+            if (userId != null) localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(userId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceCounts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitCountListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitCountListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitCountListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get the default limits in a namespace for an organization 
         /// 
         /// </summary>
@@ -3076,6 +3429,248 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LimitsEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (LimitsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>LimitCountListing</returns>
+        
+        public LimitCountListing GetOrganizationsLimitsNamespaceLimitCounts (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
+        {
+             ApiResponse<LimitCountListing> localVarResponse = GetOrganizationsLimitsNamespaceLimitCountsWithHttpInfo(namespaceName, limitName, entityId, userId, cursor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>ApiResponse of LimitCountListing</returns>
+        
+        public ApiResponse< LimitCountListing > GetOrganizationsLimitsNamespaceLimitCountsWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceLimitCounts");
+            // verify the required parameter 'limitName' is set
+            if (limitName == null)
+                throw new ApiException(400, "Missing required parameter 'limitName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceLimitCounts");
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/limits/{limitName}/counts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+            if (limitName != null) localVarPathParams.Add("limitName", this.Configuration.ApiClient.ParameterToString(limitName));
+
+            // Query params
+            if (entityId != null) localVarQueryParams.Add(new Tuple<string, string>("entityId", this.Configuration.ApiClient.ParameterToString(entityId)));
+            if (userId != null) localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(userId)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceLimitCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceLimitCounts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitCountListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitCountListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitCountListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>Task of LimitCountListing</returns>
+        
+        public async System.Threading.Tasks.Task<LimitCountListing> GetOrganizationsLimitsNamespaceLimitCountsAsync (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
+        {
+             ApiResponse<LimitCountListing> localVarResponse = await GetOrganizationsLimitsNamespaceLimitCountsAsyncWithHttpInfo(namespaceName, limitName, entityId, userId, cursor);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. 
+        /// See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="namespaceName">The namespace to get</param>
+        /// <param name="limitName">The limit to get</param>
+        /// <param name="entityId">entity id of the count (optional)</param>
+        /// <param name="userId">userid of the count (optional)</param>
+        /// <param name="cursor">Cursor provided when retrieving the last page (optional)</param>
+        /// <returns>Task of ApiResponse (LimitCountListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LimitCountListing>> GetOrganizationsLimitsNamespaceLimitCountsAsyncWithHttpInfo (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
+        { 
+            // verify the required parameter 'namespaceName' is set
+            if (namespaceName == null)
+                throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceLimitCounts");
+            
+            // verify the required parameter 'limitName' is set
+            if (limitName == null)
+                throw new ApiException(400, "Missing required parameter 'limitName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceLimitCounts");
+            
+
+            var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/limits/{limitName}/counts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (namespaceName != null) localVarPathParams.Add("namespaceName", this.Configuration.ApiClient.ParameterToString(namespaceName));
+            if (limitName != null) localVarPathParams.Add("limitName", this.Configuration.ApiClient.ParameterToString(limitName));
+
+            // Query params
+            if (entityId != null) localVarQueryParams.Add(new Tuple<string, string>("entityId", this.Configuration.ApiClient.ParameterToString(entityId)));
+            if (userId != null) localVarQueryParams.Add(new Tuple<string, string>("userId", this.Configuration.ApiClient.ParameterToString(userId)));
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceLimitCounts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrganizationsLimitsNamespaceLimitCounts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LimitCountListing>(localVarStatusCode,
+                localVarHeaders,
+                (LimitCountListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LimitCountListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

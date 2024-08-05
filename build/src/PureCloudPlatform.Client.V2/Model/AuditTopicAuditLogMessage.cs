@@ -312,7 +312,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Onboarding for "Onboarding"
             /// </summary>
             [EnumMember(Value = "Onboarding")]
-            Onboarding
+            Onboarding,
+            
+            /// <summary>
+            /// Enum Sociallistening for "SocialListening"
+            /// </summary>
+            [EnumMember(Value = "SocialListening")]
+            Sociallistening
         }
         /// <summary>
         /// Gets or Sets Action

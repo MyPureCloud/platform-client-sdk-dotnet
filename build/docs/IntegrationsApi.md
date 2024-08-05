@@ -26,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsActions**](IntegrationsApi.html#getintegrationsactions) | **Get** /api/v2/integrations/actions | Retrieves all actions associated with filters passed in via query param. |
 | [**GetIntegrationsActionsCategories**](IntegrationsApi.html#getintegrationsactionscategories) | **Get** /api/v2/integrations/actions/categories | Retrieves all categories of available Actions |
 | [**GetIntegrationsActionsCertificates**](IntegrationsApi.html#getintegrationsactionscertificates) | **Get** /api/v2/integrations/actions/certificates | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
+| [**GetIntegrationsActionsCertificatesTruststore**](IntegrationsApi.html#getintegrationsactionscertificatestruststore) | **Get** /api/v2/integrations/actions/certificates/truststore | Retrieves basic info about trusted root CA certificates |
 | [**GetIntegrationsActionsDrafts**](IntegrationsApi.html#getintegrationsactionsdrafts) | **Get** /api/v2/integrations/actions/drafts | Retrieves all action drafts associated with the filters passed in via query param. |
 | [**GetIntegrationsActionsFunctionsRuntimes**](IntegrationsApi.html#getintegrationsactionsfunctionsruntimes) | **Get** /api/v2/integrations/actions/functions/runtimes | Get action function settings for Action |
 | [**GetIntegrationsBotconnectorIntegrationIdBot**](IntegrationsApi.html#getintegrationsbotconnectorintegrationidbot) | **Get** /api/v2/integrations/botconnector/{integrationId}/bots/{botId} | Get a specific botConnector bot, plus versions, for this integration |
@@ -1368,6 +1369,64 @@ namespace Example
 ### Return type
 
 [**ActionCertificateListing**](ActionCertificateListing.html)
+
+<a name="getintegrationsactionscertificatestruststore"></a>
+
+## [**TrustedCertificates**](TrustedCertificates.html) GetIntegrationsActionsCertificatesTruststore ()
+
+
+
+Retrieves basic info about trusted root CA certificates
+
+Requires ANY permissions: 
+
+* integrations:actionCertificate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsActionsCertificatesTruststoreExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new IntegrationsApi();
+
+            try
+            { 
+                // Retrieves basic info about trusted root CA certificates
+                TrustedCertificates result = apiInstance.GetIntegrationsActionsCertificatesTruststore();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsActionsCertificatesTruststore: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**TrustedCertificates**](TrustedCertificates.html)
 
 <a name="getintegrationsactionsdrafts"></a>
 

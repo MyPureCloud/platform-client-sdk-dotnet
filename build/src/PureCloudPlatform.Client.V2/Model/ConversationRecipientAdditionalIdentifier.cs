@@ -49,7 +49,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
-            Unknown
+            Unknown,
+            
+            /// <summary>
+            /// Enum Topic for "Topic"
+            /// </summary>
+            [EnumMember(Value = "Topic")]
+            Topic,
+            
+            /// <summary>
+            /// Enum Ingestionrule for "IngestionRule"
+            /// </summary>
+            [EnumMember(Value = "IngestionRule")]
+            Ingestionrule,
+            
+            /// <summary>
+            /// Enum Ingestionruleversion for "IngestionRuleVersion"
+            /// </summary>
+            [EnumMember(Value = "IngestionRuleVersion")]
+            Ingestionruleversion
         }
         /// <summary>
         /// Type of the Identifier

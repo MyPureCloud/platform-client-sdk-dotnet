@@ -19,6 +19,9 @@ title: LearningAssignmentTopicLearningAssignmentNotification
 | **DateModified** | **DateTime?** |  | [optional] |
 | **IsOverdue** | **bool?** |  | [optional] |
 | **LengthInMinutes** | **int?** |  | [optional] |
+| **PercentageScore** | **double?** |  | [optional] |
+| **IsPassed** | **bool?** |  | [optional] |
+| **Type** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 
