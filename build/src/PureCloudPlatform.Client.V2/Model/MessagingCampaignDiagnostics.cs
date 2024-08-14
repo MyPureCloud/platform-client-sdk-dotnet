@@ -36,6 +36,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? TimeZoneRescheduledContactsCount { get; private set; }
 
 
+
+        /// <summary>
+        /// Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.
+        /// </summary>
+        /// <value>Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
+        [DataMember(Name="filteredOutContactsCount", EmitDefaultValue=false)]
+        public int? FilteredOutContactsCount { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,6 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class MessagingCampaignDiagnostics {\n");
 
             sb.Append("  TimeZoneRescheduledContactsCount: ").Append(TimeZoneRescheduledContactsCount).Append("\n");
+            sb.Append("  FilteredOutContactsCount: ").Append(FilteredOutContactsCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,6 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZoneRescheduledContactsCount == other.TimeZoneRescheduledContactsCount ||
                     this.TimeZoneRescheduledContactsCount != null &&
                     this.TimeZoneRescheduledContactsCount.Equals(other.TimeZoneRescheduledContactsCount)
+                ) &&
+                (
+                    this.FilteredOutContactsCount == other.FilteredOutContactsCount ||
+                    this.FilteredOutContactsCount != null &&
+                    this.FilteredOutContactsCount.Equals(other.FilteredOutContactsCount)
                 );
         }
 
@@ -106,6 +121,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.TimeZoneRescheduledContactsCount != null)
                     hash = hash * 59 + this.TimeZoneRescheduledContactsCount.GetHashCode();
+
+                if (this.FilteredOutContactsCount != null)
+                    hash = hash * 59 + this.FilteredOutContactsCount.GetHashCode();
 
                 return hash;
             }

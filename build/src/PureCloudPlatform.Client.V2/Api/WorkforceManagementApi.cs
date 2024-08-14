@@ -923,7 +923,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -937,7 +936,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -951,7 +949,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -966,7 +963,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -981,7 +977,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -995,7 +990,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -1009,7 +1003,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -1022,7 +1015,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -3295,7 +3287,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -3310,7 +3301,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -4287,7 +4277,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -4301,7 +4290,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -4315,7 +4303,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -4329,7 +4316,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7177,7 +7163,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7191,7 +7176,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7205,7 +7189,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7220,7 +7203,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7235,7 +7217,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7249,7 +7230,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7263,7 +7243,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -7276,7 +7255,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -9549,7 +9527,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -9564,7 +9541,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -10541,7 +10517,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -10555,7 +10530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -10569,7 +10543,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -10583,7 +10556,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20403,7 +20375,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an activity plan 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20419,7 +20390,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an activity plan 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20515,7 +20485,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an activity plan 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20532,7 +20501,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an activity plan 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20631,7 +20599,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets an activity plan run job 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20648,7 +20615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets an activity plan run job 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20749,7 +20715,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets an activity plan run job 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20767,7 +20732,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets an activity plan run job 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20872,7 +20836,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get activity plans 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20888,7 +20851,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get activity plans 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20981,7 +20943,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get activity plans 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -20998,7 +20959,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get activity plans 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -21093,7 +21053,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets the latest job for all activity plans in the business unit 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -21108,7 +21067,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets the latest job for all activity plans in the business unit 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -21199,7 +21157,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets the latest job for all activity plans in the business unit 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -21215,7 +21172,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets the latest job for all activity plans in the business unit 
         /// 
-        /// GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -40442,7 +40398,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an activity plan 
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -40459,7 +40414,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an activity plan 
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -40565,7 +40519,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an activity plan 
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -40583,7 +40536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an activity plan 
         /// If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
-        /// PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49072,7 +49024,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Run an activity plan manually 
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49088,7 +49039,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Run an activity plan manually 
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49184,7 +49134,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Run an activity plan manually 
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49201,7 +49150,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Run an activity plan manually 
         /// Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
-        /// PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49300,7 +49248,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an activity plan 
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49316,7 +49263,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an activity plan 
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49417,7 +49363,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an activity plan 
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>
@@ -49434,7 +49379,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an activity plan 
         /// 
-        /// PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit</param>

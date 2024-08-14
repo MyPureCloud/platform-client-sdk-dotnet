@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DynamicContactQueueingSettings" /> class.
         /// </summary>
         /// <param name="Sort">Whether to sort contacts dynamically.</param>
-        public DynamicContactQueueingSettings(bool? Sort = null)
+        /// <param name="Filter">Whether to filter contacts dynamically.</param>
+        public DynamicContactQueueingSettings(bool? Sort = null, bool? Filter = null)
         {
             this.Sort = Sort;
+            this.Filter = Filter;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Sort { get; set; }
 
 
+
+        /// <summary>
+        /// Whether to filter contacts dynamically
+        /// </summary>
+        /// <value>Whether to filter contacts dynamically</value>
+        [DataMember(Name="filter", EmitDefaultValue=false)]
+        public bool? Filter { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DynamicContactQueueingSettings {\n");
 
             sb.Append("  Sort: ").Append(Sort).Append("\n");
+            sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sort == other.Sort ||
                     this.Sort != null &&
                     this.Sort.Equals(other.Sort)
+                ) &&
+                (
+                    this.Filter == other.Filter ||
+                    this.Filter != null &&
+                    this.Filter.Equals(other.Filter)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
+
+                if (this.Filter != null)
+                    hash = hash * 59 + this.Filter.GetHashCode();
 
                 return hash;
             }

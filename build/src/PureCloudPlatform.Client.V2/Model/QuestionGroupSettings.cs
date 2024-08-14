@@ -22,10 +22,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QuestionGroupSettings" /> class.
         /// </summary>
         /// <param name="QuestionGroupIndex">This field represents the location of the Question Group in the form. Note: Indexes are zero-based.</param>
+        /// <param name="QuestionGroupContextId">The context id of the question group in the form..</param>
         /// <param name="QuestionSettings">QuestionSettings.</param>
-        public QuestionGroupSettings(int? QuestionGroupIndex = null, List<QuestionSettings> QuestionSettings = null)
+        public QuestionGroupSettings(int? QuestionGroupIndex = null, string QuestionGroupContextId = null, List<QuestionSettings> QuestionSettings = null)
         {
             this.QuestionGroupIndex = QuestionGroupIndex;
+            this.QuestionGroupContextId = QuestionGroupContextId;
             this.QuestionSettings = QuestionSettings;
             
         }
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>This field represents the location of the Question Group in the form. Note: Indexes are zero-based</value>
         [DataMember(Name="questionGroupIndex", EmitDefaultValue=false)]
         public int? QuestionGroupIndex { get; set; }
+
+
+
+        /// <summary>
+        /// The context id of the question group in the form.
+        /// </summary>
+        /// <value>The context id of the question group in the form.</value>
+        [DataMember(Name="questionGroupContextId", EmitDefaultValue=false)]
+        public string QuestionGroupContextId { get; set; }
 
 
 
@@ -58,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class QuestionGroupSettings {\n");
 
             sb.Append("  QuestionGroupIndex: ").Append(QuestionGroupIndex).Append("\n");
+            sb.Append("  QuestionGroupContextId: ").Append(QuestionGroupContextId).Append("\n");
             sb.Append("  QuestionSettings: ").Append(QuestionSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -105,6 +117,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QuestionGroupIndex.Equals(other.QuestionGroupIndex)
                 ) &&
                 (
+                    this.QuestionGroupContextId == other.QuestionGroupContextId ||
+                    this.QuestionGroupContextId != null &&
+                    this.QuestionGroupContextId.Equals(other.QuestionGroupContextId)
+                ) &&
+                (
                     this.QuestionSettings == other.QuestionSettings ||
                     this.QuestionSettings != null &&
                     this.QuestionSettings.SequenceEqual(other.QuestionSettings)
@@ -124,6 +141,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.QuestionGroupIndex != null)
                     hash = hash * 59 + this.QuestionGroupIndex.GetHashCode();
+
+                if (this.QuestionGroupContextId != null)
+                    hash = hash * 59 + this.QuestionGroupContextId.GetHashCode();
 
                 if (this.QuestionSettings != null)
                     hash = hash * 59 + this.QuestionSettings.GetHashCode();

@@ -8,6 +8,7 @@ title: DynamicContactQueueingSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Sort** | **bool?** | Whether to sort contacts dynamically | [optional] |
+| **Filter** | **bool?** | Whether to filter contacts dynamically | [optional] |
 {: class="table table-striped"}
 
 

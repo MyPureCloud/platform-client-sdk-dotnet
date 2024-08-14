@@ -83,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.
+        /// </summary>
+        /// <value>Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
+        [DataMember(Name="filteredOutContactsCount", EmitDefaultValue=false)]
+        public int? FilteredOutContactsCount { get; private set; }
+
+
+
+        /// <summary>
         /// Information regarding the campaign's skills
         /// </summary>
         /// <value>Information regarding the campaign's skills</value>
@@ -105,6 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
             sb.Append("  ScheduledInteractionsCount: ").Append(ScheduledInteractionsCount).Append("\n");
             sb.Append("  TimeZoneRescheduledCallsCount: ").Append(TimeZoneRescheduledCallsCount).Append("\n");
+            sb.Append("  FilteredOutContactsCount: ").Append(FilteredOutContactsCount).Append("\n");
             sb.Append("  CampaignSkillStatistics: ").Append(CampaignSkillStatistics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -177,6 +187,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZoneRescheduledCallsCount.Equals(other.TimeZoneRescheduledCallsCount)
                 ) &&
                 (
+                    this.FilteredOutContactsCount == other.FilteredOutContactsCount ||
+                    this.FilteredOutContactsCount != null &&
+                    this.FilteredOutContactsCount.Equals(other.FilteredOutContactsCount)
+                ) &&
+                (
                     this.CampaignSkillStatistics == other.CampaignSkillStatistics ||
                     this.CampaignSkillStatistics != null &&
                     this.CampaignSkillStatistics.Equals(other.CampaignSkillStatistics)
@@ -211,6 +226,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeZoneRescheduledCallsCount != null)
                     hash = hash * 59 + this.TimeZoneRescheduledCallsCount.GetHashCode();
+
+                if (this.FilteredOutContactsCount != null)
+                    hash = hash * 59 + this.FilteredOutContactsCount.GetHashCode();
 
                 if (this.CampaignSkillStatistics != null)
                     hash = hash * 59 + this.CampaignSkillStatistics.GetHashCode();

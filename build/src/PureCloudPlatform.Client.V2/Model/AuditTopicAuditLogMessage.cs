@@ -821,6 +821,108 @@ namespace PureCloudPlatform.Client.V2.Model
             Scale,
             
             /// <summary>
+            /// Enum Asginservice for "AsgInservice"
+            /// </summary>
+            [EnumMember(Value = "AsgInservice")]
+            Asginservice,
+            
+            /// <summary>
+            /// Enum Awsoutofservice for "AwsOutofservice"
+            /// </summary>
+            [EnumMember(Value = "AwsOutofservice")]
+            Awsoutofservice,
+            
+            /// <summary>
+            /// Enum Asgterminate for "AsgTerminate"
+            /// </summary>
+            [EnumMember(Value = "AsgTerminate")]
+            Asgterminate,
+            
+            /// <summary>
+            /// Enum Detach for "Detach"
+            /// </summary>
+            [EnumMember(Value = "Detach")]
+            Detach,
+            
+            /// <summary>
+            /// Enum Terminate for "Terminate"
+            /// </summary>
+            [EnumMember(Value = "Terminate")]
+            Terminate,
+            
+            /// <summary>
+            /// Enum Blockupgrade for "BlockUpgrade"
+            /// </summary>
+            [EnumMember(Value = "BlockUpgrade")]
+            Blockupgrade,
+            
+            /// <summary>
+            /// Enum Unblockupgrade for "UnblockUpgrade"
+            /// </summary>
+            [EnumMember(Value = "UnblockUpgrade")]
+            Unblockupgrade,
+            
+            /// <summary>
+            /// Enum Asgswapinstancetype for "AsgSwapInstanceType"
+            /// </summary>
+            [EnumMember(Value = "AsgSwapInstanceType")]
+            Asgswapinstancetype,
+            
+            /// <summary>
+            /// Enum Recreateasg for "RecreateAsg"
+            /// </summary>
+            [EnumMember(Value = "RecreateAsg")]
+            Recreateasg,
+            
+            /// <summary>
+            /// Enum Deleteunconfigurededge for "DeleteUnconfiguredEdge"
+            /// </summary>
+            [EnumMember(Value = "DeleteUnconfiguredEdge")]
+            Deleteunconfigurededge,
+            
+            /// <summary>
+            /// Enum Getasglist for "GetAsgList"
+            /// </summary>
+            [EnumMember(Value = "GetAsgList")]
+            Getasglist,
+            
+            /// <summary>
+            /// Enum Getasg for "GetAsg"
+            /// </summary>
+            [EnumMember(Value = "GetAsg")]
+            Getasg,
+            
+            /// <summary>
+            /// Enum Upgradeorganizationsite for "UpgradeOrganizationSite"
+            /// </summary>
+            [EnumMember(Value = "UpgradeOrganizationSite")]
+            Upgradeorganizationsite,
+            
+            /// <summary>
+            /// Enum Updateawsconfig for "UpdateAwsConfig"
+            /// </summary>
+            [EnumMember(Value = "UpdateAwsConfig")]
+            Updateawsconfig,
+            
+            /// <summary>
+            /// Enum Getawsconfig for "GetAwsConfig"
+            /// </summary>
+            [EnumMember(Value = "GetAwsConfig")]
+            Getawsconfig,
+            
+            /// <summary>
+            /// Enum Deleteghostedgerecord for "DeleteGhostEdgeRecord"
+            /// </summary>
+            [EnumMember(Value = "DeleteGhostEdgeRecord")]
+            Deleteghostedgerecord,
+            
+            /// <summary>
+            /// Enum Upgradecleanup for "UpgradeCleanup"
+            /// </summary>
+            [EnumMember(Value = "UpgradeCleanup")]
+            Upgradecleanup,
+            
+            /// <summary>
             /// Enum Ipallowlistclear for "IpAllowlistClear"
             /// </summary>
             [EnumMember(Value = "IpAllowlistClear")]
@@ -885,6 +987,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SoftDelete")]
             Softdelete,
+            
+            /// <summary>
+            /// Enum Submit for "Submit"
+            /// </summary>
+            [EnumMember(Value = "Submit")]
+            Submit,
             
             /// <summary>
             /// Enum Enablecapture for "EnableCapture"
@@ -2111,6 +2219,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "EnterpriseAgreement")]
             Enterpriseagreement,
+            
+            /// <summary>
+            /// Enum Vendorlisting for "VendorListing"
+            /// </summary>
+            [EnumMember(Value = "VendorListing")]
+            Vendorlisting,
             
             /// <summary>
             /// Enum Gdprrequest for "GdprRequest"

@@ -83,11 +83,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FacebookId">FacebookId.</param>
         /// <param name="InstagramId">InstagramId.</param>
         /// <param name="ExternalIds">ExternalIds.</param>
+        /// <param name="CanonicalContactId">CanonicalContactId.</param>
         /// <param name="Schema">Schema.</param>
         /// <param name="CustomFields">CustomFields.</param>
+        /// <param name="MergeSet">MergeSet.</param>
+        /// <param name="MergedFrom">MergedFrom.</param>
+        /// <param name="MergedTo">MergedTo.</param>
+        /// <param name="MergeOperation">MergeOperation.</param>
         /// <param name="CreateDate">CreateDate.</param>
         /// <param name="ModifyDate">ModifyDate.</param>
-        public ExternalContactsUnresolvedContactChangedTopicContact(string Id = null, ExternalContactsUnresolvedContactChangedTopicDivision Division = null, ExternalContactsUnresolvedContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, ExternalContactsUnresolvedContactChangedTopicLineId LineId = null, ExternalContactsUnresolvedContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsUnresolvedContactChangedTopicFacebookId FacebookId = null, ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId = null, List<ExternalContactsUnresolvedContactChangedTopicExternalId> ExternalIds = null, ExternalContactsUnresolvedContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
+        public ExternalContactsUnresolvedContactChangedTopicContact(string Id = null, ExternalContactsUnresolvedContactChangedTopicDivision Division = null, ExternalContactsUnresolvedContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, ExternalContactsUnresolvedContactChangedTopicLineId LineId = null, ExternalContactsUnresolvedContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsUnresolvedContactChangedTopicFacebookId FacebookId = null, ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId = null, List<ExternalContactsUnresolvedContactChangedTopicExternalId> ExternalIds = null, string CanonicalContactId = null, ExternalContactsUnresolvedContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<string> MergeSet = null, List<string> MergedFrom = null, string MergedTo = null, ExternalContactsUnresolvedContactChangedTopicMergeOperation MergeOperation = null, DateTime? CreateDate = null, DateTime? ModifyDate = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -114,8 +119,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FacebookId = FacebookId;
             this.InstagramId = InstagramId;
             this.ExternalIds = ExternalIds;
+            this.CanonicalContactId = CanonicalContactId;
             this.Schema = Schema;
             this.CustomFields = CustomFields;
+            this.MergeSet = MergeSet;
+            this.MergedFrom = MergedFrom;
+            this.MergedTo = MergedTo;
+            this.MergeOperation = MergeOperation;
             this.CreateDate = CreateDate;
             this.ModifyDate = ModifyDate;
             
@@ -318,6 +328,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets CanonicalContactId
+        /// </summary>
+        [DataMember(Name="canonicalContactId", EmitDefaultValue=false)]
+        public string CanonicalContactId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Schema
         /// </summary>
         [DataMember(Name="schema", EmitDefaultValue=false)]
@@ -330,6 +348,38 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
         public Dictionary<string, Object> CustomFields { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets MergeSet
+        /// </summary>
+        [DataMember(Name="mergeSet", EmitDefaultValue=false)]
+        public List<string> MergeSet { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets MergedFrom
+        /// </summary>
+        [DataMember(Name="mergedFrom", EmitDefaultValue=false)]
+        public List<string> MergedFrom { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets MergedTo
+        /// </summary>
+        [DataMember(Name="mergedTo", EmitDefaultValue=false)]
+        public string MergedTo { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets MergeOperation
+        /// </summary>
+        [DataMember(Name="mergeOperation", EmitDefaultValue=false)]
+        public ExternalContactsUnresolvedContactChangedTopicMergeOperation MergeOperation { get; set; }
 
 
 
@@ -382,8 +432,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
             sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
             sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
+            sb.Append("  CanonicalContactId: ").Append(CanonicalContactId).Append("\n");
             sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
+            sb.Append("  MergeSet: ").Append(MergeSet).Append("\n");
+            sb.Append("  MergedFrom: ").Append(MergedFrom).Append("\n");
+            sb.Append("  MergedTo: ").Append(MergedTo).Append("\n");
+            sb.Append("  MergeOperation: ").Append(MergeOperation).Append("\n");
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             sb.Append("}\n");
@@ -552,6 +607,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalIds.SequenceEqual(other.ExternalIds)
                 ) &&
                 (
+                    this.CanonicalContactId == other.CanonicalContactId ||
+                    this.CanonicalContactId != null &&
+                    this.CanonicalContactId.Equals(other.CanonicalContactId)
+                ) &&
+                (
                     this.Schema == other.Schema ||
                     this.Schema != null &&
                     this.Schema.Equals(other.Schema)
@@ -560,6 +620,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomFields == other.CustomFields ||
                     this.CustomFields != null &&
                     this.CustomFields.SequenceEqual(other.CustomFields)
+                ) &&
+                (
+                    this.MergeSet == other.MergeSet ||
+                    this.MergeSet != null &&
+                    this.MergeSet.SequenceEqual(other.MergeSet)
+                ) &&
+                (
+                    this.MergedFrom == other.MergedFrom ||
+                    this.MergedFrom != null &&
+                    this.MergedFrom.SequenceEqual(other.MergedFrom)
+                ) &&
+                (
+                    this.MergedTo == other.MergedTo ||
+                    this.MergedTo != null &&
+                    this.MergedTo.Equals(other.MergedTo)
+                ) &&
+                (
+                    this.MergeOperation == other.MergeOperation ||
+                    this.MergeOperation != null &&
+                    this.MergeOperation.Equals(other.MergeOperation)
                 ) &&
                 (
                     this.CreateDate == other.CreateDate ||
@@ -659,11 +739,26 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ExternalIds != null)
                     hash = hash * 59 + this.ExternalIds.GetHashCode();
 
+                if (this.CanonicalContactId != null)
+                    hash = hash * 59 + this.CanonicalContactId.GetHashCode();
+
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
 
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
+
+                if (this.MergeSet != null)
+                    hash = hash * 59 + this.MergeSet.GetHashCode();
+
+                if (this.MergedFrom != null)
+                    hash = hash * 59 + this.MergedFrom.GetHashCode();
+
+                if (this.MergedTo != null)
+                    hash = hash * 59 + this.MergedTo.GetHashCode();
+
+                if (this.MergeOperation != null)
+                    hash = hash * 59 + this.MergeOperation.GetHashCode();
 
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();

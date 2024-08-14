@@ -467,7 +467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
         /// </summary>
         /// <remarks>
         /// 
@@ -479,7 +479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         BatchDownloadJobStatusResult GetRecordingBatchrequest (string jobId);
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
         /// </summary>
         /// <remarks>
         /// 
@@ -2049,7 +2049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
         /// </summary>
         /// <remarks>
         /// 
@@ -2061,7 +2061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<BatchDownloadJobStatusResult> GetRecordingBatchrequestAsync (string jobId);
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
         /// </summary>
         /// <remarks>
         /// 
@@ -6873,7 +6873,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results 
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6887,7 +6887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results 
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6977,7 +6977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results 
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6992,7 +6992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results 
+        /// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

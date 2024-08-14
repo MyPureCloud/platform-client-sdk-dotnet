@@ -203,7 +203,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishResultUri">PublishResultUri.</param>
         /// <param name="InputSchema">InputSchema.</param>
         /// <param name="OutputSchema">OutputSchema.</param>
-        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, long? DateCheckedIn = null, long? DateSaved = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null)
+        /// <param name="VirtualAgentEnabled">VirtualAgentEnabled.</param>
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, long? DateCheckedIn = null, long? DateSaved = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, bool? VirtualAgentEnabled = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -222,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PublishResultUri = PublishResultUri;
             this.InputSchema = InputSchema;
             this.OutputSchema = OutputSchema;
+            this.VirtualAgentEnabled = VirtualAgentEnabled;
             
         }
         
@@ -359,6 +361,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets VirtualAgentEnabled
+        /// </summary>
+        [DataMember(Name="virtualAgentEnabled", EmitDefaultValue=false)]
+        public bool? VirtualAgentEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -437,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
+            sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
             sb.Append("  DatePublishedEnd: ").Append(DatePublishedEnd).Append("\n");
             sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
@@ -569,6 +580,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutputSchema.Equals(other.OutputSchema)
                 ) &&
                 (
+                    this.VirtualAgentEnabled == other.VirtualAgentEnabled ||
+                    this.VirtualAgentEnabled != null &&
+                    this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
+                ) &&
+                (
                     this.DatePublished == other.DatePublished ||
                     this.DatePublished != null &&
                     this.DatePublished.Equals(other.DatePublished)
@@ -661,6 +677,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
+
+                if (this.VirtualAgentEnabled != null)
+                    hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
 
                 if (this.DatePublished != null)
                     hash = hash * 59 + this.DatePublished.GetHashCode();

@@ -121,7 +121,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Client">OAuth client associated with this entry..</param>
         /// <param name="Version">Version.</param>
         /// <param name="Secure">Secure.</param>
-        public HistoryEntry(ActionEnum? Action = null, string Resource = null, DateTime? Timestamp = null, User User = null, DomainEntityRef Client = null, string Version = null, bool? Secure = null)
+        /// <param name="VirtualAgentEnabled">VirtualAgentEnabled.</param>
+        public HistoryEntry(ActionEnum? Action = null, string Resource = null, DateTime? Timestamp = null, User User = null, DomainEntityRef Client = null, string Version = null, bool? Secure = null, bool? VirtualAgentEnabled = null)
         {
             this.Action = Action;
             this.Resource = Resource;
@@ -130,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Client = Client;
             this.Version = Version;
             this.Secure = Secure;
+            this.VirtualAgentEnabled = VirtualAgentEnabled;
             
         }
         
@@ -188,6 +190,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Secure { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets VirtualAgentEnabled
+        /// </summary>
+        [DataMember(Name="virtualAgentEnabled", EmitDefaultValue=false)]
+        public bool? VirtualAgentEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -204,6 +214,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Secure: ").Append(Secure).Append("\n");
+            sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,6 +289,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Secure == other.Secure ||
                     this.Secure != null &&
                     this.Secure.Equals(other.Secure)
+                ) &&
+                (
+                    this.VirtualAgentEnabled == other.VirtualAgentEnabled ||
+                    this.VirtualAgentEnabled != null &&
+                    this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
                 );
         }
 
@@ -312,6 +328,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Secure != null)
                     hash = hash * 59 + this.Secure.GetHashCode();
+
+                if (this.VirtualAgentEnabled != null)
+                    hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
 
                 return hash;
             }

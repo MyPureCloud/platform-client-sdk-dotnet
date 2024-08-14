@@ -1401,6 +1401,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DialerContact> GetOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
+        /// Get bulk operation job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ContactsBulkOperationJob</returns>
+        
+        ContactsBulkOperationJob GetOutboundContactlistContactsBulkJob (string contactListId, string jobId);
+
+        /// <summary>
+        /// Get bulk operation job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJob</returns>
+        
+        ApiResponse<ContactsBulkOperationJob> GetOutboundContactlistContactsBulkJobWithHttpInfo (string contactListId, string jobId);
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>ContactsBulkOperationJobListing</returns>
+        
+        ContactsBulkOperationJobListing GetOutboundContactlistContactsBulkJobs (string contactListId);
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJobListing</returns>
+        
+        ApiResponse<ContactsBulkOperationJobListing> GetOutboundContactlistContactsBulkJobsWithHttpInfo (string contactListId);
+
+        /// <summary>
         /// Get the URI of a contact list export.
         /// </summary>
         /// <remarks>
@@ -5647,6 +5697,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DialerContact>> GetOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
+
+        /// <summary>
+        /// Get bulk operation job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ContactsBulkOperationJob</returns>
+        
+        System.Threading.Tasks.Task<ContactsBulkOperationJob> GetOutboundContactlistContactsBulkJobAsync (string contactListId, string jobId);
+
+        /// <summary>
+        /// Get bulk operation job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJob>> GetOutboundContactlistContactsBulkJobAsyncWithHttpInfo (string contactListId, string jobId);
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of ContactsBulkOperationJobListing</returns>
+        
+        System.Threading.Tasks.Task<ContactsBulkOperationJobListing> GetOutboundContactlistContactsBulkJobsAsync (string contactListId);
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJobListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJobListing>> GetOutboundContactlistContactsBulkJobsAsyncWithHttpInfo (string contactListId);
 
         /// <summary>
         /// Get the URI of a contact list export.
@@ -19883,6 +19983,441 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DialerContact>(localVarStatusCode,
                 localVarHeaders,
                 (DialerContact) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get bulk operation job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ContactsBulkOperationJob</returns>
+        
+        public ContactsBulkOperationJob GetOutboundContactlistContactsBulkJob (string contactListId, string jobId)
+        {
+             ApiResponse<ContactsBulkOperationJob> localVarResponse = GetOutboundContactlistContactsBulkJobWithHttpInfo(contactListId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get bulk operation job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJob</returns>
+        
+        public ApiResponse< ContactsBulkOperationJob > GetOutboundContactlistContactsBulkJobWithHttpInfo (string contactListId, string jobId)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistContactsBulkJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling OutboundApi->GetOutboundContactlistContactsBulkJob");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJob>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get bulk operation job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ContactsBulkOperationJob</returns>
+        
+        public async System.Threading.Tasks.Task<ContactsBulkOperationJob> GetOutboundContactlistContactsBulkJobAsync (string contactListId, string jobId)
+        {
+             ApiResponse<ContactsBulkOperationJob> localVarResponse = await GetOutboundContactlistContactsBulkJobAsyncWithHttpInfo(contactListId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get bulk operation job. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJob>> GetOutboundContactlistContactsBulkJobAsyncWithHttpInfo (string contactListId, string jobId)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistContactsBulkJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling OutboundApi->GetOutboundContactlistContactsBulkJob");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJob>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>ContactsBulkOperationJobListing</returns>
+        
+        public ContactsBulkOperationJobListing GetOutboundContactlistContactsBulkJobs (string contactListId)
+        {
+             ApiResponse<ContactsBulkOperationJobListing> localVarResponse = GetOutboundContactlistContactsBulkJobsWithHttpInfo(contactListId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>ApiResponse of ContactsBulkOperationJobListing</returns>
+        
+        public ApiResponse< ContactsBulkOperationJobListing > GetOutboundContactlistContactsBulkJobsWithHttpInfo (string contactListId)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistContactsBulkJobs");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJobListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of ContactsBulkOperationJobListing</returns>
+        
+        public async System.Threading.Tasks.Task<ContactsBulkOperationJobListing> GetOutboundContactlistContactsBulkJobsAsync (string contactListId)
+        {
+             ApiResponse<ContactsBulkOperationJobListing> localVarResponse = await GetOutboundContactlistContactsBulkJobsAsyncWithHttpInfo(contactListId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get 10 most recent bulk operation jobs associated with contact list. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <returns>Task of ApiResponse (ContactsBulkOperationJobListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsBulkOperationJobListing>> GetOutboundContactlistContactsBulkJobsAsyncWithHttpInfo (string contactListId)
+        { 
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistContactsBulkJobs");
+            
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactListId != null) localVarPathParams.Add("contactListId", this.Configuration.ApiClient.ParameterToString(contactListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistContactsBulkJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactsBulkOperationJobListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactsBulkOperationJobListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactsBulkOperationJobListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

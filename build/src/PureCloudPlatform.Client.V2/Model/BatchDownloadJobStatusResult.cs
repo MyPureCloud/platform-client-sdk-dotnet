@@ -21,11 +21,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchDownloadJobStatusResult" /> class.
         /// </summary>
-        /// <param name="JobId">JobId returned when job was initially submitted.</param>
-        /// <param name="ExpectedResultCount">Number of results expected when job is completed.</param>
-        /// <param name="ResultCount">Current number of results available.</param>
-        /// <param name="ErrorCount">Number of error results produced so far.</param>
-        /// <param name="Results">Current set of results for the job.</param>
+        /// <param name="JobId">JobId returned when job was initially submitted..</param>
+        /// <param name="ExpectedResultCount">Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed..</param>
+        /// <param name="ResultCount">Current number of results available, this includes both success and error results..</param>
+        /// <param name="ErrorCount">Current number of error results..</param>
+        /// <param name="Results">Current set of results for the job..</param>
         public BatchDownloadJobStatusResult(string JobId = null, int? ExpectedResultCount = null, int? ResultCount = null, int? ErrorCount = null, List<BatchDownloadJobResult> Results = null)
         {
             this.JobId = JobId;
@@ -48,45 +48,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// JobId returned when job was initially submitted
+        /// JobId returned when job was initially submitted.
         /// </summary>
-        /// <value>JobId returned when job was initially submitted</value>
+        /// <value>JobId returned when job was initially submitted.</value>
         [DataMember(Name="jobId", EmitDefaultValue=false)]
         public string JobId { get; set; }
 
 
 
         /// <summary>
-        /// Number of results expected when job is completed
+        /// Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed.
         /// </summary>
-        /// <value>Number of results expected when job is completed</value>
+        /// <value>Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed.</value>
         [DataMember(Name="expectedResultCount", EmitDefaultValue=false)]
         public int? ExpectedResultCount { get; set; }
 
 
 
         /// <summary>
-        /// Current number of results available
+        /// Current number of results available, this includes both success and error results.
         /// </summary>
-        /// <value>Current number of results available</value>
+        /// <value>Current number of results available, this includes both success and error results.</value>
         [DataMember(Name="resultCount", EmitDefaultValue=false)]
         public int? ResultCount { get; set; }
 
 
 
         /// <summary>
-        /// Number of error results produced so far
+        /// Current number of error results.
         /// </summary>
-        /// <value>Number of error results produced so far</value>
+        /// <value>Current number of error results.</value>
         [DataMember(Name="errorCount", EmitDefaultValue=false)]
         public int? ErrorCount { get; set; }
 
 
 
         /// <summary>
-        /// Current set of results for the job
+        /// Current set of results for the job.
         /// </summary>
-        /// <value>Current set of results for the job</value>
+        /// <value>Current set of results for the job.</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<BatchDownloadJobResult> Results { get; set; }
 

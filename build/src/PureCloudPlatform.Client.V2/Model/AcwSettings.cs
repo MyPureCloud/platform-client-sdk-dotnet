@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AcwSettings" /> class.
         /// </summary>
         /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
-        /// <param name="TimeoutMs">The amount of time the agent can stay in ACW (Min: 1 sec, Max: 60 min).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT..</param>
+        /// <param name="TimeoutMs">The amount of time the agent can stay in ACW (Min: 1 sec, Max: 60 min).  Can only be used when ACW is AGENT_REQUESTED, MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT..</param>
         public AcwSettings(WrapupPromptEnum? WrapupPrompt = null, int? TimeoutMs = null)
         {
             this.WrapupPrompt = WrapupPrompt;
@@ -86,9 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The amount of time the agent can stay in ACW (Min: 1 sec, Max: 60 min).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.
+        /// The amount of time the agent can stay in ACW (Min: 1 sec, Max: 60 min).  Can only be used when ACW is AGENT_REQUESTED, MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.
         /// </summary>
-        /// <value>The amount of time the agent can stay in ACW (Min: 1 sec, Max: 60 min).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.</value>
+        /// <value>The amount of time the agent can stay in ACW (Min: 1 sec, Max: 60 min).  Can only be used when ACW is AGENT_REQUESTED, MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.</value>
         [DataMember(Name="timeoutMs", EmitDefaultValue=false)]
         public int? TimeoutMs { get; set; }
 

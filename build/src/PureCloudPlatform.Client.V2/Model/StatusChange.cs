@@ -406,6 +406,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Intentminer,
             
             /// <summary>
+            /// Enum Internalmessaging for "internal.messaging"
+            /// </summary>
+            [EnumMember(Value = "internal.messaging")]
+            Internalmessaging,
+            
+            /// <summary>
             /// Enum Journey for "journey"
             /// </summary>
             [EnumMember(Value = "journey")]

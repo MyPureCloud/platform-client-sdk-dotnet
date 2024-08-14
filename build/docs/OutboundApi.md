@@ -59,6 +59,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **Get** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
 | [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **Get** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
 | [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **Get** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
+| [**GetOutboundContactlistContactsBulkJob**](OutboundApi.html#getoutboundcontactlistcontactsbulkjob) | **Get** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId} | Get bulk operation job. |
+| [**GetOutboundContactlistContactsBulkJobs**](OutboundApi.html#getoutboundcontactlistcontactsbulkjobs) | **Get** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs | Get 10 most recent bulk operation jobs associated with contact list. |
 | [**GetOutboundContactlistExport**](OutboundApi.html#getoutboundcontactlistexport) | **Get** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
 | [**GetOutboundContactlistImportstatus**](OutboundApi.html#getoutboundcontactlistimportstatus) | **Get** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
 | [**GetOutboundContactlistTimezonemappingpreview**](OutboundApi.html#getoutboundcontactlisttimezonemappingpreview) | **Get** /api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview | Preview the result of applying Automatic Time Zone Mapping to a contact list |
@@ -3574,6 +3576,134 @@ namespace Example
 ### Return type
 
 [**DialerContact**](DialerContact.html)
+
+<a name="getoutboundcontactlistcontactsbulkjob"></a>
+
+## [**ContactsBulkOperationJob**](ContactsBulkOperationJob.html) GetOutboundContactlistContactsBulkJob (string contactListId, string jobId)
+
+
+
+Get bulk operation job.
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlistContactsBulkJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+            var jobId = jobId_example;  // string | Job ID
+
+            try
+            { 
+                // Get bulk operation job.
+                ContactsBulkOperationJob result = apiInstance.GetOutboundContactlistContactsBulkJob(contactListId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlistContactsBulkJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **jobId** | **string**| Job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactsBulkOperationJob**](ContactsBulkOperationJob.html)
+
+<a name="getoutboundcontactlistcontactsbulkjobs"></a>
+
+## [**ContactsBulkOperationJobListing**](ContactsBulkOperationJobListing.html) GetOutboundContactlistContactsBulkJobs (string contactListId)
+
+
+
+Get 10 most recent bulk operation jobs associated with contact list.
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlistContactsBulkJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var contactListId = contactListId_example;  // string | Contact List ID
+
+            try
+            { 
+                // Get 10 most recent bulk operation jobs associated with contact list.
+                ContactsBulkOperationJobListing result = apiInstance.GetOutboundContactlistContactsBulkJobs(contactListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlistContactsBulkJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactsBulkOperationJobListing**](ContactsBulkOperationJobListing.html)
 
 <a name="getoutboundcontactlistexport"></a>
 

@@ -2742,8 +2742,6 @@ namespace Example
 
 Get an activity plan
 
-GetWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * wfm:activityPlan:view
@@ -2808,8 +2806,6 @@ namespace Example
 
 
 Gets an activity plan run job
-
-GetWorkforcemanagementBusinessunitActivityplanRunsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2878,8 +2874,6 @@ namespace Example
 
 Get activity plans
 
-GetWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * wfm:activityPlan:view
@@ -2944,8 +2938,6 @@ namespace Example
 
 
 Gets the latest job for all activity plans in the business unit
-
-GetWorkforcemanagementBusinessunitActivityplansJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -8764,8 +8756,6 @@ Update an activity plan
 
 If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
 
-PatchWorkforcemanagementBusinessunitActivityplan is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * wfm:activityPlan:edit
@@ -11201,8 +11191,6 @@ Run an activity plan manually
 
 Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
 
-PostWorkforcemanagementBusinessunitActivityplanRunsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * wfm:activityPlanRunJob:add
@@ -11267,8 +11255,6 @@ namespace Example
 
 
 Create an activity plan
-
-PostWorkforcemanagementBusinessunitActivityplans is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

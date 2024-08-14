@@ -19,19 +19,66 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class DownloadResponse :  IEquatable<DownloadResponse>
     {
         /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Running for "Running"
+            /// </summary>
+            [EnumMember(Value = "Running")]
+            Running,
+            
+            /// <summary>
+            /// Enum Completed for "Completed"
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed
+        }
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="DownloadResponse" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="ContentLocationUri">ContentLocationUri.</param>
         /// <param name="ImageUri">ImageUri.</param>
         /// <param name="Thumbnails">Thumbnails.</param>
-        public DownloadResponse(string ContentLocationUri = null, string ImageUri = null, List<DocumentThumbnail> Thumbnails = null)
+        /// <param name="State">State.</param>
+        /// <param name="ResultUri">ResultUri.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        public DownloadResponse(string Id = null, string ContentLocationUri = null, string ImageUri = null, List<DocumentThumbnail> Thumbnails = null, StateEnum? State = null, string ResultUri = null, string SelfUri = null)
         {
+            this.Id = Id;
             this.ContentLocationUri = ContentLocationUri;
             this.ImageUri = ImageUri;
             this.Thumbnails = Thumbnails;
+            this.State = State;
+            this.ResultUri = ResultUri;
+            this.SelfUri = SelfUri;
             
         }
         
+
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
 
 
         /// <summary>
@@ -57,6 +104,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DocumentThumbnail> Thumbnails { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Gets or Sets ResultUri
+        /// </summary>
+        [DataMember(Name="resultUri", EmitDefaultValue=false)]
+        public string ResultUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,9 +131,13 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class DownloadResponse {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ContentLocationUri: ").Append(ContentLocationUri).Append("\n");
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  ResultUri: ").Append(ResultUri).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.ContentLocationUri == other.ContentLocationUri ||
                     this.ContentLocationUri != null &&
                     this.ContentLocationUri.Equals(other.ContentLocationUri)
@@ -123,6 +197,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
+                ) &&
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
+                    this.ResultUri == other.ResultUri ||
+                    this.ResultUri != null &&
+                    this.ResultUri.Equals(other.ResultUri)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -137,6 +226,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.ContentLocationUri != null)
                     hash = hash * 59 + this.ContentLocationUri.GetHashCode();
 
@@ -145,6 +237,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
+
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.ResultUri != null)
+                    hash = hash * 59 + this.ResultUri.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

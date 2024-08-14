@@ -23,7 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **Get** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
 | [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **Get** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **Get** /api/v2/orphanrecordings | Gets all orphan recordings |
-| [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **Get** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
+| [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **Get** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. |
 | [**GetRecordingCrossplatformMediaretentionpolicies**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicies) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#getrecordingcrossplatformmediaretentionpolicy) | **Get** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetRecordingJob**](RecordingApi.html#getrecordingjob) | **Get** /api/v2/recording/jobs/{jobId} | Get the status of the job associated with the job id. |
@@ -1152,7 +1152,7 @@ namespace Example
 
 
 
-Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
 
 Requires NO permissions: 
 
@@ -1183,7 +1183,7 @@ namespace Example
 
             try
             { 
-                // Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+                // Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
                 BatchDownloadJobStatusResult result = apiInstance.GetRecordingBatchrequest(jobId);
                 Debug.WriteLine(result);
             }

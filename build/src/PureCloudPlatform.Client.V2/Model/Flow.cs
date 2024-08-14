@@ -307,7 +307,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
         /// <param name="WorktypeId">WorktypeId.</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, string WorktypeId = null)
+        /// <param name="VirtualAgentEnabled">VirtualAgentEnabled.</param>
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, string WorktypeId = null, bool? VirtualAgentEnabled = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -328,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PublishedBy = PublishedBy;
             this.CurrentOperation = CurrentOperation;
             this.WorktypeId = WorktypeId;
+            this.VirtualAgentEnabled = VirtualAgentEnabled;
             
         }
         
@@ -514,6 +516,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets VirtualAgentEnabled
+        /// </summary>
+        [DataMember(Name="virtualAgentEnabled", EmitDefaultValue=false)]
+        public bool? VirtualAgentEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -552,6 +562,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SupportedLanguages: ").Append(SupportedLanguages).Append("\n");
             sb.Append("  CompatibleFlowTypes: ").Append(CompatibleFlowTypes).Append("\n");
             sb.Append("  WorktypeId: ").Append(WorktypeId).Append("\n");
+            sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -704,6 +715,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WorktypeId.Equals(other.WorktypeId)
                 ) &&
                 (
+                    this.VirtualAgentEnabled == other.VirtualAgentEnabled ||
+                    this.VirtualAgentEnabled != null &&
+                    this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -786,6 +802,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WorktypeId != null)
                     hash = hash * 59 + this.WorktypeId.GetHashCode();
+
+                if (this.VirtualAgentEnabled != null)
+                    hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

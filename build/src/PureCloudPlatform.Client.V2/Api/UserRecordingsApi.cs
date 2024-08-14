@@ -70,15 +70,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Download a user recording.
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>DownloadResponse</returns>
-        
+        [Obsolete]
         DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null);
+
+        /// <summary>
+        /// Download a user recording.
+        /// </summary>
+        /// <remarks>
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
+        /// <returns>ApiResponse of DownloadResponse</returns>
+        [Obsolete]
+        ApiResponse<DownloadResponse> GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
         /// Download a user recording.
@@ -89,10 +103,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
+        /// <returns>DownloadResponse</returns>
+        
+        DownloadResponse GetUserrecordingTranscoding (string recordingId, string formatId = null);
+
+        /// <summary>
+        /// Download a user recording.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
         
-        ApiResponse<DownloadResponse> GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
+        ApiResponse<DownloadResponse> GetUserrecordingTranscodingWithHttpInfo (string recordingId, string formatId = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -230,15 +256,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Download a user recording.
         /// </summary>
         /// <remarks>
-        /// 
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null, bool? async = null);
+
+        /// <summary>
+        /// Download a user recording.
+        /// </summary>
+        /// <remarks>
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
+        /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        [Obsolete]
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
         /// Download a user recording.
@@ -249,10 +289,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
-        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
+        /// <returns>Task of DownloadResponse</returns>
+        
+        System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingTranscodingAsync (string recordingId, string formatId = null);
+
+        /// <summary>
+        /// Download a user recording.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingTranscodingAsyncWithHttpInfo (string recordingId, string formatId = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -852,14 +904,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Download a user recording. 
-        /// 
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>DownloadResponse</returns>
-        
+        [Obsolete]
         public DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
         {
              ApiResponse<DownloadResponse> localVarResponse = GetUserrecordingMediaWithHttpInfo(recordingId, formatId, async);
@@ -868,14 +920,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Download a user recording. 
-        /// 
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< DownloadResponse > GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null)
         { 
             // verify the required parameter 'recordingId' is set
@@ -962,14 +1014,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Download a user recording. 
-        /// 
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null, bool? async = null)
         {
              ApiResponse<DownloadResponse> localVarResponse = await GetUserrecordingMediaAsyncWithHttpInfo(recordingId, formatId, async);
@@ -979,14 +1031,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Download a user recording. 
-        /// 
+        /// API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null)
         { 
             // verify the required parameter 'recordingId' is set
@@ -1063,6 +1115,223 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetUserrecordingMedia: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUserrecordingMedia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DownloadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (DownloadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Download a user recording. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <returns>DownloadResponse</returns>
+        
+        public DownloadResponse GetUserrecordingTranscoding (string recordingId, string formatId = null)
+        {
+             ApiResponse<DownloadResponse> localVarResponse = GetUserrecordingTranscodingWithHttpInfo(recordingId, formatId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download a user recording. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <returns>ApiResponse of DownloadResponse</returns>
+        
+        public ApiResponse< DownloadResponse > GetUserrecordingTranscodingWithHttpInfo (string recordingId, string formatId = null)
+        { 
+            // verify the required parameter 'recordingId' is set
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecordingTranscoding");
+
+            var localVarPath = "/api/v2/userrecordings/{recordingId}/transcoding";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (recordingId != null) localVarPathParams.Add("recordingId", this.Configuration.ApiClient.ParameterToString(recordingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserrecordingTranscoding: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserrecordingTranscoding: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DownloadResponse>(localVarStatusCode,
+                localVarHeaders,
+                (DownloadResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DownloadResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Download a user recording. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <returns>Task of DownloadResponse</returns>
+        
+        public async System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingTranscodingAsync (string recordingId, string formatId = null)
+        {
+             ApiResponse<DownloadResponse> localVarResponse = await GetUserrecordingTranscodingAsyncWithHttpInfo(recordingId, formatId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download a user recording. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recordingId">User Recording ID</param>
+        /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <returns>Task of ApiResponse (DownloadResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingTranscodingAsyncWithHttpInfo (string recordingId, string formatId = null)
+        { 
+            // verify the required parameter 'recordingId' is set
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecordingTranscoding");
+            
+
+            var localVarPath = "/api/v2/userrecordings/{recordingId}/transcoding";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (recordingId != null) localVarPathParams.Add("recordingId", this.Configuration.ApiClient.ParameterToString(recordingId));
+
+            // Query params
+            if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
+                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserrecordingTranscoding: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserrecordingTranscoding: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DownloadResponse>(localVarStatusCode,
                 localVarHeaders,

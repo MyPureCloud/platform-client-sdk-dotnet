@@ -92,6 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.
+        /// </summary>
+        /// <value>Number of contacts that don't match filter. This is currently supported only for Campaigns with dynamic filter on.</value>
+        [DataMember(Name="filteredOutContactsCount", EmitDefaultValue=false)]
+        public int? FilteredOutContactsCount { get; private set; }
+
+
+
+        /// <summary>
         /// Information on the campaign's lines utilization
         /// </summary>
         /// <value>Information on the campaign's lines utilization</value>
@@ -115,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutstandingCalls: ").Append(OutstandingCalls).Append("\n");
             sb.Append("  ScheduledCalls: ").Append(ScheduledCalls).Append("\n");
             sb.Append("  TimeZoneRescheduledCalls: ").Append(TimeZoneRescheduledCalls).Append("\n");
+            sb.Append("  FilteredOutContactsCount: ").Append(FilteredOutContactsCount).Append("\n");
             sb.Append("  LinesUtilization: ").Append(LinesUtilization).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -192,6 +202,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeZoneRescheduledCalls.Equals(other.TimeZoneRescheduledCalls)
                 ) &&
                 (
+                    this.FilteredOutContactsCount == other.FilteredOutContactsCount ||
+                    this.FilteredOutContactsCount != null &&
+                    this.FilteredOutContactsCount.Equals(other.FilteredOutContactsCount)
+                ) &&
+                (
                     this.LinesUtilization == other.LinesUtilization ||
                     this.LinesUtilization != null &&
                     this.LinesUtilization.Equals(other.LinesUtilization)
@@ -229,6 +244,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeZoneRescheduledCalls != null)
                     hash = hash * 59 + this.TimeZoneRescheduledCalls.GetHashCode();
+
+                if (this.FilteredOutContactsCount != null)
+                    hash = hash * 59 + this.FilteredOutContactsCount.GetHashCode();
 
                 if (this.LinesUtilization != null)
                     hash = hash * 59 + this.LinesUtilization.GetHashCode();

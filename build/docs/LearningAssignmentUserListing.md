@@ -12,9 +12,9 @@ title: LearningAssignmentUserListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** | The number of users matching search term | [optional] |
 | **UnfilteredTotal** | **int?** | The total number of users | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |

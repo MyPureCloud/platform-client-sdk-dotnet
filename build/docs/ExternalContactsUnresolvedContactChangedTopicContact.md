@@ -32,8 +32,13 @@ title: ExternalContactsUnresolvedContactChangedTopicContact
 | **FacebookId** | [**ExternalContactsUnresolvedContactChangedTopicFacebookId**](ExternalContactsUnresolvedContactChangedTopicFacebookId.html) |  | [optional] |
 | **InstagramId** | [**ExternalContactsUnresolvedContactChangedTopicInstagramId**](ExternalContactsUnresolvedContactChangedTopicInstagramId.html) |  | [optional] |
 | **ExternalIds** | [**List&lt;ExternalContactsUnresolvedContactChangedTopicExternalId&gt;**](ExternalContactsUnresolvedContactChangedTopicExternalId.html) |  | [optional] |
+| **CanonicalContactId** | **string** |  | [optional] |
 | **Schema** | [**ExternalContactsUnresolvedContactChangedTopicDataSchema**](ExternalContactsUnresolvedContactChangedTopicDataSchema.html) |  | [optional] |
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **MergeSet** | **List&lt;string&gt;** |  | [optional] |
+| **MergedFrom** | **List&lt;string&gt;** |  | [optional] |
+| **MergedTo** | **string** |  | [optional] |
+| **MergeOperation** | [**ExternalContactsUnresolvedContactChangedTopicMergeOperation**](ExternalContactsUnresolvedContactChangedTopicMergeOperation.html) |  | [optional] |
 | **CreateDate** | **DateTime?** |  | [optional] |
 | **ModifyDate** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}
