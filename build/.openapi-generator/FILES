@@ -2353,6 +2353,7 @@ docs/GetAuthorizationRoleComparedefaultRightRoleId-example.txt
 docs/GetAuthorizationRoleSubjectgrants-example.txt
 docs/GetAuthorizationRoleUsers-example.txt
 docs/GetAuthorizationRoles-example.txt
+docs/GetAuthorizationRolesSettings-example.txt
 docs/GetAuthorizationSettings-example.txt
 docs/GetAuthorizationSubject-example.txt
 docs/GetAuthorizationSubject-example.txt
@@ -3805,6 +3806,8 @@ docs/KnowledgeDocumentGuestSearch.md
 docs/KnowledgeDocumentGuestSearchRequest.md
 docs/KnowledgeDocumentGuestSearchResult.md
 docs/KnowledgeDocumentPresentation.md
+docs/KnowledgeDocumentQuery.md
+docs/KnowledgeDocumentQueryResponse.md
 docs/KnowledgeDocumentReference.md
 docs/KnowledgeDocumentReq.md
 docs/KnowledgeDocumentRequest.md
@@ -5018,6 +5021,7 @@ docs/PostKnowledgeKnowledgebaseDocuments-example.txt
 docs/PostKnowledgeKnowledgebaseDocumentsBulkRemove-example.txt
 docs/PostKnowledgeKnowledgebaseDocumentsBulkUpdate-example.txt
 docs/PostKnowledgeKnowledgebaseDocumentsPresentations-example.txt
+docs/PostKnowledgeKnowledgebaseDocumentsQuery-example.txt
 docs/PostKnowledgeKnowledgebaseDocumentsSearch-example.txt
 docs/PostKnowledgeKnowledgebaseDocumentsSearchSuggestions-example.txt
 docs/PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd-example.txt
@@ -5441,6 +5445,7 @@ docs/PutAuthorizationRole-example.txt
 docs/PutAuthorizationRoleUsersAdd-example.txt
 docs/PutAuthorizationRoleUsersRemove-example.txt
 docs/PutAuthorizationRolesDefault-example.txt
+docs/PutAuthorizationRolesSettings-example.txt
 docs/PutChatsMessageReactions-example.txt
 docs/PutChatsSettings-example.txt
 docs/PutContentmanagementWorkspace-example.txt
@@ -6074,6 +6079,7 @@ docs/Ring.md
 docs/RoleDivision.md
 docs/RoleDivisionGrants.md
 docs/RoleDivisionPair.md
+docs/RoleSettings.md
 docs/Room.md
 docs/RoomParticipant.md
 docs/RoomParticipantResponse.md
@@ -9678,6 +9684,8 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentGuestSearch.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentGuestSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentGuestSearchResult.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentPresentation.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentQuery.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentReq.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentRequest.cs
@@ -10814,6 +10822,7 @@ src/PureCloudPlatform.Client.V2/Model/Ring.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivision.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionGrants.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionPair.cs
+src/PureCloudPlatform.Client.V2/Model/RoleSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Room.cs
 src/PureCloudPlatform.Client.V2/Model/RoomParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/RoomParticipantResponse.cs

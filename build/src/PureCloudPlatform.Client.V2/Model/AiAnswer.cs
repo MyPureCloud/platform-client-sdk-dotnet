@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Serviceerror for "ServiceError"
             /// </summary>
             [EnumMember(Value = "ServiceError")]
-            Serviceerror
+            Serviceerror,
+            
+            /// <summary>
+            /// Enum Lowhistoricalaccuracyerror for "LowHistoricalAccuracyError"
+            /// </summary>
+            [EnumMember(Value = "LowHistoricalAccuracyError")]
+            Lowhistoricalaccuracyerror
         }
         /// <summary>
         /// Describes the type of error associated with the AI answer.

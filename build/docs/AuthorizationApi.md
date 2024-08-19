@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **Get** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
 | [**GetAuthorizationRoleUsers**](AuthorizationApi.html#getauthorizationroleusers) | **Get** /api/v2/authorization/roles/{roleId}/users | Get a list of the users in a specified role. |
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **Get** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
+| [**GetAuthorizationRolesSettings**](AuthorizationApi.html#getauthorizationrolessettings) | **Get** /api/v2/authorization/roles/settings | Get authorization role settings |
 | [**GetAuthorizationSettings**](AuthorizationApi.html#getauthorizationsettings) | **Get** /api/v2/authorization/settings | Get authorization settings |
 | [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **Get** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
 | [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **Get** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
@@ -48,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutAuthorizationRoleUsersAdd**](AuthorizationApi.html#putauthorizationroleusersadd) | **Put** /api/v2/authorization/roles/{roleId}/users/add | Sets the users for the role |
 | [**PutAuthorizationRoleUsersRemove**](AuthorizationApi.html#putauthorizationroleusersremove) | **Put** /api/v2/authorization/roles/{roleId}/users/remove | Removes the users from the role |
 | [**PutAuthorizationRolesDefault**](AuthorizationApi.html#putauthorizationrolesdefault) | **Put** /api/v2/authorization/roles/default | Restore specified default roles |
+| [**PutAuthorizationRolesSettings**](AuthorizationApi.html#putauthorizationrolessettings) | **Put** /api/v2/authorization/roles/settings | Change authorization role settings |
 | [**PutUserRoles**](AuthorizationApi.html#putuserroles) | **Put** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
 {: class="table table-striped"}
 
@@ -1266,6 +1268,65 @@ namespace Example
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+<a name="getauthorizationrolessettings"></a>
+
+## [**RoleSettings**](RoleSettings.html) GetAuthorizationRolesSettings ()
+
+
+
+Get authorization role settings
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationRolesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+
+            try
+            { 
+                // Get authorization role settings
+                RoleSettings result = apiInstance.GetAuthorizationRolesSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationRolesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**RoleSettings**](RoleSettings.html)
 
 <a name="getauthorizationsettings"></a>
 
@@ -2762,6 +2823,72 @@ namespace Example
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+<a name="putauthorizationrolessettings"></a>
+
+## [**RoleSettings**](RoleSettings.html) PutAuthorizationRolesSettings (RoleSettings body)
+
+
+
+Change authorization role settings
+
+Change role settings
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutAuthorizationRolesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var body = new RoleSettings(); // RoleSettings | Authorization Role Settings
+
+            try
+            { 
+                // Change authorization role settings
+                RoleSettings result = apiInstance.PutAuthorizationRolesSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PutAuthorizationRolesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RoleSettings**](RoleSettings.html)| Authorization Role Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RoleSettings**](RoleSettings.html)
 
 <a name="putuserroles"></a>
 

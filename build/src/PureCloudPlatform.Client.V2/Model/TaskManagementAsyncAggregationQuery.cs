@@ -257,6 +257,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Oworkitemsservicelevel,
             
             /// <summary>
+            /// Enum Tworkitemsagentfocuscomplete for "tWorkitemsAgentFocusComplete"
+            /// </summary>
+            [EnumMember(Value = "tWorkitemsAgentFocusComplete")]
+            Tworkitemsagentfocuscomplete,
+            
+            /// <summary>
             /// Enum Tworkitemsalert for "tWorkitemsAlert"
             /// </summary>
             [EnumMember(Value = "tWorkitemsAlert")]

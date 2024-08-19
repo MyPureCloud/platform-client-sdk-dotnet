@@ -21,10 +21,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanBidRanks" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the user..</param>
         /// <param name="WorkPlanBiddingPerformance">Work plan bidding agent performance ranking. The range of values is between 0 and 9999..</param>
         /// <param name="BiddingTieBreaker">Custom agent ranking metric that some customers can use..</param>
-        public WorkPlanBidRanks(int? WorkPlanBiddingPerformance = null, string BiddingTieBreaker = null)
+        public WorkPlanBidRanks(string Id = null, int? WorkPlanBiddingPerformance = null, string BiddingTieBreaker = null)
         {
+            this.Id = Id;
             this.WorkPlanBiddingPerformance = WorkPlanBiddingPerformance;
             this.BiddingTieBreaker = BiddingTieBreaker;
             
@@ -33,11 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The globally unique identifier for the user.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The globally unique identifier for the user.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

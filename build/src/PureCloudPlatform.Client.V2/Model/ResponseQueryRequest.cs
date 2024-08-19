@@ -23,11 +23,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="QueryPhrase">Query phrase to search response text and name. If not set will match all..</param>
         /// <param name="PageSize">The maximum number of hits to return. Default: 25, Maximum: 500..</param>
+        /// <param name="PageNumber">Page Number.</param>
         /// <param name="Filters">Filter the query results..</param>
-        public ResponseQueryRequest(string QueryPhrase = null, int? PageSize = null, List<ResponseFilter> Filters = null)
+        public ResponseQueryRequest(string QueryPhrase = null, int? PageSize = null, int? PageNumber = null, List<ResponseFilter> Filters = null)
         {
             this.QueryPhrase = QueryPhrase;
             this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
             this.Filters = Filters;
             
         }
@@ -53,6 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Page Number
+        /// </summary>
+        /// <value>Page Number</value>
+        [DataMember(Name="pageNumber", EmitDefaultValue=false)]
+        public int? PageNumber { get; set; }
+
+
+
+        /// <summary>
         /// Filter the query results.
         /// </summary>
         /// <value>Filter the query results.</value>
@@ -71,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -123,6 +135,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageSize.Equals(other.PageSize)
                 ) &&
                 (
+                    this.PageNumber == other.PageNumber ||
+                    this.PageNumber != null &&
+                    this.PageNumber.Equals(other.PageNumber)
+                ) &&
+                (
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
@@ -145,6 +162,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
+
+                if (this.PageNumber != null)
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
 
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();

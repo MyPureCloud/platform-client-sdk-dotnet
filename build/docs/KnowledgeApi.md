@@ -85,6 +85,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseDocumentsBulkRemove**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkremove) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove | Bulk remove documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkUpdate**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsbulkupdate) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update | Bulk update documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsPresentations**](KnowledgeApi.html#postknowledgeknowledgebasedocumentspresentations) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations | Indicate that documents were presented to the user. |
+| [**PostKnowledgeKnowledgebaseDocumentsQuery**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsquery) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/query | Query for knowledge documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearch) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search | Search the documents in a knowledge base. |
 | [**PostKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearchsuggestions) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
 | [**PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd**](KnowledgeApi.html#postknowledgeknowledgebasedocumentsversionsbulkadd) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add | Bulk add document versions. |
@@ -5380,6 +5381,73 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postknowledgeknowledgebasedocumentsquery"></a>
+
+## [**KnowledgeDocumentQueryResponse**](KnowledgeDocumentQueryResponse.html) PostKnowledgeKnowledgebaseDocumentsQuery (string knowledgeBaseId, List<string> expand = null, KnowledgeDocumentQuery body = null)
+
+
+
+Query for knowledge documents.
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge Base ID
+            var expand = new List<string>(); // List<string> | Fields, if any, to expand for each document in the search result matching the query. (optional) 
+            var body = new KnowledgeDocumentQuery(); // KnowledgeDocumentQuery |  (optional) 
+
+            try
+            { 
+                // Query for knowledge documents.
+                KnowledgeDocumentQueryResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentsQuery(knowledgeBaseId, expand, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge Base ID |  |
+| **expand** | [**List<string>**](string.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional] <br />**Values**: documentVariations, documentAlternatives, knowledgeBaseLanguageCode |
+| **body** | [**KnowledgeDocumentQuery**](KnowledgeDocumentQuery.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentQueryResponse**](KnowledgeDocumentQueryResponse.html)
 
 <a name="postknowledgeknowledgebasedocumentssearch"></a>
 

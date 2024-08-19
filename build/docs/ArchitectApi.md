@@ -1054,8 +1054,6 @@ Deletes a log level for a flow by flow id.
 
 Deletes the associated log level for a flow by flow id
 
-DeleteFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:flowLogLevel:delete
@@ -1317,8 +1315,6 @@ void (empty response body)
 Resets the org log level to default, base
 
 Resets the org log level to default, base
-
-DeleteFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4007,8 +4003,6 @@ Retrieves the log level for a flow by flow id.
 
 Retrieves the log level for a flow by flow id.
 
-GetFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:flowLogLevel:view
@@ -5635,8 +5629,6 @@ Get the execution history enabled setting.
 
 Get the execution history enabled setting.
 
-GetFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * architect:flowinstanceexecutiondata:view
@@ -5696,8 +5688,6 @@ This endpoint does require any parameters.
 Retrieve a list of LogLevels for the organization.
 
 Returns a paged set of LogLevels per flow id
-
-GetFlowsInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -5769,8 +5759,6 @@ Gets the available flow log level characteristics for this organization.
 
 Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
 
-GetFlowsInstancesSettingsLoglevelsCharacteristics is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * architect:flowLogLevel:view
@@ -5831,8 +5819,6 @@ This endpoint does require any parameters.
 Returns the flow default log level.
 
 Returns the flow default log level which will be used if no specific flow id log level is found.
-
-GetFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6545,8 +6531,6 @@ namespace Example
 Edit the execution history enabled setting.
 
 Edit the execution history enabled setting.
-
-PatchFlowsInstancesSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -7581,8 +7565,6 @@ namespace Example
 Set the logLevel for a particular flow id
 
 Assigns a new loglevel to a flow id
-
-PostFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -9349,8 +9331,6 @@ Edit the logLevel for a particular flow id
 
 Updates the loglevel for a flow id
 
-PutFlowInstancesSettingsLoglevels is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * architect:flowLogLevel:edit
@@ -9558,8 +9538,6 @@ namespace Example
 Edit the flow default log level.
 
 Edit the flow default log level.
-
-PutFlowsInstancesSettingsLoglevelsDefault is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

@@ -303,6 +303,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowoutcomevalue,
             
             /// <summary>
+            /// Enum Flowsubtype for "flowSubType"
+            /// </summary>
+            [EnumMember(Value = "flowSubType")]
+            Flowsubtype,
+            
+            /// <summary>
             /// Enum Flowtype for "flowType"
             /// </summary>
             [EnumMember(Value = "flowType")]
