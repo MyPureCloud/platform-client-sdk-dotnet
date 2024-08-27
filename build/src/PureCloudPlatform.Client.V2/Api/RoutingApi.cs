@@ -8059,11 +8059,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8164,11 +8165,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8262,11 +8264,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8360,11 +8363,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8464,11 +8468,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8569,11 +8574,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8679,11 +8685,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8791,11 +8798,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -8895,11 +8903,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9000,11 +9009,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9104,11 +9114,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9209,11 +9220,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9313,11 +9325,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9418,11 +9431,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9525,11 +9539,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9633,11 +9648,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9743,11 +9759,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9855,11 +9872,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -9965,11 +9983,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10077,11 +10096,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10187,11 +10207,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10299,11 +10320,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10397,11 +10419,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10495,11 +10518,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10599,11 +10623,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10704,11 +10729,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10808,11 +10834,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -10913,11 +10940,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11017,11 +11045,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11122,11 +11151,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11226,11 +11256,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11331,11 +11362,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11435,11 +11467,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11540,11 +11573,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11644,11 +11678,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11749,11 +11784,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11847,11 +11883,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -11945,11 +11982,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12052,11 +12090,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12160,11 +12199,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12269,11 +12309,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12379,11 +12420,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12483,11 +12525,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12588,11 +12631,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12698,11 +12742,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12810,11 +12855,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -12920,11 +12966,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13032,11 +13079,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13137,11 +13185,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13243,11 +13292,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13357,11 +13407,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13471,11 +13522,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13576,11 +13628,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13682,11 +13735,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13784,11 +13838,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13886,11 +13941,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -13985,11 +14041,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14084,11 +14141,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14183,11 +14241,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14282,11 +14341,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14387,11 +14447,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14493,11 +14554,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14604,11 +14666,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14717,11 +14780,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14831,11 +14895,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -14946,11 +15011,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15057,11 +15123,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15168,11 +15235,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15273,11 +15341,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15379,11 +15448,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15484,11 +15554,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15590,11 +15661,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15695,11 +15767,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15801,11 +15874,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -15903,11 +15977,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16005,11 +16080,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16104,11 +16180,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16203,11 +16280,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16308,11 +16386,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16414,11 +16493,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16528,11 +16608,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16642,11 +16723,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16747,11 +16829,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16853,11 +16936,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -16964,11 +17048,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17075,11 +17160,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17180,11 +17266,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17286,11 +17373,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17397,11 +17485,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17510,11 +17599,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17615,11 +17705,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17721,11 +17812,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17835,11 +17927,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -17949,11 +18042,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18054,11 +18148,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18159,11 +18254,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18264,11 +18360,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18370,11 +18467,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18481,11 +18579,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18594,11 +18693,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18699,11 +18799,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18805,11 +18906,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -18913,11 +19015,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19022,11 +19125,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19133,11 +19237,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19246,11 +19351,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19387,11 +19493,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19529,11 +19636,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19667,11 +19775,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19806,11 +19915,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -19917,11 +20027,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20029,11 +20140,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20155,11 +20267,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20281,11 +20394,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20401,11 +20515,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20521,11 +20636,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20629,11 +20745,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20737,11 +20854,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20848,11 +20966,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -20959,11 +21078,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21058,11 +21178,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21157,11 +21278,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21256,11 +21378,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21355,11 +21478,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21454,11 +21578,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21553,11 +21678,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21658,11 +21784,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21764,11 +21891,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21869,11 +21997,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -21975,11 +22104,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22092,11 +22222,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22210,11 +22341,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22318,11 +22450,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22427,11 +22560,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22538,11 +22672,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22649,11 +22784,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22760,11 +22896,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22871,11 +23008,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -22976,11 +23114,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23082,11 +23221,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23187,11 +23327,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23292,11 +23433,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23418,11 +23560,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23546,11 +23689,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23654,11 +23798,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23763,11 +23908,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -23895,11 +24041,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24027,11 +24174,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24132,11 +24280,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24238,11 +24387,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24343,11 +24493,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24449,11 +24600,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24548,11 +24700,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24647,11 +24800,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24752,11 +24906,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24858,11 +25013,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -24963,11 +25119,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25069,11 +25226,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25180,11 +25338,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25291,11 +25450,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25398,11 +25558,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25506,11 +25667,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25613,11 +25775,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25721,11 +25884,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25834,11 +25998,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -25947,11 +26112,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26052,11 +26218,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26158,11 +26325,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26278,11 +26446,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26398,11 +26567,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26503,11 +26673,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26609,11 +26780,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26726,11 +26898,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26843,11 +27016,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -26960,11 +27134,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27078,11 +27253,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27192,11 +27368,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27307,11 +27484,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27421,11 +27599,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27536,11 +27715,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27650,11 +27830,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27765,11 +27946,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27881,11 +28063,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -27999,11 +28182,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28115,11 +28299,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28233,11 +28418,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28349,11 +28535,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28467,11 +28654,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28580,11 +28768,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28694,11 +28883,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28815,11 +29005,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -28939,11 +29130,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29055,11 +29247,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29173,11 +29366,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29294,11 +29488,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29418,11 +29613,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29534,11 +29730,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29652,11 +29849,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29761,11 +29959,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29871,11 +30070,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -29981,11 +30181,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30092,11 +30293,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30208,11 +30410,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30326,11 +30529,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30448,11 +30652,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30573,11 +30778,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30692,11 +30898,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30813,11 +31020,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -30935,11 +31143,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31060,11 +31269,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31176,11 +31386,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31294,11 +31505,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31410,11 +31622,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31528,11 +31741,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31638,11 +31852,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31749,11 +31964,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31865,11 +32081,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -31982,11 +32199,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32089,11 +32307,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32196,11 +32415,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32303,11 +32523,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32410,11 +32631,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32526,11 +32748,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32644,11 +32867,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32757,11 +32981,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32871,11 +33096,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -32981,11 +33207,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33092,11 +33319,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33202,11 +33430,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33313,11 +33542,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33423,11 +33653,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33534,11 +33765,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33644,11 +33876,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33755,11 +33988,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33862,11 +34096,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -33969,11 +34204,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34087,11 +34323,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34207,11 +34444,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34325,11 +34563,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34445,11 +34684,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34561,11 +34801,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34679,11 +34920,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34789,11 +35031,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -34900,11 +35143,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35012,11 +35256,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35125,11 +35370,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35235,11 +35481,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35346,11 +35593,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35456,11 +35704,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35567,11 +35816,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35677,11 +35927,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35788,11 +36039,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -35898,11 +36150,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36009,11 +36262,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36121,11 +36375,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36234,11 +36489,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36344,11 +36600,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36455,11 +36712,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36565,11 +36823,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36676,11 +36935,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36788,11 +37048,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -36901,11 +37162,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37011,11 +37273,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37122,11 +37385,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37238,11 +37502,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37356,11 +37621,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37472,11 +37738,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37590,11 +37857,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37700,11 +37968,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37811,11 +38080,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -37933,11 +38203,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38058,11 +38329,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38163,11 +38435,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38269,11 +38542,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38385,11 +38659,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38503,11 +38778,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38619,11 +38895,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38737,11 +39014,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38847,11 +39125,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -38958,11 +39237,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39068,11 +39348,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39179,11 +39460,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39295,11 +39577,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39413,11 +39696,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39529,11 +39813,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39647,11 +39932,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39763,11 +40049,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39881,11 +40168,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -39991,11 +40279,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40102,11 +40391,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40218,11 +40508,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40336,11 +40627,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40452,11 +40744,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40570,11 +40863,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40692,11 +40986,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40817,11 +41112,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -40933,11 +41229,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)
@@ -41051,11 +41348,12 @@ namespace PureCloudPlatform.Client.V2.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>();
 
             if (localVarStatusCode >= 400)

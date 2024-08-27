@@ -103,8 +103,9 @@ namespace PureCloudPlatform.Client.V2.Extensions
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
                 response.Headers
-                 .Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
-                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
+                 .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                 .Select(header => new { Name = header.First().GetType().GetProperty("Name").GetValue(header.First()), Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList() })
+                                    .ToDictionary(header => header.Name.ToString(), header => String.Join(", ", header?.Value?.ToArray())),
                 authTokenInfo,
                 response.Content,
                 response.StatusDescription);
@@ -184,8 +185,10 @@ namespace PureCloudPlatform.Client.V2.Extensions
             apiClient.Configuration.AuthTokenInfo = authTokenInfo;
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
-                response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
-                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
+                response.Headers
+                 .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                 .Select(header => new { Name = header.First().GetType().GetProperty("Name").GetValue(header.First()), Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList() })
+                                    .ToDictionary(header => header.Name.ToString(), header => String.Join(", ", header?.Value?.ToArray())),
                 authTokenInfo,
                 response.Content,
                 response.StatusDescription);
@@ -307,8 +310,10 @@ namespace PureCloudPlatform.Client.V2.Extensions
             apiClient.Configuration.AuthTokenInfo = authTokenInfo;
 
             return new ApiResponse<AuthTokenInfo>(statusCode,
-                response.Headers.Select(header => new { Name = header.GetType().GetProperty("Name").GetValue(header), Value = header.GetType().GetProperty("Value").GetValue(header) })
-                                    .ToDictionary(header => header.Name.ToString(), header => header.Value.ToString()),
+                response.Headers
+                 .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                 .Select(header => new { Name = header.First().GetType().GetProperty("Name").GetValue(header.First()), Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList() })
+                                    .ToDictionary(header => header.Name.ToString(), header => String.Join(", ", header?.Value?.ToArray())),
                 authTokenInfo,
                 response.Content,
                 response.StatusDescription);
@@ -345,22 +350,24 @@ namespace PureCloudPlatform.Client.V2.Extensions
             var fullUrl = restClient.BuildUri(request);
             string url = fullUrl == null ? path : fullUrl.ToString();
             apiClient.Configuration.Logger.Trace(method.ToString(), url, postBody, statusCode, headerParams, response.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
             apiClient.Configuration.Logger.Debug(method.ToString(), url, postBody, statusCode, headerParams);
 
             if (statusCode >= 400 || statusCode == 0)
                 
                 apiClient.Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, statusCode, headerParams, response.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
             return (Object) response;
         }

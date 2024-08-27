@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 pathParams, contentType);
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "213.0.0");
+            request.AddHeader("purecloud-sdk", "214.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             RestResponse response;
@@ -263,11 +263,12 @@ namespace PureCloudPlatform.Client.V2.Client
                 response = RestClient.Execute(request);
                 Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
 
             }while(retry.ShouldRetry(response));
@@ -285,11 +286,12 @@ namespace PureCloudPlatform.Client.V2.Client
 
             if ((int)response.StatusCode < 200 || (int)response.StatusCode >= 300)
                 Configuration.Logger.Error(method.ToString(), url, postBody, response.Content, (int)response.StatusCode, headerParams, response.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
 
 
@@ -356,11 +358,12 @@ namespace PureCloudPlatform.Client.V2.Client
                 response = await RestClient.ExecuteAsync(request);
                 Configuration.Logger.Debug(method.ToString(), url, postBody, (int)response.StatusCode, headerParams);
                 Configuration.Logger.Trace(method.ToString(), url, postBody, (int)response.StatusCode, headerParams, response.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
                                                              .Select(header => new
                                                          {
-                                                            Name = header.GetType().GetProperty("Name")?.GetValue(header),
-                                                            Value = header.GetType().GetProperty("Value")?.GetValue(header)
-                                                            }).ToDictionary(header => header?.Name?.ToString(), header => header?.Value?.ToString()) 
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
                                                         ?? new Dictionary<string, string>());
             }while(retry.ShouldRetry(response));
 

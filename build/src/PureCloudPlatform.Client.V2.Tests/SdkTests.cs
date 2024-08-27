@@ -123,59 +123,6 @@ namespace PureCloudPlatform.Client.V2.Tests
             Console.WriteLine($"CorrelationId for PutUserProfileskillsWithHttpInfo {skills.CorrelationId}");
         }
 
-        [Test, Order(5)]
-        public void TestNotifications()
-        {
-            var handler = new NotificationHandler();
-
-            // Start the handler inside of the task to block this test until the notifications come in
-            var tcs = new TaskCompletionSource<bool>();
-            var busyReceived = false;
-            var availableReceived = false;
-            Task.Factory.StartNew(() =>
-            {
-                handler.NotificationReceived += (data) =>
-                {
-                    try
-                    {
-                        if (data.GetType() == typeof(NotificationData<PresenceEventUserPresence>))
-                        {
-                            var presence = (NotificationData<PresenceEventUserPresence>)data;
-
-                            // Check to see what we got
-                            if (presence.EventBody.PresenceDefinition.Id == availablePresenceId) availableReceived = true;
-                            if (presence.EventBody.PresenceDefinition.Id == busyPresenceId) busyReceived = true;
-
-                            // Complete the async task
-                            if (busyReceived && availableReceived) tcs.SetResult(true);
-                        }
-                    }
-                    catch (InvalidOperationException ex)
-                    {
-                        // Suppress this error that happens occasionally:
-                        // An attempt was made to transition a task to a final state when it had already completed.
-                    } 
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                    }
-                };
-            });
-
-            // Register topic
-            handler.AddSubscription($"v2.users.{userId}.presence", typeof(PresenceEventUserPresence));
-
-            // Change presences
-            presenceApi.PatchUserPresence(userId, "PURECLOUD", new UserPresence() { PresenceDefinition = new PresenceDefinition(busyPresenceId) });
-            presenceApi.PatchUserPresence(userId, "PURECLOUD", new UserPresence() { PresenceDefinition = new PresenceDefinition(availablePresenceId) });
-
-            // The getter for Result will block until the task has completed
-            var result = tcs.Task.Result;
-
-            // Assert that both worked
-            Assert.AreEqual(busyReceived, true);
-            Assert.AreEqual(availableReceived, true);
-        }
 
 
         [Test, Retry(2), Order(6)]

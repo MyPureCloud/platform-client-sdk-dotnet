@@ -217,6 +217,13 @@ Set the `RetryMax` to the retries to attempt before returning an error.
 When the retry time is a positive integer, the SDK will follow the recommended backoff logic using the provided configuration.
 The best practices are documented in the [Rate Limiting](https://developer.genesys.cloud/platform/api/rate-limits) Developer Center article.
 
+#### Management of HTTP Responses with duplicate header names.
+
+When an HTTP Response is received with duplicate header names, the SDK will automatically merge such headers and present them as single entry with a comma separated string value.
+This applies to response headers in the ApiResponse class, or when enabling SDK logging.
+
+e.g. HTTP Response with ("Server": "Google") and ("Server": "FrontEnd") will be made available and logged as: "Server": "Google, FrontEnd"
+
 #### SDK Logging
 
 Logging of API requests and responses can be controlled by several parameters on the `Configuration`'s `Logger` instance.
