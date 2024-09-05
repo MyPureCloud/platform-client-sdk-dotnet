@@ -1,0 +1,22 @@
+# ConversationCallEventTopicErrorBody
+
+## ININ.PureCloudApi.Model.ConversationCallEventTopicErrorBody
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Message** | **string** |  | [optional] |
+| **Code** | **string** |  | [optional] |
+| **Status** | **int?** |  | [optional] |
+| **EntityId** | **string** |  | [optional] |
+| **EntityName** | **string** |  | [optional] |
+| **MessageWithParams** | **string** |  | [optional] |
+| **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **ContextId** | **string** |  | [optional] |
+| **Details** | [**List&lt;ConversationCallEventTopicDetail&gt;**](ConversationCallEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationCallEventTopicErrorBody&gt;**](ConversationCallEventTopicErrorBody) |  | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 214.0.0_

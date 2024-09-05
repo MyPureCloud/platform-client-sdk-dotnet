@@ -1,0 +1,22 @@
+# ConversationScreenShareEventTopicErrorBody
+
+## ININ.PureCloudApi.Model.ConversationScreenShareEventTopicErrorBody
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **Message** | **string** |  | [optional] |
+| **Code** | **string** |  | [optional] |
+| **Status** | **int?** |  | [optional] |
+| **EntityId** | **string** |  | [optional] |
+| **EntityName** | **string** |  | [optional] |
+| **MessageWithParams** | **string** |  | [optional] |
+| **MessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **ContextId** | **string** |  | [optional] |
+| **Details** | [**List&lt;ConversationScreenShareEventTopicDetail&gt;**](ConversationScreenShareEventTopicDetail) |  | [optional] |
+| **Errors** | [**List&lt;ConversationScreenShareEventTopicErrorBody&gt;**](ConversationScreenShareEventTopicErrorBody) |  | [optional] |
+
+
+
+_PureCloudPlatform.Client.V2 214.0.0_
