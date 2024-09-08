@@ -1561,6 +1561,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KnowledgeDocumentResponse> PatchKnowledgeKnowledgebaseDocumentWithHttpInfo (string knowledgeBaseId, string documentId, KnowledgeDocumentReq body);
 
         /// <summary>
+        /// Update feedback on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>KnowledgeDocumentFeedbackResponse</returns>
+        
+        KnowledgeDocumentFeedbackResponse PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null);
+
+        /// <summary>
+        /// Update feedback on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of KnowledgeDocumentFeedbackResponse</returns>
+        
+        ApiResponse<KnowledgeDocumentFeedbackResponse> PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdWithHttpInfo (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null);
+
+        /// <summary>
         /// Update a variation for a document.
         /// </summary>
         /// <remarks>
@@ -1961,6 +1991,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostKnowledgeGuestSessionDocumentViewsWithHttpInfo (string sessionId, string documentId, KnowledgeGuestDocumentView body = null);
 
         /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>KnowledgeGuestAnswerDocumentsResponse</returns>
+        
+        KnowledgeGuestAnswerDocumentsResponse PostKnowledgeGuestSessionDocumentsAnswers (string sessionId, KnowledgeDocumentsAnswerFilter body);
+
+        /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of KnowledgeGuestAnswerDocumentsResponse</returns>
+        
+        ApiResponse<KnowledgeGuestAnswerDocumentsResponse> PostKnowledgeGuestSessionDocumentsAnswersWithHttpInfo (string sessionId, KnowledgeDocumentsAnswerFilter body);
+
+        /// <summary>
         /// Indicate that documents were presented to the user.
         /// </summary>
         /// <remarks>
@@ -2255,6 +2311,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of KnowledgeDocumentResponse</returns>
         
         ApiResponse<KnowledgeDocumentResponse> PostKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body);
+
+        /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>KnowledgeAnswerDocumentsResponse</returns>
+        
+        KnowledgeAnswerDocumentsResponse PostKnowledgeKnowledgebaseDocumentsAnswers (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body);
+
+        /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of KnowledgeAnswerDocumentsResponse</returns>
+        
+        ApiResponse<KnowledgeAnswerDocumentsResponse> PostKnowledgeKnowledgebaseDocumentsAnswersWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body);
 
         /// <summary>
         /// Bulk remove documents.
@@ -4381,6 +4463,36 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PatchKnowledgeKnowledgebaseDocumentAsyncWithHttpInfo (string knowledgeBaseId, string documentId, KnowledgeDocumentReq body);
 
         /// <summary>
+        /// Update feedback on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of KnowledgeDocumentFeedbackResponse</returns>
+        
+        System.Threading.Tasks.Task<KnowledgeDocumentFeedbackResponse> PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdAsync (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null);
+
+        /// <summary>
+        /// Update feedback on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (KnowledgeDocumentFeedbackResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentFeedbackResponse>> PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null);
+
+        /// <summary>
         /// Update a variation for a document.
         /// </summary>
         /// <remarks>
@@ -4781,6 +4893,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostKnowledgeGuestSessionDocumentViewsAsyncWithHttpInfo (string sessionId, string documentId, KnowledgeGuestDocumentView body = null);
 
         /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>Task of KnowledgeGuestAnswerDocumentsResponse</returns>
+        
+        System.Threading.Tasks.Task<KnowledgeGuestAnswerDocumentsResponse> PostKnowledgeGuestSessionDocumentsAnswersAsync (string sessionId, KnowledgeDocumentsAnswerFilter body);
+
+        /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (KnowledgeGuestAnswerDocumentsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestAnswerDocumentsResponse>> PostKnowledgeGuestSessionDocumentsAnswersAsyncWithHttpInfo (string sessionId, KnowledgeDocumentsAnswerFilter body);
+
+        /// <summary>
         /// Indicate that documents were presented to the user.
         /// </summary>
         /// <remarks>
@@ -5075,6 +5213,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponse>> PostKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentReq body);
+
+        /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of KnowledgeAnswerDocumentsResponse</returns>
+        
+        System.Threading.Tasks.Task<KnowledgeAnswerDocumentsResponse> PostKnowledgeKnowledgebaseDocumentsAnswersAsync (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body);
+
+        /// <summary>
+        /// Answer documents.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (KnowledgeAnswerDocumentsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeAnswerDocumentsResponse>> PostKnowledgeKnowledgebaseDocumentsAnswersAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body);
 
         /// <summary>
         /// Bulk remove documents.
@@ -17795,6 +17959,261 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update feedback on a document 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>KnowledgeDocumentFeedbackResponse</returns>
+        
+        public KnowledgeDocumentFeedbackResponse PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null)
+        {
+             ApiResponse<KnowledgeDocumentFeedbackResponse> localVarResponse = PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdWithHttpInfo(knowledgeBaseId, documentId, feedbackId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update feedback on a document 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of KnowledgeDocumentFeedbackResponse</returns>
+        
+        public ApiResponse< KnowledgeDocumentFeedbackResponse > PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdWithHttpInfo (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
+            // verify the required parameter 'feedbackId' is set
+            if (feedbackId == null)
+                throw new ApiException(400, "Missing required parameter 'feedbackId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+            if (documentId != null) localVarPathParams.Add("documentId", this.Configuration.ApiClient.ParameterToString(documentId));
+            if (feedbackId != null) localVarPathParams.Add("feedbackId", this.Configuration.ApiClient.ParameterToString(feedbackId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeDocumentFeedbackResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeDocumentFeedbackResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeDocumentFeedbackResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update feedback on a document 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of KnowledgeDocumentFeedbackResponse</returns>
+        
+        public async System.Threading.Tasks.Task<KnowledgeDocumentFeedbackResponse> PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdAsync (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null)
+        {
+             ApiResponse<KnowledgeDocumentFeedbackResponse> localVarResponse = await PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdAsyncWithHttpInfo(knowledgeBaseId, documentId, feedbackId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update feedback on a document 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID.</param>
+        /// <param name="documentId">Document ID.</param>
+        /// <param name="feedbackId">Feedback ID.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (KnowledgeDocumentFeedbackResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentFeedbackResponse>> PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdAsyncWithHttpInfo (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
+            
+            // verify the required parameter 'documentId' is set
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
+            
+            // verify the required parameter 'feedbackId' is set
+            if (feedbackId == null)
+                throw new ApiException(400, "Missing required parameter 'feedbackId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
+            
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+            if (documentId != null) localVarPathParams.Add("documentId", this.Configuration.ApiClient.ParameterToString(documentId));
+            if (feedbackId != null) localVarPathParams.Add("feedbackId", this.Configuration.ApiClient.ParameterToString(feedbackId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Patch, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeDocumentFeedbackResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeDocumentFeedbackResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeDocumentFeedbackResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update a variation for a document. 
         /// 
         /// </summary>
@@ -21246,6 +21665,228 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>KnowledgeGuestAnswerDocumentsResponse</returns>
+        
+        public KnowledgeGuestAnswerDocumentsResponse PostKnowledgeGuestSessionDocumentsAnswers (string sessionId, KnowledgeDocumentsAnswerFilter body)
+        {
+             ApiResponse<KnowledgeGuestAnswerDocumentsResponse> localVarResponse = PostKnowledgeGuestSessionDocumentsAnswersWithHttpInfo(sessionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of KnowledgeGuestAnswerDocumentsResponse</returns>
+        
+        public ApiResponse< KnowledgeGuestAnswerDocumentsResponse > PostKnowledgeGuestSessionDocumentsAnswersWithHttpInfo (string sessionId, KnowledgeDocumentsAnswerFilter body)
+        { 
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsAnswers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsAnswers");
+
+            var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/answers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsAnswers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsAnswers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeGuestAnswerDocumentsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeGuestAnswerDocumentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeGuestAnswerDocumentsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>Task of KnowledgeGuestAnswerDocumentsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<KnowledgeGuestAnswerDocumentsResponse> PostKnowledgeGuestSessionDocumentsAnswersAsync (string sessionId, KnowledgeDocumentsAnswerFilter body)
+        {
+             ApiResponse<KnowledgeGuestAnswerDocumentsResponse> localVarResponse = await PostKnowledgeGuestSessionDocumentsAnswersAsyncWithHttpInfo(sessionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sessionId">Knowledge guest session ID.</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (KnowledgeGuestAnswerDocumentsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestAnswerDocumentsResponse>> PostKnowledgeGuestSessionDocumentsAnswersAsyncWithHttpInfo (string sessionId, KnowledgeDocumentsAnswerFilter body)
+        { 
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsAnswers");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsAnswers");
+            
+
+            var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/answers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsAnswers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeGuestSessionDocumentsAnswers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeGuestAnswerDocumentsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeGuestAnswerDocumentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeGuestAnswerDocumentsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Indicate that documents were presented to the user. 
         /// 
         /// </summary>
@@ -23789,6 +24430,242 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<KnowledgeDocumentResponse>(localVarStatusCode,
                 localVarHeaders,
                 (KnowledgeDocumentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeDocumentResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>KnowledgeAnswerDocumentsResponse</returns>
+        
+        public KnowledgeAnswerDocumentsResponse PostKnowledgeKnowledgebaseDocumentsAnswers (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body)
+        {
+             ApiResponse<KnowledgeAnswerDocumentsResponse> localVarResponse = PostKnowledgeKnowledgebaseDocumentsAnswersWithHttpInfo(knowledgeBaseId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of KnowledgeAnswerDocumentsResponse</returns>
+        
+        public ApiResponse< KnowledgeAnswerDocumentsResponse > PostKnowledgeKnowledgebaseDocumentsAnswersWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsAnswers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsAnswers");
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsAnswers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsAnswers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeAnswerDocumentsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeAnswerDocumentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeAnswerDocumentsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of KnowledgeAnswerDocumentsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<KnowledgeAnswerDocumentsResponse> PostKnowledgeKnowledgebaseDocumentsAnswersAsync (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body)
+        {
+             ApiResponse<KnowledgeAnswerDocumentsResponse> localVarResponse = await PostKnowledgeKnowledgebaseDocumentsAnswersAsyncWithHttpInfo(knowledgeBaseId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Answer documents. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge base ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (KnowledgeAnswerDocumentsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeAnswerDocumentsResponse>> PostKnowledgeKnowledgebaseDocumentsAnswersAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsAnswers");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsAnswers");
+            
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsAnswers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeKnowledgebaseDocumentsAnswers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeAnswerDocumentsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeAnswerDocumentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeAnswerDocumentsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

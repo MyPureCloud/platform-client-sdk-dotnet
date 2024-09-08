@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsContact**](ExternalContactsApi.html#deleteexternalcontactscontact) | **Delete** /api/v2/externalcontacts/contacts/{contactId} | Delete an external contact |
 | [**DeleteExternalcontactsContactNote**](ExternalContactsApi.html#deleteexternalcontactscontactnote) | **Delete** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Delete a note for an external contact |
 | [**DeleteExternalcontactsContactsSchema**](ExternalContactsApi.html#deleteexternalcontactscontactsschema) | **Delete** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Delete a schema |
+| [**DeleteExternalcontactsExternalsource**](ExternalContactsApi.html#deleteexternalcontactsexternalsource) | **Delete** /api/v2/externalcontacts/externalsources/{externalSourceId} | Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. |
 | [**DeleteExternalcontactsOrganization**](ExternalContactsApi.html#deleteexternalcontactsorganization) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Delete an external organization |
 | [**DeleteExternalcontactsOrganizationNote**](ExternalContactsApi.html#deleteexternalcontactsorganizationnote) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Delete a note for an external organization |
 | [**DeleteExternalcontactsOrganizationTrustor**](ExternalContactsApi.html#deleteexternalcontactsorganizationtrustor) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor | Unlink the Trustor for this External Organization |
@@ -25,6 +26,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactsSchemaVersion**](ExternalContactsApi.html#getexternalcontactscontactsschemaversion) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetExternalcontactsContactsSchemaVersions**](ExternalContactsApi.html#getexternalcontactscontactsschemaversions) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions | Get all versions of an external contact&#39;s schema |
 | [**GetExternalcontactsContactsSchemas**](ExternalContactsApi.html#getexternalcontactscontactsschemas) | **Get** /api/v2/externalcontacts/contacts/schemas | Get a list of schemas. |
+| [**GetExternalcontactsExternalsource**](ExternalContactsApi.html#getexternalcontactsexternalsource) | **Get** /api/v2/externalcontacts/externalsources/{externalSourceId} | Fetch an External Source |
+| [**GetExternalcontactsExternalsources**](ExternalContactsApi.html#getexternalcontactsexternalsources) | **Get** /api/v2/externalcontacts/externalsources | Fetch a list of External Sources |
 | [**GetExternalcontactsOrganization**](ExternalContactsApi.html#getexternalcontactsorganization) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Fetch an external organization |
 | [**GetExternalcontactsOrganizationContacts**](ExternalContactsApi.html#getexternalcontactsorganizationcontacts) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts | Search for external contacts in an external organization |
 | [**GetExternalcontactsOrganizationNote**](ExternalContactsApi.html#getexternalcontactsorganizationnote) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Fetch a note for an external organization |
@@ -63,6 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsContactPromotion**](ExternalContactsApi.html#postexternalcontactscontactpromotion) | **Post** /api/v2/externalcontacts/contacts/{contactId}/promotion | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**PostExternalcontactsContacts**](ExternalContactsApi.html#postexternalcontactscontacts) | **Post** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsContactsSchemas**](ExternalContactsApi.html#postexternalcontactscontactsschemas) | **Post** /api/v2/externalcontacts/contacts/schemas | Create a schema |
+| [**PostExternalcontactsExternalsources**](ExternalContactsApi.html#postexternalcontactsexternalsources) | **Post** /api/v2/externalcontacts/externalsources | Create an External Source |
 | [**PostExternalcontactsIdentifierlookup**](ExternalContactsApi.html#postexternalcontactsidentifierlookup) | **Post** /api/v2/externalcontacts/identifierlookup | Fetch a contact using an identifier type and value. |
 | [**PostExternalcontactsMergeContacts**](ExternalContactsApi.html#postexternalcontactsmergecontacts) | **Post** /api/v2/externalcontacts/merge/contacts | Merge two contacts into a new contact record |
 | [**PostExternalcontactsOrganizationNotes**](ExternalContactsApi.html#postexternalcontactsorganizationnotes) | **Post** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a note for an external organization |
@@ -73,6 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsContactNote**](ExternalContactsApi.html#putexternalcontactscontactnote) | **Put** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a note for an external contact |
 | [**PutExternalcontactsContactsSchema**](ExternalContactsApi.html#putexternalcontactscontactsschema) | **Put** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsConversation**](ExternalContactsApi.html#putexternalcontactsconversation) | **Put** /api/v2/externalcontacts/conversations/{conversationId} | Associate/disassociate an external contact with a conversation |
+| [**PutExternalcontactsExternalsource**](ExternalContactsApi.html#putexternalcontactsexternalsource) | **Put** /api/v2/externalcontacts/externalsources/{externalSourceId} | Update an External Source |
 | [**PutExternalcontactsOrganization**](ExternalContactsApi.html#putexternalcontactsorganization) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](ExternalContactsApi.html#putexternalcontactsorganizationnote) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
 | [**PutExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsApi.html#putexternalcontactsorganizationtrustortrustorid) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an External Organization |
@@ -271,6 +276,71 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="deleteexternalcontactsexternalsource"></a>
+
+## **Object** DeleteExternalcontactsExternalsource (string externalSourceId)
+
+
+
+Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+
+DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteExternalcontactsExternalsourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalSourceId = externalSourceId_example;  // string | External Source ID
+
+            try
+            { 
+                // Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+                Object result = apiInstance.DeleteExternalcontactsExternalsource(externalSourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.DeleteExternalcontactsExternalsource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalSourceId** | **string**| External Source ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Object**
 
 <a name="deleteexternalcontactsorganization"></a>
 
@@ -564,7 +634,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var contactId = contactId_example;  // string | ExternalContact ID
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
             { 
@@ -587,7 +657,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
 {: class="table table-striped"}
 
 ### Return type
@@ -996,7 +1066,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
 {: class="table table-striped"}
 
 ### Return type
@@ -1252,6 +1322,146 @@ This endpoint does require any parameters.
 
 [**DataSchemaListing**](DataSchemaListing.html)
 
+<a name="getexternalcontactsexternalsource"></a>
+
+## [**ExternalSource**](ExternalSource.html) GetExternalcontactsExternalsource (string externalSourceId)
+
+
+
+Fetch an External Source
+
+GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:view
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsExternalsourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalSourceId = externalSourceId_example;  // string | External Source ID
+
+            try
+            { 
+                // Fetch an External Source
+                ExternalSource result = apiInstance.GetExternalcontactsExternalsource(externalSourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsExternalsource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalSourceId** | **string**| External Source ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalSource**](ExternalSource.html)
+
+<a name="getexternalcontactsexternalsources"></a>
+
+## [**CursorExternalSourceListing**](CursorExternalSourceListing.html) GetExternalcontactsExternalsources (string cursor = null, int? limit = null, string name = null, bool? active = null)
+
+
+
+Fetch a list of External Sources
+
+GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:view
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsExternalsourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+            var limit = 56;  // int? | The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional) 
+            var name = name_example;  // string | Filter by external source name. Filtering is prefix filtering and not an exact match (optional) 
+            var active = true;  // bool? | Filter by active status of external source (optional) 
+
+            try
+            { 
+                // Fetch a list of External Sources
+                CursorExternalSourceListing result = apiInstance.GetExternalcontactsExternalsources(cursor, limit, name, active);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsExternalsources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+| **limit** | **int?**| The number of ExternalSources per page; must be between 10 and 200, default is 100 | [optional]  |
+| **name** | **string**| Filter by external source name. Filtering is prefix filtering and not an exact match | [optional]  |
+| **active** | **bool?**| Filter by active status of external source | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CursorExternalSourceListing**](CursorExternalSourceListing.html)
+
 <a name="getexternalcontactsorganization"></a>
 
 ## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
@@ -1387,7 +1597,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
 {: class="table table-striped"}
 
 ### Return type
@@ -3726,6 +3936,71 @@ namespace Example
 
 [**DataSchema**](DataSchema.html)
 
+<a name="postexternalcontactsexternalsources"></a>
+
+## [**ExternalSource**](ExternalSource.html) PostExternalcontactsExternalsources (ExternalSource body)
+
+
+
+Create an External Source
+
+PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsExternalsourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new ExternalSource(); // ExternalSource | External Source
+
+            try
+            { 
+                // Create an External Source
+                ExternalSource result = apiInstance.PostExternalcontactsExternalsources(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsExternalsources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ExternalSource**](ExternalSource.html)| External Source |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalSource**](ExternalSource.html)
+
 <a name="postexternalcontactsidentifierlookup"></a>
 
 ## [**ExternalContact**](ExternalContact.html) PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null)
@@ -3787,7 +4062,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **identifier** | [**ContactIdentifier**](ContactIdentifier.html)|  |  |
-| **expand** | [**List<string>**](string.html)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers |
+| **expand** | [**List<string>**](string.html)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers, externalSources |
 {: class="table table-striped"}
 
 ### Return type
@@ -4381,6 +4656,73 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="putexternalcontactsexternalsource"></a>
+
+## [**ExternalSource**](ExternalSource.html) PutExternalcontactsExternalsource (string externalSourceId, ExternalSource body)
+
+
+
+Update an External Source
+
+PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsExternalsourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalSourceId = externalSourceId_example;  // string | External Source ID
+            var body = new ExternalSource(); // ExternalSource | External Source
+
+            try
+            { 
+                // Update an External Source
+                ExternalSource result = apiInstance.PutExternalcontactsExternalsource(externalSourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsExternalsource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalSourceId** | **string**| External Source ID |  |
+| **body** | [**ExternalSource**](ExternalSource.html)| External Source |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalSource**](ExternalSource.html)
 
 <a name="putexternalcontactsorganization"></a>
 

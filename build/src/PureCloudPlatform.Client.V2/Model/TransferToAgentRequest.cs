@@ -55,13 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TransferToAgentRequest" /> class.
         /// </summary>
         /// <param name="TransferType">The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended..</param>
+        /// <param name="KeepInternalMessageAlive">If true, the digital internal message will NOT be terminated..</param>
         /// <param name="UserId">The id of the internal user..</param>
         /// <param name="UserName">The userName (like user’s email) of the internal user..</param>
         /// <param name="UserDisplayName">The name of the internal user..</param>
         /// <param name="Voicemail">If true, transfer to the voicemail inbox of the participant that is being replaced..</param>
-        public TransferToAgentRequest(TransferTypeEnum? TransferType = null, string UserId = null, string UserName = null, string UserDisplayName = null, bool? Voicemail = null)
+        public TransferToAgentRequest(TransferTypeEnum? TransferType = null, bool? KeepInternalMessageAlive = null, string UserId = null, string UserName = null, string UserDisplayName = null, bool? Voicemail = null)
         {
             this.TransferType = TransferType;
+            this.KeepInternalMessageAlive = KeepInternalMessageAlive;
             this.UserId = UserId;
             this.UserName = UserName;
             this.UserDisplayName = UserDisplayName;
@@ -70,6 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         }
         
 
+
+
+
+        /// <summary>
+        /// If true, the digital internal message will NOT be terminated.
+        /// </summary>
+        /// <value>If true, the digital internal message will NOT be terminated.</value>
+        [DataMember(Name="keepInternalMessageAlive", EmitDefaultValue=false)]
+        public bool? KeepInternalMessageAlive { get; set; }
 
 
 
@@ -118,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TransferToAgentRequest {\n");
 
             sb.Append("  TransferType: ").Append(TransferType).Append("\n");
+            sb.Append("  KeepInternalMessageAlive: ").Append(KeepInternalMessageAlive).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  UserDisplayName: ").Append(UserDisplayName).Append("\n");
@@ -168,6 +180,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TransferType.Equals(other.TransferType)
                 ) &&
                 (
+                    this.KeepInternalMessageAlive == other.KeepInternalMessageAlive ||
+                    this.KeepInternalMessageAlive != null &&
+                    this.KeepInternalMessageAlive.Equals(other.KeepInternalMessageAlive)
+                ) &&
+                (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
@@ -202,6 +219,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.TransferType != null)
                     hash = hash * 59 + this.TransferType.GetHashCode();
+
+                if (this.KeepInternalMessageAlive != null)
+                    hash = hash * 59 + this.KeepInternalMessageAlive.GetHashCode();
 
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();

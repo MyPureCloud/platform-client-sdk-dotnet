@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Action function current zip file upload settings and state.
+    /// Action function zip file upload settings and state.
     /// </summary>
     [DataContract]
     public partial class FunctionZipConfig :  IEquatable<FunctionZipConfig>
@@ -80,20 +80,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Status of zip upload.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public StatusEnum? Status { get; set; }
+        public StatusEnum? Status { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="FunctionZipConfig" /> class.
         /// </summary>
-        /// <param name="Status">Status of zip upload..</param>
-        /// <param name="Id">Zip file Identifier.</param>
-        /// <param name="Name">Zip file name.</param>
-        /// <param name="DateCreated">Date and time zip record was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public FunctionZipConfig(StatusEnum? Status = null, string Id = null, string Name = null, DateTime? DateCreated = null)
+        public FunctionZipConfig()
         {
-            this.Status = Status;
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
             
         }
         
@@ -106,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Zip file Identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
 
 
 
@@ -115,7 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Zip file name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
 
 
@@ -124,7 +116,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Date and time zip record was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
+
+
+
+        /// <summary>
+        /// Error message if upload failed.
+        /// </summary>
+        /// <value>Error message if upload failed.</value>
+        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        public string ErrorMessage { get; private set; }
+
+
+
+        /// <summary>
+        /// Upload request id used for zip upload
+        /// </summary>
+        /// <value>Upload request id used for zip upload</value>
+        [DataMember(Name="requestId", EmitDefaultValue=false)]
+        public string RequestId { get; private set; }
 
 
         /// <summary>
@@ -140,6 +150,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,6 +211,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.ErrorMessage == other.ErrorMessage ||
+                    this.ErrorMessage != null &&
+                    this.ErrorMessage.Equals(other.ErrorMessage)
+                ) &&
+                (
+                    this.RequestId == other.RequestId ||
+                    this.RequestId != null &&
+                    this.RequestId.Equals(other.RequestId)
                 );
         }
 
@@ -224,6 +246,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.ErrorMessage != null)
+                    hash = hash * 59 + this.ErrorMessage.GetHashCode();
+
+                if (this.RequestId != null)
+                    hash = hash * 59 + this.RequestId.GetHashCode();
 
                 return hash;
             }

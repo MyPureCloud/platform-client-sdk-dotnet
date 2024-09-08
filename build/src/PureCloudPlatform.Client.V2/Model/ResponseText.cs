@@ -46,11 +46,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Html
         }
         /// <summary>
+        /// Response text type.
+        /// </summary>
+        /// <value>Response text type.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Body for "body"
+            /// </summary>
+            [EnumMember(Value = "body")]
+            Body,
+            
+            /// <summary>
+            /// Enum Subject for "subject"
+            /// </summary>
+            [EnumMember(Value = "subject")]
+            Subject
+        }
+        /// <summary>
         /// Response text content type.
         /// </summary>
         /// <value>Response text content type.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public ContentTypeEnum? ContentType { get; set; }
+        /// <summary>
+        /// Response text type.
+        /// </summary>
+        /// <value>Response text type.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
@@ -62,10 +95,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Content">Response text content. (required).</param>
         /// <param name="ContentType">Response text content type..</param>
-        public ResponseText(string Content = null, ContentTypeEnum? ContentType = null)
+        /// <param name="Type">Response text type..</param>
+        public ResponseText(string Content = null, ContentTypeEnum? ContentType = null, TypeEnum? Type = null)
         {
             this.Content = Content;
             this.ContentType = ContentType;
+            this.Type = Type;
             
         }
         
@@ -81,6 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 );
         }
 
@@ -160,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
 
                 return hash;
             }

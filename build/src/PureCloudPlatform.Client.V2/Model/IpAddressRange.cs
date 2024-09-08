@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Api for "api"
             /// </summary>
             [EnumMember(Value = "api")]
-            Api
+            Api,
+            
+            /// <summary>
+            /// Enum Audioconnector for "audio-connector"
+            /// </summary>
+            [EnumMember(Value = "audio-connector")]
+            Audioconnector
         }
         /// <summary>
         /// Gets or Sets Service

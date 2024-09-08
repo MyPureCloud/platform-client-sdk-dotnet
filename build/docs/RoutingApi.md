@@ -56,6 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingPredictors**](RoutingApi.html#getroutingpredictors) | **Get** /api/v2/routing/predictors | Retrieve all predictors. |
 | [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **Get** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
 | [**GetRoutingQueue**](RoutingApi.html#getroutingqueue) | **Get** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetRoutingQueueAssistant**](RoutingApi.html#getroutingqueueassistant) | **Get** /api/v2/routing/queues/{queueId}/assistant | Get an assistant associated with a queue. |
 | [**GetRoutingQueueComparisonperiod**](RoutingApi.html#getroutingqueuecomparisonperiod) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
 | [**GetRoutingQueueComparisonperiods**](RoutingApi.html#getroutingqueuecomparisonperiods) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
 | [**GetRoutingQueueEstimatedwaittime**](RoutingApi.html#getroutingqueueestimatedwaittime) | **Get** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
@@ -3261,6 +3262,71 @@ namespace Example
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="getroutingqueueassistant"></a>
+
+## [**AssistantQueue**](AssistantQueue.html) GetRoutingQueueAssistant (string queueId, string expand = null)
+
+
+
+Get an assistant associated with a queue.
+
+Requires ALL permissions: 
+
+* assistants:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueueAssistantExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var expand = expand_example;  // string | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Get an assistant associated with a queue.
+                AssistantQueue result = apiInstance.GetRoutingQueueAssistant(queueId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueueAssistant: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: assistant |
+{: class="table table-striped"}
+
+### Return type
+
+[**AssistantQueue**](AssistantQueue.html)
 
 <a name="getroutingqueuecomparisonperiod"></a>
 

@@ -184,7 +184,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Instagram for "INSTAGRAM"
             /// </summary>
             [EnumMember(Value = "INSTAGRAM")]
-            Instagram
+            Instagram,
+            
+            /// <summary>
+            /// Enum Apple for "APPLE"
+            /// </summary>
+            [EnumMember(Value = "APPLE")]
+            Apple
         }
         /// <summary>
         /// Gets or Sets MediaType
@@ -224,7 +230,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisionId">DivisionId.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public AcdStartDetailEventTopicAcdStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        /// <param name="UtilizationLabel">UtilizationLabel.</param>
+        /// <param name="RoutingPriority">RoutingPriority.</param>
+        /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
+        public AcdStartDetailEventTopicAcdStartEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, int? RoutingPriority = null, List<string> RequestedRoutingSkillIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -246,6 +255,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DivisionId = DivisionId;
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
+            this.UtilizationLabel = UtilizationLabel;
+            this.RoutingPriority = RoutingPriority;
+            this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
             
         }
         
@@ -392,6 +404,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ConversationExternalOrganizationIds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets UtilizationLabel
+        /// </summary>
+        [DataMember(Name="utilizationLabel", EmitDefaultValue=false)]
+        public string UtilizationLabel { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets RoutingPriority
+        /// </summary>
+        [DataMember(Name="routingPriority", EmitDefaultValue=false)]
+        public int? RoutingPriority { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets RequestedRoutingSkillIds
+        /// </summary>
+        [DataMember(Name="requestedRoutingSkillIds", EmitDefaultValue=false)]
+        public List<string> RequestedRoutingSkillIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -421,6 +457,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
+            sb.Append("  UtilizationLabel: ").Append(UtilizationLabel).Append("\n");
+            sb.Append("  RoutingPriority: ").Append(RoutingPriority).Append("\n");
+            sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -560,6 +599,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
                     this.ConversationExternalOrganizationIds != null &&
                     this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
+                ) &&
+                (
+                    this.UtilizationLabel == other.UtilizationLabel ||
+                    this.UtilizationLabel != null &&
+                    this.UtilizationLabel.Equals(other.UtilizationLabel)
+                ) &&
+                (
+                    this.RoutingPriority == other.RoutingPriority ||
+                    this.RoutingPriority != null &&
+                    this.RoutingPriority.Equals(other.RoutingPriority)
+                ) &&
+                (
+                    this.RequestedRoutingSkillIds == other.RequestedRoutingSkillIds ||
+                    this.RequestedRoutingSkillIds != null &&
+                    this.RequestedRoutingSkillIds.SequenceEqual(other.RequestedRoutingSkillIds)
                 );
         }
 
@@ -633,6 +687,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationExternalOrganizationIds != null)
                     hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
+
+                if (this.UtilizationLabel != null)
+                    hash = hash * 59 + this.UtilizationLabel.GetHashCode();
+
+                if (this.RoutingPriority != null)
+                    hash = hash * 59 + this.RoutingPriority.GetHashCode();
+
+                if (this.RequestedRoutingSkillIds != null)
+                    hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
 
                 return hash;
             }

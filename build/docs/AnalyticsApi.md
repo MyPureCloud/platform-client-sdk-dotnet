@@ -2346,7 +2346,7 @@ This endpoint does require any parameters.
 
 <a name="getanalyticsreportingsettingsdashboardsquery"></a>
 
-## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
+## [**DashboardConfigurationListing**](DashboardConfigurationListing.html) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
 
 
 
@@ -2380,6 +2380,7 @@ namespace Example
             var apiInstance = new AnalyticsApi();
             var dashboardType = dashboardType_example;  // string | List dashboard of given type
             var dashboardAccessFilter = dashboardAccessFilter_example;  // string | Filter dashboard based on the owner of dashboard
+            var name = name_example;  // string | name of the dashboard (optional) 
             var sortBy = sortBy_example;  // string |  (optional)  (default to "desc")
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
             var pageSize = 56;  // int? |  (optional)  (default to 9)
@@ -2387,7 +2388,7 @@ namespace Example
             try
             { 
                 // Get list of dashboard configurations
-                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize);
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2406,6 +2407,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites |
 | **dashboardAccessFilter** | **string**| Filter dashboard based on the owner of dashboard | <br />**Values**: OwnedByMe, OwnedByAnyone, NotOwnedByMe |
+| **name** | **string**| name of the dashboard | [optional]  |
 | **sortBy** | **string**|  | [optional] [default to "desc"] |
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**|  | [optional] [default to 9] |
@@ -3603,8 +3605,6 @@ namespace Example
 
 
 Query for agent copilot aggregates
-
-PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

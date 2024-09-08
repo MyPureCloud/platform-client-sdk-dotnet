@@ -312,7 +312,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Instagram for "INSTAGRAM"
             /// </summary>
             [EnumMember(Value = "INSTAGRAM")]
-            Instagram
+            Instagram,
+            
+            /// <summary>
+            /// Enum Apple for "APPLE"
+            /// </summary>
+            [EnumMember(Value = "APPLE")]
+            Apple
         }
         /// <summary>
         /// Gets or Sets AcdOutcome
@@ -563,7 +569,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedDurationMs">ConnectedDurationMs.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public AcdEndDetailEventTopicAcdEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, AcdOutcomeEnum? AcdOutcome = null, string AnsweredUserId = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingUserIds = null, int? RoutingPriority = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        /// <param name="UtilizationLabel">UtilizationLabel.</param>
+        /// <param name="FlowType">FlowType.</param>
+        public AcdEndDetailEventTopicAcdEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, AcdOutcomeEnum? AcdOutcome = null, string AnsweredUserId = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, List<string> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingUserIds = null, int? RoutingPriority = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, string FlowType = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -595,6 +603,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConnectedDurationMs = ConnectedDurationMs;
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
+            this.UtilizationLabel = UtilizationLabel;
+            this.FlowType = FlowType;
             
         }
         
@@ -803,6 +813,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ConversationExternalOrganizationIds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets UtilizationLabel
+        /// </summary>
+        [DataMember(Name="utilizationLabel", EmitDefaultValue=false)]
+        public string UtilizationLabel { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets FlowType
+        /// </summary>
+        [DataMember(Name="flowType", EmitDefaultValue=false)]
+        public string FlowType { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -842,6 +868,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConnectedDurationMs: ").Append(ConnectedDurationMs).Append("\n");
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
+            sb.Append("  UtilizationLabel: ").Append(UtilizationLabel).Append("\n");
+            sb.Append("  FlowType: ").Append(FlowType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1031,6 +1059,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
                     this.ConversationExternalOrganizationIds != null &&
                     this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
+                ) &&
+                (
+                    this.UtilizationLabel == other.UtilizationLabel ||
+                    this.UtilizationLabel != null &&
+                    this.UtilizationLabel.Equals(other.UtilizationLabel)
+                ) &&
+                (
+                    this.FlowType == other.FlowType ||
+                    this.FlowType != null &&
+                    this.FlowType.Equals(other.FlowType)
                 );
         }
 
@@ -1134,6 +1172,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationExternalOrganizationIds != null)
                     hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
+
+                if (this.UtilizationLabel != null)
+                    hash = hash * 59 + this.UtilizationLabel.GetHashCode();
+
+                if (this.FlowType != null)
+                    hash = hash * 59 + this.FlowType.GetHashCode();
 
                 return hash;
             }

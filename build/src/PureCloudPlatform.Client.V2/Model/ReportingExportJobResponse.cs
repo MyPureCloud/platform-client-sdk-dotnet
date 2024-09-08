@@ -799,7 +799,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum SocialListeningView for "SOCIAL_LISTENING_VIEW"
             /// </summary>
             [EnumMember(Value = "SOCIAL_LISTENING_VIEW")]
-            SocialListeningView
+            SocialListeningView,
+            
+            /// <summary>
+            /// Enum SocialListeningPostsView for "SOCIAL_LISTENING_POSTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SOCIAL_LISTENING_POSTS_VIEW")]
+            SocialListeningPostsView,
+            
+            /// <summary>
+            /// Enum AgentPerformanceTimelineDetailView for "AGENT_PERFORMANCE_TIMELINE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_PERFORMANCE_TIMELINE_DETAIL_VIEW")]
+            AgentPerformanceTimelineDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

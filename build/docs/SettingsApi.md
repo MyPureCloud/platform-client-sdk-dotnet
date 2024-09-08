@@ -147,8 +147,6 @@ Get the execution history enabled setting.
 
 Get the execution history enabled setting.
 
-GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * settings:executiondata:view
@@ -334,8 +332,6 @@ namespace Example
 Edit the execution history on off setting.
 
 Edit the execution history on off setting.
-
-PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 

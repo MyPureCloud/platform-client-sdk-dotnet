@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description of the function. Limit 255 characters. (required).</param>
         /// <param name="Handler">Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. 'src/index.handler' (required).</param>
         /// <param name="Runtime">Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /api/v2/integrations/actions/functions/runtimes for current list. (required).</param>
-        /// <param name="TimeoutSeconds">Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 60. Default value 15 seconds..</param>
+        /// <param name="TimeoutSeconds">Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 15. Default value 15 seconds..</param>
         public Function(string Description = null, string Handler = null, string Runtime = null, int? TimeoutSeconds = null)
         {
             this.Description = Description;
@@ -106,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 60. Default value 15 seconds.
+        /// Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 15. Default value 15 seconds.
         /// </summary>
-        /// <value>Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 60. Default value 15 seconds.</value>
+        /// <value>Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 15. Default value 15 seconds.</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
 

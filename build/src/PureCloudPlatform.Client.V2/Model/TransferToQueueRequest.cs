@@ -55,17 +55,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TransferToQueueRequest" /> class.
         /// </summary>
         /// <param name="TransferType">The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended..</param>
+        /// <param name="KeepInternalMessageAlive">If true, the digital internal message will NOT be terminated..</param>
         /// <param name="QueueId">The id of the queue..</param>
         /// <param name="QueueName">The name of the queue..</param>
-        public TransferToQueueRequest(TransferTypeEnum? TransferType = null, string QueueId = null, string QueueName = null)
+        public TransferToQueueRequest(TransferTypeEnum? TransferType = null, bool? KeepInternalMessageAlive = null, string QueueId = null, string QueueName = null)
         {
             this.TransferType = TransferType;
+            this.KeepInternalMessageAlive = KeepInternalMessageAlive;
             this.QueueId = QueueId;
             this.QueueName = QueueName;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// If true, the digital internal message will NOT be terminated.
+        /// </summary>
+        /// <value>If true, the digital internal message will NOT be terminated.</value>
+        [DataMember(Name="keepInternalMessageAlive", EmitDefaultValue=false)]
+        public bool? KeepInternalMessageAlive { get; set; }
 
 
 
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TransferToQueueRequest {\n");
 
             sb.Append("  TransferType: ").Append(TransferType).Append("\n");
+            sb.Append("  KeepInternalMessageAlive: ").Append(KeepInternalMessageAlive).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  QueueName: ").Append(QueueName).Append("\n");
             sb.Append("}\n");
@@ -144,6 +156,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TransferType.Equals(other.TransferType)
                 ) &&
                 (
+                    this.KeepInternalMessageAlive == other.KeepInternalMessageAlive ||
+                    this.KeepInternalMessageAlive != null &&
+                    this.KeepInternalMessageAlive.Equals(other.KeepInternalMessageAlive)
+                ) &&
+                (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.TransferType != null)
                     hash = hash * 59 + this.TransferType.GetHashCode();
+
+                if (this.KeepInternalMessageAlive != null)
+                    hash = hash * 59 + this.KeepInternalMessageAlive.GetHashCode();
 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();

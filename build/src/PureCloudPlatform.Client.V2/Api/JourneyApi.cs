@@ -143,7 +143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -156,7 +155,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -803,7 +801,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -816,7 +813,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -829,7 +825,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -843,7 +838,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -857,7 +851,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -872,7 +865,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -887,7 +879,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -902,7 +893,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -917,7 +907,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -931,7 +920,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -945,32 +933,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>JourneyViewListing</returns>
         
-        JourneyViewListing GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
+        JourneyViewListing GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null);
 
         /// <summary>
         /// Get a list of Journey Views
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>ApiResponse of JourneyViewListing</returns>
         
-        ApiResponse<JourneyViewListing> GetJourneyViewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
+        ApiResponse<JourneyViewListing> GetJourneyViewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null);
 
         /// <summary>
         /// Get an Event Definition
@@ -1027,7 +1015,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -1043,7 +1030,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -1511,7 +1497,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1525,7 +1510,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -1539,7 +1523,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -1553,7 +1536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -1567,7 +1549,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -1580,7 +1561,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -1745,7 +1725,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -1758,7 +1737,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -2405,7 +2383,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -2418,7 +2395,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -2431,7 +2407,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -2445,7 +2420,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -2459,7 +2433,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2474,7 +2447,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2489,7 +2461,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -2504,7 +2475,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -2519,7 +2489,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2533,7 +2502,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -2547,32 +2515,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>Task of JourneyViewListing</returns>
         
-        System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
+        System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null);
 
         /// <summary>
         /// Get a list of Journey Views
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>Task of ApiResponse (JourneyViewListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null);
 
         /// <summary>
         /// Get an Event Definition
@@ -2629,7 +2597,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -2645,7 +2612,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -3113,7 +3079,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3127,7 +3092,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -3141,7 +3105,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -3155,7 +3118,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -3169,7 +3131,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -3182,7 +3143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -4372,7 +4332,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Journey View by ID 
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -4386,7 +4345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Journey View by ID 
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -4478,7 +4436,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Journey View by ID 
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -4493,7 +4450,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a Journey View by ID 
         /// deletes all versions
-        /// DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -9675,7 +9631,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID 
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -9690,7 +9645,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID 
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -9782,7 +9736,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID 
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -9798,7 +9751,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID 
         /// returns the latest version
-        /// GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -9892,7 +9844,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID and version 
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -9908,7 +9859,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID and version 
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -10005,7 +9955,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID and version 
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -10022,7 +9971,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a Journey View by ID and version 
         /// 
-        /// GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -10122,7 +10070,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10139,7 +10086,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10241,7 +10187,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10259,7 +10204,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10365,7 +10309,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of a job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -10382,7 +10325,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of a job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -10484,7 +10426,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of a job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -10502,7 +10443,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the result of a job for a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">JourneyViewResult id</param>
@@ -10608,7 +10548,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the latest job of a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10624,7 +10563,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the latest job of a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10721,7 +10659,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the latest job of a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10738,7 +10675,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the latest job of a journey view version. 
         /// used for long descriptions
-        /// GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -10838,34 +10774,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Journey Views 
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>JourneyViewListing</returns>
         
-        public JourneyViewListing GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
+        public JourneyViewListing GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
         {
-             ApiResponse<JourneyViewListing> localVarResponse = GetJourneyViewsWithHttpInfo(pageNumber, pageSize, nameOrCreatedBy, expand);
+             ApiResponse<JourneyViewListing> localVarResponse = GetJourneyViewsWithHttpInfo(pageNumber, pageSize, nameOrCreatedBy, expand, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get a list of Journey Views 
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>ApiResponse of JourneyViewListing</returns>
         
-        public ApiResponse< JourneyViewListing > GetJourneyViewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
+        public ApiResponse< JourneyViewListing > GetJourneyViewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
         { 
 
             var localVarPath = "/api/v2/journey/views";
@@ -10904,6 +10840,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (nameOrCreatedBy != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrCreatedBy", this.Configuration.ApiClient.ParameterToString(nameOrCreatedBy)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
 
             // Header params
 
@@ -10951,18 +10888,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Journey Views 
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>Task of JourneyViewListing</returns>
         
-        public async System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
+        public async System.Threading.Tasks.Task<JourneyViewListing> GetJourneyViewsAsync (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
         {
-             ApiResponse<JourneyViewListing> localVarResponse = await GetJourneyViewsAsyncWithHttpInfo(pageNumber, pageSize, nameOrCreatedBy, expand);
+             ApiResponse<JourneyViewListing> localVarResponse = await GetJourneyViewsAsyncWithHttpInfo(pageNumber, pageSize, nameOrCreatedBy, expand, id);
              return localVarResponse.Data;
 
         }
@@ -10970,16 +10907,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of Journey Views 
         /// 
-        /// GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="nameOrCreatedBy">Journey View Name or Created By (optional)</param>
         /// <param name="expand">Parameter to request additional data to return in Journey payload (optional)</param>
+        /// <param name="id">Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)</param>
         /// <returns>Task of ApiResponse (JourneyViewListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
         { 
 
             var localVarPath = "/api/v2/journey/views";
@@ -11018,6 +10955,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (nameOrCreatedBy != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrCreatedBy", this.Configuration.ApiClient.ParameterToString(nameOrCreatedBy)));
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
 
             // Header params
 
@@ -11487,7 +11425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the jobs for an organization. 
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -11505,7 +11442,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the jobs for an organization. 
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -11600,7 +11536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the jobs for an organization. 
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -11619,7 +11554,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the jobs for an organization. 
         /// 
-        /// GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">The number of the page to return (optional, default to 1)</param>
@@ -15699,7 +15633,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Submit a job request for a journey view version. 
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -15715,7 +15648,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Submit a job request for a journey view version. 
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -15812,7 +15744,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Submit a job request for a journey view version. 
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -15829,7 +15760,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Submit a job request for a journey view version. 
         /// used for long descriptions
-        /// PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">Journey View Id</param>
@@ -15929,7 +15859,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Journey View by ID 
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -15945,7 +15874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Journey View by ID 
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -16047,7 +15975,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Journey View by ID 
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -16064,7 +15991,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a Journey View by ID 
         /// creates a new version
-        /// PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewId">viewId</param>
@@ -16169,7 +16095,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new Journey View 
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -16184,7 +16109,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new Journey View 
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -16281,7 +16205,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new Journey View 
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>
@@ -16297,7 +16220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new Journey View 
         /// 
-        /// PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">JourneyView</param>

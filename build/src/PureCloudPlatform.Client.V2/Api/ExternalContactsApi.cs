@@ -91,6 +91,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Object</returns>
+        
+        Object DeleteExternalcontactsExternalsource (string externalSourceId);
+
+        /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        ApiResponse<Object> DeleteExternalcontactsExternalsourceWithHttpInfo (string externalSourceId);
+
+        /// <summary>
         /// Delete an external organization
         /// </summary>
         /// <remarks>
@@ -196,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         
         ExternalContact GetExternalcontactsContact (string contactId, List<string> expand = null);
@@ -209,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
         ApiResponse<ExternalContact> GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null);
@@ -481,6 +507,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DataSchemaListing</returns>
         
         ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemasWithHttpInfo ();
+
+        /// <summary>
+        /// Fetch an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>ExternalSource</returns>
+        
+        ExternalSource GetExternalcontactsExternalsource (string externalSourceId);
+
+        /// <summary>
+        /// Fetch an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>ApiResponse of ExternalSource</returns>
+        
+        ApiResponse<ExternalSource> GetExternalcontactsExternalsourceWithHttpInfo (string externalSourceId);
+
+        /// <summary>
+        /// Fetch a list of External Sources
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>CursorExternalSourceListing</returns>
+        
+        CursorExternalSourceListing GetExternalcontactsExternalsources (string cursor = null, int? limit = null, string name = null, bool? active = null);
+
+        /// <summary>
+        /// Fetch a list of External Sources
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>ApiResponse of CursorExternalSourceListing</returns>
+        
+        ApiResponse<CursorExternalSourceListing> GetExternalcontactsExternalsourcesWithHttpInfo (string cursor = null, int? limit = null, string name = null, bool? active = null);
 
         /// <summary>
         /// Fetch an external organization
@@ -1457,6 +1541,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataSchema> PostExternalcontactsContactsSchemasWithHttpInfo (DataSchema body);
 
         /// <summary>
+        /// Create an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>ExternalSource</returns>
+        
+        ExternalSource PostExternalcontactsExternalsources (ExternalSource body);
+
+        /// <summary>
+        /// Create an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>ApiResponse of ExternalSource</returns>
+        
+        ApiResponse<ExternalSource> PostExternalcontactsExternalsourcesWithHttpInfo (ExternalSource body);
+
+        /// <summary>
         /// Fetch a contact using an identifier type and value.
         /// </summary>
         /// <remarks>
@@ -1711,6 +1821,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body);
 
         /// <summary>
+        /// Update an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>ExternalSource</returns>
+        
+        ExternalSource PutExternalcontactsExternalsource (string externalSourceId, ExternalSource body);
+
+        /// <summary>
+        /// Update an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>ApiResponse of ExternalSource</returns>
+        
+        ApiResponse<ExternalSource> PutExternalcontactsExternalsourceWithHttpInfo (string externalSourceId, ExternalSource body);
+
+        /// <summary>
         /// Update an external organization
         /// </summary>
         /// <remarks>
@@ -1921,6 +2059,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of Object</returns>
+        
+        System.Threading.Tasks.Task<Object> DeleteExternalcontactsExternalsourceAsync (string externalSourceId);
+
+        /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId);
+
+        /// <summary>
         /// Delete an external organization
         /// </summary>
         /// <remarks>
@@ -2026,7 +2190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
         System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId, List<string> expand = null);
@@ -2039,7 +2203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null);
@@ -2311,6 +2475,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Fetch an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of ExternalSource</returns>
+        
+        System.Threading.Tasks.Task<ExternalSource> GetExternalcontactsExternalsourceAsync (string externalSourceId);
+
+        /// <summary>
+        /// Fetch an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of ApiResponse (ExternalSource)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalSource>> GetExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId);
+
+        /// <summary>
+        /// Fetch a list of External Sources
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>Task of CursorExternalSourceListing</returns>
+        
+        System.Threading.Tasks.Task<CursorExternalSourceListing> GetExternalcontactsExternalsourcesAsync (string cursor = null, int? limit = null, string name = null, bool? active = null);
+
+        /// <summary>
+        /// Fetch a list of External Sources
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>Task of ApiResponse (CursorExternalSourceListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CursorExternalSourceListing>> GetExternalcontactsExternalsourcesAsyncWithHttpInfo (string cursor = null, int? limit = null, string name = null, bool? active = null);
 
         /// <summary>
         /// Fetch an external organization
@@ -3287,6 +3509,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsContactsSchemasAsyncWithHttpInfo (DataSchema body);
 
         /// <summary>
+        /// Create an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ExternalSource</returns>
+        
+        System.Threading.Tasks.Task<ExternalSource> PostExternalcontactsExternalsourcesAsync (ExternalSource body);
+
+        /// <summary>
+        /// Create an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ApiResponse (ExternalSource)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalSource>> PostExternalcontactsExternalsourcesAsyncWithHttpInfo (ExternalSource body);
+
+        /// <summary>
         /// Fetch a contact using an identifier type and value.
         /// </summary>
         /// <remarks>
@@ -3539,6 +3787,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body);
+
+        /// <summary>
+        /// Update an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ExternalSource</returns>
+        
+        System.Threading.Tasks.Task<ExternalSource> PutExternalcontactsExternalsourceAsync (string externalSourceId, ExternalSource body);
+
+        /// <summary>
+        /// Update an External Source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ApiResponse (ExternalSource)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalSource>> PutExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId, ExternalSource body);
 
         /// <summary>
         /// Update an external organization
@@ -4415,6 +4691,223 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Object</returns>
+        
+        public Object DeleteExternalcontactsExternalsource (string externalSourceId)
+        {
+             ApiResponse<Object> localVarResponse = DeleteExternalcontactsExternalsourceWithHttpInfo(externalSourceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>ApiResponse of Object</returns>
+        
+        public ApiResponse< Object > DeleteExternalcontactsExternalsourceWithHttpInfo (string externalSourceId)
+        { 
+            // verify the required parameter 'externalSourceId' is set
+            if (externalSourceId == null)
+                throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->DeleteExternalcontactsExternalsource");
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalSourceId != null) localVarPathParams.Add("externalSourceId", this.Configuration.ApiClient.ParameterToString(externalSourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsExternalsource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsExternalsource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of Object</returns>
+        
+        public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsExternalsourceAsync (string externalSourceId)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteExternalcontactsExternalsourceAsyncWithHttpInfo(externalSourceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. 
+        /// 
+        /// DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId)
+        { 
+            // verify the required parameter 'externalSourceId' is set
+            if (externalSourceId == null)
+                throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->DeleteExternalcontactsExternalsource");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalSourceId != null) localVarPathParams.Add("externalSourceId", this.Configuration.ApiClient.ParameterToString(externalSourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Delete, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsExternalsource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsExternalsource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Delete an external organization 
         /// 
         /// </summary>
@@ -5283,7 +5776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ExternalContact</returns>
         
         public ExternalContact GetExternalcontactsContact (string contactId, List<string> expand = null)
@@ -5298,7 +5791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
         
         public ApiResponse< ExternalContact > GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null)
@@ -5391,7 +5884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ExternalContact</returns>
         
         public async System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId, List<string> expand = null)
@@ -5407,7 +5900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null)
@@ -7704,6 +8197,451 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
                 (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Fetch an External Source 
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>ExternalSource</returns>
+        
+        public ExternalSource GetExternalcontactsExternalsource (string externalSourceId)
+        {
+             ApiResponse<ExternalSource> localVarResponse = GetExternalcontactsExternalsourceWithHttpInfo(externalSourceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch an External Source 
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>ApiResponse of ExternalSource</returns>
+        
+        public ApiResponse< ExternalSource > GetExternalcontactsExternalsourceWithHttpInfo (string externalSourceId)
+        { 
+            // verify the required parameter 'externalSourceId' is set
+            if (externalSourceId == null)
+                throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->GetExternalcontactsExternalsource");
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalSourceId != null) localVarPathParams.Add("externalSourceId", this.Configuration.ApiClient.ParameterToString(externalSourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalSource>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Fetch an External Source 
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of ExternalSource</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalSource> GetExternalcontactsExternalsourceAsync (string externalSourceId)
+        {
+             ApiResponse<ExternalSource> localVarResponse = await GetExternalcontactsExternalsourceAsyncWithHttpInfo(externalSourceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch an External Source 
+        /// 
+        /// GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <returns>Task of ApiResponse (ExternalSource)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalSource>> GetExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId)
+        { 
+            // verify the required parameter 'externalSourceId' is set
+            if (externalSourceId == null)
+                throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->GetExternalcontactsExternalsource");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalSourceId != null) localVarPathParams.Add("externalSourceId", this.Configuration.ApiClient.ParameterToString(externalSourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalSource>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Fetch a list of External Sources 
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>CursorExternalSourceListing</returns>
+        
+        public CursorExternalSourceListing GetExternalcontactsExternalsources (string cursor = null, int? limit = null, string name = null, bool? active = null)
+        {
+             ApiResponse<CursorExternalSourceListing> localVarResponse = GetExternalcontactsExternalsourcesWithHttpInfo(cursor, limit, name, active);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch a list of External Sources 
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>ApiResponse of CursorExternalSourceListing</returns>
+        
+        public ApiResponse< CursorExternalSourceListing > GetExternalcontactsExternalsourcesWithHttpInfo (string cursor = null, int? limit = null, string name = null, bool? active = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (active != null) localVarQueryParams.Add(new Tuple<string, string>("active", this.Configuration.ApiClient.ParameterToString(active)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsources: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsources: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorExternalSourceListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorExternalSourceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorExternalSourceListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Fetch a list of External Sources 
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>Task of CursorExternalSourceListing</returns>
+        
+        public async System.Threading.Tasks.Task<CursorExternalSourceListing> GetExternalcontactsExternalsourcesAsync (string cursor = null, int? limit = null, string name = null, bool? active = null)
+        {
+             ApiResponse<CursorExternalSourceListing> localVarResponse = await GetExternalcontactsExternalsourcesAsyncWithHttpInfo(cursor, limit, name, active);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch a list of External Sources 
+        /// 
+        /// GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
+        /// <param name="limit">The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)</param>
+        /// <param name="name">Filter by external source name. Filtering is prefix filtering and not an exact match (optional)</param>
+        /// <param name="active">Filter by active status of external source (optional)</param>
+        /// <returns>Task of ApiResponse (CursorExternalSourceListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CursorExternalSourceListing>> GetExternalcontactsExternalsourcesAsyncWithHttpInfo (string cursor = null, int? limit = null, string name = null, bool? active = null)
+        { 
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (cursor != null) localVarQueryParams.Add(new Tuple<string, string>("cursor", this.Configuration.ApiClient.ParameterToString(cursor)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (active != null) localVarQueryParams.Add(new Tuple<string, string>("active", this.Configuration.ApiClient.ParameterToString(active)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Get, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsources: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsExternalsources: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CursorExternalSourceListing>(localVarStatusCode,
+                localVarHeaders,
+                (CursorExternalSourceListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CursorExternalSourceListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16187,6 +17125,233 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create an External Source 
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>ExternalSource</returns>
+        
+        public ExternalSource PostExternalcontactsExternalsources (ExternalSource body)
+        {
+             ApiResponse<ExternalSource> localVarResponse = PostExternalcontactsExternalsourcesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an External Source 
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>ApiResponse of ExternalSource</returns>
+        
+        public ApiResponse< ExternalSource > PostExternalcontactsExternalsourcesWithHttpInfo (ExternalSource body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsExternalsources");
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsExternalsources: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsExternalsources: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalSource>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an External Source 
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ExternalSource</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalSource> PostExternalcontactsExternalsourcesAsync (ExternalSource body)
+        {
+             ApiResponse<ExternalSource> localVarResponse = await PostExternalcontactsExternalsourcesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an External Source 
+        /// 
+        /// PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ApiResponse (ExternalSource)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalSource>> PostExternalcontactsExternalsourcesAsyncWithHttpInfo (ExternalSource body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsExternalsources");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Post, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsExternalsources: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsExternalsources: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalSource>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Fetch a contact using an identifier type and value. 
         /// Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
         /// </summary>
@@ -18492,6 +19657,246 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an External Source 
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>ExternalSource</returns>
+        
+        public ExternalSource PutExternalcontactsExternalsource (string externalSourceId, ExternalSource body)
+        {
+             ApiResponse<ExternalSource> localVarResponse = PutExternalcontactsExternalsourceWithHttpInfo(externalSourceId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an External Source 
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>ApiResponse of ExternalSource</returns>
+        
+        public ApiResponse< ExternalSource > PutExternalcontactsExternalsourceWithHttpInfo (string externalSourceId, ExternalSource body)
+        { 
+            // verify the required parameter 'externalSourceId' is set
+            if (externalSourceId == null)
+                throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->PutExternalcontactsExternalsource");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsExternalsource");
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalSourceId != null) localVarPathParams.Add("externalSourceId", this.Configuration.ApiClient.ParameterToString(externalSourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsExternalsource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsExternalsource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalSource>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an External Source 
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ExternalSource</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalSource> PutExternalcontactsExternalsourceAsync (string externalSourceId, ExternalSource body)
+        {
+             ApiResponse<ExternalSource> localVarResponse = await PutExternalcontactsExternalsourceAsyncWithHttpInfo(externalSourceId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an External Source 
+        /// 
+        /// PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalSourceId">External Source ID</param>
+        /// <param name="body">External Source</param>
+        /// <returns>Task of ApiResponse (ExternalSource)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalSource>> PutExternalcontactsExternalsourceAsyncWithHttpInfo (string externalSourceId, ExternalSource body)
+        { 
+            // verify the required parameter 'externalSourceId' is set
+            if (externalSourceId == null)
+                throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->PutExternalcontactsExternalsource");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsExternalsource");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (externalSourceId != null) localVarPathParams.Add("externalSourceId", this.Configuration.ApiClient.ParameterToString(externalSourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            RestResponse localVarResponse = (RestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.Put, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers?
+                                                             .GroupBy(header => header.GetType().GetProperty("Name")?.GetValue(header))
+                                                             .Select(header => new
+                                                         {
+                                                            Name = header.First().GetType().GetProperty("Name")?.GetValue(header.First()),
+                                                            Value = header.Select(x => x.GetType().GetProperty("Value")?.GetValue(x)).ToList()
+                                                            }).ToDictionary(header => header?.Name?.ToString(), header => String.Join(", ", header?.Value?.ToArray())) 
+                                                        ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsExternalsource: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsExternalsource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalSource>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalSource) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalSource)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -67,7 +67,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ExecutionDataGlobalSettingsResponse</returns>
@@ -79,7 +78,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ExecutionDataGlobalSettingsResponse</returns>
@@ -139,7 +137,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -152,7 +149,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -267,7 +263,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ExecutionDataGlobalSettingsResponse</returns>
@@ -279,7 +274,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ExecutionDataGlobalSettingsResponse)</returns>
@@ -339,7 +333,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -352,7 +345,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -918,7 +910,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the execution history enabled setting. 
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ExecutionDataGlobalSettingsResponse</returns>
@@ -932,7 +923,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the execution history enabled setting. 
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ExecutionDataGlobalSettingsResponse</returns>
@@ -1019,7 +1009,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the execution history enabled setting. 
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ExecutionDataGlobalSettingsResponse</returns>
@@ -1034,7 +1023,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the execution history enabled setting. 
         /// Get the execution history enabled setting.
-        /// GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ExecutionDataGlobalSettingsResponse)</returns>
@@ -1551,7 +1539,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit the execution history on off setting. 
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -1566,7 +1553,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit the execution history on off setting. 
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -1663,7 +1649,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit the execution history on off setting. 
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>
@@ -1679,7 +1664,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Edit the execution history on off setting. 
         /// Edit the execution history on off setting.
-        /// PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">New Execution Data Setting</param>

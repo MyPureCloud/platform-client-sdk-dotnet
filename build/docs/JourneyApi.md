@@ -391,8 +391,6 @@ Delete a Journey View by ID
 
 deletes all versions
 
-DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:views:delete
@@ -1979,8 +1977,6 @@ Get a Journey View by ID
 
 returns the latest version
 
-GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:views:view
@@ -2043,8 +2039,6 @@ namespace Example
 
 
 Get a Journey View by ID and version
-
-GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2112,8 +2106,6 @@ namespace Example
 Get the job for a journey view version.
 
 used for long descriptions
-
-GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2184,8 +2176,6 @@ Get the result of a job for a journey view version.
 
 used for long descriptions
 
-GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:viewsResults:view
@@ -2255,8 +2245,6 @@ Get the latest job of a journey view version.
 
 used for long descriptions
 
-GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:viewsJobs:view
@@ -2316,13 +2304,11 @@ namespace Example
 
 <a name="getjourneyviews"></a>
 
-## [**JourneyViewListing**](JourneyViewListing.html) GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
+## [**JourneyViewListing**](JourneyViewListing.html) GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
 
 
 
 Get a list of Journey Views
-
-GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2354,11 +2340,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var nameOrCreatedBy = nameOrCreatedBy_example;  // string | Journey View Name or Created By (optional) 
             var expand = expand_example;  // string | Parameter to request additional data to return in Journey payload (optional) 
+            var id = id_example;  // string | Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional) 
 
             try
             { 
                 // Get a list of Journey Views
-                JourneyViewListing result = apiInstance.GetJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand);
+                JourneyViewListing result = apiInstance.GetJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2379,6 +2366,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **nameOrCreatedBy** | **string**| Journey View Name or Created By | [optional]  |
 | **expand** | **string**| Parameter to request additional data to return in Journey payload | [optional] <br />**Values**: charts |
+| **id** | **string**| Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2517,8 +2505,6 @@ This endpoint does require any parameters.
 
 
 Get the jobs for an organization.
-
-GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3723,8 +3709,6 @@ Submit a job request for a journey view version.
 
 used for long descriptions
 
-PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:viewsJobs:add
@@ -3792,8 +3776,6 @@ Update a Journey View by ID
 
 creates a new version
 
-PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * journey:views:edit
@@ -3858,8 +3840,6 @@ namespace Example
 
 
 Create a new Journey View
-
-PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 

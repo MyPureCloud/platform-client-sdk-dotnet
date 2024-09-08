@@ -399,6 +399,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Transferpurematchaction,
             
             /// <summary>
+            /// Enum Getattributesaction for "GetAttributesAction"
+            /// </summary>
+            [EnumMember(Value = "GetAttributesAction")]
+            Getattributesaction,
+            
+            /// <summary>
+            /// Enum Setattributesaction for "SetAttributesAction"
+            /// </summary>
+            [EnumMember(Value = "SetAttributesAction")]
+            Setattributesaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

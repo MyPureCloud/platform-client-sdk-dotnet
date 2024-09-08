@@ -15,6 +15,7 @@ title: ConversationAppSettings
 | **ConversationDisconnect** | [**ConversationDisconnectSettings**](ConversationDisconnectSettings.html) | The conversation disconnect settings for the messenger app | [optional] |
 | **ConversationClear** | [**ConversationClearSettings**](ConversationClearSettings.html) | The conversation clear settings for the messenger app | [optional] |
 | **Humanize** | [**Humanize**](Humanize.html) | The humanize conversations settings for the messenger app | [optional] |
+| **Notifications** | [**NotificationsSettings**](NotificationsSettings.html) | The notification settings for messenger apps | [optional] |
 {: class="table table-striped"}
 
 

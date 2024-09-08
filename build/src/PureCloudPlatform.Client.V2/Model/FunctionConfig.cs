@@ -56,6 +56,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// History of failed zip upload file configuration including their state and error messages. Contains no more than last ten failures.
+        /// </summary>
+        /// <value>History of failed zip upload file configuration including their state and error messages. Contains no more than last ten failures.</value>
+        [DataMember(Name="uploadExceptionHistory", EmitDefaultValue=false)]
+        public List<FunctionZipConfig> UploadExceptionHistory { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -75,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Function: ").Append(Function).Append("\n");
             sb.Append("  Zip: ").Append(Zip).Append("\n");
+            sb.Append("  UploadExceptionHistory: ").Append(UploadExceptionHistory).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -132,6 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Zip.Equals(other.Zip)
                 ) &&
                 (
+                    this.UploadExceptionHistory == other.UploadExceptionHistory ||
+                    this.UploadExceptionHistory != null &&
+                    this.UploadExceptionHistory.SequenceEqual(other.UploadExceptionHistory)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -157,6 +172,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Zip != null)
                     hash = hash * 59 + this.Zip.GetHashCode();
+
+                if (this.UploadExceptionHistory != null)
+                    hash = hash * 59 + this.UploadExceptionHistory.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

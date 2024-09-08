@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneyViewElementFilterRangeData" /> class.
         /// </summary>
-        /// <param name="Duration">an ISO 8601 time duration.Only one of number or duration must be specified. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
-        /// <param name="Number">an Integer value.Only one of number or duration must be specified..</param>
-        public JourneyViewElementFilterRangeData(string Duration = null, int? Number = null)
+        /// <param name="Duration">An ISO 8601 time duration. Only one of number or duration must be specified..</param>
+        /// <param name="Number">A numeric value. Only one of number or duration must be specified..</param>
+        public JourneyViewElementFilterRangeData(string Duration = null, double? Number = null)
         {
             this.Duration = Duration;
             this.Number = Number;
@@ -33,20 +33,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// an ISO 8601 time duration.Only one of number or duration must be specified. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
+        /// An ISO 8601 time duration. Only one of number or duration must be specified.
         /// </summary>
-        /// <value>an ISO 8601 time duration.Only one of number or duration must be specified. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
+        /// <value>An ISO 8601 time duration. Only one of number or duration must be specified.</value>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public string Duration { get; set; }
 
 
 
         /// <summary>
-        /// an Integer value.Only one of number or duration must be specified.
+        /// A numeric value. Only one of number or duration must be specified.
         /// </summary>
-        /// <value>an Integer value.Only one of number or duration must be specified.</value>
+        /// <value>A numeric value. Only one of number or duration must be specified.</value>
         [DataMember(Name="number", EmitDefaultValue=false)]
-        public int? Number { get; set; }
+        public double? Number { get; set; }
 
 
         /// <summary>
