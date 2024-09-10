@@ -24,13 +24,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGroupsSearch**](#PostGroupsSearch) | **Post** /api/v2/groups/search | Search groups |
 | [**PutGroup**](#PutGroup) | **Put** /api/v2/groups/{groupId} | Update group |
 | [**PutGroupDynamicsettings**](#PutGroupDynamicsettings) | **Put** /api/v2/groups/{groupId}/dynamicsettings | Create / Update dynamic group definition |
-{: class="table table-striped"}
+
 
 
 ## DeleteGroup
 
 > void DeleteGroup (string groupId)
-
 
 
 Delete group
@@ -83,7 +82,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -93,7 +91,6 @@ void (empty response body)
 ## DeleteGroupDynamicsettings
 
 > void DeleteGroupDynamicsettings (string groupId)
-
 
 
 Remove dynamic group definition
@@ -148,7 +145,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -158,7 +154,6 @@ void (empty response body)
 ## DeleteGroupMembers
 
 > **Object** DeleteGroupMembers (string groupId, string ids)
-
 
 
 Remove members
@@ -213,7 +208,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
 | **ids** | **string**| Comma separated list of userIds to remove |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -224,7 +218,9 @@ namespace Example
 
 > [**FieldConfig**](FieldConfig) GetFieldconfig (string type)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Fetch field config for an entity type
 
@@ -276,7 +272,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **type** | **string**| Field type | <br />**Values**: person, group, org |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -286,7 +281,6 @@ namespace Example
 ## GetGroup
 
 > [**Group**](Group) GetGroup (string groupId)
-
 
 
 Get group
@@ -339,7 +333,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -349,7 +342,6 @@ namespace Example
 ## GetGroupDynamicsettings
 
 > [**DynamicGroupDefinition**](DynamicGroupDefinition) GetGroupDynamicsettings (string groupId)
-
 
 
 Get dynamic group definition
@@ -405,7 +397,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -415,7 +406,6 @@ namespace Example
 ## GetGroupIndividuals
 
 > [**UserEntityListing**](UserEntityListing) GetGroupIndividuals (string groupId)
-
 
 
 Get all individuals associated with the group
@@ -468,7 +458,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -478,7 +467,6 @@ namespace Example
 ## GetGroupMembers
 
 > [**UserEntityListing**](UserEntityListing) GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
-
 
 
 Get group members, includes individuals, owners, and dynamically included people
@@ -539,7 +527,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -550,7 +537,9 @@ namespace Example
 
 > [**GroupProfile**](GroupProfile) GetGroupProfile (string groupId, string fields = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get group profile
 
@@ -606,7 +595,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| groupId |  |
 | **fields** | **string**| Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -616,7 +604,6 @@ namespace Example
 ## GetGroups
 
 > [**GroupEntityListing**](GroupEntityListing) GetGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
-
 
 
 Get a group list
@@ -677,7 +664,6 @@ namespace Example
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **jabberId** | [**List<string>**](string)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -687,7 +673,6 @@ namespace Example
 ## GetGroupsSearch
 
 > [**GroupsSearchResponse**](GroupsSearchResponse) GetGroupsSearch (string q64, List<string> expand = null)
-
 
 
 Search groups using the q64 value returned from a previous search
@@ -742,7 +727,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| expand | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -753,7 +737,9 @@ namespace Example
 
 > [**GroupProfileEntityListing**](GroupProfileEntityListing) GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get group profile listing
 
@@ -815,7 +801,6 @@ namespace Example
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **jabberId** | [**List<string>**](string)| A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -825,7 +810,6 @@ namespace Example
 ## PostGroupMembers
 
 > **Object** PostGroupMembers (string groupId, GroupMembersUpdate body)
-
 
 
 Add members
@@ -880,7 +864,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
 | **body** | [**GroupMembersUpdate**](GroupMembersUpdate)| Add members |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -890,7 +873,6 @@ namespace Example
 ## PostGroups
 
 > [**Group**](Group) PostGroups (GroupCreate body)
-
 
 
 Create a group
@@ -944,7 +926,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GroupCreate**](GroupCreate)| Group |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -955,7 +936,9 @@ namespace Example
 
 > [**DynamicGroupQueryPreview**](DynamicGroupQueryPreview) PostGroupsDynamicsettingsPreview (DynamicGroupQuery body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Preview the number of users selected for a dynamic group definition query
 
@@ -1010,7 +993,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DynamicGroupQuery**](DynamicGroupQuery)| Group query to preview |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1020,7 +1002,6 @@ namespace Example
 ## PostGroupsSearch
 
 > [**GroupsSearchResponse**](GroupsSearchResponse) PostGroupsSearch (GroupSearchRequest body)
-
 
 
 Search groups
@@ -1073,7 +1054,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GroupSearchRequest**](GroupSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1083,7 +1063,6 @@ namespace Example
 ## PutGroup
 
 > [**Group**](Group) PutGroup (string groupId, GroupUpdate body = null)
-
 
 
 Update group
@@ -1139,7 +1118,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
 | **body** | [**GroupUpdate**](GroupUpdate)| Group | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1149,7 +1127,6 @@ namespace Example
 ## PutGroupDynamicsettings
 
 > void PutGroupDynamicsettings (string groupId, DynamicGroupQuery body)
-
 
 
 Create / Update dynamic group definition
@@ -1206,11 +1183,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
 | **body** | [**DynamicGroupQuery**](DynamicGroupQuery)| Create/Update dynamic groups |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

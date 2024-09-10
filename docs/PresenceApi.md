@@ -33,13 +33,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutPresenceUserPrimarysource**](#PutPresenceUserPrimarysource) | **Put** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
 | [**PutPresencedefinition**](#PutPresencedefinition) | **Put** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) |
 | [**PutUsersPresencesBulk**](#PutUsersPresencesBulk) | **Put** /api/v2/users/presences/bulk | Update bulk user Presences |
-{: class="table table-striped"}
+
 
 
 ## DeletePresenceDefinition0
 
 > void DeletePresenceDefinition0 (string definitionId)
-
 
 
 Delete a Presence Definition
@@ -93,7 +92,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **definitionId** | **string**| Presence Definition ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -103,7 +101,6 @@ void (empty response body)
 ## DeletePresenceSource
 
 > void DeletePresenceSource (string sourceId)
-
 
 
 Delete a Presence Source
@@ -157,7 +154,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sourceId** | **string**| Presence Source ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -168,7 +164,9 @@ void (empty response body)
 
 > void DeletePresencedefinition (string presenceId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
 
@@ -220,7 +218,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **presenceId** | **string**| Organization Presence ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -230,7 +227,6 @@ void (empty response body)
 ## GetPresenceDefinition0
 
 > [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) GetPresenceDefinition0 (string definitionId, string localeCode = null)
-
 
 
 Get a Presence Definition
@@ -286,7 +282,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **definitionId** | **string**| Presence Definition ID |  |
 | **localeCode** | **string**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional] <br />**Values**: ALL, he, fr, en_US, da, de, it, cs, es, fi, ar, ja, ko, nl, no, pl, pt_BR, pt_PT, ru, sv, th, tr, uk, zh_CN, zh_TW |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -296,7 +291,6 @@ namespace Example
 ## GetPresenceDefinitions0
 
 > [**OrganizationPresenceDefinitionEntityListing**](OrganizationPresenceDefinitionEntityListing) GetPresenceDefinitions0 (string deactivated = null, List<string> divisionId = null, string localeCode = null)
-
 
 
 Get a list of Presence Definitions
@@ -354,7 +348,6 @@ namespace Example
 | **deactivated** | **string**| Deactivated query can be TRUE or FALSE | [optional] [default to "false"] |
 | **divisionId** | [**List<string>**](string)| One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned. | [optional]  |
 | **localeCode** | **string**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional] <br />**Values**: ALL, he, fr, en_US, da, de, it, cs, es, fi, ar, ja, ko, nl, no, pl, pt_BR, pt_PT, ru, sv, th, tr, uk, zh_CN, zh_TW |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -364,7 +357,6 @@ namespace Example
 ## GetPresenceSettings
 
 > [**PresenceSettings**](PresenceSettings) GetPresenceSettings ()
-
 
 
 Get the presence settings
@@ -414,7 +406,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**PresenceSettings**](PresenceSettings)
@@ -423,7 +414,6 @@ This endpoint does require any parameters.
 ## GetPresenceSource
 
 > [**Source**](Source) GetPresenceSource (string sourceId)
-
 
 
 Get a Presence Source
@@ -477,7 +467,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sourceId** | **string**| Presence Source ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -487,7 +476,6 @@ namespace Example
 ## GetPresenceSources
 
 > [**SourceEntityListing**](SourceEntityListing) GetPresenceSources (string deactivated = null)
-
 
 
 Get a list of Presence Sources
@@ -541,7 +529,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deactivated** | **string**| Deactivated query can be TRUE or FALSE | [optional] [default to "false"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -551,7 +538,6 @@ namespace Example
 ## GetPresenceUserPrimarysource
 
 > [**UserPrimarySource**](UserPrimarySource) GetPresenceUserPrimarysource (string userId)
-
 
 
 Get a user's Primary Presence Source
@@ -605,7 +591,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -616,7 +601,9 @@ namespace Example
 
 > [**OrganizationPresence**](OrganizationPresence) GetPresencedefinition (string presenceId, string localeCode = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
 
@@ -671,7 +658,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **presenceId** | **string**| Organization Presence ID |  |
 | **localeCode** | **string**| The locale code to fetch for the presence definition. Use ALL to fetch everything. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -682,7 +668,9 @@ namespace Example
 
 > [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get an Organization's list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
 
@@ -740,7 +728,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **deleted** | **string**| Deleted query can be TRUE, FALSE or ALL | [optional] [default to "false"] |
 | **localeCode** | **string**| The locale code to fetch for each presence definition. Use ALL to fetch everything. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -750,7 +737,6 @@ namespace Example
 ## GetSystempresences
 
 > [**List&lt;SystemPresence&gt;**](SystemPresence) GetSystempresences ()
-
 
 
 Get the list of SystemPresences
@@ -799,7 +785,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**List<SystemPresence>**](SystemPresence)
@@ -808,7 +793,6 @@ This endpoint does require any parameters.
 ## GetUserPresence
 
 > [**UserPresence**](UserPresence) GetUserPresence (string userId, string sourceId)
-
 
 
 Get a user's Presence
@@ -865,7 +849,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **sourceId** | **string**| Presence source ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -875,7 +858,6 @@ namespace Example
 ## GetUserPresencesPurecloud
 
 > [**UserPresence**](UserPresence) GetUserPresencesPurecloud (string userId)
-
 
 
 Get a user's Genesys Cloud presence.
@@ -930,7 +912,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -940,7 +921,6 @@ namespace Example
 ## GetUsersPresenceBulk
 
 > [**List&lt;UcUserPresence&gt;**](UcUserPresence) GetUsersPresenceBulk (string sourceId, List<string> id = null)
-
 
 
 Get bulk user presences for a single presence source
@@ -995,7 +975,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sourceId** | **string**| The requested presence source ID. |  |
 | **id** | [**List<string>**](string)| A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1005,7 +984,6 @@ namespace Example
 ## GetUsersPresencesPurecloudBulk
 
 > [**List&lt;UcUserPresence&gt;**](UcUserPresence) GetUsersPresencesPurecloudBulk (List<string> id = null)
-
 
 
 Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source
@@ -1058,7 +1036,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| A comma separated list of user IDs to fetch their presence status in bulk. Limit 50. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1068,7 +1045,6 @@ namespace Example
 ## PatchUserPresence
 
 > [**UserPresence**](UserPresence) PatchUserPresence (string userId, string sourceId, UserPresence body)
-
 
 
 Patch a user's Presence
@@ -1127,7 +1103,6 @@ namespace Example
 | **userId** | **string**| user Id |  |
 | **sourceId** | **string**| Presence source ID |  |
 | **body** | [**UserPresence**](UserPresence)| User presence |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1137,7 +1112,6 @@ namespace Example
 ## PatchUserPresencesPurecloud
 
 > [**UserPresence**](UserPresence) PatchUserPresencesPurecloud (string userId, UserPresence body)
-
 
 
 Patch a Genesys Cloud user's presence
@@ -1194,7 +1168,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **body** | [**UserPresence**](UserPresence)| User presence |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1204,7 +1177,6 @@ namespace Example
 ## PostPresenceDefinitions0
 
 > [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) PostPresenceDefinitions0 (OrganizationPresenceDefinition body)
-
 
 
 Create a Presence Definition
@@ -1258,7 +1230,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition)| The Presence Definition to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1268,7 +1239,6 @@ namespace Example
 ## PostPresenceSources
 
 > [**Source**](Source) PostPresenceSources (Source body)
-
 
 
 Create a Presence Source
@@ -1322,7 +1292,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Source**](Source)| The Presence Source to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1333,7 +1302,9 @@ namespace Example
 
 > [**OrganizationPresence**](OrganizationPresence) PostPresencedefinitions (OrganizationPresence body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
 
@@ -1386,7 +1357,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OrganizationPresence**](OrganizationPresence)| The Presence Definition to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1396,7 +1366,6 @@ namespace Example
 ## PutPresenceDefinition0
 
 > [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition) PutPresenceDefinition0 (string definitionId, OrganizationPresenceDefinition body)
-
 
 
 Update a Presence Definition
@@ -1452,7 +1421,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **definitionId** | **string**| Presence Definition ID |  |
 | **body** | [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition)| The updated Presence Definition |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1462,7 +1430,6 @@ namespace Example
 ## PutPresenceSettings
 
 > [**PresenceSettings**](PresenceSettings) PutPresenceSettings (PresenceSettings body)
-
 
 
 Update the presence settings
@@ -1516,7 +1483,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PresenceSettings**](PresenceSettings)| Presence Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1526,7 +1492,6 @@ namespace Example
 ## PutPresenceSource
 
 > [**Source**](Source) PutPresenceSource (string sourceId, Source body)
-
 
 
 Update a Presence Source
@@ -1582,7 +1547,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sourceId** | **string**| Presence Source ID |  |
 | **body** | [**Source**](Source)| The updated Presence Source |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1592,7 +1556,6 @@ namespace Example
 ## PutPresenceUserPrimarysource
 
 > [**UserPrimarySource**](UserPrimarySource) PutPresenceUserPrimarysource (string userId, UserPrimarySource body)
-
 
 
 Update a user's Primary Presence Source
@@ -1648,7 +1611,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user ID |  |
 | **body** | [**UserPrimarySource**](UserPrimarySource)| Primary Source |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1659,7 +1621,9 @@ namespace Example
 
 > [**OrganizationPresence**](OrganizationPresence) PutPresencedefinition (string presenceId, OrganizationPresence body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
 
@@ -1714,7 +1678,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **presenceId** | **string**| Organization Presence ID |  |
 | **body** | [**OrganizationPresence**](OrganizationPresence)| The OrganizationPresence to update |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1724,7 +1687,6 @@ namespace Example
 ## PutUsersPresencesBulk
 
 > [**List&lt;UserPresence&gt;**](UserPresence) PutUsersPresencesBulk (List<MutableUserPresence> body)
-
 
 
 Update bulk user Presences
@@ -1778,11 +1740,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<MutableUserPresence>**](MutableUserPresence)| List of User presences |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**List<UserPresence>**](UserPresence)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

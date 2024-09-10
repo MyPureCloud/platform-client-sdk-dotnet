@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingPredictors**](#GetRoutingPredictors) | **Get** /api/v2/routing/predictors | Retrieve all predictors. |
 | [**GetRoutingPredictorsKeyperformanceindicators**](#GetRoutingPredictorsKeyperformanceindicators) | **Get** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
 | [**GetRoutingQueue**](#GetRoutingQueue) | **Get** /api/v2/routing/queues/{queueId} | Get details about this queue. |
+| [**GetRoutingQueueAssistant**](#GetRoutingQueueAssistant) | **Get** /api/v2/routing/queues/{queueId}/assistant | Get an assistant associated with a queue. |
 | [**GetRoutingQueueComparisonperiod**](#GetRoutingQueueComparisonperiod) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
 | [**GetRoutingQueueComparisonperiods**](#GetRoutingQueueComparisonperiods) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods | Get list of comparison periods |
 | [**GetRoutingQueueEstimatedwaittime**](#GetRoutingQueueEstimatedwaittime) | **Get** /api/v2/routing/queues/{queueId}/estimatedwaittime | Get Estimated Wait Time |
@@ -155,13 +156,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingWrapupcode**](#PutRoutingWrapupcode) | **Put** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 | [**PutUserRoutingskill**](#PutUserRoutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update routing skill proficiency or state. |
 | [**PutUserRoutingskillsBulk**](#PutUserRoutingskillsBulk) | **Put** /api/v2/users/{userId}/routingskills/bulk | Replace all routing skills assigned to a user |
-{: class="table table-striped"}
+
 
 
 ## DeleteRoutingAssessment
 
 > void DeleteRoutingAssessment (string assessmentId)
-
 
 
 Delete single benefit assessment.
@@ -214,7 +214,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assessmentId** | **string**| Benefit Assessment ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -224,7 +223,6 @@ void (empty response body)
 ## DeleteRoutingDirectroutingbackupSettingsMe
 
 > void DeleteRoutingDirectroutingbackupSettingsMe ()
-
 
 
 Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
@@ -273,7 +271,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -282,7 +279,6 @@ void (empty response body)
 ## DeleteRoutingEmailDomain
 
 > void DeleteRoutingEmailDomain (string domainId)
-
 
 
 Delete a domain
@@ -335,7 +331,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -345,7 +340,6 @@ void (empty response body)
 ## DeleteRoutingEmailDomainRoute
 
 > void DeleteRoutingEmailDomainRoute (string domainName, string routeId)
-
 
 
 Delete a route
@@ -400,7 +394,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -410,7 +403,6 @@ void (empty response body)
 ## DeleteRoutingEmailOutboundDomain
 
 > void DeleteRoutingEmailOutboundDomain (string domainId)
-
 
 
 Delete an outbound domain
@@ -463,7 +455,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -473,7 +464,6 @@ void (empty response body)
 ## DeleteRoutingLanguage
 
 > void DeleteRoutingLanguage (string languageId)
-
 
 
 Delete a routing language
@@ -526,7 +516,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Language ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -536,7 +525,6 @@ void (empty response body)
 ## DeleteRoutingPredictor
 
 > void DeleteRoutingPredictor (string predictorId)
-
 
 
 Delete single predictor.
@@ -590,7 +578,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| Predictor ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -600,7 +587,6 @@ void (empty response body)
 ## DeleteRoutingQueue
 
 > void DeleteRoutingQueue (string queueId, bool? forceDelete = null)
-
 
 
 Delete a queue
@@ -655,7 +641,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **forceDelete** | **bool?**| forceDelete | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -665,7 +650,6 @@ void (empty response body)
 ## DeleteRoutingQueueMember
 
 > void DeleteRoutingQueueMember (string queueId, string memberId)
-
 
 
 Delete a queue member.
@@ -721,7 +705,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **memberId** | **string**| Member ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -732,7 +715,9 @@ void (empty response body)
 
 > void DeleteRoutingQueueUser (string queueId, string memberId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member.
 
@@ -787,7 +772,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **memberId** | **string**| Member ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -797,7 +781,6 @@ void (empty response body)
 ## DeleteRoutingQueueWrapupcode
 
 > void DeleteRoutingQueueWrapupcode (string queueId, string codeId)
-
 
 
 Delete a wrap-up code from a queue
@@ -852,7 +835,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **codeId** | **string**| Code ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -862,7 +844,6 @@ void (empty response body)
 ## DeleteRoutingSettings
 
 > void DeleteRoutingSettings ()
-
 
 
 Delete an organization's routing settings
@@ -911,7 +892,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -920,7 +900,6 @@ void (empty response body)
 ## DeleteRoutingSkill
 
 > void DeleteRoutingSkill (string skillId)
-
 
 
 Delete Routing Skill
@@ -973,7 +952,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillId** | **string**| Skill ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -983,7 +961,6 @@ void (empty response body)
 ## DeleteRoutingSkillgroup
 
 > void DeleteRoutingSkillgroup (string skillGroupId)
-
 
 
 Remove skill group definition
@@ -1036,7 +1013,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillGroupId** | **string**| Skill Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1046,7 +1022,6 @@ void (empty response body)
 ## DeleteRoutingSmsAddress
 
 > void DeleteRoutingSmsAddress (string addressId)
-
 
 
 Delete an Address by Id for SMS
@@ -1099,7 +1074,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1109,7 +1083,6 @@ void (empty response body)
 ## DeleteRoutingSmsPhonenumber
 
 > void DeleteRoutingSmsPhonenumber (string addressId)
-
 
 
 Delete a phone number provisioned for SMS.
@@ -1162,7 +1135,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1172,7 +1144,6 @@ void (empty response body)
 ## DeleteRoutingUserDirectroutingbackupSettings
 
 > void DeleteRoutingUserDirectroutingbackupSettings (string userId)
-
 
 
 Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
@@ -1225,7 +1196,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1235,7 +1205,6 @@ void (empty response body)
 ## DeleteRoutingUserUtilization
 
 > void DeleteRoutingUserUtilization (string userId)
-
 
 
 Delete the user's max utilization settings and revert to the organization-wide default.
@@ -1288,7 +1257,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1298,7 +1266,6 @@ void (empty response body)
 ## DeleteRoutingUtilization
 
 > void DeleteRoutingUtilization ()
-
 
 
 Delete the organization-wide max utilization settings and revert to the system default.
@@ -1347,7 +1314,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -1356,7 +1322,6 @@ void (empty response body)
 ## DeleteRoutingUtilizationLabel
 
 > void DeleteRoutingUtilizationLabel (string labelId, bool? forceDelete = null)
-
 
 
 Delete a utilization label
@@ -1411,7 +1376,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **labelId** | **string**| Utilization Label ID |  |
 | **forceDelete** | **bool?**| Remove all label usages (if found) without warning | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1421,7 +1385,6 @@ void (empty response body)
 ## DeleteRoutingUtilizationTag
 
 > void DeleteRoutingUtilizationTag (string tagId, bool? forceDelete = null)
-
 
 
 Delete an utilization tag
@@ -1478,7 +1441,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **string**| Utilization Tag ID |  |
 | **forceDelete** | **bool?**| Remove all tag usages (if found) without warning | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1488,7 +1450,6 @@ void (empty response body)
 ## DeleteRoutingWrapupcode
 
 > void DeleteRoutingWrapupcode (string codeId)
-
 
 
 Delete wrap-up code
@@ -1541,7 +1502,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1551,7 +1511,6 @@ void (empty response body)
 ## DeleteUserRoutinglanguage
 
 > void DeleteUserRoutinglanguage (string userId, string languageId)
-
 
 
 Remove routing language from user
@@ -1607,7 +1566,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **languageId** | **string**| languageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1617,7 +1575,6 @@ void (empty response body)
 ## DeleteUserRoutingskill
 
 > void DeleteUserRoutingskill (string userId, string skillId)
-
 
 
 Remove routing skill from user
@@ -1672,7 +1629,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **skillId** | **string**| skillId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1682,7 +1638,6 @@ void (empty response body)
 ## GetRoutingAssessment
 
 > [**BenefitAssessment**](BenefitAssessment) GetRoutingAssessment (string assessmentId)
-
 
 
 Retrieve a single benefit assessment.
@@ -1736,7 +1691,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **assessmentId** | **string**| Benefit Assessment ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1746,7 +1700,6 @@ namespace Example
 ## GetRoutingAssessments
 
 > [**AssessmentListing**](AssessmentListing) GetRoutingAssessments (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
-
 
 
 Retrieve all benefit assessments.
@@ -1809,7 +1762,6 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **queueId** | [**List<string>**](string)| Queue ID(s) to filter assessments by. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1819,7 +1771,6 @@ namespace Example
 ## GetRoutingAssessmentsJob
 
 > [**BenefitAssessmentJob**](BenefitAssessmentJob) GetRoutingAssessmentsJob (string jobId)
-
 
 
 Retrieve a single benefit assessments job.
@@ -1873,7 +1824,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| Benefit Assessment Job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1883,7 +1833,6 @@ namespace Example
 ## GetRoutingAssessmentsJobs
 
 > [**AssessmentJobListing**](AssessmentJobListing) GetRoutingAssessmentsJobs (List<string> divisionId = null)
-
 
 
 Retrieve all benefit assessment jobs.
@@ -1937,7 +1886,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | [**List<string>**](string)| Division ID(s) to filter assessment jobs by. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1947,7 +1895,6 @@ namespace Example
 ## GetRoutingAvailablemediatypes
 
 > [**AvailableMediaTypeEntityListing**](AvailableMediaTypeEntityListing) GetRoutingAvailablemediatypes ()
-
 
 
 Get available media types
@@ -1996,7 +1943,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AvailableMediaTypeEntityListing**](AvailableMediaTypeEntityListing)
@@ -2005,7 +1951,6 @@ This endpoint does require any parameters.
 ## GetRoutingDirectroutingbackupSettingsMe
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) GetRoutingDirectroutingbackupSettingsMe ()
-
 
 
 Get the user's Direct Routing Backup settings.
@@ -2055,7 +2000,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings)
@@ -2064,7 +2008,6 @@ This endpoint does require any parameters.
 ## GetRoutingEmailDomain
 
 > [**InboundDomain**](InboundDomain) GetRoutingEmailDomain (string domainId)
-
 
 
 Get domain
@@ -2118,7 +2061,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2128,7 +2070,6 @@ namespace Example
 ## GetRoutingEmailDomainRoute
 
 > [**InboundRoute**](InboundRoute) GetRoutingEmailDomainRoute (string domainName, string routeId)
-
 
 
 Get a route
@@ -2184,7 +2125,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2194,7 +2134,6 @@ namespace Example
 ## GetRoutingEmailDomainRoutes
 
 > [**InboundRouteEntityListing**](InboundRouteEntityListing) GetRoutingEmailDomainRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
-
 
 
 Get routes
@@ -2254,7 +2193,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pattern** | **string**| Filter routes by the route&#39;s pattern property | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2264,7 +2202,6 @@ namespace Example
 ## GetRoutingEmailDomains
 
 > [**InboundDomainEntityListing**](InboundDomainEntityListing) GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
-
 
 
 Get domains
@@ -2324,7 +2261,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **excludeStatus** | **bool?**| Exclude MX record data | [optional] [default to false] |
 | **filter** | **string**| Optional search filter | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2334,7 +2270,6 @@ namespace Example
 ## GetRoutingEmailOutboundDomain
 
 > [**OutboundDomain**](OutboundDomain) GetRoutingEmailOutboundDomain (string domainId)
-
 
 
 Get domain
@@ -2388,7 +2323,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2398,7 +2332,6 @@ namespace Example
 ## GetRoutingEmailOutboundDomainActivation
 
 > [**EmailOutboundDomainResult**](EmailOutboundDomainResult) GetRoutingEmailOutboundDomainActivation (string domainId)
-
 
 
 Get activation status (cname + dkim) of an outbound domain
@@ -2452,7 +2385,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2462,7 +2394,6 @@ namespace Example
 ## GetRoutingEmailOutboundDomainSearch
 
 > [**OutboundDomain**](OutboundDomain) GetRoutingEmailOutboundDomainSearch (string domainId)
-
 
 
 Search a domain across organizations
@@ -2516,7 +2447,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2526,7 +2456,6 @@ namespace Example
 ## GetRoutingEmailOutboundDomains
 
 > [**OutboundDomainEntityListing**](OutboundDomainEntityListing) GetRoutingEmailOutboundDomains (string filter = null)
-
 
 
 Get outbound domains
@@ -2580,7 +2509,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **filter** | **string**| Optional search filter | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2590,7 +2518,6 @@ namespace Example
 ## GetRoutingEmailSetup
 
 > [**EmailSetup**](EmailSetup) GetRoutingEmailSetup ()
-
 
 
 Get email setup
@@ -2640,7 +2567,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EmailSetup**](EmailSetup)
@@ -2649,7 +2575,6 @@ This endpoint does require any parameters.
 ## GetRoutingLanguage
 
 > [**Language**](Language) GetRoutingLanguage (string languageId)
-
 
 
 Get a routing language
@@ -2702,7 +2627,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Language ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2712,7 +2636,6 @@ namespace Example
 ## GetRoutingLanguages
 
 > [**LanguageEntityListing**](LanguageEntityListing) GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, List<string> id = null)
-
 
 
 Get the list of supported languages.
@@ -2773,7 +2696,6 @@ namespace Example
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string)| id | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2783,7 +2705,6 @@ namespace Example
 ## GetRoutingMessageRecipient
 
 > [**Recipient**](Recipient) GetRoutingMessageRecipient (string recipientId)
-
 
 
 Get a recipient
@@ -2837,7 +2758,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recipientId** | **string**| Recipient ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2847,7 +2767,6 @@ namespace Example
 ## GetRoutingMessageRecipients
 
 > [**RecipientListing**](RecipientListing) GetRoutingMessageRecipients (string messengerType = null, string name = null, int? pageSize = null, int? pageNumber = null)
-
 
 
 Get recipients
@@ -2907,7 +2826,6 @@ namespace Example
 | **name** | **string**| Recipient Name | [optional]  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2917,7 +2835,6 @@ namespace Example
 ## GetRoutingPredictor
 
 > [**Predictor**](Predictor) GetRoutingPredictor (string predictorId)
-
 
 
 Retrieve a single predictor.
@@ -2971,7 +2888,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| Predictor ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2981,7 +2897,6 @@ namespace Example
 ## GetRoutingPredictorModelFeatures
 
 > [**PredictorModelFeatureListing**](PredictorModelFeatureListing) GetRoutingPredictorModelFeatures (string predictorId, string modelId)
-
 
 
 Retrieve Predictor Model Features.
@@ -3037,7 +2952,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| Predictor ID |  |
 | **modelId** | **string**| Model ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3047,7 +2961,6 @@ namespace Example
 ## GetRoutingPredictorModels
 
 > [**PredictorModels**](PredictorModels) GetRoutingPredictorModels (string predictorId)
-
 
 
 Retrieve Predictor Models and Top Features.
@@ -3101,7 +3014,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| Predictor ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3111,7 +3023,6 @@ namespace Example
 ## GetRoutingPredictors
 
 > [**PredictorListing**](PredictorListing) GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
-
 
 
 Retrieve all predictors.
@@ -3174,7 +3085,6 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **queueId** | [**List<string>**](string)| Comma-separated list of queue Ids to filter by. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3184,7 +3094,6 @@ namespace Example
 ## GetRoutingPredictorsKeyperformanceindicators
 
 > [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
-
 
 
 Get a list of Key Performance Indicators
@@ -3240,7 +3149,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **kpiGroup** | **string**| The Group of Key Performance Indicators to return | [optional] <br />**Values**: Standard, Custom |
 | **expand** | [**List<string>**](string)| Parameter to request additional data to return in KPI payload | [optional] <br />**Values**: queues |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3250,7 +3158,6 @@ namespace Example
 ## GetRoutingQueue
 
 > [**Queue**](Queue) GetRoutingQueue (string queueId)
-
 
 
 Get details about this queue.
@@ -3304,17 +3211,79 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Queue**](Queue)
 
 
+## GetRoutingQueueAssistant
+
+> [**AssistantQueue**](AssistantQueue) GetRoutingQueueAssistant (string queueId, string expand = null)
+
+
+Get an assistant associated with a queue.
+
+Requires ALL permissions: 
+
+* assistants:queue:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueueAssistantExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var queueId = queueId_example;  // string | Queue ID
+            var expand = expand_example;  // string | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Get an assistant associated with a queue.
+                AssistantQueue result = apiInstance.GetRoutingQueueAssistant(queueId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueueAssistant: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: assistant |
+
+### Return type
+
+[**AssistantQueue**](AssistantQueue)
+
+
 ## GetRoutingQueueComparisonperiod
 
 > [**ComparisonPeriod**](ComparisonPeriod) GetRoutingQueueComparisonperiod (string queueId, string comparisonPeriodId)
-
 
 
 Get a Comparison Period.
@@ -3371,7 +3340,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue id |  |
 | **comparisonPeriodId** | **string**| ComparisonPeriod id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3381,7 +3349,6 @@ namespace Example
 ## GetRoutingQueueComparisonperiods
 
 > [**ComparisonPeriodListing**](ComparisonPeriodListing) GetRoutingQueueComparisonperiods (string queueId)
-
 
 
 Get list of comparison periods
@@ -3436,7 +3403,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3446,7 +3412,6 @@ namespace Example
 ## GetRoutingQueueEstimatedwaittime
 
 > [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions) GetRoutingQueueEstimatedwaittime (string queueId, string conversationId = null)
-
 
 
 Get Estimated Wait Time
@@ -3502,7 +3467,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| queueId |  |
 | **conversationId** | **string**| conversationId | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3512,7 +3476,6 @@ namespace Example
 ## GetRoutingQueueMediatypeEstimatedwaittime
 
 > [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions) GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType)
-
 
 
 Get Estimated Wait Time
@@ -3568,7 +3531,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| queueId |  |
 | **mediaType** | **string**| mediaType |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3578,7 +3540,6 @@ namespace Example
 ## GetRoutingQueueMembers
 
 > [**QueueMemberEntityListing**](QueueMemberEntityListing) GetRoutingQueueMembers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null, string memberBy = null, bool? joined = null)
-
 
 
 Get the members of this queue.
@@ -3659,7 +3620,6 @@ namespace Example
 | **presence** | [**List<string>**](string)| Filter by presence | [optional]  |
 | **memberBy** | **string**| Filter by member type | [optional] <br />**Values**: user, group |
 | **joined** | **bool?**| Filter by joined status | [optional] <br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3670,7 +3630,9 @@ namespace Example
 
 > [**QueueMemberEntityListingV1**](QueueMemberEntityListingV1) GetRoutingQueueUsers (string queueId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 DEPRECATED: use GET /routing/queues/{queueId}/members.  Get the members of this queue.
 
@@ -3746,7 +3708,6 @@ namespace Example
 | **languages** | [**List<string>**](string)| Filter by language | [optional]  |
 | **routingStatus** | [**List<string>**](string)| Filter by routing status | [optional]  |
 | **presence** | [**List<string>**](string)| Filter by presence | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3756,7 +3717,6 @@ namespace Example
 ## GetRoutingQueueWrapupcodes
 
 > [**WrapupCodeEntityListing**](WrapupCodeEntityListing) GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null)
-
 
 
 Get the wrap-up codes for a queue
@@ -3814,7 +3774,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3824,7 +3783,6 @@ namespace Example
 ## GetRoutingQueues
 
 > [**QueueEntityListing**](QueueEntityListing) GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, string cannedResponseLibraryId = null, bool? hasPeer = null)
-
 
 
 Get list of queues.
@@ -3894,7 +3852,6 @@ namespace Example
 | **peerId** | [**List<string>**](string)| Include only queues with the specified peer ID(s) | [optional]  |
 | **cannedResponseLibraryId** | **string**| Include only queues explicitly associated with the specified canned response library ID | [optional]  |
 | **hasPeer** | **bool?**| Include only queues with a peer ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3904,7 +3861,6 @@ namespace Example
 ## GetRoutingQueuesDivisionviews
 
 > [**QueueEntityListing**](QueueEntityListing) GetRoutingQueuesDivisionviews (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
-
 
 
 Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
@@ -3970,7 +3926,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string)| Queue ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3980,7 +3935,6 @@ namespace Example
 ## GetRoutingQueuesDivisionviewsAll
 
 > [**QueueEntityListing**](QueueEntityListing) GetRoutingQueuesDivisionviewsAll (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
 
 
 Get a paged listing of simplified queue objects, sorted by name.  Can be used to get a digest of all queues in an organization.
@@ -4038,7 +3992,6 @@ namespace Example
 | **pageSize** | **int?**| Page size [max value is 500] | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4048,7 +4001,6 @@ namespace Example
 ## GetRoutingQueuesMe
 
 > [**UserQueueEntityListing**](UserQueueEntityListing) GetRoutingQueuesMe (int? pageNumber = null, int? pageSize = null, bool? joined = null, string sortOrder = null)
-
 
 
 Get a paged listing of queues the user is a member of.
@@ -4107,7 +4059,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **joined** | **bool?**| Filter by joined status. | [optional] <br />**Values**: true, false |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4117,7 +4068,6 @@ namespace Example
 ## GetRoutingSettings
 
 > [**RoutingSettings**](RoutingSettings) GetRoutingSettings ()
-
 
 
 Get an organization's routing settings
@@ -4166,7 +4116,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**RoutingSettings**](RoutingSettings)
@@ -4175,7 +4124,6 @@ This endpoint does require any parameters.
 ## GetRoutingSettingsContactcenter
 
 > [**ContactCenterSettings**](ContactCenterSettings) GetRoutingSettingsContactcenter ()
-
 
 
 Get Contact Center Settings
@@ -4224,7 +4172,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ContactCenterSettings**](ContactCenterSettings)
@@ -4233,7 +4180,6 @@ This endpoint does require any parameters.
 ## GetRoutingSettingsTranscription
 
 > [**TranscriptionSettings**](TranscriptionSettings) GetRoutingSettingsTranscription ()
-
 
 
 Get Transcription Settings
@@ -4283,7 +4229,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**TranscriptionSettings**](TranscriptionSettings)
@@ -4292,7 +4237,6 @@ This endpoint does require any parameters.
 ## GetRoutingSkill
 
 > [**RoutingSkill**](RoutingSkill) GetRoutingSkill (string skillId)
-
 
 
 Get Routing Skill
@@ -4345,7 +4289,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillId** | **string**| Skill ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4355,7 +4298,6 @@ namespace Example
 ## GetRoutingSkillgroup
 
 > [**SkillGroup**](SkillGroup) GetRoutingSkillgroup (string skillGroupId)
-
 
 
 Get skill group
@@ -4409,7 +4351,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillGroupId** | **string**| Skill Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4419,7 +4360,6 @@ namespace Example
 ## GetRoutingSkillgroupMembers
 
 > [**SkillGroupMemberEntityListing**](SkillGroupMemberEntityListing) GetRoutingSkillgroupMembers (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null)
-
 
 
 Get skill group members
@@ -4481,7 +4421,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the next item | [optional]  |
 | **before** | **string**| The cursor that points to the previous item | [optional]  |
 | **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4491,7 +4430,6 @@ namespace Example
 ## GetRoutingSkillgroupMembersDivisions
 
 > [**SkillGroupMemberDivisionList**](SkillGroupMemberDivisionList) GetRoutingSkillgroupMembersDivisions (string skillGroupId, string expand = null)
-
 
 
 Get list of member divisions for this skill group.
@@ -4547,7 +4485,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **skillGroupId** | **string**| Skill Group ID |  |
 | **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4557,7 +4494,6 @@ namespace Example
 ## GetRoutingSkillgroups
 
 > [**SkillGroupEntityListing**](SkillGroupEntityListing) GetRoutingSkillgroups (int? pageSize = null, string name = null, string after = null, string before = null)
-
 
 
 Get skill group listing
@@ -4617,7 +4553,6 @@ namespace Example
 | **name** | **string**| Return only skill group names whose names start with this value (case-insensitive matching) | [optional]  |
 | **after** | **string**| The cursor that points to the next item | [optional]  |
 | **before** | **string**| The cursor that points to the previous item | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4627,7 +4562,6 @@ namespace Example
 ## GetRoutingSkills
 
 > [**SkillEntityListing**](SkillEntityListing) GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
-
 
 
 Get the list of routing skills.
@@ -4686,7 +4620,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Filter for results that start with this value | [optional]  |
 | **id** | [**List<string>**](string)| id | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4696,7 +4629,6 @@ namespace Example
 ## GetRoutingSmsAddress
 
 > [**SmsAddress**](SmsAddress) GetRoutingSmsAddress (string addressId)
-
 
 
 Get an Address by Id for SMS
@@ -4750,7 +4682,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4760,7 +4691,6 @@ namespace Example
 ## GetRoutingSmsAddresses
 
 > [**SmsAddressEntityListing**](SmsAddressEntityListing) GetRoutingSmsAddresses (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of Addresses for SMS
@@ -4816,7 +4746,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4826,7 +4755,6 @@ namespace Example
 ## GetRoutingSmsAvailablephonenumbers
 
 > [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing) GetRoutingSmsAvailablephonenumbers (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
-
 
 
 Get a list of available phone numbers for SMS provisioning.
@@ -4894,7 +4822,6 @@ namespace Example
 | **areaCode** | **string**| Area code that can be used to restrict the numbers returned | [optional]  |
 | **pattern** | **string**| A pattern to match phone numbers. Valid characters are &#39;*&#39; and [0-9a-zA-Z]. The &#39;*&#39; character will match any single digit. | [optional]  |
 | **addressRequirement** | **string**| This indicates whether the phone number requires to have an Address registered. | [optional] <br />**Values**: none, any, local, foreign |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4904,7 +4831,6 @@ namespace Example
 ## GetRoutingSmsPhonenumber
 
 > [**SmsPhoneNumber**](SmsPhoneNumber) GetRoutingSmsPhonenumber (string addressId, string expand = null)
-
 
 
 Get a phone number provisioned for SMS.
@@ -4960,7 +4886,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
 | **expand** | **string**| Expand response with additional information | [optional] <br />**Values**: compliance, supportedContent |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4970,7 +4895,6 @@ namespace Example
 ## GetRoutingSmsPhonenumbers
 
 > [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing) GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null, string supportedContentId = null)
-
 
 
 Get a list of provisioned phone numbers.
@@ -5044,7 +4968,6 @@ namespace Example
 | **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations | [optional] [default to "en-US"] |
 | **integrationId** | **string**| Filter on the Genesys Cloud integration id to which the phone number belongs to | [optional]  |
 | **supportedContentId** | **string**| Filter based on the supported content ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5054,7 +4977,6 @@ namespace Example
 ## GetRoutingUserDirectroutingbackupSettings
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) GetRoutingUserDirectroutingbackupSettings (string userId)
-
 
 
 Get the user's Direct Routing Backup settings.
@@ -5108,7 +5030,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5118,7 +5039,6 @@ namespace Example
 ## GetRoutingUserUtilization
 
 > [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse) GetRoutingUserUtilization (string userId)
-
 
 
 Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
@@ -5173,7 +5093,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5183,7 +5102,6 @@ namespace Example
 ## GetRoutingUtilization
 
 > [**UtilizationResponse**](UtilizationResponse) GetRoutingUtilization ()
-
 
 
 Get the organization-wide max utilization settings.
@@ -5234,7 +5152,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**UtilizationResponse**](UtilizationResponse)
@@ -5243,7 +5160,6 @@ This endpoint does require any parameters.
 ## GetRoutingUtilizationLabel
 
 > [**UtilizationLabel**](UtilizationLabel) GetRoutingUtilizationLabel (string labelId)
-
 
 
 Get details about this utilization label
@@ -5297,7 +5213,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **labelId** | **string**| Utilization Label ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5307,7 +5222,6 @@ namespace Example
 ## GetRoutingUtilizationLabelAgents
 
 > **List&lt;Object&gt;** GetRoutingUtilizationLabelAgents (string labelId)
-
 
 
 Get list of agent ids associated with a utilization label
@@ -5361,7 +5275,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **labelId** | **string**| Utilization Label ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5371,7 +5284,6 @@ namespace Example
 ## GetRoutingUtilizationLabels
 
 > [**UtilizationLabelEntityListing**](UtilizationLabelEntityListing) GetRoutingUtilizationLabels (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
-
 
 
 Get list of utilization labels
@@ -5431,7 +5343,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order by name | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **name** | **string**| Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5441,7 +5352,6 @@ namespace Example
 ## GetRoutingUtilizationTag
 
 > [**UtilizationTag**](UtilizationTag) GetRoutingUtilizationTag (string tagId)
-
 
 
 Get details about this utilization tag
@@ -5497,7 +5407,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **string**| Utilization Tag ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5507,7 +5416,6 @@ namespace Example
 ## GetRoutingUtilizationTagAgents
 
 > **List&lt;Object&gt;** GetRoutingUtilizationTagAgents (string tagId)
-
 
 
 Get list of agent ids associated with a utilization tag
@@ -5563,7 +5471,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **tagId** | **string**| Utilization Tag ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5573,7 +5480,6 @@ namespace Example
 ## GetRoutingUtilizationTags
 
 > [**UtilizationTagEntityListing**](UtilizationTagEntityListing) GetRoutingUtilizationTags (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
-
 
 
 Get list of utilization tags
@@ -5635,7 +5541,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order by name | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **name** | **string**| Utilization tag&#39;s name (Wildcard is supported, e.g., &#39;tag1*&#39;) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5645,7 +5550,6 @@ namespace Example
 ## GetRoutingWrapupcode
 
 > [**WrapupCode**](WrapupCode) GetRoutingWrapupcode (string codeId)
-
 
 
 Get details about this wrap-up code.
@@ -5699,7 +5603,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5709,7 +5612,6 @@ namespace Example
 ## GetRoutingWrapupcodes
 
 > [**WrapupCodeEntityListing**](WrapupCodeEntityListing) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
-
 
 
 Get list of wrapup codes.
@@ -5775,7 +5677,6 @@ namespace Example
 | **name** | **string**| Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) | [optional]  |
 | **id** | [**List<string>**](string)| Filter by wrapup code ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string)| Filter by division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5785,7 +5686,6 @@ namespace Example
 ## GetRoutingWrapupcodesDivisionview
 
 > [**WrapupCode**](WrapupCode) GetRoutingWrapupcodesDivisionview (string codeId)
-
 
 
 Get a simplified wrap-up code.
@@ -5839,7 +5739,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5849,7 +5748,6 @@ namespace Example
 ## GetRoutingWrapupcodesDivisionviews
 
 > [**WrapupCodeEntityListing**](WrapupCodeEntityListing) GetRoutingWrapupcodesDivisionviews (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null, List<string> divisionId = null, string includeState = null)
-
 
 
 Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
@@ -5915,7 +5813,6 @@ namespace Example
 | **id** | [**List<string>**](string)| Wrapup code ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
 | **includeState** | **string**| Wrapup code state(s) to include | [optional] <br />**Values**: Active, Deleted, ActiveAndDeleted |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5925,7 +5822,6 @@ namespace Example
 ## GetUserQueues
 
 > [**UserQueueEntityListing**](UserQueueEntityListing) GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
-
 
 
 Get queues for user
@@ -5989,7 +5885,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **joined** | **bool?**| Is joined to the queue | [optional] [default to true] |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5999,7 +5894,6 @@ namespace Example
 ## GetUserRoutinglanguages
 
 > [**UserLanguageEntityListing**](UserLanguageEntityListing) GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
 
 
 List routing language for user
@@ -6058,7 +5952,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6068,7 +5961,6 @@ namespace Example
 ## GetUserRoutingskills
 
 > [**UserSkillEntityListing**](UserSkillEntityListing) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
 
 
 List routing skills for user
@@ -6127,7 +6019,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6137,7 +6028,6 @@ namespace Example
 ## GetUserSkillgroups
 
 > [**UserSkillGroupEntityListing**](UserSkillGroupEntityListing) GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
-
 
 
 Get skill groups for a user
@@ -6197,7 +6087,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **after** | **string**| The cursor that points to the next page | [optional]  |
 | **before** | **string**| The cursor that points to the previous page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6207,7 +6096,6 @@ namespace Example
 ## PatchRoutingConversation
 
 > [**RoutingConversationAttributesResponse**](RoutingConversationAttributesResponse) PatchRoutingConversation (string conversationId, RoutingConversationAttributesRequest body)
-
 
 
 Update attributes of an in-queue conversation
@@ -6265,7 +6153,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **body** | [**RoutingConversationAttributesRequest**](RoutingConversationAttributesRequest)| Conversation Attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6275,7 +6162,6 @@ namespace Example
 ## PatchRoutingEmailDomain
 
 > [**InboundDomain**](InboundDomain) PatchRoutingEmailDomain (string domainId, InboundDomainPatchRequest body)
-
 
 
 Update domain settings
@@ -6331,7 +6217,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
 | **body** | [**InboundDomainPatchRequest**](InboundDomainPatchRequest)| Domain settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6341,7 +6226,6 @@ namespace Example
 ## PatchRoutingEmailDomainValidate
 
 > [**InboundDomain**](InboundDomain) PatchRoutingEmailDomainValidate (string domainId, InboundDomainPatchRequest body)
-
 
 
 Validate domain settings
@@ -6397,7 +6281,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
 | **body** | [**InboundDomainPatchRequest**](InboundDomainPatchRequest)| Domain settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6407,7 +6290,6 @@ namespace Example
 ## PatchRoutingPredictor
 
 > [**Predictor**](Predictor) PatchRoutingPredictor (string predictorId, PatchPredictorRequest body = null)
-
 
 
 Update single predictor.
@@ -6464,7 +6346,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| Predictor ID |  |
 | **body** | [**PatchPredictorRequest**](PatchPredictorRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6474,7 +6355,6 @@ namespace Example
 ## PatchRoutingQueueMember
 
 > void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
-
 
 
 Update the ring number OR joined status for a queue member.
@@ -6532,7 +6412,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **memberId** | **string**| Member ID |  |
 | **body** | [**QueueMember**](QueueMember)| Queue Member |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6542,7 +6421,6 @@ void (empty response body)
 ## PatchRoutingQueueMembers
 
 > [**QueueMemberEntityListing**](QueueMemberEntityListing) PatchRoutingQueueMembers (string queueId, List<QueueMember> body)
-
 
 
 Join or unjoin a set of users for a queue
@@ -6599,7 +6477,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **body** | [**List<QueueMember>**](QueueMember)| Queue Members |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6610,7 +6487,9 @@ namespace Example
 
 > void PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue.
 
@@ -6667,7 +6546,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **memberId** | **string**| Member ID |  |
 | **body** | [**QueueMember**](QueueMember)| Queue Member |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6678,7 +6556,9 @@ void (empty response body)
 
 > [**QueueMemberEntityListingV1**](QueueMemberEntityListingV1) PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue.
 
@@ -6734,7 +6614,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **body** | [**List<QueueMember>**](QueueMember)| Queue Members |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6744,7 +6623,6 @@ namespace Example
 ## PatchRoutingSettingsContactcenter
 
 > void PatchRoutingSettingsContactcenter (ContactCenterSettings body)
-
 
 
 Update Contact Center Settings
@@ -6797,7 +6675,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactCenterSettings**](ContactCenterSettings)| Contact Center Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6807,7 +6684,6 @@ void (empty response body)
 ## PatchRoutingSettingsTranscription
 
 > [**TranscriptionSettings**](TranscriptionSettings) PatchRoutingSettingsTranscription (TranscriptionSettings body)
-
 
 
 Patch Transcription Settings
@@ -6861,7 +6737,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptionSettings**](TranscriptionSettings)| Organization Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6871,7 +6746,6 @@ namespace Example
 ## PatchRoutingSkillgroup
 
 > [**SkillGroup**](SkillGroup) PatchRoutingSkillgroup (string skillGroupId, SkillGroup body)
-
 
 
 Update skill group definition
@@ -6927,7 +6801,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **skillGroupId** | **string**| Skill Group ID |  |
 | **body** | [**SkillGroup**](SkillGroup)| Update skill groups |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6937,7 +6810,6 @@ namespace Example
 ## PatchUserQueue
 
 > [**UserQueue**](UserQueue) PatchUserQueue (string queueId, string userId, UserQueue body)
-
 
 
 Join or unjoin a queue for a user
@@ -6996,7 +6868,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **userId** | **string**| User ID |  |
 | **body** | [**UserQueue**](UserQueue)| Queue Member |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7006,7 +6877,6 @@ namespace Example
 ## PatchUserQueues
 
 > [**UserQueueEntityListing**](UserQueueEntityListing) PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null)
-
 
 
 Join or unjoin a set of queues for a user
@@ -7065,7 +6935,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserQueue>**](UserQueue)| User Queues |  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7075,7 +6944,6 @@ namespace Example
 ## PatchUserRoutinglanguage
 
 > [**UserRoutingLanguage**](UserRoutingLanguage) PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
-
 
 
 Update routing language proficiency or state.
@@ -7134,7 +7002,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **languageId** | **string**| languageId |  |
 | **body** | [**UserRoutingLanguage**](UserRoutingLanguage)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7144,7 +7011,6 @@ namespace Example
 ## PatchUserRoutinglanguagesBulk
 
 > [**UserLanguageEntityListing**](UserLanguageEntityListing) PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
-
 
 
 Add bulk routing language to user. Max limit 50 languages
@@ -7201,7 +7067,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserRoutingLanguagePost>**](UserRoutingLanguagePost)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7211,7 +7076,6 @@ namespace Example
 ## PatchUserRoutingskillsBulk
 
 > [**UserSkillEntityListing**](UserSkillEntityListing) PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
-
 
 
 Bulk add routing skills to user
@@ -7267,7 +7131,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserRoutingSkillPost>**](UserRoutingSkillPost)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7277,7 +7140,6 @@ namespace Example
 ## PostAnalyticsQueuesObservationsQuery
 
 > [**QueueObservationQueryResponse**](QueueObservationQueryResponse) PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
-
 
 
 Query for queue observations
@@ -7331,7 +7193,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**QueueObservationQuery**](QueueObservationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7341,7 +7202,6 @@ namespace Example
 ## PostAnalyticsRoutingActivityQuery
 
 > [**RoutingActivityResponse**](RoutingActivityResponse) PostAnalyticsRoutingActivityQuery (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for user activity observations
@@ -7399,7 +7259,6 @@ namespace Example
 | **body** | [**RoutingActivityQuery**](RoutingActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7409,7 +7268,6 @@ namespace Example
 ## PostRoutingAssessments
 
 > [**BenefitAssessment**](BenefitAssessment) PostRoutingAssessments (CreateBenefitAssessmentRequest body = null)
-
 
 
 Create a benefit assessment.
@@ -7464,7 +7322,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateBenefitAssessmentRequest**](CreateBenefitAssessmentRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7474,7 +7331,6 @@ namespace Example
 ## PostRoutingAssessmentsJobs
 
 > [**BenefitAssessmentJob**](BenefitAssessmentJob) PostRoutingAssessmentsJobs (CreateBenefitAssessmentJobRequest body = null)
-
 
 
 Create a benefit assessment job.
@@ -7528,7 +7384,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateBenefitAssessmentJobRequest**](CreateBenefitAssessmentJobRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7538,7 +7393,6 @@ namespace Example
 ## PostRoutingEmailDomainRoutes
 
 > [**InboundRoute**](InboundRoute) PostRoutingEmailDomainRoutes (string domainName, InboundRoute body)
-
 
 
 Create a route
@@ -7594,7 +7448,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **body** | [**InboundRoute**](InboundRoute)| Route |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7604,7 +7457,6 @@ namespace Example
 ## PostRoutingEmailDomainTestconnection
 
 > [**TestMessage**](TestMessage) PostRoutingEmailDomainTestconnection (string domainId, TestMessage body = null)
-
 
 
 Tests the custom SMTP server integration connection set on this domain
@@ -7662,7 +7514,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
 | **body** | [**TestMessage**](TestMessage)| TestMessage | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7672,7 +7523,6 @@ namespace Example
 ## PostRoutingEmailDomains
 
 > [**InboundDomain**](InboundDomain) PostRoutingEmailDomains (InboundDomain body)
-
 
 
 Create a domain
@@ -7726,7 +7576,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**InboundDomain**](InboundDomain)| Domain |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7736,7 +7585,6 @@ namespace Example
 ## PostRoutingEmailOutboundDomains
 
 > [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomains (OutboundDomain body)
-
 
 
 Create a domain
@@ -7790,7 +7638,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutboundDomain**](OutboundDomain)| Domain |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7800,7 +7647,6 @@ namespace Example
 ## PostRoutingEmailOutboundDomainsSimulated
 
 > [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body)
-
 
 
 Create a simulated domain
@@ -7854,7 +7700,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutboundDomain**](OutboundDomain)| Domain |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7864,7 +7709,6 @@ namespace Example
 ## PostRoutingLanguages
 
 > [**Language**](Language) PostRoutingLanguages (Language body)
-
 
 
 Create Language
@@ -7918,7 +7762,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Language**](Language)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7928,7 +7771,6 @@ namespace Example
 ## PostRoutingPredictors
 
 > [**Predictor**](Predictor) PostRoutingPredictors (CreatePredictorRequest body = null)
-
 
 
 Create a predictor.
@@ -7983,7 +7825,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreatePredictorRequest**](CreatePredictorRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7993,7 +7834,6 @@ namespace Example
 ## PostRoutingQueueMembers
 
 > void PostRoutingQueueMembers (string queueId, List<WritableEntity> body, bool? delete = null)
-
 
 
 Bulk add or delete up to 100 queue members
@@ -8051,7 +7891,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **body** | [**List<WritableEntity>**](WritableEntity)| Queue Members |  |
 | **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8062,7 +7901,9 @@ void (empty response body)
 
 > void PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members.
 
@@ -8119,7 +7960,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **body** | [**List<WritableEntity>**](WritableEntity)| Queue Members |  |
 | **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8129,7 +7969,6 @@ void (empty response body)
 ## PostRoutingQueueWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) PostRoutingQueueWrapupcodes (string queueId, List<WrapUpCodeReference> body)
-
 
 
 Add up to 100 wrap-up codes to a queue
@@ -8185,7 +8024,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **body** | [**List<WrapUpCodeReference>**](WrapUpCodeReference)| List of wrapup codes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8195,7 +8033,6 @@ namespace Example
 ## PostRoutingQueues
 
 > [**Queue**](Queue) PostRoutingQueues (CreateQueueRequest body)
-
 
 
 Create a queue
@@ -8249,7 +8086,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateQueueRequest**](CreateQueueRequest)| Queue |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8259,7 +8095,6 @@ namespace Example
 ## PostRoutingSkillgroupMembersDivisions
 
 > void PostRoutingSkillgroupMembersDivisions (string skillGroupId, SkillGroupMemberDivisions body = null)
-
 
 
 Add or remove member divisions for this skill group.
@@ -8314,7 +8149,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **skillGroupId** | **string**| Skill Group ID |  |
 | **body** | [**SkillGroupMemberDivisions**](SkillGroupMemberDivisions)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8324,7 +8158,6 @@ void (empty response body)
 ## PostRoutingSkillgroups
 
 > [**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions) PostRoutingSkillgroups (SkillGroupWithMemberDivisions body)
-
 
 
 Create a skill group
@@ -8378,7 +8211,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SkillGroupWithMemberDivisions**](SkillGroupWithMemberDivisions)| Create skill group |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8388,7 +8220,6 @@ namespace Example
 ## PostRoutingSkills
 
 > [**RoutingSkill**](RoutingSkill) PostRoutingSkills (RoutingSkill body)
-
 
 
 Create Skill
@@ -8442,7 +8273,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RoutingSkill**](RoutingSkill)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8452,7 +8282,6 @@ namespace Example
 ## PostRoutingSmsAddresses
 
 > [**SmsAddress**](SmsAddress) PostRoutingSmsAddresses (SmsAddressProvision body)
-
 
 
 Provision an Address for SMS
@@ -8506,7 +8335,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SmsAddressProvision**](SmsAddressProvision)| SmsAddress |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8516,7 +8344,6 @@ namespace Example
 ## PostRoutingSmsPhonenumbers
 
 > [**SmsPhoneNumber**](SmsPhoneNumber) PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body)
-
 
 
 Provision a phone number for SMS
@@ -8570,7 +8397,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SmsPhoneNumberProvision**](SmsPhoneNumberProvision)| SmsPhoneNumber |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8580,7 +8406,6 @@ namespace Example
 ## PostRoutingSmsPhonenumbersAlphanumeric
 
 > [**SmsPhoneNumber**](SmsPhoneNumber) PostRoutingSmsPhonenumbersAlphanumeric (SmsAlphanumericProvision body)
-
 
 
 Provision an alphanumeric number for SMS
@@ -8636,7 +8461,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SmsAlphanumericProvision**](SmsAlphanumericProvision)| SmsPhoneNumber |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8646,7 +8470,6 @@ namespace Example
 ## PostRoutingSmsPhonenumbersImport
 
 > [**SmsPhoneNumber**](SmsPhoneNumber) PostRoutingSmsPhonenumbersImport (SmsPhoneNumberImport body)
-
 
 
 Imports a phone number for SMS
@@ -8700,7 +8523,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SmsPhoneNumberImport**](SmsPhoneNumberImport)| SmsPhoneNumber |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8710,7 +8532,6 @@ namespace Example
 ## PostRoutingUtilizationLabels
 
 > [**UtilizationLabel**](UtilizationLabel) PostRoutingUtilizationLabels (CreateUtilizationLabelRequest body)
-
 
 
 Create a utilization label
@@ -8764,7 +8585,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateUtilizationLabelRequest**](CreateUtilizationLabelRequest)| UtilizationLabel |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8774,7 +8594,6 @@ namespace Example
 ## PostRoutingUtilizationTags
 
 > [**UtilizationTag**](UtilizationTag) PostRoutingUtilizationTags (CreateUtilizationTagRequest body)
-
 
 
 Create an utilization tag
@@ -8830,7 +8649,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateUtilizationTagRequest**](CreateUtilizationTagRequest)| UtilizationTag |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8840,7 +8658,6 @@ namespace Example
 ## PostRoutingWrapupcodes
 
 > [**WrapupCode**](WrapupCode) PostRoutingWrapupcodes (WrapupCodeRequest body)
-
 
 
 Create a wrap-up code
@@ -8894,7 +8711,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WrapupCodeRequest**](WrapupCodeRequest)| WrapupCode |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8904,7 +8720,6 @@ namespace Example
 ## PostUserRoutinglanguages
 
 > [**UserRoutingLanguage**](UserRoutingLanguage) PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
-
 
 
 Add routing language to user
@@ -8961,7 +8776,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UserRoutingLanguagePost**](UserRoutingLanguagePost)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8971,7 +8785,6 @@ namespace Example
 ## PostUserRoutingskills
 
 > [**UserRoutingSkill**](UserRoutingSkill) PostUserRoutingskills (string userId, UserRoutingSkillPost body)
-
 
 
 Add routing skill to user
@@ -9027,7 +8840,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9037,7 +8849,6 @@ namespace Example
 ## PutRoutingDirectroutingbackupSettingsMe
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) PutRoutingDirectroutingbackupSettingsMe (AgentDirectRoutingBackupSettings body)
-
 
 
 Update the user's Direct Routing Backup settings.
@@ -9091,7 +8902,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings)| directRoutingBackup |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9101,7 +8911,6 @@ namespace Example
 ## PutRoutingEmailDomainRoute
 
 > [**InboundRoute**](InboundRoute) PutRoutingEmailDomainRoute (string domainName, string routeId, InboundRoute body)
-
 
 
 Update a route
@@ -9159,7 +8968,6 @@ namespace Example
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
 | **body** | [**InboundRoute**](InboundRoute)| Route |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9169,7 +8977,6 @@ namespace Example
 ## PutRoutingEmailOutboundDomainActivation
 
 > [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PutRoutingEmailOutboundDomainActivation (string domainId)
-
 
 
 Request an activation status (cname + dkim) update of an outbound domain
@@ -9223,7 +9030,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9233,7 +9039,6 @@ namespace Example
 ## PutRoutingMessageRecipient
 
 > [**Recipient**](Recipient) PutRoutingMessageRecipient (string recipientId, RecipientRequest body)
-
 
 
 Update a recipient
@@ -9289,7 +9094,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recipientId** | **string**| Recipient ID |  |
 | **body** | [**RecipientRequest**](RecipientRequest)| Recipient |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9299,7 +9103,6 @@ namespace Example
 ## PutRoutingQueue
 
 > [**Queue**](Queue) PutRoutingQueue (string queueId, QueueRequest body)
-
 
 
 Update a queue
@@ -9355,7 +9158,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **body** | [**QueueRequest**](QueueRequest)| Queue |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9365,7 +9167,6 @@ namespace Example
 ## PutRoutingSettings
 
 > [**RoutingSettings**](RoutingSettings) PutRoutingSettings (RoutingSettings body)
-
 
 
 Update an organization's routing settings
@@ -9419,7 +9220,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RoutingSettings**](RoutingSettings)| Organization Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9429,7 +9229,6 @@ namespace Example
 ## PutRoutingSettingsTranscription
 
 > [**TranscriptionSettings**](TranscriptionSettings) PutRoutingSettingsTranscription (TranscriptionSettings body)
-
 
 
 Update Transcription Settings
@@ -9483,7 +9282,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptionSettings**](TranscriptionSettings)| Organization Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9493,7 +9291,6 @@ namespace Example
 ## PutRoutingSmsPhonenumber
 
 > [**SmsPhoneNumber**](SmsPhoneNumber) PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
-
 
 
 Update a phone number provisioned for SMS.
@@ -9549,7 +9346,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber)| SmsPhoneNumber |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9559,7 +9355,6 @@ namespace Example
 ## PutRoutingUserDirectroutingbackupSettings
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) PutRoutingUserDirectroutingbackupSettings (string userId, AgentDirectRoutingBackupSettings body)
-
 
 
 Update the user's Direct Routing Backup settings.
@@ -9615,7 +9410,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings)| directRoutingBackup |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9625,7 +9419,6 @@ namespace Example
 ## PutRoutingUserUtilization
 
 > [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse) PutRoutingUserUtilization (string userId, UtilizationRequest body)
-
 
 
 Update the user's max utilization settings.  Include only those media types requiring custom configuration.
@@ -9681,7 +9474,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UtilizationRequest**](UtilizationRequest)| utilization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9691,7 +9483,6 @@ namespace Example
 ## PutRoutingUtilization
 
 > [**UtilizationResponse**](UtilizationResponse) PutRoutingUtilization (UtilizationRequest body)
-
 
 
 Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
@@ -9745,7 +9536,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UtilizationRequest**](UtilizationRequest)| utilization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9755,7 +9545,6 @@ namespace Example
 ## PutRoutingUtilizationLabel
 
 > [**UtilizationLabel**](UtilizationLabel) PutRoutingUtilizationLabel (string labelId, UpdateUtilizationLabelRequest body)
-
 
 
 Update a utilization label
@@ -9811,7 +9600,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **labelId** | **string**| Utilization Label ID |  |
 | **body** | [**UpdateUtilizationLabelRequest**](UpdateUtilizationLabelRequest)| UtilizationLabel |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9821,7 +9609,6 @@ namespace Example
 ## PutRoutingWrapupcode
 
 > [**WrapupCode**](WrapupCode) PutRoutingWrapupcode (string codeId, WrapupCodeRequest body)
-
 
 
 Update wrap-up code
@@ -9877,7 +9664,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
 | **body** | [**WrapupCodeRequest**](WrapupCodeRequest)| WrapupCode |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9887,7 +9673,6 @@ namespace Example
 ## PutUserRoutingskill
 
 > [**UserRoutingSkill**](UserRoutingSkill) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
-
 
 
 Update routing skill proficiency or state.
@@ -9945,7 +9730,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **skillId** | **string**| skillId |  |
 | **body** | [**UserRoutingSkill**](UserRoutingSkill)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9955,7 +9739,6 @@ namespace Example
 ## PutUserRoutingskillsBulk
 
 > [**UserSkillEntityListing**](UserSkillEntityListing) PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
-
 
 
 Replace all routing skills assigned to a user
@@ -10011,11 +9794,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserRoutingSkillPost>**](UserRoutingSkillPost)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

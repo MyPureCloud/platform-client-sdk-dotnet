@@ -27,14 +27,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOrganizationsIpaddressauthentication**](#PutOrganizationsIpaddressauthentication) | **Put** /api/v2/organizations/ipaddressauthentication | Update organization IP address whitelist settings |
 | [**PutOrganizationsMe**](#PutOrganizationsMe) | **Put** /api/v2/organizations/me | Update organization. |
 | [**PutOrganizationsWhitelist**](#PutOrganizationsWhitelist) | **Put** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
-{: class="table table-striped"}
+
 
 
 ## GetFieldconfig
 
 > [**FieldConfig**](FieldConfig) GetFieldconfig (string type)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Fetch field config for an entity type
 
@@ -86,7 +88,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **type** | **string**| Field type | <br />**Values**: person, group, org |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -96,7 +97,6 @@ namespace Example
 ## GetOrganizationsAuthenticationSettings
 
 > [**OrgAuthSettings**](OrgAuthSettings) GetOrganizationsAuthenticationSettings ()
-
 
 
 Gets the organization's settings
@@ -146,7 +146,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OrgAuthSettings**](OrgAuthSettings)
@@ -156,7 +155,9 @@ This endpoint does require any parameters.
 
 > [**EmbeddedIntegration**](EmbeddedIntegration) GetOrganizationsEmbeddedintegration ()
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the list of domains that will be allowed to embed PureCloud applications
 
@@ -206,7 +207,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EmbeddedIntegration**](EmbeddedIntegration)
@@ -216,7 +216,9 @@ This endpoint does require any parameters.
 
 > [**IpAddressAuthentication**](IpAddressAuthentication) GetOrganizationsIpaddressauthentication ()
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get organization IP address whitelist settings
 
@@ -267,7 +269,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**IpAddressAuthentication**](IpAddressAuthentication)
@@ -276,7 +277,6 @@ This endpoint does require any parameters.
 ## GetOrganizationsLimitsChangerequest
 
 > [**LimitChangeRequestDetails**](LimitChangeRequestDetails) GetOrganizationsLimitsChangerequest (string requestId)
-
 
 
 Get a limit change request
@@ -330,7 +330,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **requestId** | **string**| Unique id for the limit change request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -340,7 +339,6 @@ namespace Example
 ## GetOrganizationsLimitsChangerequests
 
 > [**LimitChangeRequestsEntityListing**](LimitChangeRequestsEntityListing) GetOrganizationsLimitsChangerequests (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
-
 
 
 Get the available limit change requests
@@ -404,7 +402,6 @@ namespace Example
 | **status** | **string**| Status of the request to be filtered by | [optional] <br />**Values**: Approved, Rejected, Rollback, Pending, Open, SecondaryApprovalNamespacesAdded, ReviewerApproved, ReviewerRejected, ReviewerRollback, ImplementingChange, ChangeImplemented, ImplementingRollback, RollbackImplemented |
 | **pageSize** | **int?**| Page Size | [optional] [default to 25] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: statusHistory |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -414,7 +411,6 @@ namespace Example
 ## GetOrganizationsLimitsDocs
 
 > [**LimitDocumentation**](LimitDocumentation) GetOrganizationsLimitsDocs ()
-
 
 
 Get limit documentation
@@ -463,7 +459,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**LimitDocumentation**](LimitDocumentation)
@@ -472,7 +467,6 @@ This endpoint does require any parameters.
 ## GetOrganizationsLimitsDocsFreetrial
 
 > [**FreeTrialLimitDocs**](FreeTrialLimitDocs) GetOrganizationsLimitsDocsFreetrial ()
-
 
 
 Get free trial limit documentation
@@ -521,7 +515,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FreeTrialLimitDocs**](FreeTrialLimitDocs)
@@ -530,7 +523,6 @@ This endpoint does require any parameters.
 ## GetOrganizationsLimitsNamespace
 
 > [**LimitsEntityListing**](LimitsEntityListing) GetOrganizationsLimitsNamespace (string namespaceName)
-
 
 
 Get the effective limits in a namespace for an organization
@@ -583,7 +575,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **namespaceName** | **string**| The namespace to fetch limits for |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -593,7 +584,6 @@ namespace Example
 ## GetOrganizationsLimitsNamespaceCounts
 
 > [**LimitCountListing**](LimitCountListing) GetOrganizationsLimitsNamespaceCounts (string namespaceName, string cursor = null, string entityId = null, string userId = null)
-
 
 
 Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
@@ -655,7 +645,6 @@ namespace Example
 | **cursor** | **string**| Cursor provided when retrieving the last page | [optional]  |
 | **entityId** | **string**| entity id of the count | [optional]  |
 | **userId** | **string**| userid of the count | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -665,7 +654,6 @@ namespace Example
 ## GetOrganizationsLimitsNamespaceDefaults
 
 > [**LimitsEntityListing**](LimitsEntityListing) GetOrganizationsLimitsNamespaceDefaults (string namespaceName)
-
 
 
 Get the default limits in a namespace for an organization
@@ -718,7 +706,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **namespaceName** | **string**| The namespace to fetch defaults limits for |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -728,7 +715,6 @@ namespace Example
 ## GetOrganizationsLimitsNamespaceLimitCounts
 
 > [**LimitCountListing**](LimitCountListing) GetOrganizationsLimitsNamespaceLimitCounts (string namespaceName, string limitName, string entityId = null, string userId = null, string cursor = null)
-
 
 
 Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
@@ -792,7 +778,6 @@ namespace Example
 | **entityId** | **string**| entity id of the count | [optional]  |
 | **userId** | **string**| userid of the count | [optional]  |
 | **cursor** | **string**| Cursor provided when retrieving the last page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -802,7 +787,6 @@ namespace Example
 ## GetOrganizationsLimitsNamespaces
 
 > **Object** GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get the available limit namespaces
@@ -857,7 +841,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 100] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -867,7 +850,6 @@ namespace Example
 ## GetOrganizationsMe
 
 > [**Organization**](Organization) GetOrganizationsMe ()
-
 
 
 Get organization.
@@ -916,7 +898,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**Organization**](Organization)
@@ -926,7 +907,9 @@ This endpoint does require any parameters.
 
 > [**OrgWhitelistSettings**](OrgWhitelistSettings) GetOrganizationsWhitelist ()
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
@@ -974,7 +957,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OrgWhitelistSettings**](OrgWhitelistSettings)
@@ -983,7 +965,6 @@ This endpoint does require any parameters.
 ## PatchOrganizationsAuthenticationSettings
 
 > [**OrgAuthSettings**](OrgAuthSettings) PatchOrganizationsAuthenticationSettings (OrgAuthSettings body)
-
 
 
 Update the organization's settings
@@ -1037,7 +1018,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OrgAuthSettings**](OrgAuthSettings)| Org settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1047,7 +1027,6 @@ namespace Example
 ## PatchOrganizationsFeature
 
 > [**OrganizationFeatures**](OrganizationFeatures) PatchOrganizationsFeature (string featureName, FeatureState enabled)
-
 
 
 Update organization
@@ -1103,7 +1082,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **featureName** | **string**| Organization feature | <br />**Values**: realtimeCIC, purecloud, hipaa, ucEnabled, pci, purecloudVoice, xmppFederation, chat, informalPhotos, directory, contactCenter, unifiedCommunications, custserv |
 | **enabled** | [**FeatureState**](FeatureState)| New state of feature |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1114,7 +1092,9 @@ namespace Example
 
 > [**EmbeddedIntegration**](EmbeddedIntegration) PutOrganizationsEmbeddedintegration (EmbeddedIntegration body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update the list of domains that will be allowed to embed PureCloud applications
 
@@ -1169,7 +1149,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**EmbeddedIntegration**](EmbeddedIntegration)| Whitelist settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1180,7 +1159,9 @@ namespace Example
 
 > [**IpAddressAuthentication**](IpAddressAuthentication) PutOrganizationsIpaddressauthentication (IpAddressAuthentication body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update organization IP address whitelist settings
 
@@ -1235,7 +1216,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**IpAddressAuthentication**](IpAddressAuthentication)| IP address Whitelist settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1245,7 +1225,6 @@ namespace Example
 ## PutOrganizationsMe
 
 > [**Organization**](Organization) PutOrganizationsMe (Organization body = null)
-
 
 
 Update organization.
@@ -1299,7 +1278,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Organization**](Organization)| Organization | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1310,7 +1288,9 @@ namespace Example
 
 > [**OrgWhitelistSettings**](OrgWhitelistSettings) PutOrganizationsWhitelist (OrgWhitelistSettings body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
@@ -1363,11 +1343,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OrgWhitelistSettings**](OrgWhitelistSettings)| Whitelist settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**OrgWhitelistSettings**](OrgWhitelistSettings)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

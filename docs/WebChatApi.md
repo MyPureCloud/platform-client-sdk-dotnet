@@ -25,14 +25,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWebchatGuestConversations**](#PostWebchatGuestConversations) | **Post** /api/v2/webchat/guest/conversations | Create an ACD chat conversation from an external customer. |
 | [**PutWebchatDeployment**](#PutWebchatDeployment) | **Put** /api/v2/webchat/deployments/{deploymentId} | Update a WebChat deployment |
 | [**PutWebchatSettings**](#PutWebchatSettings) | **Put** /api/v2/webchat/settings | Update WebChat deployment settings |
-{: class="table table-striped"}
+
 
 
 ## DeleteWebchatDeployment
 
 > void DeleteWebchatDeployment (string deploymentId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete a WebChat deployment
 
@@ -84,7 +86,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Deployment Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -94,7 +95,6 @@ void (empty response body)
 ## DeleteWebchatGuestConversationMember
 
 > void DeleteWebchatGuestConversationMember (string conversationId, string memberId)
-
 
 
 Remove a member from a chat conversation
@@ -146,7 +146,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **memberId** | **string**| memberId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -156,7 +155,6 @@ void (empty response body)
 ## DeleteWebchatSettings
 
 > void DeleteWebchatSettings ()
-
 
 
 Remove WebChat deployment settings
@@ -205,7 +203,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -215,7 +212,9 @@ void (empty response body)
 
 > [**WebChatDeployment**](WebChatDeployment) GetWebchatDeployment (string deploymentId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a WebChat deployment
 
@@ -268,7 +267,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Deployment Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -279,7 +277,9 @@ namespace Example
 
 > [**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing) GetWebchatDeployments ()
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 List WebChat deployments
 
@@ -328,7 +328,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing)
@@ -338,7 +337,9 @@ This endpoint does require any parameters.
 
 > [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest) GetWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a media request in the conversation
 
@@ -392,7 +393,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **mediaRequestId** | **string**| mediaRequestId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -402,7 +402,6 @@ namespace Example
 ## GetWebchatGuestConversationMediarequests
 
 > [**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList) GetWebchatGuestConversationMediarequests (string conversationId)
-
 
 
 Get all media requests to the guest in the conversation
@@ -453,7 +452,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -463,7 +461,6 @@ namespace Example
 ## GetWebchatGuestConversationMember
 
 > [**WebChatMemberInfo**](WebChatMemberInfo) GetWebchatGuestConversationMember (string conversationId, string memberId)
-
 
 
 Get a web chat conversation member
@@ -516,7 +513,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **memberId** | **string**| memberId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -526,7 +522,6 @@ namespace Example
 ## GetWebchatGuestConversationMembers
 
 > [**WebChatMemberInfoEntityList**](WebChatMemberInfoEntityList) GetWebchatGuestConversationMembers (string conversationId, int? pageSize = null, int? pageNumber = null, bool? excludeDisconnectedMembers = null)
-
 
 
 Get the members of a chat conversation.
@@ -583,7 +578,6 @@ namespace Example
 | **pageSize** | **int?**| The number of entries to return per page, or omitted for the default. | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number to return, or omitted for the first page. | [optional] [default to 1] |
 | **excludeDisconnectedMembers** | **bool?**| If true, the results will not contain members who have a DISCONNECTED state. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -593,7 +587,6 @@ namespace Example
 ## GetWebchatGuestConversationMessage
 
 > [**WebChatMessage**](WebChatMessage) GetWebchatGuestConversationMessage (string conversationId, string messageId)
-
 
 
 Get a web chat conversation message
@@ -646,7 +639,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -656,7 +648,6 @@ namespace Example
 ## GetWebchatGuestConversationMessages
 
 > [**WebChatMessageEntityList**](WebChatMessageEntityList) GetWebchatGuestConversationMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
-
 
 
 Get the messages of a chat conversation.
@@ -715,7 +706,6 @@ namespace Example
 | **before** | **string**| If available, get the messages chronologically before the id of this message | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **maxResults** | **int?**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -725,7 +715,6 @@ namespace Example
 ## GetWebchatSettings
 
 > [**WebChatSettings**](WebChatSettings) GetWebchatSettings ()
-
 
 
 Get WebChat deployment settings
@@ -775,7 +764,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**WebChatSettings**](WebChatSettings)
@@ -785,7 +773,9 @@ This endpoint does require any parameters.
 
 > [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest) PatchWebchatGuestConversationMediarequest (string conversationId, string mediaRequestId, WebChatGuestMediaRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
 
@@ -841,7 +831,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **mediaRequestId** | **string**| mediaRequestId |  |
 | **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)| Request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -852,7 +841,9 @@ namespace Example
 
 > [**WebChatDeployment**](WebChatDeployment) PostWebchatDeployments (WebChatDeployment body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create WebChat deployment
 
@@ -905,7 +896,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WebChatDeployment**](WebChatDeployment)| Deployment |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -915,7 +905,6 @@ namespace Example
 ## PostWebchatGuestConversationMemberMessages
 
 > [**WebChatMessage**](WebChatMessage) PostWebchatGuestConversationMemberMessages (string conversationId, string memberId, CreateWebChatMessageRequest body)
-
 
 
 Send a message in a chat conversation.
@@ -970,7 +959,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **memberId** | **string**| memberId |  |
 | **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest)| Message |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -980,7 +968,6 @@ namespace Example
 ## PostWebchatGuestConversationMemberTyping
 
 > [**WebChatTyping**](WebChatTyping) PostWebchatGuestConversationMemberTyping (string conversationId, string memberId)
-
 
 
 Send a typing-indicator in a chat conversation.
@@ -1033,7 +1020,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **memberId** | **string**| memberId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1043,7 +1029,6 @@ namespace Example
 ## PostWebchatGuestConversations
 
 > [**CreateWebChatConversationResponse**](CreateWebChatConversationResponse) PostWebchatGuestConversations (CreateWebChatConversationRequest body)
-
 
 
 Create an ACD chat conversation from an external customer.
@@ -1092,7 +1077,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateWebChatConversationRequest**](CreateWebChatConversationRequest)| CreateConversationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1103,7 +1087,9 @@ namespace Example
 
 > [**WebChatDeployment**](WebChatDeployment) PutWebchatDeployment (string deploymentId, WebChatDeployment body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a WebChat deployment
 
@@ -1158,7 +1144,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Deployment Id |  |
 | **body** | [**WebChatDeployment**](WebChatDeployment)| Deployment |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1168,7 +1153,6 @@ namespace Example
 ## PutWebchatSettings
 
 > [**WebChatSettings**](WebChatSettings) PutWebchatSettings (WebChatSettings body)
-
 
 
 Update WebChat deployment settings
@@ -1222,11 +1206,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WebChatSettings**](WebChatSettings)| webChatSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**WebChatSettings**](WebChatSettings)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

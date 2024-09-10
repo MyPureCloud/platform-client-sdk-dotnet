@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsContact**](#DeleteExternalcontactsContact) | **Delete** /api/v2/externalcontacts/contacts/{contactId} | Delete an external contact |
 | [**DeleteExternalcontactsContactNote**](#DeleteExternalcontactsContactNote) | **Delete** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Delete a note for an external contact |
 | [**DeleteExternalcontactsContactsSchema**](#DeleteExternalcontactsContactsSchema) | **Delete** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Delete a schema |
+| [**DeleteExternalcontactsExternalsource**](#DeleteExternalcontactsExternalsource) | **Delete** /api/v2/externalcontacts/externalsources/{externalSourceId} | Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. |
 | [**DeleteExternalcontactsOrganization**](#DeleteExternalcontactsOrganization) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Delete an external organization |
 | [**DeleteExternalcontactsOrganizationNote**](#DeleteExternalcontactsOrganizationNote) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Delete a note for an external organization |
 | [**DeleteExternalcontactsOrganizationTrustor**](#DeleteExternalcontactsOrganizationTrustor) | **Delete** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor | Unlink the Trustor for this External Organization |
@@ -24,6 +25,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactsSchemaVersion**](#GetExternalcontactsContactsSchemaVersion) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
 | [**GetExternalcontactsContactsSchemaVersions**](#GetExternalcontactsContactsSchemaVersions) | **Get** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions | Get all versions of an external contact&#39;s schema |
 | [**GetExternalcontactsContactsSchemas**](#GetExternalcontactsContactsSchemas) | **Get** /api/v2/externalcontacts/contacts/schemas | Get a list of schemas. |
+| [**GetExternalcontactsExternalsource**](#GetExternalcontactsExternalsource) | **Get** /api/v2/externalcontacts/externalsources/{externalSourceId} | Fetch an External Source |
+| [**GetExternalcontactsExternalsources**](#GetExternalcontactsExternalsources) | **Get** /api/v2/externalcontacts/externalsources | Fetch a list of External Sources |
 | [**GetExternalcontactsOrganization**](#GetExternalcontactsOrganization) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Fetch an external organization |
 | [**GetExternalcontactsOrganizationContacts**](#GetExternalcontactsOrganizationContacts) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts | Search for external contacts in an external organization |
 | [**GetExternalcontactsOrganizationNote**](#GetExternalcontactsOrganizationNote) | **Get** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Fetch a note for an external organization |
@@ -62,6 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsContactPromotion**](#PostExternalcontactsContactPromotion) | **Post** /api/v2/externalcontacts/contacts/{contactId}/promotion | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**PostExternalcontactsContacts**](#PostExternalcontactsContacts) | **Post** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsContactsSchemas**](#PostExternalcontactsContactsSchemas) | **Post** /api/v2/externalcontacts/contacts/schemas | Create a schema |
+| [**PostExternalcontactsExternalsources**](#PostExternalcontactsExternalsources) | **Post** /api/v2/externalcontacts/externalsources | Create an External Source |
 | [**PostExternalcontactsIdentifierlookup**](#PostExternalcontactsIdentifierlookup) | **Post** /api/v2/externalcontacts/identifierlookup | Fetch a contact using an identifier type and value. |
 | [**PostExternalcontactsMergeContacts**](#PostExternalcontactsMergeContacts) | **Post** /api/v2/externalcontacts/merge/contacts | Merge two contacts into a new contact record |
 | [**PostExternalcontactsOrganizationNotes**](#PostExternalcontactsOrganizationNotes) | **Post** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a note for an external organization |
@@ -72,18 +76,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsContactNote**](#PutExternalcontactsContactNote) | **Put** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a note for an external contact |
 | [**PutExternalcontactsContactsSchema**](#PutExternalcontactsContactsSchema) | **Put** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsConversation**](#PutExternalcontactsConversation) | **Put** /api/v2/externalcontacts/conversations/{conversationId} | Associate/disassociate an external contact with a conversation |
+| [**PutExternalcontactsExternalsource**](#PutExternalcontactsExternalsource) | **Put** /api/v2/externalcontacts/externalsources/{externalSourceId} | Update an External Source |
 | [**PutExternalcontactsOrganization**](#PutExternalcontactsOrganization) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](#PutExternalcontactsOrganizationNote) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
 | [**PutExternalcontactsOrganizationTrustorTrustorId**](#PutExternalcontactsOrganizationTrustorTrustorId) | **Put** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an External Organization |
 | [**PutExternalcontactsOrganizationsSchema**](#PutExternalcontactsOrganizationsSchema) | **Put** /api/v2/externalcontacts/organizations/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsRelationship**](#PutExternalcontactsRelationship) | **Put** /api/v2/externalcontacts/relationships/{relationshipId} | Update a relationship |
-{: class="table table-striped"}
+
 
 
 ## DeleteExternalcontactsContact
 
 > **Object** DeleteExternalcontactsContact (string contactId)
-
 
 
 Delete an external contact
@@ -138,7 +142,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -148,7 +151,6 @@ namespace Example
 ## DeleteExternalcontactsContactNote
 
 > **Object** DeleteExternalcontactsContactNote (string contactId, string noteId)
-
 
 
 Delete a note for an external contact
@@ -205,7 +207,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
 | **noteId** | **string**| Note Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -215,7 +216,6 @@ namespace Example
 ## DeleteExternalcontactsContactsSchema
 
 > void DeleteExternalcontactsContactsSchema (string schemaId)
-
 
 
 Delete a schema
@@ -268,17 +268,79 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
 
+## DeleteExternalcontactsExternalsource
+
+> **Object** DeleteExternalcontactsExternalsource (string externalSourceId)
+
+
+Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+
+DeleteExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteExternalcontactsExternalsourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalSourceId = externalSourceId_example;  // string | External Source ID
+
+            try
+            { 
+                // Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+                Object result = apiInstance.DeleteExternalcontactsExternalsource(externalSourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.DeleteExternalcontactsExternalsource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalSourceId** | **string**| External Source ID |  |
+
+### Return type
+
+**Object**
+
+
 ## DeleteExternalcontactsOrganization
 
 > **Object** DeleteExternalcontactsOrganization (string externalOrganizationId)
-
 
 
 Delete an external organization
@@ -333,7 +395,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -343,7 +404,6 @@ namespace Example
 ## DeleteExternalcontactsOrganizationNote
 
 > **Object** DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
-
 
 
 Delete a note for an external organization
@@ -400,7 +460,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -410,7 +469,6 @@ namespace Example
 ## DeleteExternalcontactsOrganizationTrustor
 
 > void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId)
-
 
 
 Unlink the Trustor for this External Organization
@@ -463,7 +521,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -473,7 +530,6 @@ void (empty response body)
 ## DeleteExternalcontactsRelationship
 
 > **Object** DeleteExternalcontactsRelationship (string relationshipId)
-
 
 
 Delete a relationship
@@ -528,7 +584,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -538,7 +593,6 @@ namespace Example
 ## GetExternalcontactsContact
 
 > [**ExternalContact**](ExternalContact) GetExternalcontactsContact (string contactId, List<string> expand = null)
-
 
 
 Fetch an external contact
@@ -571,7 +625,7 @@ namespace Example
 
             var apiInstance = new ExternalContactsApi();
             var contactId = contactId_example;  // string | ExternalContact ID
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
 
             try
             { 
@@ -594,8 +648,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
 
 ### Return type
 
@@ -605,7 +658,6 @@ namespace Example
 ## GetExternalcontactsContactIdentifiers
 
 > [**EntityListing**](EntityListing) GetExternalcontactsContactIdentifiers (string contactId)
-
 
 
 List the identifiers for a contact
@@ -659,7 +711,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -669,7 +720,6 @@ namespace Example
 ## GetExternalcontactsContactJourneySessions
 
 > [**SessionListing**](SessionListing) GetExternalcontactsContactJourneySessions (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
-
 
 
 Retrieve all sessions for a given external contact.
@@ -729,7 +779,6 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **includeMerged** | **bool?**| Indicates whether to return sessions from all external contacts in the merge-set of the given one. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -739,7 +788,6 @@ namespace Example
 ## GetExternalcontactsContactNote
 
 > [**Note**](Note) GetExternalcontactsContactNote (string contactId, string noteId, List<string> expand = null)
-
 
 
 Fetch a note for an external contact
@@ -798,7 +846,6 @@ namespace Example
 | **contactId** | **string**| ExternalContact Id |  |
 | **noteId** | **string**| Note Id |  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -808,7 +855,6 @@ namespace Example
 ## GetExternalcontactsContactNotes
 
 > [**NoteListing**](NoteListing) GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
-
 
 
 List notes for an external contact
@@ -871,7 +917,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **sortOrder** | **string**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -881,7 +926,6 @@ namespace Example
 ## GetExternalcontactsContactUnresolved
 
 > [**ExternalContact**](ExternalContact) GetExternalcontactsContactUnresolved (string contactId, List<string> expand = null)
-
 
 
 Fetch an unresolved external contact
@@ -937,7 +981,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -947,7 +990,6 @@ namespace Example
 ## GetExternalcontactsContacts
 
 > [**ContactListing**](ContactListing) GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
-
 
 
 Search for external contacts
@@ -1009,8 +1051,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
 
 ### Return type
 
@@ -1020,7 +1061,6 @@ namespace Example
 ## GetExternalcontactsContactsSchema
 
 > [**DataSchema**](DataSchema) GetExternalcontactsContactsSchema (string schemaId)
-
 
 
 Get a schema
@@ -1074,7 +1114,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1084,7 +1123,6 @@ namespace Example
 ## GetExternalcontactsContactsSchemaVersion
 
 > [**DataSchema**](DataSchema) GetExternalcontactsContactsSchemaVersion (string schemaId, string versionId)
-
 
 
 Get a specific version of a schema
@@ -1140,7 +1178,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
 | **versionId** | **string**| Schema version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1150,7 +1187,6 @@ namespace Example
 ## GetExternalcontactsContactsSchemaVersions
 
 > [**DataSchema**](DataSchema) GetExternalcontactsContactsSchemaVersions (string schemaId)
-
 
 
 Get all versions of an external contact's schema
@@ -1204,7 +1240,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1214,7 +1249,6 @@ namespace Example
 ## GetExternalcontactsContactsSchemas
 
 > [**DataSchemaListing**](DataSchemaListing) GetExternalcontactsContactsSchemas ()
-
 
 
 Get a list of schemas.
@@ -1264,16 +1298,152 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
 
 
+## GetExternalcontactsExternalsource
+
+> [**ExternalSource**](ExternalSource) GetExternalcontactsExternalsource (string externalSourceId)
+
+
+Fetch an External Source
+
+GetExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:view
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsExternalsourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalSourceId = externalSourceId_example;  // string | External Source ID
+
+            try
+            { 
+                // Fetch an External Source
+                ExternalSource result = apiInstance.GetExternalcontactsExternalsource(externalSourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsExternalsource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalSourceId** | **string**| External Source ID |  |
+
+### Return type
+
+[**ExternalSource**](ExternalSource)
+
+
+## GetExternalcontactsExternalsources
+
+> [**CursorExternalSourceListing**](CursorExternalSourceListing) GetExternalcontactsExternalsources (string cursor = null, int? limit = null, string name = null, bool? active = null)
+
+
+Fetch a list of External Sources
+
+GetExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:view
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsExternalsourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+            var limit = 56;  // int? | The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional) 
+            var name = name_example;  // string | Filter by external source name. Filtering is prefix filtering and not an exact match (optional) 
+            var active = true;  // bool? | Filter by active status of external source (optional) 
+
+            try
+            { 
+                // Fetch a list of External Sources
+                CursorExternalSourceListing result = apiInstance.GetExternalcontactsExternalsources(cursor, limit, name, active);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsExternalsources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
+| **limit** | **int?**| The number of ExternalSources per page; must be between 10 and 200, default is 100 | [optional]  |
+| **name** | **string**| Filter by external source name. Filtering is prefix filtering and not an exact match | [optional]  |
+| **active** | **bool?**| Filter by active status of external source | [optional]  |
+
+### Return type
+
+[**CursorExternalSourceListing**](CursorExternalSourceListing)
+
+
 ## GetExternalcontactsOrganization
 
 > [**ExternalOrganization**](ExternalOrganization) GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null, bool? includeTrustors = null)
-
 
 
 Fetch an external organization
@@ -1332,7 +1502,6 @@ namespace Example
 | **externalOrganizationId** | **string**| External Organization ID |  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1342,7 +1511,6 @@ namespace Example
 ## GetExternalcontactsOrganizationContacts
 
 > [**ContactListing**](ContactListing) GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
-
 
 
 Search for external contacts in an external organization
@@ -1406,8 +1574,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \&quot;firstName:asc\&quot;, \&quot;title:desc\&quot; | [optional]  |
-| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources, identifiers, externalSources |
 
 ### Return type
 
@@ -1417,7 +1584,6 @@ namespace Example
 ## GetExternalcontactsOrganizationNote
 
 > [**Note**](Note) GetExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, List<string> expand = null)
-
 
 
 Fetch a note for an external organization
@@ -1476,7 +1642,6 @@ namespace Example
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1486,7 +1651,6 @@ namespace Example
 ## GetExternalcontactsOrganizationNotes
 
 > [**NoteListing**](NoteListing) GetExternalcontactsOrganizationNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
-
 
 
 List notes for an external organization
@@ -1549,7 +1713,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **sortOrder** | **string**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: author, externalDataSources |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1559,7 +1722,6 @@ namespace Example
 ## GetExternalcontactsOrganizationRelationships
 
 > [**RelationshipListing**](RelationshipListing) GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, List<string> expand = null, string sortOrder = null)
-
 
 
 Fetch a relationship for an external organization
@@ -1622,7 +1784,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) | [optional] [default to 1] |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 | **sortOrder** | **string**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \&quot;createDate:asc\&quot;, \&quot;relationship:desc\&quot; | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1632,7 +1793,6 @@ namespace Example
 ## GetExternalcontactsOrganizations
 
 > [**ExternalOrganizationListing**](ExternalOrganizationListing) GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
-
 
 
 Search for external organizations
@@ -1699,7 +1859,6 @@ namespace Example
 | **sortOrder** | **string**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \&quot;companyType:asc\&quot;, \&quot;industry:desc\&quot; | [optional]  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1709,7 +1868,6 @@ namespace Example
 ## GetExternalcontactsOrganizationsSchema
 
 > [**DataSchema**](DataSchema) GetExternalcontactsOrganizationsSchema (string schemaId)
-
 
 
 Get a schema
@@ -1763,7 +1921,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1773,7 +1930,6 @@ namespace Example
 ## GetExternalcontactsOrganizationsSchemaVersion
 
 > [**DataSchema**](DataSchema) GetExternalcontactsOrganizationsSchemaVersion (string schemaId, string versionId)
-
 
 
 Get a specific version of a schema
@@ -1829,7 +1985,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
 | **versionId** | **string**| Schema version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1839,7 +1994,6 @@ namespace Example
 ## GetExternalcontactsOrganizationsSchemaVersions
 
 > [**DataSchema**](DataSchema) GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
-
 
 
 Get all versions of an external organization's schema
@@ -1893,7 +2047,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1903,7 +2056,6 @@ namespace Example
 ## GetExternalcontactsOrganizationsSchemas
 
 > [**DataSchemaListing**](DataSchemaListing) GetExternalcontactsOrganizationsSchemas ()
-
 
 
 Get a list of schemas.
@@ -1953,7 +2105,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
@@ -1962,7 +2113,6 @@ This endpoint does require any parameters.
 ## GetExternalcontactsRelationship
 
 > [**Relationship**](Relationship) GetExternalcontactsRelationship (string relationshipId, List<string> expand = null)
-
 
 
 Fetch a relationship
@@ -2019,7 +2169,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
 | **expand** | [**List<string>**](string)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2029,7 +2178,6 @@ namespace Example
 ## GetExternalcontactsReversewhitepageslookup
 
 > [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult) GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null)
-
 
 
 Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
@@ -2085,7 +2233,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **lookupVal** | **string**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) |  |
 | **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: contacts.externalOrganization, externalDataSources |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2095,7 +2242,6 @@ namespace Example
 ## GetExternalcontactsScanContacts
 
 > [**CursorContactListing**](CursorContactListing) GetExternalcontactsScanContacts (int? limit = null, string cursor = null)
-
 
 
 Scan for external contacts using paging
@@ -2152,7 +2298,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **limit** | **int?**| The number of contacts per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2162,7 +2307,6 @@ namespace Example
 ## GetExternalcontactsScanNotes
 
 > [**CursorNoteListing**](CursorNoteListing) GetExternalcontactsScanNotes (int? limit = null, string cursor = null)
-
 
 
 Scan for notes using paging
@@ -2219,7 +2363,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **limit** | **int?**| The number of notes per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2229,7 +2372,6 @@ namespace Example
 ## GetExternalcontactsScanOrganizations
 
 > [**CursorOrganizationListing**](CursorOrganizationListing) GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null)
-
 
 
 Scan for external organizations using paging
@@ -2286,7 +2428,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **limit** | **int?**| The number of organizations per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2296,7 +2437,6 @@ namespace Example
 ## GetExternalcontactsScanRelationships
 
 > [**CursorRelationshipListing**](CursorRelationshipListing) GetExternalcontactsScanRelationships (int? limit = null, string cursor = null)
-
 
 
 Scan for relationships
@@ -2353,7 +2493,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **limit** | **int?**| The number of relationships per page; must be between 10 and 200, default is 100 | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2363,7 +2502,6 @@ namespace Example
 ## PatchExternalcontactsContactIdentifiers
 
 > [**ContactIdentifier**](ContactIdentifier) PatchExternalcontactsContactIdentifiers (string contactId, IdentifierClaimRequest body)
-
 
 
 Claim or release identifiers for a contact
@@ -2419,7 +2557,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
 | **body** | [**IdentifierClaimRequest**](IdentifierClaimRequest)| ClaimRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2429,7 +2566,6 @@ namespace Example
 ## PostExternalcontactsBulkContacts
 
 > [**BulkFetchContactsResponse**](BulkFetchContactsResponse) PostExternalcontactsBulkContacts (BulkIdsRequest body)
-
 
 
 Bulk fetch contacts
@@ -2483,7 +2619,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Contact ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2493,7 +2628,6 @@ namespace Example
 ## PostExternalcontactsBulkContactsAdd
 
 > [**BulkContactsResponse**](BulkContactsResponse) PostExternalcontactsBulkContactsAdd (BulkContactsRequest body)
-
 
 
 Bulk add contacts
@@ -2547,7 +2681,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkContactsRequest**](BulkContactsRequest)| Contacts |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2557,7 +2690,6 @@ namespace Example
 ## PostExternalcontactsBulkContactsRemove
 
 > [**BulkDeleteResponse**](BulkDeleteResponse) PostExternalcontactsBulkContactsRemove (BulkIdsRequest body)
-
 
 
 Bulk remove contacts
@@ -2611,7 +2743,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Contact ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2621,7 +2752,6 @@ namespace Example
 ## PostExternalcontactsBulkContactsUnresolved
 
 > [**BulkFetchContactsResponse**](BulkFetchContactsResponse) PostExternalcontactsBulkContactsUnresolved (BulkIdsRequest body)
-
 
 
 Bulk fetch unresolved ancestor contacts
@@ -2675,7 +2805,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Contact ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2685,7 +2814,6 @@ namespace Example
 ## PostExternalcontactsBulkContactsUpdate
 
 > [**BulkContactsResponse**](BulkContactsResponse) PostExternalcontactsBulkContactsUpdate (BulkContactsRequest body)
-
 
 
 Bulk update contacts
@@ -2739,7 +2867,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkContactsRequest**](BulkContactsRequest)| Contacts |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2749,7 +2876,6 @@ namespace Example
 ## PostExternalcontactsBulkNotes
 
 > [**BulkFetchNotesResponse**](BulkFetchNotesResponse) PostExternalcontactsBulkNotes (BulkIdsRequest body)
-
 
 
 Bulk fetch notes
@@ -2804,7 +2930,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Note ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2814,7 +2939,6 @@ namespace Example
 ## PostExternalcontactsBulkNotesAdd
 
 > [**BulkNotesResponse**](BulkNotesResponse) PostExternalcontactsBulkNotesAdd (BulkNotesRequest body)
-
 
 
 Bulk add notes
@@ -2869,7 +2993,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkNotesRequest**](BulkNotesRequest)| Notes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2879,7 +3002,6 @@ namespace Example
 ## PostExternalcontactsBulkNotesRemove
 
 > [**BulkDeleteResponse**](BulkDeleteResponse) PostExternalcontactsBulkNotesRemove (BulkIdsRequest body)
-
 
 
 Bulk remove notes
@@ -2934,7 +3056,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Note ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2944,7 +3065,6 @@ namespace Example
 ## PostExternalcontactsBulkNotesUpdate
 
 > [**BulkNotesResponse**](BulkNotesResponse) PostExternalcontactsBulkNotesUpdate (BulkNotesRequest body)
-
 
 
 Bulk update notes
@@ -2999,7 +3119,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkNotesRequest**](BulkNotesRequest)| Notes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3009,7 +3128,6 @@ namespace Example
 ## PostExternalcontactsBulkOrganizations
 
 > [**BulkFetchOrganizationsResponse**](BulkFetchOrganizationsResponse) PostExternalcontactsBulkOrganizations (BulkIdsRequest body)
-
 
 
 Bulk fetch organizations
@@ -3063,7 +3181,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Organizations ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3073,7 +3190,6 @@ namespace Example
 ## PostExternalcontactsBulkOrganizationsAdd
 
 > [**BulkOrganizationsResponse**](BulkOrganizationsResponse) PostExternalcontactsBulkOrganizationsAdd (BulkOrganizationsRequest body)
-
 
 
 Bulk add organizations
@@ -3127,7 +3243,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkOrganizationsRequest**](BulkOrganizationsRequest)| Organizations |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3137,7 +3252,6 @@ namespace Example
 ## PostExternalcontactsBulkOrganizationsRemove
 
 > [**BulkDeleteResponse**](BulkDeleteResponse) PostExternalcontactsBulkOrganizationsRemove (BulkIdsRequest body)
-
 
 
 Bulk remove organizations
@@ -3191,7 +3305,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Organization ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3201,7 +3314,6 @@ namespace Example
 ## PostExternalcontactsBulkOrganizationsUpdate
 
 > [**BulkOrganizationsResponse**](BulkOrganizationsResponse) PostExternalcontactsBulkOrganizationsUpdate (BulkOrganizationsRequest body)
-
 
 
 Bulk update organizations
@@ -3255,7 +3367,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkOrganizationsRequest**](BulkOrganizationsRequest)| Organizations |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3265,7 +3376,6 @@ namespace Example
 ## PostExternalcontactsBulkRelationships
 
 > [**BulkFetchRelationshipsResponse**](BulkFetchRelationshipsResponse) PostExternalcontactsBulkRelationships (BulkIdsRequest body)
-
 
 
 Bulk fetch relationships
@@ -3320,7 +3430,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Relationships ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3330,7 +3439,6 @@ namespace Example
 ## PostExternalcontactsBulkRelationshipsAdd
 
 > [**BulkRelationshipsResponse**](BulkRelationshipsResponse) PostExternalcontactsBulkRelationshipsAdd (BulkRelationshipsRequest body)
-
 
 
 Bulk add relationships
@@ -3385,7 +3493,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkRelationshipsRequest**](BulkRelationshipsRequest)| Relationships |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3395,7 +3502,6 @@ namespace Example
 ## PostExternalcontactsBulkRelationshipsRemove
 
 > [**BulkDeleteResponse**](BulkDeleteResponse) PostExternalcontactsBulkRelationshipsRemove (BulkIdsRequest body)
-
 
 
 Bulk remove relationships
@@ -3450,7 +3556,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkIdsRequest**](BulkIdsRequest)| Relationships ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3460,7 +3565,6 @@ namespace Example
 ## PostExternalcontactsBulkRelationshipsUpdate
 
 > [**BulkRelationshipsResponse**](BulkRelationshipsResponse) PostExternalcontactsBulkRelationshipsUpdate (BulkRelationshipsRequest body)
-
 
 
 Bulk update relationships
@@ -3515,7 +3619,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkRelationshipsRequest**](BulkRelationshipsRequest)| Relationships |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3525,7 +3628,6 @@ namespace Example
 ## PostExternalcontactsContactNotes
 
 > [**Note**](Note) PostExternalcontactsContactNotes (string contactId, Note body)
-
 
 
 Create a note for an external contact
@@ -3582,7 +3684,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
 | **body** | [**Note**](Note)| ExternalContact |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3592,7 +3693,6 @@ namespace Example
 ## PostExternalcontactsContactPromotion
 
 > [**ExternalContact**](ExternalContact) PostExternalcontactsContactPromotion (string contactId)
-
 
 
 Promote an observed contact (ephemeral or identified) to a curated contact
@@ -3646,7 +3746,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3656,7 +3755,6 @@ namespace Example
 ## PostExternalcontactsContacts
 
 > [**ExternalContact**](ExternalContact) PostExternalcontactsContacts (ExternalContact body)
-
 
 
 Create an external contact
@@ -3711,7 +3809,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExternalContact**](ExternalContact)| ExternalContact |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3721,7 +3818,6 @@ namespace Example
 ## PostExternalcontactsContactsSchemas
 
 > [**DataSchema**](DataSchema) PostExternalcontactsContactsSchemas (DataSchema body)
-
 
 
 Create a schema
@@ -3775,17 +3871,79 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DataSchema**](DataSchema)| Schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**DataSchema**](DataSchema)
 
 
+## PostExternalcontactsExternalsources
+
+> [**ExternalSource**](ExternalSource) PostExternalcontactsExternalsources (ExternalSource body)
+
+
+Create an External Source
+
+PostExternalcontactsExternalsources is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsExternalsourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new ExternalSource(); // ExternalSource | External Source
+
+            try
+            { 
+                // Create an External Source
+                ExternalSource result = apiInstance.PostExternalcontactsExternalsources(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsExternalsources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ExternalSource**](ExternalSource)| External Source |  |
+
+### Return type
+
+[**ExternalSource**](ExternalSource)
+
+
 ## PostExternalcontactsIdentifierlookup
 
 > [**ExternalContact**](ExternalContact) PostExternalcontactsIdentifierlookup (ContactIdentifier identifier, List<string> expand = null)
-
 
 
 Fetch a contact using an identifier type and value.
@@ -3843,8 +4001,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **identifier** | [**ContactIdentifier**](ContactIdentifier)|  |  |
-| **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers |
-{: class="table table-striped"}
+| **expand** | [**List<string>**](string)| which field, if any, to expand | [optional] <br />**Values**: externalOrganization, identifiers, externalSources |
 
 ### Return type
 
@@ -3854,7 +4011,6 @@ namespace Example
 ## PostExternalcontactsMergeContacts
 
 > [**ExternalContact**](ExternalContact) PostExternalcontactsMergeContacts (MergeRequest body)
-
 
 
 Merge two contacts into a new contact record
@@ -3910,7 +4066,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**MergeRequest**](MergeRequest)| MergeRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3920,7 +4075,6 @@ namespace Example
 ## PostExternalcontactsOrganizationNotes
 
 > [**Note**](Note) PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body)
-
 
 
 Create a note for an external organization
@@ -3977,7 +4131,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **body** | [**Note**](Note)| ExternalContact |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3987,7 +4140,6 @@ namespace Example
 ## PostExternalcontactsOrganizations
 
 > [**ExternalOrganization**](ExternalOrganization) PostExternalcontactsOrganizations (ExternalOrganization body)
-
 
 
 Create an external organization
@@ -4042,7 +4194,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExternalOrganization**](ExternalOrganization)| ExternalOrganization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4052,7 +4203,6 @@ namespace Example
 ## PostExternalcontactsOrganizationsSchemas
 
 > [**DataSchema**](DataSchema) PostExternalcontactsOrganizationsSchemas (DataSchema body)
-
 
 
 Create a schema
@@ -4106,7 +4256,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DataSchema**](DataSchema)| Schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4116,7 +4265,6 @@ namespace Example
 ## PostExternalcontactsRelationships
 
 > [**Relationship**](Relationship) PostExternalcontactsRelationships (Relationship body)
-
 
 
 Create a relationship
@@ -4171,7 +4319,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Relationship**](Relationship)| Relationship |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4181,7 +4328,6 @@ namespace Example
 ## PutExternalcontactsContact
 
 > [**ExternalContact**](ExternalContact) PutExternalcontactsContact (string contactId, ExternalContact body)
-
 
 
 Update an external contact
@@ -4238,7 +4384,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
 | **body** | [**ExternalContact**](ExternalContact)| ExternalContact |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4248,7 +4393,6 @@ namespace Example
 ## PutExternalcontactsContactNote
 
 > [**Note**](Note) PutExternalcontactsContactNote (string contactId, string noteId, Note body)
-
 
 
 Update a note for an external contact
@@ -4307,7 +4451,6 @@ namespace Example
 | **contactId** | **string**| ExternalContact Id |  |
 | **noteId** | **string**| Note Id |  |
 | **body** | [**Note**](Note)| Note |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4317,7 +4460,6 @@ namespace Example
 ## PutExternalcontactsContactsSchema
 
 > [**DataSchema**](DataSchema) PutExternalcontactsContactsSchema (string schemaId, DataSchema body)
-
 
 
 Update a schema
@@ -4373,7 +4515,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
 | **body** | [**DataSchema**](DataSchema)| Data Schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4383,7 +4524,6 @@ namespace Example
 ## PutExternalcontactsConversation
 
 > void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
-
 
 
 Associate/disassociate an external contact with a conversation
@@ -4441,17 +4581,81 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **body** | [**ConversationAssociation**](ConversationAssociation)| ConversationAssociation |  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
 
+## PutExternalcontactsExternalsource
+
+> [**ExternalSource**](ExternalSource) PutExternalcontactsExternalsource (string externalSourceId, ExternalSource body)
+
+
+Update an External Source
+
+PutExternalcontactsExternalsource is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsExternalsourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var externalSourceId = externalSourceId_example;  // string | External Source ID
+            var body = new ExternalSource(); // ExternalSource | External Source
+
+            try
+            { 
+                // Update an External Source
+                ExternalSource result = apiInstance.PutExternalcontactsExternalsource(externalSourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsExternalsource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalSourceId** | **string**| External Source ID |  |
+| **body** | [**ExternalSource**](ExternalSource)| External Source |  |
+
+### Return type
+
+[**ExternalSource**](ExternalSource)
+
+
 ## PutExternalcontactsOrganization
 
 > [**ExternalOrganization**](ExternalOrganization) PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body)
-
 
 
 Update an external organization
@@ -4508,7 +4712,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
 | **body** | [**ExternalOrganization**](ExternalOrganization)| ExternalOrganization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4518,7 +4721,6 @@ namespace Example
 ## PutExternalcontactsOrganizationNote
 
 > [**Note**](Note) PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body)
-
 
 
 Update a note for an external organization
@@ -4577,7 +4779,6 @@ namespace Example
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
 | **body** | [**Note**](Note)| Note |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4587,7 +4788,6 @@ namespace Example
 ## PutExternalcontactsOrganizationTrustorTrustorId
 
 > [**ExternalOrganizationTrustorLink**](ExternalOrganizationTrustorLink) PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
-
 
 
 Links a Trustor with an External Organization
@@ -4643,7 +4843,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
 | **trustorId** | **string**| Trustor ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4653,7 +4852,6 @@ namespace Example
 ## PutExternalcontactsOrganizationsSchema
 
 > [**DataSchema**](DataSchema) PutExternalcontactsOrganizationsSchema (string schemaId, DataSchema body)
-
 
 
 Update a schema
@@ -4709,7 +4907,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
 | **body** | [**DataSchema**](DataSchema)| Data Schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4719,7 +4916,6 @@ namespace Example
 ## PutExternalcontactsRelationship
 
 > [**Relationship**](Relationship) PutExternalcontactsRelationship (string relationshipId, Relationship body)
-
 
 
 Update a relationship
@@ -4776,11 +4972,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
 | **body** | [**Relationship**](Relationship)| Relationship |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

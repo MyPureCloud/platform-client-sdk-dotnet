@@ -69,13 +69,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutGamificationProfile**](#PutGamificationProfile) | **Put** /api/v2/gamification/profiles/{profileId} | Updates a performance profile |
 | [**PutGamificationProfileMetric**](#PutGamificationProfileMetric) | **Put** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Updates a metric in performance profile |
 | [**PutGamificationStatus**](#PutGamificationStatus) | **Put** /api/v2/gamification/status | Update gamification activation status |
-{: class="table table-striped"}
+
 
 
 ## DeleteEmployeeperformanceExternalmetricsDefinition
 
 > void DeleteEmployeeperformanceExternalmetricsDefinition (string metricId)
-
 
 
 Delete an External Metric Definition
@@ -128,7 +127,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **metricId** | **string**| Specifies the External Metric Definition ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -138,7 +136,6 @@ void (empty response body)
 ## GetEmployeeperformanceExternalmetricsDefinition
 
 > [**ExternalMetricDefinition**](ExternalMetricDefinition) GetEmployeeperformanceExternalmetricsDefinition (string metricId)
-
 
 
 Get an External Metric Definition
@@ -192,7 +189,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **metricId** | **string**| Specifies the External Metric Definition ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -202,7 +198,6 @@ namespace Example
 ## GetEmployeeperformanceExternalmetricsDefinitions
 
 > [**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing) GetEmployeeperformanceExternalmetricsDefinitions (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of External Metric Definitions of an organization, sorted by name in ascending order
@@ -258,7 +253,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -268,7 +262,6 @@ namespace Example
 ## GetGamificationInsights
 
 > [**InsightsSummary**](InsightsSummary) GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
-
 
 
 Get insights summary
@@ -342,7 +335,6 @@ namespace Example
 | **sortMetricId** | **string**| Sort Metric Id | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
 | **userIds** | **string**| A list of up to 100 comma-separated user Ids | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -352,7 +344,6 @@ namespace Example
 ## GetGamificationInsightsDetails
 
 > [**InsightsDetails**](InsightsDetails) GetGamificationInsightsDetails (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
-
 
 
 Get insights details for the current user
@@ -414,7 +405,6 @@ namespace Example
 | **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
 | **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -424,7 +414,6 @@ namespace Example
 ## GetGamificationInsightsGroupsTrends
 
 > [**InsightsTrend**](InsightsTrend) GetGamificationInsightsGroupsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
-
 
 
 Get insights overall trend for the current user
@@ -490,7 +479,6 @@ namespace Example
 | **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -500,7 +488,6 @@ namespace Example
 ## GetGamificationInsightsGroupsTrendsAll
 
 > [**InsightsTrend**](InsightsTrend) GetGamificationInsightsGroupsTrendsAll (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
-
 
 
 Get insights overall trend
@@ -566,7 +553,6 @@ namespace Example
 | **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -576,7 +562,6 @@ namespace Example
 ## GetGamificationInsightsMembers
 
 > [**InsightsAgents**](InsightsAgents) GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday)
-
 
 
 Query users in a profile during a period of time
@@ -636,7 +621,6 @@ namespace Example
 | **filterId** | **string**| ID for the filter type. |  |
 | **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
 | **startWorkday** | **String**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -646,7 +630,6 @@ namespace Example
 ## GetGamificationInsightsTrends
 
 > [**UserInsightsTrend**](UserInsightsTrend) GetGamificationInsightsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
-
 
 
 Get insights user trend for the current user
@@ -712,7 +695,6 @@ namespace Example
 | **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -722,7 +704,6 @@ namespace Example
 ## GetGamificationInsightsUserDetails
 
 > [**InsightsDetails**](InsightsDetails) GetGamificationInsightsUserDetails (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
-
 
 
 Get insights details for the user
@@ -786,7 +767,6 @@ namespace Example
 | **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
 | **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -796,7 +776,6 @@ namespace Example
 ## GetGamificationInsightsUserTrends
 
 > [**UserInsightsTrend**](UserInsightsTrend) GetGamificationInsightsUserTrends (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
-
 
 
 Get insights user trend for the user
@@ -864,7 +843,6 @@ namespace Example
 | **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -874,7 +852,6 @@ namespace Example
 ## GetGamificationLeaderboard
 
 > [**Leaderboard**](Leaderboard) GetGamificationLeaderboard (String startWorkday, String endWorkday, string metricId = null)
-
 
 
 Leaderboard of the requesting user's division or performance profile
@@ -932,7 +909,6 @@ namespace Example
 | **startWorkday** | **String**| Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **metricId** | **string**| Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -942,7 +918,6 @@ namespace Example
 ## GetGamificationLeaderboardAll
 
 > [**Leaderboard**](Leaderboard) GetGamificationLeaderboardAll (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null)
-
 
 
 Leaderboard by filter type
@@ -1004,7 +979,6 @@ namespace Example
 | **startWorkday** | **String**| Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **metricId** | **string**| Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1014,7 +988,6 @@ namespace Example
 ## GetGamificationLeaderboardAllBestpoints
 
 > [**OverallBestPoints**](OverallBestPoints) GetGamificationLeaderboardAllBestpoints (string filterType, string filterId)
-
 
 
 Best Points by division or performance profile
@@ -1070,7 +1043,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
 | **filterId** | **string**| ID for the filter type. For example, division or performance profile Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1080,7 +1052,6 @@ namespace Example
 ## GetGamificationLeaderboardBestpoints
 
 > [**OverallBestPoints**](OverallBestPoints) GetGamificationLeaderboardBestpoints ()
-
 
 
 Best Points of the requesting user's current performance profile or division
@@ -1130,7 +1101,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OverallBestPoints**](OverallBestPoints)
@@ -1139,7 +1109,6 @@ This endpoint does require any parameters.
 ## GetGamificationMetricdefinition
 
 > [**MetricDefinition**](MetricDefinition) GetGamificationMetricdefinition (string metricDefinitionId)
-
 
 
 Metric definition by id
@@ -1193,7 +1162,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **metricDefinitionId** | **string**| metric definition id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1203,7 +1171,6 @@ namespace Example
 ## GetGamificationMetricdefinitions
 
 > [**GetMetricDefinitionsResponse**](GetMetricDefinitionsResponse) GetGamificationMetricdefinitions ()
-
 
 
 All metric definitions
@@ -1255,7 +1222,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GetMetricDefinitionsResponse**](GetMetricDefinitionsResponse)
@@ -1264,7 +1230,6 @@ This endpoint does require any parameters.
 ## GetGamificationProfile
 
 > [**PerformanceProfile**](PerformanceProfile) GetGamificationProfile (string profileId)
-
 
 
 Performance profile by id
@@ -1320,7 +1285,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| performanceProfileId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1330,7 +1294,6 @@ namespace Example
 ## GetGamificationProfileMembers
 
 > [**MemberListing**](MemberListing) GetGamificationProfileMembers (string profileId)
-
 
 
 Members of a given performance profile
@@ -1384,7 +1347,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Profile Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1394,7 +1356,6 @@ namespace Example
 ## GetGamificationProfileMetric
 
 > [**Metric**](Metric) GetGamificationProfileMetric (string profileId, string metricId, String workday = null)
-
 
 
 Performance profile gamified metric by id
@@ -1454,7 +1415,6 @@ namespace Example
 | **profileId** | **string**| Performance Profile Id |  |
 | **metricId** | **string**| Metric Id |  |
 | **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1464,7 +1424,6 @@ namespace Example
 ## GetGamificationProfileMetrics
 
 > [**GetMetricResponse**](GetMetricResponse) GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null, string metricIds = null)
-
 
 
 All gamified metrics for a given performance profile
@@ -1526,7 +1485,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: objective |
 | **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **metricIds** | **string**| List of metric ids to filter the response (Optional, comma-separated). | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1536,7 +1494,6 @@ namespace Example
 ## GetGamificationProfileMetricsObjectivedetails
 
 > [**GetMetricsResponse**](GetMetricsResponse) GetGamificationProfileMetricsObjectivedetails (string profileId, String workday = null)
-
 
 
 All metrics for a given performance profile with objective details such as order and maxPoints
@@ -1594,7 +1551,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Performance Profile Id |  |
 | **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1604,7 +1560,6 @@ namespace Example
 ## GetGamificationProfiles
 
 > [**GetProfilesResponse**](GetProfilesResponse) GetGamificationProfiles ()
-
 
 
 All performance profiles
@@ -1656,7 +1611,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GetProfilesResponse**](GetProfilesResponse)
@@ -1665,7 +1619,6 @@ This endpoint does require any parameters.
 ## GetGamificationProfilesUser
 
 > [**PerformanceProfile**](PerformanceProfile) GetGamificationProfilesUser (string userId, String workday = null)
-
 
 
 Performance profile of a user
@@ -1723,7 +1676,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**|  |  |
 | **workday** | **String**| Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1733,7 +1685,6 @@ namespace Example
 ## GetGamificationProfilesUsersMe
 
 > [**PerformanceProfile**](PerformanceProfile) GetGamificationProfilesUsersMe (String workday = null)
-
 
 
 Performance profile of the requesting user
@@ -1786,7 +1737,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workday** | **String**| Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1796,7 +1746,6 @@ namespace Example
 ## GetGamificationScorecards
 
 > [**WorkdayMetricListing**](WorkdayMetricListing) GetGamificationScorecards (String workday, List<string> expand = null)
-
 
 
 Workday performance metrics of the requesting user
@@ -1852,7 +1801,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workday** | **String**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: objective |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1862,7 +1810,6 @@ namespace Example
 ## GetGamificationScorecardsAttendance
 
 > [**AttendanceStatusListing**](AttendanceStatusListing) GetGamificationScorecardsAttendance (String startWorkday, String endWorkday)
-
 
 
 Attendance status metrics of the requesting user
@@ -1918,7 +1865,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1928,7 +1874,6 @@ namespace Example
 ## GetGamificationScorecardsBestpoints
 
 > [**UserBestPoints**](UserBestPoints) GetGamificationScorecardsBestpoints ()
-
 
 
 Best points of the requesting user
@@ -1978,7 +1923,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**UserBestPoints**](UserBestPoints)
@@ -1987,7 +1931,6 @@ This endpoint does require any parameters.
 ## GetGamificationScorecardsPointsAlltime
 
 > [**AllTimePoints**](AllTimePoints) GetGamificationScorecardsPointsAlltime (String endWorkday)
-
 
 
 All-time points of the requesting user
@@ -2041,7 +1984,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2051,7 +1993,6 @@ namespace Example
 ## GetGamificationScorecardsPointsAverage
 
 > [**SingleWorkdayAveragePoints**](SingleWorkdayAveragePoints) GetGamificationScorecardsPointsAverage (String workday)
-
 
 
 Average points of the requesting user's division or performance profile
@@ -2105,7 +2046,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workday** | **String**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2115,7 +2055,6 @@ namespace Example
 ## GetGamificationScorecardsPointsTrends
 
 > [**WorkdayPointsTrend**](WorkdayPointsTrend) GetGamificationScorecardsPointsTrends (String startWorkday, String endWorkday, string dayOfWeek = null)
-
 
 
 Points trends of the requesting user
@@ -2173,7 +2112,6 @@ namespace Example
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **dayOfWeek** | **string**| Optional filter to specify which day of weeks to be included in the response | [optional] <br />**Values**: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2183,7 +2121,6 @@ namespace Example
 ## GetGamificationScorecardsProfileMetricUserValuesTrends
 
 > [**MetricValueTrendAverage**](MetricValueTrendAverage) GetGamificationScorecardsProfileMetricUserValuesTrends (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
-
 
 
 Average performance values trends by metric of a user
@@ -2249,7 +2186,6 @@ namespace Example
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **referenceWorkday** | **String**| Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2259,7 +2195,6 @@ namespace Example
 ## GetGamificationScorecardsProfileMetricUsersValuesTrends
 
 > [**MetricValueTrendAverage**](MetricValueTrendAverage) GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
-
 
 
 Average performance values trends by metric of a division or a performance profile
@@ -2327,7 +2262,6 @@ namespace Example
 | **filterId** | **string**| ID for the filter type. Only required when filterType is Division. | [optional]  |
 | **referenceWorkday** | **String**| Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2337,7 +2271,6 @@ namespace Example
 ## GetGamificationScorecardsProfileMetricValuesTrends
 
 > [**MetricValueTrendAverage**](MetricValueTrendAverage) GetGamificationScorecardsProfileMetricValuesTrends (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
-
 
 
 Average performance values trends by metric of the requesting user
@@ -2403,7 +2336,6 @@ namespace Example
 | **filterType** | **string**| Filter type for the query request. If not set, returns the values trends of the requesting user | [optional] <br />**Values**: PerformanceProfile, Division |
 | **referenceWorkday** | **String**| Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2413,7 +2345,6 @@ namespace Example
 ## GetGamificationScorecardsUser
 
 > [**WorkdayMetricListing**](WorkdayMetricListing) GetGamificationScorecardsUser (string userId, String workday, List<string> expand = null)
-
 
 
 Workday performance metrics for a user
@@ -2471,7 +2402,6 @@ namespace Example
 | **userId** | **string**|  |  |
 | **workday** | **String**| Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: objective |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2481,7 +2411,6 @@ namespace Example
 ## GetGamificationScorecardsUserAttendance
 
 > [**AttendanceStatusListing**](AttendanceStatusListing) GetGamificationScorecardsUserAttendance (string userId, String startWorkday, String endWorkday)
-
 
 
 Attendance status metrics for a user
@@ -2539,7 +2468,6 @@ namespace Example
 | **userId** | **string**|  |  |
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2549,7 +2477,6 @@ namespace Example
 ## GetGamificationScorecardsUserBestpoints
 
 > [**UserBestPoints**](UserBestPoints) GetGamificationScorecardsUserBestpoints (string userId)
-
 
 
 Best points of a user
@@ -2603,7 +2530,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2613,7 +2539,6 @@ namespace Example
 ## GetGamificationScorecardsUserPointsAlltime
 
 > [**AllTimePoints**](AllTimePoints) GetGamificationScorecardsUserPointsAlltime (string userId, String endWorkday)
-
 
 
 All-time points for a user
@@ -2669,7 +2594,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**|  |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2679,7 +2603,6 @@ namespace Example
 ## GetGamificationScorecardsUserPointsTrends
 
 > [**WorkdayPointsTrend**](WorkdayPointsTrend) GetGamificationScorecardsUserPointsTrends (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
-
 
 
 Points trend for a user
@@ -2739,7 +2662,6 @@ namespace Example
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **dayOfWeek** | **string**| Optional filter to specify which day of weeks to be included in the response | [optional] <br />**Values**: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2749,7 +2671,6 @@ namespace Example
 ## GetGamificationScorecardsUserValuesTrends
 
 > [**WorkdayValuesTrend**](WorkdayValuesTrend) GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null)
-
 
 
 Values trends of a user
@@ -2809,7 +2730,6 @@ namespace Example
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2819,7 +2739,6 @@ namespace Example
 ## GetGamificationScorecardsUsersPointsAverage
 
 > [**SingleWorkdayAveragePoints**](SingleWorkdayAveragePoints) GetGamificationScorecardsUsersPointsAverage (string filterType, string filterId, String workday)
-
 
 
 Workday average points by target group
@@ -2877,7 +2796,6 @@ namespace Example
 | **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
 | **filterId** | **string**| ID for the filter type. |  |
 | **workday** | **String**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2887,7 +2805,6 @@ namespace Example
 ## GetGamificationScorecardsUsersValuesAverage
 
 > [**SingleWorkdayAverageValues**](SingleWorkdayAverageValues) GetGamificationScorecardsUsersValuesAverage (string filterType, string filterId, String workday, string timeZone = null)
-
 
 
 Workday average values by target group
@@ -2947,7 +2864,6 @@ namespace Example
 | **filterId** | **string**| ID for the filter type. For example, division Id |  |
 | **workday** | **String**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2957,7 +2873,6 @@ namespace Example
 ## GetGamificationScorecardsUsersValuesTrends
 
 > [**WorkdayValuesTrend**](WorkdayValuesTrend) GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
-
 
 
 Values trend by target group
@@ -3019,7 +2934,6 @@ namespace Example
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3029,7 +2943,6 @@ namespace Example
 ## GetGamificationScorecardsValuesAverage
 
 > [**SingleWorkdayAverageValues**](SingleWorkdayAverageValues) GetGamificationScorecardsValuesAverage (String workday, string timeZone = null)
-
 
 
 Average values of the requesting user's division or performance profile
@@ -3085,7 +2998,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workday** | **String**| The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3095,7 +3007,6 @@ namespace Example
 ## GetGamificationScorecardsValuesTrends
 
 > [**WorkdayValuesTrend**](WorkdayValuesTrend) GetGamificationScorecardsValuesTrends (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
-
 
 
 Values trends of the requesting user or group
@@ -3157,7 +3068,6 @@ namespace Example
 | **filterType** | **string**| Filter type for the query request. If not set, then the request is for the requesting user. | [optional] <br />**Values**: PerformanceProfile, Division |
 | **referenceWorkday** | **String**| Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3167,7 +3077,6 @@ namespace Example
 ## GetGamificationStatus
 
 > [**GamificationStatus**](GamificationStatus) GetGamificationStatus ()
-
 
 
 Gamification activation status
@@ -3219,7 +3128,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GamificationStatus**](GamificationStatus)
@@ -3228,7 +3136,6 @@ This endpoint does require any parameters.
 ## GetGamificationTemplate
 
 > [**ObjectiveTemplate**](ObjectiveTemplate) GetGamificationTemplate (string templateId)
-
 
 
 Objective template by id
@@ -3282,7 +3189,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **templateId** | **string**| template id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3292,7 +3198,6 @@ namespace Example
 ## GetGamificationTemplates
 
 > [**GetTemplatesResponse**](GetTemplatesResponse) GetGamificationTemplates ()
-
 
 
 All objective templates
@@ -3342,7 +3247,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GetTemplatesResponse**](GetTemplatesResponse)
@@ -3351,7 +3255,6 @@ This endpoint does require any parameters.
 ## PatchEmployeeperformanceExternalmetricsDefinition
 
 > [**ExternalMetricDefinition**](ExternalMetricDefinition) PatchEmployeeperformanceExternalmetricsDefinition (string metricId, ExternalMetricDefinitionUpdateRequest body)
-
 
 
 Update External Metric Definition
@@ -3407,7 +3310,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **metricId** | **string**| Specifies the metric definition ID |  |
 | **body** | [**ExternalMetricDefinitionUpdateRequest**](ExternalMetricDefinitionUpdateRequest)| The External Metric Definition parameters to be updated |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3417,7 +3319,6 @@ namespace Example
 ## PostEmployeeperformanceExternalmetricsData
 
 > [**ExternalMetricDataWriteResponse**](ExternalMetricDataWriteResponse) PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null)
-
 
 
 Write External Metric Data
@@ -3471,7 +3372,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExternalMetricDataWriteRequest**](ExternalMetricDataWriteRequest)| The External Metric Data to be added | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3481,7 +3381,6 @@ namespace Example
 ## PostEmployeeperformanceExternalmetricsDefinitions
 
 > [**ExternalMetricDefinition**](ExternalMetricDefinition) PostEmployeeperformanceExternalmetricsDefinitions (ExternalMetricDefinitionCreateRequest body = null)
-
 
 
 Create External Metric Definition
@@ -3535,7 +3434,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExternalMetricDefinitionCreateRequest**](ExternalMetricDefinitionCreateRequest)| The External Metric Definition to be created | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3545,7 +3443,6 @@ namespace Example
 ## PostGamificationProfileActivate
 
 > [**PerformanceProfile**](PerformanceProfile) PostGamificationProfileActivate (string profileId)
-
 
 
 Activate a performance profile
@@ -3599,7 +3496,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| performanceProfileId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3609,7 +3505,6 @@ namespace Example
 ## PostGamificationProfileDeactivate
 
 > [**PerformanceProfile**](PerformanceProfile) PostGamificationProfileDeactivate (string profileId)
-
 
 
 Deactivate a performance profile
@@ -3663,7 +3558,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| performanceProfileId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3673,7 +3567,6 @@ namespace Example
 ## PostGamificationProfileMembers
 
 > [**Assignment**](Assignment) PostGamificationProfileMembers (string profileId, AssignUsers body)
-
 
 
 Assign members to a given performance profile
@@ -3729,7 +3622,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Profile Id |  |
 | **body** | [**AssignUsers**](AssignUsers)| assignUsers |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3739,7 +3631,6 @@ namespace Example
 ## PostGamificationProfileMembersValidate
 
 > [**AssignmentValidation**](AssignmentValidation) PostGamificationProfileMembersValidate (string profileId, ValidateAssignUsers body)
-
 
 
 Validate member assignment
@@ -3795,7 +3686,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Profile Id |  |
 | **body** | [**ValidateAssignUsers**](ValidateAssignUsers)| memberAssignments |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3805,7 +3695,6 @@ namespace Example
 ## PostGamificationProfileMetricLink
 
 > [**Metric**](Metric) PostGamificationProfileMetricLink (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body)
-
 
 
 Creates a linked metric
@@ -3863,7 +3752,6 @@ namespace Example
 | **sourceProfileId** | **string**| Source Performance Profile Id |  |
 | **sourceMetricId** | **string**| Source Metric Id |  |
 | **body** | [**TargetPerformanceProfile**](TargetPerformanceProfile)| linkedMetric |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3873,7 +3761,6 @@ namespace Example
 ## PostGamificationProfileMetrics
 
 > [**Metric**](Metric) PostGamificationProfileMetrics (string profileId, CreateMetric body)
-
 
 
 Creates a gamified metric with a given metric definition and metric objective under in a performance profile
@@ -3929,7 +3816,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| Performance Profile Id |  |
 | **body** | [**CreateMetric**](CreateMetric)| Metric |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3939,7 +3825,6 @@ namespace Example
 ## PostGamificationProfiles
 
 > [**PerformanceProfile**](PerformanceProfile) PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null)
-
 
 
 Create a new custom performance profile
@@ -3995,7 +3880,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreatePerformanceProfile**](CreatePerformanceProfile)| performanceProfile |  |
 | **copyMetrics** | **bool?**| Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4005,7 +3889,6 @@ namespace Example
 ## PostGamificationProfilesUserQuery
 
 > [**UserProfilesInDateRange**](UserProfilesInDateRange) PostGamificationProfilesUserQuery (string userId, UserProfilesInDateRangeRequest body)
-
 
 
 Query performance profiles in date range for a user
@@ -4061,7 +3944,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. |  |
 | **body** | [**UserProfilesInDateRangeRequest**](UserProfilesInDateRangeRequest)| The date range of work day. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4071,7 +3953,6 @@ namespace Example
 ## PostGamificationProfilesUsersMeQuery
 
 > [**UserProfilesInDateRange**](UserProfilesInDateRange) PostGamificationProfilesUsersMeQuery (UserProfilesInDateRangeRequest body)
-
 
 
 Query performance profiles in date range for the current user
@@ -4124,7 +4005,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserProfilesInDateRangeRequest**](UserProfilesInDateRangeRequest)| The date range of work day. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4134,7 +4014,6 @@ namespace Example
 ## PutGamificationProfile
 
 > [**PerformanceProfile**](PerformanceProfile) PutGamificationProfile (string profileId, PerformanceProfile body = null)
-
 
 
 Updates a performance profile
@@ -4190,7 +4069,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **profileId** | **string**| performanceProfileId |  |
 | **body** | [**PerformanceProfile**](PerformanceProfile)| performanceProfile | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4200,7 +4078,6 @@ namespace Example
 ## PutGamificationProfileMetric
 
 > [**Metric**](Metric) PutGamificationProfileMetric (string profileId, string metricId, CreateMetric body)
-
 
 
 Updates a metric in performance profile
@@ -4258,7 +4135,6 @@ namespace Example
 | **profileId** | **string**| Performance Profile Id |  |
 | **metricId** | **string**| Metric Id |  |
 | **body** | [**CreateMetric**](CreateMetric)| Metric |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4268,7 +4144,6 @@ namespace Example
 ## PutGamificationStatus
 
 > [**GamificationStatus**](GamificationStatus) PutGamificationStatus (GamificationStatus status)
-
 
 
 Update gamification activation status
@@ -4322,11 +4197,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **status** | [**GamificationStatus**](GamificationStatus)| Gamification status |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -103,13 +103,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserStationAssociatedstationStationId**](#PutUserStationAssociatedstationStationId) | **Put** /api/v2/users/{userId}/station/associatedstation/{stationId} | Set associated station |
 | [**PutUserStationDefaultstationStationId**](#PutUserStationDefaultstationStationId) | **Put** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 | [**PutUserVerifier**](#PutUserVerifier) | **Put** /api/v2/users/{userId}/verifiers/{verifierId} | Update a verifier |
-{: class="table table-striped"}
+
 
 
 ## DeleteAnalyticsUsersDetailsJob
 
 > void DeleteAnalyticsUsersDetailsJob (string jobId)
-
 
 
 Delete/cancel an async request
@@ -162,7 +161,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -172,7 +170,6 @@ void (empty response body)
 ## DeleteAuthorizationSubjectDivisionRole
 
 > void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
-
 
 
 Delete a grant of a role in a division
@@ -229,7 +226,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division of the grant |  |
 | **roleId** | **string**| the id of the role of the grant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -239,7 +235,6 @@ void (empty response body)
 ## DeleteRoutingDirectroutingbackupSettingsMe
 
 > void DeleteRoutingDirectroutingbackupSettingsMe ()
-
 
 
 Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
@@ -288,7 +283,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -297,7 +291,6 @@ void (empty response body)
 ## DeleteRoutingUserDirectroutingbackupSettings
 
 > void DeleteRoutingUserDirectroutingbackupSettings (string userId)
-
 
 
 Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
@@ -350,7 +343,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -360,7 +352,6 @@ void (empty response body)
 ## DeleteRoutingUserUtilization
 
 > void DeleteRoutingUserUtilization (string userId)
-
 
 
 Delete the user's max utilization settings and revert to the organization-wide default.
@@ -413,7 +404,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -425,11 +415,11 @@ void (empty response body)
 > **Object** DeleteUser (string userId)
 
 
-
 Delete user
 
 Requires ANY permissions: 
 
+* admin
 * directory:user:delete
 * directory:organization:admin
 
@@ -478,7 +468,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -488,7 +477,6 @@ namespace Example
 ## DeleteUserRoutinglanguage
 
 > void DeleteUserRoutinglanguage (string userId, string languageId)
-
 
 
 Remove routing language from user
@@ -544,7 +532,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **languageId** | **string**| languageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -554,7 +541,6 @@ void (empty response body)
 ## DeleteUserRoutingskill
 
 > void DeleteUserRoutingskill (string userId, string skillId)
-
 
 
 Remove routing skill from user
@@ -609,7 +595,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **skillId** | **string**| skillId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -619,7 +604,6 @@ void (empty response body)
 ## DeleteUserStationAssociatedstation
 
 > void DeleteUserStationAssociatedstation (string userId)
-
 
 
 Clear associated station
@@ -671,7 +655,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -681,7 +664,6 @@ void (empty response body)
 ## DeleteUserStationDefaultstation
 
 > void DeleteUserStationDefaultstation (string userId)
-
 
 
 Clear default station
@@ -735,7 +717,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -745,7 +726,6 @@ void (empty response body)
 ## DeleteUserVerifier
 
 > void DeleteUserVerifier (string userId, string verifierId)
-
 
 
 Delete a verifier
@@ -800,7 +780,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **verifierId** | **string**| Verifier ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -810,7 +789,6 @@ void (empty response body)
 ## GetAnalyticsUsersAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsUsersAggregatesJob (string jobId)
-
 
 
 Get status for async query for user aggregates
@@ -866,7 +844,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -876,7 +853,6 @@ namespace Example
 ## GetAnalyticsUsersAggregatesJobResults
 
 > [**UserAsyncAggregateQueryResponse**](UserAsyncAggregateQueryResponse) GetAnalyticsUsersAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -934,7 +910,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -944,7 +919,6 @@ namespace Example
 ## GetAnalyticsUsersDetailsJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsUsersDetailsJob (string jobId)
-
 
 
 Get status for async query for user details
@@ -998,7 +972,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1008,7 +981,6 @@ namespace Example
 ## GetAnalyticsUsersDetailsJobResults
 
 > [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse) GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
-
 
 
 Fetch a page of results for an async query
@@ -1066,7 +1038,6 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| The desired maximum number of results | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1076,7 +1047,6 @@ namespace Example
 ## GetAnalyticsUsersDetailsJobsAvailability
 
 > [**DataAvailabilityResponse**](DataAvailabilityResponse) GetAnalyticsUsersDetailsJobsAvailability ()
-
 
 
 Lookup the datalake availability date and time
@@ -1126,7 +1096,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse)
@@ -1136,7 +1105,9 @@ This endpoint does require any parameters.
 
 > [**List&lt;AuthzDivision&gt;**](AuthzDivision) GetAuthorizationDivisionspermittedMe (string permission, string name = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Returns which divisions the current user has the given permission in.
 
@@ -1192,7 +1163,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
 | **name** | **string**| Search term to filter by division name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1202,7 +1172,6 @@ namespace Example
 ## GetAuthorizationDivisionspermittedPagedMe
 
 > [**DivsPermittedEntityListing**](DivsPermittedEntityListing) GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
-
 
 
 Returns which divisions the current user has the given permission in.
@@ -1259,7 +1228,6 @@ namespace Example
 | **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1270,7 +1238,9 @@ namespace Example
 
 > [**DivsPermittedEntityListing**](DivsPermittedEntityListing) GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Returns which divisions the specified user has the given permission in.
 
@@ -1330,7 +1300,6 @@ namespace Example
 | **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1340,7 +1309,6 @@ namespace Example
 ## GetAuthorizationSubject
 
 > [**AuthzSubject**](AuthzSubject) GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
-
 
 
 Returns a listing of roles and permissions for a user.
@@ -1396,7 +1364,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1406,7 +1373,6 @@ namespace Example
 ## GetAuthorizationSubjectsMe
 
 > [**AuthzSubject**](AuthzSubject) GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
-
 
 
 Returns a listing of roles and permissions for the currently authenticated user.
@@ -1459,7 +1425,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1470,7 +1435,9 @@ namespace Example
 
 > [**FieldConfig**](FieldConfig) GetFieldconfig (string type)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Fetch field config for an entity type
 
@@ -1522,7 +1489,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **type** | **string**| Field type | <br />**Values**: person, group, org |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1533,7 +1499,9 @@ namespace Example
 
 > [**UserProfileEntityListing**](UserProfileEntityListing) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a user profile listing
 
@@ -1599,7 +1567,6 @@ namespace Example
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization |
 | **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1609,7 +1576,6 @@ namespace Example
 ## GetRoutingDirectroutingbackupSettingsMe
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) GetRoutingDirectroutingbackupSettingsMe ()
-
 
 
 Get the user's Direct Routing Backup settings.
@@ -1659,7 +1625,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings)
@@ -1668,7 +1633,6 @@ This endpoint does require any parameters.
 ## GetRoutingUserDirectroutingbackupSettings
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) GetRoutingUserDirectroutingbackupSettings (string userId)
-
 
 
 Get the user's Direct Routing Backup settings.
@@ -1722,7 +1686,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1732,7 +1695,6 @@ namespace Example
 ## GetRoutingUserUtilization
 
 > [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse) GetRoutingUserUtilization (string userId)
-
 
 
 Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
@@ -1787,7 +1749,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1797,7 +1758,6 @@ namespace Example
 ## GetUser
 
 > [**User**](User) GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
-
 
 
 Get user.
@@ -1856,7 +1816,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
 | **integrationPresenceSource** | **string**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
 | **state** | **string**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1866,7 +1825,6 @@ namespace Example
 ## GetUserAdjacents
 
 > [**Adjacents**](Adjacents) GetUserAdjacents (string userId, List<string> expand = null)
-
 
 
 Get adjacents
@@ -1921,7 +1879,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1931,7 +1888,6 @@ namespace Example
 ## GetUserCallforwarding
 
 > [**CallForwarding**](CallForwarding) GetUserCallforwarding (string userId)
-
 
 
 Get a user's CallForwarding
@@ -1984,7 +1940,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1994,7 +1949,6 @@ namespace Example
 ## GetUserDirectreports
 
 > [**List&lt;User&gt;**](User) GetUserDirectreports (string userId, List<string> expand = null)
-
 
 
 Get direct reports
@@ -2049,7 +2003,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2060,7 +2013,9 @@ namespace Example
 
 > [**UserEntityListing**](UserEntityListing) GetUserFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Deprecated; will be revived with new contract
 
@@ -2120,7 +2075,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2130,7 +2084,6 @@ namespace Example
 ## GetUserGeolocation
 
 > [**Geolocation**](Geolocation) GetUserGeolocation (string userId, string clientId)
-
 
 
 Get a user's Geolocation
@@ -2185,7 +2138,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2195,7 +2147,6 @@ namespace Example
 ## GetUserOutofoffice
 
 > [**OutOfOffice**](OutOfOffice) GetUserOutofoffice (string userId)
-
 
 
 Get a OutOfOffice
@@ -2248,7 +2199,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2259,7 +2209,9 @@ namespace Example
 
 > [**UserProfile**](UserProfile) GetUserProfile (string userId, List<string> expand = null, string integrationPresenceSource = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get user profile
 
@@ -2317,7 +2269,6 @@ namespace Example
 | **userId** | **string**| userId |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks |
 | **integrationPresenceSource** | **string**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2327,7 +2278,6 @@ namespace Example
 ## GetUserProfileskills
 
 > **List&lt;string&gt;** GetUserProfileskills (string userId)
-
 
 
 List profile skills for a user
@@ -2381,7 +2331,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2391,7 +2340,6 @@ namespace Example
 ## GetUserQueues
 
 > [**UserQueueEntityListing**](UserQueueEntityListing) GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
-
 
 
 Get queues for user
@@ -2455,7 +2403,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **joined** | **bool?**| Is joined to the queue | [optional] [default to true] |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2465,7 +2412,6 @@ namespace Example
 ## GetUserRoles
 
 > [**UserAuthorization**](UserAuthorization) GetUserRoles (string subjectId)
-
 
 
 Returns a listing of roles and permissions for a user.
@@ -2519,7 +2465,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2529,7 +2474,6 @@ namespace Example
 ## GetUserRoutinglanguages
 
 > [**UserLanguageEntityListing**](UserLanguageEntityListing) GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
 
 
 List routing language for user
@@ -2588,7 +2532,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2598,7 +2541,6 @@ namespace Example
 ## GetUserRoutingskills
 
 > [**UserSkillEntityListing**](UserSkillEntityListing) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
 
 
 List routing skills for user
@@ -2657,7 +2599,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2667,7 +2608,6 @@ namespace Example
 ## GetUserRoutingstatus
 
 > [**RoutingStatus**](RoutingStatus) GetUserRoutingstatus (string userId)
-
 
 
 Fetch the routing status of a user
@@ -2720,7 +2660,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2730,7 +2669,6 @@ namespace Example
 ## GetUserSkillgroups
 
 > [**UserSkillGroupEntityListing**](UserSkillGroupEntityListing) GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
-
 
 
 Get skill groups for a user
@@ -2790,7 +2728,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **after** | **string**| The cursor that points to the next page | [optional]  |
 | **before** | **string**| The cursor that points to the previous page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2800,7 +2737,6 @@ namespace Example
 ## GetUserState
 
 > [**UserState**](UserState) GetUserState (string userId)
-
 
 
 Get user state information.
@@ -2854,7 +2790,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2864,7 +2799,6 @@ namespace Example
 ## GetUserStation
 
 > [**UserStations**](UserStations) GetUserStation (string userId)
-
 
 
 Get station information for user
@@ -2917,7 +2851,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2927,7 +2860,6 @@ namespace Example
 ## GetUserSuperiors
 
 > [**List&lt;User&gt;**](User) GetUserSuperiors (string userId, List<string> expand = null)
-
 
 
 Get superiors
@@ -2982,7 +2914,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2992,7 +2923,6 @@ namespace Example
 ## GetUserTrustors
 
 > [**TrustorEntityListing**](TrustorEntityListing) GetUserTrustors (string userId, int? pageSize = null, int? pageNumber = null)
-
 
 
 List the organizations that have authorized/trusted the user.
@@ -3050,7 +2980,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3060,7 +2989,6 @@ namespace Example
 ## GetUserVerifiers
 
 > [**VerifierEntityListing**](VerifierEntityListing) GetUserVerifiers (string userId)
-
 
 
 Get a list of verifiers
@@ -3114,7 +3042,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3124,7 +3051,6 @@ namespace Example
 ## GetUsers
 
 > [**UserEntityListing**](UserEntityListing) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
-
 
 
 Get the list of available users.
@@ -3191,7 +3117,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin |
 | **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3201,7 +3126,6 @@ namespace Example
 ## GetUsersDevelopmentActivities
 
 > [**DevelopmentActivityListing**](DevelopmentActivityListing) GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
-
 
 
 Get list of Development Activities
@@ -3280,7 +3204,6 @@ namespace Example
 | **types** | [**List<string>**](string)| Specifies the activity types. Informational, AssessedContent and Assessment are deprecated | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Assessment, External, Native |
 | **statuses** | [**List<string>**](string)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule, NotCompleted |
 | **relationship** | [**List<string>**](string)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3290,7 +3213,6 @@ namespace Example
 ## GetUsersDevelopmentActivitiesMe
 
 > [**DevelopmentActivityListing**](DevelopmentActivityListing) GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
-
 
 
 Get list of Development Activities for current user
@@ -3365,7 +3287,6 @@ namespace Example
 | **types** | [**List<string>**](string)| Specifies the activity types. Informational, AssessedContent and Assessment are deprecated | [optional] <br />**Values**: Informational, Coaching, AssessedContent, Assessment, External, Native |
 | **statuses** | [**List<string>**](string)| Specifies the activity statuses to filter by | [optional] <br />**Values**: Planned, InProgress, Completed, InvalidSchedule, NotCompleted |
 | **relationship** | [**List<string>**](string)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional] <br />**Values**: Creator, Facilitator, Attendee |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3375,7 +3296,6 @@ namespace Example
 ## GetUsersDevelopmentActivity
 
 > [**DevelopmentActivity**](DevelopmentActivity) GetUsersDevelopmentActivity (string activityId, string type)
-
 
 
 Get a Development Activity
@@ -3434,7 +3354,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **activityId** | **string**| Specifies the activity ID, maps to either assignment or appointment ID |  |
 | **type** | **string**| Specifies the activity type. Informational, AssessedContent and Assessment are deprecated | <br />**Values**: Informational, Coaching, AssessedContent, Assessment, External, Native |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3444,7 +3363,6 @@ namespace Example
 ## GetUsersMe
 
 > [**UserMe**](UserMe) GetUsersMe (List<string> expand = null, string integrationPresenceSource = null)
-
 
 
 Get current user details.
@@ -3501,7 +3419,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, date, geolocationsettings, organization, presencedefinitions, divisionedpresencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors, logCapture |
 | **integrationPresenceSource** | **string**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3511,7 +3428,6 @@ namespace Example
 ## GetUsersSearch
 
 > [**UsersSearchResponse**](UsersSearchResponse) GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
-
 
 
 Search users using the q64 value returned from a previous search
@@ -3569,7 +3485,6 @@ namespace Example
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| expand | [optional]  |
 | **integrationPresenceSource** | **string**| integrationPresenceSource | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3581,11 +3496,11 @@ namespace Example
 > [**User**](User) PatchUser (string userId, UpdateUser body)
 
 
-
 Update user
 
 Requires ANY permissions: 
 
+* admin
 * directory:user:edit
 * directory:organization:admin
 
@@ -3636,7 +3551,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UpdateUser**](UpdateUser)| User |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3646,7 +3560,6 @@ namespace Example
 ## PatchUserCallforwarding
 
 > [**CallForwarding**](CallForwarding) PatchUserCallforwarding (string userId, CallForwarding body)
-
 
 
 Patch a user's CallForwarding
@@ -3702,7 +3615,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**CallForwarding**](CallForwarding)| Call forwarding |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3712,7 +3624,6 @@ namespace Example
 ## PatchUserGeolocation
 
 > [**Geolocation**](Geolocation) PatchUserGeolocation (string userId, string clientId, Geolocation body)
-
 
 
 Patch a user's Geolocation
@@ -3771,7 +3682,6 @@ namespace Example
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
 | **body** | [**Geolocation**](Geolocation)| Geolocation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3781,7 +3691,6 @@ namespace Example
 ## PatchUserQueue
 
 > [**UserQueue**](UserQueue) PatchUserQueue (string queueId, string userId, UserQueue body)
-
 
 
 Join or unjoin a queue for a user
@@ -3840,7 +3749,6 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **userId** | **string**| User ID |  |
 | **body** | [**UserQueue**](UserQueue)| Queue Member |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3850,7 +3758,6 @@ namespace Example
 ## PatchUserQueues
 
 > [**UserQueueEntityListing**](UserQueueEntityListing) PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null)
-
 
 
 Join or unjoin a set of queues for a user
@@ -3909,7 +3816,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserQueue>**](UserQueue)| User Queues |  |
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3919,7 +3825,6 @@ namespace Example
 ## PatchUserRoutinglanguage
 
 > [**UserRoutingLanguage**](UserRoutingLanguage) PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
-
 
 
 Update routing language proficiency or state.
@@ -3978,7 +3883,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **languageId** | **string**| languageId |  |
 | **body** | [**UserRoutingLanguage**](UserRoutingLanguage)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3988,7 +3892,6 @@ namespace Example
 ## PatchUserRoutinglanguagesBulk
 
 > [**UserLanguageEntityListing**](UserLanguageEntityListing) PatchUserRoutinglanguagesBulk (string userId, List<UserRoutingLanguagePost> body)
-
 
 
 Add bulk routing language to user. Max limit 50 languages
@@ -4045,7 +3948,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserRoutingLanguagePost>**](UserRoutingLanguagePost)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4055,7 +3957,6 @@ namespace Example
 ## PatchUserRoutingskillsBulk
 
 > [**UserSkillEntityListing**](UserSkillEntityListing) PatchUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
-
 
 
 Bulk add routing skills to user
@@ -4111,7 +4012,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserRoutingSkillPost>**](UserRoutingSkillPost)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4121,7 +4021,6 @@ namespace Example
 ## PatchUsersBulk
 
 > [**UserEntityListing**](UserEntityListing) PatchUsersBulk (List<PatchUser> body)
-
 
 
 Update bulk acd autoanswer on users. Max 50 users can be updated at a time.
@@ -4176,7 +4075,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<PatchUser>**](PatchUser)| Users |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4186,7 +4084,6 @@ namespace Example
 ## PostAnalyticsUsersActivityQuery
 
 > [**UserActivityResponse**](UserActivityResponse) PostAnalyticsUsersActivityQuery (UserActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for user activity observations
@@ -4244,7 +4141,6 @@ namespace Example
 | **body** | [**UserActivityQuery**](UserActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4254,7 +4150,6 @@ namespace Example
 ## PostAnalyticsUsersAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsUsersAggregatesJobs (UserAsyncAggregationQuery body)
-
 
 
 Query for user aggregates asynchronously
@@ -4310,7 +4205,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserAsyncAggregationQuery**](UserAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4320,7 +4214,6 @@ namespace Example
 ## PostAnalyticsUsersAggregatesQuery
 
 > [**UserAggregateQueryResponse**](UserAggregateQueryResponse) PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body)
-
 
 
 Query for user aggregates
@@ -4374,7 +4267,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserAggregationQuery**](UserAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4384,7 +4276,6 @@ namespace Example
 ## PostAnalyticsUsersDetailsJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsUsersDetailsJobs (AsyncUserDetailsQuery body)
-
 
 
 Query for user details asynchronously
@@ -4438,7 +4329,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AsyncUserDetailsQuery**](AsyncUserDetailsQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4448,7 +4338,6 @@ namespace Example
 ## PostAnalyticsUsersDetailsQuery
 
 > [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse) PostAnalyticsUsersDetailsQuery (UserDetailsQuery body)
-
 
 
 Query for user details
@@ -4502,7 +4391,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserDetailsQuery**](UserDetailsQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4512,7 +4400,6 @@ namespace Example
 ## PostAnalyticsUsersObservationsQuery
 
 > [**UserObservationQueryResponse**](UserObservationQueryResponse) PostAnalyticsUsersObservationsQuery (UserObservationQuery body)
-
 
 
 Query for user observations
@@ -4566,7 +4453,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserObservationQuery**](UserObservationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4576,7 +4462,6 @@ namespace Example
 ## PostAuthorizationSubjectBulkadd
 
 > void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null)
-
 
 
 Bulk-grant roles and divisions to a subject.
@@ -4633,7 +4518,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Pairs of role and division IDs |  |
 | **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4643,7 +4527,6 @@ void (empty response body)
 ## PostAuthorizationSubjectBulkremove
 
 > void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body)
-
 
 
 Bulk-remove grants from a subject.
@@ -4698,7 +4581,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Pairs of role and division IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4708,7 +4590,6 @@ void (empty response body)
 ## PostAuthorizationSubjectBulkreplace
 
 > void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null)
-
 
 
 Replace subject's roles and divisions with the exact list supplied in the request.
@@ -4768,7 +4649,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Pairs of role and division IDs |  |
 | **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4778,7 +4658,6 @@ void (empty response body)
 ## PostAuthorizationSubjectDivisionRole
 
 > void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
-
 
 
 Make a grant of a role in a division
@@ -4837,7 +4716,6 @@ namespace Example
 | **divisionId** | **string**| the id of the division to which to make the grant |  |
 | **roleId** | **string**| the id of the role to grant |  |
 | **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4847,7 +4725,6 @@ void (empty response body)
 ## PostUserExternalid
 
 > [**List&lt;UserExternalIdentifier&gt;**](UserExternalIdentifier) PostUserExternalid (string userId, UserExternalIdentifier body)
-
 
 
 Create mapping between external identifier and user. Limit 100 per entity.
@@ -4905,7 +4782,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UserExternalIdentifier**](UserExternalIdentifier)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4917,11 +4793,11 @@ namespace Example
 > void PostUserInvite (string userId, bool? force = null)
 
 
-
 Send an activation email to the user
 
 Requires ANY permissions: 
 
+* admin
 * directory:organization:admin
 * directory:userPassword:edit
 
@@ -4971,7 +4847,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **force** | **bool?**| Resend the invitation even if one is already outstanding | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4981,7 +4856,6 @@ void (empty response body)
 ## PostUserPassword
 
 > void PostUserPassword (string userId, ChangePasswordRequest body)
-
 
 
 Change a users password
@@ -5036,7 +4910,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**ChangePasswordRequest**](ChangePasswordRequest)| Password |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5046,7 +4919,6 @@ void (empty response body)
 ## PostUserRoutinglanguages
 
 > [**UserRoutingLanguage**](UserRoutingLanguage) PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
-
 
 
 Add routing language to user
@@ -5103,7 +4975,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UserRoutingLanguagePost**](UserRoutingLanguagePost)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5113,7 +4984,6 @@ namespace Example
 ## PostUserRoutingskills
 
 > [**UserRoutingSkill**](UserRoutingSkill) PostUserRoutingskills (string userId, UserRoutingSkillPost body)
-
 
 
 Add routing skill to user
@@ -5169,7 +5039,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UserRoutingSkillPost**](UserRoutingSkillPost)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5179,7 +5048,6 @@ namespace Example
 ## PostUsers
 
 > [**User**](User) PostUsers (CreateUser body)
-
 
 
 Create user
@@ -5235,7 +5103,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateUser**](CreateUser)| User |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5245,7 +5112,6 @@ namespace Example
 ## PostUsersDevelopmentActivitiesAggregatesQuery
 
 > [**DevelopmentActivityAggregateResponse**](DevelopmentActivityAggregateResponse) PostUsersDevelopmentActivitiesAggregatesQuery (DevelopmentActivityAggregateParam body)
-
 
 
 Retrieve aggregated development activity data
@@ -5302,7 +5168,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DevelopmentActivityAggregateParam**](DevelopmentActivityAggregateParam)| Aggregate Request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5312,7 +5177,6 @@ namespace Example
 ## PostUsersMePassword
 
 > void PostUsersMePassword (ChangeMyPasswordRequest body)
-
 
 
 Change your password
@@ -5364,7 +5228,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ChangeMyPasswordRequest**](ChangeMyPasswordRequest)| Password |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5374,7 +5237,6 @@ void (empty response body)
 ## PostUsersSearch
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearch (UserSearchRequest body)
-
 
 
 Search users
@@ -5428,7 +5290,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5438,7 +5299,6 @@ namespace Example
 ## PostUsersSearchConversationTarget
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearchConversationTarget (UserSearchRequest body)
-
 
 
 Search users as conversation targets
@@ -5494,7 +5354,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5504,7 +5363,6 @@ namespace Example
 ## PostUsersSearchQueuemembersManage
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearchQueuemembersManage (UserSearchRequest body)
-
 
 
 Search manage queue member
@@ -5561,7 +5419,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5571,7 +5428,6 @@ namespace Example
 ## PostUsersSearchTeamsAssign
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearchTeamsAssign (UserSearchRequest body)
-
 
 
 Search users assigned to teams
@@ -5625,7 +5481,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5635,7 +5490,6 @@ namespace Example
 ## PutRoutingDirectroutingbackupSettingsMe
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) PutRoutingDirectroutingbackupSettingsMe (AgentDirectRoutingBackupSettings body)
-
 
 
 Update the user's Direct Routing Backup settings.
@@ -5689,7 +5543,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings)| directRoutingBackup |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5699,7 +5552,6 @@ namespace Example
 ## PutRoutingUserDirectroutingbackupSettings
 
 > [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings) PutRoutingUserDirectroutingbackupSettings (string userId, AgentDirectRoutingBackupSettings body)
-
 
 
 Update the user's Direct Routing Backup settings.
@@ -5755,7 +5607,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings)| directRoutingBackup |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5765,7 +5616,6 @@ namespace Example
 ## PutRoutingUserUtilization
 
 > [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse) PutRoutingUserUtilization (string userId, UtilizationRequest body)
-
 
 
 Update the user's max utilization settings.  Include only those media types requiring custom configuration.
@@ -5821,7 +5671,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UtilizationRequest**](UtilizationRequest)| utilization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5831,7 +5680,6 @@ namespace Example
 ## PutUserCallforwarding
 
 > [**CallForwarding**](CallForwarding) PutUserCallforwarding (string userId, CallForwarding body)
-
 
 
 Update a user's CallForwarding
@@ -5887,7 +5735,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**CallForwarding**](CallForwarding)| Call forwarding |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5897,7 +5744,6 @@ namespace Example
 ## PutUserOutofoffice
 
 > [**OutOfOffice**](OutOfOffice) PutUserOutofoffice (string userId, OutOfOffice body)
-
 
 
 Update an OutOfOffice
@@ -5952,7 +5798,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**OutOfOffice**](OutOfOffice)| The updated OutOffOffice |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5962,7 +5807,6 @@ namespace Example
 ## PutUserProfileskills
 
 > **List&lt;string&gt;** PutUserProfileskills (string userId, List<string> body)
-
 
 
 Update profile skills for a user
@@ -6018,7 +5862,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<string>**](string)| Skills |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6028,7 +5871,6 @@ namespace Example
 ## PutUserRoles
 
 > [**UserAuthorization**](UserAuthorization) PutUserRoles (string subjectId, List<string> body)
-
 
 
 Sets the user's roles
@@ -6084,7 +5926,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| User ID |  |
 | **body** | [**List<string>**](string)| List of roles |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6094,7 +5935,6 @@ namespace Example
 ## PutUserRoutingskill
 
 > [**UserRoutingSkill**](UserRoutingSkill) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
-
 
 
 Update routing skill proficiency or state.
@@ -6152,7 +5992,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **skillId** | **string**| skillId |  |
 | **body** | [**UserRoutingSkill**](UserRoutingSkill)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6162,7 +6001,6 @@ namespace Example
 ## PutUserRoutingskillsBulk
 
 > [**UserSkillEntityListing**](UserSkillEntityListing) PutUserRoutingskillsBulk (string userId, List<UserRoutingSkillPost> body)
-
 
 
 Replace all routing skills assigned to a user
@@ -6218,7 +6056,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserRoutingSkillPost>**](UserRoutingSkillPost)| Skill |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6228,7 +6065,6 @@ namespace Example
 ## PutUserRoutingstatus
 
 > [**RoutingStatus**](RoutingStatus) PutUserRoutingstatus (string userId, RoutingStatus body)
-
 
 
 Update the routing status of a user
@@ -6283,7 +6119,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**RoutingStatus**](RoutingStatus)| Routing Status |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6293,7 +6128,6 @@ namespace Example
 ## PutUserState
 
 > [**UserState**](UserState) PutUserState (string userId, UserState body)
-
 
 
 Update user state information.
@@ -6349,7 +6183,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**UserState**](UserState)| User |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6359,7 +6192,6 @@ namespace Example
 ## PutUserStationAssociatedstationStationId
 
 > void PutUserStationAssociatedstationStationId (string userId, string stationId)
-
 
 
 Set associated station
@@ -6413,7 +6245,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **stationId** | **string**| stationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6423,7 +6254,6 @@ void (empty response body)
 ## PutUserStationDefaultstationStationId
 
 > void PutUserStationDefaultstationStationId (string userId, string stationId)
-
 
 
 Set default station
@@ -6479,7 +6309,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **stationId** | **string**| stationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6489,7 +6318,6 @@ void (empty response body)
 ## PutUserVerifier
 
 > [**Verifier**](Verifier) PutUserVerifier (string userId, string verifierId, UpdateVerifierRequest body)
-
 
 
 Update a verifier
@@ -6547,11 +6375,10 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **verifierId** | **string**| Verifier ID |  |
 | **body** | [**UpdateVerifierRequest**](UpdateVerifierRequest)| Verifier Update |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

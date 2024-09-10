@@ -14,13 +14,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFaxSummary**](#GetFaxSummary) | **Get** /api/v2/fax/summary | Get fax summary |
 | [**PutFaxDocument**](#PutFaxDocument) | **Put** /api/v2/fax/documents/{documentId} | Update a fax document. |
 | [**PutFaxSettings**](#PutFaxSettings) | **Put** /api/v2/fax/settings | Update/write organization config for given organization |
-{: class="table table-striped"}
+
 
 
 ## DeleteFaxDocument
 
 > void DeleteFaxDocument (string documentId)
-
 
 
 Delete a fax document.
@@ -72,7 +71,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -82,7 +80,6 @@ void (empty response body)
 ## GetFaxDocument
 
 > [**FaxDocument**](FaxDocument) GetFaxDocument (string documentId)
-
 
 
 Get a document.
@@ -135,7 +132,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -145,7 +141,6 @@ namespace Example
 ## GetFaxDocumentContent
 
 > [**DownloadResponse**](DownloadResponse) GetFaxDocumentContent (string documentId)
-
 
 
 Download a fax document.
@@ -198,7 +193,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -208,7 +202,6 @@ namespace Example
 ## GetFaxDocuments
 
 > [**FaxDocumentEntityListing**](FaxDocumentEntityListing) GetFaxDocuments (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of fax documents.
@@ -263,7 +256,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -273,7 +265,6 @@ namespace Example
 ## GetFaxSettings
 
 > [**FaxConfig**](FaxConfig) GetFaxSettings ()
-
 
 
 Get organization config for given organization
@@ -322,7 +313,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FaxConfig**](FaxConfig)
@@ -331,7 +321,6 @@ This endpoint does require any parameters.
 ## GetFaxSummary
 
 > [**FaxSummary**](FaxSummary) GetFaxSummary ()
-
 
 
 Get fax summary
@@ -380,7 +369,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FaxSummary**](FaxSummary)
@@ -389,7 +377,6 @@ This endpoint does require any parameters.
 ## PutFaxDocument
 
 > [**FaxDocument**](FaxDocument) PutFaxDocument (string documentId, FaxDocument body)
-
 
 
 Update a fax document.
@@ -444,7 +431,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **body** | [**FaxDocument**](FaxDocument)| Document |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -454,7 +440,6 @@ namespace Example
 ## PutFaxSettings
 
 > [**FaxConfig**](FaxConfig) PutFaxSettings (FaxConfig body = null)
-
 
 
 Update/write organization config for given organization
@@ -508,11 +493,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FaxConfig**](FaxConfig)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**FaxConfig**](FaxConfig)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

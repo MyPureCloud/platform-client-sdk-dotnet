@@ -66,13 +66,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyViewVersions**](#PostJourneyViewVersions) | **Post** /api/v2/journey/views/{viewId}/versions | Update a Journey View by ID |
 | [**PostJourneyViews**](#PostJourneyViews) | **Post** /api/v2/journey/views | Create a new Journey View |
 | [**PostJourneyViewsEncodingsValidate**](#PostJourneyViewsEncodingsValidate) | **Post** /api/v2/journey/views/encodings/validate | Validate whether an encoding exist for a label/value combination. |
-{: class="table table-striped"}
+
 
 
 ## DeleteJourneyActionmap
 
 > void DeleteJourneyActionmap (string actionMapId)
-
 
 
 Delete single action map.
@@ -125,7 +124,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionMapId** | **string**| ID of the action map. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -135,7 +133,6 @@ void (empty response body)
 ## DeleteJourneyActiontemplate
 
 > void DeleteJourneyActiontemplate (string actionTemplateId, bool? hardDelete = null)
-
 
 
 Delete a single action template.
@@ -190,7 +187,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionTemplateId** | **string**| ID of the action template. |  |
 | **hardDelete** | **bool?**| Determines whether Action Template should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -200,7 +196,6 @@ void (empty response body)
 ## DeleteJourneyOutcome
 
 > void DeleteJourneyOutcome (string outcomeId)
-
 
 
 Delete an outcome.
@@ -253,7 +248,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **outcomeId** | **string**| ID of the outcome. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -263,7 +257,6 @@ void (empty response body)
 ## DeleteJourneyOutcomesPredictor
 
 > void DeleteJourneyOutcomesPredictor (string predictorId)
-
 
 
 Delete an outcome predictor.
@@ -316,7 +309,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| ID of predictor |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -326,7 +318,6 @@ void (empty response body)
 ## DeleteJourneySegment
 
 > void DeleteJourneySegment (string segmentId)
-
 
 
 Delete a segment.
@@ -379,7 +370,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **segmentId** | **string**| ID of the segment. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -391,12 +381,9 @@ void (empty response body)
 > void DeleteJourneyView (string viewId)
 
 
-
 Delete a Journey View by ID
 
 deletes all versions
-
-DeleteJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -446,7 +433,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **viewId** | **string**| viewId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -456,7 +442,6 @@ void (empty response body)
 ## GetAnalyticsJourneysAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsJourneysAggregatesJob (string jobId)
-
 
 
 Get status for async query for journey aggregates
@@ -512,7 +497,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -522,7 +506,6 @@ namespace Example
 ## GetAnalyticsJourneysAggregatesJobResults
 
 > [**JourneyAsyncAggregateQueryResponse**](JourneyAsyncAggregateQueryResponse) GetAnalyticsJourneysAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -580,7 +563,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -590,7 +572,6 @@ namespace Example
 ## GetExternalcontactsContactJourneySessions
 
 > [**SessionListing**](SessionListing) GetExternalcontactsContactJourneySessions (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
-
 
 
 Retrieve all sessions for a given external contact.
@@ -650,7 +631,6 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **includeMerged** | **bool?**| Indicates whether to return sessions from all external contacts in the merge-set of the given one. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -660,7 +640,6 @@ namespace Example
 ## GetJourneyActionmap
 
 > [**ActionMap**](ActionMap) GetJourneyActionmap (string actionMapId)
-
 
 
 Retrieve a single action map.
@@ -714,7 +693,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionMapId** | **string**| ID of the action map. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -724,7 +702,6 @@ namespace Example
 ## GetJourneyActionmaps
 
 > [**ActionMapListing**](ActionMapListing) GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
-
 
 
 Retrieve all action maps.
@@ -792,7 +769,6 @@ namespace Example
 | **actionMapIds** | [**List<string>**](string)| IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -802,7 +778,6 @@ namespace Example
 ## GetJourneyActionmapsEstimatesJob
 
 > **string** GetJourneyActionmapsEstimatesJob (string jobId)
-
 
 
 Get status of job.
@@ -856,7 +831,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| ID of the job. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -866,7 +840,6 @@ namespace Example
 ## GetJourneyActionmapsEstimatesJobResults
 
 > [**ActionMapEstimateResult**](ActionMapEstimateResult) GetJourneyActionmapsEstimatesJobResults (string jobId)
-
 
 
 Get estimates from completed job.
@@ -920,7 +893,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| ID of the job. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -930,7 +902,6 @@ namespace Example
 ## GetJourneyActiontarget
 
 > [**ActionTarget**](ActionTarget) GetJourneyActiontarget (string actionTargetId)
-
 
 
 Retrieve a single action target.
@@ -984,7 +955,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionTargetId** | **string**| ID of the action target. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -994,7 +964,6 @@ namespace Example
 ## GetJourneyActiontargets
 
 > [**ActionTargetListing**](ActionTargetListing) GetJourneyActiontargets (int? pageNumber = null, int? pageSize = null)
-
 
 
 Retrieve all action targets.
@@ -1050,7 +1019,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1060,7 +1028,6 @@ namespace Example
 ## GetJourneyActiontemplate
 
 > [**ActionTemplate**](ActionTemplate) GetJourneyActiontemplate (string actionTemplateId)
-
 
 
 Retrieve a single action template.
@@ -1114,7 +1081,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionTemplateId** | **string**| ID of the action template. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1124,7 +1090,6 @@ namespace Example
 ## GetJourneyActiontemplates
 
 > [**ActionTemplateListing**](ActionTemplateListing) GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
-
 
 
 Retrieve all action templates.
@@ -1190,7 +1155,6 @@ namespace Example
 | **state** | **string**| Action template state. | [optional] <br />**Values**: Active, Inactive, Deleted |
 | **queryFields** | [**List<string>**](string)| ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1200,7 +1164,6 @@ namespace Example
 ## GetJourneyDeploymentCustomerPing
 
 > [**DeploymentPing**](DeploymentPing) GetJourneyDeploymentCustomerPing (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null)
-
 
 
 Send a ping.
@@ -1259,7 +1222,6 @@ namespace Example
 | **appNamespace** | **string**| Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions | [optional]  |
 | **sessionId** | **string**| UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session | [optional]  |
 | **sinceLastBeaconMilliseconds** | **long?**| How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1269,7 +1231,6 @@ namespace Example
 ## GetJourneyOutcome
 
 > [**Outcome**](Outcome) GetJourneyOutcome (string outcomeId)
-
 
 
 Retrieve a single outcome.
@@ -1323,7 +1284,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **outcomeId** | **string**| ID of the outcome. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1333,7 +1293,6 @@ namespace Example
 ## GetJourneyOutcomes
 
 > [**OutcomeListing**](OutcomeListing) GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
-
 
 
 Retrieve all outcomes.
@@ -1397,7 +1356,6 @@ namespace Example
 | **outcomeIds** | [**List<string>**](string)| IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1407,7 +1365,6 @@ namespace Example
 ## GetJourneyOutcomesAttributionsJob
 
 > [**OutcomeAttributionJobStateResponse**](OutcomeAttributionJobStateResponse) GetJourneyOutcomesAttributionsJob (string jobId)
-
 
 
 Get job status.
@@ -1463,7 +1420,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| ID of the job. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1473,7 +1429,6 @@ namespace Example
 ## GetJourneyOutcomesAttributionsJobResults
 
 > [**OutcomeAttributionResponseListing**](OutcomeAttributionResponseListing) GetJourneyOutcomesAttributionsJobResults (string jobId)
-
 
 
 Get outcome attribution entities from completed job.
@@ -1529,7 +1484,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| ID of the job. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1539,7 +1493,6 @@ namespace Example
 ## GetJourneyOutcomesPredictor
 
 > [**OutcomePredictor**](OutcomePredictor) GetJourneyOutcomesPredictor (string predictorId)
-
 
 
 Retrieve a single outcome predictor.
@@ -1593,7 +1546,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| ID of predictor |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1603,7 +1555,6 @@ namespace Example
 ## GetJourneyOutcomesPredictors
 
 > [**OutcomePredictorListing**](OutcomePredictorListing) GetJourneyOutcomesPredictors ()
-
 
 
 Retrieve all outcome predictors.
@@ -1653,7 +1604,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OutcomePredictorListing**](OutcomePredictorListing)
@@ -1662,7 +1612,6 @@ This endpoint does require any parameters.
 ## GetJourneySegment
 
 > [**JourneySegment**](JourneySegment) GetJourneySegment (string segmentId)
-
 
 
 Retrieve a single segment.
@@ -1716,7 +1665,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **segmentId** | **string**| ID of the segment. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1726,7 +1674,6 @@ namespace Example
 ## GetJourneySegments
 
 > [**SegmentListing**](SegmentListing) GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
-
 
 
 Retrieve all segments.
@@ -1792,7 +1739,6 @@ namespace Example
 | **segmentIds** | [**List<string>**](string)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
 | **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1802,7 +1748,6 @@ namespace Example
 ## GetJourneySession
 
 > [**Session**](Session) GetJourneySession (string sessionId)
-
 
 
 Retrieve a single session.
@@ -1857,7 +1802,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| ID of the session. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1867,7 +1811,6 @@ namespace Example
 ## GetJourneySessionEvents
 
 > [**EventListing**](EventListing) GetJourneySessionEvents (string sessionId, string pageSize = null, string after = null, string eventType = null)
-
 
 
 Retrieve all events for a given session.
@@ -1927,7 +1870,6 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **eventType** | **string**| A comma separated list of journey event types to include in the results. | [optional] <br />**Values**: com.genesys.journey.OutcomeAchievedEvent, com.genesys.journey.SegmentAssignmentEvent, com.genesys.journey.WebActionEvent, com.genesys.journey.WebEvent, com.genesys.journey.AppEvent |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1937,7 +1879,6 @@ namespace Example
 ## GetJourneySessionOutcomescores
 
 > [**OutcomeScoresResult**](OutcomeScoresResult) GetJourneySessionOutcomescores (string sessionId)
-
 
 
 Retrieve latest outcome score associated with a session for all outcomes.
@@ -1991,7 +1932,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| ID of the session. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2003,12 +1943,9 @@ namespace Example
 > [**JourneyView**](JourneyView) GetJourneyView (string viewId)
 
 
-
 Get a Journey View by ID
 
 returns the latest version
-
-GetJourneyView is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2059,7 +1996,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **viewId** | **string**| viewId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2071,10 +2007,7 @@ namespace Example
 > [**JourneyView**](JourneyView) GetJourneyViewVersion (string viewId, string versionId)
 
 
-
 Get a Journey View by ID and version
-
-GetJourneyViewVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2127,7 +2060,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **viewId** | **string**| viewId |  |
 | **versionId** | **string**| versionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2139,12 +2071,9 @@ namespace Example
 > [**JourneyViewJob**](JourneyViewJob) GetJourneyViewVersionJob (string viewId, string journeyVersionId, string jobId)
 
 
-
 Get the job for a journey view version.
 
 used for long descriptions
-
-GetJourneyViewVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2199,7 +2128,6 @@ namespace Example
 | **viewId** | **string**| Journey View Id |  |
 | **journeyVersionId** | **string**| Journey View Version |  |
 | **jobId** | **string**| JobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2211,12 +2139,9 @@ namespace Example
 > [**JourneyViewResult**](JourneyViewResult) GetJourneyViewVersionJobResults (string viewId, string journeyViewVersion, string jobId)
 
 
-
 Get the result of a job for a journey view version.
 
 used for long descriptions
-
-GetJourneyViewVersionJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2271,7 +2196,6 @@ namespace Example
 | **viewId** | **string**| JourneyViewResult id |  |
 | **journeyViewVersion** | **string**| Journey View Version |  |
 | **jobId** | **string**| Id of the executing job |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2283,12 +2207,9 @@ namespace Example
 > [**JourneyViewJob**](JourneyViewJob) GetJourneyViewVersionJobsLatest (string viewId, string journeyVersionId)
 
 
-
 Get the latest job of a journey view version.
 
 used for long descriptions
-
-GetJourneyViewVersionJobsLatest is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2341,7 +2262,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **viewId** | **string**| Journey View Id |  |
 | **journeyVersionId** | **string**| Journey View Version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2350,13 +2270,10 @@ namespace Example
 
 ## GetJourneyViews
 
-> [**JourneyViewListing**](JourneyViewListing) GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null)
-
+> [**JourneyViewListing**](JourneyViewListing) GetJourneyViews (int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
 
 
 Get a list of Journey Views
-
-GetJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2388,11 +2305,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var nameOrCreatedBy = nameOrCreatedBy_example;  // string | Journey View Name or Created By (optional) 
             var expand = expand_example;  // string | Parameter to request additional data to return in Journey payload (optional) 
+            var id = id_example;  // string | Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional) 
 
             try
             { 
                 // Get a list of Journey Views
-                JourneyViewListing result = apiInstance.GetJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand);
+                JourneyViewListing result = apiInstance.GetJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2413,7 +2331,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **nameOrCreatedBy** | **string**| Journey View Name or Created By | [optional]  |
 | **expand** | **string**| Parameter to request additional data to return in Journey payload | [optional] <br />**Values**: charts |
-{: class="table table-striped"}
+| **id** | **string**| Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. | [optional]  |
 
 ### Return type
 
@@ -2423,7 +2341,6 @@ namespace Example
 ## GetJourneyViewsEventdefinition
 
 > [**JourneyEventDefinition**](JourneyEventDefinition) GetJourneyViewsEventdefinition (string eventDefinitionId)
-
 
 
 Get an Event Definition
@@ -2479,7 +2396,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eventDefinitionId** | **string**| Event Definition ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2489,7 +2405,6 @@ namespace Example
 ## GetJourneyViewsEventdefinitions
 
 > [**JourneyEventDefinitionListing**](JourneyEventDefinitionListing) GetJourneyViewsEventdefinitions ()
-
 
 
 Get a list of Event Definitions
@@ -2541,7 +2456,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**JourneyEventDefinitionListing**](JourneyEventDefinitionListing)
@@ -2552,10 +2466,7 @@ This endpoint does require any parameters.
 > [**JourneyViewJobListing**](JourneyViewJobListing) GetJourneyViewsJobs (int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
 
 
-
 Get the jobs for an organization.
-
-GetJourneyViewsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -2612,7 +2523,6 @@ namespace Example
 | **pageSize** | **int?**| Max number of entities to return | [optional] [default to 25] |
 | **interval** | **string**| An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. | [optional]  |
 | **statuses** | **string**| Job statuses to filter for | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2622,7 +2532,6 @@ namespace Example
 ## PatchJourneyActionmap
 
 > [**ActionMap**](ActionMap) PatchJourneyActionmap (string actionMapId, PatchActionMap body = null)
-
 
 
 Update single action map.
@@ -2678,7 +2587,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionMapId** | **string**| ID of the action map. |  |
 | **body** | [**PatchActionMap**](PatchActionMap)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2688,7 +2596,6 @@ namespace Example
 ## PatchJourneyActiontarget
 
 > [**ActionTarget**](ActionTarget) PatchJourneyActiontarget (string actionTargetId, PatchActionTarget body = null)
-
 
 
 Update a single action target.
@@ -2744,7 +2651,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionTargetId** | **string**| ID of the action target. |  |
 | **body** | [**PatchActionTarget**](PatchActionTarget)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2754,7 +2660,6 @@ namespace Example
 ## PatchJourneyActiontemplate
 
 > [**ActionTemplate**](ActionTemplate) PatchJourneyActiontemplate (string actionTemplateId, PatchActionTemplate body = null)
-
 
 
 Update a single action template.
@@ -2810,7 +2715,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionTemplateId** | **string**| ID of the action template. |  |
 | **body** | [**PatchActionTemplate**](PatchActionTemplate)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2820,7 +2724,6 @@ namespace Example
 ## PatchJourneyOutcome
 
 > [**Outcome**](Outcome) PatchJourneyOutcome (string outcomeId, PatchOutcome body = null)
-
 
 
 Update an outcome.
@@ -2876,7 +2779,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **outcomeId** | **string**| ID of the outcome. |  |
 | **body** | [**PatchOutcome**](PatchOutcome)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2886,7 +2788,6 @@ namespace Example
 ## PatchJourneySegment
 
 > [**JourneySegment**](JourneySegment) PatchJourneySegment (string segmentId, PatchSegment body = null)
-
 
 
 Update a segment.
@@ -2942,7 +2843,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **segmentId** | **string**| ID of the segment. |  |
 | **body** | [**PatchSegment**](PatchSegment)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2952,7 +2852,6 @@ namespace Example
 ## PostAnalyticsJourneysAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsJourneysAggregatesJobs (JourneyAsyncAggregationQuery body)
-
 
 
 Query for journey aggregates asynchronously
@@ -3008,7 +2907,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**JourneyAsyncAggregationQuery**](JourneyAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3018,7 +2916,6 @@ namespace Example
 ## PostAnalyticsJourneysAggregatesQuery
 
 > [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse) PostAnalyticsJourneysAggregatesQuery (JourneyAggregationQuery body)
-
 
 
 Query for journey aggregates
@@ -3072,7 +2969,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**JourneyAggregationQuery**](JourneyAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3082,7 +2978,6 @@ namespace Example
 ## PostJourneyActionmaps
 
 > [**ActionMap**](ActionMap) PostJourneyActionmaps (ActionMap body = null)
-
 
 
 Create an action map.
@@ -3136,7 +3031,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ActionMap**](ActionMap)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3146,7 +3040,6 @@ namespace Example
 ## PostJourneyActionmapsEstimatesJobs
 
 > [**EstimateJobAsyncResponse**](EstimateJobAsyncResponse) PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body)
-
 
 
 Query for estimates
@@ -3200,7 +3093,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ActionMapEstimateRequest**](ActionMapEstimateRequest)| audience estimator request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3210,7 +3102,6 @@ namespace Example
 ## PostJourneyActiontemplates
 
 > [**ActionTemplate**](ActionTemplate) PostJourneyActiontemplates (ActionTemplate body = null)
-
 
 
 Create a single action template.
@@ -3264,7 +3155,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ActionTemplate**](ActionTemplate)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3274,7 +3164,6 @@ namespace Example
 ## PostJourneyDeploymentActionevent
 
 > void PostJourneyDeploymentActionevent (string deploymentId, ActionEventRequest body)
-
 
 
 Sends an action event, which is used for changing the state of actions that have been offered to the user.
@@ -3322,7 +3211,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The ID of the deployment sending the beacon. |  |
 | **body** | [**ActionEventRequest**](ActionEventRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3332,7 +3220,6 @@ void (empty response body)
 ## PostJourneyDeploymentAppevents
 
 > [**AppEventResponse**](AppEventResponse) PostJourneyDeploymentAppevents (string deploymentId, AppEventRequest body = null)
-
 
 
 Send a journey app event, used for tracking customer activity on an application.
@@ -3381,7 +3268,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The ID of the deployment sending the app event. |  |
 | **body** | [**AppEventRequest**](AppEventRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3391,7 +3277,6 @@ namespace Example
 ## PostJourneyDeploymentWebevents
 
 > [**WebEventResponse**](WebEventResponse) PostJourneyDeploymentWebevents (string deploymentId, WebEventRequest body = null)
-
 
 
 Send a journey web event, used for tracking customer activity on a website.
@@ -3440,7 +3325,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The ID of the deployment sending the web event. |  |
 | **body** | [**WebEventRequest**](WebEventRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3450,7 +3334,6 @@ namespace Example
 ## PostJourneyFlowsPathsQuery
 
 > [**FlowPaths**](FlowPaths) PostJourneyFlowsPathsQuery (FlowPathsQuery body = null)
-
 
 
 Query for flow paths.
@@ -3504,7 +3387,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowPathsQuery**](FlowPathsQuery)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3514,7 +3396,6 @@ namespace Example
 ## PostJourneyOutcomes
 
 > [**Outcome**](Outcome) PostJourneyOutcomes (OutcomeRequest body = null)
-
 
 
 Create an outcome.
@@ -3568,7 +3449,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutcomeRequest**](OutcomeRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3578,7 +3458,6 @@ namespace Example
 ## PostJourneyOutcomesAttributionsJobs
 
 > [**OutcomeAttributionAsyncResponse**](OutcomeAttributionAsyncResponse) PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null)
-
 
 
 Create Outcome Attributions
@@ -3634,7 +3513,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutcomeAttributionListing**](OutcomeAttributionListing)| outcome attribution request | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3644,7 +3522,6 @@ namespace Example
 ## PostJourneyOutcomesPredictors
 
 > [**OutcomePredictor**](OutcomePredictor) PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null)
-
 
 
 Create an outcome predictor.
@@ -3698,7 +3575,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutcomePredictorRequest**](OutcomePredictorRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3708,7 +3584,6 @@ namespace Example
 ## PostJourneySegments
 
 > [**JourneySegment**](JourneySegment) PostJourneySegments (JourneySegmentRequest body = null)
-
 
 
 Create a segment.
@@ -3762,7 +3637,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**JourneySegmentRequest**](JourneySegmentRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3774,12 +3648,9 @@ namespace Example
 > [**JourneyViewJob**](JourneyViewJob) PostJourneyViewVersionJobs (string viewId, string journeyVersionId)
 
 
-
 Submit a job request for a journey view version.
 
 used for long descriptions
-
-PostJourneyViewVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3832,7 +3703,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **viewId** | **string**| Journey View Id |  |
 | **journeyVersionId** | **string**| Journey View Version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3844,12 +3714,9 @@ namespace Example
 > [**JourneyView**](JourneyView) PostJourneyViewVersions (string viewId, JourneyView body)
 
 
-
 Update a Journey View by ID
 
 creates a new version
-
-PostJourneyViewVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3902,7 +3769,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **viewId** | **string**| viewId |  |
 | **body** | [**JourneyView**](JourneyView)| JourneyView |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3914,10 +3780,7 @@ namespace Example
 > [**JourneyView**](JourneyView) PostJourneyViews (JourneyView body)
 
 
-
 Create a new Journey View
-
-PostJourneyViews is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -3968,7 +3831,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**JourneyView**](JourneyView)| JourneyView |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3978,7 +3840,6 @@ namespace Example
 ## PostJourneyViewsEncodingsValidate
 
 > [**EntityListing**](EntityListing) PostJourneyViewsEncodingsValidate (List<Label> body = null)
-
 
 
 Validate whether an encoding exist for a label/value combination.
@@ -4036,11 +3897,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<Label>**](Label)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**EntityListing**](EntityListing)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -14,14 +14,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLanguagesTranslationsOrganization**](#GetLanguagesTranslationsOrganization) | **Get** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
 | [**GetLanguagesTranslationsUser**](#GetLanguagesTranslationsUser) | **Get** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
 | [**PostLanguages**](#PostLanguages) | **Post** /api/v2/languages | Create Language (Deprecated) |
-{: class="table table-striped"}
+
 
 
 ## DeleteLanguage
 
 > void DeleteLanguage (string languageId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete Language (Deprecated)
 
@@ -75,7 +77,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Language ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -86,7 +87,9 @@ void (empty response body)
 
 > [**Language**](Language) GetLanguage (string languageId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get Language (Deprecated)
 
@@ -141,7 +144,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **languageId** | **string**| Language ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -152,7 +154,9 @@ namespace Example
 
 > [**LanguageEntityListing**](LanguageEntityListing) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the list of supported languages. (Deprecated)
 
@@ -213,7 +217,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -223,7 +226,6 @@ namespace Example
 ## GetLanguagesTranslations
 
 > [**AvailableTranslations**](AvailableTranslations) GetLanguagesTranslations ()
-
 
 
 Get all available languages for translation
@@ -272,7 +274,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AvailableTranslations**](AvailableTranslations)
@@ -281,7 +282,6 @@ This endpoint does require any parameters.
 ## GetLanguagesTranslationsBuiltin
 
 > **Dictionary&lt;string, Object&gt;** GetLanguagesTranslationsBuiltin (string language)
-
 
 
 Get the builtin translation for a language
@@ -334,7 +334,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **language** | **string**| The language of the builtin translation to retrieve |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -344,7 +343,6 @@ namespace Example
 ## GetLanguagesTranslationsOrganization
 
 > **Dictionary&lt;string, Object&gt;** GetLanguagesTranslationsOrganization (string language)
-
 
 
 Get effective translation for an organization by language
@@ -397,7 +395,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **language** | **string**| The language of the translation to retrieve for the organization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -407,7 +404,6 @@ namespace Example
 ## GetLanguagesTranslationsUser
 
 > **Dictionary&lt;string, Object&gt;** GetLanguagesTranslationsUser (string userId)
-
 
 
 Get effective language translation for a user
@@ -460,7 +456,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The user id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -471,7 +466,9 @@ namespace Example
 
 > [**Language**](Language) PostLanguages (Language body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create Language (Deprecated)
 
@@ -526,11 +523,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Language**](Language)| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Language**](Language)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

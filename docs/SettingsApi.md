@@ -14,13 +14,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchSettingsExecutiondata**](#PatchSettingsExecutiondata) | **Patch** /api/v2/settings/executiondata | Edit the execution history on off setting. |
 | [**PatchUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PatchUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Patch** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Update agent auto answer settings |
 | [**PutUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PutUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Put** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Set agent auto answer settings |
-{: class="table table-striped"}
+
 
 
 ## DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > void DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
-
 
 
 Delete agent auto answer settings
@@ -73,7 +72,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -83,7 +81,6 @@ void (empty response body)
 ## GetEmailsSettings
 
 > [**EmailSettings**](EmailSettings) GetEmailsSettings ()
-
 
 
 Get email Contact Center settings
@@ -133,7 +130,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EmailSettings**](EmailSettings)
@@ -144,12 +140,9 @@ This endpoint does require any parameters.
 > [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse) GetSettingsExecutiondata ()
 
 
-
 Get the execution history enabled setting.
 
 Get the execution history enabled setting.
-
-GetSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -196,7 +189,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse)
@@ -205,7 +197,6 @@ This endpoint does require any parameters.
 ## GetUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) GetUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
-
 
 
 Get agent auto answer settings
@@ -259,7 +250,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -269,7 +259,6 @@ namespace Example
 ## PatchEmailsSettings
 
 > [**EmailSettings**](EmailSettings) PatchEmailsSettings (EmailSettings body = null)
-
 
 
 Patch email Contact Center settings
@@ -323,7 +312,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**EmailSettings**](EmailSettings)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -335,12 +323,9 @@ namespace Example
 > [**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse) PatchSettingsExecutiondata (ExecutionDataSettingsRequest body)
 
 
-
 Edit the execution history on off setting.
 
 Edit the execution history on off setting.
-
-PatchSettingsExecutiondata is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -391,7 +376,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest)| New Execution Data Setting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -401,7 +385,6 @@ namespace Example
 ## PatchUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) PatchUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
-
 
 
 Update agent auto answer settings
@@ -457,7 +440,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
 | **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -467,7 +449,6 @@ namespace Example
 ## PutUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) PutUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
-
 
 
 Set agent auto answer settings
@@ -523,11 +504,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
 | **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

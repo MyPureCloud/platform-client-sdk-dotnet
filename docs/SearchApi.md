@@ -31,13 +31,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersSearchQueuemembersManage**](#PostUsersSearchQueuemembersManage) | **Post** /api/v2/users/search/queuemembers/manage | Search manage queue member |
 | [**PostUsersSearchTeamsAssign**](#PostUsersSearchTeamsAssign) | **Post** /api/v2/users/search/teams/assign | Search users assigned to teams |
 | [**PostVoicemailSearch**](#PostVoicemailSearch) | **Post** /api/v2/voicemail/search | Search voicemails |
-{: class="table table-striped"}
+
 
 
 ## GetDocumentationGknSearch
 
 > [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse) GetDocumentationGknSearch (string q64)
-
 
 
 Search gkn documentation using the q64 value returned from a previous search
@@ -84,7 +83,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -94,7 +92,6 @@ namespace Example
 ## GetDocumentationSearch
 
 > [**DocumentationSearchResponse**](DocumentationSearchResponse) GetDocumentationSearch (string q64)
-
 
 
 Search documentation using the q64 value returned from a previous search
@@ -141,7 +138,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -151,7 +147,6 @@ namespace Example
 ## GetGroupsSearch
 
 > [**GroupsSearchResponse**](GroupsSearchResponse) GetGroupsSearch (string q64, List<string> expand = null)
-
 
 
 Search groups using the q64 value returned from a previous search
@@ -206,7 +201,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| expand | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -216,7 +210,6 @@ namespace Example
 ## GetLocationsSearch
 
 > [**LocationsSearchResponse**](LocationsSearchResponse) GetLocationsSearch (string q64, List<string> expand = null)
-
 
 
 Search locations using the q64 value returned from a previous search
@@ -271,7 +264,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| Provides more details about a specified resource | [optional] <br />**Values**: images, addressVerificationDetails |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -281,7 +273,6 @@ namespace Example
 ## GetSearch
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearch (string q64, List<string> expand = null, bool? profile = null)
-
 
 
 Search using the q64 value returned from a previous search.
@@ -339,7 +330,6 @@ namespace Example
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -349,7 +339,6 @@ namespace Example
 ## GetSearchSuggest
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
-
 
 
 Suggest resources using the q64 value returned from a previous suggest query.
@@ -407,7 +396,6 @@ namespace Example
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -417,7 +405,6 @@ namespace Example
 ## GetUsersSearch
 
 > [**UsersSearchResponse**](UsersSearchResponse) GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
-
 
 
 Search users using the q64 value returned from a previous search
@@ -475,7 +462,6 @@ namespace Example
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| expand | [optional]  |
 | **integrationPresenceSource** | **string**| integrationPresenceSource | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -485,7 +471,6 @@ namespace Example
 ## GetVoicemailSearch
 
 > [**VoicemailsSearchResponse**](VoicemailsSearchResponse) GetVoicemailSearch (string q64, List<string> expand = null)
-
 
 
 Search voicemails using the q64 value returned from a previous search
@@ -540,7 +525,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| expand | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -550,7 +534,6 @@ namespace Example
 ## PostAnalyticsConversationsTranscriptsQuery
 
 > [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse) PostAnalyticsConversationsTranscriptsQuery (TranscriptConversationDetailSearchRequest body)
-
 
 
 Search resources.
@@ -604,7 +587,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptConversationDetailSearchRequest**](TranscriptConversationDetailSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -614,7 +596,6 @@ namespace Example
 ## PostConversationsParticipantsAttributesSearch
 
 > [**JsonCursorSearchResponse**](JsonCursorSearchResponse) PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
-
 
 
 Search conversations
@@ -668,7 +649,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -678,7 +658,6 @@ namespace Example
 ## PostDocumentationAllSearch
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostDocumentationAllSearch (DocumentationV2SearchRequest body)
-
 
 
 Search all documents
@@ -727,7 +706,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DocumentationV2SearchRequest**](DocumentationV2SearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -737,7 +715,6 @@ namespace Example
 ## PostDocumentationGknSearch
 
 > [**GKNDocumentationSearchResponse**](GKNDocumentationSearchResponse) PostDocumentationGknSearch (GKNDocumentationSearchRequest body)
-
 
 
 Search gkn documentation
@@ -784,7 +761,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GKNDocumentationSearchRequest**](GKNDocumentationSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -794,7 +770,6 @@ namespace Example
 ## PostDocumentationSearch
 
 > [**DocumentationSearchResponse**](DocumentationSearchResponse) PostDocumentationSearch (DocumentationSearchRequest body)
-
 
 
 Search documentation
@@ -841,7 +816,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DocumentationSearchRequest**](DocumentationSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -851,7 +825,6 @@ namespace Example
 ## PostGroupsSearch
 
 > [**GroupsSearchResponse**](GroupsSearchResponse) PostGroupsSearch (GroupSearchRequest body)
-
 
 
 Search groups
@@ -904,7 +877,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GroupSearchRequest**](GroupSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -915,7 +887,9 @@ namespace Example
 
 > [**KnowledgeSearchResponse**](KnowledgeSearchResponse) PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Search Documents
 
@@ -970,7 +944,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeSearchRequest**](KnowledgeSearchRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -980,7 +953,6 @@ namespace Example
 ## PostLocationsSearch
 
 > [**LocationsSearchResponse**](LocationsSearchResponse) PostLocationsSearch (LocationSearchRequest body)
-
 
 
 Search locations
@@ -1033,7 +1005,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LocationSearchRequest**](LocationSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1043,7 +1014,6 @@ namespace Example
 ## PostSearch
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostSearch (SearchRequest body, bool? profile = null)
-
 
 
 Search resources.
@@ -1099,7 +1069,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SearchRequest**](SearchRequest)| Search request options |  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1109,7 +1078,6 @@ namespace Example
 ## PostSearchSuggest
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
-
 
 
 Suggest resources.
@@ -1165,7 +1133,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SuggestSearchRequest**](SuggestSearchRequest)| Search request options |  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1175,7 +1142,6 @@ namespace Example
 ## PostSpeechandtextanalyticsTranscriptsSearch
 
 > [**JsonSearchResponse**](JsonSearchResponse) PostSpeechandtextanalyticsTranscriptsSearch (TranscriptSearchRequest body)
-
 
 
 Search resources.
@@ -1230,7 +1196,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptSearchRequest**](TranscriptSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1240,7 +1205,6 @@ namespace Example
 ## PostTeamsSearch
 
 > [**TeamsSearchResponse**](TeamsSearchResponse) PostTeamsSearch (TeamSearchRequest body)
-
 
 
 Search resources.
@@ -1294,7 +1258,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TeamSearchRequest**](TeamSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1304,7 +1267,6 @@ namespace Example
 ## PostUsersSearch
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearch (UserSearchRequest body)
-
 
 
 Search users
@@ -1358,7 +1320,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1368,7 +1329,6 @@ namespace Example
 ## PostUsersSearchConversationTarget
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearchConversationTarget (UserSearchRequest body)
-
 
 
 Search users as conversation targets
@@ -1424,7 +1384,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1434,7 +1393,6 @@ namespace Example
 ## PostUsersSearchQueuemembersManage
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearchQueuemembersManage (UserSearchRequest body)
-
 
 
 Search manage queue member
@@ -1491,7 +1449,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1501,7 +1458,6 @@ namespace Example
 ## PostUsersSearchTeamsAssign
 
 > [**UsersSearchResponse**](UsersSearchResponse) PostUsersSearchTeamsAssign (UserSearchRequest body)
-
 
 
 Search users assigned to teams
@@ -1555,7 +1511,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserSearchRequest**](UserSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1565,7 +1520,6 @@ namespace Example
 ## PostVoicemailSearch
 
 > [**VoicemailsSearchResponse**](VoicemailsSearchResponse) PostVoicemailSearch (VoicemailSearchRequest body)
-
 
 
 Search voicemails
@@ -1618,11 +1572,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**VoicemailSearchRequest**](VoicemailSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

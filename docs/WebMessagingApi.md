@@ -7,13 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetWebmessagingMessages**](#GetWebmessagingMessages) | **Get** /api/v2/webmessaging/messages | Get the messages for a web messaging session. |
-{: class="table table-striped"}
+
 
 
 ## GetWebmessagingMessages
 
 > [**WebMessagingMessageEntityList**](WebMessagingMessageEntityList) GetWebmessagingMessages (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get the messages for a web messaging session.
@@ -62,11 +61,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
 [**WebMessagingMessageEntityList**](WebMessagingMessageEntityList)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

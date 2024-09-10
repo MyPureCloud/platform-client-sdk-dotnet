@@ -11,13 +11,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWidgetsDeployments**](#GetWidgetsDeployments) | **Get** /api/v2/widgets/deployments | List Widget deployments |
 | [**PostWidgetsDeployments**](#PostWidgetsDeployments) | **Post** /api/v2/widgets/deployments | Create Widget deployment |
 | [**PutWidgetsDeployment**](#PutWidgetsDeployment) | **Put** /api/v2/widgets/deployments/{deploymentId} | Update a Widget deployment |
-{: class="table table-striped"}
+
 
 
 ## DeleteWidgetsDeployment
 
 > void DeleteWidgetsDeployment (string deploymentId)
-
 
 
 Delete a Widget deployment
@@ -71,7 +70,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Widget Config Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -81,7 +79,6 @@ void (empty response body)
 ## GetWidgetsDeployment
 
 > [**WidgetDeployment**](WidgetDeployment) GetWidgetsDeployment (string deploymentId)
-
 
 
 Get a Widget deployment
@@ -136,7 +133,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Widget Config Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -146,7 +142,6 @@ namespace Example
 ## GetWidgetsDeployments
 
 > [**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing) GetWidgetsDeployments ()
-
 
 
 List Widget deployments
@@ -197,7 +192,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing)
@@ -206,7 +200,6 @@ This endpoint does require any parameters.
 ## PostWidgetsDeployments
 
 > [**WidgetDeployment**](WidgetDeployment) PostWidgetsDeployments (WidgetDeployment body)
-
 
 
 Create Widget deployment
@@ -261,7 +254,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WidgetDeployment**](WidgetDeployment)| Deployment |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -271,7 +263,6 @@ namespace Example
 ## PutWidgetsDeployment
 
 > [**WidgetDeployment**](WidgetDeployment) PutWidgetsDeployment (string deploymentId, WidgetDeployment body)
-
 
 
 Update a Widget deployment
@@ -328,11 +319,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| Widget Config Id |  |
 | **body** | [**WidgetDeployment**](WidgetDeployment)| Deployment |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**WidgetDeployment**](WidgetDeployment)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

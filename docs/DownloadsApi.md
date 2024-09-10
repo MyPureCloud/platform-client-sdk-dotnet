@@ -7,13 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetDownload**](#GetDownload) | **Get** /api/v2/downloads/{downloadId} | Issues a redirect to a signed secure download URL for specified download |
-{: class="table table-striped"}
+
 
 
 ## GetDownload
 
 > [**UrlResponse**](UrlResponse) GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
-
 
 
 Issues a redirect to a signed secure download URL for specified download
@@ -74,11 +73,10 @@ namespace Example
 | **contentDisposition** | **string**|  | [optional]  |
 | **issueRedirect** | **bool?**|  | [optional] [default to true] |
 | **redirectToAuth** | **bool?**|  | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UrlResponse**](UrlResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

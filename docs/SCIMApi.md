@@ -36,13 +36,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutScimUser**](#PutScimUser) | **Put** /api/v2/scim/users/{userId} | Replace a user |
 | [**PutScimV2Group**](#PutScimV2Group) | **Put** /api/v2/scim/v2/groups/{groupId} | Replace a group |
 | [**PutScimV2User**](#PutScimV2User) | **Put** /api/v2/scim/v2/users/{userId} | Replace a user |
-{: class="table table-striped"}
+
 
 
 ## DeleteScimUser
 
 > **Object** DeleteScimUser (string userId, string ifMatch = null)
-
 
 
 Delete a user
@@ -98,7 +97,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -108,7 +106,6 @@ namespace Example
 ## DeleteScimV2User
 
 > **Object** DeleteScimV2User (string userId, string ifMatch = null)
-
 
 
 Delete a user
@@ -164,7 +161,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -174,7 +170,6 @@ namespace Example
 ## GetScimGroup
 
 > [**ScimV2Group**](ScimV2Group) GetScimGroup (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
-
 
 
 Get a group
@@ -234,7 +229,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -244,7 +238,6 @@ namespace Example
 ## GetScimGroups
 
 > [**ScimGroupListResponse**](ScimGroupListResponse) GetScimGroups (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
-
 
 
 Get a list of groups
@@ -306,7 +299,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **filter** | **string**| Filters results. If nothing is specified, returns all groups. Examples of valid values: \&quot;id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\&quot;, \&quot;displayname eq Sales\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -316,7 +308,6 @@ namespace Example
 ## GetScimResourcetype
 
 > [**ScimConfigResourceType**](ScimConfigResourceType) GetScimResourcetype (string resourceType)
-
 
 
 Get a resource type
@@ -369,7 +360,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **resourceType** | **string**| The type of resource. Returned with GET /api/v2/scim/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType, Schema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -379,7 +369,6 @@ namespace Example
 ## GetScimResourcetypes
 
 > [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse) GetScimResourcetypes ()
-
 
 
 Get a list of resource types
@@ -428,7 +417,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse)
@@ -437,7 +425,6 @@ This endpoint does require any parameters.
 ## GetScimSchema
 
 > [**ScimV2SchemaDefinition**](ScimV2SchemaDefinition) GetScimSchema (string schemaId)
-
 
 
 Get a SCIM schema
@@ -490,7 +477,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| The ID of a schema. Returned with GET /api/v2/scim/schemas. | <br />**Values**: urn:ietf:params:scim:schemas:core:2.0:User, urn:ietf:params:scim:schemas:core:2.0:Group, urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig, urn:ietf:params:scim:schemas:core:2.0:ResourceType, urn:ietf:params:scim:schemas:core:2.0:Schema, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -500,7 +486,6 @@ namespace Example
 ## GetScimSchemas
 
 > [**ScimV2SchemaListResponse**](ScimV2SchemaListResponse) GetScimSchemas (string filter = null)
-
 
 
 Get a list of SCIM schemas
@@ -553,7 +538,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **filter** | **string**| Filtered results are invalid and return 403 Unauthorized. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -563,7 +547,6 @@ namespace Example
 ## GetScimServiceproviderconfig
 
 > [**ScimServiceProviderConfig**](ScimServiceProviderConfig) GetScimServiceproviderconfig (string ifNoneMatch = null)
-
 
 
 Get a service provider's configuration
@@ -616,7 +599,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -626,7 +608,6 @@ namespace Example
 ## GetScimUser
 
 > [**ScimV2User**](ScimV2User) GetScimUser (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
-
 
 
 Get a user
@@ -685,7 +666,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -695,7 +675,6 @@ namespace Example
 ## GetScimUsers
 
 > [**ScimUserListResponse**](ScimUserListResponse) GetScimUsers (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
-
 
 
 Get a list of users
@@ -758,7 +737,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **filter** | **string**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;, \&quot;employeeNumber eq 9876543210\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -768,7 +746,6 @@ namespace Example
 ## GetScimV2Group
 
 > [**ScimV2Group**](ScimV2Group) GetScimV2Group (string groupId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
-
 
 
 Get a group
@@ -828,7 +805,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -838,7 +814,6 @@ namespace Example
 ## GetScimV2Groups
 
 > [**ScimGroupListResponse**](ScimGroupListResponse) GetScimV2Groups (string filter, int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null)
-
 
 
 Get a list of groups
@@ -900,7 +875,6 @@ namespace Example
 | **count** | **int?**| The requested number of items per page. A value of 0 returns \&quot;totalResults\&quot;. A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \&quot;excludedAttributes\&quot; or \&quot;attributes\&quot; query parameters to exclude or only include secondary lookup values such as \&quot;externalId\&quot;,  \&quot;roles\&quot;, \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\&quot;, or \&quot;urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\&quot;. | [optional] [default to 25] |
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns \&quot;id\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, displayName, members, externalId, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:id, urn:ietf:params:scim:schemas:core:2.0:Group:meta, urn:ietf:params:scim:schemas:core:2.0:Group:meta.version, urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:Group:displayName, urn:ietf:params:scim:schemas:core:2.0:Group:members, urn:ietf:params:scim:schemas:core:2.0:Group:externalId |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -910,7 +884,6 @@ namespace Example
 ## GetScimV2Resourcetype
 
 > [**ScimConfigResourceType**](ScimConfigResourceType) GetScimV2Resourcetype (string resourceType)
-
 
 
 Get a resource type
@@ -963,7 +936,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **resourceType** | **string**| The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. | <br />**Values**: User, Group, ServiceProviderConfig, ResourceType, Schema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -973,7 +945,6 @@ namespace Example
 ## GetScimV2Resourcetypes
 
 > [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse) GetScimV2Resourcetypes ()
-
 
 
 Get a list of resource types
@@ -1022,7 +993,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse)
@@ -1031,7 +1001,6 @@ This endpoint does require any parameters.
 ## GetScimV2Schema
 
 > [**ScimV2SchemaDefinition**](ScimV2SchemaDefinition) GetScimV2Schema (string schemaId)
-
 
 
 Get a SCIM schema
@@ -1084,7 +1053,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| The ID of a schema. Returned with GET /api/v2/scim/v2/schemas. | <br />**Values**: urn:ietf:params:scim:schemas:core:2.0:User, urn:ietf:params:scim:schemas:core:2.0:Group, urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig, urn:ietf:params:scim:schemas:core:2.0:ResourceType, urn:ietf:params:scim:schemas:core:2.0:Schema, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1094,7 +1062,6 @@ namespace Example
 ## GetScimV2Schemas
 
 > [**ScimV2SchemaListResponse**](ScimV2SchemaListResponse) GetScimV2Schemas (string filter = null)
-
 
 
 Get a list of SCIM schemas
@@ -1147,7 +1114,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **filter** | **string**| Filtered results are invalid and return 403 Unauthorized. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1157,7 +1123,6 @@ namespace Example
 ## GetScimV2Serviceproviderconfig
 
 > [**ScimServiceProviderConfig**](ScimServiceProviderConfig) GetScimV2Serviceproviderconfig (string ifNoneMatch = null)
-
 
 
 Get a service provider's configuration
@@ -1210,7 +1175,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1220,7 +1184,6 @@ namespace Example
 ## GetScimV2User
 
 > [**ScimV2User**](ScimV2User) GetScimV2User (string userId, List<string> attributes = null, List<string> excludedAttributes = null, string ifNoneMatch = null)
-
 
 
 Get a user
@@ -1279,7 +1242,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **ifNoneMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1289,7 +1251,6 @@ namespace Example
 ## GetScimV2Users
 
 > [**ScimUserListResponse**](ScimUserListResponse) GetScimV2Users (int? startIndex = null, int? count = null, List<string> attributes = null, List<string> excludedAttributes = null, string filter = null)
-
 
 
 Get a list of users
@@ -1352,7 +1313,6 @@ namespace Example
 | **attributes** | [**List<string>**](string)| Indicates which attributes to include. Returns these attributes and the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;attributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **excludedAttributes** | [**List<string>**](string)| Indicates which attributes to exclude. Returns the default attributes minus \&quot;excludedAttributes\&quot;. Always returns the \&quot;id\&quot;, \&quot;userName\&quot;, \&quot;active\&quot;, and \&quot;meta\&quot; attributes. Use \&quot;excludedAttributes\&quot; to avoid expensive secondary calls for the default attributes. | [optional] <br />**Values**: id, userName, displayName, title, active, externalId, phoneNumbers, emails, groups, roles, meta, meta.version, meta.lastModified, urn:ietf:params:scim:schemas:core:2.0:User:id, urn:ietf:params:scim:schemas:core:2.0:User:userName, urn:ietf:params:scim:schemas:core:2.0:User:displayName, urn:ietf:params:scim:schemas:core:2.0:User:title, urn:ietf:params:scim:schemas:core:2.0:User:active, urn:ietf:params:scim:schemas:core:2.0:User:externalId, urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers, urn:ietf:params:scim:schemas:core:2.0:User:emails, urn:ietf:params:scim:schemas:core:2.0:User:groups, urn:ietf:params:scim:schemas:core:2.0:User:roles, urn:ietf:params:scim:schemas:core:2.0:User:meta, urn:ietf:params:scim:schemas:core:2.0:User:meta.version, urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value, urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages, urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds |
 | **filter** | **string**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \&quot;id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\&quot;, \&quot;userName eq search@sample.org\&quot;, \&quot;manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\&quot;, \&quot;email eq search@sample.org\&quot;, \&quot;division eq divisionName\&quot;, \&quot;externalId eq 167844\&quot;, \&quot;active eq false\&quot;, \&quot;employeeNumber eq 9876543210\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1362,7 +1322,6 @@ namespace Example
 ## PatchScimGroup
 
 > [**ScimV2Group**](ScimV2Group) PatchScimGroup (string groupId, ScimV2PatchRequest body, string ifMatch = null)
-
 
 
 Modify a group
@@ -1420,7 +1379,6 @@ namespace Example
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1430,7 +1388,6 @@ namespace Example
 ## PatchScimUser
 
 > [**ScimV2User**](ScimV2User) PatchScimUser (string userId, ScimV2PatchRequest body, string ifMatch = null)
-
 
 
 Modify a user
@@ -1494,7 +1451,6 @@ namespace Example
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a user. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1504,7 +1460,6 @@ namespace Example
 ## PatchScimV2Group
 
 > [**ScimV2Group**](ScimV2Group) PatchScimV2Group (string groupId, ScimV2PatchRequest body, string ifMatch = null)
-
 
 
 Modify a group
@@ -1562,7 +1517,6 @@ namespace Example
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1572,7 +1526,6 @@ namespace Example
 ## PatchScimV2User
 
 > [**ScimV2User**](ScimV2User) PatchScimV2User (string userId, ScimV2PatchRequest body, string ifMatch = null)
-
 
 
 Modify a user
@@ -1636,7 +1589,6 @@ namespace Example
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a user. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1646,7 +1598,6 @@ namespace Example
 ## PostScimUsers
 
 > [**ScimV2User**](ScimV2User) PostScimUsers (ScimV2CreateUser body)
-
 
 
 Create a user
@@ -1705,7 +1656,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ScimV2CreateUser**](ScimV2CreateUser)| The information used to create a user. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1715,7 +1665,6 @@ namespace Example
 ## PostScimV2Users
 
 > [**ScimV2User**](ScimV2User) PostScimV2Users (ScimV2CreateUser body)
-
 
 
 Create a user
@@ -1774,7 +1723,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ScimV2CreateUser**](ScimV2CreateUser)| The information used to create a user. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1784,7 +1732,6 @@ namespace Example
 ## PutScimGroup
 
 > [**ScimV2Group**](ScimV2Group) PutScimGroup (string groupId, ScimV2Group body, string ifMatch = null)
-
 
 
 Replace a group
@@ -1842,7 +1789,6 @@ namespace Example
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/groups. |  |
 | **body** | [**ScimV2Group**](ScimV2Group)| The information used to replace a group. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1852,7 +1798,6 @@ namespace Example
 ## PutScimUser
 
 > [**ScimV2User**](ScimV2User) PutScimUser (string userId, ScimV2User body, string ifMatch = null)
-
 
 
 Replace a user
@@ -1916,7 +1861,6 @@ namespace Example
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/users. |  |
 | **body** | [**ScimV2User**](ScimV2User)| The information used to replace a user. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1926,7 +1870,6 @@ namespace Example
 ## PutScimV2Group
 
 > [**ScimV2Group**](ScimV2Group) PutScimV2Group (string groupId, ScimV2Group body, string ifMatch = null)
-
 
 
 Replace a group
@@ -1984,7 +1927,6 @@ namespace Example
 | **groupId** | **string**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. |  |
 | **body** | [**ScimV2Group**](ScimV2Group)| The information used to replace a group. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1994,7 +1936,6 @@ namespace Example
 ## PutScimV2User
 
 > [**ScimV2User**](ScimV2User) PutScimV2User (string userId, ScimV2User body, string ifMatch = null)
-
 
 
 Replace a user
@@ -2058,11 +1999,10 @@ namespace Example
 | **userId** | **string**| The ID of a user. Returned with GET /api/v2/scim/v2/users. |  |
 | **body** | [**ScimV2User**](ScimV2User)| The information used to replace a user. |  |
 | **ifMatch** | **string**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \&quot;42\&quot;. If the ETag is different from the version on the server, returns 400 with a \&quot;scimType\&quot; of \&quot;invalidVers\&quot;. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**ScimV2User**](ScimV2User)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

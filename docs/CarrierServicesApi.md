@@ -8,13 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetCarrierservicesIntegrationsEmergencylocationsMe**](#GetCarrierservicesIntegrationsEmergencylocationsMe) | **Get** /api/v2/carrierservices/integrations/emergencylocations/me | Get location for the logged in user |
 | [**PostCarrierservicesIntegrationsEmergencylocationsMe**](#PostCarrierservicesIntegrationsEmergencylocationsMe) | **Post** /api/v2/carrierservices/integrations/emergencylocations/me | Set current location for the logged in user |
-{: class="table table-striped"}
+
 
 
 ## GetCarrierservicesIntegrationsEmergencylocationsMe
 
 > [**EmergencyLocation**](EmergencyLocation) GetCarrierservicesIntegrationsEmergencylocationsMe (string phoneNumber)
-
 
 
 Get location for the logged in user
@@ -67,7 +66,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **phoneNumber** | **string**| Phone number in E164 format |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -77,7 +75,6 @@ namespace Example
 ## PostCarrierservicesIntegrationsEmergencylocationsMe
 
 > [**EmergencyLocation**](EmergencyLocation) PostCarrierservicesIntegrationsEmergencylocationsMe (EmergencyLocation body = null)
-
 
 
 Set current location for the logged in user
@@ -130,11 +127,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**EmergencyLocation**](EmergencyLocation)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**EmergencyLocation**](EmergencyLocation)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

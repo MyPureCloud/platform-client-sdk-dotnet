@@ -9,13 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostEventsConversations**](#PostEventsConversations) | **Post** /api/v2/events/conversations | Publish Conversation Batch Events |
 | [**PostEventsUsersPresence**](#PostEventsUsersPresence) | **Post** /api/v2/events/users/presence | Publish User Presence Status Batch Events |
 | [**PostEventsUsersRoutingstatus**](#PostEventsUsersRoutingstatus) | **Post** /api/v2/events/users/routingstatus | Publish Agent Routing Status Batch Events |
-{: class="table table-striped"}
+
 
 
 ## PostEventsConversations
 
 > [**BatchEventResponse**](BatchEventResponse) PostEventsConversations (BatchConversationEventRequest body)
-
 
 
 Publish Conversation Batch Events
@@ -69,7 +68,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest)| batchRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -79,7 +77,6 @@ namespace Example
 ## PostEventsUsersPresence
 
 > [**BatchEventResponse**](BatchEventResponse) PostEventsUsersPresence (BatchUserPresenceEventRequest body)
-
 
 
 Publish User Presence Status Batch Events
@@ -133,7 +130,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BatchUserPresenceEventRequest**](BatchUserPresenceEventRequest)| batchRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -143,7 +139,6 @@ namespace Example
 ## PostEventsUsersRoutingstatus
 
 > [**BatchEventResponse**](BatchEventResponse) PostEventsUsersRoutingstatus (BatchUserRoutingStatusEventRequest body)
-
 
 
 Publish Agent Routing Status Batch Events
@@ -197,11 +192,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BatchUserRoutingStatusEventRequest**](BatchUserRoutingStatusEventRequest)| batchRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**BatchEventResponse**](BatchEventResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

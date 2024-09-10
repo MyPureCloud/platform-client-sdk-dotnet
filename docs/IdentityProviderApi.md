@@ -44,13 +44,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutIdentityprovidersPurecloud**](#PutIdentityprovidersPurecloud) | **Put** /api/v2/identityproviders/purecloud | Update/Create PureCloud Identity Provider |
 | [**PutIdentityprovidersPureengage**](#PutIdentityprovidersPureengage) | **Put** /api/v2/identityproviders/pureengage | Update/Create PureEngage Identity Provider |
 | [**PutIdentityprovidersSalesforce**](#PutIdentityprovidersSalesforce) | **Put** /api/v2/identityproviders/salesforce | Update/Create Salesforce Identity Provider |
-{: class="table table-striped"}
+
 
 
 ## DeleteIdentityprovider
 
 > void DeleteIdentityprovider (string providerId)
-
 
 
 Delete Identity Provider
@@ -103,7 +102,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **providerId** | **string**| Provider ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -113,7 +111,6 @@ void (empty response body)
 ## DeleteIdentityprovidersAdfs
 
 > **Object** DeleteIdentityprovidersAdfs ()
-
 
 
 Delete ADFS Identity Provider
@@ -163,7 +160,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -172,7 +168,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersCic
 
 > **Object** DeleteIdentityprovidersCic ()
-
 
 
 Delete Customer Interaction Center (CIC) Identity Provider
@@ -222,7 +217,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -231,7 +225,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersGeneric
 
 > **Object** DeleteIdentityprovidersGeneric ()
-
 
 
 Delete Generic SAML Identity Provider
@@ -281,7 +274,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -290,7 +282,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersGsuite
 
 > **Object** DeleteIdentityprovidersGsuite ()
-
 
 
 Delete G Suite Identity Provider
@@ -340,7 +331,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -349,7 +339,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersIdentitynow
 
 > **Object** DeleteIdentityprovidersIdentitynow ()
-
 
 
 Delete IdentityNow Provider
@@ -399,7 +388,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -408,7 +396,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersOkta
 
 > **Object** DeleteIdentityprovidersOkta ()
-
 
 
 Delete Okta Identity Provider
@@ -458,7 +445,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -467,7 +453,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersOnelogin
 
 > **Object** DeleteIdentityprovidersOnelogin ()
-
 
 
 Delete OneLogin Identity Provider
@@ -517,7 +502,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -526,7 +510,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersPing
 
 > **Object** DeleteIdentityprovidersPing ()
-
 
 
 Delete Ping Identity Provider
@@ -576,7 +559,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -585,7 +567,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersPurecloud
 
 > **Object** DeleteIdentityprovidersPurecloud ()
-
 
 
 Delete PureCloud Identity Provider
@@ -635,7 +616,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -644,7 +624,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersPureengage
 
 > **Object** DeleteIdentityprovidersPureengage ()
-
 
 
 Delete PureEngage Identity Provider
@@ -694,7 +673,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -703,7 +681,6 @@ This endpoint does require any parameters.
 ## DeleteIdentityprovidersSalesforce
 
 > **Object** DeleteIdentityprovidersSalesforce ()
-
 
 
 Delete Salesforce Identity Provider
@@ -753,7 +730,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **Object**
@@ -762,7 +738,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovider
 
 > [**CustomProvider**](CustomProvider) GetIdentityprovider (string providerId)
-
 
 
 Get Identity Provider
@@ -816,7 +791,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **providerId** | **string**| Provider ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -826,7 +800,6 @@ namespace Example
 ## GetIdentityproviders
 
 > [**IdentityProviderEntityListing**](IdentityProviderEntityListing) GetIdentityproviders ()
-
 
 
 The list of identity providers
@@ -876,7 +849,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**IdentityProviderEntityListing**](IdentityProviderEntityListing)
@@ -885,7 +857,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersAdfs
 
 > [**ADFS**](ADFS) GetIdentityprovidersAdfs ()
-
 
 
 Get ADFS Identity Provider
@@ -935,7 +906,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ADFS**](ADFS)
@@ -944,7 +914,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersCic
 
 > [**CustomerInteractionCenter**](CustomerInteractionCenter) GetIdentityprovidersCic ()
-
 
 
 Get Customer Interaction Center (CIC) Identity Provider
@@ -994,7 +963,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**CustomerInteractionCenter**](CustomerInteractionCenter)
@@ -1003,7 +971,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersGeneric
 
 > [**GenericSAML**](GenericSAML) GetIdentityprovidersGeneric ()
-
 
 
 Get Generic SAML Identity Provider
@@ -1053,7 +1020,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GenericSAML**](GenericSAML)
@@ -1062,7 +1028,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersGsuite
 
 > [**GSuite**](GSuite) GetIdentityprovidersGsuite ()
-
 
 
 Get G Suite Identity Provider
@@ -1112,7 +1077,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GSuite**](GSuite)
@@ -1121,7 +1085,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersIdentitynow
 
 > [**IdentityNow**](IdentityNow) GetIdentityprovidersIdentitynow ()
-
 
 
 Get IdentityNow Provider
@@ -1171,7 +1134,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**IdentityNow**](IdentityNow)
@@ -1180,7 +1142,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersOkta
 
 > [**Okta**](Okta) GetIdentityprovidersOkta ()
-
 
 
 Get Okta Identity Provider
@@ -1230,7 +1191,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**Okta**](Okta)
@@ -1239,7 +1199,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersOnelogin
 
 > [**OneLogin**](OneLogin) GetIdentityprovidersOnelogin ()
-
 
 
 Get OneLogin Identity Provider
@@ -1289,7 +1248,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OneLogin**](OneLogin)
@@ -1298,7 +1256,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersPing
 
 > [**PingIdentity**](PingIdentity) GetIdentityprovidersPing ()
-
 
 
 Get Ping Identity Provider
@@ -1348,7 +1305,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**PingIdentity**](PingIdentity)
@@ -1357,7 +1313,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersPurecloud
 
 > [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloudPlatform.Client.V2.Model.PureCloud) GetIdentityprovidersPurecloud ()
-
 
 
 Get PureCloud Identity Provider
@@ -1407,7 +1362,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloudPlatform.Client.V2.Model.PureCloud)
@@ -1416,7 +1370,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersPureengage
 
 > [**PureEngage**](PureEngage) GetIdentityprovidersPureengage ()
-
 
 
 Get PureEngage Identity Provider
@@ -1466,7 +1419,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**PureEngage**](PureEngage)
@@ -1475,7 +1427,6 @@ This endpoint does require any parameters.
 ## GetIdentityprovidersSalesforce
 
 > [**Salesforce**](Salesforce) GetIdentityprovidersSalesforce ()
-
 
 
 Get Salesforce Identity Provider
@@ -1525,7 +1476,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**Salesforce**](Salesforce)
@@ -1534,7 +1484,6 @@ This endpoint does require any parameters.
 ## PostIdentityproviders
 
 > [**CustomProvider**](CustomProvider) PostIdentityproviders (CustomProvider body)
-
 
 
 Create Identity Provider
@@ -1588,7 +1537,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CustomProvider**](CustomProvider)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1598,7 +1546,6 @@ namespace Example
 ## PutIdentityprovider
 
 > [**CustomProvider**](CustomProvider) PutIdentityprovider (string providerId, CustomProvider body)
-
 
 
 Update Identity Provider
@@ -1654,7 +1601,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **providerId** | **string**| Provider ID |  |
 | **body** | [**CustomProvider**](CustomProvider)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1664,7 +1610,6 @@ namespace Example
 ## PutIdentityprovidersAdfs
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersAdfs (ADFS body)
-
 
 
 Update/Create ADFS Identity Provider
@@ -1719,7 +1664,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ADFS**](ADFS)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1729,7 +1673,6 @@ namespace Example
 ## PutIdentityprovidersCic
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersCic (CustomerInteractionCenter body)
-
 
 
 Update/Create Customer Interaction Center (CIC) Identity Provider
@@ -1784,7 +1727,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CustomerInteractionCenter**](CustomerInteractionCenter)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1794,7 +1736,6 @@ namespace Example
 ## PutIdentityprovidersGeneric
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersGeneric (GenericSAML body)
-
 
 
 Update/Create Generic SAML Identity Provider
@@ -1849,7 +1790,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GenericSAML**](GenericSAML)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1859,7 +1799,6 @@ namespace Example
 ## PutIdentityprovidersGsuite
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersGsuite (GSuite body)
-
 
 
 Update/Create G Suite Identity Provider
@@ -1914,7 +1853,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GSuite**](GSuite)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1924,7 +1862,6 @@ namespace Example
 ## PutIdentityprovidersIdentitynow
 
 > [**IdentityNow**](IdentityNow) PutIdentityprovidersIdentitynow (IdentityNow body)
-
 
 
 Update/Create IdentityNow Provider
@@ -1979,7 +1916,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**IdentityNow**](IdentityNow)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1989,7 +1925,6 @@ namespace Example
 ## PutIdentityprovidersOkta
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersOkta (Okta body)
-
 
 
 Update/Create Okta Identity Provider
@@ -2044,7 +1979,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Okta**](Okta)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2054,7 +1988,6 @@ namespace Example
 ## PutIdentityprovidersOnelogin
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersOnelogin (OneLogin body)
-
 
 
 Update/Create OneLogin Identity Provider
@@ -2109,7 +2042,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OneLogin**](OneLogin)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2119,7 +2051,6 @@ namespace Example
 ## PutIdentityprovidersPing
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersPing (PingIdentity body)
-
 
 
 Update/Create Ping Identity Provider
@@ -2174,7 +2105,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PingIdentity**](PingIdentity)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2184,7 +2114,6 @@ namespace Example
 ## PutIdentityprovidersPurecloud
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersPurecloud (PureCloud body)
-
 
 
 Update/Create PureCloud Identity Provider
@@ -2239,7 +2168,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PureCloud**](PureCloud)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2249,7 +2177,6 @@ namespace Example
 ## PutIdentityprovidersPureengage
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersPureengage (PureEngage body)
-
 
 
 Update/Create PureEngage Identity Provider
@@ -2304,7 +2231,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PureEngage**](PureEngage)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2314,7 +2240,6 @@ namespace Example
 ## PutIdentityprovidersSalesforce
 
 > [**IdentityProvider**](IdentityProvider) PutIdentityprovidersSalesforce (Salesforce body)
-
 
 
 Update/Create Salesforce Identity Provider
@@ -2369,11 +2294,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Salesforce**](Salesforce)| Provider |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**IdentityProvider**](IdentityProvider)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -12,13 +12,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonySiptraces**](#GetTelephonySiptraces) | **Get** /api/v2/telephony/siptraces | Fetch SIP metadata |
 | [**GetTelephonySiptracesDownloadDownloadId**](#GetTelephonySiptracesDownloadDownloadId) | **Get** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
 | [**PostTelephonySiptracesDownload**](#PostTelephonySiptracesDownload) | **Post** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
-{: class="table table-striped"}
+
 
 
 ## GetTelephonyMediaregions
 
 > [**MediaRegions**](MediaRegions) GetTelephonyMediaregions ()
-
 
 
 Retrieve the list of AWS regions media can stream through.
@@ -68,7 +67,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**MediaRegions**](MediaRegions)
@@ -77,7 +75,6 @@ This endpoint does require any parameters.
 ## GetTelephonySipmessagesConversation
 
 > [**Callmessage**](Callmessage) GetTelephonySipmessagesConversation (string conversationId)
-
 
 
 Get a SIP message.
@@ -133,7 +130,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -143,7 +139,6 @@ namespace Example
 ## GetTelephonySipmessagesConversationHeaders
 
 > [**Callheader**](Callheader) GetTelephonySipmessagesConversationHeaders (string conversationId, List<string> keys = null)
-
 
 
 Get SIP headers.
@@ -201,7 +196,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation id |  |
 | **keys** | [**List<string>**](string)| comma-separated list of header identifiers to query. e.g. ruri,to,from | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -211,7 +205,6 @@ namespace Example
 ## GetTelephonySiptraces
 
 > [**SipSearchResult**](SipSearchResult) GetTelephonySiptraces (DateTime? dateStart, DateTime? dateEnd, string callId = null, string toUser = null, string fromUser = null, string conversationId = null)
-
 
 
 Fetch SIP metadata
@@ -277,7 +270,6 @@ namespace Example
 | **toUser** | **string**| User to who the call was placed | [optional]  |
 | **fromUser** | **string**| user who placed the call | [optional]  |
 | **conversationId** | **string**| Unique identification of the conversation | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -287,7 +279,6 @@ namespace Example
 ## GetTelephonySiptracesDownloadDownloadId
 
 > [**SignedUrlResponse**](SignedUrlResponse) GetTelephonySiptracesDownloadDownloadId (string downloadId)
-
 
 
 Get signed S3 URL for a pcap download
@@ -341,7 +332,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **downloadId** | **string**| unique id for the downloaded file in S3 |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -351,7 +341,6 @@ namespace Example
 ## PostTelephonySiptracesDownload
 
 > [**SipDownloadResponse**](SipDownloadResponse) PostTelephonySiptracesDownload (SIPSearchPublicRequest sIPSearchPublicRequest)
-
 
 
 Request a download of a pcap file to S3
@@ -405,11 +394,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sIPSearchPublicRequest** | [**SIPSearchPublicRequest**](SIPSearchPublicRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**SipDownloadResponse**](SipDownloadResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -10,13 +10,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIpranges**](#GetIpranges) | **Get** /api/v2/ipranges | Get public ip address ranges for Genesys Cloud |
 | [**GetTimezones**](#GetTimezones) | **Get** /api/v2/timezones | Get time zones list |
 | [**PostCertificateDetails**](#PostCertificateDetails) | **Post** /api/v2/certificate/details | Returns the information about an X509 PEM encoded certificate or certificate chain. |
-{: class="table table-striped"}
+
 
 
 ## GetDate
 
 > [**ServerDate**](ServerDate) GetDate ()
-
 
 
 Get the current system date/time
@@ -65,7 +64,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ServerDate**](ServerDate)
@@ -74,7 +72,6 @@ This endpoint does require any parameters.
 ## GetIpranges
 
 > [**IpAddressRangeListing**](IpAddressRangeListing) GetIpranges ()
-
 
 
 Get public ip address ranges for Genesys Cloud
@@ -123,7 +120,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**IpAddressRangeListing**](IpAddressRangeListing)
@@ -132,7 +128,6 @@ This endpoint does require any parameters.
 ## GetTimezones
 
 > [**TimeZoneEntityListing**](TimeZoneEntityListing) GetTimezones (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get time zones list
@@ -187,7 +182,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -197,7 +191,6 @@ namespace Example
 ## PostCertificateDetails
 
 > [**ParsedCertificate**](ParsedCertificate) PostCertificateDetails (Certificate body)
-
 
 
 Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -250,11 +243,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Certificate**](Certificate)| Certificate |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**ParsedCertificate**](ParsedCertificate)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

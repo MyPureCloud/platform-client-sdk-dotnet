@@ -9,13 +9,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetDataextensionsCoretype**](#GetDataextensionsCoretype) | **Get** /api/v2/dataextensions/coretypes/{coretypeName} | Get a specific named core type. |
 | [**GetDataextensionsCoretypes**](#GetDataextensionsCoretypes) | **Get** /api/v2/dataextensions/coretypes | Get the core types from which all schemas are built. |
 | [**GetDataextensionsLimits**](#GetDataextensionsLimits) | **Get** /api/v2/dataextensions/limits | Get quantitative limits on schemas |
-{: class="table table-striped"}
+
 
 
 ## GetDataextensionsCoretype
 
 > [**Coretype**](Coretype) GetDataextensionsCoretype (string coretypeName)
-
 
 
 Get a specific named core type.
@@ -69,7 +68,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **coretypeName** | **string**| The core type&#39;s name | <br />**Values**: text, longtext, url, identifier, enum, date, datetime, integer, number, checkbox, tag |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -79,7 +77,6 @@ namespace Example
 ## GetDataextensionsCoretypes
 
 > [**CoretypeListing**](CoretypeListing) GetDataextensionsCoretypes ()
-
 
 
 Get the core types from which all schemas are built.
@@ -129,7 +126,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**CoretypeListing**](CoretypeListing)
@@ -138,7 +134,6 @@ This endpoint does require any parameters.
 ## GetDataextensionsLimits
 
 > [**SchemaQuantityLimits**](SchemaQuantityLimits) GetDataextensionsLimits ()
-
 
 
 Get quantitative limits on schemas
@@ -188,10 +183,9 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

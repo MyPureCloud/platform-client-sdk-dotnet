@@ -24,13 +24,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutResponsemanagementLibrary**](#PutResponsemanagementLibrary) | **Put** /api/v2/responsemanagement/libraries/{libraryId} | Update an existing response library. |
 | [**PutResponsemanagementResponse**](#PutResponsemanagementResponse) | **Put** /api/v2/responsemanagement/responses/{responseId} | Update an existing response. |
 | [**PutResponsemanagementResponseasset**](#PutResponsemanagementResponseasset) | **Put** /api/v2/responsemanagement/responseassets/{responseAssetId} | Update response asset |
-{: class="table table-striped"}
+
 
 
 ## DeleteResponsemanagementLibrary
 
 > void DeleteResponsemanagementLibrary (string libraryId)
-
 
 
 Delete an existing response library.
@@ -85,7 +84,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **libraryId** | **string**| Library ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -95,7 +93,6 @@ void (empty response body)
 ## DeleteResponsemanagementResponse
 
 > void DeleteResponsemanagementResponse (string responseId)
-
 
 
 Delete an existing response.
@@ -150,7 +147,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -160,7 +156,6 @@ void (empty response body)
 ## DeleteResponsemanagementResponseasset
 
 > void DeleteResponsemanagementResponseasset (string responseAssetId)
-
 
 
 Delete response asset
@@ -213,7 +208,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseAssetId** | **string**| Asset Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -223,7 +217,6 @@ void (empty response body)
 ## GetResponsemanagementLibraries
 
 > [**LibraryEntityListing**](LibraryEntityListing) GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
-
 
 
 Gets a list of existing response libraries.
@@ -283,7 +276,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **messagingTemplateFilter** | **string**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional] <br />**Values**: whatsapp |
 | **libraryPrefix** | **string**| Returns a list of libraries that contain the prefix provided | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -293,7 +285,6 @@ namespace Example
 ## GetResponsemanagementLibrary
 
 > [**Library**](Library) GetResponsemanagementLibrary (string libraryId)
-
 
 
 Get details about an existing response library.
@@ -347,7 +338,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **libraryId** | **string**| Library ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -357,7 +347,6 @@ namespace Example
 ## GetResponsemanagementResponse
 
 > [**Response**](Response) GetResponsemanagementResponse (string responseId, string expand = null)
-
 
 
 Get details about an existing response.
@@ -413,7 +402,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -423,7 +411,6 @@ namespace Example
 ## GetResponsemanagementResponseasset
 
 > [**ResponseAsset**](ResponseAsset) GetResponsemanagementResponseasset (string responseAssetId)
-
 
 
 Get response asset information
@@ -477,7 +464,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseAssetId** | **string**| Asset Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -487,7 +473,6 @@ namespace Example
 ## GetResponsemanagementResponseassetsStatusStatusId
 
 > [**ResponseAssetStatus**](ResponseAssetStatus) GetResponsemanagementResponseassetsStatusStatusId (string statusId)
-
 
 
 Get response asset upload status
@@ -541,7 +526,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **statusId** | **string**| Status Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -551,7 +535,6 @@ namespace Example
 ## GetResponsemanagementResponses
 
 > [**ResponseEntityListing**](ResponseEntityListing) GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
-
 
 
 Gets a list of existing responses.
@@ -611,7 +594,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -621,7 +603,6 @@ namespace Example
 ## PostResponsemanagementLibraries
 
 > [**Library**](Library) PostResponsemanagementLibraries (Library body)
-
 
 
 Create a response library.
@@ -675,7 +656,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Library**](Library)| Library |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -685,7 +665,6 @@ namespace Example
 ## PostResponsemanagementLibrariesBulk
 
 > [**LibraryEntityListing**](LibraryEntityListing) PostResponsemanagementLibrariesBulk (LibraryBatchRequest body)
-
 
 
 Get response libraries.
@@ -739,7 +718,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LibraryBatchRequest**](LibraryBatchRequest)| LibraryIDs (max allowed 50) |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -749,7 +727,6 @@ namespace Example
 ## PostResponsemanagementResponseassetsSearch
 
 > [**ResponseAssetSearchResults**](ResponseAssetSearchResults) PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null)
-
 
 
 Search response assets
@@ -805,7 +782,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ResponseAssetSearchRequest**](ResponseAssetSearchRequest)| request |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user, division |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -815,7 +791,6 @@ namespace Example
 ## PostResponsemanagementResponseassetsUploads
 
 > [**CreateResponseAssetResponse**](CreateResponseAssetResponse) PostResponsemanagementResponseassetsUploads (CreateResponseAssetRequest body)
-
 
 
 Creates pre-signed url for uploading response asset
@@ -869,7 +844,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateResponseAssetRequest**](CreateResponseAssetRequest)| request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -879,7 +853,6 @@ namespace Example
 ## PostResponsemanagementResponses
 
 > [**Response**](Response) PostResponsemanagementResponses (Response body, string expand = null)
-
 
 
 Create a response.
@@ -935,7 +908,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Response**](Response)| Response |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -945,7 +917,6 @@ namespace Example
 ## PostResponsemanagementResponsesQuery
 
 > [**ResponseQueryResults**](ResponseQueryResults) PostResponsemanagementResponsesQuery (ResponseQueryRequest body)
-
 
 
 Query responses
@@ -999,7 +970,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ResponseQueryRequest**](ResponseQueryRequest)| Response |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1009,7 +979,6 @@ namespace Example
 ## PutResponsemanagementLibrary
 
 > [**Library**](Library) PutResponsemanagementLibrary (string libraryId, Library body)
-
 
 
 Update an existing response library.
@@ -1067,7 +1036,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **libraryId** | **string**| Library ID |  |
 | **body** | [**Library**](Library)| Library |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1077,7 +1045,6 @@ namespace Example
 ## PutResponsemanagementResponse
 
 > [**Response**](Response) PutResponsemanagementResponse (string responseId, Response body, string expand = null)
-
 
 
 Update an existing response.
@@ -1137,7 +1104,6 @@ namespace Example
 | **responseId** | **string**| Response ID |  |
 | **body** | [**Response**](Response)| Response |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1147,7 +1113,6 @@ namespace Example
 ## PutResponsemanagementResponseasset
 
 > [**ResponseAsset**](ResponseAsset) PutResponsemanagementResponseasset (string responseAssetId, ResponseAssetRequest body)
-
 
 
 Update response asset
@@ -1203,11 +1168,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **responseAssetId** | **string**| Asset Id |  |
 | **body** | [**ResponseAssetRequest**](ResponseAssetRequest)| request |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

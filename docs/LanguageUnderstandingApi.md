@@ -40,13 +40,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLanguageunderstandingMinerExecute**](#PostLanguageunderstandingMinerExecute) | **Post** /api/v2/languageunderstanding/miners/{minerId}/execute | Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. |
 | [**PostLanguageunderstandingMiners**](#PostLanguageunderstandingMiners) | **Post** /api/v2/languageunderstanding/miners | Create a unique miner. |
 | [**PutLanguageunderstandingDomainVersion**](#PutLanguageunderstandingDomainVersion) | **Put** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId} | Update an NLU Domain Version. |
-{: class="table table-striped"}
+
 
 
 ## DeleteLanguageunderstandingDomain
 
 > void DeleteLanguageunderstandingDomain (string domainId)
-
 
 
 Delete an NLU Domain.
@@ -100,7 +99,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -110,7 +108,6 @@ void (empty response body)
 ## DeleteLanguageunderstandingDomainFeedbackFeedbackId
 
 > void DeleteLanguageunderstandingDomainFeedbackFeedbackId (string domainId, string feedbackId)
-
 
 
 Delete the feedback on the NLU Domain Version.
@@ -166,7 +163,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **feedbackId** | **string**| ID of the Feedback |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -176,7 +172,6 @@ void (empty response body)
 ## DeleteLanguageunderstandingDomainVersion
 
 > void DeleteLanguageunderstandingDomainVersion (string domainId, string domainVersionId)
-
 
 
 Delete an NLU Domain Version
@@ -232,7 +227,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -242,7 +236,6 @@ void (empty response body)
 ## DeleteLanguageunderstandingMiner
 
 > void DeleteLanguageunderstandingMiner (string minerId)
-
 
 
 Delete a miner.
@@ -295,7 +288,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -305,7 +297,6 @@ void (empty response body)
 ## DeleteLanguageunderstandingMinerDraft
 
 > void DeleteLanguageunderstandingMinerDraft (string minerId, string draftId)
-
 
 
 Delete a draft
@@ -360,7 +351,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **draftId** | **string**| Draft ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -370,7 +360,6 @@ void (empty response body)
 ## GetLanguageunderstandingDomain
 
 > [**NluDomain**](NluDomain) GetLanguageunderstandingDomain (string domainId)
-
 
 
 Find an NLU Domain.
@@ -425,7 +414,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -435,7 +423,6 @@ namespace Example
 ## GetLanguageunderstandingDomainFeedback
 
 > [**NluFeedbackListing**](NluFeedbackListing) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, bool? includeTrainingUtterances = null, string after = null, List<string> fields = null)
-
 
 
 Get all feedback in the given NLU Domain Version.
@@ -514,7 +501,6 @@ namespace Example
 | **includeTrainingUtterances** | **bool?**| Include Training Utterances. By default they&#39;re included. | [optional] [default to true] |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination&#x3D;true | [optional]  |
 | **fields** | [**List<string>**](string)| Fields and properties to get, comma-separated | [optional] <br />**Values**: version, dateCreated, text, intents |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -524,7 +510,6 @@ namespace Example
 ## GetLanguageunderstandingDomainFeedbackFeedbackId
 
 > [**NluFeedbackResponse**](NluFeedbackResponse) GetLanguageunderstandingDomainFeedbackFeedbackId (string domainId, string feedbackId, List<string> fields = null)
-
 
 
 Find a Feedback
@@ -583,7 +568,6 @@ namespace Example
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **feedbackId** | **string**| ID of the Feedback |  |
 | **fields** | [**List<string>**](string)| Fields and properties to get, comma-separated | [optional] <br />**Values**: version, dateCreated, text, intents |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -593,7 +577,6 @@ namespace Example
 ## GetLanguageunderstandingDomainVersion
 
 > [**NluDomainVersion**](NluDomainVersion) GetLanguageunderstandingDomainVersion (string domainId, string domainVersionId, bool? includeUtterances = null)
-
 
 
 Find an NLU Domain Version.
@@ -652,7 +635,6 @@ namespace Example
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
 | **includeUtterances** | **bool?**| Whether utterances for intent definition should be included when marshalling response. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -662,7 +644,6 @@ namespace Example
 ## GetLanguageunderstandingDomainVersionReport
 
 > [**NluDomainVersionQualityReport**](NluDomainVersionQualityReport) GetLanguageunderstandingDomainVersionReport (string domainId, string domainVersionId)
-
 
 
 Retrieved quality report for the specified NLU Domain Version
@@ -719,7 +700,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -729,7 +709,6 @@ namespace Example
 ## GetLanguageunderstandingDomainVersions
 
 > [**NluDomainVersionListing**](NluDomainVersionListing) GetLanguageunderstandingDomainVersions (string domainId, bool? includeUtterances = null, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get all NLU Domain Versions for a given Domain.
@@ -790,7 +769,6 @@ namespace Example
 | **includeUtterances** | **bool?**| Whether utterances for intent definition should be included when marshalling response. | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -800,7 +778,6 @@ namespace Example
 ## GetLanguageunderstandingDomains
 
 > [**NluDomainListing**](NluDomainListing) GetLanguageunderstandingDomains (int? pageNumber = null, int? pageSize = null)
-
 
 
 Get all NLU Domains.
@@ -857,7 +834,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -867,7 +843,6 @@ namespace Example
 ## GetLanguageunderstandingMiner
 
 > [**Miner**](Miner) GetLanguageunderstandingMiner (string minerId)
-
 
 
 Get information about a miner.
@@ -921,7 +896,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -931,7 +905,6 @@ namespace Example
 ## GetLanguageunderstandingMinerDraft
 
 > [**Draft**](Draft) GetLanguageunderstandingMinerDraft (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null)
-
 
 
 Get information about a draft.
@@ -991,7 +964,6 @@ namespace Example
 | **draftId** | **string**| Draft ID |  |
 | **draftIntentId** | **string**| Parameter to filter a specific intent. | [optional]  |
 | **draftTopicId** | **string**| Parameter to filter a specific topic. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1001,7 +973,6 @@ namespace Example
 ## GetLanguageunderstandingMinerDrafts
 
 > [**DraftListing**](DraftListing) GetLanguageunderstandingMinerDrafts (string minerId)
-
 
 
 Retrieve the list of drafts created.
@@ -1055,7 +1026,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1065,7 +1035,6 @@ namespace Example
 ## GetLanguageunderstandingMinerIntent
 
 > [**MinerIntent**](MinerIntent) GetLanguageunderstandingMinerIntent (string minerId, string intentId, string expand = null)
-
 
 
 Get information about a mined intent
@@ -1123,7 +1092,6 @@ namespace Example
 | **minerId** | **string**| Miner ID |  |
 | **intentId** | **string**| The ID of the intent to be retrieved. |  |
 | **expand** | **string**| Option to fetch utterances | [optional] <br />**Values**: phrases, utterances |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1133,7 +1101,6 @@ namespace Example
 ## GetLanguageunderstandingMinerIntents
 
 > [**MinedIntentsListing**](MinedIntentsListing) GetLanguageunderstandingMinerIntents (string minerId, string expand = null)
-
 
 
 Retrieve a list of mined intents.
@@ -1189,7 +1156,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **expand** | **string**| Option to fetch utterances. | [optional] <br />**Values**: phrases, utterances |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1199,7 +1165,6 @@ namespace Example
 ## GetLanguageunderstandingMinerTopic
 
 > [**MinerTopic**](MinerTopic) GetLanguageunderstandingMinerTopic (string minerId, string topicId, string expand = null)
-
 
 
 Retrieves details of a particular topic.
@@ -1257,7 +1222,6 @@ namespace Example
 | **minerId** | **string**| Miner ID |  |
 | **topicId** | **string**| The ID of the topic to be retrieved. |  |
 | **expand** | **string**| Option to fetch phrases | [optional] <br />**Values**: phrases, utterances |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1267,7 +1231,6 @@ namespace Example
 ## GetLanguageunderstandingMinerTopicPhrase
 
 > [**MinerTopicPhrase**](MinerTopicPhrase) GetLanguageunderstandingMinerTopicPhrase (string minerId, string topicId, string phraseId)
-
 
 
 Retrieves utterances related to a phrase in a topic.
@@ -1325,7 +1288,6 @@ namespace Example
 | **minerId** | **string**| Miner ID |  |
 | **topicId** | **string**| The ID of the topic to be retrieved. |  |
 | **phraseId** | **string**| The ID of the phrase to be retrieved. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1335,7 +1297,6 @@ namespace Example
 ## GetLanguageunderstandingMinerTopics
 
 > [**MinerTopicsListing**](MinerTopicsListing) GetLanguageunderstandingMinerTopics (string minerId)
-
 
 
 Retrieve a list of mined topics.
@@ -1389,7 +1350,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1399,7 +1359,6 @@ namespace Example
 ## GetLanguageunderstandingMiners
 
 > [**MinerListing**](MinerListing) GetLanguageunderstandingMiners (string minerType = null)
-
 
 
 Retrieve the list of miners created.
@@ -1453,7 +1412,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **minerType** | **string**| Type of miner, either intent or topic | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1463,7 +1421,6 @@ namespace Example
 ## GetLanguageunderstandingSettings
 
 > [**NluOrganization**](NluOrganization) GetLanguageunderstandingSettings ()
-
 
 
 Get Organization Configuration
@@ -1515,7 +1472,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**NluOrganization**](NluOrganization)
@@ -1524,7 +1480,6 @@ This endpoint does require any parameters.
 ## PatchLanguageunderstandingDomain
 
 > [**NluDomain**](NluDomain) PatchLanguageunderstandingDomain (string domainId, NluDomain body)
-
 
 
 Update an NLU Domain.
@@ -1581,7 +1536,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **body** | [**NluDomain**](NluDomain)| The updated NLU Domain. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1591,7 +1545,6 @@ namespace Example
 ## PatchLanguageunderstandingMinerDraft
 
 > [**Draft**](Draft) PatchLanguageunderstandingMinerDraft (string minerId, string draftId, DraftRequest body = null)
-
 
 
 Save information for the draft. Either topic draft or intent draft should be sent.
@@ -1649,7 +1602,6 @@ namespace Example
 | **minerId** | **string**| Miner ID |  |
 | **draftId** | **string**| Draft ID |  |
 | **body** | [**DraftRequest**](DraftRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1659,7 +1611,6 @@ namespace Example
 ## PostLanguageunderstandingDomainFeedback
 
 > [**NluFeedbackResponse**](NluFeedbackResponse) PostLanguageunderstandingDomainFeedback (string domainId, NluFeedbackRequest body)
-
 
 
 Create feedback for the NLU Domain Version.
@@ -1716,7 +1667,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **body** | [**NluFeedbackRequest**](NluFeedbackRequest)| The Feedback to create. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1726,7 +1676,6 @@ namespace Example
 ## PostLanguageunderstandingDomainVersionDetect
 
 > [**NluDetectionResponse**](NluDetectionResponse) PostLanguageunderstandingDomainVersionDetect (string domainId, string domainVersionId, NluDetectionRequest body)
-
 
 
 Detect intent, entities, etc. in the submitted text using the specified NLU domain version.
@@ -1785,7 +1734,6 @@ namespace Example
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
 | **body** | [**NluDetectionRequest**](NluDetectionRequest)| The input data to perform detection on. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1795,7 +1743,6 @@ namespace Example
 ## PostLanguageunderstandingDomainVersionPublish
 
 > [**NluDomainVersion**](NluDomainVersion) PostLanguageunderstandingDomainVersionPublish (string domainId, string domainVersionId)
-
 
 
 Publish the draft NLU Domain Version.
@@ -1852,7 +1799,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1862,7 +1808,6 @@ namespace Example
 ## PostLanguageunderstandingDomainVersionTrain
 
 > [**NluDomainVersionTrainingResponse**](NluDomainVersionTrainingResponse) PostLanguageunderstandingDomainVersionTrain (string domainId, string domainVersionId)
-
 
 
 Train the draft NLU Domain Version.
@@ -1919,7 +1864,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1929,7 +1873,6 @@ namespace Example
 ## PostLanguageunderstandingDomainVersions
 
 > [**NluDomainVersion**](NluDomainVersion) PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body, bool? includeUtterances = null)
-
 
 
 Create an NLU Domain Version.
@@ -1988,7 +1931,6 @@ namespace Example
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **body** | [**NluDomainVersion**](NluDomainVersion)| The NLU Domain Version to create. |  |
 | **includeUtterances** | **bool?**| Whether utterances for intent definition should be included when marshalling response. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1998,7 +1940,6 @@ namespace Example
 ## PostLanguageunderstandingDomains
 
 > [**NluDomain**](NluDomain) PostLanguageunderstandingDomains (NluDomain body)
-
 
 
 Create an NLU Domain.
@@ -2053,7 +1994,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**NluDomain**](NluDomain)| The NLU Domain to create. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2063,7 +2003,6 @@ namespace Example
 ## PostLanguageunderstandingMinerDrafts
 
 > [**Draft**](Draft) PostLanguageunderstandingMinerDrafts (string minerId, Draft body)
-
 
 
 Create a new draft resource.
@@ -2119,7 +2058,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **body** | [**Draft**](Draft)| Details for creating draft resource |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2129,7 +2067,6 @@ namespace Example
 ## PostLanguageunderstandingMinerExecute
 
 > [**Miner**](Miner) PostLanguageunderstandingMinerExecute (string minerId, MinerExecuteRequest body = null)
-
 
 
 Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file.
@@ -2185,7 +2122,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **body** | [**MinerExecuteRequest**](MinerExecuteRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2195,7 +2131,6 @@ namespace Example
 ## PostLanguageunderstandingMiners
 
 > [**Miner**](Miner) PostLanguageunderstandingMiners (Miner body)
-
 
 
 Create a unique miner.
@@ -2249,7 +2184,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Miner**](Miner)| Details for creating a new miner resource. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2259,7 +2193,6 @@ namespace Example
 ## PutLanguageunderstandingDomainVersion
 
 > [**NluDomainVersion**](NluDomainVersion) PutLanguageunderstandingDomainVersion (string domainId, string domainVersionId, NluDomainVersion body)
-
 
 
 Update an NLU Domain Version.
@@ -2318,11 +2251,10 @@ namespace Example
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **domainVersionId** | **string**| ID of the NLU domain version. |  |
 | **body** | [**NluDomainVersion**](NluDomainVersion)| The updated NLU Domain Version. |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**NluDomainVersion**](NluDomainVersion)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

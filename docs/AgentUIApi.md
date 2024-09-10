@@ -10,13 +10,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUsersAgentuiAgentsAutoanswerAgentIdSettings**](#GetUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Get** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Get agent auto answer settings |
 | [**PatchUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PatchUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Patch** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Update agent auto answer settings |
 | [**PutUsersAgentuiAgentsAutoanswerAgentIdSettings**](#PutUsersAgentuiAgentsAutoanswerAgentIdSettings) | **Put** /api/v2/users/agentui/agents/autoanswer/{agentId}/settings | Set agent auto answer settings |
-{: class="table table-striped"}
+
 
 
 ## DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > void DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
-
 
 
 Delete agent auto answer settings
@@ -69,7 +68,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -79,7 +77,6 @@ void (empty response body)
 ## GetUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) GetUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId)
-
 
 
 Get agent auto answer settings
@@ -133,7 +130,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -143,7 +139,6 @@ namespace Example
 ## PatchUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) PatchUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
-
 
 
 Update agent auto answer settings
@@ -199,7 +194,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
 | **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -209,7 +203,6 @@ namespace Example
 ## PutUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 > [**AutoAnswerSettings**](AutoAnswerSettings) PutUsersAgentuiAgentsAutoanswerAgentIdSettings (string agentId, AutoAnswerSettings body)
-
 
 
 Set agent auto answer settings
@@ -265,11 +258,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent to apply the auto answer settings to |  |
 | **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

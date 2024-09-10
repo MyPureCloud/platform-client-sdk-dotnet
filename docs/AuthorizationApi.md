@@ -50,13 +50,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutAuthorizationRolesDefault**](#PutAuthorizationRolesDefault) | **Put** /api/v2/authorization/roles/default | Restore specified default roles |
 | [**PutAuthorizationRolesSettings**](#PutAuthorizationRolesSettings) | **Put** /api/v2/authorization/roles/settings | Change authorization role settings |
 | [**PutUserRoles**](#PutUserRoles) | **Put** /api/v2/users/{subjectId}/roles | Sets the user&#39;s roles |
-{: class="table table-striped"}
+
 
 
 ## DeleteAuthorizationDivision
 
 > void DeleteAuthorizationDivision (string divisionId, bool? force = null)
-
 
 
 Delete a division.
@@ -111,7 +110,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **force** | **bool?**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -121,7 +119,6 @@ void (empty response body)
 ## DeleteAuthorizationRole
 
 > void DeleteAuthorizationRole (string roleId)
-
 
 
 Delete an organization role.
@@ -174,7 +171,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -184,7 +180,6 @@ void (empty response body)
 ## DeleteAuthorizationSubjectDivisionRole
 
 > void DeleteAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId)
-
 
 
 Delete a grant of a role in a division
@@ -241,7 +236,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **divisionId** | **string**| the id of the division of the grant |  |
 | **roleId** | **string**| the id of the role of the grant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -251,7 +245,6 @@ void (empty response body)
 ## GetAuthorizationDivision
 
 > [**AuthzDivision**](AuthzDivision) GetAuthorizationDivision (string divisionId, bool? objectCount = null)
-
 
 
 Returns an authorization division.
@@ -306,7 +299,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -316,7 +308,6 @@ namespace Example
 ## GetAuthorizationDivisionGrants
 
 > [**AuthzDivisionGrantEntityListing**](AuthzDivisionGrantEntityListing) GetAuthorizationDivisionGrants (string divisionId, int? pageNumber = null, int? pageSize = null)
-
 
 
 Gets all grants for a given division.
@@ -376,7 +367,6 @@ namespace Example
 | **divisionId** | **string**| Division ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -386,7 +376,6 @@ namespace Example
 ## GetAuthorizationDivisions
 
 > [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
-
 
 
 Retrieve a list of all divisions defined for the organization
@@ -457,7 +446,6 @@ namespace Example
 | **objectCount** | **bool?**| Include the count of objects contained in the division | [optional] [default to false] |
 | **id** | [**List<string>**](string)| Optionally request specific divisions by their IDs | [optional]  |
 | **name** | **string**| Search term to filter by division name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -467,7 +455,6 @@ namespace Example
 ## GetAuthorizationDivisionsHome
 
 > [**AuthzDivision**](AuthzDivision) GetAuthorizationDivisionsHome ()
-
 
 
 Retrieve the home division for the organization.
@@ -518,7 +505,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AuthzDivision**](AuthzDivision)
@@ -527,7 +513,6 @@ This endpoint does require any parameters.
 ## GetAuthorizationDivisionsLimit
 
 > **int?** GetAuthorizationDivisionsLimit ()
-
 
 
 Returns the maximum allowed number of divisions.
@@ -576,7 +561,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **int?**
@@ -586,7 +570,9 @@ This endpoint does require any parameters.
 
 > [**List&lt;AuthzDivision&gt;**](AuthzDivision) GetAuthorizationDivisionspermittedMe (string permission, string name = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Returns which divisions the current user has the given permission in.
 
@@ -642,7 +628,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
 | **name** | **string**| Search term to filter by division name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -652,7 +637,6 @@ namespace Example
 ## GetAuthorizationDivisionspermittedPagedMe
 
 > [**DivsPermittedEntityListing**](DivsPermittedEntityListing) GetAuthorizationDivisionspermittedPagedMe (string permission, int? pageNumber = null, int? pageSize = null)
-
 
 
 Returns which divisions the current user has the given permission in.
@@ -709,7 +693,6 @@ namespace Example
 | **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -720,7 +703,9 @@ namespace Example
 
 > [**DivsPermittedEntityListing**](DivsPermittedEntityListing) GetAuthorizationDivisionspermittedPagedSubjectId (string subjectId, string permission, int? pageNumber = null, int? pageSize = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Returns which divisions the specified user has the given permission in.
 
@@ -780,7 +765,6 @@ namespace Example
 | **permission** | **string**| The permission string, including the object to access, e.g. routing:queue:view |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -790,7 +774,6 @@ namespace Example
 ## GetAuthorizationPermissions
 
 > [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing) GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
-
 
 
 Get all permissions.
@@ -851,7 +834,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **queryType** | **string**| Query filter type | [optional] <br />**Values**: domain, permission |
 | **query** | **string**| Comma-separated list of permissions or domains to query | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -861,7 +843,6 @@ namespace Example
 ## GetAuthorizationProducts
 
 > [**OrganizationProductEntityListing**](OrganizationProductEntityListing) GetAuthorizationProducts ()
-
 
 
 Get the list of enabled products
@@ -912,7 +893,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OrganizationProductEntityListing**](OrganizationProductEntityListing)
@@ -921,7 +901,6 @@ This endpoint does require any parameters.
 ## GetAuthorizationRole
 
 > [**DomainOrganizationRole**](DomainOrganizationRole) GetAuthorizationRole (string roleId, bool? userCount = null, List<string> expand = null)
-
 
 
 Get a single organization role.
@@ -981,7 +960,6 @@ namespace Example
 | **roleId** | **string**| Role ID |  |
 | **userCount** | **bool?**| Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to &#39;true&#39; can lead to slower load times or timeouts for role queries with large member counts. | [optional] [default to true]<br />**Values**: true, false |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role | [optional] <br />**Values**: unusedPermissions |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -991,7 +969,6 @@ namespace Example
 ## GetAuthorizationRoleComparedefaultRightRoleId
 
 > [**DomainOrgRoleDifference**](DomainOrgRoleDifference) GetAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId)
-
 
 
 Get an org role to default role comparison
@@ -1049,7 +1026,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **leftRoleId** | **string**| Left Role ID |  |
 | **rightRoleId** | **string**| Right Role id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1059,7 +1035,6 @@ namespace Example
 ## GetAuthorizationRoleSubjectgrants
 
 > [**SubjectDivisionGrantsEntityListing**](SubjectDivisionGrantsEntityListing) GetAuthorizationRoleSubjectgrants (string roleId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
-
 
 
 Get the subjects' granted divisions in the specified role.
@@ -1127,7 +1102,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1137,7 +1111,6 @@ namespace Example
 ## GetAuthorizationRoleUsers
 
 > [**UserEntityListing**](UserEntityListing) GetAuthorizationRoleUsers (string roleId, int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of the users in a specified role.
@@ -1196,7 +1169,6 @@ namespace Example
 | **roleId** | **string**| Role ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1206,7 +1178,6 @@ namespace Example
 ## GetAuthorizationRoles
 
 > [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
-
 
 
 Retrieve a list of all roles defined for the organization
@@ -1280,7 +1251,6 @@ namespace Example
 | **defaultRoleId** | [**List<string>**](string)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |
 | **id** | [**List<string>**](string)| id | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1290,7 +1260,6 @@ namespace Example
 ## GetAuthorizationRolesSettings
 
 > [**RoleSettings**](RoleSettings) GetAuthorizationRolesSettings ()
-
 
 
 Get authorization role settings
@@ -1341,7 +1310,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**RoleSettings**](RoleSettings)
@@ -1350,7 +1318,6 @@ This endpoint does require any parameters.
 ## GetAuthorizationSettings
 
 > [**AuthorizationSettings**](AuthorizationSettings) GetAuthorizationSettings ()
-
 
 
 Get authorization settings
@@ -1401,7 +1368,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AuthorizationSettings**](AuthorizationSettings)
@@ -1410,7 +1376,6 @@ This endpoint does require any parameters.
 ## GetAuthorizationSubject
 
 > [**AuthzSubject**](AuthzSubject) GetAuthorizationSubject (string subjectId, bool? includeDuplicates = null)
-
 
 
 Returns a listing of roles and permissions for a user.
@@ -1466,7 +1431,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1476,7 +1440,6 @@ namespace Example
 ## GetAuthorizationSubjectsMe
 
 > [**AuthzSubject**](AuthzSubject) GetAuthorizationSubjectsMe (bool? includeDuplicates = null)
-
 
 
 Returns a listing of roles and permissions for the currently authenticated user.
@@ -1529,7 +1492,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **includeDuplicates** | **bool?**| Include multiple entries with the same role and division but different subjects | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1539,7 +1501,6 @@ namespace Example
 ## GetAuthorizationSubjectsRolecounts
 
 > **Dictionary&lt;string, Object&gt;** GetAuthorizationSubjectsRolecounts (List<string> id = null)
-
 
 
 Get the count of roles granted to a list of subjects
@@ -1593,7 +1554,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| id | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1603,7 +1563,6 @@ namespace Example
 ## GetUserRoles
 
 > [**UserAuthorization**](UserAuthorization) GetUserRoles (string subjectId)
-
 
 
 Returns a listing of roles and permissions for a user.
@@ -1657,7 +1616,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1667,7 +1625,6 @@ namespace Example
 ## PatchAuthorizationRole
 
 > [**DomainOrganizationRole**](DomainOrganizationRole) PatchAuthorizationRole (string roleId, DomainOrganizationRole body)
-
 
 
 Patch Organization Role for needsUpdate Field
@@ -1725,7 +1682,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**DomainOrganizationRole**](DomainOrganizationRole)| Organization role |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1735,7 +1691,6 @@ namespace Example
 ## PatchAuthorizationSettings
 
 > [**AuthorizationSettings**](AuthorizationSettings) PatchAuthorizationSettings (AuthorizationSettings body)
-
 
 
 Change authorization settings
@@ -1792,7 +1747,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AuthorizationSettings**](AuthorizationSettings)| Authorization Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1802,7 +1756,6 @@ namespace Example
 ## PostAuthorizationDivisionObject
 
 > void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
-
 
 
 Assign a list of objects to a division
@@ -1860,7 +1813,6 @@ namespace Example
 | **divisionId** | **string**| Division ID |  |
 | **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, EMAILCAMPAIGN, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, FLOWMILESTONE, FLOWOUTCOME, USER, CALLROUTE, EMERGENCYGROUPS, ROUTINGSCHEDULES, ROUTINGSCHEDULEGROUPS, DATATABLES, TEAM, WORKBIN, WORKTYPE, EXTENSIONPOOL, SKILLGROUP, SCRIPT |
 | **body** | [**List<string>**](string)| Object Id List |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1870,7 +1822,6 @@ void (empty response body)
 ## PostAuthorizationDivisionRestore
 
 > [**AuthzDivision**](AuthzDivision) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body = null)
-
 
 
 Recreate a previously deleted division.
@@ -1926,7 +1877,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1936,7 +1886,6 @@ namespace Example
 ## PostAuthorizationDivisions
 
 > [**AuthzDivision**](AuthzDivision) PostAuthorizationDivisions (AuthzDivision body)
-
 
 
 Create a division.
@@ -1991,7 +1940,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AuthzDivision**](AuthzDivision)| Division |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2001,7 +1949,6 @@ namespace Example
 ## PostAuthorizationRole
 
 > void PostAuthorizationRole (string roleId, SubjectDivisions body, string subjectType = null)
-
 
 
 Bulk-grant subjects and divisions with an organization role.
@@ -2058,7 +2005,6 @@ namespace Example
 | **roleId** | **string**| Role ID |  |
 | **body** | [**SubjectDivisions**](SubjectDivisions)| Subjects and Divisions |  |
 | **subjectType** | **string**| what the type of the subjects are (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2068,7 +2014,6 @@ void (empty response body)
 ## PostAuthorizationRoleComparedefaultRightRoleId
 
 > [**DomainOrgRoleDifference**](DomainOrgRoleDifference) PostAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
-
 
 
 Get an unsaved org role to default role comparison
@@ -2128,7 +2073,6 @@ namespace Example
 | **leftRoleId** | **string**| Left Role ID |  |
 | **rightRoleId** | **string**| Right Role id |  |
 | **body** | [**DomainOrganizationRole**](DomainOrganizationRole)| Organization role |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2138,7 +2082,6 @@ namespace Example
 ## PostAuthorizationRoles
 
 > [**DomainOrganizationRole**](DomainOrganizationRole) PostAuthorizationRoles (DomainOrganizationRoleCreate body)
-
 
 
 Create an organization role.
@@ -2192,7 +2135,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DomainOrganizationRoleCreate**](DomainOrganizationRoleCreate)| Organization role |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2202,7 +2144,6 @@ namespace Example
 ## PostAuthorizationRolesDefault
 
 > [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing) PostAuthorizationRolesDefault (bool? force = null)
-
 
 
 Restores all default roles
@@ -2258,7 +2199,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **force** | **bool?**| Restore default roles | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2268,7 +2208,6 @@ namespace Example
 ## PostAuthorizationSubjectBulkadd
 
 > void PostAuthorizationSubjectBulkadd (string subjectId, RoleDivisionGrants body, string subjectType = null)
-
 
 
 Bulk-grant roles and divisions to a subject.
@@ -2325,7 +2264,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Pairs of role and division IDs |  |
 | **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2335,7 +2273,6 @@ void (empty response body)
 ## PostAuthorizationSubjectBulkremove
 
 > void PostAuthorizationSubjectBulkremove (string subjectId, RoleDivisionGrants body)
-
 
 
 Bulk-remove grants from a subject.
@@ -2390,7 +2327,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Pairs of role and division IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2400,7 +2336,6 @@ void (empty response body)
 ## PostAuthorizationSubjectBulkreplace
 
 > void PostAuthorizationSubjectBulkreplace (string subjectId, RoleDivisionGrants body, string subjectType = null)
-
 
 
 Replace subject's roles and divisions with the exact list supplied in the request.
@@ -2460,7 +2395,6 @@ namespace Example
 | **subjectId** | **string**| Subject ID (user or group) |  |
 | **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Pairs of role and division IDs |  |
 | **subjectType** | **string**| what the type of the subject is (PC_GROUP, PC_USER or PC_OAUTH_CLIENT) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2470,7 +2404,6 @@ void (empty response body)
 ## PostAuthorizationSubjectDivisionRole
 
 > void PostAuthorizationSubjectDivisionRole (string subjectId, string divisionId, string roleId, string subjectType = null)
-
 
 
 Make a grant of a role in a division
@@ -2529,7 +2462,6 @@ namespace Example
 | **divisionId** | **string**| the id of the division to which to make the grant |  |
 | **roleId** | **string**| the id of the role to grant |  |
 | **subjectType** | **string**| what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) | [optional] [default to "PC_USER"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2539,7 +2471,6 @@ void (empty response body)
 ## PutAuthorizationDivision
 
 > [**AuthzDivision**](AuthzDivision) PutAuthorizationDivision (string divisionId, AuthzDivision body)
-
 
 
 Update a division.
@@ -2595,7 +2526,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **body** | [**AuthzDivision**](AuthzDivision)| Updated division data |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2605,7 +2535,6 @@ namespace Example
 ## PutAuthorizationRole
 
 > [**DomainOrganizationRole**](DomainOrganizationRole) PutAuthorizationRole (string roleId, DomainOrganizationRoleUpdate body)
-
 
 
 Update an organization role.
@@ -2663,7 +2592,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**DomainOrganizationRoleUpdate**](DomainOrganizationRoleUpdate)| Organization role |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2673,7 +2601,6 @@ namespace Example
 ## PutAuthorizationRoleUsersAdd
 
 > **List&lt;string&gt;** PutAuthorizationRoleUsersAdd (string roleId, List<string> body)
-
 
 
 Sets the users for the role
@@ -2729,7 +2656,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**List<string>**](string)| List of user IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2739,7 +2665,6 @@ namespace Example
 ## PutAuthorizationRoleUsersRemove
 
 > **List&lt;string&gt;** PutAuthorizationRoleUsersRemove (string roleId, List<string> body)
-
 
 
 Removes the users from the role
@@ -2795,7 +2720,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roleId** | **string**| Role ID |  |
 | **body** | [**List<string>**](string)| List of user IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2805,7 +2729,6 @@ namespace Example
 ## PutAuthorizationRolesDefault
 
 > [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing) PutAuthorizationRolesDefault (List<DomainOrganizationRole> body)
-
 
 
 Restore specified default roles
@@ -2859,7 +2782,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<DomainOrganizationRole>**](DomainOrganizationRole)| Organization roles list |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2869,7 +2791,6 @@ namespace Example
 ## PutAuthorizationRolesSettings
 
 > [**RoleSettings**](RoleSettings) PutAuthorizationRolesSettings (RoleSettings body)
-
 
 
 Change authorization role settings
@@ -2926,7 +2847,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RoleSettings**](RoleSettings)| Authorization Role Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2936,7 +2856,6 @@ namespace Example
 ## PutUserRoles
 
 > [**UserAuthorization**](UserAuthorization) PutUserRoles (string subjectId, List<string> body)
-
 
 
 Sets the user's roles
@@ -2992,11 +2911,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **subjectId** | **string**| User ID |  |
 | **body** | [**List<string>**](string)| List of roles |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

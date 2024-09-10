@@ -147,13 +147,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutFlowsInstancesSettingsLoglevelsDefault**](#PutFlowsInstancesSettingsLoglevelsDefault) | **Put** /api/v2/flows/instances/settings/loglevels/default | Edit the flow default log level. |
 | [**PutFlowsMilestone**](#PutFlowsMilestone) | **Put** /api/v2/flows/milestones/{milestoneId} | Updates a flow milestone |
 | [**PutFlowsOutcome**](#PutFlowsOutcome) | **Put** /api/v2/flows/outcomes/{flowOutcomeId} | Updates a flow outcome |
-{: class="table table-striped"}
+
 
 
 ## DeleteArchitectEmergencygroup
 
 > void DeleteArchitectEmergencygroup (string emergencyGroupId)
-
 
 
 Deletes a emergency group by ID
@@ -206,7 +205,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emergencyGroupId** | **string**| Emergency group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -216,7 +214,6 @@ void (empty response body)
 ## DeleteArchitectGrammar
 
 > **Object** DeleteArchitectGrammar (string grammarId)
-
 
 
 Delete a grammar.
@@ -272,7 +269,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| grammar ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -282,7 +278,6 @@ namespace Example
 ## DeleteArchitectGrammarLanguage
 
 > void DeleteArchitectGrammarLanguage (string grammarId, string languageCode)
-
 
 
 Delete specified grammar language
@@ -339,7 +334,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -349,7 +343,6 @@ void (empty response body)
 ## DeleteArchitectGrammarLanguageFilesDtmf
 
 > void DeleteArchitectGrammarLanguageFilesDtmf (string grammarId, string languageCode)
-
 
 
 Clear the DTMF mode file for the grammar language if there is one
@@ -406,7 +399,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -416,7 +408,6 @@ void (empty response body)
 ## DeleteArchitectGrammarLanguageFilesVoice
 
 > void DeleteArchitectGrammarLanguageFilesVoice (string grammarId, string languageCode)
-
 
 
 Clear the voice mode file for the grammar language if there is one
@@ -473,7 +464,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -483,7 +473,6 @@ void (empty response body)
 ## DeleteArchitectIvr
 
 > void DeleteArchitectIvr (string ivrId)
-
 
 
 Delete an IVR Config.
@@ -536,7 +525,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ivrId** | **string**| IVR id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -546,7 +534,6 @@ void (empty response body)
 ## DeleteArchitectPrompt
 
 > void DeleteArchitectPrompt (string promptId, bool? allResources = null)
-
 
 
 Delete specified user prompt
@@ -601,7 +588,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **allResources** | **bool?**| Whether or not to delete all the prompt resources | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -611,7 +597,6 @@ void (empty response body)
 ## DeleteArchitectPromptResource
 
 > void DeleteArchitectPromptResource (string promptId, string languageCode)
-
 
 
 Delete specified user prompt resource
@@ -666,7 +651,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -676,7 +660,6 @@ void (empty response body)
 ## DeleteArchitectPromptResourceAudio
 
 > void DeleteArchitectPromptResourceAudio (string promptId, string languageCode)
-
 
 
 Delete specified user prompt resource audio
@@ -731,7 +714,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -741,7 +723,6 @@ void (empty response body)
 ## DeleteArchitectPrompts
 
 > [**Operation**](Operation) DeleteArchitectPrompts (List<string> id)
-
 
 
 Batch-delete a list of prompts
@@ -797,7 +778,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| List of Prompt IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -807,7 +787,6 @@ namespace Example
 ## DeleteArchitectSchedule
 
 > void DeleteArchitectSchedule (string scheduleId)
-
 
 
 Delete a schedule by id
@@ -860,7 +839,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -870,7 +848,6 @@ void (empty response body)
 ## DeleteArchitectSchedulegroup
 
 > void DeleteArchitectSchedulegroup (string scheduleGroupId)
-
 
 
 Deletes a schedule group by ID
@@ -923,7 +900,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleGroupId** | **string**| Schedule group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -933,7 +909,6 @@ void (empty response body)
 ## DeleteArchitectSystempromptResource
 
 > void DeleteArchitectSystempromptResource (string promptId, string languageCode)
-
 
 
 Delete a system prompt resource override.
@@ -988,7 +963,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -998,7 +972,6 @@ void (empty response body)
 ## DeleteFlow
 
 > void DeleteFlow (string flowId)
-
 
 
 Delete flow
@@ -1051,7 +1024,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1061,7 +1033,6 @@ void (empty response body)
 ## DeleteFlowInstancesSettingsLoglevels
 
 > void DeleteFlowInstancesSettingsLoglevels (string flowId)
-
 
 
 Deletes a log level for a flow by flow id.
@@ -1116,7 +1087,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| The flow id to delete the loglevel for |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1126,7 +1096,6 @@ void (empty response body)
 ## DeleteFlows
 
 > [**Operation**](Operation) DeleteFlows (List<string> id)
-
 
 
 Batch-delete a list of flows
@@ -1182,7 +1151,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| List of Flow IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1192,7 +1160,6 @@ namespace Example
 ## DeleteFlowsDatatable
 
 > void DeleteFlowsDatatable (string datatableId, bool? force = null)
-
 
 
 deletes a specific datatable by id
@@ -1249,7 +1216,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **force** | **bool?**| force delete, even if in use | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1259,7 +1225,6 @@ void (empty response body)
 ## DeleteFlowsDatatableRow
 
 > void DeleteFlowsDatatableRow (string datatableId, string rowId)
-
 
 
 Delete a row entry
@@ -1317,7 +1282,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **rowId** | **string**| the key for the row |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1327,7 +1291,6 @@ void (empty response body)
 ## DeleteFlowsInstancesSettingsLoglevelsDefault
 
 > void DeleteFlowsInstancesSettingsLoglevelsDefault ()
-
 
 
 Resets the org log level to default, base
@@ -1378,7 +1341,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -1387,7 +1349,6 @@ void (empty response body)
 ## DeleteFlowsMilestone
 
 > **Object** DeleteFlowsMilestone (string milestoneId)
-
 
 
 Delete a flow milestone.
@@ -1441,7 +1402,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **milestoneId** | **string**| flow milestone ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1451,7 +1411,6 @@ namespace Example
 ## GetArchitectDependencytracking
 
 > [**DependencyObjectEntityListing**](DependencyObjectEntityListing) GetArchitectDependencytracking (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
-
 
 
 Get Dependency Tracking objects that have a given display name
@@ -1519,7 +1478,6 @@ namespace Example
 | **consumingResources** | **bool?**| Include resources that consume each result item | [optional]  |
 | **consumedResourceType** | [**List<string>**](string)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
 | **consumingResourceType** | [**List<string>**](string)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1529,7 +1487,6 @@ namespace Example
 ## GetArchitectDependencytrackingBuild
 
 > [**DependencyStatus**](DependencyStatus) GetArchitectDependencytrackingBuild ()
-
 
 
 Get Dependency Tracking build status for an organization
@@ -1579,7 +1536,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DependencyStatus**](DependencyStatus)
@@ -1588,7 +1544,6 @@ This endpoint does require any parameters.
 ## GetArchitectDependencytrackingConsumedresources
 
 > [**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing) GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get resources that are consumed by a given Dependency Tracking object
@@ -1652,7 +1607,6 @@ namespace Example
 | **resourceType** | [**List<string>**](string)| Types of consumed resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1662,7 +1616,6 @@ namespace Example
 ## GetArchitectDependencytrackingConsumingresources
 
 > [**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing) GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
-
 
 
 Get resources that consume a given Dependency Tracking object
@@ -1728,7 +1681,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **flowFilter** | **string**| Show only checkedIn or published flows | [optional] <br />**Values**: checkedIn, published |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1738,7 +1690,6 @@ namespace Example
 ## GetArchitectDependencytrackingDeletedresourceconsumers
 
 > [**DependencyObjectEntityListing**](DependencyObjectEntityListing) GetArchitectDependencytrackingDeletedresourceconsumers (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get Dependency Tracking objects that consume deleted resources
@@ -1804,7 +1755,6 @@ namespace Example
 | **consumedResourceType** | [**List<string>**](string)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1814,7 +1764,6 @@ namespace Example
 ## GetArchitectDependencytrackingObject
 
 > [**DependencyObject**](DependencyObject) GetArchitectDependencytrackingObject (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null)
-
 
 
 Get a Dependency Tracking object
@@ -1882,7 +1831,6 @@ namespace Example
 | **consumedResourceType** | [**List<string>**](string)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
 | **consumingResourceType** | [**List<string>**](string)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
 | **consumedResourceRequest** | **bool?**| Indicate that this is going to look up a consumed resource object | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1892,7 +1840,6 @@ namespace Example
 ## GetArchitectDependencytrackingType
 
 > [**DependencyType**](DependencyType) GetArchitectDependencytrackingType (string typeId)
-
 
 
 Get a Dependency Tracking type.
@@ -1946,7 +1893,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **typeId** | **string**| Type ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1956,7 +1902,6 @@ namespace Example
 ## GetArchitectDependencytrackingTypes
 
 > [**DependencyTypeEntityListing**](DependencyTypeEntityListing) GetArchitectDependencytrackingTypes (int? pageNumber = null, int? pageSize = null)
-
 
 
 Get Dependency Tracking types.
@@ -2012,7 +1957,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2022,7 +1966,6 @@ namespace Example
 ## GetArchitectDependencytrackingUpdatedresourceconsumers
 
 > [**DependencyObjectEntityListing**](DependencyObjectEntityListing) GetArchitectDependencytrackingUpdatedresourceconsumers (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get Dependency Tracking objects that depend on updated resources
@@ -2086,7 +2029,6 @@ namespace Example
 | **consumedResourceType** | [**List<string>**](string)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, AUDIOCONNECTORBOT, BOTCONNECTORBOT, BOTCONNECTORINTEGRATION, BOTFLOW, BRIDGEACTION, COMMONMODULEFLOW, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, DATATABLE, DIALOGENGINEBOT, DIALOGENGINEBOTVERSION, DIALOGFLOWAGENT, DIALOGFLOWCXAGENT, DIGITALBOTFLOW, EMAILROUTE, EMERGENCYGROUP, FLOWACTION, FLOWDATATYPE, FLOWMILESTONE, FLOWOUTCOME, GRAMMAR, GROUP, IMAGE, INBOUNDCALLFLOW, INBOUNDCHATFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGEFLOW, INQUEUECALLFLOW, INQUEUEEMAILFLOW, INQUEUESHORTMESSAGEFLOW, IVRCONFIGURATION, KNOWLEDGEBASE, KNOWLEDGEBASEDOCUMENT, LANGUAGE, LEXBOT, LEXBOTALIAS, LEXV2BOT, LEXV2BOTALIAS, NLUDOMAIN, NUANCEMIXBOT, NUANCEMIXINTEGRATION, OAUTHCLIENT, OUTBOUNDCALLFLOW, QUEUE, RECORDINGPOLICY, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, STTENGINE, SURVEYFORM, SURVEYINVITEFLOW, SYSTEMPROMPT, TTSENGINE, TTSVOICE, USER, USERPROMPT, UTILIZATIONLABEL, VOICEFLOW, VOICEMAILFLOW, VOICESURVEYFLOW, WIDGET, WORKFLOW, WORKITEMFLOW, WORKTYPE |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2096,7 +2038,6 @@ namespace Example
 ## GetArchitectEmergencygroup
 
 > [**EmergencyGroup**](EmergencyGroup) GetArchitectEmergencygroup (string emergencyGroupId)
-
 
 
 Gets a emergency group by ID
@@ -2150,7 +2091,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emergencyGroupId** | **string**| Emergency group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2160,7 +2100,6 @@ namespace Example
 ## GetArchitectEmergencygroups
 
 > [**EmergencyGroupListing**](EmergencyGroupListing) GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
-
 
 
 Get a list of emergency groups.
@@ -2222,7 +2161,6 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to "name"] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the Emergency Group to filter by. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2232,7 +2170,6 @@ namespace Example
 ## GetArchitectEmergencygroupsDivisionviews
 
 > [**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing) GetArchitectEmergencygroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of basic emergency group objects filterable by query parameters.
@@ -2300,7 +2237,6 @@ namespace Example
 | **id** | [**List<string>**](string)| ID of the Emergency Groups to filter by. | [optional]  |
 | **name** | **string**| Name of the Emergency Group to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2310,7 +2246,6 @@ namespace Example
 ## GetArchitectGrammar
 
 > [**Grammar**](Grammar) GetArchitectGrammar (string grammarId, bool? includeFileUrls = null)
-
 
 
 Get a grammar
@@ -2370,7 +2305,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| grammar ID |  |
 | **includeFileUrls** | **bool?**| Include grammar language file URLs | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2380,7 +2314,6 @@ namespace Example
 ## GetArchitectGrammarLanguage
 
 > [**GrammarLanguage**](GrammarLanguage) GetArchitectGrammarLanguage (string grammarId, string languageCode)
-
 
 
 Get a grammar language.
@@ -2438,7 +2371,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2448,7 +2380,6 @@ namespace Example
 ## GetArchitectGrammars
 
 > [**GrammarListing**](GrammarListing) GetArchitectGrammars (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, bool? includeFileUrls = null)
-
 
 
 Get a pageable list of grammars, filtered by query parameters
@@ -2522,7 +2453,6 @@ namespace Example
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
 | **includeFileUrls** | **bool?**| Include grammar language file URLs | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2532,7 +2462,6 @@ namespace Example
 ## GetArchitectIvr
 
 > [**IVR**](IVR) GetArchitectIvr (string ivrId)
-
 
 
 Get an IVR config.
@@ -2586,7 +2515,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ivrId** | **string**| IVR id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2596,7 +2524,6 @@ namespace Example
 ## GetArchitectIvrs
 
 > [**IVREntityListing**](IVREntityListing) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
-
 
 
 Get IVR configs.
@@ -2662,7 +2589,6 @@ namespace Example
 | **name** | **string**| Name of the IVR to filter by. | [optional]  |
 | **dnis** | **string**| The phone number of the IVR to filter by. | [optional]  |
 | **scheduleGroup** | **string**| The Schedule Group of the IVR to filter by. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2672,7 +2598,6 @@ namespace Example
 ## GetArchitectIvrsDivisionviews
 
 > [**IVRDivisionViewEntityListing**](IVRDivisionViewEntityListing) GetArchitectIvrsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of basic ivr configuration information objects filterable by query parameters.
@@ -2738,7 +2663,6 @@ namespace Example
 | **id** | [**List<string>**](string)| ID of the IVR to filter by. | [optional]  |
 | **name** | **string**| Name of the IVR to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2748,7 +2672,6 @@ namespace Example
 ## GetArchitectPrompt
 
 > [**Prompt**](Prompt) GetArchitectPrompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
-
 
 
 Get specified user prompt
@@ -2808,7 +2731,6 @@ namespace Example
 | **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
 | **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
 | **language** | [**List<string>**](string)| Filter the resources down to the provided languages | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2818,7 +2740,6 @@ namespace Example
 ## GetArchitectPromptHistoryHistoryId
 
 > [**HistoryListing**](HistoryListing) GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
-
 
 
 Get generated prompt history
@@ -2884,7 +2805,6 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to "desc"] |
 | **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **action** | [**List<string>**](string)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2894,7 +2814,6 @@ namespace Example
 ## GetArchitectPromptResource
 
 > [**PromptAsset**](PromptAsset) GetArchitectPromptResource (string promptId, string languageCode)
-
 
 
 Get specified user prompt resource
@@ -2950,7 +2869,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2960,7 +2878,6 @@ namespace Example
 ## GetArchitectPromptResources
 
 > [**PromptAssetEntityListing**](PromptAssetEntityListing) GetArchitectPromptResources (string promptId, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get a pageable list of user prompt resources
@@ -3020,7 +2937,6 @@ namespace Example
 | **promptId** | **string**| Prompt ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3030,7 +2946,6 @@ namespace Example
 ## GetArchitectPrompts
 
 > [**PromptEntityListing**](PromptEntityListing) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
-
 
 
 Get a pageable list of user prompts
@@ -3104,7 +3019,6 @@ namespace Example
 | **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
 | **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
 | **language** | [**List<string>**](string)| Filter the resources down to the provided languages | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3114,7 +3028,6 @@ namespace Example
 ## GetArchitectSchedule
 
 > [**Schedule**](Schedule) GetArchitectSchedule (string scheduleId)
-
 
 
 Get a schedule by ID
@@ -3168,7 +3081,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleId** | **string**| Schedule ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3178,7 +3090,6 @@ namespace Example
 ## GetArchitectSchedulegroup
 
 > [**ScheduleGroup**](ScheduleGroup) GetArchitectSchedulegroup (string scheduleGroupId)
-
 
 
 Gets a schedule group by ID
@@ -3232,7 +3143,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleGroupId** | **string**| Schedule group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3242,7 +3152,6 @@ namespace Example
 ## GetArchitectSchedulegroups
 
 > [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing) GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
-
 
 
 Get a list of schedule groups.
@@ -3308,7 +3217,6 @@ namespace Example
 | **name** | **string**| Name of the Schedule Group to filter by. | [optional]  |
 | **scheduleIds** | **string**| A comma-delimited list of Schedule IDs to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3318,7 +3226,6 @@ namespace Example
 ## GetArchitectSchedulegroupsDivisionviews
 
 > [**ScheduleGroupDivisionViewEntityListing**](ScheduleGroupDivisionViewEntityListing) GetArchitectSchedulegroupsDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
@@ -3384,7 +3291,6 @@ namespace Example
 | **id** | [**List<string>**](string)| ID of the schedule group to filter by. | [optional]  |
 | **name** | **string**| Name of the schedule group to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3394,7 +3300,6 @@ namespace Example
 ## GetArchitectSchedules
 
 > [**ScheduleEntityListing**](ScheduleEntityListing) GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a list of schedules.
@@ -3458,7 +3363,6 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the Schedule to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3468,7 +3372,6 @@ namespace Example
 ## GetArchitectSchedulesDivisionviews
 
 > [**ScheduleDivisionViewEntityListing**](ScheduleDivisionViewEntityListing) GetArchitectSchedulesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of basic schedule configuration information objects filterable by query parameters.
@@ -3534,7 +3437,6 @@ namespace Example
 | **id** | [**List<string>**](string)| ID of the schedule group to filter by. | [optional]  |
 | **name** | **string**| Name of the schedule group to filter by. | [optional]  |
 | **divisionId** | [**List<string>**](string)| List of divisionIds on which to filter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3544,7 +3446,6 @@ namespace Example
 ## GetArchitectSystemprompt
 
 > [**SystemPrompt**](SystemPrompt) GetArchitectSystemprompt (string promptId, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
-
 
 
 Get a system prompt
@@ -3604,7 +3505,6 @@ namespace Example
 | **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
 | **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
 | **language** | [**List<string>**](string)| Filter the resources down to the provided languages | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3614,7 +3514,6 @@ namespace Example
 ## GetArchitectSystempromptHistoryHistoryId
 
 > [**HistoryListing**](HistoryListing) GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
-
 
 
 Get generated prompt history
@@ -3680,7 +3579,6 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to "desc"] |
 | **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **action** | [**List<string>**](string)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3690,7 +3588,6 @@ namespace Example
 ## GetArchitectSystempromptResource
 
 > [**SystemPromptAsset**](SystemPromptAsset) GetArchitectSystempromptResource (string promptId, string languageCode)
-
 
 
 Get a system prompt resource.
@@ -3746,7 +3643,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3756,7 +3652,6 @@ namespace Example
 ## GetArchitectSystempromptResources
 
 > [**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing) GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
-
 
 
 Get system prompt resources.
@@ -3818,7 +3713,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to "id"] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3828,7 +3722,6 @@ namespace Example
 ## GetArchitectSystemprompts
 
 > [**SystemPromptEntityListing**](SystemPromptEntityListing) GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
-
 
 
 Get System Prompts
@@ -3900,7 +3793,6 @@ namespace Example
 | **includeMediaUris** | **bool?**| Include the media URIs for each resource | [optional] [default to true] |
 | **includeResources** | **bool?**| Include the resources for each system prompt | [optional] [default to true] |
 | **language** | [**List<string>**](string)| Filter the resources down to the provided languages | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3910,7 +3802,6 @@ namespace Example
 ## GetFlow
 
 > [**Flow**](Flow) GetFlow (string flowId, bool? deleted = null)
-
 
 
 Get flow
@@ -3966,7 +3857,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
 | **deleted** | **bool?**| Deleted flows | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3976,7 +3866,6 @@ namespace Example
 ## GetFlowHistoryHistoryId
 
 > [**HistoryListing**](HistoryListing) GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
-
 
 
 Get generated flow history
@@ -4042,7 +3931,6 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to "desc"] |
 | **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **action** | [**List<string>**](string)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4052,7 +3940,6 @@ namespace Example
 ## GetFlowInstancesSettingsLoglevels
 
 > [**FlowSettingsResponse**](FlowSettingsResponse) GetFlowInstancesSettingsLoglevels (string flowId, List<string> expand = null)
-
 
 
 Retrieves the log level for a flow by flow id.
@@ -4110,7 +3997,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| The flow id to get the loglevel for |  |
 | **expand** | [**List<string>**](string)| Expand instructions for the result | [optional] <br />**Values**: name, type, logLevelCharacteristics.characteristics |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4120,7 +4006,6 @@ namespace Example
 ## GetFlowLatestconfiguration
 
 > **Object** GetFlowLatestconfiguration (string flowId, bool? deleted = null)
-
 
 
 Get the latest configuration for flow
@@ -4176,7 +4061,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
 | **deleted** | **bool?**| Deleted flows | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4186,7 +4070,6 @@ namespace Example
 ## GetFlowVersion
 
 > [**FlowVersion**](FlowVersion) GetFlowVersion (string flowId, string versionId, string deleted = null)
-
 
 
 Get flow version
@@ -4244,7 +4127,6 @@ namespace Example
 | **flowId** | **string**| Flow ID |  |
 | **versionId** | **string**| Version ID |  |
 | **deleted** | **string**| Deleted flows | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4254,7 +4136,6 @@ namespace Example
 ## GetFlowVersionConfiguration
 
 > **Object** GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null)
-
 
 
 Create flow version configuration
@@ -4312,7 +4193,6 @@ namespace Example
 | **flowId** | **string**| Flow ID |  |
 | **versionId** | **string**| Version ID |  |
 | **deleted** | **string**| Deleted flows | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4322,7 +4202,6 @@ namespace Example
 ## GetFlowVersionHealth
 
 > [**FlowHealth**](FlowHealth) GetFlowVersionHealth (string flowId, string versionId, string language = null)
-
 
 
 Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
@@ -4380,7 +4259,6 @@ namespace Example
 | **flowId** | **string**| Flow ID. |  |
 | **versionId** | **string**| Version ID. |  |
 | **language** | **string**| Language to filter for | [optional] <br />**Values**: en-us, en-gb, en-au, en-za, en-nz, en-ie, fr-ca, fr-fr, es-us, es-es, es-mx, de-de, it-it, pt-br, pt-pt, nl-nl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4390,7 +4268,6 @@ namespace Example
 ## GetFlowVersionIntentHealth
 
 > [**FlowHealthIntent**](FlowHealthIntent) GetFlowVersionIntentHealth (string flowId, string versionId, string intentId, string language)
-
 
 
 Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
@@ -4450,7 +4327,6 @@ namespace Example
 | **versionId** | **string**| Version ID. |  |
 | **intentId** | **string**| Intent ID. |  |
 | **language** | **string**| Language to filter for | <br />**Values**: en-us, en-gb, en-au, en-za, en-nz, en-ie, fr-ca, fr-fr, es-us, es-es, es-mx, de-de, it-it, pt-br, pt-pt, nl-nl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4460,7 +4336,6 @@ namespace Example
 ## GetFlowVersionIntentUtteranceHealth
 
 > [**FlowHealthUtterance**](FlowHealthUtterance) GetFlowVersionIntentUtteranceHealth (string flowId, string versionId, string intentId, string utteranceId, string language)
-
 
 
 Get health metrics associated with a specific utterance of an intent.
@@ -4522,7 +4397,6 @@ namespace Example
 | **intentId** | **string**| Intent ID. |  |
 | **utteranceId** | **string**| Utterance ID. |  |
 | **language** | **string**| Language to filter for | <br />**Values**: en-us, en-gb, en-au, en-za, en-nz, en-ie, fr-ca, fr-fr, es-us, es-es, es-mx, de-de, it-it, pt-br, pt-pt, nl-nl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4532,7 +4406,6 @@ namespace Example
 ## GetFlowVersions
 
 > [**FlowVersionEntityListing**](FlowVersionEntityListing) GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
-
 
 
 Get flow version list
@@ -4592,7 +4465,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **deleted** | **bool?**| Include Deleted flows | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4602,7 +4474,6 @@ namespace Example
 ## GetFlows
 
 > [**FlowEntityListing**](FlowEntityListing) GetFlows (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of flows, filtered by query parameters
@@ -4694,7 +4565,6 @@ namespace Example
 | **publishedAfter** | **string**| Published after | [optional]  |
 | **publishedBefore** | **string**| Published before | [optional]  |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4704,7 +4574,6 @@ namespace Example
 ## GetFlowsDatatable
 
 > [**DataTable**](DataTable) GetFlowsDatatable (string datatableId, string expand = null)
-
 
 
 Returns a specific datatable by id
@@ -4762,7 +4631,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4772,7 +4640,6 @@ namespace Example
 ## GetFlowsDatatableExportJob
 
 > [**DataTableExportJob**](DataTableExportJob) GetFlowsDatatableExportJob (string datatableId, string exportJobId)
-
 
 
 Returns the state information about an export job
@@ -4831,7 +4698,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **exportJobId** | **string**| id of export job |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4841,7 +4707,6 @@ namespace Example
 ## GetFlowsDatatableImportJob
 
 > [**DataTableImportJob**](DataTableImportJob) GetFlowsDatatableImportJob (string datatableId, string importJobId)
-
 
 
 Returns the state information about an import job
@@ -4900,7 +4765,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **importJobId** | **string**| id of import job |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4910,7 +4774,6 @@ namespace Example
 ## GetFlowsDatatableImportJobs
 
 > [**DataTableImportEntityListing**](DataTableImportEntityListing) GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get all recent import jobs
@@ -4971,7 +4834,6 @@ namespace Example
 | **datatableId** | **string**| id of datatable |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4981,7 +4843,6 @@ namespace Example
 ## GetFlowsDatatableRow
 
 > **Dictionary&lt;string, Object&gt;** GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null)
-
 
 
 Returns a specific row for the datatable
@@ -5042,7 +4903,6 @@ namespace Example
 | **datatableId** | **string**| id of datatable |  |
 | **rowId** | **string**| The key for the row |  |
 | **showbrief** | **bool?**| if true returns just the key field for the row | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5052,7 +4912,6 @@ namespace Example
 ## GetFlowsDatatableRows
 
 > [**DataTableRowEntityListing**](DataTableRowEntityListing) GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null)
-
 
 
 Returns the rows for the datatable with the given id
@@ -5117,7 +4976,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **showbrief** | **bool?**| If true returns just the key value of the row | [optional] [default to true] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5127,7 +4985,6 @@ namespace Example
 ## GetFlowsDatatables
 
 > [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing) GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
-
 
 
 Retrieve a list of datatables for the org
@@ -5195,7 +5052,6 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
 | **name** | **string**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5205,7 +5061,6 @@ namespace Example
 ## GetFlowsDatatablesDivisionview
 
 > [**DataTable**](DataTable) GetFlowsDatatablesDivisionview (string datatableId, string expand = null)
-
 
 
 Returns a specific datatable by id
@@ -5263,7 +5118,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5273,7 +5127,6 @@ namespace Example
 ## GetFlowsDatatablesDivisionviews
 
 > [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing) GetFlowsDatatablesDivisionviews (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
-
 
 
 Retrieve a list of datatables for the org
@@ -5341,7 +5194,6 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
 | **name** | **string**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5351,7 +5203,6 @@ namespace Example
 ## GetFlowsDivisionviews
 
 > [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing) GetFlowsDivisionviews (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
-
 
 
 Get a pageable list of basic flow information objects filterable by query parameters.
@@ -5429,7 +5280,6 @@ namespace Example
 | **publishedBefore** | **string**| Published before | [optional]  |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
 | **includeSchemas** | **bool?**| Include variable schemas | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5439,7 +5289,6 @@ namespace Example
 ## GetFlowsExecution
 
 > [**FlowRuntimeExecution**](FlowRuntimeExecution) GetFlowsExecution (string flowExecutionId)
-
 
 
 Get a flow execution's details. Flow execution details are available for several days after the flow is started.
@@ -5493,7 +5342,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowExecutionId** | **string**| flow execution ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5503,7 +5351,6 @@ namespace Example
 ## GetFlowsInstance
 
 > [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult) GetFlowsInstance (string instanceId, string expand = null)
-
 
 
 Start a process (job) to prepare a download of a singular flow execution data instance by Id
@@ -5561,7 +5408,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **instanceId** | **string**| Instance ID |  |
 | **expand** | **string**| Expand various details. | [optional] <br />**Values**: bots, dataActions |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5571,7 +5417,6 @@ namespace Example
 ## GetFlowsInstancesJob
 
 > [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult) GetFlowsInstancesJob (string jobId)
-
 
 
 Get the status and/or results of an asynchronous flow execution data retrieval job
@@ -5625,7 +5470,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5635,7 +5479,6 @@ namespace Example
 ## GetFlowsInstancesQuerycapabilities
 
 > [**FlowsQueryCriteriaResponse**](FlowsQueryCriteriaResponse) GetFlowsInstancesQuerycapabilities (string expand = null)
-
 
 
 Retrieve a list of capabilities that the org can use to query for execution data
@@ -5691,7 +5534,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **expand** | **string**| Expand various query types. | [optional] <br />**Values**: flow, action |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5701,7 +5543,6 @@ namespace Example
 ## GetFlowsInstancesSettingsExecutiondata
 
 > [**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse) GetFlowsInstancesSettingsExecutiondata ()
-
 
 
 Get the execution history enabled setting.
@@ -5753,7 +5594,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse)
@@ -5762,7 +5602,6 @@ This endpoint does require any parameters.
 ## GetFlowsInstancesSettingsLoglevels
 
 > [**FlowSettingsResponseEntityListing**](FlowSettingsResponseEntityListing) GetFlowsInstancesSettingsLoglevels (List<string> expand = null, int? pageNumber = null, int? pageSize = null)
-
 
 
 Retrieve a list of LogLevels for the organization.
@@ -5823,7 +5662,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| Expand instructions for the result | [optional] <br />**Values**: name, type, logLevelCharacteristics.characteristics |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5833,7 +5671,6 @@ namespace Example
 ## GetFlowsInstancesSettingsLoglevelsCharacteristics
 
 > [**FlowLogLevelCharacteristicsDefinitions**](FlowLogLevelCharacteristicsDefinitions) GetFlowsInstancesSettingsLoglevelsCharacteristics ()
-
 
 
 Gets the available flow log level characteristics for this organization.
@@ -5886,7 +5723,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FlowLogLevelCharacteristicsDefinitions**](FlowLogLevelCharacteristicsDefinitions)
@@ -5895,7 +5731,6 @@ This endpoint does require any parameters.
 ## GetFlowsInstancesSettingsLoglevelsDefault
 
 > [**FlowSettingsResponse**](FlowSettingsResponse) GetFlowsInstancesSettingsLoglevelsDefault (List<string> expand = null)
-
 
 
 Returns the flow default log level.
@@ -5951,7 +5786,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string)| Expand instructions for the result | [optional] <br />**Values**: logLevelCharacteristics.characteristics |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5961,7 +5795,6 @@ namespace Example
 ## GetFlowsJob
 
 > [**ArchitectJobStateResponse**](ArchitectJobStateResponse) GetFlowsJob (string jobId, List<string> expand = null)
-
 
 
 Fetch Architect Job Status
@@ -6017,7 +5850,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| Job ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: messages |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6027,7 +5859,6 @@ namespace Example
 ## GetFlowsMilestone
 
 > [**FlowMilestone**](FlowMilestone) GetFlowsMilestone (string milestoneId)
-
 
 
 Get a flow milestone
@@ -6083,7 +5914,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **milestoneId** | **string**| flow milestone ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6093,7 +5923,6 @@ namespace Example
 ## GetFlowsMilestones
 
 > [**FlowMilestoneListing**](FlowMilestoneListing) GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of flow milestones, filtered by query parameters
@@ -6165,7 +5994,6 @@ namespace Example
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6175,7 +6003,6 @@ namespace Example
 ## GetFlowsMilestonesDivisionviews
 
 > [**FlowMilestoneDivisionViewEntityListing**](FlowMilestoneDivisionViewEntityListing) GetFlowsMilestonesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of basic flow milestone information objects filterable by query parameters.
@@ -6243,7 +6070,6 @@ namespace Example
 | **id** | [**List<string>**](string)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6253,7 +6079,6 @@ namespace Example
 ## GetFlowsOutcome
 
 > [**FlowOutcome**](FlowOutcome) GetFlowsOutcome (string flowOutcomeId)
-
 
 
 Get a flow outcome
@@ -6309,7 +6134,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowOutcomeId** | **string**| flow outcome ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6319,7 +6143,6 @@ namespace Example
 ## GetFlowsOutcomes
 
 > [**FlowOutcomeListing**](FlowOutcomeListing) GetFlowsOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of flow outcomes, filtered by query parameters
@@ -6391,7 +6214,6 @@ namespace Example
 | **description** | **string**| Description | [optional]  |
 | **nameOrDescription** | **string**| Name or description | [optional]  |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6401,7 +6223,6 @@ namespace Example
 ## GetFlowsOutcomesDivisionviews
 
 > [**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing) GetFlowsOutcomesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
-
 
 
 Get a pageable list of basic flow outcome information objects filterable by query parameters.
@@ -6469,7 +6290,6 @@ namespace Example
 | **id** | [**List<string>**](string)| ID | [optional]  |
 | **name** | **string**| Name | [optional]  |
 | **divisionId** | [**List<string>**](string)| division ID(s) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6479,7 +6299,6 @@ namespace Example
 ## PatchArchitectGrammar
 
 > [**Grammar**](Grammar) PatchArchitectGrammar (string grammarId, Grammar body = null)
-
 
 
 Updates a grammar
@@ -6537,7 +6356,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| grammar ID |  |
 | **body** | [**Grammar**](Grammar)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6547,7 +6365,6 @@ namespace Example
 ## PatchArchitectGrammarLanguage
 
 > [**GrammarLanguage**](GrammarLanguage) PatchArchitectGrammarLanguage (string grammarId, string languageCode, GrammarLanguageUpdate body = null)
-
 
 
 Updates a grammar language
@@ -6607,7 +6424,6 @@ namespace Example
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
 | **body** | [**GrammarLanguageUpdate**](GrammarLanguageUpdate)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6617,7 +6433,6 @@ namespace Example
 ## PatchFlowsInstancesSettingsExecutiondata
 
 > [**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse) PatchFlowsInstancesSettingsExecutiondata (ExecutionDataSettingsRequest body)
-
 
 
 Edit the execution history enabled setting.
@@ -6673,7 +6488,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest)| New Execution Data Setting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6683,7 +6497,6 @@ namespace Example
 ## PostArchitectDependencytrackingBuild
 
 > void PostArchitectDependencytrackingBuild ()
-
 
 
 Rebuild Dependency Tracking data for an organization
@@ -6734,7 +6547,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -6743,7 +6555,6 @@ void (empty response body)
 ## PostArchitectEmergencygroups
 
 > [**EmergencyGroup**](EmergencyGroup) PostArchitectEmergencygroups (EmergencyGroup body)
-
 
 
 Creates a new emergency group
@@ -6797,7 +6608,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**EmergencyGroup**](EmergencyGroup)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6807,7 +6617,6 @@ namespace Example
 ## PostArchitectGrammarLanguageFilesDtmf
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostArchitectGrammarLanguageFilesDtmf (string grammarId, string languageCode, GrammarFileUploadRequest body)
-
 
 
 Creates a presigned URL for uploading a grammar DTMF mode file
@@ -6867,7 +6676,6 @@ namespace Example
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
 | **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6877,7 +6685,6 @@ namespace Example
 ## PostArchitectGrammarLanguageFilesVoice
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostArchitectGrammarLanguageFilesVoice (string grammarId, string languageCode, GrammarFileUploadRequest body)
-
 
 
 Creates a presigned URL for uploading a grammar voice mode file
@@ -6937,7 +6744,6 @@ namespace Example
 | **grammarId** | **string**| Grammar ID |  |
 | **languageCode** | **string**| Language |  |
 | **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6947,7 +6753,6 @@ namespace Example
 ## PostArchitectGrammarLanguages
 
 > [**GrammarLanguage**](GrammarLanguage) PostArchitectGrammarLanguages (string grammarId, GrammarLanguage body)
-
 
 
 Create a new language for a given grammar
@@ -7005,7 +6810,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **grammarId** | **string**| Grammar ID |  |
 | **body** | [**GrammarLanguage**](GrammarLanguage)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7015,7 +6819,6 @@ namespace Example
 ## PostArchitectGrammars
 
 > [**Grammar**](Grammar) PostArchitectGrammars (Grammar body)
-
 
 
 Create a new grammar
@@ -7071,7 +6874,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Grammar**](Grammar)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7081,7 +6883,6 @@ namespace Example
 ## PostArchitectIvrs
 
 > [**IVR**](IVR) PostArchitectIvrs (IVR body)
-
 
 
 Create IVR config.
@@ -7135,7 +6936,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**IVR**](IVR)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7145,7 +6945,6 @@ namespace Example
 ## PostArchitectPromptHistory
 
 > [**Operation**](Operation) PostArchitectPromptHistory (string promptId)
-
 
 
 Generate prompt history
@@ -7201,7 +7000,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7211,7 +7009,6 @@ namespace Example
 ## PostArchitectPromptResources
 
 > [**PromptAsset**](PromptAsset) PostArchitectPromptResources (string promptId, PromptAssetCreate body)
-
 
 
 Create a new user prompt resource
@@ -7267,7 +7064,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **body** | [**PromptAssetCreate**](PromptAssetCreate)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7277,7 +7073,6 @@ namespace Example
 ## PostArchitectPrompts
 
 > [**Prompt**](Prompt) PostArchitectPrompts (Prompt body)
-
 
 
 Create a new user prompt
@@ -7331,7 +7126,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Prompt**](Prompt)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7341,7 +7135,6 @@ namespace Example
 ## PostArchitectSchedulegroups
 
 > [**ScheduleGroup**](ScheduleGroup) PostArchitectSchedulegroups (ScheduleGroup body)
-
 
 
 Creates a new schedule group
@@ -7395,7 +7188,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ScheduleGroup**](ScheduleGroup)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7405,7 +7197,6 @@ namespace Example
 ## PostArchitectSchedules
 
 > [**Schedule**](Schedule) PostArchitectSchedules (Schedule body)
-
 
 
 Create a new schedule.
@@ -7459,7 +7250,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Schedule**](Schedule)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7469,7 +7259,6 @@ namespace Example
 ## PostArchitectSystempromptHistory
 
 > [**Operation**](Operation) PostArchitectSystempromptHistory (string promptId)
-
 
 
 Generate system prompt history
@@ -7525,7 +7314,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| promptId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7535,7 +7323,6 @@ namespace Example
 ## PostArchitectSystempromptResources
 
 > [**SystemPromptAsset**](SystemPromptAsset) PostArchitectSystempromptResources (string promptId, SystemPromptAsset body)
-
 
 
 Create system prompt resource override.
@@ -7591,7 +7378,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **body** | [**SystemPromptAsset**](SystemPromptAsset)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7601,7 +7387,6 @@ namespace Example
 ## PostFlowHistory
 
 > [**Operation**](Operation) PostFlowHistory (string flowId)
-
 
 
 Generate flow history
@@ -7657,7 +7442,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7667,7 +7451,6 @@ namespace Example
 ## PostFlowInstancesSettingsLoglevels
 
 > [**FlowSettingsResponse**](FlowSettingsResponse) PostFlowInstancesSettingsLoglevels (string flowId, FlowLogLevelRequest body, List<string> expand = null)
-
 
 
 Set the logLevel for a particular flow id
@@ -7727,7 +7510,6 @@ namespace Example
 | **flowId** | **string**| The flow id to set the loglevel for |  |
 | **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest)| New LogLevel settings |  |
 | **expand** | [**List<string>**](string)| Expand instructions for the result | [optional] <br />**Values**: name, type, logLevelCharacteristics.characteristics |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7737,7 +7519,6 @@ namespace Example
 ## PostFlowVersions
 
 > [**FlowVersion**](FlowVersion) PostFlowVersions (string flowId, Object body)
-
 
 
 Create flow version
@@ -7793,7 +7574,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
 | **body** | [**Object**](Object)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7803,7 +7583,6 @@ namespace Example
 ## PostFlows
 
 > [**Flow**](Flow) PostFlows (Flow body, string language = null)
-
 
 
 Create flow
@@ -7859,7 +7638,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Flow**](Flow)|  |  |
 | **language** | **string**| Language | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7869,7 +7647,6 @@ namespace Example
 ## PostFlowsActionsCheckin
 
 > [**Operation**](Operation) PostFlowsActionsCheckin (string flow)
-
 
 
 Check-in flow
@@ -7926,7 +7703,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flow** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7936,7 +7712,6 @@ namespace Example
 ## PostFlowsActionsCheckout
 
 > [**Flow**](Flow) PostFlowsActionsCheckout (string flow)
-
 
 
 Check-out flow
@@ -7990,7 +7765,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flow** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8000,7 +7774,6 @@ namespace Example
 ## PostFlowsActionsDeactivate
 
 > [**Flow**](Flow) PostFlowsActionsDeactivate (string flow)
-
 
 
 Deactivate flow
@@ -8054,7 +7827,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flow** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8064,7 +7836,6 @@ namespace Example
 ## PostFlowsActionsPublish
 
 > [**Operation**](Operation) PostFlowsActionsPublish (string flow, string version = null)
-
 
 
 Publish flow
@@ -8123,7 +7894,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flow** | **string**| Flow ID |  |
 | **version** | **string**| version | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8133,7 +7903,6 @@ namespace Example
 ## PostFlowsActionsRevert
 
 > [**Flow**](Flow) PostFlowsActionsRevert (string flow)
-
 
 
 Revert flow
@@ -8187,7 +7956,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flow** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8197,7 +7965,6 @@ namespace Example
 ## PostFlowsActionsUnlock
 
 > [**Flow**](Flow) PostFlowsActionsUnlock (string flow)
-
 
 
 Unlock flow
@@ -8253,7 +8020,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flow** | **string**| Flow ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8263,7 +8029,6 @@ namespace Example
 ## PostFlowsDatatableExportJobs
 
 > [**DataTableExportJob**](DataTableExportJob) PostFlowsDatatableExportJobs (string datatableId)
-
 
 
 Begin an export process for exporting all rows from a datatable
@@ -8320,7 +8085,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8330,7 +8094,6 @@ namespace Example
 ## PostFlowsDatatableImportJobs
 
 > [**DataTableImportJob**](DataTableImportJob) PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body)
-
 
 
 Begin an import process for importing rows into a datatable
@@ -8389,7 +8152,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **body** | [**DataTableImportJob**](DataTableImportJob)| import job information |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8399,7 +8161,6 @@ namespace Example
 ## PostFlowsDatatableRows
 
 > **Dictionary&lt;string, Object&gt;** PostFlowsDatatableRows (string datatableId, Object dataTableRow)
-
 
 
 Create a new row entry for the datatable.
@@ -8458,7 +8219,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
 | **dataTableRow** | [**Object**](Object)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8468,7 +8228,6 @@ namespace Example
 ## PostFlowsDatatables
 
 > [**DataTable**](DataTable) PostFlowsDatatables (DataTable body)
-
 
 
 Create a new datatable with the specified json-schema definition
@@ -8524,7 +8283,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DataTable**](DataTable)| datatable json-schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8534,7 +8292,6 @@ namespace Example
 ## PostFlowsExecutions
 
 > [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse) PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest)
-
 
 
 Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
@@ -8590,7 +8347,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowLaunchRequest** | [**FlowExecutionLaunchRequest**](FlowExecutionLaunchRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8600,7 +8356,6 @@ namespace Example
 ## PostFlowsInstancesJobs
 
 > [**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult) PostFlowsInstancesJobs (ExecutionDataRequest body, string expand = null)
-
 
 
 Start a process (job) that will prepare a list of execution data IDs for download.
@@ -8658,7 +8413,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ExecutionDataRequest**](ExecutionDataRequest)| Requested Flow Ids |  |
 | **expand** | **string**| Expand various query types. | [optional] <br />**Values**: bots, dataActions |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8668,7 +8422,6 @@ namespace Example
 ## PostFlowsInstancesQuery
 
 > [**FlowResultEntityListing**](FlowResultEntityListing) PostFlowsInstancesQuery (CriteriaQuery body, bool? indexOnly = null, int? pageSize = null)
-
 
 
 Query the database of existing flow histories to look for particular flow criteria
@@ -8728,7 +8481,6 @@ namespace Example
 | **body** | [**CriteriaQuery**](CriteriaQuery)| query |  |
 | **indexOnly** | **bool?**| indexes only | [optional]  |
 | **pageSize** | **int?**| number of results to return | [optional] [default to 50] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8738,7 +8490,6 @@ namespace Example
 ## PostFlowsJobs
 
 > [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse) PostFlowsJobs ()
-
 
 
 Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
@@ -8788,7 +8539,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**RegisterArchitectJobResponse**](RegisterArchitectJobResponse)
@@ -8797,7 +8547,6 @@ This endpoint does require any parameters.
 ## PostFlowsMilestones
 
 > [**FlowMilestone**](FlowMilestone) PostFlowsMilestones (FlowMilestone body = null)
-
 
 
 Create a flow milestone
@@ -8851,7 +8600,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowMilestone**](FlowMilestone)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8861,7 +8609,6 @@ namespace Example
 ## PostFlowsOutcomes
 
 > [**FlowOutcome**](FlowOutcome) PostFlowsOutcomes (FlowOutcome body = null)
-
 
 
 Create a flow outcome
@@ -8917,7 +8664,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowOutcome**](FlowOutcome)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8927,7 +8673,6 @@ namespace Example
 ## PutArchitectEmergencygroup
 
 > [**EmergencyGroup**](EmergencyGroup) PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body)
-
 
 
 Updates a emergency group by ID
@@ -8983,7 +8728,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emergencyGroupId** | **string**| Emergency group ID |  |
 | **body** | [**EmergencyGroup**](EmergencyGroup)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8993,7 +8737,6 @@ namespace Example
 ## PutArchitectIvr
 
 > [**IVR**](IVR) PutArchitectIvr (string ivrId, IVR body)
-
 
 
 Update an IVR Config.
@@ -9049,7 +8792,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ivrId** | **string**| IVR id |  |
 | **body** | [**IVR**](IVR)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9059,7 +8801,6 @@ namespace Example
 ## PutArchitectPrompt
 
 > [**Prompt**](Prompt) PutArchitectPrompt (string promptId, Prompt body)
-
 
 
 Update specified user prompt
@@ -9115,7 +8856,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **body** | [**Prompt**](Prompt)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9125,7 +8865,6 @@ namespace Example
 ## PutArchitectPromptResource
 
 > [**PromptAsset**](PromptAsset) PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body)
-
 
 
 Update specified user prompt resource
@@ -9183,7 +8922,6 @@ namespace Example
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
 | **body** | [**PromptAsset**](PromptAsset)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9193,7 +8931,6 @@ namespace Example
 ## PutArchitectSchedule
 
 > [**Schedule**](Schedule) PutArchitectSchedule (string scheduleId, Schedule body)
-
 
 
 Update schedule by ID
@@ -9249,7 +8986,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **scheduleId** | **string**| Schedule ID |  |
 | **body** | [**Schedule**](Schedule)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9259,7 +8995,6 @@ namespace Example
 ## PutArchitectSchedulegroup
 
 > [**ScheduleGroup**](ScheduleGroup) PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body)
-
 
 
 Updates a schedule group by ID
@@ -9315,7 +9050,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **scheduleGroupId** | **string**| Schedule group ID |  |
 | **body** | [**ScheduleGroup**](ScheduleGroup)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9325,7 +9059,6 @@ namespace Example
 ## PutArchitectSystempromptResource
 
 > [**SystemPromptAsset**](SystemPromptAsset) PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body)
-
 
 
 Updates a system prompt resource override.
@@ -9383,7 +9116,6 @@ namespace Example
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
 | **body** | [**SystemPromptAsset**](SystemPromptAsset)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9393,7 +9125,6 @@ namespace Example
 ## PutFlow
 
 > [**Flow**](Flow) PutFlow (string flowId, Flow body)
-
 
 
 Update flow
@@ -9449,7 +9180,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
 | **body** | [**Flow**](Flow)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9459,7 +9189,6 @@ namespace Example
 ## PutFlowInstancesSettingsLoglevels
 
 > [**FlowSettingsResponse**](FlowSettingsResponse) PutFlowInstancesSettingsLoglevels (string flowId, FlowLogLevelRequest body, List<string> expand = null)
-
 
 
 Edit the logLevel for a particular flow id
@@ -9519,7 +9248,6 @@ namespace Example
 | **flowId** | **string**| The flow id to edit the loglevel for |  |
 | **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest)| New LogLevel settings |  |
 | **expand** | [**List<string>**](string)| Expand instructions for the result | [optional] <br />**Values**: name, type, logLevelCharacteristics.characteristics |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9529,7 +9257,6 @@ namespace Example
 ## PutFlowsDatatable
 
 > [**DataTable**](DataTable) PutFlowsDatatable (string datatableId, DataTable body, string expand = null)
-
 
 
 Updates a specific datatable by id
@@ -9589,7 +9316,6 @@ namespace Example
 | **datatableId** | **string**| id of datatable |  |
 | **body** | [**DataTable**](DataTable)| datatable json-schema |  |
 | **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9599,7 +9325,6 @@ namespace Example
 ## PutFlowsDatatableRow
 
 > **Dictionary&lt;string, Object&gt;** PutFlowsDatatableRow (string datatableId, string rowId, Object body = null)
-
 
 
 Update a row entry
@@ -9660,7 +9385,6 @@ namespace Example
 | **datatableId** | **string**| id of datatable |  |
 | **rowId** | **string**| the key for the row |  |
 | **body** | [**Object**](Object)| datatable row | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9670,7 +9394,6 @@ namespace Example
 ## PutFlowsInstancesSettingsLoglevelsDefault
 
 > [**FlowSettingsResponse**](FlowSettingsResponse) PutFlowsInstancesSettingsLoglevelsDefault (FlowLogLevelRequest body, List<string> expand = null)
-
 
 
 Edit the flow default log level.
@@ -9728,7 +9451,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest)| New LogLevel settings |  |
 | **expand** | [**List<string>**](string)| Expand instructions for the result | [optional] <br />**Values**: logLevelCharacteristics.characteristics |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9738,7 +9460,6 @@ namespace Example
 ## PutFlowsMilestone
 
 > [**FlowMilestone**](FlowMilestone) PutFlowsMilestone (string milestoneId, FlowMilestone body = null)
-
 
 
 Updates a flow milestone
@@ -9794,7 +9515,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **milestoneId** | **string**| flow milestone ID |  |
 | **body** | [**FlowMilestone**](FlowMilestone)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9804,7 +9524,6 @@ namespace Example
 ## PutFlowsOutcome
 
 > [**Operation**](Operation) PutFlowsOutcome (string flowOutcomeId, FlowOutcome body = null)
-
 
 
 Updates a flow outcome
@@ -9862,11 +9581,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **flowOutcomeId** | **string**| flow outcome ID |  |
 | **body** | [**FlowOutcome**](FlowOutcome)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

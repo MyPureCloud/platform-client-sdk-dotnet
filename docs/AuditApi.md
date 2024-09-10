@@ -13,13 +13,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAuditsQuery**](#PostAuditsQuery) | **Post** /api/v2/audits/query | Create audit query execution |
 | [**PostAuditsQueryRealtime**](#PostAuditsQueryRealtime) | **Post** /api/v2/audits/query/realtime | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
 | [**PostAuditsQueryRealtimeRelated**](#PostAuditsQueryRealtimeRelated) | **Post** /api/v2/audits/query/realtime/related | Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id. |
-{: class="table table-striped"}
+
 
 
 ## GetAuditsQueryRealtimeServicemapping
 
 > [**AuditQueryServiceMapping**](AuditQueryServiceMapping) GetAuditsQueryRealtimeServicemapping ()
-
 
 
 Get service mapping information used in realtime audits.
@@ -69,7 +68,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AuditQueryServiceMapping**](AuditQueryServiceMapping)
@@ -78,7 +76,6 @@ This endpoint does require any parameters.
 ## GetAuditsQueryServicemapping
 
 > [**AuditQueryServiceMapping**](AuditQueryServiceMapping) GetAuditsQueryServicemapping ()
-
 
 
 Get service mapping information used in audits.
@@ -128,7 +125,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AuditQueryServiceMapping**](AuditQueryServiceMapping)
@@ -137,7 +133,6 @@ This endpoint does require any parameters.
 ## GetAuditsQueryTransactionId
 
 > [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse) GetAuditsQueryTransactionId (string transactionId)
-
 
 
 Get status of audit query execution
@@ -191,7 +186,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **transactionId** | **string**| Transaction ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -201,7 +195,6 @@ namespace Example
 ## GetAuditsQueryTransactionIdResults
 
 > [**AuditQueryExecutionResultsResponse**](AuditQueryExecutionResultsResponse) GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null, bool? allowRedirect = null)
-
 
 
 Get results of audit query
@@ -263,7 +256,6 @@ namespace Example
 | **pageSize** | **int?**| Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. | [optional] [default to 25] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
 | **allowRedirect** | **bool?**| Result sets with large amounts of data will respond with a download url | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -273,7 +265,6 @@ namespace Example
 ## PostAuditsQuery
 
 > [**AuditQueryExecutionStatusResponse**](AuditQueryExecutionStatusResponse) PostAuditsQuery (AuditQueryRequest body)
-
 
 
 Create audit query execution
@@ -329,7 +320,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AuditQueryRequest**](AuditQueryRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -339,7 +329,6 @@ namespace Example
 ## PostAuditsQueryRealtime
 
 > [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse) PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null)
-
 
 
 This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
@@ -397,7 +386,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AuditRealtimeQueryRequest**](AuditRealtimeQueryRequest)| query |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -407,7 +395,6 @@ namespace Example
 ## PostAuditsQueryRealtimeRelated
 
 > [**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse) PostAuditsQueryRealtimeRelated (AuditRealtimeRelatedRequest body, List<string> expand = null)
-
 
 
 Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
@@ -463,11 +450,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AuditRealtimeRelatedRequest**](AuditRealtimeRelatedRequest)| query |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: user |
-{: class="table table-striped"}
 
 ### Return type
 
 [**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

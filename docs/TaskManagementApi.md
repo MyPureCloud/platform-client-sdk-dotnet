@@ -53,13 +53,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTaskmanagementWorktypes**](#PostTaskmanagementWorktypes) | **Post** /api/v2/taskmanagement/worktypes | Create a worktype |
 | [**PostTaskmanagementWorktypesQuery**](#PostTaskmanagementWorktypesQuery) | **Post** /api/v2/taskmanagement/worktypes/query | Query for worktypes |
 | [**PutTaskmanagementWorkitemsSchema**](#PutTaskmanagementWorkitemsSchema) | **Put** /api/v2/taskmanagement/workitems/schemas/{schemaId} | Update a schema |
-{: class="table table-striped"}
+
 
 
 ## DeleteTaskmanagementWorkbin
 
 > void DeleteTaskmanagementWorkbin (string workbinId)
-
 
 
 Delete a workbin
@@ -112,7 +111,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workbinId** | **string**| Workbin ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -122,7 +120,6 @@ void (empty response body)
 ## DeleteTaskmanagementWorkitem
 
 > void DeleteTaskmanagementWorkitem (string workitemId)
-
 
 
 Delete a workitem
@@ -175,7 +172,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -185,7 +181,6 @@ void (empty response body)
 ## DeleteTaskmanagementWorkitemsSchema
 
 > void DeleteTaskmanagementWorkitemsSchema (string schemaId)
-
 
 
 Delete a schema
@@ -238,7 +233,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -248,7 +242,6 @@ void (empty response body)
 ## DeleteTaskmanagementWorktype
 
 > void DeleteTaskmanagementWorktype (string worktypeId)
-
 
 
 Delete a worktype
@@ -301,7 +294,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -311,7 +303,6 @@ void (empty response body)
 ## DeleteTaskmanagementWorktypeStatus
 
 > void DeleteTaskmanagementWorktypeStatus (string worktypeId, string statusId)
-
 
 
 Delete a status
@@ -366,7 +357,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
 | **statusId** | **string**| Status id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -376,7 +366,6 @@ void (empty response body)
 ## GetTaskmanagementWorkbin
 
 > [**Workbin**](Workbin) GetTaskmanagementWorkbin (string workbinId)
-
 
 
 Get a workbin
@@ -430,7 +419,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workbinId** | **string**| Workbin ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -440,7 +428,6 @@ namespace Example
 ## GetTaskmanagementWorkbinHistory
 
 > [**WorkbinChangeListing**](WorkbinChangeListing) GetTaskmanagementWorkbinHistory (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get a listing of a workbin's attribute change history
@@ -502,7 +489,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -512,7 +498,6 @@ namespace Example
 ## GetTaskmanagementWorkbinVersion
 
 > [**WorkbinVersion**](WorkbinVersion) GetTaskmanagementWorkbinVersion (string workbinId, int? entityVersion)
-
 
 
 Get a version of a workbin
@@ -570,7 +555,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workbinId** | **string**| Workbin ID |  |
 | **entityVersion** | **int?**| Workbin version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -580,7 +564,6 @@ namespace Example
 ## GetTaskmanagementWorkbinVersions
 
 > [**WorkbinVersionListing**](WorkbinVersionListing) GetTaskmanagementWorkbinVersions (string workbinId, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get all versions of a workbin
@@ -642,7 +625,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -652,7 +634,6 @@ namespace Example
 ## GetTaskmanagementWorkitem
 
 > [**Workitem**](Workitem) GetTaskmanagementWorkitem (string workitemId, string expands = null)
-
 
 
 Get a workitem
@@ -708,7 +689,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
 | **expands** | **string**| Which fields to expand. Comma separated if more than one. | [optional] <br />**Values**: type, workbin, status, queue, assignee |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -718,7 +698,6 @@ namespace Example
 ## GetTaskmanagementWorkitemHistory
 
 > [**WorkitemChangeListing**](WorkitemChangeListing) GetTaskmanagementWorkitemHistory (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get a listing of a workitem's attribute change history
@@ -780,7 +759,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -790,7 +768,6 @@ namespace Example
 ## GetTaskmanagementWorkitemUserWrapups
 
 > [**WorkitemWrapup**](WorkitemWrapup) GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get all wrapup codes added for the given user for a workitem.
@@ -854,7 +831,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -864,7 +840,6 @@ namespace Example
 ## GetTaskmanagementWorkitemVersion
 
 > [**WorkitemVersion**](WorkitemVersion) GetTaskmanagementWorkitemVersion (string workitemId, int? entityVersion)
-
 
 
 Get a version of a workitem
@@ -922,7 +897,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
 | **entityVersion** | **int?**| Workitem version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -932,7 +906,6 @@ namespace Example
 ## GetTaskmanagementWorkitemVersions
 
 > [**WorkitemVersionListing**](WorkitemVersionListing) GetTaskmanagementWorkitemVersions (string workitemId, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get all versions of a workitem
@@ -994,7 +967,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1004,7 +976,6 @@ namespace Example
 ## GetTaskmanagementWorkitemWrapups
 
 > [**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing) GetTaskmanagementWorkitemWrapups (string workitemId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get all wrapup codes added for all users for a workitem.
@@ -1066,7 +1037,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1076,7 +1046,6 @@ namespace Example
 ## GetTaskmanagementWorkitemsQueryJob
 
 > [**WorkitemQueryJobResponse**](WorkitemQueryJobResponse) GetTaskmanagementWorkitemsQueryJob (string jobId)
-
 
 
 Get the workitem query job associated with the job id.
@@ -1130,7 +1099,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1140,7 +1108,6 @@ namespace Example
 ## GetTaskmanagementWorkitemsQueryJobResults
 
 > [**WorkitemPagedEntityListing**](WorkitemPagedEntityListing) GetTaskmanagementWorkitemsQueryJobResults (string jobId)
-
 
 
 Get results from for workitem query job 
@@ -1194,7 +1161,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1204,7 +1170,6 @@ namespace Example
 ## GetTaskmanagementWorkitemsSchema
 
 > [**DataSchema**](DataSchema) GetTaskmanagementWorkitemsSchema (string schemaId)
-
 
 
 Get a schema
@@ -1258,7 +1223,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1268,7 +1232,6 @@ namespace Example
 ## GetTaskmanagementWorkitemsSchemaVersion
 
 > [**DataSchema**](DataSchema) GetTaskmanagementWorkitemsSchemaVersion (string schemaId, string versionId)
-
 
 
 Get a specific version of a schema
@@ -1324,7 +1287,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
 | **versionId** | **string**| Schema version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1334,7 +1296,6 @@ namespace Example
 ## GetTaskmanagementWorkitemsSchemaVersions
 
 > [**DataSchema**](DataSchema) GetTaskmanagementWorkitemsSchemaVersions (string schemaId)
-
 
 
 Get all versions of a schema
@@ -1388,7 +1349,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1398,7 +1358,6 @@ namespace Example
 ## GetTaskmanagementWorkitemsSchemas
 
 > [**DataSchemaListing**](DataSchemaListing) GetTaskmanagementWorkitemsSchemas ()
-
 
 
 Get a list of schemas.
@@ -1448,7 +1407,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
@@ -1457,7 +1415,6 @@ This endpoint does require any parameters.
 ## GetTaskmanagementWorktype
 
 > [**Worktype**](Worktype) GetTaskmanagementWorktype (string worktypeId, List<string> expands = null)
-
 
 
 Get a worktype
@@ -1512,8 +1469,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
-| **expands** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: defaultQueue, defaultSkills, defaultLanguage, schema |
-{: class="table table-striped"}
+| **expands** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: defaultQueue, defaultSkills, defaultLanguage, schema, flow |
 
 ### Return type
 
@@ -1523,7 +1479,6 @@ namespace Example
 ## GetTaskmanagementWorktypeHistory
 
 > [**WorktypeChangeListing**](WorktypeChangeListing) GetTaskmanagementWorktypeHistory (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null, List<string> fields = null)
-
 
 
 Get a listing of a worktype's attribute change history
@@ -1587,7 +1542,6 @@ namespace Example
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
 | **fields** | [**List<string>**](string)| Comma-separated list of fields. The response will contain only versions created as a result of changes to these fields. | [optional] <br />**Values**: name, serviceLevelTarget, defaultWorkbinId, defaultDueDurationSeconds, defaultExpirationSeconds, defaultPriority, defaultLanguageId, defaultSkillIds, defaultQueueId, assignmentEnabled, defaultStatusId, statuses |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1597,7 +1551,6 @@ namespace Example
 ## GetTaskmanagementWorktypeStatus
 
 > [**WorkitemStatus**](WorkitemStatus) GetTaskmanagementWorktypeStatus (string worktypeId, string statusId)
-
 
 
 Get a status
@@ -1653,7 +1606,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
 | **statusId** | **string**| Status id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1663,7 +1615,6 @@ namespace Example
 ## GetTaskmanagementWorktypeStatuses
 
 > [**WorkitemStatusListing**](WorkitemStatusListing) GetTaskmanagementWorktypeStatuses (string worktypeId)
-
 
 
 Get list of statuses for this worktype.
@@ -1717,7 +1668,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1727,7 +1677,6 @@ namespace Example
 ## GetTaskmanagementWorktypeVersion
 
 > [**WorktypeVersion**](WorktypeVersion) GetTaskmanagementWorktypeVersion (string worktypeId, int? entityVersion)
-
 
 
 Get a version of a worktype
@@ -1785,7 +1734,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
 | **entityVersion** | **int?**| Worktype version |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1795,7 +1743,6 @@ namespace Example
 ## GetTaskmanagementWorktypeVersions
 
 > [**WorktypeVersionListing**](WorktypeVersionListing) GetTaskmanagementWorktypeVersions (string worktypeId, string after = null, int? pageSize = null, string sortOrder = null)
-
 
 
 Get all versions of a worktype
@@ -1857,7 +1804,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] [default to 25] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to descending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1867,7 +1813,6 @@ namespace Example
 ## PatchTaskmanagementWorkbin
 
 > [**Workbin**](Workbin) PatchTaskmanagementWorkbin (string workbinId, WorkbinUpdate body)
-
 
 
 Update the attributes of a workbin
@@ -1923,7 +1868,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workbinId** | **string**| Workbin ID |  |
 | **body** | [**WorkbinUpdate**](WorkbinUpdate)| Json with attributes and their new values: {\&quot;description\&quot;:\&quot;new description\&quot;, \&quot;name\&quot;:\&quot;new name\&quot;}. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1933,7 +1877,6 @@ namespace Example
 ## PatchTaskmanagementWorkitem
 
 > [**Workitem**](Workitem) PatchTaskmanagementWorkitem (string workitemId, WorkitemUpdate body)
-
 
 
 Update the attributes of a workitem
@@ -1990,7 +1933,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
 | **body** | [**WorkitemUpdate**](WorkitemUpdate)| Workitem |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2000,7 +1942,6 @@ namespace Example
 ## PatchTaskmanagementWorkitemAssignment
 
 > void PatchTaskmanagementWorkitemAssignment (string workitemId, WorkitemManualAssign body)
-
 
 
 Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.
@@ -2056,7 +1997,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
 | **body** | [**WorkitemManualAssign**](WorkitemManualAssign)| Targeted user |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2066,7 +2006,6 @@ void (empty response body)
 ## PatchTaskmanagementWorkitemUserWrapups
 
 > [**WorkitemWrapup**](WorkitemWrapup) PatchTaskmanagementWorkitemUserWrapups (string workitemId, string userId, WorkitemWrapupUpdate body)
-
 
 
 Add/Remove a wrapup code for a given user in a workitem.
@@ -2124,7 +2063,6 @@ namespace Example
 | **workitemId** | **string**| The ID of the Workitem. |  |
 | **userId** | **string**| The ID of the user |  |
 | **body** | [**WorkitemWrapupUpdate**](WorkitemWrapupUpdate)| Request body to add/remove a wrapup code for a workitem |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2134,7 +2072,6 @@ namespace Example
 ## PatchTaskmanagementWorkitemUsersMeWrapups
 
 > [**WorkitemWrapup**](WorkitemWrapup) PatchTaskmanagementWorkitemUsersMeWrapups (string workitemId, WorkitemWrapupUpdate body)
-
 
 
 Add/Remove a wrapup code for the current user in a workitem.
@@ -2190,7 +2127,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| The ID of the Workitem. |  |
 | **body** | [**WorkitemWrapupUpdate**](WorkitemWrapupUpdate)| Request body to add/remove the wrapup code for workitem |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2200,7 +2136,6 @@ namespace Example
 ## PatchTaskmanagementWorktype
 
 > [**Worktype**](Worktype) PatchTaskmanagementWorktype (string worktypeId, WorktypeUpdate body)
-
 
 
 Update the attributes of a worktype
@@ -2256,7 +2191,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
 | **body** | [**WorktypeUpdate**](WorktypeUpdate)| Worktype |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2266,7 +2200,6 @@ namespace Example
 ## PatchTaskmanagementWorktypeStatus
 
 > [**WorkitemStatus**](WorkitemStatus) PatchTaskmanagementWorktypeStatus (string worktypeId, string statusId, WorkitemStatusUpdate body)
-
 
 
 Update the attributes of a status
@@ -2324,7 +2257,6 @@ namespace Example
 | **worktypeId** | **string**| Worktype id |  |
 | **statusId** | **string**| Status id |  |
 | **body** | [**WorkitemStatusUpdate**](WorkitemStatusUpdate)| Status |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2334,7 +2266,6 @@ namespace Example
 ## PostTaskmanagementWorkbins
 
 > [**Workbin**](Workbin) PostTaskmanagementWorkbins (WorkbinCreate body)
-
 
 
 Create a workbin
@@ -2388,7 +2319,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorkbinCreate**](WorkbinCreate)| Workbin |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2398,7 +2328,6 @@ namespace Example
 ## PostTaskmanagementWorkbinsQuery
 
 > [**WorkbinQueryEntityListing**](WorkbinQueryEntityListing) PostTaskmanagementWorkbinsQuery (WorkbinQueryRequest body)
-
 
 
 Query for workbins
@@ -2452,7 +2381,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorkbinQueryRequest**](WorkbinQueryRequest)| QueryPostRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2462,7 +2390,6 @@ namespace Example
 ## PostTaskmanagementWorkitemAcdCancel
 
 > [**Workitem**](Workitem) PostTaskmanagementWorkitemAcdCancel (string workitemId)
-
 
 
 Cancel the assignment process for a workitem that is currently queued for assignment through ACD.
@@ -2516,7 +2443,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2526,7 +2452,6 @@ namespace Example
 ## PostTaskmanagementWorkitemDisconnect
 
 > [**Workitem**](Workitem) PostTaskmanagementWorkitemDisconnect (string workitemId)
-
 
 
 Disconnect the assignee of the workitem
@@ -2580,7 +2505,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2590,7 +2514,6 @@ namespace Example
 ## PostTaskmanagementWorkitemTerminate
 
 > [**Workitem**](Workitem) PostTaskmanagementWorkitemTerminate (string workitemId, WorkitemTerminate body = null)
-
 
 
 Terminate a workitem
@@ -2646,7 +2569,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
 | **body** | [**WorkitemTerminate**](WorkitemTerminate)| Terminated request | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2656,7 +2578,6 @@ namespace Example
 ## PostTaskmanagementWorkitems
 
 > [**Workitem**](Workitem) PostTaskmanagementWorkitems (WorkitemCreate body)
-
 
 
 Create a workitem
@@ -2710,7 +2631,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorkitemCreate**](WorkitemCreate)| Workitem |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2720,7 +2640,6 @@ namespace Example
 ## PostTaskmanagementWorkitemsQuery
 
 > [**WorkitemPostQueryEntityListing**](WorkitemPostQueryEntityListing) PostTaskmanagementWorkitemsQuery (WorkitemQueryPostRequest body)
-
 
 
 Query for workitems
@@ -2778,7 +2697,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorkitemQueryPostRequest**](WorkitemQueryPostRequest)| WorkitemQueryPostRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2788,7 +2706,6 @@ namespace Example
 ## PostTaskmanagementWorkitemsQueryJobs
 
 > [**WorkitemQueryJobResponse**](WorkitemQueryJobResponse) PostTaskmanagementWorkitemsQueryJobs (WorkitemQueryJobCreate body)
-
 
 
 Create a workitem query job
@@ -2842,7 +2759,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorkitemQueryJobCreate**](WorkitemQueryJobCreate)| WorkitemQueryJobCreate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2852,7 +2768,6 @@ namespace Example
 ## PostTaskmanagementWorkitemsSchemas
 
 > [**DataSchema**](DataSchema) PostTaskmanagementWorkitemsSchemas (DataSchema body)
-
 
 
 Create a schema
@@ -2906,7 +2821,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DataSchema**](DataSchema)| Schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2916,7 +2830,6 @@ namespace Example
 ## PostTaskmanagementWorktypeStatuses
 
 > [**WorkitemStatus**](WorkitemStatus) PostTaskmanagementWorktypeStatuses (string worktypeId, WorkitemStatusCreate body)
-
 
 
 Add a status to a worktype
@@ -2972,7 +2885,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **worktypeId** | **string**| Worktype id |  |
 | **body** | [**WorkitemStatusCreate**](WorkitemStatusCreate)| Status |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2982,7 +2894,6 @@ namespace Example
 ## PostTaskmanagementWorktypes
 
 > [**Worktype**](Worktype) PostTaskmanagementWorktypes (WorktypeCreate body)
-
 
 
 Create a worktype
@@ -3036,7 +2947,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorktypeCreate**](WorktypeCreate)| Worktype |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3046,7 +2956,6 @@ namespace Example
 ## PostTaskmanagementWorktypesQuery
 
 > [**WorktypeQueryEntityListing**](WorktypeQueryEntityListing) PostTaskmanagementWorktypesQuery (WorktypeQueryRequest body)
-
 
 
 Query for worktypes
@@ -3100,7 +3009,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorktypeQueryRequest**](WorktypeQueryRequest)| QueryPostRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3110,7 +3018,6 @@ namespace Example
 ## PutTaskmanagementWorkitemsSchema
 
 > [**DataSchema**](DataSchema) PutTaskmanagementWorkitemsSchema (string schemaId, DataSchema body)
-
 
 
 Update a schema
@@ -3166,11 +3073,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
 | **body** | [**DataSchema**](DataSchema)| Data Schema |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

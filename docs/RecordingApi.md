@@ -65,13 +65,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRecordingRecordingkeysRotationschedule**](#PutRecordingRecordingkeysRotationschedule) | **Put** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 | [**PutRecordingSettings**](#PutRecordingSettings) | **Put** /api/v2/recording/settings | Update the Recording Settings for the Organization |
 | [**PutRecordingsDeletionprotection**](#PutRecordingsDeletionprotection) | **Put** /api/v2/recordings/deletionprotection | Apply or revoke recording protection for conversations |
-{: class="table table-striped"}
+
 
 
 ## DeleteConversationRecordingAnnotation
 
 > void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
-
 
 
 Delete annotation
@@ -128,7 +127,6 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -138,7 +136,6 @@ void (empty response body)
 ## DeleteOrphanrecording
 
 > [**OrphanRecording**](OrphanRecording) DeleteOrphanrecording (string orphanId)
-
 
 
 Deletes a single orphan recording
@@ -192,7 +189,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -202,7 +198,6 @@ namespace Example
 ## DeleteRecordingCrossplatformMediaretentionpolicies
 
 > void DeleteRecordingCrossplatformMediaretentionpolicies (string ids)
-
 
 
 Delete media retention policies
@@ -257,7 +252,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ids** | **string**|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -267,7 +261,6 @@ void (empty response body)
 ## DeleteRecordingCrossplatformMediaretentionpolicy
 
 > void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId)
-
 
 
 Delete a media retention policy
@@ -320,7 +313,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -330,7 +322,6 @@ void (empty response body)
 ## DeleteRecordingJob
 
 > void DeleteRecordingJob (string jobId)
-
 
 
 Delete the recording bulk job
@@ -383,7 +374,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -393,7 +383,6 @@ void (empty response body)
 ## DeleteRecordingMediaretentionpolicies
 
 > void DeleteRecordingMediaretentionpolicies (string ids)
-
 
 
 Delete media retention policies
@@ -448,7 +437,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ids** | **string**|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -458,7 +446,6 @@ void (empty response body)
 ## DeleteRecordingMediaretentionpolicy
 
 > void DeleteRecordingMediaretentionpolicy (string policyId)
-
 
 
 Delete a media retention policy
@@ -511,7 +498,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -521,7 +507,6 @@ void (empty response body)
 ## GetConversationRecording
 
 > [**Recording**](Recording) GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
-
 
 
 Gets a specific recording.
@@ -594,7 +579,6 @@ namespace Example
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 | **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -604,7 +588,6 @@ namespace Example
 ## GetConversationRecordingAnnotation
 
 > [**Annotation**](Annotation) GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
-
 
 
 Get annotation
@@ -662,7 +645,6 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -672,7 +654,6 @@ namespace Example
 ## GetConversationRecordingAnnotations
 
 > [**List&lt;Annotation&gt;**](Annotation) GetConversationRecordingAnnotations (string conversationId, string recordingId)
-
 
 
 Get annotations for recording
@@ -728,7 +709,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -738,7 +718,6 @@ namespace Example
 ## GetConversationRecordingmetadata
 
 > [**List&lt;RecordingMetadata&gt;**](RecordingMetadata) GetConversationRecordingmetadata (string conversationId)
-
 
 
 Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
@@ -793,7 +772,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -803,7 +781,6 @@ namespace Example
 ## GetConversationRecordingmetadataRecordingId
 
 > [**RecordingMetadata**](RecordingMetadata) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
-
 
 
 Get metadata for a specific recording. Does not return playable media.
@@ -860,7 +837,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -870,7 +846,6 @@ namespace Example
 ## GetConversationRecordings
 
 > [**List&lt;Recording&gt;**](Recording) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
-
 
 
 Get all of a Conversation's Recordings.
@@ -931,7 +906,6 @@ namespace Example
 | **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
 | **formatId** | **string**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -941,7 +915,6 @@ namespace Example
 ## GetOrphanrecording
 
 > [**OrphanRecording**](OrphanRecording) GetOrphanrecording (string orphanId)
-
 
 
 Gets a single orphan recording
@@ -995,7 +968,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1005,7 +977,6 @@ namespace Example
 ## GetOrphanrecordingMedia
 
 > [**Recording**](Recording) GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
-
 
 
 Gets the media of a single orphan recording
@@ -1077,7 +1048,6 @@ namespace Example
 | **fileName** | **string**| the name of the downloaded fileName | [optional]  |
 | **locale** | **string**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional]  |
 | **mediaFormats** | [**List<string>**](string)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1087,7 +1057,6 @@ namespace Example
 ## GetOrphanrecordings
 
 > [**OrphanRecordingListing**](OrphanRecordingListing) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
-
 
 
 Gets all orphan recordings
@@ -1155,7 +1124,6 @@ namespace Example
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
 | **media** | **string**| Filter resulting orphans based on their media type | [optional] <br />**Values**: Call, Screen |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1165,7 +1133,6 @@ namespace Example
 ## GetRecordingBatchrequest
 
 > [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult) GetRecordingBatchrequest (string jobId)
-
 
 
 Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
@@ -1218,7 +1185,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1228,7 +1194,6 @@ namespace Example
 ## GetRecordingCrossplatformMediaretentionpolicies
 
 > [**PolicyEntityListing**](PolicyEntityListing) GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
-
 
 
 Gets media retention policy list with query options to filter on name and enabled.
@@ -1304,7 +1269,6 @@ namespace Example
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 | **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1314,7 +1278,6 @@ namespace Example
 ## GetRecordingCrossplatformMediaretentionpolicy
 
 > [**CrossPlatformPolicy**](CrossPlatformPolicy) GetRecordingCrossplatformMediaretentionpolicy (string policyId)
-
 
 
 Get a media retention policy
@@ -1368,7 +1331,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1378,7 +1340,6 @@ namespace Example
 ## GetRecordingJob
 
 > [**RecordingJob**](RecordingJob) GetRecordingJob (string jobId)
-
 
 
 Get the status of the job associated with the job id.
@@ -1432,7 +1393,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1442,7 +1402,6 @@ namespace Example
 ## GetRecordingJobFailedrecordings
 
 > [**FailedRecordingEntityListing**](FailedRecordingEntityListing) GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
-
 
 
 Get IDs of recordings that the bulk job failed for
@@ -1504,7 +1463,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1514,7 +1472,6 @@ namespace Example
 ## GetRecordingJobs
 
 > [**RecordingJobEntityListing**](RecordingJobEntityListing) GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
-
 
 
 Get the status of all jobs within the user's organization
@@ -1582,7 +1539,6 @@ namespace Example
 | **jobType** | **string**| Job Type (Can be left empty for both) | [optional] <br />**Values**: ARCHIVE, DELETE, EXPORT |
 | **includeTotal** | **bool?**| If false, cursor will be used to locate the page instead of pageNumber. | [optional]  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1592,7 +1548,6 @@ namespace Example
 ## GetRecordingKeyconfiguration
 
 > [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) GetRecordingKeyconfiguration (string keyConfigurationId)
-
 
 
 Get the encryption key configurations
@@ -1646,7 +1601,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keyConfigurationId** | **string**| Key Configurations Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1656,7 +1610,6 @@ namespace Example
 ## GetRecordingKeyconfigurations
 
 > [**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing) GetRecordingKeyconfigurations ()
-
 
 
 Get a list of key configurations data
@@ -1706,7 +1659,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing)
@@ -1715,7 +1667,6 @@ This endpoint does require any parameters.
 ## GetRecordingMediaretentionpolicies
 
 > [**PolicyEntityListing**](PolicyEntityListing) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
-
 
 
 Gets media retention policy list with query options to filter on name and enabled.
@@ -1791,7 +1742,6 @@ namespace Example
 | **summary** | **bool?**| provides a less verbose response of policy lists. | [optional] [default to false] |
 | **hasErrors** | **bool?**| provides a way to fetch all policies with errors or policies that do not have errors | [optional]  |
 | **deleteDaysThreshold** | **int?**| provides a way to fetch all policies with any actions having deleteDays exceeding the provided value | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1801,7 +1751,6 @@ namespace Example
 ## GetRecordingMediaretentionpolicy
 
 > [**Policy**](Policy) GetRecordingMediaretentionpolicy (string policyId)
-
 
 
 Get a media retention policy
@@ -1855,7 +1804,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1865,7 +1813,6 @@ namespace Example
 ## GetRecordingRecordingkeys
 
 > [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing) GetRecordingRecordingkeys (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get encryption key list
@@ -1921,7 +1868,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1931,7 +1877,6 @@ namespace Example
 ## GetRecordingRecordingkeysRotationschedule
 
 > [**KeyRotationSchedule**](KeyRotationSchedule) GetRecordingRecordingkeysRotationschedule ()
-
 
 
 Get key rotation schedule
@@ -1981,7 +1926,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**KeyRotationSchedule**](KeyRotationSchedule)
@@ -1990,7 +1934,6 @@ This endpoint does require any parameters.
 ## GetRecordingSettings
 
 > [**RecordingSettings**](RecordingSettings) GetRecordingSettings (bool? createDefault = null)
-
 
 
 Get the Recording Settings for the Organization
@@ -2045,7 +1988,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **createDefault** | **bool?**| If no settings are found, a new one is created with default values | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2055,7 +1997,6 @@ namespace Example
 ## GetRecordingUploadsReport
 
 > [**RecordingUploadReport**](RecordingUploadReport) GetRecordingUploadsReport (string reportId)
-
 
 
 Get the status of a recording upload status report
@@ -2109,7 +2050,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **reportId** | **string**| reportId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2119,7 +2059,6 @@ namespace Example
 ## GetRecordingsRetentionQuery
 
 > [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing) GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
-
 
 
 Query for recording retention data
@@ -2177,7 +2116,6 @@ namespace Example
 | **retentionThresholdDays** | **int?**| Fetch retention data for recordings retained for more days than the provided value. |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| Page size. Maximum is 500. | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2188,7 +2126,9 @@ namespace Example
 
 > [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing) GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Retrieves a paged listing of screen recording sessions
 
@@ -2245,7 +2185,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2255,7 +2194,6 @@ namespace Example
 ## GetRecordingsScreensessionsDetails
 
 > [**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions) GetRecordingsScreensessionsDetails ()
-
 
 
 Retrieves an object containing the total number of concurrent active screen recordings
@@ -2305,7 +2243,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions)
@@ -2314,7 +2251,6 @@ This endpoint does require any parameters.
 ## PatchRecordingCrossplatformMediaretentionpolicy
 
 > [**CrossPlatformPolicy**](CrossPlatformPolicy) PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body)
-
 
 
 Patch a media retention policy
@@ -2370,7 +2306,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
 | **body** | [**CrossPlatformPolicyUpdate**](CrossPlatformPolicyUpdate)| Policy |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2380,7 +2315,6 @@ namespace Example
 ## PatchRecordingMediaretentionpolicy
 
 > [**Policy**](Policy) PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body)
-
 
 
 Patch a media retention policy
@@ -2436,7 +2370,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
 | **body** | [**PolicyUpdate**](PolicyUpdate)| Policy |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2447,7 +2380,9 @@ namespace Example
 
 > void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a screen recording session
 
@@ -2503,7 +2438,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recordingSessionId** | **string**| Screen recording session ID |  |
 | **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2513,7 +2447,6 @@ void (empty response body)
 ## PostConversationRecordingAnnotations
 
 > [**Annotation**](Annotation) PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
-
 
 
 Create annotation
@@ -2571,7 +2504,6 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **body** | [**Annotation**](Annotation)| annotation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2581,7 +2513,6 @@ namespace Example
 ## PostRecordingBatchrequests
 
 > [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult) PostRecordingBatchrequests (BatchDownloadJobSubmission body)
-
 
 
 Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
@@ -2636,7 +2567,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BatchDownloadJobSubmission**](BatchDownloadJobSubmission)| Job submission criteria |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2646,7 +2576,6 @@ namespace Example
 ## PostRecordingCrossplatformMediaretentionpolicies
 
 > [**CrossPlatformPolicy**](CrossPlatformPolicy) PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body)
-
 
 
 Create media retention policy
@@ -2702,7 +2631,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CrossPlatformPolicyCreate**](CrossPlatformPolicyCreate)| Policy |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2712,7 +2640,6 @@ namespace Example
 ## PostRecordingJobs
 
 > [**RecordingJob**](RecordingJob) PostRecordingJobs (RecordingJobsQuery body)
-
 
 
 Create a recording bulk job.
@@ -2768,7 +2695,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RecordingJobsQuery**](RecordingJobsQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2778,7 +2704,6 @@ namespace Example
 ## PostRecordingKeyconfigurations
 
 > [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body)
-
 
 
 Setup configurations for encryption key creation
@@ -2832,7 +2757,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)| Encryption Configuration |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2842,7 +2766,6 @@ namespace Example
 ## PostRecordingKeyconfigurationsValidate
 
 > [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body)
-
 
 
 Validate encryption key configurations without saving it
@@ -2896,7 +2819,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)| Encryption Configuration |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2906,7 +2828,6 @@ namespace Example
 ## PostRecordingLocalkeys
 
 > [**EncryptionKey**](EncryptionKey) PostRecordingLocalkeys (LocalEncryptionKeyRequest body)
-
 
 
 create a local key management recording key
@@ -2960,7 +2881,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LocalEncryptionKeyRequest**](LocalEncryptionKeyRequest)| Local Encryption body |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2970,7 +2890,6 @@ namespace Example
 ## PostRecordingMediaretentionpolicies
 
 > [**Policy**](Policy) PostRecordingMediaretentionpolicies (PolicyCreate body)
-
 
 
 Create media retention policy
@@ -3026,7 +2945,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PolicyCreate**](PolicyCreate)| Policy |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3036,7 +2954,6 @@ namespace Example
 ## PostRecordingRecordingkeys
 
 > [**EncryptionKey**](EncryptionKey) PostRecordingRecordingkeys ()
-
 
 
 Create encryption key
@@ -3086,7 +3003,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EncryptionKey**](EncryptionKey)
@@ -3095,7 +3011,6 @@ This endpoint does require any parameters.
 ## PostRecordingUploadsReports
 
 > [**RecordingUploadReport**](RecordingUploadReport) PostRecordingUploadsReports (RecordingUploadReportRequest body)
-
 
 
 Creates a recording upload status report
@@ -3149,7 +3064,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RecordingUploadReportRequest**](RecordingUploadReportRequest)| Report parameters |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3159,7 +3073,6 @@ namespace Example
 ## PostRecordingsDeletionprotection
 
 > [**List&lt;AddressableEntityRef&gt;**](AddressableEntityRef) PostRecordingsDeletionprotection (ConversationDeletionProtectionQuery body)
-
 
 
 Get a list of conversations with protected recordings
@@ -3212,7 +3125,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery)| conversationIds |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3222,7 +3134,6 @@ namespace Example
 ## PostRecordingsScreensessionsAcknowledge
 
 > void PostRecordingsScreensessionsAcknowledge (AcknowledgeScreenRecordingRequest body)
-
 
 
 Acknowledge a screen recording.
@@ -3274,7 +3185,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AcknowledgeScreenRecordingRequest**](AcknowledgeScreenRecordingRequest)| AcknowledgeScreenRecordingRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3284,7 +3194,6 @@ void (empty response body)
 ## PostRecordingsScreensessionsMetadata
 
 > void PostRecordingsScreensessionsMetadata (ScreenRecordingMetaDataRequest body)
-
 
 
 Provide meta-data a screen recording.
@@ -3336,7 +3245,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ScreenRecordingMetaDataRequest**](ScreenRecordingMetaDataRequest)| ScreenRecordingMetaDataRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3346,7 +3254,6 @@ void (empty response body)
 ## PutConversationRecording
 
 > [**Recording**](Recording) PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null)
-
 
 
 Updates the retention records on a recording.
@@ -3410,7 +3317,6 @@ namespace Example
 | **recordingId** | **string**| Recording ID |  |
 | **body** | [**Recording**](Recording)| recording |  |
 | **clearExport** | **bool?**| Whether to clear the pending export for the recording | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3420,7 +3326,6 @@ namespace Example
 ## PutConversationRecordingAnnotation
 
 > [**Annotation**](Annotation) PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
-
 
 
 Update annotation
@@ -3482,7 +3387,6 @@ namespace Example
 | **recordingId** | **string**| Recording ID |  |
 | **annotationId** | **string**| Annotation ID |  |
 | **body** | [**Annotation**](Annotation)| annotation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3492,7 +3396,6 @@ namespace Example
 ## PutOrphanrecording
 
 > [**Recording**](Recording) PutOrphanrecording (string orphanId, OrphanUpdateRequest body = null)
-
 
 
 Updates an orphan recording to a regular recording with retention values
@@ -3550,7 +3453,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **orphanId** | **string**| Orphan ID |  |
 | **body** | [**OrphanUpdateRequest**](OrphanUpdateRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3560,7 +3462,6 @@ namespace Example
 ## PutRecordingCrossplatformMediaretentionpolicy
 
 > [**CrossPlatformPolicy**](CrossPlatformPolicy) PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
-
 
 
 Update a media retention policy
@@ -3618,7 +3519,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
 | **body** | [**CrossPlatformPolicy**](CrossPlatformPolicy)| Policy |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3628,7 +3528,6 @@ namespace Example
 ## PutRecordingJob
 
 > [**RecordingJob**](RecordingJob) PutRecordingJob (string jobId, ExecuteRecordingJobsQuery body)
-
 
 
 Execute the recording bulk job.
@@ -3688,7 +3587,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **body** | [**ExecuteRecordingJobsQuery**](ExecuteRecordingJobsQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3698,7 +3596,6 @@ namespace Example
 ## PutRecordingKeyconfiguration
 
 > [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration) PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body)
-
 
 
 Update the encryption key configurations
@@ -3754,7 +3651,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **keyConfigurationId** | **string**| Key Configurations Id |  |
 | **body** | [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration)| Encryption key configuration metadata |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3764,7 +3660,6 @@ namespace Example
 ## PutRecordingMediaretentionpolicy
 
 > [**Policy**](Policy) PutRecordingMediaretentionpolicy (string policyId, Policy body)
-
 
 
 Update a media retention policy
@@ -3822,7 +3717,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| Policy ID |  |
 | **body** | [**Policy**](Policy)| Policy |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3832,7 +3726,6 @@ namespace Example
 ## PutRecordingRecordingkeysRotationschedule
 
 > [**KeyRotationSchedule**](KeyRotationSchedule) PutRecordingRecordingkeysRotationschedule (KeyRotationSchedule body)
-
 
 
 Update key rotation schedule
@@ -3886,7 +3779,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**KeyRotationSchedule**](KeyRotationSchedule)| KeyRotationSchedule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3896,7 +3788,6 @@ namespace Example
 ## PutRecordingSettings
 
 > [**RecordingSettings**](RecordingSettings) PutRecordingSettings (RecordingSettings body)
-
 
 
 Update the Recording Settings for the Organization
@@ -3950,7 +3841,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RecordingSettings**](RecordingSettings)| Recording settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3960,7 +3850,6 @@ namespace Example
 ## PutRecordingsDeletionprotection
 
 > void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
-
 
 
 Apply or revoke recording protection for conversations
@@ -4016,11 +3905,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **protect** | **bool?**| Check for apply, uncheck for revoke (each action requires the respective permission) | [optional] [default to true] |
 | **body** | [**ConversationDeletionProtectionQuery**](ConversationDeletionProtectionQuery)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

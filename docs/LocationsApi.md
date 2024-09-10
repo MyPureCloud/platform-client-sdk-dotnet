@@ -14,13 +14,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchLocation**](#PatchLocation) | **Patch** /api/v2/locations/{locationId} | Update a location |
 | [**PostLocations**](#PostLocations) | **Post** /api/v2/locations | Create a location |
 | [**PostLocationsSearch**](#PostLocationsSearch) | **Post** /api/v2/locations/search | Search locations |
-{: class="table table-striped"}
+
 
 
 ## DeleteLocation
 
 > void DeleteLocation (string locationId)
-
 
 
 Delete a location
@@ -73,7 +72,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -83,7 +81,6 @@ void (empty response body)
 ## GetLocation
 
 > [**LocationDefinition**](LocationDefinition) GetLocation (string locationId, List<string> expand = null)
-
 
 
 Get Location by ID.
@@ -138,7 +135,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: images, addressVerificationDetails |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -148,7 +144,6 @@ namespace Example
 ## GetLocationSublocations
 
 > [**LocationEntityListing**](LocationEntityListing) GetLocationSublocations (string locationId)
-
 
 
 Get sublocations for location ID.
@@ -201,7 +196,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -211,7 +205,6 @@ namespace Example
 ## GetLocations
 
 > [**LocationEntityListing**](LocationEntityListing) GetLocations (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
-
 
 
 Get a list of all locations.
@@ -270,7 +263,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: asc, desc |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -280,7 +272,6 @@ namespace Example
 ## GetLocationsSearch
 
 > [**LocationsSearchResponse**](LocationsSearchResponse) GetLocationsSearch (string q64, List<string> expand = null)
-
 
 
 Search locations using the q64 value returned from a previous search
@@ -335,7 +326,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| Provides more details about a specified resource | [optional] <br />**Values**: images, addressVerificationDetails |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -345,7 +335,6 @@ namespace Example
 ## PatchLocation
 
 > [**LocationDefinition**](LocationDefinition) PatchLocation (string locationId, LocationUpdateDefinition body)
-
 
 
 Update a location
@@ -401,7 +390,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **string**| Location ID |  |
 | **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition)| Location |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -411,7 +399,6 @@ namespace Example
 ## PostLocations
 
 > [**LocationDefinition**](LocationDefinition) PostLocations (LocationCreateDefinition body)
-
 
 
 Create a location
@@ -465,7 +452,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LocationCreateDefinition**](LocationCreateDefinition)| Location |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -475,7 +461,6 @@ namespace Example
 ## PostLocationsSearch
 
 > [**LocationsSearchResponse**](LocationsSearchResponse) PostLocationsSearch (LocationSearchRequest body)
-
 
 
 Search locations
@@ -528,11 +513,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LocationSearchRequest**](LocationSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**LocationsSearchResponse**](LocationsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

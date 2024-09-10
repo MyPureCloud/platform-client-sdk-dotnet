@@ -13,13 +13,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOauthClientUsageQuery**](#PostOauthClientUsageQuery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
 | [**PostUsageQuery**](#PostUsageQuery) | **Post** /api/v2/usage/query | Query organization API Usage -  |
 | [**PostUsageSimplesearch**](#PostUsageSimplesearch) | **Post** /api/v2/usage/simplesearch | Search organization API Usage |
-{: class="table table-striped"}
+
 
 
 ## GetOauthClientUsageQueryResult
 
 > [**ApiUsageQueryResult**](ApiUsageQueryResult) GetOauthClientUsageQueryResult (string executionId, string clientId)
-
 
 
 Get the results of a usage query
@@ -76,7 +75,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **executionId** | **string**| ID of the query execution |  |
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -86,7 +84,6 @@ namespace Example
 ## GetOauthClientUsageSummary
 
 > [**UsageExecutionResult**](UsageExecutionResult) GetOauthClientUsageSummary (string clientId, string days = null)
-
 
 
 Get a summary of OAuth client API usage
@@ -145,7 +142,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
 | **days** | **string**| Previous number of days to query | [optional] [default to "7"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -155,7 +151,6 @@ namespace Example
 ## GetUsageQueryExecutionIdResults
 
 > [**ApiUsageQueryResult**](ApiUsageQueryResult) GetUsageQueryExecutionIdResults (string executionId)
-
 
 
 Get the results of a usage query
@@ -210,7 +205,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **executionId** | **string**| ID of the query execution |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -220,7 +214,6 @@ namespace Example
 ## GetUsageSimplesearchExecutionIdResults
 
 > [**ApiUsageQueryResult**](ApiUsageQueryResult) GetUsageSimplesearchExecutionIdResults (string executionId, string after = null, int? pageSize = null)
-
 
 
 Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
@@ -279,7 +272,6 @@ namespace Example
 | **executionId** | **string**| ID of the search execution |  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned | [optional]  |
 | **pageSize** | **int?**| The max number of entities to be returned per request. Maximum page size of 1000 | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -289,7 +281,6 @@ namespace Example
 ## PostOauthClientUsageQuery
 
 > [**UsageExecutionResult**](UsageExecutionResult) PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
-
 
 
 Query for OAuth client API usage
@@ -348,7 +339,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
 | **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery)| Query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -358,7 +348,6 @@ namespace Example
 ## PostUsageQuery
 
 > [**UsageExecutionResult**](UsageExecutionResult) PostUsageQuery (ApiUsageOrganizationQuery body)
-
 
 
 Query organization API Usage - 
@@ -415,7 +404,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ApiUsageOrganizationQuery**](ApiUsageOrganizationQuery)| Query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -425,7 +413,6 @@ namespace Example
 ## PostUsageSimplesearch
 
 > [**UsageExecutionResult**](UsageExecutionResult) PostUsageSimplesearch (ApiUsageSimpleSearch body)
-
 
 
 Search organization API Usage
@@ -482,11 +469,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ApiUsageSimpleSearch**](ApiUsageSimpleSearch)| SimpleSearch |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UsageExecutionResult**](UsageExecutionResult)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

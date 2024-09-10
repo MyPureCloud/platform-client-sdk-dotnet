@@ -19,13 +19,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOauthClientUsageQuery**](#PostOauthClientUsageQuery) | **Post** /api/v2/oauth/clients/{clientId}/usage/query | Query for OAuth client API usage |
 | [**PostOauthClients**](#PostOauthClients) | **Post** /api/v2/oauth/clients | Create OAuth client |
 | [**PutOauthClient**](#PutOauthClient) | **Put** /api/v2/oauth/clients/{clientId} | Update OAuth Client |
-{: class="table table-striped"}
+
 
 
 ## DeleteOauthClient
 
 > void DeleteOauthClient (string clientId)
-
 
 
 Delete OAuth Client
@@ -78,7 +77,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -88,7 +86,6 @@ void (empty response body)
 ## GetOauthAuthorization
 
 > [**OAuthAuthorization**](OAuthAuthorization) GetOauthAuthorization (string clientId, string acceptLanguage = null)
-
 
 
 Get a client that is authorized by the resource owner
@@ -144,7 +141,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| The ID of client |  |
 | **acceptLanguage** | **string**| The language in which to display the client descriptions. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -154,7 +150,6 @@ namespace Example
 ## GetOauthAuthorizations
 
 > [**OAuthAuthorizationListing**](OAuthAuthorizationListing) GetOauthAuthorizations (string acceptLanguage = null)
-
 
 
 List clients that have been authorized, requested, or revoked by the resource owner
@@ -208,7 +203,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **acceptLanguage** | **string**| The language in which to display the client descriptions. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -218,7 +212,6 @@ namespace Example
 ## GetOauthClient
 
 > [**OAuthClient**](OAuthClient) GetOauthClient (string clientId)
-
 
 
 Get OAuth Client
@@ -272,7 +265,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -282,7 +274,6 @@ namespace Example
 ## GetOauthClientUsageQueryResult
 
 > [**ApiUsageQueryResult**](ApiUsageQueryResult) GetOauthClientUsageQueryResult (string executionId, string clientId)
-
 
 
 Get the results of a usage query
@@ -339,7 +330,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **executionId** | **string**| ID of the query execution |  |
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -349,7 +339,6 @@ namespace Example
 ## GetOauthClientUsageSummary
 
 > [**UsageExecutionResult**](UsageExecutionResult) GetOauthClientUsageSummary (string clientId, string days = null)
-
 
 
 Get a summary of OAuth client API usage
@@ -408,7 +397,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
 | **days** | **string**| Previous number of days to query | [optional] [default to "7"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -418,7 +406,6 @@ namespace Example
 ## GetOauthClients
 
 > [**OAuthClientEntityListing**](OAuthClientEntityListing) GetOauthClients ()
-
 
 
 The list of OAuth clients
@@ -468,7 +455,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OAuthClientEntityListing**](OAuthClientEntityListing)
@@ -477,7 +463,6 @@ This endpoint does require any parameters.
 ## GetOauthScope
 
 > [**OAuthScope**](OAuthScope) GetOauthScope (string scopeId, string acceptLanguage = null)
-
 
 
 An OAuth scope
@@ -532,7 +517,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **scopeId** | **string**| Scope ID |  |
 | **acceptLanguage** | **string**| The language with which to display the scope description. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -542,7 +526,6 @@ namespace Example
 ## GetOauthScopes
 
 > [**OAuthScopeListing**](OAuthScopeListing) GetOauthScopes (string acceptLanguage = null)
-
 
 
 The list of OAuth scopes
@@ -595,7 +578,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **acceptLanguage** | **string**| The language with which to display the scope descriptions. | [optional] [default to "en-us"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -605,7 +587,6 @@ namespace Example
 ## PostOauthClientSecret
 
 > [**OAuthClient**](OAuthClient) PostOauthClientSecret (string clientId)
-
 
 
 Regenerate Client Secret
@@ -661,7 +642,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -671,7 +651,6 @@ namespace Example
 ## PostOauthClientUsageQuery
 
 > [**UsageExecutionResult**](UsageExecutionResult) PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
-
 
 
 Query for OAuth client API usage
@@ -730,7 +709,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
 | **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery)| Query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -740,7 +718,6 @@ namespace Example
 ## PostOauthClients
 
 > [**OAuthClient**](OAuthClient) PostOauthClients (OAuthClientRequest body)
-
 
 
 Create OAuth client
@@ -796,7 +773,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OAuthClientRequest**](OAuthClientRequest)| Client |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -806,7 +782,6 @@ namespace Example
 ## PutOauthClient
 
 > [**OAuthClient**](OAuthClient) PutOauthClient (string clientId, OAuthClientRequest body)
-
 
 
 Update OAuth Client
@@ -862,11 +837,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
 | **body** | [**OAuthClientRequest**](OAuthClientRequest)| Client |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**OAuthClient**](OAuthClient)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

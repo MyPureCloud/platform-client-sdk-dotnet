@@ -167,13 +167,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundSchedulesSequence**](#PutOutboundSchedulesSequence) | **Put** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
 | [**PutOutboundSequence**](#PutOutboundSequence) | **Put** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
 | [**PutOutboundWrapupcodemappings**](#PutOutboundWrapupcodemappings) | **Put** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
-{: class="table table-striped"}
+
 
 
 ## DeleteOutboundAttemptlimit
 
 > void DeleteOutboundAttemptlimit (string attemptLimitsId)
-
 
 
 Delete attempt limits
@@ -226,7 +225,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **attemptLimitsId** | **string**| Attempt limits ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -236,7 +234,6 @@ void (empty response body)
 ## DeleteOutboundCallabletimeset
 
 > void DeleteOutboundCallabletimeset (string callableTimeSetId)
-
 
 
 Delete callable time set
@@ -289,7 +286,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callableTimeSetId** | **string**| Callable Time Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -299,7 +295,6 @@ void (empty response body)
 ## DeleteOutboundCallanalysisresponseset
 
 > void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
-
 
 
 Delete a dialer call analysis response set.
@@ -352,7 +347,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -362,7 +356,6 @@ void (empty response body)
 ## DeleteOutboundCampaign
 
 > [**Campaign**](Campaign) DeleteOutboundCampaign (string campaignId)
-
 
 
 Delete a campaign.
@@ -416,7 +409,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -426,7 +418,6 @@ namespace Example
 ## DeleteOutboundCampaignProgress
 
 > void DeleteOutboundCampaignProgress (string campaignId)
-
 
 
 Reset campaign progress and recycle the campaign
@@ -480,7 +471,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -490,7 +480,6 @@ void (empty response body)
 ## DeleteOutboundCampaignrule
 
 > void DeleteOutboundCampaignrule (string campaignRuleId)
-
 
 
 Delete Campaign Rule
@@ -543,7 +532,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignRuleId** | **string**| Campaign Rule ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -553,7 +541,6 @@ void (empty response body)
 ## DeleteOutboundContactlist
 
 > void DeleteOutboundContactlist (string contactListId)
-
 
 
 Delete a contact list.
@@ -606,7 +593,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -616,7 +602,6 @@ void (empty response body)
 ## DeleteOutboundContactlistContact
 
 > void DeleteOutboundContactlistContact (string contactListId, string contactId)
-
 
 
 Delete a contact.
@@ -671,7 +656,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **contactId** | **string**| Contact ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -681,7 +665,6 @@ void (empty response body)
 ## DeleteOutboundContactlistContacts
 
 > void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds)
-
 
 
 Delete contacts from a contact list.
@@ -736,7 +719,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **contactIds** | [**List<string>**](string)| ContactIds to delete. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -746,7 +728,6 @@ void (empty response body)
 ## DeleteOutboundContactlistfilter
 
 > void DeleteOutboundContactlistfilter (string contactListFilterId)
-
 
 
 Delete Contact List Filter
@@ -799,7 +780,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListFilterId** | **string**| Contact List Filter ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -809,7 +789,6 @@ void (empty response body)
 ## DeleteOutboundContactlists
 
 > void DeleteOutboundContactlists (List<string> id)
-
 
 
 Delete multiple contact lists.
@@ -862,7 +841,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| contact list id(s) to delete |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -872,7 +850,6 @@ void (empty response body)
 ## DeleteOutboundContactlisttemplate
 
 > void DeleteOutboundContactlisttemplate (string contactListTemplateId)
-
 
 
 Delete Contact List Template
@@ -925,7 +902,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListTemplateId** | **string**| ContactListTemplate ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -935,7 +911,6 @@ void (empty response body)
 ## DeleteOutboundContactlisttemplates
 
 > void DeleteOutboundContactlisttemplates (List<string> id)
-
 
 
 Delete multiple contact list templates.
@@ -988,7 +963,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| contact list template id(s) to delete |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -998,7 +972,6 @@ void (empty response body)
 ## DeleteOutboundDigitalruleset
 
 > void DeleteOutboundDigitalruleset (string digitalRuleSetId)
-
 
 
 Delete an Outbound Digital Rule Set
@@ -1051,7 +1024,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **digitalRuleSetId** | **string**| The Digital Rule Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1061,7 +1033,6 @@ void (empty response body)
 ## DeleteOutboundDnclist
 
 > void DeleteOutboundDnclist (string dncListId)
-
 
 
 Delete dialer DNC list
@@ -1114,7 +1085,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1124,7 +1094,6 @@ void (empty response body)
 ## DeleteOutboundDnclistCustomexclusioncolumns
 
 > void DeleteOutboundDnclistCustomexclusioncolumns (string dncListId, bool? expiredOnly = null)
-
 
 
 Deletes all or expired custom exclusion column entries from a DNC list.
@@ -1181,7 +1150,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1191,7 +1159,6 @@ void (empty response body)
 ## DeleteOutboundDnclistEmailaddresses
 
 > void DeleteOutboundDnclistEmailaddresses (string dncListId, bool? expiredOnly = null)
-
 
 
 Deletes all or expired email addresses from a DNC list.
@@ -1248,7 +1215,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1258,7 +1224,6 @@ void (empty response body)
 ## DeleteOutboundDnclistPhonenumbers
 
 > void DeleteOutboundDnclistPhonenumbers (string dncListId, bool? expiredOnly = null)
-
 
 
 Deletes all or expired phone numbers from a DNC list.
@@ -1315,7 +1280,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1325,7 +1289,6 @@ void (empty response body)
 ## DeleteOutboundFilespecificationtemplate
 
 > void DeleteOutboundFilespecificationtemplate (string fileSpecificationTemplateId)
-
 
 
 Delete File Specification Template
@@ -1378,7 +1341,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **fileSpecificationTemplateId** | **string**| File Specification Template ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1388,7 +1350,6 @@ void (empty response body)
 ## DeleteOutboundFilespecificationtemplatesBulk
 
 > void DeleteOutboundFilespecificationtemplatesBulk (List<string> id)
-
 
 
 Delete multiple file specification templates.
@@ -1441,7 +1402,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| File Specification template id(s) to delete |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1451,7 +1411,6 @@ void (empty response body)
 ## DeleteOutboundImporttemplate
 
 > void DeleteOutboundImporttemplate (string importTemplateId)
-
 
 
 Delete Import Template
@@ -1504,7 +1463,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **importTemplateId** | **string**| Import Template ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1514,7 +1472,6 @@ void (empty response body)
 ## DeleteOutboundImporttemplates
 
 > void DeleteOutboundImporttemplates (List<string> id)
-
 
 
 Delete multiple import templates.
@@ -1567,7 +1524,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| import template id(s) to delete |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1577,7 +1533,6 @@ void (empty response body)
 ## DeleteOutboundMessagingcampaign
 
 > [**MessagingCampaign**](MessagingCampaign) DeleteOutboundMessagingcampaign (string messagingCampaignId)
-
 
 
 Delete an Outbound Messaging Campaign
@@ -1632,7 +1587,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1642,7 +1596,6 @@ namespace Example
 ## DeleteOutboundMessagingcampaignProgress
 
 > void DeleteOutboundMessagingcampaignProgress (string messagingCampaignId)
-
 
 
 Reset messaging campaign progress and recycle the messaging campaign
@@ -1700,7 +1653,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1710,7 +1662,6 @@ void (empty response body)
 ## DeleteOutboundRuleset
 
 > void DeleteOutboundRuleset (string ruleSetId)
-
 
 
 Delete a Rule Set.
@@ -1763,7 +1714,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleSetId** | **string**| Rule Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1773,7 +1723,6 @@ void (empty response body)
 ## DeleteOutboundSchedulesCampaign
 
 > void DeleteOutboundSchedulesCampaign (string campaignId)
-
 
 
 Delete a dialer campaign schedule.
@@ -1826,7 +1775,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1836,7 +1784,6 @@ void (empty response body)
 ## DeleteOutboundSchedulesEmailcampaign
 
 > void DeleteOutboundSchedulesEmailcampaign (string emailCampaignId)
-
 
 
 Delete an email campaign schedule.
@@ -1889,7 +1836,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emailCampaignId** | **string**| Email Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1899,7 +1845,6 @@ void (empty response body)
 ## DeleteOutboundSchedulesMessagingcampaign
 
 > void DeleteOutboundSchedulesMessagingcampaign (string messagingCampaignId)
-
 
 
 Delete a messaging campaign schedule.
@@ -1952,7 +1897,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1962,7 +1906,6 @@ void (empty response body)
 ## DeleteOutboundSchedulesSequence
 
 > void DeleteOutboundSchedulesSequence (string sequenceId)
-
 
 
 Delete a dialer sequence schedule.
@@ -2015,7 +1958,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Sequence ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2025,7 +1967,6 @@ void (empty response body)
 ## DeleteOutboundSequence
 
 > void DeleteOutboundSequence (string sequenceId)
-
 
 
 Delete a dialer campaign sequence.
@@ -2078,7 +2019,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Campaign Sequence ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2088,7 +2028,6 @@ void (empty response body)
 ## GetOutboundAttemptlimit
 
 > [**AttemptLimits**](AttemptLimits) GetOutboundAttemptlimit (string attemptLimitsId)
-
 
 
 Get attempt limits
@@ -2142,7 +2081,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **attemptLimitsId** | **string**| Attempt limits ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2152,7 +2090,6 @@ namespace Example
 ## GetOutboundAttemptlimits
 
 > [**AttemptLimitsEntityListing**](AttemptLimitsEntityListing) GetOutboundAttemptlimits (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query attempt limits list
@@ -2218,7 +2155,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2228,7 +2164,6 @@ namespace Example
 ## GetOutboundCallabletimeset
 
 > [**CallableTimeSet**](CallableTimeSet) GetOutboundCallabletimeset (string callableTimeSetId)
-
 
 
 Get callable time set
@@ -2282,7 +2217,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callableTimeSetId** | **string**| Callable Time Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2292,7 +2226,6 @@ namespace Example
 ## GetOutboundCallabletimesets
 
 > [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing) GetOutboundCallabletimesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query callable time set list
@@ -2358,7 +2291,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2368,7 +2300,6 @@ namespace Example
 ## GetOutboundCallanalysisresponseset
 
 > [**ResponseSet**](ResponseSet) GetOutboundCallanalysisresponseset (string callAnalysisSetId)
-
 
 
 Get a dialer call analysis response set.
@@ -2422,7 +2353,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2432,7 +2362,6 @@ namespace Example
 ## GetOutboundCallanalysisresponsesets
 
 > [**ResponseSetEntityListing**](ResponseSetEntityListing) GetOutboundCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of dialer call analysis response sets.
@@ -2498,7 +2427,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2508,7 +2436,6 @@ namespace Example
 ## GetOutboundCampaign
 
 > [**Campaign**](Campaign) GetOutboundCampaign (string campaignId)
-
 
 
 Get dialer campaign.
@@ -2562,7 +2489,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2572,7 +2498,6 @@ namespace Example
 ## GetOutboundCampaignAgentownedmappingpreviewResults
 
 > [**AgentOwnedMappingPreviewListing**](AgentOwnedMappingPreviewListing) GetOutboundCampaignAgentownedmappingpreviewResults (string campaignId)
-
 
 
 Get a preview of how agents will be mapped to this campaign's contact list.
@@ -2628,7 +2553,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2638,7 +2562,6 @@ namespace Example
 ## GetOutboundCampaignDiagnostics
 
 > [**CampaignDiagnostics**](CampaignDiagnostics) GetOutboundCampaignDiagnostics (string campaignId)
-
 
 
 Get campaign diagnostics
@@ -2692,7 +2615,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2702,7 +2624,6 @@ namespace Example
 ## GetOutboundCampaignInteractions
 
 > [**CampaignInteractions**](CampaignInteractions) GetOutboundCampaignInteractions (string campaignId)
-
 
 
 Get dialer campaign interactions.
@@ -2756,7 +2677,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2766,7 +2686,6 @@ namespace Example
 ## GetOutboundCampaignLinedistribution
 
 > [**CampaignOutboundLinesDistribution**](CampaignOutboundLinesDistribution) GetOutboundCampaignLinedistribution (string campaignId, bool? includeOnlyActiveCampaigns = null, string edgeGroupId = null, string siteId = null, bool? useWeight = null, int? relativeWeight = null, int? outboundLineCount = null)
-
 
 
 Get line distribution information for campaigns using same Edge Group or Site as given campaign
@@ -2832,7 +2751,6 @@ namespace Example
 | **useWeight** | **bool?**| Enable usage of weight, this value overrides current Campaign&#39;s setting in line distribution calculations | [optional]  |
 | **relativeWeight** | **int?**| Relative weight to be used in line distribution calculations instead of current Campaign&#39;s relative weight | [optional]  |
 | **outboundLineCount** | **int?**| The number of outbound lines to be used in line distribution calculations, instead of current Campaign&#39;s Outbound Lines Count | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2842,7 +2760,6 @@ namespace Example
 ## GetOutboundCampaignProgress
 
 > [**CampaignProgress**](CampaignProgress) GetOutboundCampaignProgress (string campaignId)
-
 
 
 Get campaign progress
@@ -2896,7 +2813,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2906,7 +2822,6 @@ namespace Example
 ## GetOutboundCampaignStats
 
 > [**CampaignStats**](CampaignStats) GetOutboundCampaignStats (string campaignId)
-
 
 
 Get statistics about a Dialer Campaign
@@ -2960,7 +2875,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2970,7 +2884,6 @@ namespace Example
 ## GetOutboundCampaignrule
 
 > [**CampaignRule**](CampaignRule) GetOutboundCampaignrule (string campaignRuleId)
-
 
 
 Get Campaign Rule
@@ -3024,7 +2937,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignRuleId** | **string**| Campaign Rule ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3034,7 +2946,6 @@ namespace Example
 ## GetOutboundCampaignrules
 
 > [**CampaignRuleEntityListing**](CampaignRuleEntityListing) GetOutboundCampaignrules (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query Campaign Rule list
@@ -3100,7 +3011,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3110,7 +3020,6 @@ namespace Example
 ## GetOutboundCampaigns
 
 > [**CampaignEntityListing**](CampaignEntityListing) GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of dialer campaigns.
@@ -3188,7 +3097,6 @@ namespace Example
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3198,7 +3106,6 @@ namespace Example
 ## GetOutboundCampaignsAll
 
 > [**CommonCampaignEntityListing**](CommonCampaignEntityListing) GetOutboundCampaignsAll (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
-
 
 
 Query across all types of campaigns by division
@@ -3266,7 +3173,6 @@ namespace Example
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
 | **mediaType** | [**List<string>**](string)| Media type(s) | [optional] <br />**Values**: email, sms, voice |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3276,7 +3182,6 @@ namespace Example
 ## GetOutboundCampaignsAllDivisionviews
 
 > [**CommonCampaignDivisionViewEntityListing**](CommonCampaignDivisionViewEntityListing) GetOutboundCampaignsAllDivisionviews (int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
-
 
 
 Query across all types of campaigns
@@ -3344,7 +3249,6 @@ namespace Example
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
 | **mediaType** | [**List<string>**](string)| Media type(s) | [optional] <br />**Values**: email, sms, voice |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3354,7 +3258,6 @@ namespace Example
 ## GetOutboundCampaignsDivisionview
 
 > [**CampaignDivisionView**](CampaignDivisionView) GetOutboundCampaignsDivisionview (string campaignId)
-
 
 
 Get a basic Campaign information object
@@ -3410,7 +3313,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3420,7 +3322,6 @@ namespace Example
 ## GetOutboundCampaignsDivisionviews
 
 > [**CampaignDivisionViewListing**](CampaignDivisionViewListing) GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of basic Campaign information objects
@@ -3488,7 +3389,6 @@ namespace Example
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3498,7 +3398,6 @@ namespace Example
 ## GetOutboundContactlist
 
 > [**ContactList**](ContactList) GetOutboundContactlist (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
-
 
 
 Get a dialer contact list.
@@ -3556,7 +3455,6 @@ namespace Example
 | **contactListId** | **string**| ContactList ID |  |
 | **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3566,7 +3464,6 @@ namespace Example
 ## GetOutboundContactlistContact
 
 > [**DialerContact**](DialerContact) GetOutboundContactlistContact (string contactListId, string contactId)
-
 
 
 Get a contact.
@@ -3622,7 +3519,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **contactId** | **string**| Contact ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3632,7 +3528,6 @@ namespace Example
 ## GetOutboundContactlistContactsBulkJob
 
 > [**ContactsBulkOperationJob**](ContactsBulkOperationJob) GetOutboundContactlistContactsBulkJob (string contactListId, string jobId)
-
 
 
 Get bulk operation job.
@@ -3688,7 +3583,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **jobId** | **string**| Job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3698,7 +3592,6 @@ namespace Example
 ## GetOutboundContactlistContactsBulkJobs
 
 > [**ContactsBulkOperationJobListing**](ContactsBulkOperationJobListing) GetOutboundContactlistContactsBulkJobs (string contactListId)
-
 
 
 Get 10 most recent bulk operation jobs associated with contact list.
@@ -3752,7 +3645,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3762,7 +3654,6 @@ namespace Example
 ## GetOutboundContactlistExport
 
 > [**ExportUri**](ExportUri) GetOutboundContactlistExport (string contactListId, string download = null)
-
 
 
 Get the URI of a contact list export.
@@ -3819,7 +3710,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
 | **download** | **string**| Redirect to download uri | [optional] [default to "false"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3829,7 +3719,6 @@ namespace Example
 ## GetOutboundContactlistImportstatus
 
 > [**ImportStatus**](ImportStatus) GetOutboundContactlistImportstatus (string contactListId)
-
 
 
 Get dialer contactList import status.
@@ -3883,7 +3772,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3893,7 +3781,6 @@ namespace Example
 ## GetOutboundContactlistTimezonemappingpreview
 
 > [**TimeZoneMappingPreview**](TimeZoneMappingPreview) GetOutboundContactlistTimezonemappingpreview (string contactListId)
-
 
 
 Preview the result of applying Automatic Time Zone Mapping to a contact list
@@ -3947,7 +3834,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3957,7 +3843,6 @@ namespace Example
 ## GetOutboundContactlistfilter
 
 > [**ContactListFilter**](ContactListFilter) GetOutboundContactlistfilter (string contactListFilterId)
-
 
 
 Get Contact list filter
@@ -4011,7 +3896,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListFilterId** | **string**| Contact List Filter ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4021,7 +3905,6 @@ namespace Example
 ## GetOutboundContactlistfilters
 
 > [**ContactListFilterEntityListing**](ContactListFilterEntityListing) GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
-
 
 
 Query Contact list filters
@@ -4089,7 +3972,6 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 | **contactListId** | **string**| Contact List ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4099,7 +3981,6 @@ namespace Example
 ## GetOutboundContactlists
 
 > [**ContactListEntityListing**](ContactListEntityListing) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of contact lists.
@@ -4173,7 +4054,6 @@ namespace Example
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4183,7 +4063,6 @@ namespace Example
 ## GetOutboundContactlistsDivisionview
 
 > [**ContactListDivisionView**](ContactListDivisionView) GetOutboundContactlistsDivisionview (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
-
 
 
 Get a basic ContactList information object
@@ -4243,7 +4122,6 @@ namespace Example
 | **contactListId** | **string**| Contactlist ID |  |
 | **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4253,7 +4131,6 @@ namespace Example
 ## GetOutboundContactlistsDivisionviews
 
 > [**ContactListDivisionViewListing**](ContactListDivisionViewListing) GetOutboundContactlistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of simplified contact list objects.
@@ -4325,7 +4202,6 @@ namespace Example
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4335,7 +4211,6 @@ namespace Example
 ## GetOutboundContactlisttemplate
 
 > [**ContactListTemplate**](ContactListTemplate) GetOutboundContactlisttemplate (string contactListTemplateId)
-
 
 
 Get Contact List Template
@@ -4389,7 +4264,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListTemplateId** | **string**| ContactListTemplate ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4399,7 +4273,6 @@ namespace Example
 ## GetOutboundContactlisttemplates
 
 > [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing) GetOutboundContactlisttemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of contact list templates
@@ -4465,7 +4338,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4475,7 +4347,6 @@ namespace Example
 ## GetOutboundDigitalruleset
 
 > [**DigitalRuleSet**](DigitalRuleSet) GetOutboundDigitalruleset (string digitalRuleSetId)
-
 
 
 Get an Outbound Digital Rule Set
@@ -4529,7 +4400,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **digitalRuleSetId** | **string**| The Digital Rule Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4539,7 +4409,6 @@ namespace Example
 ## GetOutboundDigitalrulesets
 
 > [**DigitalRuleSetEntityListing**](DigitalRuleSetEntityListing) GetOutboundDigitalrulesets (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
-
 
 
 Query a list of Outbound Digital Rule Sets
@@ -4603,7 +4472,6 @@ namespace Example
 | **sortOrder** | **string**| The direction to sort | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
 | **id** | [**List<string>**](string)| A list of digital rule set ids to bulk fetch | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4613,7 +4481,6 @@ namespace Example
 ## GetOutboundDnclist
 
 > [**DncList**](DncList) GetOutboundDnclist (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
-
 
 
 Get dialer DNC list
@@ -4671,7 +4538,6 @@ namespace Example
 | **dncListId** | **string**| DncList ID |  |
 | **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4681,7 +4547,6 @@ namespace Example
 ## GetOutboundDnclistExport
 
 > [**ExportUri**](ExportUri) GetOutboundDnclistExport (string dncListId, string download = null)
-
 
 
 Get the URI of a DNC list export.
@@ -4738,7 +4603,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **download** | **string**| Redirect to download uri | [optional] [default to "false"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4748,7 +4612,6 @@ namespace Example
 ## GetOutboundDnclistImportstatus
 
 > [**ImportStatus**](ImportStatus) GetOutboundDnclistImportstatus (string dncListId)
-
 
 
 Get dialer dncList import status.
@@ -4802,7 +4665,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4812,7 +4674,6 @@ namespace Example
 ## GetOutboundDnclists
 
 > [**DncListEntityListing**](DncListEntityListing) GetOutboundDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query dialer DNC lists
@@ -4886,7 +4747,6 @@ namespace Example
 | **divisionId** | [**List<string>**](string)| Division ID(s) | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4896,7 +4756,6 @@ namespace Example
 ## GetOutboundDnclistsDivisionview
 
 > [**DncListDivisionView**](DncListDivisionView) GetOutboundDnclistsDivisionview (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
-
 
 
 Get a basic DncList information object
@@ -4956,7 +4815,6 @@ namespace Example
 | **dncListId** | **string**| Dnclist ID |  |
 | **includeImportStatus** | **bool?**| Include import status | [optional] [default to false] |
 | **includeSize** | **bool?**| Include size | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4966,7 +4824,6 @@ namespace Example
 ## GetOutboundDnclistsDivisionviews
 
 > [**DncListDivisionViewListing**](DncListDivisionViewListing) GetOutboundDnclistsDivisionviews (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of simplified dnc list objects.
@@ -5040,7 +4897,6 @@ namespace Example
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5050,7 +4906,6 @@ namespace Example
 ## GetOutboundEvent
 
 > [**EventLog**](EventLog) GetOutboundEvent (string eventId)
-
 
 
 Get Dialer Event
@@ -5104,7 +4959,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eventId** | **string**| Event Log ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5114,7 +4968,6 @@ namespace Example
 ## GetOutboundEvents
 
 > [**DialerEventEntityListing**](DialerEventEntityListing) GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query Event Logs
@@ -5180,7 +5033,6 @@ namespace Example
 | **level** | **string**| Level | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5190,7 +5042,6 @@ namespace Example
 ## GetOutboundFilespecificationtemplate
 
 > [**FileSpecificationTemplate**](FileSpecificationTemplate) GetOutboundFilespecificationtemplate (string fileSpecificationTemplateId)
-
 
 
 Get File Specification Template
@@ -5244,7 +5095,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **fileSpecificationTemplateId** | **string**| File Specification Template ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5254,7 +5104,6 @@ namespace Example
 ## GetOutboundFilespecificationtemplates
 
 > [**FileSpecificationTemplateEntityListing**](FileSpecificationTemplateEntityListing) GetOutboundFilespecificationtemplates (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query File Specification Templates
@@ -5320,7 +5169,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5330,7 +5178,6 @@ namespace Example
 ## GetOutboundImporttemplate
 
 > [**ImportTemplate**](ImportTemplate) GetOutboundImporttemplate (string importTemplateId, bool? includeImportStatus = null)
-
 
 
 Get Import Template
@@ -5386,7 +5233,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **importTemplateId** | **string**| Import Template ID |  |
 | **includeImportStatus** | **bool?**| Import status | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5396,7 +5242,6 @@ namespace Example
 ## GetOutboundImporttemplateImportstatus
 
 > [**ImportStatus**](ImportStatus) GetOutboundImporttemplateImportstatus (string importTemplateId, string listNamePrefix = null)
-
 
 
 Get the import status for an import template.
@@ -5452,7 +5297,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **importTemplateId** | **string**| importTemplateId |  |
 | **listNamePrefix** | **string**| listNamePrefix | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5462,7 +5306,6 @@ namespace Example
 ## GetOutboundImporttemplates
 
 > [**ImportTemplateEntityListing**](ImportTemplateEntityListing) GetOutboundImporttemplates (bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
-
 
 
 Query Import Templates
@@ -5532,7 +5375,6 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
 | **contactListTemplateId** | **string**| Contact List Template ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5542,7 +5384,6 @@ namespace Example
 ## GetOutboundMessagingcampaign
 
 > [**MessagingCampaign**](MessagingCampaign) GetOutboundMessagingcampaign (string messagingCampaignId)
-
 
 
 Get an Outbound Messaging Campaign
@@ -5597,7 +5438,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5607,7 +5447,6 @@ namespace Example
 ## GetOutboundMessagingcampaignDiagnostics
 
 > [**MessagingCampaignDiagnostics**](MessagingCampaignDiagnostics) GetOutboundMessagingcampaignDiagnostics (string messagingCampaignId)
-
 
 
 Get messaging campaign diagnostics
@@ -5662,7 +5501,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5672,7 +5510,6 @@ namespace Example
 ## GetOutboundMessagingcampaignProgress
 
 > [**CampaignProgress**](CampaignProgress) GetOutboundMessagingcampaignProgress (string messagingCampaignId)
-
 
 
 Get messaging campaign's progress
@@ -5727,7 +5564,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5737,7 +5573,6 @@ namespace Example
 ## GetOutboundMessagingcampaigns
 
 > [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing) GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null)
-
 
 
 Query a list of Messaging Campaigns
@@ -5810,7 +5645,6 @@ namespace Example
 | **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
 | **id** | [**List<string>**](string)| A list of messaging campaign ids to bulk fetch | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5820,7 +5654,6 @@ namespace Example
 ## GetOutboundMessagingcampaignsDivisionview
 
 > [**MessagingCampaignDivisionView**](MessagingCampaignDivisionView) GetOutboundMessagingcampaignsDivisionview (string messagingCampaignId)
-
 
 
 Get a basic Messaging Campaign information object
@@ -5877,7 +5710,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5887,7 +5719,6 @@ namespace Example
 ## GetOutboundMessagingcampaignsDivisionviews
 
 > [**MessagingCampaignDivisionViewEntityListing**](MessagingCampaignDivisionViewEntityListing) GetOutboundMessagingcampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null)
-
 
 
 Query a list of basic Messaging Campaign information objects
@@ -5956,7 +5787,6 @@ namespace Example
 | **type** | **string**| Campaign Type | [optional] <br />**Values**: EMAIL, SMS |
 | **id** | [**List<string>**](string)| id | [optional]  |
 | **senderSmsPhoneNumber** | **string**| Sender SMS Phone Number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5966,7 +5796,6 @@ namespace Example
 ## GetOutboundRuleset
 
 > [**RuleSet**](RuleSet) GetOutboundRuleset (string ruleSetId)
-
 
 
 Get a Rule Set by ID.
@@ -6020,7 +5849,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleSetId** | **string**| Rule Set ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6030,7 +5858,6 @@ namespace Example
 ## GetOutboundRulesets
 
 > [**RuleSetEntityListing**](RuleSetEntityListing) GetOutboundRulesets (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of Rule Sets.
@@ -6096,7 +5923,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6106,7 +5932,6 @@ namespace Example
 ## GetOutboundSchedulesCampaign
 
 > [**CampaignSchedule**](CampaignSchedule) GetOutboundSchedulesCampaign (string campaignId)
-
 
 
 Get a dialer campaign schedule.
@@ -6160,7 +5985,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6170,7 +5994,6 @@ namespace Example
 ## GetOutboundSchedulesCampaigns
 
 > [**List&lt;CampaignSchedule&gt;**](CampaignSchedule) GetOutboundSchedulesCampaigns ()
-
 
 
 Query for a list of dialer campaign schedules.
@@ -6220,7 +6043,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**List<CampaignSchedule>**](CampaignSchedule)
@@ -6229,7 +6051,6 @@ This endpoint does require any parameters.
 ## GetOutboundSchedulesEmailcampaign
 
 > [**EmailCampaignSchedule**](EmailCampaignSchedule) GetOutboundSchedulesEmailcampaign (string emailCampaignId)
-
 
 
 Get an email campaign schedule.
@@ -6283,7 +6104,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emailCampaignId** | **string**| Email Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6293,7 +6113,6 @@ namespace Example
 ## GetOutboundSchedulesEmailcampaigns
 
 > [**EmailCampaignScheduleEntityListing**](EmailCampaignScheduleEntityListing) GetOutboundSchedulesEmailcampaigns ()
-
 
 
 Query for a list of email campaign schedules.
@@ -6343,7 +6162,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EmailCampaignScheduleEntityListing**](EmailCampaignScheduleEntityListing)
@@ -6352,7 +6170,6 @@ This endpoint does require any parameters.
 ## GetOutboundSchedulesMessagingcampaign
 
 > [**MessagingCampaignSchedule**](MessagingCampaignSchedule) GetOutboundSchedulesMessagingcampaign (string messagingCampaignId)
-
 
 
 Get a messaging campaign schedule.
@@ -6406,7 +6223,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| Messaging Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6416,7 +6232,6 @@ namespace Example
 ## GetOutboundSchedulesMessagingcampaigns
 
 > [**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing) GetOutboundSchedulesMessagingcampaigns ()
-
 
 
 Query for a list of messaging campaign schedules.
@@ -6466,7 +6281,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**MessagingCampaignScheduleEntityListing**](MessagingCampaignScheduleEntityListing)
@@ -6475,7 +6289,6 @@ This endpoint does require any parameters.
 ## GetOutboundSchedulesSequence
 
 > [**SequenceSchedule**](SequenceSchedule) GetOutboundSchedulesSequence (string sequenceId)
-
 
 
 Get a dialer sequence schedule.
@@ -6529,7 +6342,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Sequence ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6539,7 +6351,6 @@ namespace Example
 ## GetOutboundSchedulesSequences
 
 > [**List&lt;SequenceSchedule&gt;**](SequenceSchedule) GetOutboundSchedulesSequences ()
-
 
 
 Query for a list of dialer sequence schedules.
@@ -6589,7 +6400,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**List<SequenceSchedule>**](SequenceSchedule)
@@ -6598,7 +6408,6 @@ This endpoint does require any parameters.
 ## GetOutboundSequence
 
 > [**CampaignSequence**](CampaignSequence) GetOutboundSequence (string sequenceId)
-
 
 
 Get a dialer campaign sequence.
@@ -6652,7 +6461,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Campaign Sequence ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6662,7 +6470,6 @@ namespace Example
 ## GetOutboundSequences
 
 > [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing) GetOutboundSequences (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
-
 
 
 Query a list of dialer campaign sequences.
@@ -6728,7 +6535,6 @@ namespace Example
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6738,7 +6544,6 @@ namespace Example
 ## GetOutboundSettings
 
 > [**OutboundSettings**](OutboundSettings) GetOutboundSettings ()
-
 
 
 Get the outbound settings for this organization
@@ -6788,7 +6593,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**OutboundSettings**](OutboundSettings)
@@ -6797,7 +6601,6 @@ This endpoint does require any parameters.
 ## GetOutboundWrapupcodemappings
 
 > [**WrapUpCodeMapping**](WrapUpCodeMapping) GetOutboundWrapupcodemappings ()
-
 
 
 Get the Dialer wrap up code mapping.
@@ -6847,7 +6650,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
@@ -6856,7 +6658,6 @@ This endpoint does require any parameters.
 ## PatchOutboundCampaign
 
 > void PatchOutboundCampaign (string campaignId, CampaignPatchRequest body)
-
 
 
 Update a campaign.
@@ -6911,7 +6712,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **body** | [**CampaignPatchRequest**](CampaignPatchRequest)| CampaignPatchRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6921,7 +6721,6 @@ void (empty response body)
 ## PatchOutboundDnclistCustomexclusioncolumns
 
 > void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body)
-
 
 
 Add entries to or delete entries from a DNC list.
@@ -6978,7 +6777,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **body** | [**DncPatchCustomExclusionColumnsRequest**](DncPatchCustomExclusionColumnsRequest)| DNC Custom exclusion column entries |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6988,7 +6786,6 @@ void (empty response body)
 ## PatchOutboundDnclistEmailaddresses
 
 > void PatchOutboundDnclistEmailaddresses (string dncListId, DncPatchEmailsRequest body)
-
 
 
 Add emails to or Delete emails from a DNC list.
@@ -7045,7 +6842,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **body** | [**DncPatchEmailsRequest**](DncPatchEmailsRequest)| DNC Emails |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7055,7 +6851,6 @@ void (empty response body)
 ## PatchOutboundDnclistPhonenumbers
 
 > void PatchOutboundDnclistPhonenumbers (string dncListId, DncPatchPhoneNumbersRequest body)
-
 
 
 Add numbers to or delete numbers from a DNC list.
@@ -7112,7 +6907,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **body** | [**DncPatchPhoneNumbersRequest**](DncPatchPhoneNumbersRequest)| DNC Phone Numbers |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7122,7 +6916,6 @@ void (empty response body)
 ## PatchOutboundSettings
 
 > void PatchOutboundSettings (OutboundSettings body)
-
 
 
 Update the outbound settings for this organization
@@ -7175,7 +6968,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OutboundSettings**](OutboundSettings)| outboundSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7185,7 +6977,6 @@ void (empty response body)
 ## PostOutboundAttemptlimits
 
 > [**AttemptLimits**](AttemptLimits) PostOutboundAttemptlimits (AttemptLimits body)
-
 
 
 Create attempt limits
@@ -7239,7 +7030,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AttemptLimits**](AttemptLimits)| AttemptLimits |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7249,7 +7039,6 @@ namespace Example
 ## PostOutboundCallabletimesets
 
 > [**CallableTimeSet**](CallableTimeSet) PostOutboundCallabletimesets (CallableTimeSet body)
-
 
 
 Create callable time set
@@ -7303,7 +7092,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CallableTimeSet**](CallableTimeSet)| DialerCallableTimeSet |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7313,7 +7101,6 @@ namespace Example
 ## PostOutboundCallanalysisresponsesets
 
 > [**ResponseSet**](ResponseSet) PostOutboundCallanalysisresponsesets (ResponseSet body)
-
 
 
 Create a dialer call analysis response set.
@@ -7367,7 +7154,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ResponseSet**](ResponseSet)| ResponseSet |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7377,7 +7163,6 @@ namespace Example
 ## PostOutboundCampaignAgentownedmappingpreview
 
 > **Object** PostOutboundCampaignAgentownedmappingpreview (string campaignId)
-
 
 
 Initiate request for a preview of how agents will be mapped to this campaign's contact list.
@@ -7433,7 +7218,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7444,7 +7228,9 @@ namespace Example
 
 > [**ContactCallbackRequest**](ContactCallbackRequest) PostOutboundCampaignCallbackSchedule (string campaignId, ContactCallbackRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Schedule a Callback for a Dialer Campaign (Deprecated)
 
@@ -7500,7 +7286,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **body** | [**ContactCallbackRequest**](ContactCallbackRequest)| ContactCallbackRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7510,7 +7295,6 @@ namespace Example
 ## PostOutboundCampaignrules
 
 > [**CampaignRule**](CampaignRule) PostOutboundCampaignrules (CampaignRule body)
-
 
 
 Create Campaign Rule
@@ -7564,7 +7348,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CampaignRule**](CampaignRule)| CampaignRule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7574,7 +7357,6 @@ namespace Example
 ## PostOutboundCampaigns
 
 > [**Campaign**](Campaign) PostOutboundCampaigns (Campaign body)
-
 
 
 Create a campaign.
@@ -7628,7 +7410,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Campaign**](Campaign)| Campaign |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7638,7 +7419,6 @@ namespace Example
 ## PostOutboundCampaignsProgress
 
 > [**List&lt;CampaignProgress&gt;**](CampaignProgress) PostOutboundCampaignsProgress (List<string> body)
-
 
 
 Get progress for a list of campaigns
@@ -7692,7 +7472,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<string>**](string)| Campaign IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7702,7 +7481,6 @@ namespace Example
 ## PostOutboundContactlistClear
 
 > void PostOutboundContactlistClear (string contactListId)
-
 
 
 Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled.
@@ -7755,7 +7533,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7765,7 +7542,6 @@ void (empty response body)
 ## PostOutboundContactlistContacts
 
 > [**List&lt;DialerContact&gt;**](DialerContact) PostOutboundContactlistContacts (string contactListId, List<WritableDialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
-
 
 
 Add contacts to a contact list.
@@ -7827,7 +7603,6 @@ namespace Example
 | **priority** | **bool?**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional]  |
 | **clearSystemData** | **bool?**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional]  |
 | **doNotQueue** | **bool?**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the &#39;priority&#39; parameter. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7837,7 +7612,6 @@ namespace Example
 ## PostOutboundContactlistContactsBulk
 
 > [**List&lt;DialerContact&gt;**](DialerContact) PostOutboundContactlistContactsBulk (string contactListId, List<string> body)
-
 
 
 Get contacts from a contact list.
@@ -7893,7 +7667,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**List<string>**](string)| ContactIds to get. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7903,7 +7676,6 @@ namespace Example
 ## PostOutboundContactlistContactsBulkRemove
 
 > [**ContactsBulkOperationJob**](ContactsBulkOperationJob) PostOutboundContactlistContactsBulkRemove (string contactListId, ContactBulkSearchParameters body)
-
 
 
 Start an async job to delete contacts using a filter.
@@ -7959,7 +7731,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**ContactBulkSearchParameters**](ContactBulkSearchParameters)| Contact filter information. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7969,7 +7740,6 @@ namespace Example
 ## PostOutboundContactlistContactsBulkUpdate
 
 > [**ContactsBulkOperationJob**](ContactsBulkOperationJob) PostOutboundContactlistContactsBulkUpdate (string contactListId, ContactBulkEditRequest body)
-
 
 
 Start an async job to bulk edit contacts.
@@ -8025,7 +7795,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**ContactBulkEditRequest**](ContactBulkEditRequest)| Contact bulk edit request information. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8035,7 +7804,6 @@ namespace Example
 ## PostOutboundContactlistContactsSearch
 
 > [**ContactListingResponse**](ContactListingResponse) PostOutboundContactlistContactsSearch (string contactListId, ContactListingRequest body)
-
 
 
 Query contacts from a contact list.
@@ -8091,7 +7859,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**ContactListingRequest**](ContactListingRequest)| Contact search parameters. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8101,7 +7868,6 @@ namespace Example
 ## PostOutboundContactlistExport
 
 > [**DomainEntityRef**](DomainEntityRef) PostOutboundContactlistExport (string contactListId, ContactsExportRequest body = null)
-
 
 
 Initiate the export of a contact list.
@@ -8160,7 +7926,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
 | **body** | [**ContactsExportRequest**](ContactsExportRequest)| Export information to get | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8170,7 +7935,6 @@ namespace Example
 ## PostOutboundContactlistfilters
 
 > [**ContactListFilter**](ContactListFilter) PostOutboundContactlistfilters (ContactListFilter body)
-
 
 
 Create Contact List Filter
@@ -8224,7 +7988,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactListFilter**](ContactListFilter)| ContactListFilter |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8234,7 +7997,6 @@ namespace Example
 ## PostOutboundContactlistfiltersBulkRetrieve
 
 > [**ContactListFilterEntityListing**](ContactListFilterEntityListing) PostOutboundContactlistfiltersBulkRetrieve (ContactListFilterBulkRetrieveBody body)
-
 
 
 Retrieve multiple contact list filters
@@ -8288,7 +8050,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactListFilterBulkRetrieveBody**](ContactListFilterBulkRetrieveBody)| The contact list filters to retrieve |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8298,7 +8059,6 @@ namespace Example
 ## PostOutboundContactlistfiltersPreview
 
 > [**FilterPreviewResponse**](FilterPreviewResponse) PostOutboundContactlistfiltersPreview (ContactListFilter body)
-
 
 
 Get a preview of the output of a contact list filter
@@ -8352,7 +8112,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactListFilter**](ContactListFilter)| ContactListFilter |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8362,7 +8121,6 @@ namespace Example
 ## PostOutboundContactlists
 
 > [**ContactList**](ContactList) PostOutboundContactlists (ContactList body)
-
 
 
 Create a contact List.
@@ -8416,7 +8174,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactList**](ContactList)| ContactList |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8426,7 +8183,6 @@ namespace Example
 ## PostOutboundContactlisttemplates
 
 > [**ContactListTemplate**](ContactListTemplate) PostOutboundContactlisttemplates (ContactListTemplate body)
-
 
 
 Create Contact List Template
@@ -8480,7 +8236,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactListTemplate**](ContactListTemplate)| ContactListTemplate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8490,7 +8245,6 @@ namespace Example
 ## PostOutboundContactlisttemplatesBulkAdd
 
 > [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing) PostOutboundContactlisttemplatesBulkAdd (List<ContactListTemplate> body)
-
 
 
 Add multiple contact list templates
@@ -8544,7 +8298,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<ContactListTemplate>**](ContactListTemplate)| contact list template(s) to add |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8554,7 +8307,6 @@ namespace Example
 ## PostOutboundContactlisttemplatesBulkRetrieve
 
 > [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing) PostOutboundContactlisttemplatesBulkRetrieve (ContactListTemplateBulkRetrieveBody body)
-
 
 
 Get multiple contact list templates
@@ -8608,7 +8360,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ContactListTemplateBulkRetrieveBody**](ContactListTemplateBulkRetrieveBody)| contact list templates to get |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8618,7 +8369,6 @@ namespace Example
 ## PostOutboundConversationDnc
 
 > void PostOutboundConversationDnc (string conversationId)
-
 
 
 Add phone numbers to a Dialer DNC list.
@@ -8671,7 +8421,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8681,7 +8430,6 @@ void (empty response body)
 ## PostOutboundDigitalrulesets
 
 > [**DigitalRuleSet**](DigitalRuleSet) PostOutboundDigitalrulesets (DigitalRuleSet body)
-
 
 
 Create an Outbound Digital Rule Set
@@ -8735,7 +8483,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DigitalRuleSet**](DigitalRuleSet)| Digital Rule Set |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8745,7 +8492,6 @@ namespace Example
 ## PostOutboundDnclistEmailaddresses
 
 > void PostOutboundDnclistEmailaddresses (string dncListId, List<string> body)
-
 
 
 Add email addresses to a DNC list.
@@ -8802,7 +8548,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **body** | [**List<string>**](string)| DNC email addresses |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8812,7 +8557,6 @@ void (empty response body)
 ## PostOutboundDnclistExport
 
 > [**DomainEntityRef**](DomainEntityRef) PostOutboundDnclistExport (string dncListId)
-
 
 
 Initiate the export of a dnc list.
@@ -8869,7 +8613,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8879,7 +8622,6 @@ namespace Example
 ## PostOutboundDnclistPhonenumbers
 
 > void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body, string expirationDateTime = null)
-
 
 
 Add phone numbers to a DNC list.
@@ -8938,7 +8680,6 @@ namespace Example
 | **dncListId** | **string**| DncList ID |  |
 | **body** | [**List<string>**](string)| DNC Phone Numbers |  |
 | **expirationDateTime** | **string**| Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8948,7 +8689,6 @@ void (empty response body)
 ## PostOutboundDnclists
 
 > [**DncList**](DncList) PostOutboundDnclists (DncListCreate body)
-
 
 
 Create dialer DNC list
@@ -9002,7 +8742,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DncListCreate**](DncListCreate)| DncList |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9012,7 +8751,6 @@ namespace Example
 ## PostOutboundFilespecificationtemplates
 
 > [**FileSpecificationTemplate**](FileSpecificationTemplate) PostOutboundFilespecificationtemplates (FileSpecificationTemplate body)
-
 
 
 Create File Specification Template
@@ -9066,7 +8804,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FileSpecificationTemplate**](FileSpecificationTemplate)| FileSpecificationTemplate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9076,7 +8813,6 @@ namespace Example
 ## PostOutboundImporttemplates
 
 > [**ImportTemplate**](ImportTemplate) PostOutboundImporttemplates (ImportTemplate body)
-
 
 
 Create Import Template
@@ -9130,7 +8866,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ImportTemplate**](ImportTemplate)| ImportTemplate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9140,7 +8875,6 @@ namespace Example
 ## PostOutboundImporttemplatesBulkAdd
 
 > [**ImportTemplateEntityListing**](ImportTemplateEntityListing) PostOutboundImporttemplatesBulkAdd (List<ImportTemplate> body)
-
 
 
 Add multiple import templates
@@ -9194,7 +8928,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<ImportTemplate>**](ImportTemplate)| import template(s) to add |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9204,7 +8937,6 @@ namespace Example
 ## PostOutboundMessagingcampaigns
 
 > [**MessagingCampaign**](MessagingCampaign) PostOutboundMessagingcampaigns (MessagingCampaign body)
-
 
 
 Create a Messaging Campaign
@@ -9259,7 +8991,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**MessagingCampaign**](MessagingCampaign)| Messaging Campaign |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9269,7 +9000,6 @@ namespace Example
 ## PostOutboundMessagingcampaignsProgress
 
 > [**List&lt;CampaignProgress&gt;**](CampaignProgress) PostOutboundMessagingcampaignsProgress (List<string> body)
-
 
 
 Get progress for a list of messaging campaigns
@@ -9324,7 +9054,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<string>**](string)| Messaging Campaign IDs |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9334,7 +9063,6 @@ namespace Example
 ## PostOutboundRulesets
 
 > [**RuleSet**](RuleSet) PostOutboundRulesets (RuleSet body)
-
 
 
 Create a Rule Set.
@@ -9388,7 +9116,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RuleSet**](RuleSet)| RuleSet |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9398,7 +9125,6 @@ namespace Example
 ## PostOutboundSequences
 
 > [**CampaignSequence**](CampaignSequence) PostOutboundSequences (CampaignSequence body)
-
 
 
 Create a new campaign sequence.
@@ -9452,7 +9178,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CampaignSequence**](CampaignSequence)| Organization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9462,7 +9187,6 @@ namespace Example
 ## PutOutboundAttemptlimit
 
 > [**AttemptLimits**](AttemptLimits) PutOutboundAttemptlimit (string attemptLimitsId, AttemptLimits body)
-
 
 
 Update attempt limits
@@ -9518,7 +9242,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **attemptLimitsId** | **string**| Attempt limits ID |  |
 | **body** | [**AttemptLimits**](AttemptLimits)| AttemptLimits |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9528,7 +9251,6 @@ namespace Example
 ## PutOutboundCallabletimeset
 
 > [**CallableTimeSet**](CallableTimeSet) PutOutboundCallabletimeset (string callableTimeSetId, CallableTimeSet body)
-
 
 
 Update callable time set
@@ -9584,7 +9306,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callableTimeSetId** | **string**| Callable Time Set ID |  |
 | **body** | [**CallableTimeSet**](CallableTimeSet)| DialerCallableTimeSet |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9594,7 +9315,6 @@ namespace Example
 ## PutOutboundCallanalysisresponseset
 
 > [**ResponseSet**](ResponseSet) PutOutboundCallanalysisresponseset (string callAnalysisSetId, ResponseSet body)
-
 
 
 Update a dialer call analysis response set.
@@ -9650,7 +9370,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **callAnalysisSetId** | **string**| Call Analysis Response Set ID |  |
 | **body** | [**ResponseSet**](ResponseSet)| ResponseSet |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9660,7 +9379,6 @@ namespace Example
 ## PutOutboundCampaign
 
 > [**Campaign**](Campaign) PutOutboundCampaign (string campaignId, Campaign body)
-
 
 
 Update a campaign.
@@ -9716,7 +9434,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **body** | [**Campaign**](Campaign)| Campaign |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9726,7 +9443,6 @@ namespace Example
 ## PutOutboundCampaignAgent
 
 > **string** PutOutboundCampaignAgent (string campaignId, string userId, Agent body)
-
 
 
 Send notification that an agent's state changed 
@@ -9785,7 +9501,6 @@ namespace Example
 | **campaignId** | **string**| Campaign ID |  |
 | **userId** | **string**| Agent&#39;s user ID |  |
 | **body** | [**Agent**](Agent)| agent |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9795,7 +9510,6 @@ namespace Example
 ## PutOutboundCampaignrule
 
 > [**CampaignRule**](CampaignRule) PutOutboundCampaignrule (string campaignRuleId, CampaignRule body)
-
 
 
 Update Campaign Rule
@@ -9851,7 +9565,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignRuleId** | **string**| Campaign Rule ID |  |
 | **body** | [**CampaignRule**](CampaignRule)| CampaignRule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9861,7 +9574,6 @@ namespace Example
 ## PutOutboundContactlist
 
 > [**ContactList**](ContactList) PutOutboundContactlist (string contactListId, ContactList body)
-
 
 
 Update a contact list.
@@ -9917,7 +9629,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| ContactList ID |  |
 | **body** | [**ContactList**](ContactList)| ContactList |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9927,7 +9638,6 @@ namespace Example
 ## PutOutboundContactlistContact
 
 > [**DialerContact**](DialerContact) PutOutboundContactlistContact (string contactListId, string contactId, DialerContact body)
-
 
 
 Update a contact.
@@ -9985,7 +9695,6 @@ namespace Example
 | **contactListId** | **string**| Contact List ID |  |
 | **contactId** | **string**| Contact ID |  |
 | **body** | [**DialerContact**](DialerContact)| Contact |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9995,7 +9704,6 @@ namespace Example
 ## PutOutboundContactlistfilter
 
 > [**ContactListFilter**](ContactListFilter) PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body)
-
 
 
 Update Contact List Filter
@@ -10051,7 +9759,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListFilterId** | **string**| Contact List Filter ID |  |
 | **body** | [**ContactListFilter**](ContactListFilter)| ContactListFilter |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10061,7 +9768,6 @@ namespace Example
 ## PutOutboundContactlisttemplate
 
 > [**ContactListTemplate**](ContactListTemplate) PutOutboundContactlisttemplate (string contactListTemplateId, ContactListTemplate body)
-
 
 
 Update a contact list template.
@@ -10117,7 +9823,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListTemplateId** | **string**| ContactListTemplate ID |  |
 | **body** | [**ContactListTemplate**](ContactListTemplate)| ContactListTemplate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10127,7 +9832,6 @@ namespace Example
 ## PutOutboundDigitalruleset
 
 > [**DigitalRuleSet**](DigitalRuleSet) PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body)
-
 
 
 Update an Outbound Digital Rule Set
@@ -10183,7 +9887,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **digitalRuleSetId** | **string**| The Digital Rule Set ID |  |
 | **body** | [**DigitalRuleSet**](DigitalRuleSet)| Digital Rule Set |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10193,7 +9896,6 @@ namespace Example
 ## PutOutboundDnclist
 
 > [**DncList**](DncList) PutOutboundDnclist (string dncListId, DncList body)
-
 
 
 Update dialer DNC list
@@ -10249,7 +9951,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
 | **body** | [**DncList**](DncList)| DncList |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10259,7 +9960,6 @@ namespace Example
 ## PutOutboundFilespecificationtemplate
 
 > [**FileSpecificationTemplate**](FileSpecificationTemplate) PutOutboundFilespecificationtemplate (string fileSpecificationTemplateId, FileSpecificationTemplate body)
-
 
 
 Update File Specification Template
@@ -10315,7 +10015,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **fileSpecificationTemplateId** | **string**| File Specification Template ID |  |
 | **body** | [**FileSpecificationTemplate**](FileSpecificationTemplate)| fileSpecificationTemplate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10325,7 +10024,6 @@ namespace Example
 ## PutOutboundImporttemplate
 
 > [**ImportTemplate**](ImportTemplate) PutOutboundImporttemplate (string importTemplateId, ImportTemplate body)
-
 
 
 Update Import Template
@@ -10381,7 +10079,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **importTemplateId** | **string**| Import Template ID |  |
 | **body** | [**ImportTemplate**](ImportTemplate)| importTemplate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10391,7 +10088,6 @@ namespace Example
 ## PutOutboundMessagingcampaign
 
 > [**MessagingCampaign**](MessagingCampaign) PutOutboundMessagingcampaign (string messagingCampaignId, MessagingCampaign body)
-
 
 
 Update an Outbound Messaging Campaign
@@ -10448,7 +10144,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
 | **body** | [**MessagingCampaign**](MessagingCampaign)| MessagingCampaign |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10458,7 +10153,6 @@ namespace Example
 ## PutOutboundRuleset
 
 > [**RuleSet**](RuleSet) PutOutboundRuleset (string ruleSetId, RuleSet body)
-
 
 
 Update a Rule Set.
@@ -10514,7 +10208,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleSetId** | **string**| Rule Set ID |  |
 | **body** | [**RuleSet**](RuleSet)| RuleSet |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10524,7 +10217,6 @@ namespace Example
 ## PutOutboundSchedulesCampaign
 
 > [**CampaignSchedule**](CampaignSchedule) PutOutboundSchedulesCampaign (string campaignId, CampaignSchedule body)
-
 
 
 Update a new campaign schedule.
@@ -10580,7 +10272,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **campaignId** | **string**| Campaign ID |  |
 | **body** | [**CampaignSchedule**](CampaignSchedule)| CampaignSchedule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10590,7 +10281,6 @@ namespace Example
 ## PutOutboundSchedulesEmailcampaign
 
 > [**EmailCampaignSchedule**](EmailCampaignSchedule) PutOutboundSchedulesEmailcampaign (string emailCampaignId, EmailCampaignSchedule body)
-
 
 
 Update an email campaign schedule.
@@ -10646,7 +10336,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **emailCampaignId** | **string**| Email Campaign ID |  |
 | **body** | [**EmailCampaignSchedule**](EmailCampaignSchedule)| EmailCampaignSchedule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10656,7 +10345,6 @@ namespace Example
 ## PutOutboundSchedulesMessagingcampaign
 
 > [**MessagingCampaignSchedule**](MessagingCampaignSchedule) PutOutboundSchedulesMessagingcampaign (string messagingCampaignId, MessagingCampaignSchedule body)
-
 
 
 Update a new messaging campaign schedule.
@@ -10712,7 +10400,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **messagingCampaignId** | **string**| Messaging Campaign ID |  |
 | **body** | [**MessagingCampaignSchedule**](MessagingCampaignSchedule)| MessagingCampaignSchedule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10722,7 +10409,6 @@ namespace Example
 ## PutOutboundSchedulesSequence
 
 > [**SequenceSchedule**](SequenceSchedule) PutOutboundSchedulesSequence (string sequenceId, SequenceSchedule body)
-
 
 
 Update a new sequence schedule.
@@ -10778,7 +10464,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Sequence ID |  |
 | **body** | [**SequenceSchedule**](SequenceSchedule)| SequenceSchedule |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10788,7 +10473,6 @@ namespace Example
 ## PutOutboundSequence
 
 > [**CampaignSequence**](CampaignSequence) PutOutboundSequence (string sequenceId, CampaignSequence body)
-
 
 
 Update a new campaign sequence.
@@ -10844,7 +10528,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Campaign Sequence ID |  |
 | **body** | [**CampaignSequence**](CampaignSequence)| Organization |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10854,7 +10537,6 @@ namespace Example
 ## PutOutboundWrapupcodemappings
 
 > [**WrapUpCodeMapping**](WrapUpCodeMapping) PutOutboundWrapupcodemappings (WrapUpCodeMapping body)
-
 
 
 Update the Dialer wrap up code mapping.
@@ -10908,11 +10590,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WrapUpCodeMapping**](WrapUpCodeMapping)| wrapUpCodeMapping |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

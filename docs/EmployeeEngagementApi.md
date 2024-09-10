@@ -11,13 +11,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetEmployeeengagementRecognition**](#GetEmployeeengagementRecognition) | **Get** /api/v2/employeeengagement/recognitions/{recognitionId} | Gets a single recognition |
 | [**PatchEmployeeengagementCelebration**](#PatchEmployeeengagementCelebration) | **Patch** /api/v2/employeeengagement/celebrations/{celebrationId} | Set a state for a celebration |
 | [**PostEmployeeengagementRecognitions**](#PostEmployeeengagementRecognitions) | **Post** /api/v2/employeeengagement/recognitions | Creates a recognition |
-{: class="table table-striped"}
+
 
 
 ## DeleteEmployeeengagementCelebration
 
 > void DeleteEmployeeengagementCelebration (string celebrationId)
-
 
 
 Deletes a celebration
@@ -70,7 +69,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **celebrationId** | **string**| The ID of the celebration |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -80,7 +78,6 @@ void (empty response body)
 ## GetEmployeeengagementCelebrations
 
 > [**GetCelebrationListing**](GetCelebrationListing) GetEmployeeengagementCelebrations (int? pageNumber = null, int? pageSize = null)
-
 
 
 Get all celebrations
@@ -136,7 +133,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**|  | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -146,7 +142,6 @@ namespace Example
 ## GetEmployeeengagementRecognition
 
 > [**Recognition**](Recognition) GetEmployeeengagementRecognition (string recognitionId)
-
 
 
 Gets a single recognition
@@ -200,7 +195,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recognitionId** | **string**| The Recognition ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -210,7 +204,6 @@ namespace Example
 ## PatchEmployeeengagementCelebration
 
 > void PatchEmployeeengagementCelebration (string celebrationId, CelebrationStateParam body)
-
 
 
 Set a state for a celebration
@@ -265,7 +258,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **celebrationId** | **string**| The ID of the celebration |  |
 | **body** | [**CelebrationStateParam**](CelebrationStateParam)| Patch Celebration state |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -275,7 +267,6 @@ void (empty response body)
 ## PostEmployeeengagementRecognitions
 
 > [**RecognitionBase**](RecognitionBase) PostEmployeeengagementRecognitions (CreateRecognition body)
-
 
 
 Creates a recognition
@@ -329,11 +320,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateRecognition**](CreateRecognition)| Create Recognition |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**RecognitionBase**](RecognitionBase)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

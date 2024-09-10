@@ -14,13 +14,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostNotificationsChannelSubscriptions**](#PostNotificationsChannelSubscriptions) | **Post** /api/v2/notifications/channels/{channelId}/subscriptions | Add a list of subscriptions to the existing list of subscriptions |
 | [**PostNotificationsChannels**](#PostNotificationsChannels) | **Post** /api/v2/notifications/channels | Create a new channel |
 | [**PutNotificationsChannelSubscriptions**](#PutNotificationsChannelSubscriptions) | **Put** /api/v2/notifications/channels/{channelId}/subscriptions | Replace the current list of subscriptions with a new list. |
-{: class="table table-striped"}
+
 
 
 ## DeleteNotificationsChannelSubscriptions
 
 > void DeleteNotificationsChannelSubscriptions (string channelId)
-
 
 
 Remove all subscriptions
@@ -72,7 +71,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -82,7 +80,6 @@ void (empty response body)
 ## GetNotificationsAvailabletopics
 
 > [**AvailableTopicEntityListing**](AvailableTopicEntityListing) GetNotificationsAvailabletopics (List<string> expand = null, bool? includePreview = null)
-
 
 
 Get available notification topics.
@@ -137,7 +134,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: description, enforced, schema, visibility, transports, publicApiTemplateUriPaths, requiresPermissions, permissionDetails, topicParameters |
 | **includePreview** | **bool?**| Whether or not to include Preview topics | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -147,7 +143,6 @@ namespace Example
 ## GetNotificationsChannelSubscriptions
 
 > [**ChannelTopicEntityListing**](ChannelTopicEntityListing) GetNotificationsChannelSubscriptions (string channelId)
-
 
 
 The list of all subscriptions for this channel
@@ -200,7 +195,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -210,7 +204,6 @@ namespace Example
 ## GetNotificationsChannels
 
 > [**ChannelEntityListing**](ChannelEntityListing) GetNotificationsChannels (string includechannels = null)
-
 
 
 The list of existing channels
@@ -263,7 +256,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **includechannels** | **string**| Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. | [optional] [default to token]<br />**Values**: token, oauthclient |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -273,7 +265,6 @@ namespace Example
 ## HeadNotificationsChannel
 
 > void HeadNotificationsChannel (string channelId)
-
 
 
 Verify a channel still exists and is valid
@@ -327,7 +318,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -337,7 +327,6 @@ void (empty response body)
 ## PostNotificationsChannelSubscriptions
 
 > [**ChannelTopicEntityListing**](ChannelTopicEntityListing) PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
-
 
 
 Add a list of subscriptions to the existing list of subscriptions
@@ -394,7 +383,6 @@ namespace Example
 | **channelId** | **string**| Channel ID |  |
 | **body** | [**List<ChannelTopic>**](ChannelTopic)| Body |  |
 | **ignoreErrors** | **bool?**| Optionally prevent throwing of errors for failed permissions checks. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -404,7 +392,6 @@ namespace Example
 ## PostNotificationsChannels
 
 > [**Channel**](Channel) PostNotificationsChannels ()
-
 
 
 Create a new channel
@@ -455,7 +442,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**Channel**](Channel)
@@ -464,7 +450,6 @@ This endpoint does require any parameters.
 ## PutNotificationsChannelSubscriptions
 
 > [**ChannelTopicEntityListing**](ChannelTopicEntityListing) PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
-
 
 
 Replace the current list of subscriptions with a new list.
@@ -521,11 +506,10 @@ namespace Example
 | **channelId** | **string**| Channel ID |  |
 | **body** | [**List<ChannelTopic>**](ChannelTopic)| Body |  |
 | **ignoreErrors** | **bool?**| Optionally prevent throwing of errors for failed permissions checks. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
 [**ChannelTopicEntityListing**](ChannelTopicEntityListing)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

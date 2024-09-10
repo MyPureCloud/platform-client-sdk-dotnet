@@ -10,13 +10,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTextbotsBotflowsSessionTurns**](#PostTextbotsBotflowsSessionTurns) | **Post** /api/v2/textbots/botflows/sessions/{sessionId}/turns | Issue a bot flow turn event |
 | [**PostTextbotsBotflowsSessions**](#PostTextbotsBotflowsSessions) | **Post** /api/v2/textbots/botflows/sessions | Create an execution instance of a bot flow definition. |
 | [**PostTextbotsBotsExecute**](#PostTextbotsBotsExecute) | **Post** /api/v2/textbots/bots/execute | Send an intent to a bot to start a dialog/interact with it via text |
-{: class="table table-striped"}
+
 
 
 ## GetTextbotsBotsSearch
 
 > [**BotSearchResponseEntityListing**](BotSearchResponseEntityListing) GetTextbotsBotsSearch (List<string> botType = null, string botName = null, List<string> botId = null, int? pageSize = null)
-
 
 
 Find bots using the currently configured friendly name or ID.
@@ -78,7 +77,6 @@ namespace Example
 | **botName** | **string**| Bot name | [optional]  |
 | **botId** | [**List<string>**](string)| Bot IDs | [optional]  |
 | **pageSize** | **int?**| The maximum results to return | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -88,7 +86,6 @@ namespace Example
 ## PostTextbotsBotflowsSessionTurns
 
 > [**TextBotFlowTurnResponse**](TextBotFlowTurnResponse) PostTextbotsBotflowsSessionTurns (string sessionId, TextBotFlowTurnRequest turnRequest)
-
 
 
 Issue a bot flow turn event
@@ -146,7 +143,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39; |  |
 | **turnRequest** | [**TextBotFlowTurnRequest**](TextBotFlowTurnRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -156,7 +152,6 @@ namespace Example
 ## PostTextbotsBotflowsSessions
 
 > [**TextBotFlowLaunchResponse**](TextBotFlowLaunchResponse) PostTextbotsBotflowsSessions (TextBotFlowLaunchRequest launchRequest)
-
 
 
 Create an execution instance of a bot flow definition.
@@ -212,7 +207,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **launchRequest** | [**TextBotFlowLaunchRequest**](TextBotFlowLaunchRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -222,7 +216,6 @@ namespace Example
 ## PostTextbotsBotsExecute
 
 > [**PostTextResponse**](PostTextResponse) PostTextbotsBotsExecute (PostTextRequest postTextRequest)
-
 
 
 Send an intent to a bot to start a dialog/interact with it via text
@@ -278,11 +271,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **postTextRequest** | [**PostTextRequest**](PostTextRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**PostTextResponse**](PostTextResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

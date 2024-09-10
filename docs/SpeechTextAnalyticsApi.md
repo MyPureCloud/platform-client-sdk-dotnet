@@ -55,13 +55,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutSpeechandtextanalyticsProgramTranscriptionengines**](#PutSpeechandtextanalyticsProgramTranscriptionengines) | **Put** /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines | Update transcription engine settings of a program |
 | [**PutSpeechandtextanalyticsSettings**](#PutSpeechandtextanalyticsSettings) | **Put** /api/v2/speechandtextanalytics/settings | Update Speech And Text Analytics Settings |
 | [**PutSpeechandtextanalyticsTopic**](#PutSpeechandtextanalyticsTopic) | **Put** /api/v2/speechandtextanalytics/topics/{topicId} | Update existing Speech &amp; Text Analytics topic |
-{: class="table table-striped"}
+
 
 
 ## DeleteSpeechandtextanalyticsCategory
 
 > void DeleteSpeechandtextanalyticsCategory (string categoryId)
-
 
 
 Delete a Speech & Text Analytics category by ID
@@ -114,7 +113,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| The id of the category |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -124,7 +122,6 @@ void (empty response body)
 ## DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId
 
 > void DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId (string dictionaryFeedbackId)
-
 
 
 Delete a Speech & Text Analytics DictionaryFeedback by Id
@@ -177,7 +174,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dictionaryFeedbackId** | **string**| The Id of the Dictionary Feedback |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -187,7 +183,6 @@ void (empty response body)
 ## DeleteSpeechandtextanalyticsProgram
 
 > [**DeleteProgramResponse**](DeleteProgramResponse) DeleteSpeechandtextanalyticsProgram (string programId, bool? forceDelete = null)
-
 
 
 Delete a Speech & Text Analytics program by id
@@ -243,7 +238,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
 | **forceDelete** | **bool?**| Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -253,7 +247,6 @@ namespace Example
 ## DeleteSpeechandtextanalyticsSentimentfeedback
 
 > void DeleteSpeechandtextanalyticsSentimentfeedback ()
-
 
 
 Delete All Speech & Text Analytics SentimentFeedback
@@ -302,7 +295,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -311,7 +303,6 @@ void (empty response body)
 ## DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId
 
 > void DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId (string sentimentFeedbackId)
-
 
 
 Delete a Speech & Text Analytics SentimentFeedback by Id
@@ -364,7 +355,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sentimentFeedbackId** | **string**| The Id of the SentimentFeedback |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -374,7 +364,6 @@ void (empty response body)
 ## DeleteSpeechandtextanalyticsTopic
 
 > void DeleteSpeechandtextanalyticsTopic (string topicId)
-
 
 
 Delete a Speech & Text Analytics topic by id
@@ -427,7 +416,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **topicId** | **string**| The id of the topic |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -437,7 +425,6 @@ void (empty response body)
 ## GetSpeechandtextanalyticsCategories
 
 > [**CategoriesEntityListing**](CategoriesEntityListing) GetSpeechandtextanalyticsCategories (int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
-
 
 
 Get the list of Speech and Text Analytics categories
@@ -501,7 +488,6 @@ namespace Example
 | **sortOrder** | **string**| The sort order for the listing | [optional] [default to asc]<br />**Values**: asc, desc |
 | **sortBy** | **string**| The field to sort by for the listing | [optional] [default to name]<br />**Values**: name, description |
 | **ids** | [**List<string>**](string)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -511,7 +497,6 @@ namespace Example
 ## GetSpeechandtextanalyticsCategory
 
 > [**StaCategory**](StaCategory) GetSpeechandtextanalyticsCategory (string categoryId)
-
 
 
 Get a Speech & Text Analytics Category by ID
@@ -565,7 +550,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| The id of the category |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -575,7 +559,6 @@ namespace Example
 ## GetSpeechandtextanalyticsConversation
 
 > [**ConversationMetrics**](ConversationMetrics) GetSpeechandtextanalyticsConversation (string conversationId)
-
 
 
 Get Speech and Text Analytics for a specific conversation
@@ -630,7 +613,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -640,7 +622,6 @@ namespace Example
 ## GetSpeechandtextanalyticsConversationCategories
 
 > [**ConversationCategoriesEntityListing**](ConversationCategoriesEntityListing) GetSpeechandtextanalyticsConversationCategories (string conversationId, int? pageSize = null, int? pageNumber = null)
-
 
 
 Get the list of detected Speech and Text Analytics categories of conversation
@@ -698,7 +679,6 @@ namespace Example
 | **conversationId** | **string**| The id of the conversation |  |
 | **pageSize** | **int?**| The page size for the listing. The max that will be returned is 50. | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -708,7 +688,6 @@ namespace Example
 ## GetSpeechandtextanalyticsConversationCommunicationTranscripturl
 
 > [**TranscriptUrl**](TranscriptUrl) GetSpeechandtextanalyticsConversationCommunicationTranscripturl (string conversationId, string communicationId)
-
 
 
 Get the pre-signed S3 URL for the transcript of a specific communication of a conversation
@@ -765,7 +744,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **communicationId** | **string**| Communication ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -775,7 +753,6 @@ namespace Example
 ## GetSpeechandtextanalyticsConversationCommunicationTranscripturls
 
 > [**TranscriptUrls**](TranscriptUrls) GetSpeechandtextanalyticsConversationCommunicationTranscripturls (string conversationId, string communicationId)
-
 
 
 Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation
@@ -832,7 +809,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **communicationId** | **string**| Communication ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -842,7 +818,6 @@ namespace Example
 ## GetSpeechandtextanalyticsDictionaryfeedback
 
 > [**DictionaryFeedbackEntityListing**](DictionaryFeedbackEntityListing) GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string nextPage = null, int? pageSize = null)
-
 
 
 Get the list of Speech & Text Analytics dictionary feedbacks
@@ -900,7 +875,6 @@ namespace Example
 | **dialect** | **string**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]  |
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 500] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -910,7 +884,6 @@ namespace Example
 ## GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId
 
 > [**DictionaryFeedback**](DictionaryFeedback) GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId (string dictionaryFeedbackId)
-
 
 
 Get a Speech & Text Analytics dictionary feedback by id
@@ -964,7 +937,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dictionaryFeedbackId** | **string**| The Id of the Dictionary Feedback |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -974,7 +946,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgram
 
 > [**Program**](Program) GetSpeechandtextanalyticsProgram (string programId)
-
 
 
 Get a Speech & Text Analytics program by id
@@ -1028,7 +999,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1038,7 +1008,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgramMappings
 
 > [**ProgramMappings**](ProgramMappings) GetSpeechandtextanalyticsProgramMappings (string programId)
-
 
 
 Get Speech & Text Analytics program mappings to queues and flows by id
@@ -1092,7 +1061,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1102,7 +1070,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgramTranscriptionengines
 
 > [**ProgramTranscriptionEngines**](ProgramTranscriptionEngines) GetSpeechandtextanalyticsProgramTranscriptionengines (string programId)
-
 
 
 Get transcription engine settings of a program
@@ -1156,7 +1123,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1166,7 +1132,6 @@ namespace Example
 ## GetSpeechandtextanalyticsPrograms
 
 > [**ProgramsEntityListing**](ProgramsEntityListing) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null)
-
 
 
 Get the list of Speech & Text Analytics programs
@@ -1224,7 +1189,6 @@ namespace Example
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
 | **state** | **string**| Program state. Defaults to Latest | [optional] <br />**Values**: Latest, Published |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1234,7 +1198,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgramsGeneralJob
 
 > [**GeneralProgramJob**](GeneralProgramJob) GetSpeechandtextanalyticsProgramsGeneralJob (string jobId)
-
 
 
 Get a Speech & Text Analytics general program job by id
@@ -1291,7 +1254,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| The id of the publish programs job |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1301,7 +1263,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgramsMappings
 
 > [**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing) GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
-
 
 
 Get the list of Speech & Text Analytics programs mappings to queues and flows
@@ -1357,7 +1318,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1367,7 +1327,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgramsPublishjob
 
 > [**ProgramJob**](ProgramJob) GetSpeechandtextanalyticsProgramsPublishjob (string jobId)
-
 
 
 Get a Speech & Text Analytics publish programs job by id
@@ -1421,7 +1380,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| The id of the publish programs job |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1431,7 +1389,6 @@ namespace Example
 ## GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects
 
 > [**SupportedDialectsEntityListing**](SupportedDialectsEntityListing) GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects ()
-
 
 
 Get supported dialects for each transcription engine
@@ -1480,7 +1437,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**SupportedDialectsEntityListing**](SupportedDialectsEntityListing)
@@ -1489,7 +1445,6 @@ This endpoint does require any parameters.
 ## GetSpeechandtextanalyticsProgramsUnpublished
 
 > [**UnpublishedProgramsEntityListing**](UnpublishedProgramsEntityListing) GetSpeechandtextanalyticsProgramsUnpublished (string nextPage = null, int? pageSize = null)
-
 
 
 Get the list of Speech & Text Analytics unpublished programs
@@ -1545,7 +1500,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1555,7 +1509,6 @@ namespace Example
 ## GetSpeechandtextanalyticsSentimentDialects
 
 > [**EntityListing**](EntityListing) GetSpeechandtextanalyticsSentimentDialects ()
-
 
 
 Get the list of Speech & Text Analytics sentiment supported dialects
@@ -1604,7 +1557,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EntityListing**](EntityListing)
@@ -1613,7 +1565,6 @@ This endpoint does require any parameters.
 ## GetSpeechandtextanalyticsSentimentfeedback
 
 > [**SentimentFeedbackEntityListing**](SentimentFeedbackEntityListing) GetSpeechandtextanalyticsSentimentfeedback (string dialect = null)
-
 
 
 Get the list of Speech & Text Analytics SentimentFeedback
@@ -1667,7 +1618,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dialect** | **string**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1677,7 +1627,6 @@ namespace Example
 ## GetSpeechandtextanalyticsSettings
 
 > [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse) GetSpeechandtextanalyticsSettings ()
-
 
 
 Get Speech And Text Analytics Settings
@@ -1727,7 +1676,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse)
@@ -1736,7 +1684,6 @@ This endpoint does require any parameters.
 ## GetSpeechandtextanalyticsTopic
 
 > [**Topic**](Topic) GetSpeechandtextanalyticsTopic (string topicId)
-
 
 
 Get a Speech & Text Analytics topic by id
@@ -1790,7 +1737,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **topicId** | **string**| The id of the topic |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1800,7 +1746,6 @@ namespace Example
 ## GetSpeechandtextanalyticsTopics
 
 > [**TopicsEntityListing**](TopicsEntityListing) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
-
 
 
 Get the list of Speech & Text Analytics topics
@@ -1868,7 +1813,6 @@ namespace Example
 | **dialects** | [**List<string>**](string)| Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN, fr-FR, fr-CA, it-IT, de-DE, pt-BR, pl-PL, pt-PT, nl-NL, ko-KR |
 | **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name |
 | **sortOrder** | **string**| Sort order. Defaults to asc | [optional] <br />**Values**: asc, desc |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1878,7 +1822,6 @@ namespace Example
 ## GetSpeechandtextanalyticsTopicsDialects
 
 > [**EntityListing**](EntityListing) GetSpeechandtextanalyticsTopicsDialects ()
-
 
 
 Get list of supported Speech & Text Analytics topics dialects
@@ -1927,7 +1870,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EntityListing**](EntityListing)
@@ -1936,7 +1878,6 @@ This endpoint does require any parameters.
 ## GetSpeechandtextanalyticsTopicsGeneral
 
 > [**GeneralTopicsEntityListing**](GeneralTopicsEntityListing) GetSpeechandtextanalyticsTopicsGeneral (string dialect = null)
-
 
 
 Get the Speech & Text Analytics general topics for a given dialect
@@ -1990,7 +1931,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: ar-001, ar-AE, ar-BH, ar-EG, ar-IL, ar-SA, ar-TN, da-DK, de-CH, de-DE, en-AU, en-GB, en-HK, en-IE, en-IN, en-NZ, en-SG, en-US, en-ZA, es-ES, es-US, fi-FI, fr-CA, fr-FR, he-IL, it-IT, ja-JP, ko-KR, nb-NO, nl-NL, pl-PL, pt-BR, pt-PT, sv-SE |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2000,7 +1940,6 @@ namespace Example
 ## GetSpeechandtextanalyticsTopicsGeneralStatus
 
 > [**UnifiedGeneralTopicEntityListing**](UnifiedGeneralTopicEntityListing) GetSpeechandtextanalyticsTopicsGeneralStatus (string dialect = null)
-
 
 
 Get the list of general topics from the org and the system with their current status
@@ -2054,7 +1993,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: ar-001, ar-AE, ar-BH, ar-EG, ar-IL, ar-SA, ar-TN, da-DK, de-CH, de-DE, en-AU, en-GB, en-HK, en-IE, en-IN, en-NZ, en-SG, en-US, en-ZA, es-ES, es-US, fi-FI, fr-CA, fr-FR, he-IL, it-IT, ja-JP, ko-KR, nb-NO, nl-NL, pl-PL, pt-BR, pt-PT, sv-SE |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2064,7 +2002,6 @@ namespace Example
 ## GetSpeechandtextanalyticsTopicsPublishjob
 
 > [**TopicJob**](TopicJob) GetSpeechandtextanalyticsTopicsPublishjob (string jobId)
-
 
 
 Get a Speech & Text Analytics publish topics job by id
@@ -2118,7 +2055,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| The id of the publish topics job |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2128,7 +2064,6 @@ namespace Example
 ## PatchSpeechandtextanalyticsSettings
 
 > [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse) PatchSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body)
-
 
 
 Patch Speech And Text Analytics Settings
@@ -2182,7 +2117,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SpeechTextAnalyticsSettingsRequest**](SpeechTextAnalyticsSettingsRequest)| Speech And Text Analytics Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2192,7 +2126,6 @@ namespace Example
 ## PostSpeechandtextanalyticsCategories
 
 > [**StaCategory**](StaCategory) PostSpeechandtextanalyticsCategories (CategoryRequest body)
-
 
 
 Create new Speech & Text Analytics category
@@ -2246,7 +2179,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CategoryRequest**](CategoryRequest)| The category to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2256,7 +2188,6 @@ namespace Example
 ## PostSpeechandtextanalyticsDictionaryfeedback
 
 > [**DictionaryFeedback**](DictionaryFeedback) PostSpeechandtextanalyticsDictionaryfeedback (DictionaryFeedback body)
-
 
 
 Create a Speech & Text Analytics DictionaryFeedback
@@ -2310,7 +2241,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DictionaryFeedback**](DictionaryFeedback)| The DictionaryFeedback to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2320,7 +2250,6 @@ namespace Example
 ## PostSpeechandtextanalyticsPrograms
 
 > [**Program**](Program) PostSpeechandtextanalyticsPrograms (ProgramRequest body)
-
 
 
 Create new Speech & Text Analytics program
@@ -2374,7 +2303,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ProgramRequest**](ProgramRequest)| The program to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2384,7 +2312,6 @@ namespace Example
 ## PostSpeechandtextanalyticsProgramsGeneralJobs
 
 > [**GeneralProgramJob**](GeneralProgramJob) PostSpeechandtextanalyticsProgramsGeneralJobs (GeneralProgramJobRequest body)
-
 
 
 Create new Speech & Text Analytics general program job
@@ -2441,7 +2368,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GeneralProgramJobRequest**](GeneralProgramJobRequest)| The general programs job to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2451,7 +2377,6 @@ namespace Example
 ## PostSpeechandtextanalyticsProgramsPublishjobs
 
 > [**ProgramJob**](ProgramJob) PostSpeechandtextanalyticsProgramsPublishjobs (ProgramJobRequest body)
-
 
 
 Create new Speech & Text Analytics publish programs job
@@ -2505,7 +2430,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ProgramJobRequest**](ProgramJobRequest)| The publish programs job to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2515,7 +2439,6 @@ namespace Example
 ## PostSpeechandtextanalyticsSentimentfeedback
 
 > [**SentimentFeedback**](SentimentFeedback) PostSpeechandtextanalyticsSentimentfeedback (SentimentFeedback body)
-
 
 
 Create a Speech & Text Analytics SentimentFeedback
@@ -2569,7 +2492,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SentimentFeedback**](SentimentFeedback)| The SentimentFeedback to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2579,7 +2501,6 @@ namespace Example
 ## PostSpeechandtextanalyticsTopics
 
 > [**Topic**](Topic) PostSpeechandtextanalyticsTopics (TopicRequest body)
-
 
 
 Create new Speech & Text Analytics topic
@@ -2633,7 +2554,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TopicRequest**](TopicRequest)| The topic to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2643,7 +2563,6 @@ namespace Example
 ## PostSpeechandtextanalyticsTopicsPublishjobs
 
 > [**TopicJob**](TopicJob) PostSpeechandtextanalyticsTopicsPublishjobs (TopicJobRequest body)
-
 
 
 Create new Speech & Text Analytics publish topics job
@@ -2697,7 +2616,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TopicJobRequest**](TopicJobRequest)| The publish topics job to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2707,7 +2625,6 @@ namespace Example
 ## PostSpeechandtextanalyticsTranscriptsSearch
 
 > [**JsonSearchResponse**](JsonSearchResponse) PostSpeechandtextanalyticsTranscriptsSearch (TranscriptSearchRequest body)
-
 
 
 Search resources.
@@ -2762,7 +2679,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptSearchRequest**](TranscriptSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2772,7 +2688,6 @@ namespace Example
 ## PutSpeechandtextanalyticsCategory
 
 > [**StaCategory**](StaCategory) PutSpeechandtextanalyticsCategory (string categoryId, CategoryRequest body)
-
 
 
 Update a Speech & Text Analytics category by ID
@@ -2828,7 +2743,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| The id of the category |  |
 | **body** | [**CategoryRequest**](CategoryRequest)| The updated category |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2838,7 +2752,6 @@ namespace Example
 ## PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId
 
 > [**DictionaryFeedback**](DictionaryFeedback) PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId (string dictionaryFeedbackId, DictionaryFeedback body = null)
-
 
 
 Update existing Speech & Text Analytics dictionary feedback by id
@@ -2894,7 +2807,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dictionaryFeedbackId** | **string**| The Id of the Dictionary Feedback |  |
 | **body** | [**DictionaryFeedback**](DictionaryFeedback)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2904,7 +2816,6 @@ namespace Example
 ## PutSpeechandtextanalyticsProgram
 
 > [**Program**](Program) PutSpeechandtextanalyticsProgram (string programId, ProgramRequest body)
-
 
 
 Update existing Speech & Text Analytics program
@@ -2960,7 +2871,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
 | **body** | [**ProgramRequest**](ProgramRequest)| The program to update |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2970,7 +2880,6 @@ namespace Example
 ## PutSpeechandtextanalyticsProgramMappings
 
 > [**ProgramMappings**](ProgramMappings) PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
-
 
 
 Set Speech & Text Analytics program mappings to queues and flows
@@ -3026,7 +2935,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
 | **body** | [**ProgramMappingsRequest**](ProgramMappingsRequest)| The program to set mappings for |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3036,7 +2944,6 @@ namespace Example
 ## PutSpeechandtextanalyticsProgramTranscriptionengines
 
 > [**ProgramTranscriptionEngines**](ProgramTranscriptionEngines) PutSpeechandtextanalyticsProgramTranscriptionengines (string programId, TranscriptionEnginesRequest body)
-
 
 
 Update transcription engine settings of a program
@@ -3092,7 +2999,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **programId** | **string**| The id of the program |  |
 | **body** | [**TranscriptionEnginesRequest**](TranscriptionEnginesRequest)| Program transcription engine setting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3102,7 +3008,6 @@ namespace Example
 ## PutSpeechandtextanalyticsSettings
 
 > [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse) PutSpeechandtextanalyticsSettings (SpeechTextAnalyticsSettingsRequest body)
-
 
 
 Update Speech And Text Analytics Settings
@@ -3156,7 +3061,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SpeechTextAnalyticsSettingsRequest**](SpeechTextAnalyticsSettingsRequest)| Speech And Text Analytics Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3166,7 +3070,6 @@ namespace Example
 ## PutSpeechandtextanalyticsTopic
 
 > [**Topic**](Topic) PutSpeechandtextanalyticsTopic (string topicId, TopicRequest body)
-
 
 
 Update existing Speech & Text Analytics topic
@@ -3222,11 +3125,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **topicId** | **string**| The id of the topic |  |
 | **body** | [**TopicRequest**](TopicRequest)| The topic to update |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -15,13 +15,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAuthorizationDivisionRestore**](#PostAuthorizationDivisionRestore) | **Post** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
 | [**PostAuthorizationDivisions**](#PostAuthorizationDivisions) | **Post** /api/v2/authorization/divisions | Create a division. |
 | [**PutAuthorizationDivision**](#PutAuthorizationDivision) | **Put** /api/v2/authorization/divisions/{divisionId} | Update a division. |
-{: class="table table-striped"}
+
 
 
 ## DeleteAuthorizationDivision
 
 > void DeleteAuthorizationDivision (string divisionId, bool? force = null)
-
 
 
 Delete a division.
@@ -76,7 +75,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **force** | **bool?**| Force delete this division as well as the grants and objects associated with it | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -86,7 +84,6 @@ void (empty response body)
 ## GetAuthorizationDivision
 
 > [**AuthzDivision**](AuthzDivision) GetAuthorizationDivision (string divisionId, bool? objectCount = null)
-
 
 
 Returns an authorization division.
@@ -141,7 +138,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **objectCount** | **bool?**| Get count of objects in this division, grouped by type | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -151,7 +147,6 @@ namespace Example
 ## GetAuthorizationDivisions
 
 > [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing) GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
-
 
 
 Retrieve a list of all divisions defined for the organization
@@ -222,7 +217,6 @@ namespace Example
 | **objectCount** | **bool?**| Include the count of objects contained in the division | [optional] [default to false] |
 | **id** | [**List<string>**](string)| Optionally request specific divisions by their IDs | [optional]  |
 | **name** | **string**| Search term to filter by division name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -232,7 +226,6 @@ namespace Example
 ## GetAuthorizationDivisionsHome
 
 > [**AuthzDivision**](AuthzDivision) GetAuthorizationDivisionsHome ()
-
 
 
 Retrieve the home division for the organization.
@@ -283,7 +276,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AuthzDivision**](AuthzDivision)
@@ -292,7 +284,6 @@ This endpoint does require any parameters.
 ## GetAuthorizationDivisionsLimit
 
 > **int?** GetAuthorizationDivisionsLimit ()
-
 
 
 Returns the maximum allowed number of divisions.
@@ -341,7 +332,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 **int?**
@@ -350,7 +340,6 @@ This endpoint does require any parameters.
 ## PostAuthorizationDivisionObject
 
 > void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
-
 
 
 Assign a list of objects to a division
@@ -408,7 +397,6 @@ namespace Example
 | **divisionId** | **string**| Division ID |  |
 | **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, EMAILCAMPAIGN, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, FLOWMILESTONE, FLOWOUTCOME, USER, CALLROUTE, EMERGENCYGROUPS, ROUTINGSCHEDULES, ROUTINGSCHEDULEGROUPS, DATATABLES, TEAM, WORKBIN, WORKTYPE, EXTENSIONPOOL, SKILLGROUP, SCRIPT |
 | **body** | [**List<string>**](string)| Object Id List |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -418,7 +406,6 @@ void (empty response body)
 ## PostAuthorizationDivisionRestore
 
 > [**AuthzDivision**](AuthzDivision) PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body = null)
-
 
 
 Recreate a previously deleted division.
@@ -474,7 +461,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -484,7 +470,6 @@ namespace Example
 ## PostAuthorizationDivisions
 
 > [**AuthzDivision**](AuthzDivision) PostAuthorizationDivisions (AuthzDivision body)
-
 
 
 Create a division.
@@ -539,7 +524,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AuthzDivision**](AuthzDivision)| Division |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -549,7 +533,6 @@ namespace Example
 ## PutAuthorizationDivision
 
 > [**AuthzDivision**](AuthzDivision) PutAuthorizationDivision (string divisionId, AuthzDivision body)
-
 
 
 Update a division.
@@ -605,11 +588,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
 | **body** | [**AuthzDivision**](AuthzDivision)| Updated division data |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**AuthzDivision**](AuthzDivision)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

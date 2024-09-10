@@ -10,13 +10,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGdprRequests**](#GetGdprRequests) | **Get** /api/v2/gdpr/requests | Get all GDPR requests |
 | [**GetGdprSubjects**](#GetGdprSubjects) | **Get** /api/v2/gdpr/subjects | Get GDPR subjects |
 | [**PostGdprRequests**](#PostGdprRequests) | **Post** /api/v2/gdpr/requests | Submit a new GDPR request |
-{: class="table table-striped"}
+
 
 
 ## GetGdprRequest
 
 > [**GDPRRequest**](GDPRRequest) GetGdprRequest (string requestId)
-
 
 
 Get an existing GDPR request
@@ -70,7 +69,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **requestId** | **string**| Request id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -80,7 +78,6 @@ namespace Example
 ## GetGdprRequests
 
 > [**GDPRRequestEntityListing**](GDPRRequestEntityListing) GetGdprRequests (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get all GDPR requests
@@ -136,7 +133,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -146,7 +142,6 @@ namespace Example
 ## GetGdprSubjects
 
 > [**GDPRSubjectEntityListing**](GDPRSubjectEntityListing) GetGdprSubjects (string searchType, string searchValue)
-
 
 
 Get GDPR subjects
@@ -202,7 +197,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **searchType** | **string**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL, TWITTER |
 | **searchValue** | **string**| Search Value |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -212,7 +206,6 @@ namespace Example
 ## PostGdprRequests
 
 > [**GDPRRequest**](GDPRRequest) PostGdprRequests (GDPRRequest body, bool? deleteConfirmed = null)
-
 
 
 Submit a new GDPR request
@@ -268,11 +261,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GDPRRequest**](GDPRRequest)| GDPR request |  |
 | **deleteConfirmed** | **bool?**| Confirm delete | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
 [**GDPRRequest**](GDPRRequest)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

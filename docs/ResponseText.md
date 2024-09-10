@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **Content** | **string** | Response text content. | |
 | **ContentType** | **string** | Response text content type. | [optional] |
+| **Type** | **string** | Response text type. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -10,13 +10,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserGeolocation**](#GetUserGeolocation) | **Get** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**PatchGeolocationsSettings**](#PatchGeolocationsSettings) | **Patch** /api/v2/geolocations/settings | Patch a organization&#39;s GeolocationSettings |
 | [**PatchUserGeolocation**](#PatchUserGeolocation) | **Patch** /api/v2/users/{userId}/geolocations/{clientId} | Patch a user&#39;s Geolocation |
-{: class="table table-striped"}
+
 
 
 ## GetGeolocationsSettings
 
 > [**GeolocationSettings**](GeolocationSettings) GetGeolocationsSettings ()
-
 
 
 Get a organization's GeolocationSettings
@@ -65,7 +64,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**GeolocationSettings**](GeolocationSettings)
@@ -74,7 +72,6 @@ This endpoint does require any parameters.
 ## GetUserGeolocation
 
 > [**Geolocation**](Geolocation) GetUserGeolocation (string userId, string clientId)
-
 
 
 Get a user's Geolocation
@@ -129,7 +126,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -139,7 +135,6 @@ namespace Example
 ## PatchGeolocationsSettings
 
 > [**GeolocationSettings**](GeolocationSettings) PatchGeolocationsSettings (GeolocationSettings body)
-
 
 
 Patch a organization's GeolocationSettings
@@ -193,7 +188,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GeolocationSettings**](GeolocationSettings)| Geolocation settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -203,7 +197,6 @@ namespace Example
 ## PatchUserGeolocation
 
 > [**Geolocation**](Geolocation) PatchUserGeolocation (string userId, string clientId, Geolocation body)
-
 
 
 Patch a user's Geolocation
@@ -262,11 +255,10 @@ namespace Example
 | **userId** | **string**| user Id |  |
 | **clientId** | **string**| client Id |  |
 | **body** | [**Geolocation**](Geolocation)| Geolocation |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**Geolocation**](Geolocation)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -42,13 +42,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutContentmanagementWorkspace**](#PutContentmanagementWorkspace) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId} | Update a workspace |
 | [**PutContentmanagementWorkspaceMember**](#PutContentmanagementWorkspaceMember) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId} | Add a member to a workspace |
 | [**PutContentmanagementWorkspaceTagvalue**](#PutContentmanagementWorkspaceTagvalue) | **Put** /api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId} | Update a workspace tag. Will update all documents with the new tag value. |
-{: class="table table-striped"}
+
 
 
 ## DeleteContentmanagementDocument
 
 > void DeleteContentmanagementDocument (string documentId, bool? _override = null)
-
 
 
 Delete a document.
@@ -102,7 +101,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -112,7 +110,6 @@ void (empty response body)
 ## DeleteContentmanagementShare
 
 > void DeleteContentmanagementShare (string shareId)
-
 
 
 Deletes an existing share.
@@ -166,7 +163,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **shareId** | **string**| Share ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -176,7 +172,6 @@ void (empty response body)
 ## DeleteContentmanagementStatusStatusId
 
 > void DeleteContentmanagementStatusStatusId (string statusId)
-
 
 
 Cancel the command for this status
@@ -228,7 +223,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **statusId** | **string**| Status ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -238,7 +232,6 @@ void (empty response body)
 ## DeleteContentmanagementWorkspace
 
 > void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
-
 
 
 Delete a workspace
@@ -292,7 +285,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **moveChildrenToWorkspaceId** | **string**| New location for objects in deleted workspace. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -302,7 +294,6 @@ void (empty response body)
 ## DeleteContentmanagementWorkspaceMember
 
 > void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
-
 
 
 Delete a member from a workspace
@@ -356,7 +347,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -366,7 +356,6 @@ void (empty response body)
 ## DeleteContentmanagementWorkspaceTagvalue
 
 > void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
-
 
 
 Delete workspace tag
@@ -422,7 +411,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -432,7 +420,6 @@ void (empty response body)
 ## GetContentmanagementDocument
 
 > [**Document**](Document) GetContentmanagementDocument (string documentId, List<string> expand = null)
-
 
 
 Get a document.
@@ -487,7 +474,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: lockInfo, acl, workspace |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -497,7 +483,6 @@ namespace Example
 ## GetContentmanagementDocumentContent
 
 > [**DownloadResponse**](DownloadResponse) GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
-
 
 
 Download a document.
@@ -554,7 +539,6 @@ namespace Example
 | **documentId** | **string**| Document ID |  |
 | **disposition** | **string**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional] <br />**Values**: attachment, inline |
 | **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -565,7 +549,9 @@ namespace Example
 
 > [**DocumentEntityListing**](DocumentEntityListing) GetContentmanagementDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get a list of documents.
 
@@ -629,7 +615,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -639,7 +624,6 @@ namespace Example
 ## GetContentmanagementQuery
 
 > [**QueryResults**](QueryResults) GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
-
 
 
 Query content
@@ -702,7 +686,6 @@ namespace Example
 | **sortBy** | **string**| name or dateCreated | [optional] [default to "name"] |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl, workspace |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -712,7 +695,6 @@ namespace Example
 ## GetContentmanagementSecurityprofile
 
 > [**SecurityProfile**](SecurityProfile) GetContentmanagementSecurityprofile (string securityProfileId)
-
 
 
 Get a Security Profile
@@ -765,7 +747,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **securityProfileId** | **string**| Security Profile Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -775,7 +756,6 @@ namespace Example
 ## GetContentmanagementSecurityprofiles
 
 > [**SecurityProfileEntityListing**](SecurityProfileEntityListing) GetContentmanagementSecurityprofiles ()
-
 
 
 Get a List of Security Profiles
@@ -824,7 +804,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**SecurityProfileEntityListing**](SecurityProfileEntityListing)
@@ -833,7 +812,6 @@ This endpoint does require any parameters.
 ## GetContentmanagementShare
 
 > [**Share**](Share) GetContentmanagementShare (string shareId, List<string> expand = null)
-
 
 
 Retrieve details about an existing share.
@@ -888,7 +866,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **shareId** | **string**| Share ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -898,7 +875,6 @@ namespace Example
 ## GetContentmanagementSharedSharedId
 
 > [**SharedResponse**](SharedResponse) GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
-
 
 
 Get shared documents. Securely download a shared document.
@@ -961,7 +937,6 @@ namespace Example
 | **disposition** | **string**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional] [default to attachment]<br />**Values**: attachment, inline, none |
 | **contentType** | **string**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav | [optional]  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: document.acl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -971,7 +946,6 @@ namespace Example
 ## GetContentmanagementShares
 
 > [**ShareEntityListing**](ShareEntityListing) GetContentmanagementShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
-
 
 
 Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -1032,7 +1006,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1042,7 +1015,6 @@ namespace Example
 ## GetContentmanagementStatus
 
 > [**CommandStatusEntityListing**](CommandStatusEntityListing) GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of statuses for pending operations
@@ -1097,7 +1069,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1107,7 +1078,6 @@ namespace Example
 ## GetContentmanagementStatusStatusId
 
 > [**CommandStatus**](CommandStatus) GetContentmanagementStatusStatusId (string statusId)
-
 
 
 Get a status.
@@ -1160,7 +1130,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **statusId** | **string**| Status ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1170,7 +1139,6 @@ namespace Example
 ## GetContentmanagementUsage
 
 > [**Usage**](Usage) GetContentmanagementUsage ()
-
 
 
 Get usage details.
@@ -1219,7 +1187,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**Usage**](Usage)
@@ -1228,7 +1195,6 @@ This endpoint does require any parameters.
 ## GetContentmanagementWorkspace
 
 > [**Workspace**](Workspace) GetContentmanagementWorkspace (string workspaceId, List<string> expand = null)
-
 
 
 Get a workspace.
@@ -1283,7 +1249,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1293,7 +1258,6 @@ namespace Example
 ## GetContentmanagementWorkspaceDocuments
 
 > [**DocumentEntityListing**](DocumentEntityListing) GetContentmanagementWorkspaceDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
-
 
 
 Get a list of documents.
@@ -1356,7 +1320,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| name or dateCreated | [optional]  |
 | **sortOrder** | **string**| ascending or descending | [optional] [default to "ascending"] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1366,7 +1329,6 @@ namespace Example
 ## GetContentmanagementWorkspaceMember
 
 > [**WorkspaceMember**](WorkspaceMember) GetContentmanagementWorkspaceMember (string workspaceId, string memberId, List<string> expand = null)
-
 
 
 Get a workspace member
@@ -1423,7 +1385,6 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1433,7 +1394,6 @@ namespace Example
 ## GetContentmanagementWorkspaceMembers
 
 > [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing) GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
-
 
 
 Get a list workspace members
@@ -1492,7 +1452,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: member |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1502,7 +1461,6 @@ namespace Example
 ## GetContentmanagementWorkspaceTagvalue
 
 > [**TagValue**](TagValue) GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, List<string> expand = null)
-
 
 
 Get a workspace tag
@@ -1559,7 +1517,6 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1569,7 +1526,6 @@ namespace Example
 ## GetContentmanagementWorkspaceTagvalues
 
 > [**TagValueEntityListing**](TagValueEntityListing) GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
-
 
 
 Get a list of workspace tags
@@ -1630,7 +1586,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1640,7 +1595,6 @@ namespace Example
 ## GetContentmanagementWorkspaces
 
 > [**WorkspaceEntityListing**](WorkspaceEntityListing) GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
-
 
 
 Get a list of workspaces.
@@ -1701,7 +1655,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **access** | [**List<string>**](string)| Requested access level. | [optional] <br />**Values**: content, admin, document:create, document:viewContent, document:viewMetadata, document:download, document:delete, document:update, document:share, document:shareView, document:email, document:print, document:auditView, document:replace, document:tag, tag:create, tag:view, tag:update, tag:apply, tag:remove, tag:delete |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: summary, acl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1711,7 +1664,6 @@ namespace Example
 ## PostContentmanagementDocument
 
 > [**Document**](Document) PostContentmanagementDocument (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
-
 
 
 Update a document.
@@ -1770,7 +1722,6 @@ namespace Example
 | **body** | [**DocumentUpdate**](DocumentUpdate)| Document |  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: acl |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1780,7 +1731,6 @@ namespace Example
 ## PostContentmanagementDocumentContent
 
 > [**ReplaceResponse**](ReplaceResponse) PostContentmanagementDocumentContent (string documentId, ReplaceRequest body, bool? _override = null)
-
 
 
 Replace the contents of a document.
@@ -1837,7 +1787,6 @@ namespace Example
 | **documentId** | **string**| Document ID |  |
 | **body** | [**ReplaceRequest**](ReplaceRequest)| Replace Request |  |
 | **_override** | **bool?**| Override any lock on the document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1847,7 +1796,6 @@ namespace Example
 ## PostContentmanagementDocuments
 
 > [**Document**](Document) PostContentmanagementDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
-
 
 
 Add a document.
@@ -1906,7 +1854,6 @@ namespace Example
 | **copySource** | **string**| Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. | [optional]  |
 | **moveSource** | **string**| Move a document to a new workspace. Provide a document ID as the move source. | [optional]  |
 | **_override** | **bool?**| Override any lock on the source document | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1916,7 +1863,6 @@ namespace Example
 ## PostContentmanagementQuery
 
 > [**QueryResults**](QueryResults) PostContentmanagementQuery (QueryRequest body, string expand = null)
-
 
 
 Query content
@@ -1971,7 +1917,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**QueryRequest**](QueryRequest)| Allows for a filtered query returning facet information |  |
 | **expand** | **string**| Expand some document fields | [optional] <br />**Values**: acl, workspace |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1981,7 +1926,6 @@ namespace Example
 ## PostContentmanagementShares
 
 > [**CreateShareResponse**](CreateShareResponse) PostContentmanagementShares (CreateShareRequest body)
-
 
 
 Creates a new share or updates an existing share if the entity has already been shared
@@ -2034,7 +1978,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateShareRequest**](CreateShareRequest)| CreateShareRequest - entity id and type and a single member or list of members are required |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2044,7 +1987,6 @@ namespace Example
 ## PostContentmanagementWorkspaceTagvalues
 
 > [**TagValue**](TagValue) PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body)
-
 
 
 Create a workspace tag
@@ -2099,7 +2041,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **body** | [**TagValue**](TagValue)| tag |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2109,7 +2050,6 @@ namespace Example
 ## PostContentmanagementWorkspaceTagvaluesQuery
 
 > [**TagValueEntityListing**](TagValueEntityListing) PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
-
 
 
 Perform a prefix query on tags in the workspace
@@ -2166,7 +2106,6 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **body** | [**TagQueryRequest**](TagQueryRequest)| query |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: acl |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2176,7 +2115,6 @@ namespace Example
 ## PostContentmanagementWorkspaces
 
 > [**Workspace**](Workspace) PostContentmanagementWorkspaces (WorkspaceCreate body)
-
 
 
 Create a group workspace
@@ -2229,7 +2167,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WorkspaceCreate**](WorkspaceCreate)| Workspace |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2239,7 +2176,6 @@ namespace Example
 ## PutContentmanagementWorkspace
 
 > [**Workspace**](Workspace) PutContentmanagementWorkspace (string workspaceId, Workspace body)
-
 
 
 Update a workspace
@@ -2294,7 +2230,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **workspaceId** | **string**| Workspace ID |  |
 | **body** | [**Workspace**](Workspace)| Workspace |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2304,7 +2239,6 @@ namespace Example
 ## PutContentmanagementWorkspaceMember
 
 > [**WorkspaceMember**](WorkspaceMember) PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body)
-
 
 
 Add a member to a workspace
@@ -2361,7 +2295,6 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **memberId** | **string**| Member ID |  |
 | **body** | [**WorkspaceMember**](WorkspaceMember)| Workspace Member |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2371,7 +2304,6 @@ namespace Example
 ## PutContentmanagementWorkspaceTagvalue
 
 > [**TagValue**](TagValue) PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body)
-
 
 
 Update a workspace tag. Will update all documents with the new tag value.
@@ -2428,11 +2360,10 @@ namespace Example
 | **workspaceId** | **string**| Workspace ID |  |
 | **tagId** | **string**| Tag ID |  |
 | **body** | [**TagValue**](TagValue)| Workspace |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**TagValue**](TagValue)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

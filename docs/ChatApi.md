@@ -38,13 +38,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostChatsUserMessagesPins**](#PostChatsUserMessagesPins) | **Post** /api/v2/chats/users/{userId}/messages/pins | Add pinned messages for a 1on1, up to a maximum of 5 pinned messages |
 | [**PutChatsMessageReactions**](#PutChatsMessageReactions) | **Put** /api/v2/chats/messages/{messageId}/reactions | Update reactions to a message |
 | [**PutChatsSettings**](#PutChatsSettings) | **Put** /api/v2/chats/settings | Update Chat Settings. |
-{: class="table table-striped"}
+
 
 
 ## DeleteChatsRoomMessage
 
 > void DeleteChatsRoomMessage (string roomJid, string messageId)
-
 
 
 Delete a message in a room
@@ -100,7 +99,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -110,7 +108,6 @@ void (empty response body)
 ## DeleteChatsRoomMessagesPin
 
 > void DeleteChatsRoomMessagesPin (string roomJid, string pinnedMessageId)
-
 
 
 Remove a pinned message from a room
@@ -166,7 +163,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **pinnedMessageId** | **string**| pinnedMessageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -176,7 +172,6 @@ void (empty response body)
 ## DeleteChatsRoomParticipant
 
 > void DeleteChatsRoomParticipant (string roomJid, string userId)
-
 
 
 Remove a user from a room.
@@ -232,7 +227,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **userId** | **string**| userId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -242,7 +236,6 @@ void (empty response body)
 ## DeleteChatsUserMessage
 
 > void DeleteChatsUserMessage (string userId, string messageId)
-
 
 
 Delete a message to a user
@@ -298,7 +291,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -308,7 +300,6 @@ void (empty response body)
 ## DeleteChatsUserMessagesPin
 
 > void DeleteChatsUserMessagesPin (string userId, string pinnedMessageId)
-
 
 
 Remove a pinned message from a 1on1
@@ -366,7 +357,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **pinnedMessageId** | **string**| pinnedMessageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -376,7 +366,6 @@ void (empty response body)
 ## GetChatsMessage
 
 > [**ChatMessageResponse**](ChatMessageResponse) GetChatsMessage (string messageId)
-
 
 
 Get a message
@@ -432,7 +421,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -442,7 +430,6 @@ namespace Example
 ## GetChatsRoom
 
 > [**Room**](Room) GetChatsRoom (string roomJid)
-
 
 
 Get a room
@@ -497,7 +484,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -507,7 +493,6 @@ namespace Example
 ## GetChatsRoomMessage
 
 > [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsRoomMessage (string roomJid, string messageIds)
-
 
 
 Get messages by id(s) from a room
@@ -564,7 +549,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **messageIds** | **string**| messageIds, comma separated |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -574,7 +558,6 @@ namespace Example
 ## GetChatsRoomMessages
 
 > [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null)
-
 
 
 Get a room's message history
@@ -635,7 +618,6 @@ namespace Example
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -645,7 +627,6 @@ namespace Example
 ## GetChatsRoomParticipant
 
 > [**RoomParticipant**](RoomParticipant) GetChatsRoomParticipant (string roomJid, string participantJid)
-
 
 
 Get a room participant
@@ -700,7 +681,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **participantJid** | **string**| participantJid |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -710,7 +690,6 @@ namespace Example
 ## GetChatsRoomParticipants
 
 > [**RoomParticipantsResponse**](RoomParticipantsResponse) GetChatsRoomParticipants (string roomJid)
-
 
 
 Get room participants in a room
@@ -765,7 +744,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -775,7 +753,6 @@ namespace Example
 ## GetChatsSettings
 
 > [**ChatSettings**](ChatSettings) GetChatsSettings ()
-
 
 
 Get Chat Settings.
@@ -826,7 +803,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ChatSettings**](ChatSettings)
@@ -835,7 +811,6 @@ This endpoint does require any parameters.
 ## GetChatsThreadMessages
 
 > [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null)
-
 
 
 Get history by thread
@@ -896,7 +871,6 @@ namespace Example
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -906,7 +880,6 @@ namespace Example
 ## GetChatsUser
 
 > [**OneOnOne**](OneOnOne) GetChatsUser (string userId)
-
 
 
 Get information for a 1on1
@@ -963,7 +936,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -973,7 +945,6 @@ namespace Example
 ## GetChatsUserMessage
 
 > [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsUserMessage (string userId, string messageIds)
-
 
 
 Get messages by id(s) from a 1on1
@@ -1030,7 +1001,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **messageIds** | **string**| messageIds, comma separated |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1040,7 +1010,6 @@ namespace Example
 ## GetChatsUserMessages
 
 > [**ChatMessageResponse**](ChatMessageResponse) GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null)
-
 
 
 Get 1on1 History between a user
@@ -1101,7 +1070,6 @@ namespace Example
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1111,7 +1079,6 @@ namespace Example
 ## GetChatsUserSettings
 
 > [**ChatUserSettings**](ChatUserSettings) GetChatsUserSettings (string userId)
-
 
 
 Get a user's chat settings
@@ -1168,7 +1135,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1178,7 +1144,6 @@ namespace Example
 ## GetChatsUsersMeSettings
 
 > [**ChatUserSettings**](ChatUserSettings) GetChatsUsersMeSettings ()
-
 
 
 Get a user's chat settings
@@ -1229,7 +1194,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ChatUserSettings**](ChatUserSettings)
@@ -1238,7 +1202,6 @@ This endpoint does require any parameters.
 ## PatchChatsRoom
 
 > void PatchChatsRoom (string roomJid, RoomUpdateRequest body)
-
 
 
 Set properties for a room
@@ -1294,7 +1257,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **body** | [**RoomUpdateRequest**](RoomUpdateRequest)| Room properties |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1304,7 +1266,6 @@ void (empty response body)
 ## PatchChatsRoomMessage
 
 > [**ChatSendMessageResponse**](ChatSendMessageResponse) PatchChatsRoomMessage (string roomJid, string messageId, SendMessageBody body)
-
 
 
 Edit a message in a room
@@ -1363,7 +1324,6 @@ namespace Example
 | **roomJid** | **string**| roomId |  |
 | **messageId** | **string**| messageId |  |
 | **body** | [**SendMessageBody**](SendMessageBody)| messageBody |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1373,7 +1333,6 @@ namespace Example
 ## PatchChatsSettings
 
 > [**ChatSettings**](ChatSettings) PatchChatsSettings (ChatSettings body)
-
 
 
 Patch Chat Settings.
@@ -1427,7 +1386,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ChatSettings**](ChatSettings)| Chat |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1437,7 +1395,6 @@ namespace Example
 ## PatchChatsUserMessage
 
 > [**ChatSendMessageResponse**](ChatSendMessageResponse) PatchChatsUserMessage (string userId, string messageId, SendMessageBody body)
-
 
 
 Edit a message to a user
@@ -1496,7 +1453,6 @@ namespace Example
 | **userId** | **string**| userId |  |
 | **messageId** | **string**| messageId |  |
 | **body** | [**SendMessageBody**](SendMessageBody)| message body |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1506,7 +1462,6 @@ namespace Example
 ## PatchChatsUserSettings
 
 > [**ChatUserSettings**](ChatUserSettings) PatchChatsUserSettings (string userId, ChatUserSettings body)
-
 
 
 Update a user's chat settings
@@ -1565,7 +1520,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**ChatUserSettings**](ChatUserSettings)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1575,7 +1529,6 @@ namespace Example
 ## PatchChatsUsersMeSettings
 
 > [**ChatUserSettings**](ChatUserSettings) PatchChatsUsersMeSettings (ChatUserSettings body)
-
 
 
 Update a user's chat settings
@@ -1630,7 +1583,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ChatUserSettings**](ChatUserSettings)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1640,7 +1592,6 @@ namespace Example
 ## PostChatsRoomMessages
 
 > [**ChatSendMessageResponse**](ChatSendMessageResponse) PostChatsRoomMessages (string roomJid, SendMessageBody body)
-
 
 
 Send a message to a room
@@ -1697,7 +1648,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomId |  |
 | **body** | [**SendMessageBody**](SendMessageBody)| messageBody |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1707,7 +1657,6 @@ namespace Example
 ## PostChatsRoomMessagesPins
 
 > void PostChatsRoomMessagesPins (string roomJid, PinnedMessageRequest body)
-
 
 
 Add pinned messages for a room, up to a maximum of 5 pinned messages
@@ -1763,7 +1712,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **body** | [**PinnedMessageRequest**](PinnedMessageRequest)| Pinned Message Ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1773,7 +1721,6 @@ void (empty response body)
 ## PostChatsRoomParticipant
 
 > void PostChatsRoomParticipant (string roomJid, string userId)
-
 
 
 Join a room
@@ -1829,7 +1776,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **roomJid** | **string**| roomJid |  |
 | **userId** | **string**| userId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1839,7 +1785,6 @@ void (empty response body)
 ## PostChatsRooms
 
 > [**CreateRoomResponse**](CreateRoomResponse) PostChatsRooms (CreateRoomRequest body)
-
 
 
 Create an adhoc room
@@ -1894,7 +1839,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateRoomRequest**](CreateRoomRequest)| Room properties |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1904,7 +1848,6 @@ namespace Example
 ## PostChatsUserMessages
 
 > [**ChatSendMessageResponse**](ChatSendMessageResponse) PostChatsUserMessages (string userId, SendMessageBody body)
-
 
 
 Send a message to a user
@@ -1961,7 +1904,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **body** | [**SendMessageBody**](SendMessageBody)| message body |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1971,7 +1913,6 @@ namespace Example
 ## PostChatsUserMessagesPins
 
 > void PostChatsUserMessagesPins (string userId, PinnedMessageRequest body)
-
 
 
 Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
@@ -2029,7 +1970,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **body** | [**PinnedMessageRequest**](PinnedMessageRequest)| Pinned Message Ids |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2039,7 +1979,6 @@ void (empty response body)
 ## PutChatsMessageReactions
 
 > void PutChatsMessageReactions (string messageId, ChatReactionUpdate body)
-
 
 
 Update reactions to a message
@@ -2095,7 +2034,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| messageId |  |
 | **body** | [**ChatReactionUpdate**](ChatReactionUpdate)| reactionUpdate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2105,7 +2043,6 @@ void (empty response body)
 ## PutChatsSettings
 
 > [**ChatSettings**](ChatSettings) PutChatsSettings (ChatSettings body)
-
 
 
 Update Chat Settings.
@@ -2159,11 +2096,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ChatSettings**](ChatSettings)| Chat |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

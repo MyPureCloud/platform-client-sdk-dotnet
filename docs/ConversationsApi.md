@@ -243,13 +243,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationsScreenshareRecordingstate**](#PutConversationsScreenshareRecordingstate) | **Put** /api/v2/conversations/screenshares/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsSocialRecordingstate**](#PutConversationsSocialRecordingstate) | **Put** /api/v2/conversations/socials/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsVideoRecordingstate**](#PutConversationsVideoRecordingstate) | **Put** /api/v2/conversations/videos/{conversationId}/recordingstate | Update a conversation by setting its recording state |
-{: class="table table-striped"}
+
 
 
 ## DeleteAnalyticsConversationsDetailsJob
 
 > void DeleteAnalyticsConversationsDetailsJob (string jobId)
-
 
 
 Delete/cancel an async details job
@@ -303,7 +302,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -313,7 +311,6 @@ void (empty response body)
 ## DeleteConversationParticipantCode
 
 > void DeleteConversationParticipantCode (string conversationId, string participantId, string addCommunicationCode)
-
 
 
 Delete a code used to add a communication to this participant
@@ -369,7 +366,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **addCommunicationCode** | **string**| addCommunicationCode |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -379,7 +375,6 @@ void (empty response body)
 ## DeleteConversationParticipantFlaggedreason
 
 > void DeleteConversationParticipantFlaggedreason (string conversationId, string participantId)
-
 
 
 Remove flagged reason from conversation participant.
@@ -433,7 +428,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -443,7 +437,6 @@ void (empty response body)
 ## DeleteConversationsCallParticipantConsult
 
 > void DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
-
 
 
 Cancel the transfer
@@ -497,7 +490,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -507,7 +499,6 @@ void (empty response body)
 ## DeleteConversationsEmailMessagesDraftAttachment
 
 > void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
-
 
 
 Delete attachment from draft
@@ -561,7 +552,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **attachmentId** | **string**| attachmentId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -571,7 +561,6 @@ void (empty response body)
 ## DeleteConversationsMessagesCachedmediaCachedMediaItemId
 
 > void DeleteConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
-
 
 
 Remove a cached media item asychronously
@@ -624,7 +613,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **cachedMediaItemId** | **string**| cachedMediaItemId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -634,7 +622,6 @@ void (empty response body)
 ## DeleteConversationsMessagingIntegrationsFacebookIntegrationId
 
 > void DeleteConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId)
-
 
 
 Delete a Facebook messaging integration
@@ -687,7 +674,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -697,7 +683,6 @@ void (empty response body)
 ## DeleteConversationsMessagingIntegrationsInstagramIntegrationId
 
 > void DeleteConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId)
-
 
 
 Delete Instagram messaging integration
@@ -750,7 +735,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -760,7 +744,6 @@ void (empty response body)
 ## DeleteConversationsMessagingIntegrationsOpenIntegrationId
 
 > void DeleteConversationsMessagingIntegrationsOpenIntegrationId (string integrationId)
-
 
 
 Delete an Open messaging integration
@@ -815,7 +798,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -825,7 +807,6 @@ void (empty response body)
 ## DeleteConversationsMessagingIntegrationsWhatsappIntegrationId
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) DeleteConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId)
-
 
 
 Delete a WhatsApp messaging integration
@@ -879,7 +860,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -889,7 +869,6 @@ namespace Example
 ## DeleteConversationsMessagingSetting
 
 > void DeleteConversationsMessagingSetting (string messageSettingId)
-
 
 
 Delete a messaging setting
@@ -942,7 +921,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Setting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -952,7 +930,6 @@ void (empty response body)
 ## DeleteConversationsMessagingSettingsDefault
 
 > void DeleteConversationsMessagingSettingsDefault ()
-
 
 
 Delete the organization's default setting, a global default will be applied to integrations without settings
@@ -1003,7 +980,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -1012,7 +988,6 @@ void (empty response body)
 ## DeleteConversationsMessagingSupportedcontentSupportedContentId
 
 > void DeleteConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
-
 
 
 Delete a supported content profile
@@ -1065,7 +1040,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1075,7 +1049,6 @@ void (empty response body)
 ## GetAnalyticsConversationDetails
 
 > [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes) GetAnalyticsConversationDetails (string conversationId)
-
 
 
 Get a conversation by id
@@ -1130,7 +1103,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1140,7 +1112,6 @@ namespace Example
 ## GetAnalyticsConversationsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsConversationsAggregatesJob (string jobId)
-
 
 
 Get status for async query for conversation aggregates
@@ -1196,7 +1167,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1206,7 +1176,6 @@ namespace Example
 ## GetAnalyticsConversationsAggregatesJobResults
 
 > [**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse) GetAnalyticsConversationsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -1264,7 +1233,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1274,7 +1242,6 @@ namespace Example
 ## GetAnalyticsConversationsDetails
 
 > [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse) GetAnalyticsConversationsDetails (List<string> id = null)
-
 
 
 Gets multiple conversations by id
@@ -1329,7 +1296,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| Comma-separated conversation ids | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1339,7 +1305,6 @@ namespace Example
 ## GetAnalyticsConversationsDetailsJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsConversationsDetailsJob (string jobId)
-
 
 
 Get status for async query for conversation details
@@ -1394,7 +1359,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1404,7 +1368,6 @@ namespace Example
 ## GetAnalyticsConversationsDetailsJobResults
 
 > [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
-
 
 
 Fetch a page of results for an async details job
@@ -1463,7 +1426,6 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| The desired maximum number of results | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1473,7 +1435,6 @@ namespace Example
 ## GetAnalyticsConversationsDetailsJobsAvailability
 
 > [**DataAvailabilityResponse**](DataAvailabilityResponse) GetAnalyticsConversationsDetailsJobsAvailability ()
-
 
 
 Lookup the datalake availability date and time
@@ -1523,7 +1484,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse)
@@ -1532,7 +1492,6 @@ This endpoint does require any parameters.
 ## GetConversation
 
 > [**Conversation**](Conversation) GetConversation (string conversationId)
-
 
 
 Get conversation
@@ -1586,7 +1545,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1596,7 +1554,6 @@ namespace Example
 ## GetConversationParticipantSecureivrsession
 
 > [**SecureSession**](SecureSession) GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId)
-
 
 
 Fetch info on a secure session
@@ -1653,7 +1610,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **secureSessionId** | **string**| secure IVR session ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1663,7 +1619,6 @@ namespace Example
 ## GetConversationParticipantSecureivrsessions
 
 > [**SecureSessionEntityListing**](SecureSessionEntityListing) GetConversationParticipantSecureivrsessions (string conversationId, string participantId)
-
 
 
 Get a list of secure sessions for this participant.
@@ -1718,7 +1673,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1728,7 +1682,6 @@ namespace Example
 ## GetConversationParticipantWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation participant. 
@@ -1785,7 +1738,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1795,7 +1747,6 @@ namespace Example
 ## GetConversationParticipantWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationParticipantWrapupcodes (string conversationId, string participantId)
-
 
 
 Get list of wrapup codes for this conversation participant
@@ -1850,7 +1801,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1860,7 +1810,6 @@ namespace Example
 ## GetConversationSecureattributes
 
 > [**ConversationSecureAttributes**](ConversationSecureAttributes) GetConversationSecureattributes (string conversationId)
-
 
 
 Get the secure attributes on a conversation.
@@ -1914,7 +1863,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1924,7 +1872,6 @@ namespace Example
 ## GetConversationSuggestion
 
 > [**Suggestion**](Suggestion) GetConversationSuggestion (string conversationId, string suggestionId)
-
 
 
 Get Suggestion.
@@ -1980,7 +1927,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **suggestionId** | **string**| Suggestion ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1990,7 +1936,6 @@ namespace Example
 ## GetConversationSuggestions
 
 > [**SuggestionListing**](SuggestionListing) GetConversationSuggestions (string conversationId, string before = null, string after = null, string pageSize = null, string type = null, string state = null)
-
 
 
 Get all suggestions for a conversation.
@@ -2054,7 +1999,6 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script |
 | **state** | **string**| Suggestion state to filter Copilot suggestions. | [optional] <br />**Values**: Suggested, Accepted, Dismissed, Failed, Rated |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2064,7 +2008,6 @@ namespace Example
 ## GetConversations
 
 > [**ConversationEntityListing**](ConversationEntityListing) GetConversations (string communicationType = null)
-
 
 
 Get active conversations for the logged in user
@@ -2117,7 +2060,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **communicationType** | **string**| Call or Chat communication filtering | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2127,7 +2069,6 @@ namespace Example
 ## GetConversationsCall
 
 > [**CallConversation**](CallConversation) GetConversationsCall (string conversationId)
-
 
 
 Get call conversation
@@ -2180,7 +2121,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2190,7 +2130,6 @@ namespace Example
 ## GetConversationsCallParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -2249,7 +2188,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2259,7 +2197,6 @@ namespace Example
 ## GetConversationsCallParticipantWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation participant. 
@@ -2316,7 +2253,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2326,7 +2262,6 @@ namespace Example
 ## GetConversationsCallParticipantWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsCallParticipantWrapupcodes (string conversationId, string participantId)
-
 
 
 Get list of wrapup codes for this conversation participant
@@ -2381,7 +2316,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2391,7 +2325,6 @@ namespace Example
 ## GetConversationsCallback
 
 > [**CallbackConversation**](CallbackConversation) GetConversationsCallback (string conversationId)
-
 
 
 Get callback conversation
@@ -2444,7 +2377,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2454,7 +2386,6 @@ namespace Example
 ## GetConversationsCallbackParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -2513,7 +2444,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2523,7 +2453,6 @@ namespace Example
 ## GetConversationsCallbackParticipantWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation participant. 
@@ -2580,7 +2509,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2590,7 +2518,6 @@ namespace Example
 ## GetConversationsCallbackParticipantWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsCallbackParticipantWrapupcodes (string conversationId, string participantId)
-
 
 
 Get list of wrapup codes for this conversation participant
@@ -2645,7 +2572,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2655,7 +2581,6 @@ namespace Example
 ## GetConversationsCallbacks
 
 > [**CallbackConversationEntityListing**](CallbackConversationEntityListing) GetConversationsCallbacks ()
-
 
 
 Get active callback conversations for the logged in user
@@ -2704,7 +2629,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**CallbackConversationEntityListing**](CallbackConversationEntityListing)
@@ -2713,7 +2637,6 @@ This endpoint does require any parameters.
 ## GetConversationsCalls
 
 > [**CallConversationEntityListing**](CallConversationEntityListing) GetConversationsCalls ()
-
 
 
 Get active call conversations for the logged in user
@@ -2762,7 +2685,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**CallConversationEntityListing**](CallConversationEntityListing)
@@ -2771,7 +2693,6 @@ This endpoint does require any parameters.
 ## GetConversationsCallsHistory
 
 > [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
-
 
 
 Get call history
@@ -2830,7 +2751,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **interval** | **string**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: externalorganization, externalcontact, user, queue, group |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2840,7 +2760,6 @@ namespace Example
 ## GetConversationsCallsMaximumconferenceparties
 
 > [**MaxParticipants**](MaxParticipants) GetConversationsCallsMaximumconferenceparties ()
-
 
 
 Get the maximum number of participants that this user can have on a conference
@@ -2889,7 +2808,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**MaxParticipants**](MaxParticipants)
@@ -2898,7 +2816,6 @@ This endpoint does require any parameters.
 ## GetConversationsChat
 
 > [**ChatConversation**](ChatConversation) GetConversationsChat (string conversationId)
-
 
 
 Get chat conversation
@@ -2951,7 +2868,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2961,7 +2877,6 @@ namespace Example
 ## GetConversationsChatMessage
 
 > [**WebChatMessage**](WebChatMessage) GetConversationsChatMessage (string conversationId, string messageId)
-
 
 
 Get a web chat conversation message
@@ -3018,7 +2933,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3028,7 +2942,6 @@ namespace Example
 ## GetConversationsChatMessages
 
 > [**WebChatMessageEntityList**](WebChatMessageEntityList) GetConversationsChatMessages (string conversationId, string after = null, string before = null, string sortOrder = null, int? maxResults = null)
-
 
 
 Get the messages of a chat conversation.
@@ -3091,7 +3004,6 @@ namespace Example
 | **before** | **string**| If specified, get the messages chronologically before the id of this message | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **maxResults** | **int?**| Limit the returned number of messages, up to a maximum of 100 | [optional] [default to 100] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3101,7 +3013,6 @@ namespace Example
 ## GetConversationsChatParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -3160,7 +3071,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3170,7 +3080,6 @@ namespace Example
 ## GetConversationsChatParticipantWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation participant. 
@@ -3227,7 +3136,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3237,7 +3145,6 @@ namespace Example
 ## GetConversationsChatParticipantWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
-
 
 
 Get list of wrapup codes for this conversation participant
@@ -3292,7 +3199,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3302,7 +3208,6 @@ namespace Example
 ## GetConversationsChats
 
 > [**ChatConversationEntityListing**](ChatConversationEntityListing) GetConversationsChats ()
-
 
 
 Get active chat conversations for the logged in user
@@ -3351,7 +3256,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ChatConversationEntityListing**](ChatConversationEntityListing)
@@ -3360,7 +3264,6 @@ This endpoint does require any parameters.
 ## GetConversationsCobrowsesession
 
 > [**CobrowseConversation**](CobrowseConversation) GetConversationsCobrowsesession (string conversationId)
-
 
 
 Get cobrowse conversation
@@ -3413,7 +3316,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3424,7 +3326,9 @@ namespace Example
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation communication. 
 
@@ -3484,7 +3388,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3495,7 +3398,9 @@ namespace Example
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation participant. 
 
@@ -3553,7 +3458,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3564,7 +3468,9 @@ namespace Example
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get list of wrapup codes for this conversation participant
 
@@ -3620,7 +3526,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3630,7 +3535,6 @@ namespace Example
 ## GetConversationsCobrowsesessions
 
 > [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing) GetConversationsCobrowsesessions ()
-
 
 
 Get active cobrowse conversations for the logged in user
@@ -3679,7 +3583,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing)
@@ -3688,7 +3591,6 @@ This endpoint does require any parameters.
 ## GetConversationsEmail
 
 > [**EmailConversation**](EmailConversation) GetConversationsEmail (string conversationId)
-
 
 
 Get email conversation
@@ -3741,7 +3643,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3751,7 +3652,6 @@ namespace Example
 ## GetConversationsEmailMessage
 
 > [**EmailMessage**](EmailMessage) GetConversationsEmailMessage (string conversationId, string messageId)
-
 
 
 Get conversation message
@@ -3806,7 +3706,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3816,7 +3715,6 @@ namespace Example
 ## GetConversationsEmailMessages
 
 > [**EmailMessagePreviewListing**](EmailMessagePreviewListing) GetConversationsEmailMessages (string conversationId)
-
 
 
 Get conversation messages
@@ -3869,7 +3767,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3879,7 +3776,6 @@ namespace Example
 ## GetConversationsEmailMessagesDraft
 
 > [**EmailMessage**](EmailMessage) GetConversationsEmailMessagesDraft (string conversationId)
-
 
 
 Get conversation draft reply
@@ -3932,7 +3828,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3942,7 +3837,6 @@ namespace Example
 ## GetConversationsEmailParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -4001,7 +3895,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4011,7 +3904,6 @@ namespace Example
 ## GetConversationsEmailParticipantWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation participant. 
@@ -4068,7 +3960,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4078,7 +3969,6 @@ namespace Example
 ## GetConversationsEmailParticipantWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsEmailParticipantWrapupcodes (string conversationId, string participantId)
-
 
 
 Get list of wrapup codes for this conversation participant
@@ -4133,7 +4023,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4143,7 +4032,6 @@ namespace Example
 ## GetConversationsEmailSettings
 
 > [**EmailsSettings**](EmailsSettings) GetConversationsEmailSettings (string conversationId)
-
 
 
 Get emails settings for a given conversation
@@ -4196,7 +4084,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4206,7 +4093,6 @@ namespace Example
 ## GetConversationsEmails
 
 > [**EmailConversationEntityListing**](EmailConversationEntityListing) GetConversationsEmails ()
-
 
 
 Get active email conversations for the logged in user
@@ -4255,7 +4141,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing)
@@ -4264,7 +4149,6 @@ This endpoint does require any parameters.
 ## GetConversationsKeyconfiguration
 
 > [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) GetConversationsKeyconfiguration (string keyconfigurationsId)
-
 
 
 Get the encryption key configurations
@@ -4318,7 +4202,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **keyconfigurationsId** | **string**| Key Configurations Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4328,7 +4211,6 @@ namespace Example
 ## GetConversationsKeyconfigurations
 
 > [**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing) GetConversationsKeyconfigurations ()
-
 
 
 Get a list of key configurations data
@@ -4378,7 +4260,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing)
@@ -4387,7 +4268,6 @@ This endpoint does require any parameters.
 ## GetConversationsMessage
 
 > [**MessageConversation**](MessageConversation) GetConversationsMessage (string conversationId)
-
 
 
 Get message conversation
@@ -4440,7 +4320,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4450,7 +4329,6 @@ namespace Example
 ## GetConversationsMessageCommunicationMessagesMediaMediaId
 
 > [**MessageMediaData**](MessageMediaData) GetConversationsMessageCommunicationMessagesMediaMediaId (string conversationId, string communicationId, string mediaId)
-
 
 
 Get media
@@ -4511,7 +4389,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
 | **mediaId** | **string**| mediaId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4521,7 +4398,6 @@ namespace Example
 ## GetConversationsMessageDetails
 
 > [**MessageData**](MessageData) GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null)
-
 
 
 Get message
@@ -4578,7 +4454,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| messageId |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4588,7 +4463,6 @@ namespace Example
 ## GetConversationsMessageMessage
 
 > [**MessageData**](MessageData) GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null)
-
 
 
 Get conversation message
@@ -4647,7 +4521,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4657,7 +4530,6 @@ namespace Example
 ## GetConversationsMessageParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -4716,7 +4588,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4726,7 +4597,6 @@ namespace Example
 ## GetConversationsMessageParticipantWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation participant. 
@@ -4783,7 +4653,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4793,7 +4662,6 @@ namespace Example
 ## GetConversationsMessageParticipantWrapupcodes
 
 > [**List&lt;WrapupCode&gt;**](WrapupCode) GetConversationsMessageParticipantWrapupcodes (string conversationId, string participantId)
-
 
 
 Get list of wrapup codes for this conversation participant
@@ -4848,7 +4716,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4858,7 +4725,6 @@ namespace Example
 ## GetConversationsMessages
 
 > [**MessageConversationEntityListing**](MessageConversationEntityListing) GetConversationsMessages ()
-
 
 
 Get active message conversations for the logged in user
@@ -4907,7 +4773,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**MessageConversationEntityListing**](MessageConversationEntityListing)
@@ -4916,7 +4781,6 @@ This endpoint does require any parameters.
 ## GetConversationsMessagesCachedmedia
 
 > [**CachedMediaItemEntityListing**](CachedMediaItemEntityListing) GetConversationsMessagesCachedmedia (int? pageSize = null, int? pageNumber = null, string url = null)
-
 
 
 Get a list of cached media items
@@ -4974,7 +4838,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **url** | **string**| URL to search for | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4984,7 +4847,6 @@ namespace Example
 ## GetConversationsMessagesCachedmediaCachedMediaItemId
 
 > [**CachedMediaItem**](CachedMediaItem) GetConversationsMessagesCachedmediaCachedMediaItemId (string cachedMediaItemId)
-
 
 
 Get a cached media item
@@ -5038,7 +4900,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **cachedMediaItemId** | **string**| cachedMediaItemId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5048,7 +4909,6 @@ namespace Example
 ## GetConversationsMessagingFacebookApp
 
 > [**FacebookAppCredentials**](FacebookAppCredentials) GetConversationsMessagingFacebookApp ()
-
 
 
 Get Genesys Facebook App Id
@@ -5098,7 +4958,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FacebookAppCredentials**](FacebookAppCredentials)
@@ -5107,7 +4966,6 @@ This endpoint does require any parameters.
 ## GetConversationsMessagingFacebookPermissions
 
 > [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing) GetConversationsMessagingFacebookPermissions ()
-
 
 
 Get a list of Facebook Permissions
@@ -5159,7 +5017,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing)
@@ -5168,7 +5025,6 @@ This endpoint does require any parameters.
 ## GetConversationsMessagingIntegrations
 
 > [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
-
 
 
 Get a list of Integrations
@@ -5230,7 +5086,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5240,7 +5095,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsFacebook
 
 > [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
-
 
 
 Get a list of Facebook Integrations
@@ -5302,7 +5156,6 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5312,7 +5165,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsFacebookIntegrationId
 
 > [**FacebookIntegration**](FacebookIntegration) GetConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, string expand = null)
-
 
 
 Get a Facebook messaging integration
@@ -5368,7 +5220,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5378,7 +5229,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsInstagram
 
 > [**InstagramIntegrationEntityListing**](InstagramIntegrationEntityListing) GetConversationsMessagingIntegrationsInstagram (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
-
 
 
 Get a list of Instagram Integrations
@@ -5440,7 +5290,6 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5450,7 +5299,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsInstagramIntegrationId
 
 > [**InstagramIntegration**](InstagramIntegration) GetConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, string expand = null)
-
 
 
 Get Instagram messaging integration
@@ -5506,7 +5354,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5516,7 +5363,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsOpen
 
 > [**OpenIntegrationEntityListing**](OpenIntegrationEntityListing) GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
-
 
 
 Get a list of Open messaging integrations
@@ -5580,7 +5426,6 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5590,7 +5435,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsOpenIntegrationId
 
 > [**OpenIntegration**](OpenIntegration) GetConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, string expand = null)
-
 
 
 Get an Open messaging integration
@@ -5648,7 +5492,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5658,7 +5501,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsWhatsapp
 
 > [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
-
 
 
 Get a list of WhatsApp Integrations
@@ -5720,7 +5562,6 @@ namespace Example
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
 | **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5730,7 +5571,6 @@ namespace Example
 ## GetConversationsMessagingIntegrationsWhatsappIntegrationId
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) GetConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, string expand = null)
-
 
 
 Get a WhatsApp messaging integration
@@ -5786,7 +5626,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5796,7 +5635,6 @@ namespace Example
 ## GetConversationsMessagingSetting
 
 > [**MessagingSetting**](MessagingSetting) GetConversationsMessagingSetting (string messageSettingId)
-
 
 
 Get a messaging setting
@@ -5850,7 +5688,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Setting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5860,7 +5697,6 @@ namespace Example
 ## GetConversationsMessagingSettings
 
 > [**MessagingConfigListing**](MessagingConfigListing) GetConversationsMessagingSettings (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of messaging settings
@@ -5916,7 +5752,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5926,7 +5761,6 @@ namespace Example
 ## GetConversationsMessagingSettingsDefault
 
 > [**MessagingSetting**](MessagingSetting) GetConversationsMessagingSettingsDefault ()
-
 
 
 Get the organization's default settings that will be used as the default when creating an integration.
@@ -5978,7 +5812,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**MessagingSetting**](MessagingSetting)
@@ -5987,7 +5820,6 @@ This endpoint does require any parameters.
 ## GetConversationsMessagingSupportedcontent
 
 > [**SupportedContentListing**](SupportedContentListing) GetConversationsMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of Supported Content profiles
@@ -6043,7 +5875,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6053,7 +5884,6 @@ namespace Example
 ## GetConversationsMessagingSupportedcontentDefault
 
 > [**SupportedContent**](SupportedContent) GetConversationsMessagingSupportedcontentDefault ()
-
 
 
 Get the organization's default supported content profile that will be used as the default when creating an integration.
@@ -6105,7 +5935,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**SupportedContent**](SupportedContent)
@@ -6114,7 +5943,6 @@ This endpoint does require any parameters.
 ## GetConversationsMessagingSupportedcontentSupportedContentId
 
 > [**SupportedContent**](SupportedContent) GetConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId)
-
 
 
 Get a supported content profile
@@ -6168,7 +5996,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6178,7 +6005,6 @@ namespace Example
 ## GetConversationsMessagingThreadingtimeline
 
 > [**ConversationThreadingWindow**](ConversationThreadingWindow) GetConversationsMessagingThreadingtimeline ()
-
 
 
 Get conversation threading window timeline for each messaging type
@@ -6230,7 +6056,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ConversationThreadingWindow**](ConversationThreadingWindow)
@@ -6240,7 +6065,9 @@ This endpoint does require any parameters.
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get the wrap-up for this conversation communication. 
 
@@ -6300,7 +6127,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6310,7 +6136,6 @@ namespace Example
 ## GetConversationsSettings
 
 > [**Settings**](Settings) GetConversationsSettings ()
-
 
 
 Get Settings
@@ -6360,7 +6185,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**Settings**](Settings)
@@ -6369,7 +6193,6 @@ This endpoint does require any parameters.
 ## GetConversationsSocialParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -6428,7 +6251,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6438,7 +6260,6 @@ namespace Example
 ## GetConversationsVideoDetails
 
 > [**VideoConferenceDetails**](VideoConferenceDetails) GetConversationsVideoDetails (string conferenceId)
-
 
 
 Get video conference details (e.g. the current number of active participants).
@@ -6494,7 +6315,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conferenceId** | **string**| conferenceId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6504,7 +6324,6 @@ namespace Example
 ## GetConversationsVideoParticipantCommunicationWrapup
 
 > [**AssignedWrapupCode**](AssignedWrapupCode) GetConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, bool? provisional = null)
-
 
 
 Get the wrap-up for this conversation communication. 
@@ -6563,7 +6382,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6573,7 +6391,6 @@ namespace Example
 ## GetConversationsVideosMeeting
 
 > [**MeetingIdRecord**](MeetingIdRecord) GetConversationsVideosMeeting (string meetingId)
-
 
 
 Gets a record for a given meetingId
@@ -6629,7 +6446,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **meetingId** | **string**| meetingId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6639,7 +6455,6 @@ namespace Example
 ## PatchConversationParticipant
 
 > void PatchConversationParticipant (string conversationId, string participantId, MediaParticipantRequest body)
-
 
 
 Update a participant.
@@ -6698,7 +6513,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Update request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6708,7 +6522,6 @@ void (empty response body)
 ## PatchConversationParticipantAttributes
 
 > void PatchConversationParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
-
 
 
 Update the attributes on a conversation participant.
@@ -6764,7 +6577,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6774,7 +6586,6 @@ void (empty response body)
 ## PatchConversationSecureattributes
 
 > **string** PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
-
 
 
 Update the secure attributes on a conversation.
@@ -6830,7 +6641,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes)| Conversation Secure Attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6840,7 +6650,6 @@ namespace Example
 ## PatchConversationUtilizationlabel
 
 > **string** PatchConversationUtilizationlabel (string conversationId, ConversationUtilizationLabelUpdate body)
-
 
 
 Update the utilization label on a conversation. When there is no value provided, the system default label is applied
@@ -6898,7 +6707,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **body** | [**ConversationUtilizationLabelUpdate**](ConversationUtilizationLabelUpdate)| Conversation Utilization Label |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6908,7 +6716,6 @@ namespace Example
 ## PatchConversationsAftercallworkConversationIdParticipantCommunication
 
 > [**AfterCallWorkUpdate**](AfterCallWorkUpdate) PatchConversationsAftercallworkConversationIdParticipantCommunication (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
-
 
 
 Update after-call work for this conversation communication.
@@ -6968,7 +6775,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**AfterCallWorkUpdate**](AfterCallWorkUpdate)| AfterCallWorkUpdate |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6978,7 +6784,6 @@ namespace Example
 ## PatchConversationsCall
 
 > [**Conversation**](Conversation) PatchConversationsCall (string conversationId, Conversation body)
-
 
 
 Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
@@ -7034,7 +6839,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7044,7 +6848,6 @@ namespace Example
 ## PatchConversationsCallParticipant
 
 > void PatchConversationsCallParticipant (string conversationId, string participantId, MediaParticipantRequest body)
-
 
 
 Update conversation participant
@@ -7101,7 +6904,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7111,7 +6913,6 @@ void (empty response body)
 ## PatchConversationsCallParticipantAttributes
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
-
 
 
 Update the attributes on a conversation participant.
@@ -7168,7 +6969,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7178,7 +6978,6 @@ namespace Example
 ## PatchConversationsCallParticipantCommunication
 
 > **Object** PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
-
 
 
 Update conversation participant's communication by disconnecting it.
@@ -7237,7 +7036,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7247,7 +7045,6 @@ namespace Example
 ## PatchConversationsCallParticipantConsult
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PatchConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransferUpdate body)
-
 
 
 Change who can speak
@@ -7304,7 +7101,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate)| new speak to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7314,7 +7110,6 @@ namespace Example
 ## PatchConversationsCallback
 
 > [**Conversation**](Conversation) PatchConversationsCallback (string conversationId, Conversation body)
-
 
 
 Update a conversation by disconnecting all of the participants
@@ -7370,7 +7165,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7380,7 +7174,6 @@ namespace Example
 ## PatchConversationsCallbackParticipant
 
 > void PatchConversationsCallbackParticipant (string conversationId, string participantId, MediaParticipantRequest body)
-
 
 
 Update conversation participant
@@ -7437,7 +7230,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7447,7 +7239,6 @@ void (empty response body)
 ## PatchConversationsCallbackParticipantAttributes
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
-
 
 
 Update the attributes on a conversation participant.
@@ -7504,7 +7295,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)| Attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7514,7 +7304,6 @@ namespace Example
 ## PatchConversationsCallbackParticipantCommunication
 
 > **Object** PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
-
 
 
 Update conversation participant's communication by disconnecting it.
@@ -7573,7 +7362,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7583,7 +7371,6 @@ namespace Example
 ## PatchConversationsCallbacks
 
 > [**PatchCallbackResponse**](PatchCallbackResponse) PatchConversationsCallbacks (PatchCallbackRequest body)
-
 
 
 Update a scheduled callback
@@ -7637,7 +7424,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PatchCallbackRequest**](PatchCallbackRequest)| PatchCallbackRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7647,7 +7433,6 @@ namespace Example
 ## PatchConversationsChat
 
 > [**Conversation**](Conversation) PatchConversationsChat (string conversationId, Conversation body)
-
 
 
 Update a conversation by disconnecting all of the participants
@@ -7703,7 +7488,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7713,7 +7497,6 @@ namespace Example
 ## PatchConversationsChatParticipant
 
 > void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
-
 
 
 Update conversation participant
@@ -7770,7 +7553,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Update request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7780,7 +7562,6 @@ void (empty response body)
 ## PatchConversationsChatParticipantAttributes
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
-
 
 
 Update the attributes on a conversation participant.
@@ -7837,7 +7618,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7847,7 +7627,6 @@ namespace Example
 ## PatchConversationsChatParticipantCommunication
 
 > **Object** PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
-
 
 
 Update conversation participant's communication by disconnecting it.
@@ -7906,7 +7685,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7917,7 +7695,9 @@ namespace Example
 
 > [**Conversation**](Conversation) PatchConversationsCobrowsesession (string conversationId, Conversation body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by disconnecting all of the participants
 
@@ -7974,7 +7754,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -7985,7 +7764,9 @@ namespace Example
 
 > void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update conversation participant
 
@@ -8043,7 +7824,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8054,7 +7834,9 @@ void (empty response body)
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update the attributes on a conversation participant.
 
@@ -8112,7 +7894,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8123,7 +7904,9 @@ namespace Example
 
 > **Object** PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update conversation participant's communication by disconnecting it.
 
@@ -8183,7 +7966,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8193,7 +7975,6 @@ namespace Example
 ## PatchConversationsEmail
 
 > [**Conversation**](Conversation) PatchConversationsEmail (string conversationId, Conversation body)
-
 
 
 Update a conversation by disconnecting all of the participants
@@ -8249,7 +8030,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8259,7 +8039,6 @@ namespace Example
 ## PatchConversationsEmailMessagesDraft
 
 > [**EmailMessage**](EmailMessage) PatchConversationsEmailMessagesDraft (string conversationId, bool? autoFill = null, bool? discard = null, DraftManipulationRequest body = null)
-
 
 
 Reset conversation draft to its initial state and/or auto-fill draft content
@@ -8318,7 +8097,6 @@ namespace Example
 | **autoFill** | **bool?**| autoFill | [optional]  |
 | **discard** | **bool?**| discard | [optional]  |
 | **body** | [**DraftManipulationRequest**](DraftManipulationRequest)| Draft Manipulation Request | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8328,7 +8106,6 @@ namespace Example
 ## PatchConversationsEmailParticipant
 
 > void PatchConversationsEmailParticipant (string conversationId, string participantId, MediaParticipantRequest body)
-
 
 
 Update conversation participant
@@ -8385,7 +8162,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Update request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8395,7 +8171,6 @@ void (empty response body)
 ## PatchConversationsEmailParticipantAttributes
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
-
 
 
 Update the attributes on a conversation participant.
@@ -8452,7 +8227,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)| Participant attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8462,7 +8236,6 @@ namespace Example
 ## PatchConversationsEmailParticipantCommunication
 
 > **Object** PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
-
 
 
 Update conversation participant's communication by disconnecting it.
@@ -8521,7 +8294,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8531,7 +8303,6 @@ namespace Example
 ## PatchConversationsEmailParticipantParkingstate
 
 > void PatchConversationsEmailParticipantParkingstate (string conversationId, string participantId, ParkingStateRequest body)
-
 
 
 Update conversation by setting its parking state
@@ -8590,7 +8361,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParkingStateRequest**](ParkingStateRequest)| Parking update request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8600,7 +8370,6 @@ void (empty response body)
 ## PatchConversationsMessage
 
 > [**Conversation**](Conversation) PatchConversationsMessage (string conversationId, Conversation body)
-
 
 
 Update a conversation by disconnecting all of the participants
@@ -8656,7 +8425,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8666,7 +8434,6 @@ namespace Example
 ## PatchConversationsMessageParticipant
 
 > void PatchConversationsMessageParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
-
 
 
 Update conversation participant
@@ -8723,7 +8490,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8733,7 +8499,6 @@ void (empty response body)
 ## PatchConversationsMessageParticipantAttributes
 
 > [**ParticipantAttributes**](ParticipantAttributes) PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
-
 
 
 Update the attributes on a conversation participant.
@@ -8790,7 +8555,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8800,7 +8564,6 @@ namespace Example
 ## PatchConversationsMessageParticipantCommunication
 
 > **Object** PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
-
 
 
 Update conversation participant's communication by disconnecting it.
@@ -8859,7 +8622,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8869,7 +8631,6 @@ namespace Example
 ## PatchConversationsMessagingIntegrationsFacebookIntegrationId
 
 > [**FacebookIntegration**](FacebookIntegration) PatchConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, FacebookIntegrationUpdateRequest body)
-
 
 
 Update Facebook messaging integration
@@ -8925,7 +8686,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **body** | [**FacebookIntegrationUpdateRequest**](FacebookIntegrationUpdateRequest)| FacebookIntegrationUpdateRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -8935,7 +8695,6 @@ namespace Example
 ## PatchConversationsMessagingIntegrationsInstagramIntegrationId
 
 > [**InstagramIntegration**](InstagramIntegration) PatchConversationsMessagingIntegrationsInstagramIntegrationId (string integrationId, InstagramIntegrationUpdateRequest body)
-
 
 
 Update Instagram messaging integration
@@ -8991,7 +8750,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **body** | [**InstagramIntegrationUpdateRequest**](InstagramIntegrationUpdateRequest)| InstagramIntegrationUpdateRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9001,7 +8759,6 @@ namespace Example
 ## PatchConversationsMessagingIntegrationsOpenIntegrationId
 
 > [**OpenIntegration**](OpenIntegration) PatchConversationsMessagingIntegrationsOpenIntegrationId (string integrationId, OpenIntegrationUpdateRequest body)
-
 
 
 Update an Open messaging integration
@@ -9059,7 +8816,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **body** | [**OpenIntegrationUpdateRequest**](OpenIntegrationUpdateRequest)| OpenIntegrationUpdateRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9069,7 +8825,6 @@ namespace Example
 ## PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId (string integrationId, WhatsAppEmbeddedSignupIntegrationActivationRequest body)
-
 
 
 Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow
@@ -9127,7 +8882,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **body** | [**WhatsAppEmbeddedSignupIntegrationActivationRequest**](WhatsAppEmbeddedSignupIntegrationActivationRequest)| WhatsAppEmbeddedSignupIntegrationActivationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9137,7 +8891,6 @@ namespace Example
 ## PatchConversationsMessagingIntegrationsWhatsappIntegrationId
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) PatchConversationsMessagingIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIntegrationUpdateRequest body)
-
 
 
 Update a WhatsApp messaging integration
@@ -9193,7 +8946,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
 | **body** | [**WhatsAppIntegrationUpdateRequest**](WhatsAppIntegrationUpdateRequest)| WhatsAppIntegrationUpdateRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9203,7 +8955,6 @@ namespace Example
 ## PatchConversationsMessagingSetting
 
 > [**MessagingSetting**](MessagingSetting) PatchConversationsMessagingSetting (string messageSettingId, MessagingSettingPatchRequest body)
-
 
 
 Update a messaging setting
@@ -9259,7 +9010,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **messageSettingId** | **string**| Message Setting ID |  |
 | **body** | [**MessagingSettingPatchRequest**](MessagingSettingPatchRequest)| MessagingSetting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9269,7 +9019,6 @@ namespace Example
 ## PatchConversationsMessagingSupportedcontentSupportedContentId
 
 > [**SupportedContent**](SupportedContent) PatchConversationsMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
-
 
 
 Update a supported content profile
@@ -9325,7 +9074,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **supportedContentId** | **string**| Supported Content ID |  |
 | **body** | [**SupportedContent**](SupportedContent)| SupportedContent |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9335,7 +9083,6 @@ namespace Example
 ## PatchConversationsSettings
 
 > void PatchConversationsSettings (Settings body)
-
 
 
 Update Settings
@@ -9388,7 +9135,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Settings**](Settings)| Settings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9398,7 +9144,6 @@ void (empty response body)
 ## PostAnalyticsConversationDetailsProperties
 
 > [**PropertyIndexRequest**](PropertyIndexRequest) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
-
 
 
 Index conversation properties
@@ -9454,7 +9199,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**PropertyIndexRequest**](PropertyIndexRequest)| request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9464,7 +9208,6 @@ namespace Example
 ## PostAnalyticsConversationsActivityQuery
 
 > [**ConversationActivityResponse**](ConversationActivityResponse) PostAnalyticsConversationsActivityQuery (ConversationActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for conversation activity observations
@@ -9522,7 +9265,6 @@ namespace Example
 | **body** | [**ConversationActivityQuery**](ConversationActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9532,7 +9274,6 @@ namespace Example
 ## PostAnalyticsConversationsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsConversationsAggregatesJobs (ConversationAsyncAggregationQuery body)
-
 
 
 Query for conversation aggregates asynchronously
@@ -9588,7 +9329,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationAsyncAggregationQuery**](ConversationAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9598,7 +9338,6 @@ namespace Example
 ## PostAnalyticsConversationsAggregatesQuery
 
 > [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse) PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
-
 
 
 Query for conversation aggregates
@@ -9652,7 +9391,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9662,7 +9400,6 @@ namespace Example
 ## PostAnalyticsConversationsDetailsJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body)
-
 
 
 Query for conversation details asynchronously
@@ -9717,7 +9454,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AsyncConversationQuery**](AsyncConversationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9727,7 +9463,6 @@ namespace Example
 ## PostAnalyticsConversationsDetailsQuery
 
 > [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse) PostAnalyticsConversationsDetailsQuery (ConversationQuery body)
-
 
 
 Query for conversation details
@@ -9782,7 +9517,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationQuery**](ConversationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9792,7 +9526,6 @@ namespace Example
 ## PostConversationAssign
 
 > **string** PostConversationAssign (string conversationId, ConversationUser body)
-
 
 
 Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.
@@ -9857,7 +9590,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **body** | [**ConversationUser**](ConversationUser)| Targeted user |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9867,7 +9599,6 @@ namespace Example
 ## PostConversationBarge
 
 > void PostConversationBarge (string conversationId)
-
 
 
 Barge a conversation creating a barged in conference of connected participants.
@@ -9920,7 +9651,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9930,7 +9660,6 @@ void (empty response body)
 ## PostConversationCobrowse
 
 > [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession) PostConversationCobrowse (string conversationId)
-
 
 
 Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
@@ -9985,7 +9714,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -9995,7 +9723,6 @@ namespace Example
 ## PostConversationDisconnect
 
 > **string** PostConversationDisconnect (string conversationId)
-
 
 
 Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
@@ -10049,7 +9776,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10059,7 +9785,6 @@ namespace Example
 ## PostConversationParticipantCallbacks
 
 > void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null)
-
 
 
 Create a new callback for the specified participant on the conversation.
@@ -10116,7 +9841,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10126,7 +9850,6 @@ void (empty response body)
 ## PostConversationParticipantDigits
 
 > void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null)
-
 
 
 Sends DTMF to the participant
@@ -10182,7 +9905,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**Digits**](Digits)| Digits | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10192,7 +9914,6 @@ void (empty response body)
 ## PostConversationParticipantReplace
 
 > void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
-
 
 
 Replace this participant with the specified user and/or address
@@ -10249,7 +9970,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10259,7 +9979,6 @@ void (empty response body)
 ## PostConversationParticipantReplaceAgent
 
 > void PostConversationParticipantReplaceAgent (string conversationId, string participantId, TransferToAgentRequest body)
-
 
 
 Replace this participant with the specified agent
@@ -10317,7 +10036,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**TransferToAgentRequest**](TransferToAgentRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10327,7 +10045,6 @@ void (empty response body)
 ## PostConversationParticipantReplaceExternal
 
 > void PostConversationParticipantReplaceExternal (string conversationId, string participantId, TransferToExternalRequest body)
-
 
 
 Replace this participant with the an external contact
@@ -10385,7 +10102,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**TransferToExternalRequest**](TransferToExternalRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10395,7 +10111,6 @@ void (empty response body)
 ## PostConversationParticipantReplaceQueue
 
 > void PostConversationParticipantReplaceQueue (string conversationId, string participantId, TransferToQueueRequest body)
-
 
 
 Replace this participant with the specified queue
@@ -10453,7 +10168,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**TransferToQueueRequest**](TransferToQueueRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10463,7 +10177,6 @@ void (empty response body)
 ## PostConversationParticipantSecureivrsessions
 
 > [**SecureSession**](SecureSession) PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
-
 
 
 Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
@@ -10520,7 +10233,6 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**CreateSecureSession**](CreateSecureSession)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10530,7 +10242,6 @@ namespace Example
 ## PostConversationSuggestionEngagement
 
 > [**SuggestionEngagement**](SuggestionEngagement) PostConversationSuggestionEngagement (string conversationId, string suggestionId, SuggestionEngagement body)
-
 
 
 Save an engagement on the suggestion.
@@ -10588,7 +10299,6 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **suggestionId** | **string**| Suggestion ID |  |
 | **body** | [**SuggestionEngagement**](SuggestionEngagement)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10598,7 +10308,6 @@ namespace Example
 ## PostConversationSuggestionsFeedback
 
 > void PostConversationSuggestionsFeedback (string conversationId, Feedback body)
-
 
 
 Suggestion feedback.
@@ -10653,7 +10362,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **body** | [**Feedback**](Feedback)| SuggestionFeedback |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10663,7 +10371,6 @@ void (empty response body)
 ## PostConversationSummaryFeedback
 
 > void PostConversationSummaryFeedback (string conversationId, string summaryId, FeedbackAddRequest body = null)
-
 
 
 Submit feedback for the summary.
@@ -10720,7 +10427,6 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **summaryId** | **string**| Summary ID |  |
 | **body** | [**FeedbackAddRequest**](FeedbackAddRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10730,7 +10436,6 @@ void (empty response body)
 ## PostConversationsCall
 
 > [**Conversation**](Conversation) PostConversationsCall (string conversationId, CallCommand body)
-
 
 
 Place a new call as part of a callback conversation.
@@ -10785,7 +10490,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**CallCommand**](CallCommand)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10795,7 +10499,6 @@ namespace Example
 ## PostConversationsCallParticipantBarge
 
 > void PostConversationsCallParticipantBarge (string conversationId, string participantId)
-
 
 
 Barge a given participant's call creating a barged in conference of connected participants.
@@ -10850,7 +10553,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10860,7 +10562,6 @@ void (empty response body)
 ## PostConversationsCallParticipantCoach
 
 > void PostConversationsCallParticipantCoach (string conversationId, string participantId)
-
 
 
 Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.
@@ -10915,7 +10616,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10925,7 +10625,6 @@ void (empty response body)
 ## PostConversationsCallParticipantCommunicationWrapup
 
 > void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -10984,7 +10683,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -10994,7 +10692,6 @@ void (empty response body)
 ## PostConversationsCallParticipantConsult
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
-
 
 
 Initiate and update consult transfer
@@ -11052,7 +10749,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransfer**](ConsultTransfer)| Destination address &amp; initial speak to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11062,7 +10758,6 @@ namespace Example
 ## PostConversationsCallParticipantConsultAgent
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultAgent (string conversationId, string participantId, ConsultTransferToAgent body)
-
 
 
 Initiate a consult transfer to an agent
@@ -11121,7 +10816,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransferToAgent**](ConsultTransferToAgent)| Destination agent &amp; initial speak to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11131,7 +10825,6 @@ namespace Example
 ## PostConversationsCallParticipantConsultExternal
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultExternal (string conversationId, string participantId, ConsultTransferToExternal body)
-
 
 
 Initiate a consult transfer to an external contact
@@ -11190,7 +10883,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransferToExternal**](ConsultTransferToExternal)| Destination address &amp; initial speak to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11200,7 +10892,6 @@ namespace Example
 ## PostConversationsCallParticipantConsultQueue
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultQueue (string conversationId, string participantId, ConsultTransferToQueue body)
-
 
 
 Initiate a consult transfer to a queue
@@ -11259,7 +10950,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransferToQueue**](ConsultTransferToQueue)| Destination queue &amp; initial speak to |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11269,7 +10959,6 @@ namespace Example
 ## PostConversationsCallParticipantMonitor
 
 > void PostConversationsCallParticipantMonitor (string conversationId, string participantId)
-
 
 
 Listen in on the conversation from the point of view of a given participant.
@@ -11324,7 +11013,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11334,7 +11022,6 @@ void (empty response body)
 ## PostConversationsCallParticipantReplace
 
 > void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
-
 
 
 Replace this participant with the specified user and/or address
@@ -11391,7 +11078,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11401,7 +11087,6 @@ void (empty response body)
 ## PostConversationsCallParticipants
 
 > [**Conversation**](Conversation) PostConversationsCallParticipants (string conversationId, Conversation body)
-
 
 
 Add participants to a conversation
@@ -11456,7 +11141,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation)| Conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11466,7 +11150,6 @@ namespace Example
 ## PostConversationsCallbackParticipantCommunicationWrapup
 
 > void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -11525,7 +11208,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11535,7 +11217,6 @@ void (empty response body)
 ## PostConversationsCallbackParticipantReplace
 
 > void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
-
 
 
 Replace this participant with the specified user and/or address
@@ -11592,7 +11273,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11602,7 +11282,6 @@ void (empty response body)
 ## PostConversationsCallbacks
 
 > [**CreateCallbackResponse**](CreateCallbackResponse) PostConversationsCallbacks (CreateCallbackCommand body)
-
 
 
 Create a Callback
@@ -11656,7 +11335,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateCallbackCommand**](CreateCallbackCommand)| Callback |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11666,7 +11344,6 @@ namespace Example
 ## PostConversationsCallbacksBulkDisconnect
 
 > void PostConversationsCallbacksBulkDisconnect (BulkCallbackDisconnectRequest body)
-
 
 
 Disconnect multiple scheduled callbacks
@@ -11719,7 +11396,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkCallbackDisconnectRequest**](BulkCallbackDisconnectRequest)| BulkCallbackDisconnectRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11729,7 +11405,6 @@ void (empty response body)
 ## PostConversationsCallbacksBulkUpdate
 
 > [**BulkCallbackPatchResponse**](BulkCallbackPatchResponse) PostConversationsCallbacksBulkUpdate (BulkCallbackPatchRequest body)
-
 
 
 Update multiple scheduled callbacks
@@ -11783,7 +11458,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BulkCallbackPatchRequest**](BulkCallbackPatchRequest)| BulkCallbackPatchRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11793,7 +11467,6 @@ namespace Example
 ## PostConversationsCalls
 
 > [**CreateCallResponse**](CreateCallResponse) PostConversationsCalls (CreateCallRequest body)
-
 
 
 Create a call conversation
@@ -11847,7 +11520,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateCallRequest**](CreateCallRequest)| Call request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11857,7 +11529,6 @@ namespace Example
 ## PostConversationsChatCommunicationMessages
 
 > [**WebChatMessage**](WebChatMessage) PostConversationsChatCommunicationMessages (string conversationId, string communicationId, CreateWebChatMessageRequest body)
-
 
 
 Send a message on behalf of a communication in a chat conversation.
@@ -11914,7 +11585,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest)| Message |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11924,7 +11594,6 @@ namespace Example
 ## PostConversationsChatCommunicationTyping
 
 > [**WebChatTyping**](WebChatTyping) PostConversationsChatCommunicationTyping (string conversationId, string communicationId)
-
 
 
 Send a typing-indicator on behalf of a communication in a chat conversation.
@@ -11979,7 +11648,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -11989,7 +11657,6 @@ namespace Example
 ## PostConversationsChatParticipantCommunicationWrapup
 
 > void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -12048,7 +11715,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12058,7 +11724,6 @@ void (empty response body)
 ## PostConversationsChatParticipantReplace
 
 > void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
-
 
 
 Replace this participant with the specified user and/or address
@@ -12115,7 +11780,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12125,7 +11789,6 @@ void (empty response body)
 ## PostConversationsChats
 
 > [**ChatConversation**](ChatConversation) PostConversationsChats (CreateWebChatRequest body)
-
 
 
 Create a web chat conversation
@@ -12179,7 +11842,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateWebChatRequest**](CreateWebChatRequest)| Create web chat request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12190,7 +11852,9 @@ namespace Example
 
 > void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Apply wrap-up for this conversation communication
 
@@ -12250,7 +11914,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12261,7 +11924,9 @@ void (empty response body)
 
 > void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Replace this participant with the specified user and/or address
 
@@ -12319,7 +11984,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12329,7 +11993,6 @@ void (empty response body)
 ## PostConversationsEmailInboundmessages
 
 > [**EmailConversation**](EmailConversation) PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body)
-
 
 
 Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
@@ -12384,7 +12047,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**InboundMessageRequest**](InboundMessageRequest)| Send external email reply |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12394,7 +12056,6 @@ namespace Example
 ## PostConversationsEmailMessages
 
 > [**EmailMessageReply**](EmailMessageReply) PostConversationsEmailMessages (string conversationId, EmailMessage body)
-
 
 
 Send an email reply
@@ -12449,7 +12110,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**EmailMessage**](EmailMessage)| Reply |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12459,7 +12119,6 @@ namespace Example
 ## PostConversationsEmailMessagesDraftAttachmentsCopy
 
 > [**EmailMessage**](EmailMessage) PostConversationsEmailMessagesDraftAttachmentsCopy (string conversationId, CopyAttachmentsRequest body)
-
 
 
 Copy attachments from an email message to the current draft.
@@ -12514,7 +12173,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**CopyAttachmentsRequest**](CopyAttachmentsRequest)| Copy Attachment Request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12524,7 +12182,6 @@ namespace Example
 ## PostConversationsEmailParticipantCommunicationWrapup
 
 > void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -12583,7 +12240,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12593,7 +12249,6 @@ void (empty response body)
 ## PostConversationsEmailParticipantReplace
 
 > void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
-
 
 
 Replace this participant with the specified user and/or address
@@ -12650,7 +12305,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12660,7 +12314,6 @@ void (empty response body)
 ## PostConversationsEmailReconnect
 
 > void PostConversationsEmailReconnect (string conversationId)
-
 
 
 Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
@@ -12713,7 +12366,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12723,7 +12375,6 @@ void (empty response body)
 ## PostConversationsEmails
 
 > [**EmailConversation**](EmailConversation) PostConversationsEmails (CreateEmailRequest body)
-
 
 
 Create an email conversation
@@ -12779,7 +12430,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateEmailRequest**](CreateEmailRequest)| Create email request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12789,7 +12439,6 @@ namespace Example
 ## PostConversationsEmailsAgentless
 
 > [**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto) PostConversationsEmailsAgentless (AgentlessEmailSendRequestDto body)
-
 
 
 Create an email conversation, per API
@@ -12844,7 +12493,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentlessEmailSendRequestDto**](AgentlessEmailSendRequestDto)| Create agentless email request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12854,7 +12502,6 @@ namespace Example
 ## PostConversationsFaxes
 
 > [**FaxSendResponse**](FaxSendResponse) PostConversationsFaxes (FaxSendRequest body)
-
 
 
 Create Fax Conversation
@@ -12907,7 +12554,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FaxSendRequest**](FaxSendRequest)| Fax |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12917,7 +12563,6 @@ namespace Example
 ## PostConversationsKeyconfigurations
 
 > [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) PostConversationsKeyconfigurations (ConversationEncryptionConfiguration body)
-
 
 
 Setup configurations for encryption key creation
@@ -12971,7 +12616,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)| Encryption Configuration |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -12981,7 +12625,6 @@ namespace Example
 ## PostConversationsKeyconfigurationsValidate
 
 > [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) PostConversationsKeyconfigurationsValidate (ConversationEncryptionConfiguration body)
-
 
 
 Validate encryption key configurations without saving it
@@ -13035,7 +12678,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)| Encryption Configuration |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13045,7 +12687,6 @@ namespace Example
 ## PostConversationsMessageCommunicationMessages
 
 > [**MessageData**](MessageData) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
-
 
 
 Send message
@@ -13108,7 +12749,6 @@ namespace Example
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**AdditionalMessage**](AdditionalMessage)| Message |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13118,7 +12758,6 @@ namespace Example
 ## PostConversationsMessageCommunicationMessagesMedia
 
 > [**MessageMediaData**](MessageMediaData) PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
-
 
 
 Create media
@@ -13178,7 +12817,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13188,7 +12826,6 @@ namespace Example
 ## PostConversationsMessageCommunicationTyping
 
 > void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body)
-
 
 
 Send message typing event
@@ -13248,7 +12885,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MessageTypingEventRequest**](MessageTypingEventRequest)| MessageTypingEvent |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13258,7 +12894,6 @@ void (empty response body)
 ## PostConversationsMessageInboundOpenEvent
 
 > [**OpenEventNormalizedMessage**](OpenEventNormalizedMessage) PostConversationsMessageInboundOpenEvent (string integrationId, OpenInboundNormalizedEvent body)
-
 
 
 Send an inbound Open Event Message
@@ -13316,7 +12951,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
 | **body** | [**OpenInboundNormalizedEvent**](OpenInboundNormalizedEvent)| NormalizedMessage |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13326,7 +12960,6 @@ namespace Example
 ## PostConversationsMessageInboundOpenMessage
 
 > [**OpenMessageNormalizedMessage**](OpenMessageNormalizedMessage) PostConversationsMessageInboundOpenMessage (string integrationId, OpenInboundNormalizedMessage body)
-
 
 
 Send inbound Open Message
@@ -13384,7 +13017,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
 | **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage)| NormalizedMessage |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13394,7 +13026,6 @@ namespace Example
 ## PostConversationsMessageInboundOpenReceipt
 
 > [**OpenReceiptNormalizedMessage**](OpenReceiptNormalizedMessage) PostConversationsMessageInboundOpenReceipt (string integrationId, OpenInboundNormalizedReceipt body)
-
 
 
 Send an inbound Open Receipt Message
@@ -13452,7 +13083,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| integrationId |  |
 | **body** | [**OpenInboundNormalizedReceipt**](OpenInboundNormalizedReceipt)| NormalizedMessage |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13462,7 +13092,6 @@ namespace Example
 ## PostConversationsMessageMessagesBulk
 
 > [**TextMessageListing**](TextMessageListing) PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
-
 
 
 Get messages in batch
@@ -13523,7 +13152,6 @@ namespace Example
 | **conversationId** | **string**|  |  |
 | **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
 | **body** | [**List<string>**](string)| messageIds | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13533,7 +13161,6 @@ namespace Example
 ## PostConversationsMessageParticipantCommunicationWrapup
 
 > void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -13592,7 +13219,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13602,7 +13228,6 @@ void (empty response body)
 ## PostConversationsMessageParticipantMonitor
 
 > void PostConversationsMessageParticipantMonitor (string conversationId, string participantId)
-
 
 
 Listen in on the conversation from the point of view of a given participant.
@@ -13657,7 +13282,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13667,7 +13291,6 @@ void (empty response body)
 ## PostConversationsMessageParticipantReplace
 
 > void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
-
 
 
 Replace this participant with the specified user and/or address
@@ -13724,7 +13347,6 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest)| Transfer request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13734,7 +13356,6 @@ void (empty response body)
 ## PostConversationsMessages
 
 > [**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse) PostConversationsMessages (CreateOutboundMessagingConversationRequest body)
-
 
 
 Create an outbound messaging conversation.
@@ -13790,7 +13411,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateOutboundMessagingConversationRequest**](CreateOutboundMessagingConversationRequest)| Create outbound messaging conversation |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13800,7 +13420,6 @@ namespace Example
 ## PostConversationsMessagesAgentless
 
 > [**SendAgentlessOutboundMessageResponse**](SendAgentlessOutboundMessageResponse) PostConversationsMessagesAgentless (SendAgentlessOutboundMessageRequest body)
-
 
 
 Send an agentless outbound message
@@ -13856,7 +13475,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest)| Create agentless outbound messaging request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13867,7 +13485,9 @@ namespace Example
 
 > [**OpenNormalizedMessage**](OpenNormalizedMessage) PostConversationsMessagesInboundOpen (OpenNormalizedMessage body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Send an inbound Open Message
 
@@ -13922,7 +13542,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OpenNormalizedMessage**](OpenNormalizedMessage)| NormalizedMessage |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13932,7 +13551,6 @@ namespace Example
 ## PostConversationsMessagingIntegrationsFacebook
 
 > [**FacebookIntegration**](FacebookIntegration) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
-
 
 
 Create a Facebook Integration
@@ -13986,7 +13604,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FacebookIntegrationRequest**](FacebookIntegrationRequest)| FacebookIntegrationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -13996,7 +13613,6 @@ namespace Example
 ## PostConversationsMessagingIntegrationsInstagram
 
 > [**InstagramIntegration**](InstagramIntegration) PostConversationsMessagingIntegrationsInstagram (InstagramIntegrationRequest body)
-
 
 
 Create Instagram Integration
@@ -14050,7 +13666,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**InstagramIntegrationRequest**](InstagramIntegrationRequest)| InstagramIntegrationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14060,7 +13675,6 @@ namespace Example
 ## PostConversationsMessagingIntegrationsOpen
 
 > [**OpenIntegration**](OpenIntegration) PostConversationsMessagingIntegrationsOpen (OpenIntegrationRequest body)
-
 
 
 Create an Open messaging integration
@@ -14116,7 +13730,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**OpenIntegrationRequest**](OpenIntegrationRequest)| OpenIntegrationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14127,7 +13740,9 @@ namespace Example
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) PostConversationsMessagingIntegrationsWhatsapp (WhatsAppIntegrationRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 
@@ -14182,7 +13797,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WhatsAppIntegrationRequest**](WhatsAppIntegrationRequest)| WhatsAppIntegrationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14192,7 +13806,6 @@ namespace Example
 ## PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup
 
 > [**WhatsAppIntegration**](WhatsAppIntegration) PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup (WhatsAppEmbeddedSignupIntegrationRequest body)
-
 
 
 Create a WhatsApp Integration using the WhatsApp embedded signup flow
@@ -14248,7 +13861,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**WhatsAppEmbeddedSignupIntegrationRequest**](WhatsAppEmbeddedSignupIntegrationRequest)| WhatsAppEmbeddedSignupIntegrationRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14258,7 +13870,6 @@ namespace Example
 ## PostConversationsMessagingSettings
 
 > [**MessagingSetting**](MessagingSetting) PostConversationsMessagingSettings (MessagingSettingRequest body)
-
 
 
 Create a messaging setting
@@ -14312,7 +13923,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**MessagingSettingRequest**](MessagingSettingRequest)| MessagingSetting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14322,7 +13932,6 @@ namespace Example
 ## PostConversationsMessagingSupportedcontent
 
 > [**SupportedContent**](SupportedContent) PostConversationsMessagingSupportedcontent (SupportedContent body)
-
 
 
 Create a Supported Content profile
@@ -14376,7 +13985,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SupportedContent**](SupportedContent)| SupportedContent |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14386,7 +13994,6 @@ namespace Example
 ## PostConversationsParticipantsAttributesSearch
 
 > [**JsonCursorSearchResponse**](JsonCursorSearchResponse) PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
-
 
 
 Search conversations
@@ -14440,7 +14047,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14451,7 +14057,9 @@ namespace Example
 
 > void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Apply wrap-up for this conversation communication
 
@@ -14511,7 +14119,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14521,7 +14128,6 @@ void (empty response body)
 ## PostConversationsSocialParticipantCommunicationWrapup
 
 > void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -14580,7 +14186,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14590,7 +14195,6 @@ void (empty response body)
 ## PostConversationsVideoParticipantCommunicationWrapup
 
 > void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
-
 
 
 Apply wrap-up for this conversation communication
@@ -14649,7 +14253,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**WrapupInput**](WrapupInput)| Wrap-up | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14659,7 +14262,6 @@ void (empty response body)
 ## PostConversationsVideosMeetings
 
 > [**MeetingIdRecord**](MeetingIdRecord) PostConversationsVideosMeetings (GenerateMeetingIdRequest body)
-
 
 
 Generate a meetingId for a given conferenceId
@@ -14715,7 +14317,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GenerateMeetingIdRequest**](GenerateMeetingIdRequest)| MeetingIdRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14725,7 +14326,6 @@ namespace Example
 ## PutConversationParticipantFlaggedreason
 
 > void PutConversationParticipantFlaggedreason (string conversationId, string participantId)
-
 
 
 Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -14779,7 +14379,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14789,7 +14388,6 @@ void (empty response body)
 ## PutConversationSecureattributes
 
 > **string** PutConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
-
 
 
 Set the secure attributes on a conversation.
@@ -14845,7 +14443,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes)| Conversation Secure Attributes |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14855,7 +14452,6 @@ namespace Example
 ## PutConversationTags
 
 > **string** PutConversationTags (string conversationId, ConversationTagsUpdate body)
-
 
 
 Update the tags on a conversation.
@@ -14911,7 +14507,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **body** | [**ConversationTagsUpdate**](ConversationTagsUpdate)| Conversation Tags |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14921,7 +14516,6 @@ namespace Example
 ## PutConversationsCallParticipantCommunicationUuidata
 
 > **Object** PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
-
 
 
 Set uuiData to be sent on future commands.
@@ -14980,7 +14574,6 @@ namespace Example
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**SetUuiDataRequest**](SetUuiDataRequest)| UUIData Request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -14990,7 +14583,6 @@ namespace Example
 ## PutConversationsCallRecordingstate
 
 > **string** PutConversationsCallRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15046,7 +14638,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15056,7 +14647,6 @@ namespace Example
 ## PutConversationsCallbackRecordingstate
 
 > **string** PutConversationsCallbackRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15112,7 +14702,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15122,7 +14711,6 @@ namespace Example
 ## PutConversationsChatRecordingstate
 
 > **string** PutConversationsChatRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15178,7 +14766,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15188,7 +14775,6 @@ namespace Example
 ## PutConversationsCobrowsesessionRecordingstate
 
 > **string** PutConversationsCobrowsesessionRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15244,7 +14830,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15254,7 +14839,6 @@ namespace Example
 ## PutConversationsEmailMessagesDraft
 
 > [**EmailMessage**](EmailMessage) PutConversationsEmailMessagesDraft (string conversationId, EmailMessage body)
-
 
 
 Update conversation draft reply
@@ -15309,7 +14893,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**EmailMessage**](EmailMessage)| Draft |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15319,7 +14902,6 @@ namespace Example
 ## PutConversationsEmailRecordingstate
 
 > **string** PutConversationsEmailRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15375,7 +14957,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15385,7 +14966,6 @@ namespace Example
 ## PutConversationsKeyconfiguration
 
 > [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration) PutConversationsKeyconfiguration (string keyconfigurationsId, ConversationEncryptionConfiguration body)
-
 
 
 Update the encryption key configurations
@@ -15441,7 +15021,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **keyconfigurationsId** | **string**| Key Configurations Id |  |
 | **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration)| Encryption key configuration metadata |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15451,7 +15030,6 @@ namespace Example
 ## PutConversationsMessageRecordingstate
 
 > **string** PutConversationsMessageRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15507,7 +15085,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15517,7 +15094,6 @@ namespace Example
 ## PutConversationsMessagingSettingsDefault
 
 > [**MessagingSetting**](MessagingSetting) PutConversationsMessagingSettingsDefault (MessagingSettingDefaultRequest body)
-
 
 
 Set the organization's default setting that may be applied to to integrations without settings
@@ -15573,7 +15149,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest)| MessagingSetting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15583,7 +15158,6 @@ namespace Example
 ## PutConversationsMessagingSupportedcontentDefault
 
 > [**SupportedContent**](SupportedContent) PutConversationsMessagingSupportedcontentDefault (SupportedContentReference body)
-
 
 
 Set the organization's default supported content profile that may be assigned to an integration when it is created.
@@ -15639,7 +15213,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SupportedContentReference**](SupportedContentReference)| SupportedContent |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15649,7 +15222,6 @@ namespace Example
 ## PutConversationsMessagingThreadingtimeline
 
 > [**ConversationThreadingWindow**](ConversationThreadingWindow) PutConversationsMessagingThreadingtimeline (ConversationThreadingWindow body)
-
 
 
 Update conversation threading window timeline for each messaging type
@@ -15705,7 +15277,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationThreadingWindow**](ConversationThreadingWindow)| ConversationThreadingWindowRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15716,7 +15287,9 @@ namespace Example
 
 > **string** PutConversationsScreenshareRecordingstate (string conversationId, SetRecordingState body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update a conversation by setting its recording state
 
@@ -15773,7 +15346,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15783,7 +15355,6 @@ namespace Example
 ## PutConversationsSocialRecordingstate
 
 > **string** PutConversationsSocialRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15839,7 +15410,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -15849,7 +15419,6 @@ namespace Example
 ## PutConversationsVideoRecordingstate
 
 > **string** PutConversationsVideoRecordingstate (string conversationId, SetRecordingState body)
-
 
 
 Update a conversation by setting its recording state
@@ -15905,11 +15474,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
-{: class="table table-striped"}
 
 ### Return type
 
 **string**
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

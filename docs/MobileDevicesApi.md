@@ -11,13 +11,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetMobiledevices**](#GetMobiledevices) | **Get** /api/v2/mobiledevices | Get a list of all devices. |
 | [**PostMobiledevices**](#PostMobiledevices) | **Post** /api/v2/mobiledevices | Create User device |
 | [**PutMobiledevice**](#PutMobiledevice) | **Put** /api/v2/mobiledevices/{deviceId} | Update device |
-{: class="table table-striped"}
+
 
 
 ## DeleteMobiledevice
 
 > void DeleteMobiledevice (string deviceId)
-
 
 
 Delete device
@@ -69,7 +68,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deviceId** | **string**| Device ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -79,7 +77,6 @@ void (empty response body)
 ## GetMobiledevice
 
 > [**UserDevice**](UserDevice) GetMobiledevice (string deviceId)
-
 
 
 Get device
@@ -132,7 +129,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deviceId** | **string**| Device ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -142,7 +138,6 @@ namespace Example
 ## GetMobiledevices
 
 > [**DirectoryUserDevicesListing**](DirectoryUserDevicesListing) GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
-
 
 
 Get a list of all devices.
@@ -199,7 +194,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -209,7 +203,6 @@ namespace Example
 ## PostMobiledevices
 
 > [**UserDevice**](UserDevice) PostMobiledevices (UserDevice body)
-
 
 
 Create User device
@@ -262,7 +255,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserDevice**](UserDevice)| Device |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -272,7 +264,6 @@ namespace Example
 ## PutMobiledevice
 
 > [**UserDevice**](UserDevice) PutMobiledevice (string deviceId, UserDevice body = null)
-
 
 
 Update device
@@ -327,11 +318,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **deviceId** | **string**| Device ID |  |
 | **body** | [**UserDevice**](UserDevice)| Device | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UserDevice**](UserDevice)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

@@ -89,13 +89,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](#PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings) | **Put** /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
 | [**PutIntegrationsSpeechTtsSettings**](#PutIntegrationsSpeechTtsSettings) | **Put** /api/v2/integrations/speech/tts/settings | Update TTS settings for an org |
 | [**PutIntegrationsUnifiedcommunicationThirdpartypresences**](#PutIntegrationsUnifiedcommunicationThirdpartypresences) | **Put** /api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences | Bulk integration presence ingestion |
-{: class="table table-striped"}
+
 
 
 ## DeleteIntegration
 
 > [**Integration**](Integration) DeleteIntegration (string integrationId)
-
 
 
 Delete integration.
@@ -149,7 +148,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -159,7 +157,6 @@ namespace Example
 ## DeleteIntegrationsAction
 
 > void DeleteIntegrationsAction (string actionId)
-
 
 
 Delete an Action
@@ -212,7 +209,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -222,7 +218,6 @@ void (empty response body)
 ## DeleteIntegrationsActionDraft
 
 > void DeleteIntegrationsActionDraft (string actionId)
-
 
 
 Delete a Draft
@@ -275,7 +270,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -285,7 +279,6 @@ void (empty response body)
 ## DeleteIntegrationsCredential
 
 > void DeleteIntegrationsCredential (string credentialId)
-
 
 
 Delete a set of credentials
@@ -338,7 +331,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **credentialId** | **string**| Credential ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -348,7 +340,6 @@ void (empty response body)
 ## GetIntegration
 
 > [**Integration**](Integration) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
-
 
 
 Get integration.
@@ -414,7 +405,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -424,7 +414,6 @@ namespace Example
 ## GetIntegrationConfigCurrent
 
 > [**IntegrationConfiguration**](IntegrationConfiguration) GetIntegrationConfigCurrent (string integrationId)
-
 
 
 Get integration configuration.
@@ -478,7 +467,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -488,7 +476,6 @@ namespace Example
 ## GetIntegrations
 
 > [**IntegrationEntityListing**](IntegrationEntityListing) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
-
 
 
 List integrations
@@ -552,7 +539,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -562,7 +548,6 @@ namespace Example
 ## GetIntegrationsAction
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
-
 
 
 Retrieves a single Action matching id.
@@ -621,7 +606,6 @@ namespace Example
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
 | **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -631,7 +615,6 @@ namespace Example
 ## GetIntegrationsActionDraft
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
-
 
 
 Retrieve a Draft
@@ -690,7 +673,6 @@ namespace Example
 | **actionId** | **string**| actionId |  |
 | **expand** | **string**| Indicates a field in the response which should be expanded. | [optional] <br />**Values**: contract |
 | **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -700,7 +682,6 @@ namespace Example
 ## GetIntegrationsActionDraftFunction
 
 > [**FunctionConfig**](FunctionConfig) GetIntegrationsActionDraftFunction (string actionId)
-
 
 
 Get draft function settings for Action
@@ -756,7 +737,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -766,7 +746,6 @@ namespace Example
 ## GetIntegrationsActionDraftSchema
 
 > [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionDraftSchema (string actionId, string fileName)
-
 
 
 Retrieve schema for a Draft based on filename.
@@ -823,7 +802,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of schema file to be retrieved for this draft. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -833,7 +811,6 @@ namespace Example
 ## GetIntegrationsActionDraftTemplate
 
 > **string** GetIntegrationsActionDraftTemplate (string actionId, string fileName)
-
 
 
 Retrieve templates for a Draft based on filename.
@@ -890,7 +867,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of template file to be retrieved for this action draft. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -900,7 +876,6 @@ namespace Example
 ## GetIntegrationsActionDraftValidation
 
 > [**DraftValidationResult**](DraftValidationResult) GetIntegrationsActionDraftValidation (string actionId)
-
 
 
 Validate current Draft configuration.
@@ -954,7 +929,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -964,7 +938,6 @@ namespace Example
 ## GetIntegrationsActionFunction
 
 > [**FunctionConfig**](FunctionConfig) GetIntegrationsActionFunction (string actionId)
-
 
 
 Get published function settings for Action
@@ -1020,7 +993,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1030,7 +1002,6 @@ namespace Example
 ## GetIntegrationsActionSchema
 
 > [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsActionSchema (string actionId, string fileName)
-
 
 
 Retrieve schema for an action based on filename.
@@ -1087,7 +1058,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of schema file to be retrieved for this action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1097,7 +1067,6 @@ namespace Example
 ## GetIntegrationsActionTemplate
 
 > **string** GetIntegrationsActionTemplate (string actionId, string fileName)
-
 
 
 Retrieve text of templates for an action based on filename.
@@ -1154,7 +1123,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **fileName** | **string**| Name of template file to be retrieved for this action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1164,7 +1132,6 @@ namespace Example
 ## GetIntegrationsActions
 
 > [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
-
 
 
 Retrieves all actions associated with filters passed in via query param.
@@ -1239,7 +1206,6 @@ namespace Example
 | **ids** | **string**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional]  |
 | **secure** | **string**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 | **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1249,7 +1215,6 @@ namespace Example
 ## GetIntegrationsActionsCategories
 
 > [**CategoryEntityListing**](CategoryEntityListing) GetIntegrationsActionsCategories (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
-
 
 
 Retrieves all categories of available Actions
@@ -1316,7 +1281,6 @@ namespace Example
 | **sortBy** | **string**| Root level field name to sort on.  Only &#39;name&#39; is supported on this endpoint. | [optional]  |
 | **sortOrder** | **string**| Direction to sort &#39;sortBy&#39; field. | [optional] [default to asc]<br />**Values**: ASC, DESC |
 | **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1326,7 +1290,6 @@ namespace Example
 ## GetIntegrationsActionsCertificates
 
 > [**ActionCertificateListing**](ActionCertificateListing) GetIntegrationsActionsCertificates (string status = null, string type = null)
-
 
 
 Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
@@ -1382,7 +1345,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **status** | **string**| Indicates the validity of the certificate in question. | [optional] <br />**Values**: Current, Upcoming |
 | **type** | **string**| Indicates the type of the certificate. | [optional] <br />**Values**: Client |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1392,7 +1354,6 @@ namespace Example
 ## GetIntegrationsActionsCertificatesTruststore
 
 > [**TrustedCertificates**](TrustedCertificates) GetIntegrationsActionsCertificatesTruststore ()
-
 
 
 Retrieves basic info about trusted root CA certificates
@@ -1442,7 +1403,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**TrustedCertificates**](TrustedCertificates)
@@ -1451,7 +1411,6 @@ This endpoint does require any parameters.
 ## GetIntegrationsActionsDrafts
 
 > [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
-
 
 
 Retrieves all action drafts associated with the filters passed in via query param.
@@ -1526,7 +1485,6 @@ namespace Example
 | **ids** | **string**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional]  |
 | **secure** | **string**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 | **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1536,7 +1494,6 @@ namespace Example
 ## GetIntegrationsActionsFunctionsRuntimes
 
 > [**List&lt;FunctionRuntime&gt;**](FunctionRuntime) GetIntegrationsActionsFunctionsRuntimes ()
-
 
 
 Get action function settings for Action
@@ -1588,7 +1545,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**List<FunctionRuntime>**](FunctionRuntime)
@@ -1597,7 +1553,6 @@ This endpoint does require any parameters.
 ## GetIntegrationsBotconnectorIntegrationIdBot
 
 > [**BotConnectorBot**](BotConnectorBot) GetIntegrationsBotconnectorIntegrationIdBot (string integrationId, string botId, string version = null)
-
 
 
 Get a specific botConnector bot, plus versions, for this integration
@@ -1655,7 +1610,6 @@ namespace Example
 | **integrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The botID for this bot |  |
 | **version** | **string**| Specific Version | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1665,7 +1619,6 @@ namespace Example
 ## GetIntegrationsBotconnectorIntegrationIdBotVersions
 
 > [**BotConnectorBotVersionSummaryEntityListing**](BotConnectorBotVersionSummaryEntityListing) GetIntegrationsBotconnectorIntegrationIdBotVersions (string integrationId, string botId, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get a list of bot versions for a bot
@@ -1725,7 +1678,6 @@ namespace Example
 | **botId** | **string**| The botID for this bot |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1735,7 +1687,6 @@ namespace Example
 ## GetIntegrationsBotconnectorIntegrationIdBots
 
 > [**BotList**](BotList) GetIntegrationsBotconnectorIntegrationIdBots (string integrationId)
-
 
 
 Get a list of botConnector bots for this integration
@@ -1789,7 +1740,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| The integration ID for this group of bots |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1799,7 +1749,6 @@ namespace Example
 ## GetIntegrationsBotconnectorIntegrationIdBotsSummaries
 
 > [**BotConnectorBotSummaryEntityListing**](BotConnectorBotSummaryEntityListing) GetIntegrationsBotconnectorIntegrationIdBotsSummaries (string integrationId, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get a summary list of botConnector bots for this integration
@@ -1857,7 +1806,6 @@ namespace Example
 | **integrationId** | **string**| The integration ID for this group of bots |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1867,7 +1815,6 @@ namespace Example
 ## GetIntegrationsClientapps
 
 > [**ClientAppEntityListing**](ClientAppEntityListing) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
-
 
 
 List permitted client app integrations for the logged in user
@@ -1930,7 +1877,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1941,7 +1887,9 @@ namespace Example
 
 > [**UCIntegrationListing**](UCIntegrationListing) GetIntegrationsClientappsUnifiedcommunications (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 UC integration client application configuration.
 
@@ -2006,7 +1954,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2016,7 +1963,6 @@ namespace Example
 ## GetIntegrationsCredential
 
 > [**Credential**](Credential) GetIntegrationsCredential (string credentialId)
-
 
 
 Get a single credential with sensitive fields redacted
@@ -2070,7 +2016,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **credentialId** | **string**| Credential ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2080,7 +2025,6 @@ namespace Example
 ## GetIntegrationsCredentials
 
 > [**CredentialInfoListing**](CredentialInfoListing) GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
-
 
 
 List multiple sets of credentials
@@ -2136,7 +2080,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2146,7 +2089,6 @@ namespace Example
 ## GetIntegrationsCredentialsTypes
 
 > [**CredentialTypeListing**](CredentialTypeListing) GetIntegrationsCredentialsTypes ()
-
 
 
 List all credential types
@@ -2196,7 +2138,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**CredentialTypeListing**](CredentialTypeListing)
@@ -2205,7 +2146,6 @@ This endpoint does require any parameters.
 ## GetIntegrationsSpeechDialogflowAgent
 
 > [**DialogflowAgent**](DialogflowAgent) GetIntegrationsSpeechDialogflowAgent (string agentId)
-
 
 
 Get details about a Dialogflow agent
@@ -2259,7 +2199,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2269,7 +2208,6 @@ namespace Example
 ## GetIntegrationsSpeechDialogflowAgents
 
 > [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing) GetIntegrationsSpeechDialogflowAgents (int? pageNumber = null, int? pageSize = null, string name = null)
-
 
 
 Get a list of Dialogflow agents in the customers' Google accounts
@@ -2327,7 +2265,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on agent name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2337,7 +2274,6 @@ namespace Example
 ## GetIntegrationsSpeechDialogflowcxAgent
 
 > [**DialogflowCXAgent**](DialogflowCXAgent) GetIntegrationsSpeechDialogflowcxAgent (string agentId)
-
 
 
 Get details about a Dialogflow CX agent
@@ -2391,7 +2327,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **agentId** | **string**| The agent ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2401,7 +2336,6 @@ namespace Example
 ## GetIntegrationsSpeechDialogflowcxAgents
 
 > [**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing) GetIntegrationsSpeechDialogflowcxAgents (int? pageNumber = null, int? pageSize = null, string name = null)
-
 
 
 Get a list of Dialogflow CX agents in the customers' Google accounts
@@ -2459,7 +2393,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on agent name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2469,7 +2402,6 @@ namespace Example
 ## GetIntegrationsSpeechLexBotAlias
 
 > [**LexBotAlias**](LexBotAlias) GetIntegrationsSpeechLexBotAlias (string aliasId)
-
 
 
 Get details about a Lex bot alias
@@ -2523,7 +2455,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **aliasId** | **string**| The alias ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2533,7 +2464,6 @@ namespace Example
 ## GetIntegrationsSpeechLexBotBotIdAliases
 
 > [**LexBotAliasEntityListing**](LexBotAliasEntityListing) GetIntegrationsSpeechLexBotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
-
 
 
 Get a list of aliases for a bot in the customer's AWS accounts
@@ -2595,7 +2525,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **status** | **string**| Filter on alias status | [optional] <br />**Values**: READY, FAILED, BUILDING, NOT_BUILT |
 | **name** | **string**| Filter on alias name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2605,7 +2534,6 @@ namespace Example
 ## GetIntegrationsSpeechLexBots
 
 > [**LexBotEntityListing**](LexBotEntityListing) GetIntegrationsSpeechLexBots (int? pageNumber = null, int? pageSize = null, string name = null)
-
 
 
 Get a list of Lex bots in the customers' AWS accounts
@@ -2663,7 +2591,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on bot name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2673,7 +2600,6 @@ namespace Example
 ## GetIntegrationsSpeechLexv2BotAlias
 
 > [**LexV2BotAlias**](LexV2BotAlias) GetIntegrationsSpeechLexv2BotAlias (string aliasId)
-
 
 
 Get details about a Lex V2 bot alias
@@ -2727,7 +2653,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **aliasId** | **string**| The Alias ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2737,7 +2662,6 @@ namespace Example
 ## GetIntegrationsSpeechLexv2BotBotIdAliases
 
 > [**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing) GetIntegrationsSpeechLexv2BotBotIdAliases (string botId, int? pageNumber = null, int? pageSize = null, string status = null, string name = null)
-
 
 
 Get a list of aliases for a Lex V2 bot
@@ -2799,7 +2723,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **status** | **string**| Filter on alias status | [optional] <br />**Values**: Creating, Available, Deleting, Failed |
 | **name** | **string**| Filter on alias name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2809,7 +2732,6 @@ namespace Example
 ## GetIntegrationsSpeechLexv2Bots
 
 > [**LexV2BotEntityListing**](LexV2BotEntityListing) GetIntegrationsSpeechLexv2Bots (int? pageNumber = null, int? pageSize = null, string name = null)
-
 
 
 Get a list of Lex V2 bots
@@ -2867,7 +2789,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on bot name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2877,7 +2798,6 @@ namespace Example
 ## GetIntegrationsSpeechNuanceNuanceIntegrationIdBot
 
 > [**NuanceBot**](NuanceBot) GetIntegrationsSpeechNuanceNuanceIntegrationIdBot (string nuanceIntegrationId, string botId, List<string> expand = null, string targetChannel = null)
-
 
 
 Get a Nuance bot in the specified Integration
@@ -2937,7 +2857,6 @@ namespace Example
 | **botId** | **string**| The Nuance bot ID to get |  |
 | **expand** | [**List<string>**](string)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
 | **targetChannel** | **string**| targetChannel | [optional] <br />**Values**: digital, voice |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2947,7 +2866,6 @@ namespace Example
 ## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob
 
 > [**AsyncJob**](AsyncJob) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob (string nuanceIntegrationId, string botId, string jobId)
-
 
 
 Get the status of an asynchronous Nuance bot GET job
@@ -3005,7 +2923,6 @@ namespace Example
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The Nuance bot ID |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3015,7 +2932,6 @@ namespace Example
 ## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults
 
 > [**NuanceBot**](NuanceBot) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults (string nuanceIntegrationId, string botId, string jobId)
-
 
 
 Get the result of an asynchronous Nuance bot GET job
@@ -3073,7 +2989,6 @@ namespace Example
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **botId** | **string**| The Nuance bot ID |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3083,7 +2998,6 @@ namespace Example
 ## GetIntegrationsSpeechNuanceNuanceIntegrationIdBots
 
 > [**NuanceBotEntityListing**](NuanceBotEntityListing) GetIntegrationsSpeechNuanceNuanceIntegrationIdBots (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
-
 
 
 Get a list of Nuance bots available in the specified Integration
@@ -3145,7 +3059,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **onlyRegisteredBots** | **bool?**| Limit bots to the ones configured for Genesys Cloud usage | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3155,7 +3068,6 @@ namespace Example
 ## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob
 
 > [**AsyncJob**](AsyncJob) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob (string nuanceIntegrationId, string jobId)
-
 
 
 Get the status of an asynchronous Nuance bots GET job
@@ -3211,7 +3123,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3221,7 +3132,6 @@ namespace Example
 ## GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults
 
 > [**NuanceBotEntityListing**](NuanceBotEntityListing) GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults (string nuanceIntegrationId, string jobId)
-
 
 
 Get the result of an asynchronous Nuance bots GET job
@@ -3277,7 +3187,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **jobId** | **string**| The asynchronous job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3287,7 +3196,6 @@ namespace Example
 ## GetIntegrationsSpeechSttEngine
 
 > [**SttEngineEntity**](SttEngineEntity) GetIntegrationsSpeechSttEngine (string engineId)
-
 
 
 Get details about a STT engine
@@ -3341,7 +3249,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **engineId** | **string**| The engine ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3351,7 +3258,6 @@ namespace Example
 ## GetIntegrationsSpeechSttEngines
 
 > [**SttEngineEntityListing**](SttEngineEntityListing) GetIntegrationsSpeechSttEngines (int? pageNumber = null, int? pageSize = null, string name = null)
-
 
 
 Get a list of STT engines enabled for org
@@ -3409,7 +3315,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **name** | **string**| Filter on engine name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3419,7 +3324,6 @@ namespace Example
 ## GetIntegrationsSpeechTtsEngine
 
 > [**TtsEngineEntity**](TtsEngineEntity) GetIntegrationsSpeechTtsEngine (string engineId, bool? includeVoices = null)
-
 
 
 Get details about a TTS engine
@@ -3475,7 +3379,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **engineId** | **string**| The engine ID |  |
 | **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3485,7 +3388,6 @@ namespace Example
 ## GetIntegrationsSpeechTtsEngineVoice
 
 > [**TtsVoiceEntity**](TtsVoiceEntity) GetIntegrationsSpeechTtsEngineVoice (string engineId, string voiceId)
-
 
 
 Get details about a specific voice for a TTS engine
@@ -3541,7 +3443,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **engineId** | **string**| The engine ID |  |
 | **voiceId** | **string**| The voice ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3551,7 +3452,6 @@ namespace Example
 ## GetIntegrationsSpeechTtsEngineVoices
 
 > [**TtsVoiceEntityListing**](TtsVoiceEntityListing) GetIntegrationsSpeechTtsEngineVoices (string engineId, int? pageNumber = null, int? pageSize = null)
-
 
 
 Get a list of voices for a TTS engine
@@ -3609,7 +3509,6 @@ namespace Example
 | **engineId** | **string**| The engine ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3619,7 +3518,6 @@ namespace Example
 ## GetIntegrationsSpeechTtsEngines
 
 > [**TtsEngineEntityListing**](TtsEngineEntityListing) GetIntegrationsSpeechTtsEngines (int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
-
 
 
 Get a list of TTS engines enabled for org
@@ -3681,7 +3579,6 @@ namespace Example
 | **includeVoices** | **bool?**| Include voices for the engine | [optional] [default to false] |
 | **name** | **string**| Filter on engine name | [optional]  |
 | **language** | **string**| Filter on supported language. If includeVoices&#x3D;true then the voices are also filtered. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3691,7 +3588,6 @@ namespace Example
 ## GetIntegrationsSpeechTtsSettings
 
 > [**TtsSettings**](TtsSettings) GetIntegrationsSpeechTtsSettings ()
-
 
 
 Get TTS settings for an org
@@ -3741,7 +3637,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**TtsSettings**](TtsSettings)
@@ -3750,7 +3645,6 @@ This endpoint does require any parameters.
 ## GetIntegrationsType
 
 > [**IntegrationType**](IntegrationType) GetIntegrationsType (string typeId)
-
 
 
 Get integration type.
@@ -3804,7 +3698,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **typeId** | **string**| Integration Type Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3814,7 +3707,6 @@ namespace Example
 ## GetIntegrationsTypeConfigschema
 
 > [**JsonSchemaDocument**](JsonSchemaDocument) GetIntegrationsTypeConfigschema (string typeId, string configType)
-
 
 
 Get properties config schema for an integration type.
@@ -3870,7 +3762,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **typeId** | **string**| Integration Type Id |  |
 | **configType** | **string**| Config schema type | <br />**Values**: properties, advanced |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3880,7 +3771,6 @@ namespace Example
 ## GetIntegrationsTypes
 
 > [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
-
 
 
 List integration types
@@ -3944,7 +3834,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3954,7 +3843,6 @@ namespace Example
 ## GetIntegrationsUnifiedcommunicationsClientapp
 
 > [**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration) GetIntegrationsUnifiedcommunicationsClientapp (string ucIntegrationId)
-
 
 
 UC integration client application configuration.
@@ -4010,7 +3898,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ucIntegrationId** | **string**| 3rd Party Service Type |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4020,7 +3907,6 @@ namespace Example
 ## GetIntegrationsUnifiedcommunicationsClientapps
 
 > [**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing) GetIntegrationsUnifiedcommunicationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
-
 
 
 List UC integration client application configurations.
@@ -4086,7 +3972,6 @@ namespace Example
 | **expand** | [**List<string>**](string)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4096,7 +3981,6 @@ namespace Example
 ## GetIntegrationsUserapps
 
 > [**UserAppEntityListing**](UserAppEntityListing) GetIntegrationsUserapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
-
 
 
 List permitted user app integrations for the logged in user
@@ -4161,7 +4045,6 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **appHost** | **string**| The type of UserApp to filter by | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4171,7 +4054,6 @@ namespace Example
 ## PatchIntegration
 
 > [**Integration**](Integration) PatchIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, Integration body = null)
-
 
 
 Update an integration.
@@ -4239,7 +4121,6 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **body** | [**Integration**](Integration)| Integration Update | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4249,7 +4130,6 @@ namespace Example
 ## PatchIntegrationsAction
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PatchIntegrationsAction (string actionId, UpdateActionInput body)
-
 
 
 Patch an Action
@@ -4305,7 +4185,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**UpdateActionInput**](UpdateActionInput)| Input used to patch the Action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4315,7 +4194,6 @@ namespace Example
 ## PatchIntegrationsActionDraft
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
-
 
 
 Update an existing Draft
@@ -4371,7 +4249,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**UpdateDraftInput**](UpdateDraftInput)| Input used to patch the Action Draft. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4381,7 +4258,6 @@ namespace Example
 ## PostIntegrations
 
 > [**Integration**](Integration) PostIntegrations (CreateIntegrationRequest body = null)
-
 
 
 Create an integration.
@@ -4435,7 +4311,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateIntegrationRequest**](CreateIntegrationRequest)| Integration | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4445,7 +4320,6 @@ namespace Example
 ## PostIntegrationsActionDraft
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActionDraft (string actionId)
-
 
 
 Create a new Draft from existing Action
@@ -4499,7 +4373,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4509,7 +4382,6 @@ namespace Example
 ## PostIntegrationsActionDraftFunctionUpload
 
 > [**FunctionUploadResponse**](FunctionUploadResponse) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
-
 
 
 Create upload presigned URL for draft function package file.
@@ -4567,7 +4439,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**FunctionUploadRequest**](FunctionUploadRequest)| Input used to request URL upload. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4577,7 +4448,6 @@ namespace Example
 ## PostIntegrationsActionDraftPublish
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
-
 
 
 Publish a Draft and make it the active Action configuration
@@ -4633,7 +4503,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**PublishDraftInput**](PublishDraftInput)| Input used to patch the Action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4643,7 +4512,6 @@ namespace Example
 ## PostIntegrationsActionDraftTest
 
 > [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionDraftTest (string actionId, Object body)
-
 
 
 Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4699,7 +4567,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4709,7 +4576,6 @@ namespace Example
 ## PostIntegrationsActionExecute
 
 > **Object** PostIntegrationsActionExecute (string actionId, Object body)
-
 
 
 Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
@@ -4766,7 +4632,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4776,7 +4641,6 @@ namespace Example
 ## PostIntegrationsActionTest
 
 > [**TestExecutionResult**](TestExecutionResult) PostIntegrationsActionTest (string actionId, Object body)
-
 
 
 Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
@@ -4833,7 +4697,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Object**](Object)| Map of parameters used for variable substitution. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4843,7 +4706,6 @@ namespace Example
 ## PostIntegrationsActions
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActions (PostActionInput body)
-
 
 
 Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
@@ -4897,7 +4759,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PostActionInput**](PostActionInput)| Input used to create Action. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4907,7 +4768,6 @@ namespace Example
 ## PostIntegrationsActionsDrafts
 
 > [**PureCloudPlatform.Client.V2.Model.Action**](PureCloudPlatform.Client.V2.Model.Action) PostIntegrationsActionsDrafts (PostActionInput body)
-
 
 
 Create a new Draft
@@ -4961,7 +4821,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**PostActionInput**](PostActionInput)| Input used to create Action Draft. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4971,7 +4830,6 @@ namespace Example
 ## PostIntegrationsCredentials
 
 > [**CredentialInfo**](CredentialInfo) PostIntegrationsCredentials (Credential body = null)
-
 
 
 Create a set of credentials
@@ -5025,7 +4883,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Credential**](Credential)| Credential | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5035,7 +4892,6 @@ namespace Example
 ## PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs
 
 > [**AsyncJob**](AsyncJob) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs (string nuanceIntegrationId, string botId, List<string> expand = null, string body = null)
-
 
 
 Get a Nuance bot in the specified Integration asynchronously
@@ -5095,7 +4951,6 @@ namespace Example
 | **botId** | **string**| The Nuance bot ID |  |
 | **expand** | [**List<string>**](string)| expand | [optional] <br />**Values**: variables, transferNodes, channels, locales |
 | **body** | **string**| targetChannel | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5105,7 +4960,6 @@ namespace Example
 ## PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs
 
 > [**AsyncJob**](AsyncJob) PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs (string nuanceIntegrationId, int? pageNumber = null, int? pageSize = null, bool? onlyRegisteredBots = null)
-
 
 
 Get a list of Nuance bots in the specified Integration asynchronously
@@ -5165,7 +5019,6 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **onlyRegisteredBots** | **bool?**| Limit bots to the ones configured for Genesys Cloud usage | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5175,7 +5028,6 @@ namespace Example
 ## PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate
 
 > void PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate (string nuanceIntegrationId, BotExecutionConfiguration settings)
-
 
 
 Try out a single credential for a Nuance bot to know if the secret is correct
@@ -5230,7 +5082,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **settings** | [**BotExecutionConfiguration**](BotExecutionConfiguration)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5240,7 +5091,6 @@ void (empty response body)
 ## PutIntegrationConfigCurrent
 
 > [**IntegrationConfiguration**](IntegrationConfiguration) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
-
 
 
 Update integration configuration.
@@ -5296,7 +5146,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
 | **body** | [**IntegrationConfiguration**](IntegrationConfiguration)| Integration Configuration | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5306,7 +5155,6 @@ namespace Example
 ## PutIntegrationsActionDraftFunction
 
 > [**FunctionConfig**](FunctionConfig) PutIntegrationsActionDraftFunction (string actionId, Function body)
-
 
 
 Update draft function settings.
@@ -5364,7 +5212,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**Function**](Function)| Input used to update function settings. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5374,7 +5221,6 @@ namespace Example
 ## PutIntegrationsBotconnectorIntegrationIdBots
 
 > void PutIntegrationsBotconnectorIntegrationIdBots (string integrationId, BotList botList)
-
 
 
 Set a list of botConnector bots plus versions for this integration
@@ -5429,7 +5275,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| The integration ID for this group of bots |  |
 | **botList** | [**BotList**](BotList)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5439,7 +5284,6 @@ void (empty response body)
 ## PutIntegrationsCredential
 
 > [**CredentialInfo**](CredentialInfo) PutIntegrationsCredential (string credentialId, Credential body = null)
-
 
 
 Update a set of credentials
@@ -5495,7 +5339,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **credentialId** | **string**| Credential ID |  |
 | **body** | [**Credential**](Credential)| Credential | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5505,7 +5348,6 @@ namespace Example
 ## PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings
 
 > void PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings (string nuanceIntegrationId, NuanceBotLaunchSettings settings)
-
 
 
 Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
@@ -5560,7 +5402,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nuanceIntegrationId** | **string**| The integration ID for this group of bots |  |
 | **settings** | [**NuanceBotLaunchSettings**](NuanceBotLaunchSettings)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5570,7 +5411,6 @@ void (empty response body)
 ## PutIntegrationsSpeechTtsSettings
 
 > [**TtsSettings**](TtsSettings) PutIntegrationsSpeechTtsSettings (TtsSettings body)
-
 
 
 Update TTS settings for an org
@@ -5624,7 +5464,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TtsSettings**](TtsSettings)| Updated TtsSettings |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5634,7 +5473,6 @@ namespace Example
 ## PutIntegrationsUnifiedcommunicationThirdpartypresences
 
 > **string** PutIntegrationsUnifiedcommunicationThirdpartypresences (string ucIntegrationId, List<UCThirdPartyPresence> body)
-
 
 
 Bulk integration presence ingestion
@@ -5692,11 +5530,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ucIntegrationId** | **string**| UC Integration ID |  |
 | **body** | [**List<UCThirdPartyPresence>**](UCThirdPartyPresence)| List of User presences |  |
-{: class="table table-striped"}
 
 ### Return type
 
 **string**
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

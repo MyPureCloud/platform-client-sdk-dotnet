@@ -22,13 +22,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutGreetingsDefaults**](#PutGreetingsDefaults) | **Put** /api/v2/greetings/defaults | Update an Organization&#39;s DefaultGreetingList |
 | [**PutGroupGreetingsDefaults**](#PutGroupGreetingsDefaults) | **Put** /api/v2/groups/{groupId}/greetings/defaults | Updates the DefaultGreetingList of the specified Group |
 | [**PutUserGreetingsDefaults**](#PutUserGreetingsDefaults) | **Put** /api/v2/users/{userId}/greetings/defaults | Updates the DefaultGreetingList of the specified User |
-{: class="table table-striped"}
+
 
 
 ## DeleteGreeting
 
 > void DeleteGreeting (string greetingId)
-
 
 
 Deletes a Greeting with the given GreetingId
@@ -80,7 +79,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -90,7 +88,6 @@ void (empty response body)
 ## GetGreeting
 
 > [**Greeting**](Greeting) GetGreeting (string greetingId)
-
 
 
 Get a Greeting with the given GreetingId
@@ -143,7 +140,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -153,7 +149,6 @@ namespace Example
 ## GetGreetingMedia
 
 > [**GreetingMediaInfo**](GreetingMediaInfo) GetGreetingMedia (string greetingId, string formatId = null)
-
 
 
 Get media playback URI for this greeting
@@ -208,7 +203,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -218,7 +212,6 @@ namespace Example
 ## GetGreetings
 
 > [**DomainEntityListing**](DomainEntityListing) GetGreetings (int? pageSize = null, int? pageNumber = null)
-
 
 
 Gets an Organization's Greetings
@@ -273,7 +266,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -283,7 +275,6 @@ namespace Example
 ## GetGreetingsDefaults
 
 > [**DefaultGreetingList**](DefaultGreetingList) GetGreetingsDefaults ()
-
 
 
 Get an Organization's DefaultGreetingList
@@ -332,7 +323,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DefaultGreetingList**](DefaultGreetingList)
@@ -341,7 +331,6 @@ This endpoint does require any parameters.
 ## GetGroupGreetings
 
 > [**GreetingListing**](GreetingListing) GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of the Group's Greetings
@@ -398,7 +387,6 @@ namespace Example
 | **groupId** | **string**| Group ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -408,7 +396,6 @@ namespace Example
 ## GetGroupGreetingsDefaults
 
 > [**DefaultGreetingList**](DefaultGreetingList) GetGroupGreetingsDefaults (string groupId)
-
 
 
 Grabs the list of Default Greetings given a Group's ID
@@ -461,7 +448,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -471,7 +457,6 @@ namespace Example
 ## GetUserGreetings
 
 > [**DomainEntityListing**](DomainEntityListing) GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
-
 
 
 Get a list of the User's Greetings
@@ -528,7 +513,6 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -538,7 +522,6 @@ namespace Example
 ## GetUserGreetingsDefaults
 
 > [**DefaultGreetingList**](DefaultGreetingList) GetUserGreetingsDefaults (string userId)
-
 
 
 Grabs the list of Default Greetings given a User's ID
@@ -591,7 +574,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -601,7 +583,6 @@ namespace Example
 ## PostGreetings
 
 > [**Greeting**](Greeting) PostGreetings (Greeting body)
-
 
 
 Create a Greeting for an Organization
@@ -654,7 +635,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Greeting**](Greeting)| The Greeting to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -664,7 +644,6 @@ namespace Example
 ## PostGroupGreetings
 
 > [**Greeting**](Greeting) PostGroupGreetings (string groupId, Greeting body)
-
 
 
 Creates a Greeting for a Group
@@ -719,7 +698,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
 | **body** | [**Greeting**](Greeting)| The Greeting to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -729,7 +707,6 @@ namespace Example
 ## PostUserGreetings
 
 > [**Greeting**](Greeting) PostUserGreetings (string userId, Greeting body)
-
 
 
 Creates a Greeting for a User
@@ -784,7 +761,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**Greeting**](Greeting)| The Greeting to create |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -794,7 +770,6 @@ namespace Example
 ## PutGreeting
 
 > [**Greeting**](Greeting) PutGreeting (string greetingId, Greeting body)
-
 
 
 Updates the Greeting with the given GreetingId
@@ -849,7 +824,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
 | **body** | [**Greeting**](Greeting)| The updated Greeting |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -859,7 +833,6 @@ namespace Example
 ## PutGreetingsDefaults
 
 > [**DefaultGreetingList**](DefaultGreetingList) PutGreetingsDefaults (DefaultGreetingList body)
-
 
 
 Update an Organization's DefaultGreetingList
@@ -912,7 +885,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DefaultGreetingList**](DefaultGreetingList)| The updated defaultGreetingList |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -922,7 +894,6 @@ namespace Example
 ## PutGroupGreetingsDefaults
 
 > [**DefaultGreetingList**](DefaultGreetingList) PutGroupGreetingsDefaults (string groupId, DefaultGreetingList body)
-
 
 
 Updates the DefaultGreetingList of the specified Group
@@ -977,7 +948,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| Group ID |  |
 | **body** | [**DefaultGreetingList**](DefaultGreetingList)| The updated defaultGreetingList |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -987,7 +957,6 @@ namespace Example
 ## PutUserGreetingsDefaults
 
 > [**DefaultGreetingList**](DefaultGreetingList) PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
-
 
 
 Updates the DefaultGreetingList of the specified User
@@ -1042,11 +1011,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**DefaultGreetingList**](DefaultGreetingList)| The updated defaultGreetingList |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**DefaultGreetingList**](DefaultGreetingList)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

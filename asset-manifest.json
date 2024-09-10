@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/platform-client-sdk-dotnet/static/css/main.d7f2cf9a.css",
-    "main.js": "/platform-client-sdk-dotnet/static/js/main.e7b5a5a6.js",
+    "main.js": "/platform-client-sdk-dotnet/static/js/main.fdb75966.js",
     "react-syntax-highlighter/refractor-import.js": "/platform-client-sdk-dotnet/static/js/react-syntax-highlighter/refractor-import.252e9f8b.chunk.js",
     "static/js/453.5565870f.chunk.js": "/platform-client-sdk-dotnet/static/js/453.5565870f.chunk.js",
     "static/media/genesys-dev-icons.eot?": "/platform-client-sdk-dotnet/static/media/genesys-dev-icons.ac21bc53ac924798cc2f.eot",
@@ -23,12 +23,12 @@
     "static/media/logo-dark.svg": "/platform-client-sdk-dotnet/static/media/logo-dark.69cd32a4484f8e0b926aba88c6200252.svg",
     "index.html": "/platform-client-sdk-dotnet/index.html",
     "main.d7f2cf9a.css.map": "/platform-client-sdk-dotnet/static/css/main.d7f2cf9a.css.map",
-    "main.e7b5a5a6.js.map": "/platform-client-sdk-dotnet/static/js/main.e7b5a5a6.js.map",
+    "main.fdb75966.js.map": "/platform-client-sdk-dotnet/static/js/main.fdb75966.js.map",
     "refractor-import.252e9f8b.chunk.js.map": "/platform-client-sdk-dotnet/static/js/react-syntax-highlighter/refractor-import.252e9f8b.chunk.js.map",
     "453.5565870f.chunk.js.map": "/platform-client-sdk-dotnet/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d7f2cf9a.css",
-    "static/js/main.e7b5a5a6.js"
+    "static/js/main.fdb75966.js"
   ]
 }

@@ -8,13 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetBillingReportsBillableusage**](#GetBillingReportsBillableusage) | **Get** /api/v2/billing/reports/billableusage | Get a report of the billable license usages |
 | [**GetBillingTrusteebillingoverviewTrustorOrgId**](#GetBillingTrusteebillingoverviewTrustorOrgId) | **Get** /api/v2/billing/trusteebillingoverview/{trustorOrgId} | Get the billing overview for an organization that is managed by a partner. |
-{: class="table table-striped"}
+
 
 
 ## GetBillingReportsBillableusage
 
 > [**BillingUsageReport**](BillingUsageReport) GetBillingReportsBillableusage (DateTime? startDate, DateTime? endDate)
-
 
 
 Get a report of the billable license usages
@@ -73,7 +72,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **startDate** | **DateTime?**| The period start date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  |
 | **endDate** | **DateTime?**| The period end date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -83,7 +81,6 @@ namespace Example
 ## GetBillingTrusteebillingoverviewTrustorOrgId
 
 > [**TrusteeBillingOverview**](TrusteeBillingOverview) GetBillingTrusteebillingoverviewTrustorOrgId (string trustorOrgId, int? billingPeriodIndex = null)
-
 
 
 Get the billing overview for an organization that is managed by a partner.
@@ -141,11 +138,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **trustorOrgId** | **string**| The organization ID of the trustor (customer) organization. |  |
 | **billingPeriodIndex** | **int?**| 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. | [optional] [default to 0] |
-{: class="table table-striped"}
 
 ### Return type
 
 [**TrusteeBillingOverview**](TrusteeBillingOverview)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

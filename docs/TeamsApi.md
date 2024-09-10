@@ -16,13 +16,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTeamMembers**](#PostTeamMembers) | **Post** /api/v2/teams/{teamId}/members | Add team members |
 | [**PostTeams**](#PostTeams) | **Post** /api/v2/teams | Create a team |
 | [**PostTeamsSearch**](#PostTeamsSearch) | **Post** /api/v2/teams/search | Search resources. |
-{: class="table table-striped"}
+
 
 
 ## DeleteTeam
 
 > void DeleteTeam (string teamId)
-
 
 
 Delete team
@@ -75,7 +74,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -85,7 +83,6 @@ void (empty response body)
 ## DeleteTeamMembers
 
 > void DeleteTeamMembers (string teamId, string id)
-
 
 
 Delete team members
@@ -140,7 +137,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
 | **id** | **string**| Comma separated list of member ids to remove |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -150,7 +146,6 @@ void (empty response body)
 ## GetTeam
 
 > [**Team**](Team) GetTeam (string teamId)
-
 
 
 Get team
@@ -204,7 +199,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -214,7 +208,6 @@ namespace Example
 ## GetTeamMembers
 
 > [**TeamMemberEntityListing**](TeamMemberEntityListing) GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
-
 
 
 Get team membership
@@ -276,7 +269,6 @@ namespace Example
 | **before** | **string**| The cursor that points to the previous item in the complete list of teams | [optional]  |
 | **after** | **string**| The cursor that points to the next item in the complete list of teams | [optional]  |
 | **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -286,7 +278,6 @@ namespace Example
 ## GetTeams
 
 > [**TeamEntityListing**](TeamEntityListing) GetTeams (int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
-
 
 
 Get Team listing
@@ -348,7 +339,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the next item in the complete list of teams | [optional]  |
 | **before** | **string**| The cursor that points to the previous item in the complete list of teams | [optional]  |
 | **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities.division |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -358,7 +348,6 @@ namespace Example
 ## PatchTeam
 
 > [**Team**](Team) PatchTeam (string teamId, Team body)
-
 
 
 Update team
@@ -414,7 +403,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
 | **body** | [**Team**](Team)| Team |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -424,7 +412,6 @@ namespace Example
 ## PostAnalyticsTeamsActivityQuery
 
 > [**TeamActivityResponse**](TeamActivityResponse) PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for team activity observations
@@ -482,7 +469,6 @@ namespace Example
 | **body** | [**TeamActivityQuery**](TeamActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -492,7 +478,6 @@ namespace Example
 ## PostTeamMembers
 
 > [**TeamMemberAddListingResponse**](TeamMemberAddListingResponse) PostTeamMembers (string teamId, TeamMembers body)
-
 
 
 Add team members
@@ -548,7 +533,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
 | **body** | [**TeamMembers**](TeamMembers)| TeamMembers |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -558,7 +542,6 @@ namespace Example
 ## PostTeams
 
 > [**Team**](Team) PostTeams (Team body)
-
 
 
 Create a team
@@ -612,7 +595,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Team**](Team)| Team |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -622,7 +604,6 @@ namespace Example
 ## PostTeamsSearch
 
 > [**TeamsSearchResponse**](TeamsSearchResponse) PostTeamsSearch (TeamSearchRequest body)
-
 
 
 Search resources.
@@ -676,11 +657,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TeamSearchRequest**](TeamSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

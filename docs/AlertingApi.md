@@ -30,13 +30,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutAlertingInteractionstatsAlert**](#PutAlertingInteractionstatsAlert) | **Put** /api/v2/alerting/interactionstats/alerts/{alertId} | Update an interaction stats alert read status |
 | [**PutAlertingInteractionstatsRule**](#PutAlertingInteractionstatsRule) | **Put** /api/v2/alerting/interactionstats/rules/{ruleId} | Update an interaction stats rule |
 | [**PutAlertingRule**](#PutAlertingRule) | **Put** /api/v2/alerting/rules/{ruleId} | Update a rule |
-{: class="table table-striped"}
+
 
 
 ## DeleteAlertingAlert
 
 > void DeleteAlertingAlert (string alertId)
-
 
 
 Delete an alert
@@ -89,7 +88,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -100,7 +98,9 @@ void (empty response body)
 
 > void DeleteAlertingInteractionstatsAlert (string alertId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete an interaction stats alert
 
@@ -154,7 +154,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -165,7 +164,9 @@ void (empty response body)
 
 > void DeleteAlertingInteractionstatsRule (string ruleId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete an interaction stats rule
 
@@ -219,7 +220,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -229,7 +229,6 @@ void (empty response body)
 ## DeleteAlertingRule
 
 > void DeleteAlertingRule (string ruleId)
-
 
 
 Delete a rule.
@@ -282,7 +281,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -292,7 +290,6 @@ void (empty response body)
 ## GetAlertingAlert
 
 > [**CommonAlert**](CommonAlert) GetAlertingAlert (string alertId)
-
 
 
 Get an alert
@@ -346,7 +343,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -357,7 +353,9 @@ namespace Example
 
 > [**ActiveAlertCount**](ActiveAlertCount) GetAlertingAlertsActive ()
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets active alert count for a user
 
@@ -407,7 +405,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ActiveAlertCount**](ActiveAlertCount)
@@ -417,7 +414,9 @@ This endpoint does require any parameters.
 
 > [**InteractionStatsAlert**](InteractionStatsAlert) GetAlertingInteractionstatsAlert (string alertId, List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get an interaction stats alert
 
@@ -474,7 +473,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -485,7 +483,9 @@ namespace Example
 
 > [**InteractionStatsAlertContainer**](InteractionStatsAlertContainer) GetAlertingInteractionstatsAlerts (List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get interaction stats alert list
 
@@ -540,7 +540,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -551,7 +550,9 @@ namespace Example
 
 > [**UnreadMetric**](UnreadMetric) GetAlertingInteractionstatsAlertsUnread ()
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Gets user unread count of interaction stats alerts
 
@@ -601,7 +602,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**UnreadMetric**](UnreadMetric)
@@ -611,7 +611,9 @@ This endpoint does require any parameters.
 
 > [**InteractionStatsRule**](InteractionStatsRule) GetAlertingInteractionstatsRule (string ruleId, List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get an interaction stats rule
 
@@ -668,7 +670,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -679,7 +680,9 @@ namespace Example
 
 > [**InteractionStatsRuleContainer**](InteractionStatsRuleContainer) GetAlertingInteractionstatsRules (List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get an interaction stats rule list
 
@@ -734,7 +737,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -744,7 +746,6 @@ namespace Example
 ## GetAlertingRule
 
 > [**CommonRule**](CommonRule) GetAlertingRule (string ruleId)
-
 
 
 Get a rule.
@@ -798,7 +799,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule Id |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -808,7 +808,6 @@ namespace Example
 ## PatchAlertingAlert
 
 > [**CommonAlert**](CommonAlert) PatchAlertingAlert (string alertId, AlertRequest body = null)
-
 
 
 Allows an entity to mute/snooze an alert or update the unread status of the alert.
@@ -866,7 +865,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
 | **body** | [**AlertRequest**](AlertRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -876,7 +874,6 @@ namespace Example
 ## PatchAlertingAlertsBulk
 
 > [**BulkResponse**](BulkResponse) PatchAlertingAlertsBulk (CommonAlertBulkUpdateRequest body)
-
 
 
 Bulk alert updates
@@ -930,7 +927,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CommonAlertBulkUpdateRequest**](CommonAlertBulkUpdateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -940,7 +936,6 @@ namespace Example
 ## PatchAlertingRulesBulk
 
 > [**BulkResponse**](BulkResponse) PatchAlertingRulesBulk (CommonRuleBulkUpdateNotificationsRequest body)
-
 
 
 Bulk update of notification lists
@@ -994,7 +989,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CommonRuleBulkUpdateNotificationsRequest**](CommonRuleBulkUpdateNotificationsRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1004,7 +998,6 @@ namespace Example
 ## PostAlertingAlertsQuery
 
 > [**AlertListing**](AlertListing) PostAlertingAlertsQuery (GetAlertQuery body = null)
-
 
 
 Gets a paged list of alerts. The max page size is 50
@@ -1058,7 +1051,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GetAlertQuery**](GetAlertQuery)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1069,7 +1061,9 @@ namespace Example
 
 > [**InteractionStatsRule**](InteractionStatsRule) PostAlertingInteractionstatsRules (InteractionStatsRule body, List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create an interaction stats rule
 
@@ -1126,7 +1120,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**InteractionStatsRule**](InteractionStatsRule)| AlertingRule |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1136,7 +1129,6 @@ namespace Example
 ## PostAlertingRules
 
 > [**CommonRule**](CommonRule) PostAlertingRules (CommonRule body)
-
 
 
 Create a Rule.
@@ -1190,7 +1182,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CommonRule**](CommonRule)| rule to be created |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1200,7 +1191,6 @@ namespace Example
 ## PostAlertingRulesBulkRemove
 
 > [**BulkResponse**](BulkResponse) PostAlertingRulesBulkRemove (CommonRuleBulkDeleteRequest body)
-
 
 
 Bulk remove rules
@@ -1254,7 +1244,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CommonRuleBulkDeleteRequest**](CommonRuleBulkDeleteRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1264,7 +1253,6 @@ namespace Example
 ## PostAlertingRulesQuery
 
 > [**CommonRuleContainer**](CommonRuleContainer) PostAlertingRulesQuery (GetRulesQuery body = null)
-
 
 
 Get a paged list of rules.  The max size of the page is 50 items.
@@ -1318,7 +1306,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**GetRulesQuery**](GetRulesQuery)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1328,7 +1315,6 @@ namespace Example
 ## PutAlertingAlert
 
 > [**UnreadStatus**](UnreadStatus) PutAlertingAlert (string alertId, AlertingUnreadStatus body = null)
-
 
 
 Update an alert read status
@@ -1384,7 +1370,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
 | **body** | [**AlertingUnreadStatus**](AlertingUnreadStatus)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1395,7 +1380,9 @@ namespace Example
 
 > [**UnreadStatus**](UnreadStatus) PutAlertingInteractionstatsAlert (string alertId, UnreadStatus body, List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update an interaction stats alert read status
 
@@ -1454,7 +1441,6 @@ namespace Example
 | **alertId** | **string**| Alert ID |  |
 | **body** | [**UnreadStatus**](UnreadStatus)| InteractionStatsAlert |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1465,7 +1451,9 @@ namespace Example
 
 > [**InteractionStatsRule**](InteractionStatsRule) PutAlertingInteractionstatsRule (string ruleId, InteractionStatsRule body, List<string> expand = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update an interaction stats rule
 
@@ -1524,7 +1512,6 @@ namespace Example
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**InteractionStatsRule**](InteractionStatsRule)| AlertingRule |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1534,7 +1521,6 @@ namespace Example
 ## PutAlertingRule
 
 > [**CommonRule**](CommonRule) PutAlertingRule (string ruleId, ModifiableRuleProperties body)
-
 
 
 Update a rule
@@ -1590,11 +1576,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule Id |  |
 | **body** | [**ModifiableRuleProperties**](ModifiableRuleProperties)| rule to be updated |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**CommonRule**](CommonRule)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

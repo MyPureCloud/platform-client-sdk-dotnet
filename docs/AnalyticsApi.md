@@ -103,13 +103,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersDetailsQuery**](#PostAnalyticsUsersDetailsQuery) | **Post** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](#PostAnalyticsUsersObservationsQuery) | **Post** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PutAnalyticsDataretentionSettings**](#PutAnalyticsDataretentionSettings) | **Put** /api/v2/analytics/dataretention/settings | Update analytics data retention setting |
-{: class="table table-striped"}
+
 
 
 ## DeleteAnalyticsConversationsDetailsJob
 
 > void DeleteAnalyticsConversationsDetailsJob (string jobId)
-
 
 
 Delete/cancel an async details job
@@ -163,7 +162,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -173,7 +171,6 @@ void (empty response body)
 ## DeleteAnalyticsUsersDetailsJob
 
 > void DeleteAnalyticsUsersDetailsJob (string jobId)
-
 
 
 Delete/cancel an async request
@@ -226,7 +223,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -236,7 +232,6 @@ void (empty response body)
 ## GetAnalyticsActionsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsActionsAggregatesJob (string jobId)
-
 
 
 Get status for async query for action aggregates
@@ -293,7 +288,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -303,7 +297,6 @@ namespace Example
 ## GetAnalyticsActionsAggregatesJobResults
 
 > [**ActionAsyncAggregateQueryResponse**](ActionAsyncAggregateQueryResponse) GetAnalyticsActionsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -362,7 +355,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -372,7 +364,6 @@ namespace Example
 ## GetAnalyticsAgentcopilotsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsAgentcopilotsAggregatesJob (string jobId)
-
 
 
 Get status for async query for agent copilot aggregates
@@ -428,7 +419,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -438,7 +428,6 @@ namespace Example
 ## GetAnalyticsAgentcopilotsAggregatesJobResults
 
 > [**AgentCopilotAsyncAggregateQueryResponse**](AgentCopilotAsyncAggregateQueryResponse) GetAnalyticsAgentcopilotsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -496,7 +485,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -506,7 +494,6 @@ namespace Example
 ## GetAnalyticsBotflowDivisionsReportingturns
 
 > [**ReportingTurnsResponse**](ReportingTurnsResponse) GetAnalyticsBotflowDivisionsReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
-
 
 
 Get Reporting Turns (division aware).
@@ -576,7 +563,6 @@ namespace Example
 | **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional]  |
 | **language** | **string**| Optional language code to get the reporting turns for a particular language | [optional]  |
 | **askActionResults** | **string**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional] <br />**Values**: AgentRequestedByUser, ConfirmationRequired, DisambiguationRequired, Error, ExpressionError, NoInputCollection, NoInputConfirmation, NoInputDisambiguation, NoMatchCollection, NoMatchConfirmation, NoMatchDisambiguation, SuccessCollection, SuccessConfirmationNo, SuccessConfirmationYes, SuccessDisambiguation, SuccessDisambiguationNone |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -587,7 +573,9 @@ namespace Example
 
 > [**ReportingTurnsResponse**](ReportingTurnsResponse) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string interval = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get Reporting Turns.
 
@@ -656,7 +644,6 @@ namespace Example
 | **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional]  |
 | **language** | **string**| Optional language code to get the reporting turns for a particular language | [optional]  |
 | **askActionResults** | **string**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional] <br />**Values**: AgentRequestedByUser, ConfirmationRequired, DisambiguationRequired, Error, ExpressionError, NoInputCollection, NoInputConfirmation, NoInputDisambiguation, NoMatchCollection, NoMatchConfirmation, NoMatchDisambiguation, SuccessCollection, SuccessConfirmationNo, SuccessConfirmationYes, SuccessDisambiguation, SuccessDisambiguationNone |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -666,7 +653,6 @@ namespace Example
 ## GetAnalyticsBotflowSessions
 
 > [**SessionsResponse**](SessionsResponse) GetAnalyticsBotflowSessions (string botFlowId, string after = null, string pageSize = null, string interval = null, string botResultCategories = null, string endLanguage = null)
-
 
 
 Get Bot Flow Sessions.
@@ -732,7 +718,6 @@ namespace Example
 | **interval** | **string**| Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional]  |
 | **botResultCategories** | **string**| Optional case-insensitive comma separated list of Bot Result Categories to filter sessions by. | [optional] <br />**Values**: Unknown, UserExit, BotExit, Error, RecognitionFailure, UserDisconnect, BotDisconnect, SessionExpired, Transfer |
 | **endLanguage** | **string**| Optional case-insensitive language code to filter sessions by the language the sessions ended in. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -742,7 +727,6 @@ namespace Example
 ## GetAnalyticsBotsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsBotsAggregatesJob (string jobId)
-
 
 
 Get status for async query for bot aggregates
@@ -798,7 +782,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -808,7 +791,6 @@ namespace Example
 ## GetAnalyticsBotsAggregatesJobResults
 
 > [**BotAsyncAggregateQueryResponse**](BotAsyncAggregateQueryResponse) GetAnalyticsBotsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -866,7 +848,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -876,7 +857,6 @@ namespace Example
 ## GetAnalyticsConversationDetails
 
 > [**AnalyticsConversationWithoutAttributes**](AnalyticsConversationWithoutAttributes) GetAnalyticsConversationDetails (string conversationId)
-
 
 
 Get a conversation by id
@@ -931,7 +911,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -941,7 +920,6 @@ namespace Example
 ## GetAnalyticsConversationsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsConversationsAggregatesJob (string jobId)
-
 
 
 Get status for async query for conversation aggregates
@@ -997,7 +975,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1007,7 +984,6 @@ namespace Example
 ## GetAnalyticsConversationsAggregatesJobResults
 
 > [**ConversationAsyncAggregateQueryResponse**](ConversationAsyncAggregateQueryResponse) GetAnalyticsConversationsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -1065,7 +1041,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1075,7 +1050,6 @@ namespace Example
 ## GetAnalyticsConversationsDetails
 
 > [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse) GetAnalyticsConversationsDetails (List<string> id = null)
-
 
 
 Gets multiple conversations by id
@@ -1130,7 +1104,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string)| Comma-separated conversation ids | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1140,7 +1113,6 @@ namespace Example
 ## GetAnalyticsConversationsDetailsJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsConversationsDetailsJob (string jobId)
-
 
 
 Get status for async query for conversation details
@@ -1195,7 +1167,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1205,7 +1176,6 @@ namespace Example
 ## GetAnalyticsConversationsDetailsJobResults
 
 > [**AnalyticsConversationAsyncQueryResponse**](AnalyticsConversationAsyncQueryResponse) GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
-
 
 
 Fetch a page of results for an async details job
@@ -1264,7 +1234,6 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| The desired maximum number of results | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1274,7 +1243,6 @@ namespace Example
 ## GetAnalyticsConversationsDetailsJobsAvailability
 
 > [**DataAvailabilityResponse**](DataAvailabilityResponse) GetAnalyticsConversationsDetailsJobsAvailability ()
-
 
 
 Lookup the datalake availability date and time
@@ -1324,7 +1292,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse)
@@ -1333,7 +1300,6 @@ This endpoint does require any parameters.
 ## GetAnalyticsDataretentionSettings
 
 > [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse) GetAnalyticsDataretentionSettings ()
-
 
 
 Get analytics data retention setting
@@ -1383,7 +1349,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
@@ -1392,7 +1357,6 @@ This endpoint does require any parameters.
 ## GetAnalyticsEvaluationsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsEvaluationsAggregatesJob (string jobId)
-
 
 
 Get status for async query for evaluation aggregates
@@ -1448,7 +1412,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1458,7 +1421,6 @@ namespace Example
 ## GetAnalyticsEvaluationsAggregatesJobResults
 
 > [**EvaluationAsyncAggregateQueryResponse**](EvaluationAsyncAggregateQueryResponse) GetAnalyticsEvaluationsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -1516,7 +1478,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1526,7 +1487,6 @@ namespace Example
 ## GetAnalyticsFlowexecutionsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsFlowexecutionsAggregatesJob (string jobId)
-
 
 
 Get status for async query for flow execution aggregates
@@ -1582,7 +1542,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1592,7 +1551,6 @@ namespace Example
 ## GetAnalyticsFlowexecutionsAggregatesJobResults
 
 > [**FlowExecutionAsyncAggregateQueryResponse**](FlowExecutionAsyncAggregateQueryResponse) GetAnalyticsFlowexecutionsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -1650,7 +1608,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1660,7 +1617,6 @@ namespace Example
 ## GetAnalyticsFlowsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsFlowsAggregatesJob (string jobId)
-
 
 
 Get status for async query for Flow aggregates
@@ -1716,7 +1672,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1726,7 +1681,6 @@ namespace Example
 ## GetAnalyticsFlowsAggregatesJobResults
 
 > [**FlowAsyncAggregateQueryResponse**](FlowAsyncAggregateQueryResponse) GetAnalyticsFlowsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -1784,7 +1738,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1794,7 +1747,6 @@ namespace Example
 ## GetAnalyticsJourneysAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsJourneysAggregatesJob (string jobId)
-
 
 
 Get status for async query for journey aggregates
@@ -1850,7 +1802,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1860,7 +1811,6 @@ namespace Example
 ## GetAnalyticsJourneysAggregatesJobResults
 
 > [**JourneyAsyncAggregateQueryResponse**](JourneyAsyncAggregateQueryResponse) GetAnalyticsJourneysAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -1918,7 +1868,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1928,7 +1877,6 @@ namespace Example
 ## GetAnalyticsKnowledgeAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsKnowledgeAggregatesJob (string jobId)
-
 
 
 Get status for async query for knowledge aggregates
@@ -1984,7 +1932,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1994,7 +1941,6 @@ namespace Example
 ## GetAnalyticsKnowledgeAggregatesJobResults
 
 > [**KnowledgeAsyncAggregateQueryResponse**](KnowledgeAsyncAggregateQueryResponse) GetAnalyticsKnowledgeAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -2052,7 +1998,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2062,7 +2007,6 @@ namespace Example
 ## GetAnalyticsReportingDashboardsUser
 
 > [**DashboardUser**](DashboardUser) GetAnalyticsReportingDashboardsUser (string userId)
-
 
 
 Get dashboards summary for a user
@@ -2116,7 +2060,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2126,7 +2069,6 @@ namespace Example
 ## GetAnalyticsReportingDashboardsUsers
 
 > [**DashboardUserListing**](DashboardUserListing) GetAnalyticsReportingDashboardsUsers (string sortBy = null, int? pageNumber = null, int? pageSize = null, List<string> id = null, string state = null)
-
 
 
 Get dashboards summary for users in a org
@@ -2188,7 +2130,6 @@ namespace Example
 | **pageSize** | **int?**|  | [optional] [default to 25] |
 | **id** | [**List<string>**](string)| A list of user IDs to fetch by bulk | [optional]  |
 | **state** | **string**| Only list users of this state | [optional] <br />**Values**: active, inactive |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2198,7 +2139,6 @@ namespace Example
 ## GetAnalyticsReportingExports
 
 > [**ReportingExportJobListing**](ReportingExportJobListing) GetAnalyticsReportingExports (int? pageNumber = null, int? pageSize = null)
-
 
 
 Get all view export requests for a user
@@ -2254,7 +2194,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2264,7 +2203,6 @@ namespace Example
 ## GetAnalyticsReportingExportsMetadata
 
 > [**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing) GetAnalyticsReportingExportsMetadata ()
-
 
 
 Get all export metadata
@@ -2314,7 +2252,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing)
@@ -2323,7 +2260,6 @@ This endpoint does require any parameters.
 ## GetAnalyticsReportingSettings
 
 > [**AnalyticsReportingSettings**](AnalyticsReportingSettings) GetAnalyticsReportingSettings ()
-
 
 
 Get AnalyticsReportingSettings for an organization
@@ -2372,7 +2308,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings)
@@ -2380,8 +2315,7 @@ This endpoint does require any parameters.
 
 ## GetAnalyticsReportingSettingsDashboardsQuery
 
-> [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string sortBy = null, int? pageNumber = null, int? pageSize = null)
-
+> [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsDashboardsQuery (string dashboardType, string dashboardAccessFilter, string name = null, string sortBy = null, int? pageNumber = null, int? pageSize = null)
 
 
 Get list of dashboard configurations
@@ -2414,6 +2348,7 @@ namespace Example
             var apiInstance = new AnalyticsApi();
             var dashboardType = dashboardType_example;  // string | List dashboard of given type
             var dashboardAccessFilter = dashboardAccessFilter_example;  // string | Filter dashboard based on the owner of dashboard
+            var name = name_example;  // string | name of the dashboard (optional) 
             var sortBy = sortBy_example;  // string |  (optional)  (default to "desc")
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
             var pageSize = 56;  // int? |  (optional)  (default to 9)
@@ -2421,7 +2356,7 @@ namespace Example
             try
             { 
                 // Get list of dashboard configurations
-                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize);
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2440,10 +2375,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **dashboardType** | **string**| List dashboard of given type | <br />**Values**: All, Public, Private, Shared, Favorites |
 | **dashboardAccessFilter** | **string**| Filter dashboard based on the owner of dashboard | <br />**Values**: OwnedByMe, OwnedByAnyone, NotOwnedByMe |
+| **name** | **string**| name of the dashboard | [optional]  |
 | **sortBy** | **string**|  | [optional] [default to "desc"] |
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**|  | [optional] [default to 9] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2453,7 +2388,6 @@ namespace Example
 ## GetAnalyticsReportingSettingsUserDashboards
 
 > [**DashboardConfigurationListing**](DashboardConfigurationListing) GetAnalyticsReportingSettingsUserDashboards (string userId, string sortBy = null, int? pageNumber = null, int? pageSize = null, bool? publicOnly = null, bool? favoriteOnly = null, string name = null)
-
 
 
 Get list of dashboards for an user
@@ -2519,7 +2453,6 @@ namespace Example
 | **publicOnly** | **bool?**| If true, retrieve only public dashboards | [optional]  |
 | **favoriteOnly** | **bool?**| If true, retrieve only favorite dashboards | [optional]  |
 | **name** | **string**| retrieve dashboards that match with given name | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2529,7 +2462,6 @@ namespace Example
 ## GetAnalyticsResolutionsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsResolutionsAggregatesJob (string jobId)
-
 
 
 Get status for async query for resolution aggregates
@@ -2585,7 +2517,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2595,7 +2526,6 @@ namespace Example
 ## GetAnalyticsResolutionsAggregatesJobResults
 
 > [**ResolutionAsyncAggregateQueryResponse**](ResolutionAsyncAggregateQueryResponse) GetAnalyticsResolutionsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -2653,7 +2583,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2663,7 +2592,6 @@ namespace Example
 ## GetAnalyticsSurveysAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsSurveysAggregatesJob (string jobId)
-
 
 
 Get status for async query for survey aggregates
@@ -2719,7 +2647,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2729,7 +2656,6 @@ namespace Example
 ## GetAnalyticsSurveysAggregatesJobResults
 
 > [**SurveyAsyncAggregateQueryResponse**](SurveyAsyncAggregateQueryResponse) GetAnalyticsSurveysAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -2787,7 +2713,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2797,7 +2722,6 @@ namespace Example
 ## GetAnalyticsTaskmanagementAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsTaskmanagementAggregatesJob (string jobId)
-
 
 
 Get status for async query for task management aggregates
@@ -2853,7 +2777,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2863,7 +2786,6 @@ namespace Example
 ## GetAnalyticsTaskmanagementAggregatesJobResults
 
 > [**TaskManagementAsyncAggregateQueryResponse**](TaskManagementAsyncAggregateQueryResponse) GetAnalyticsTaskmanagementAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async task management query
@@ -2921,7 +2843,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2931,7 +2852,6 @@ namespace Example
 ## GetAnalyticsTranscriptsAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsTranscriptsAggregatesJob (string jobId)
-
 
 
 Get status for async query for transcript aggregates
@@ -2987,7 +2907,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2997,7 +2916,6 @@ namespace Example
 ## GetAnalyticsTranscriptsAggregatesJobResults
 
 > [**TranscriptAsyncAggregateQueryResponse**](TranscriptAsyncAggregateQueryResponse) GetAnalyticsTranscriptsAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -3055,7 +2973,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3065,7 +2982,6 @@ namespace Example
 ## GetAnalyticsUsersAggregatesJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsUsersAggregatesJob (string jobId)
-
 
 
 Get status for async query for user aggregates
@@ -3121,7 +3037,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3131,7 +3046,6 @@ namespace Example
 ## GetAnalyticsUsersAggregatesJobResults
 
 > [**UserAsyncAggregateQueryResponse**](UserAsyncAggregateQueryResponse) GetAnalyticsUsersAggregatesJobResults (string jobId, string cursor = null)
-
 
 
 Fetch a page of results for an async aggregates query
@@ -3189,7 +3103,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3199,7 +3112,6 @@ namespace Example
 ## GetAnalyticsUsersDetailsJob
 
 > [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsUsersDetailsJob (string jobId)
-
 
 
 Get status for async query for user details
@@ -3253,7 +3165,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3263,7 +3174,6 @@ namespace Example
 ## GetAnalyticsUsersDetailsJobResults
 
 > [**AnalyticsUserDetailsAsyncQueryResponse**](AnalyticsUserDetailsAsyncQueryResponse) GetAnalyticsUsersDetailsJobResults (string jobId, string cursor = null, int? pageSize = null)
-
 
 
 Fetch a page of results for an async query
@@ -3321,7 +3231,6 @@ namespace Example
 | **jobId** | **string**| jobId |  |
 | **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
 | **pageSize** | **int?**| The desired maximum number of results | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3331,7 +3240,6 @@ namespace Example
 ## GetAnalyticsUsersDetailsJobsAvailability
 
 > [**DataAvailabilityResponse**](DataAvailabilityResponse) GetAnalyticsUsersDetailsJobsAvailability ()
-
 
 
 Lookup the datalake availability date and time
@@ -3381,7 +3289,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse)
@@ -3390,7 +3297,6 @@ This endpoint does require any parameters.
 ## PatchAnalyticsReportingSettings
 
 > [**AnalyticsReportingSettings**](AnalyticsReportingSettings) PatchAnalyticsReportingSettings (AnalyticsReportingSettings body)
-
 
 
 Patch AnalyticsReportingSettings values for an organization
@@ -3444,7 +3350,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AnalyticsReportingSettings**](AnalyticsReportingSettings)| AnalyticsReportingSettingsRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3454,7 +3359,6 @@ namespace Example
 ## PostAnalyticsActionsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsActionsAggregatesJobs (ActionAsyncAggregationQuery body)
-
 
 
 Query for action aggregates asynchronously
@@ -3511,7 +3415,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ActionAsyncAggregationQuery**](ActionAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3521,7 +3424,6 @@ namespace Example
 ## PostAnalyticsActionsAggregatesQuery
 
 > [**ActionAggregateQueryResponse**](ActionAggregateQueryResponse) PostAnalyticsActionsAggregatesQuery (ActionAggregationQuery body)
-
 
 
 Query for action aggregates
@@ -3576,7 +3478,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ActionAggregationQuery**](ActionAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3586,7 +3487,6 @@ namespace Example
 ## PostAnalyticsAgentcopilotsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsAgentcopilotsAggregatesJobs (AgentCopilotAsyncAggregationQuery body)
-
 
 
 Query for agent copilot aggregates asynchronously
@@ -3642,7 +3542,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentCopilotAsyncAggregationQuery**](AgentCopilotAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3654,10 +3553,7 @@ namespace Example
 > [**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse) PostAnalyticsAgentcopilotsAggregatesQuery (AgentCopilotAggregationQuery body)
 
 
-
 Query for agent copilot aggregates
-
-PostAnalyticsAgentcopilotsAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3708,7 +3604,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentCopilotAggregationQuery**](AgentCopilotAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3718,7 +3613,6 @@ namespace Example
 ## PostAnalyticsBotsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsBotsAggregatesJobs (BotAsyncAggregationQuery body)
-
 
 
 Query for bot aggregates asynchronously
@@ -3774,7 +3668,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BotAsyncAggregationQuery**](BotAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3784,7 +3677,6 @@ namespace Example
 ## PostAnalyticsBotsAggregatesQuery
 
 > [**BotAggregateQueryResponse**](BotAggregateQueryResponse) PostAnalyticsBotsAggregatesQuery (BotAggregationQuery body)
-
 
 
 Query for bot aggregates
@@ -3838,7 +3730,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BotAggregationQuery**](BotAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3848,7 +3739,6 @@ namespace Example
 ## PostAnalyticsConversationDetailsProperties
 
 > [**PropertyIndexRequest**](PropertyIndexRequest) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
-
 
 
 Index conversation properties
@@ -3904,7 +3794,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**PropertyIndexRequest**](PropertyIndexRequest)| request |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3914,7 +3803,6 @@ namespace Example
 ## PostAnalyticsConversationsActivityQuery
 
 > [**ConversationActivityResponse**](ConversationActivityResponse) PostAnalyticsConversationsActivityQuery (ConversationActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for conversation activity observations
@@ -3972,7 +3860,6 @@ namespace Example
 | **body** | [**ConversationActivityQuery**](ConversationActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3982,7 +3869,6 @@ namespace Example
 ## PostAnalyticsConversationsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsConversationsAggregatesJobs (ConversationAsyncAggregationQuery body)
-
 
 
 Query for conversation aggregates asynchronously
@@ -4038,7 +3924,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationAsyncAggregationQuery**](ConversationAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4048,7 +3933,6 @@ namespace Example
 ## PostAnalyticsConversationsAggregatesQuery
 
 > [**ConversationAggregateQueryResponse**](ConversationAggregateQueryResponse) PostAnalyticsConversationsAggregatesQuery (ConversationAggregationQuery body)
-
 
 
 Query for conversation aggregates
@@ -4102,7 +3986,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationAggregationQuery**](ConversationAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4112,7 +3995,6 @@ namespace Example
 ## PostAnalyticsConversationsDetailsJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsConversationsDetailsJobs (AsyncConversationQuery body)
-
 
 
 Query for conversation details asynchronously
@@ -4167,7 +4049,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AsyncConversationQuery**](AsyncConversationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4177,7 +4058,6 @@ namespace Example
 ## PostAnalyticsConversationsDetailsQuery
 
 > [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse) PostAnalyticsConversationsDetailsQuery (ConversationQuery body)
-
 
 
 Query for conversation details
@@ -4232,7 +4112,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ConversationQuery**](ConversationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4242,7 +4121,6 @@ namespace Example
 ## PostAnalyticsConversationsTranscriptsQuery
 
 > [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse) PostAnalyticsConversationsTranscriptsQuery (TranscriptConversationDetailSearchRequest body)
-
 
 
 Search resources.
@@ -4296,7 +4174,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptConversationDetailSearchRequest**](TranscriptConversationDetailSearchRequest)| Search request options |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4306,7 +4183,6 @@ namespace Example
 ## PostAnalyticsEvaluationsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsEvaluationsAggregatesJobs (EvaluationAsyncAggregationQuery body)
-
 
 
 Query for evaluation aggregates asynchronously
@@ -4362,7 +4238,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**EvaluationAsyncAggregationQuery**](EvaluationAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4372,7 +4247,6 @@ namespace Example
 ## PostAnalyticsEvaluationsAggregatesQuery
 
 > [**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse) PostAnalyticsEvaluationsAggregatesQuery (EvaluationAggregationQuery body)
-
 
 
 Query for evaluation aggregates
@@ -4426,7 +4300,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4436,7 +4309,6 @@ namespace Example
 ## PostAnalyticsFlowexecutionsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsFlowexecutionsAggregatesJobs (FlowExecutionAsyncAggregationQuery body)
-
 
 
 Query for flow execution aggregates asynchronously
@@ -4492,7 +4364,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowExecutionAsyncAggregationQuery**](FlowExecutionAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4502,7 +4373,6 @@ namespace Example
 ## PostAnalyticsFlowexecutionsAggregatesQuery
 
 > [**FlowExecutionAggregateQueryResponse**](FlowExecutionAggregateQueryResponse) PostAnalyticsFlowexecutionsAggregatesQuery (FlowExecutionAggregationQuery body)
-
 
 
 Query for flow execution aggregates
@@ -4556,7 +4426,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowExecutionAggregationQuery**](FlowExecutionAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4566,7 +4435,6 @@ namespace Example
 ## PostAnalyticsFlowsActivityQuery
 
 > [**FlowActivityResponse**](FlowActivityResponse) PostAnalyticsFlowsActivityQuery (FlowActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for flow activity observations
@@ -4624,7 +4492,6 @@ namespace Example
 | **body** | [**FlowActivityQuery**](FlowActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4634,7 +4501,6 @@ namespace Example
 ## PostAnalyticsFlowsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsFlowsAggregatesJobs (FlowAsyncAggregationQuery body)
-
 
 
 Query for flow aggregates asynchronously
@@ -4690,7 +4556,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowAsyncAggregationQuery**](FlowAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4700,7 +4565,6 @@ namespace Example
 ## PostAnalyticsFlowsAggregatesQuery
 
 > [**FlowAggregateQueryResponse**](FlowAggregateQueryResponse) PostAnalyticsFlowsAggregatesQuery (FlowAggregationQuery body)
-
 
 
 Query for flow aggregates
@@ -4754,7 +4618,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowAggregationQuery**](FlowAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4764,7 +4627,6 @@ namespace Example
 ## PostAnalyticsFlowsObservationsQuery
 
 > [**FlowObservationQueryResponse**](FlowObservationQueryResponse) PostAnalyticsFlowsObservationsQuery (FlowObservationQuery body)
-
 
 
 Query for flow observations
@@ -4818,7 +4680,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**FlowObservationQuery**](FlowObservationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4828,7 +4689,6 @@ namespace Example
 ## PostAnalyticsJourneysAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsJourneysAggregatesJobs (JourneyAsyncAggregationQuery body)
-
 
 
 Query for journey aggregates asynchronously
@@ -4884,7 +4744,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**JourneyAsyncAggregationQuery**](JourneyAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4894,7 +4753,6 @@ namespace Example
 ## PostAnalyticsJourneysAggregatesQuery
 
 > [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse) PostAnalyticsJourneysAggregatesQuery (JourneyAggregationQuery body)
-
 
 
 Query for journey aggregates
@@ -4948,7 +4806,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**JourneyAggregationQuery**](JourneyAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4958,7 +4815,6 @@ namespace Example
 ## PostAnalyticsKnowledgeAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsKnowledgeAggregatesJobs (KnowledgeAsyncAggregationQuery body)
-
 
 
 Query for knowledge aggregates asynchronously
@@ -5014,7 +4870,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**KnowledgeAsyncAggregationQuery**](KnowledgeAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5024,7 +4879,6 @@ namespace Example
 ## PostAnalyticsKnowledgeAggregatesQuery
 
 > [**KnowledgeAggregateQueryResponse**](KnowledgeAggregateQueryResponse) PostAnalyticsKnowledgeAggregatesQuery (KnowledgeAggregationQuery body)
-
 
 
 Query for knowledge aggregates
@@ -5078,7 +4932,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**KnowledgeAggregationQuery**](KnowledgeAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5088,7 +4941,6 @@ namespace Example
 ## PostAnalyticsQueuesObservationsQuery
 
 > [**QueueObservationQueryResponse**](QueueObservationQueryResponse) PostAnalyticsQueuesObservationsQuery (QueueObservationQuery body)
-
 
 
 Query for queue observations
@@ -5142,7 +4994,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**QueueObservationQuery**](QueueObservationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5152,7 +5003,6 @@ namespace Example
 ## PostAnalyticsRatelimitsAggregatesQuery
 
 > [**RateLimitAggregateQueryResponse**](RateLimitAggregateQueryResponse) PostAnalyticsRatelimitsAggregatesQuery (RateLimitAggregationQuery body)
-
 
 
 Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate.
@@ -5208,7 +5058,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RateLimitAggregationQuery**](RateLimitAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5218,7 +5067,6 @@ namespace Example
 ## PostAnalyticsReportingDashboardsUsersBulkRemove
 
 > void PostAnalyticsReportingDashboardsUsersBulkRemove (List<string> body)
-
 
 
 Bulk delete dashboards owned by other user(s)
@@ -5272,7 +5120,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**List<string>**](string)| List of userIds |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5282,7 +5129,6 @@ void (empty response body)
 ## PostAnalyticsReportingExports
 
 > [**ReportingExportJobResponse**](ReportingExportJobResponse) PostAnalyticsReportingExports (ReportingExportJobRequest body)
-
 
 
 Generate a view export request
@@ -5338,7 +5184,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ReportingExportJobRequest**](ReportingExportJobRequest)| ReportingExportJobRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5348,7 +5193,6 @@ namespace Example
 ## PostAnalyticsReportingSettingsDashboardsBulkRemove
 
 > void PostAnalyticsReportingSettingsDashboardsBulkRemove (DashboardConfigurationBulkRequest body)
-
 
 
 Bulk remove dashboard configurations
@@ -5401,7 +5245,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DashboardConfigurationBulkRequest**](DashboardConfigurationBulkRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5411,7 +5254,6 @@ void (empty response body)
 ## PostAnalyticsReportingSettingsDashboardsQuery
 
 > [**DashboardConfigurationListing**](DashboardConfigurationListing) PostAnalyticsReportingSettingsDashboardsQuery (DashboardConfigurationQueryRequest body)
-
 
 
 Query dashboard configurations
@@ -5465,7 +5307,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**DashboardConfigurationQueryRequest**](DashboardConfigurationQueryRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5475,7 +5316,6 @@ namespace Example
 ## PostAnalyticsResolutionsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsResolutionsAggregatesJobs (ResolutionAsyncAggregationQuery body)
-
 
 
 Query for resolution aggregates asynchronously
@@ -5531,7 +5371,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ResolutionAsyncAggregationQuery**](ResolutionAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5541,7 +5380,6 @@ namespace Example
 ## PostAnalyticsRoutingActivityQuery
 
 > [**RoutingActivityResponse**](RoutingActivityResponse) PostAnalyticsRoutingActivityQuery (RoutingActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for user activity observations
@@ -5599,7 +5437,6 @@ namespace Example
 | **body** | [**RoutingActivityQuery**](RoutingActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5609,7 +5446,6 @@ namespace Example
 ## PostAnalyticsSurveysAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsSurveysAggregatesJobs (SurveyAsyncAggregationQuery body)
-
 
 
 Query for survey aggregates asynchronously
@@ -5665,7 +5501,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SurveyAsyncAggregationQuery**](SurveyAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5675,7 +5510,6 @@ namespace Example
 ## PostAnalyticsSurveysAggregatesQuery
 
 > [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse) PostAnalyticsSurveysAggregatesQuery (SurveyAggregationQuery body)
-
 
 
 Query for survey aggregates
@@ -5729,7 +5563,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5739,7 +5572,6 @@ namespace Example
 ## PostAnalyticsTaskmanagementAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsTaskmanagementAggregatesJobs (TaskManagementAsyncAggregationQuery body)
-
 
 
 Query for task management aggregates asynchronously
@@ -5795,7 +5627,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TaskManagementAsyncAggregationQuery**](TaskManagementAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5805,7 +5636,6 @@ namespace Example
 ## PostAnalyticsTaskmanagementAggregatesQuery
 
 > [**TaskManagementAggregateQueryResponse**](TaskManagementAggregateQueryResponse) PostAnalyticsTaskmanagementAggregatesQuery (TaskManagementAggregationQuery body)
-
 
 
 Query for task management aggregates
@@ -5861,7 +5691,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TaskManagementAggregationQuery**](TaskManagementAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5871,7 +5700,6 @@ namespace Example
 ## PostAnalyticsTeamsActivityQuery
 
 > [**TeamActivityResponse**](TeamActivityResponse) PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for team activity observations
@@ -5929,7 +5757,6 @@ namespace Example
 | **body** | [**TeamActivityQuery**](TeamActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5939,7 +5766,6 @@ namespace Example
 ## PostAnalyticsTranscriptsAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsTranscriptsAggregatesJobs (TranscriptAsyncAggregationQuery body)
-
 
 
 Query for transcript aggregates asynchronously
@@ -5995,7 +5821,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptAsyncAggregationQuery**](TranscriptAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6005,7 +5830,6 @@ namespace Example
 ## PostAnalyticsTranscriptsAggregatesQuery
 
 > [**TranscriptAggregateQueryResponse**](TranscriptAggregateQueryResponse) PostAnalyticsTranscriptsAggregatesQuery (TranscriptAggregationQuery body)
-
 
 
 Query for transcript aggregates
@@ -6059,7 +5883,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**TranscriptAggregationQuery**](TranscriptAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6069,7 +5892,6 @@ namespace Example
 ## PostAnalyticsUsersActivityQuery
 
 > [**UserActivityResponse**](UserActivityResponse) PostAnalyticsUsersActivityQuery (UserActivityQuery body, int? pageSize = null, int? pageNumber = null)
-
 
 
 Query for user activity observations
@@ -6127,7 +5949,6 @@ namespace Example
 | **body** | [**UserActivityQuery**](UserActivityQuery)| query |  |
 | **pageSize** | **int?**| The desired page size | [optional]  |
 | **pageNumber** | **int?**| The desired page number | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6137,7 +5958,6 @@ namespace Example
 ## PostAnalyticsUsersAggregatesJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsUsersAggregatesJobs (UserAsyncAggregationQuery body)
-
 
 
 Query for user aggregates asynchronously
@@ -6193,7 +6013,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserAsyncAggregationQuery**](UserAsyncAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6203,7 +6022,6 @@ namespace Example
 ## PostAnalyticsUsersAggregatesQuery
 
 > [**UserAggregateQueryResponse**](UserAggregateQueryResponse) PostAnalyticsUsersAggregatesQuery (UserAggregationQuery body)
-
 
 
 Query for user aggregates
@@ -6257,7 +6075,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserAggregationQuery**](UserAggregationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6267,7 +6084,6 @@ namespace Example
 ## PostAnalyticsUsersDetailsJobs
 
 > [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsUsersDetailsJobs (AsyncUserDetailsQuery body)
-
 
 
 Query for user details asynchronously
@@ -6321,7 +6137,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AsyncUserDetailsQuery**](AsyncUserDetailsQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6331,7 +6146,6 @@ namespace Example
 ## PostAnalyticsUsersDetailsQuery
 
 > [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse) PostAnalyticsUsersDetailsQuery (UserDetailsQuery body)
-
 
 
 Query for user details
@@ -6385,7 +6199,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserDetailsQuery**](UserDetailsQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6395,7 +6208,6 @@ namespace Example
 ## PostAnalyticsUsersObservationsQuery
 
 > [**UserObservationQueryResponse**](UserObservationQueryResponse) PostAnalyticsUsersObservationsQuery (UserObservationQuery body)
-
 
 
 Query for user observations
@@ -6449,7 +6261,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserObservationQuery**](UserObservationQuery)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6459,7 +6270,6 @@ namespace Example
 ## PutAnalyticsDataretentionSettings
 
 > [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse) PutAnalyticsDataretentionSettings (UpdateAnalyticsDataRetentionRequest body)
-
 
 
 Update analytics data retention setting
@@ -6513,11 +6323,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UpdateAnalyticsDataRetentionRequest**](UpdateAnalyticsDataRetentionRequest)| retentionDays |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

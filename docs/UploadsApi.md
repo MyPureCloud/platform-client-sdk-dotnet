@@ -15,13 +15,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUploadsPublicassetsImages**](#PostUploadsPublicassetsImages) | **Post** /api/v2/uploads/publicassets/images | Creates presigned url for uploading a public asset image |
 | [**PostUploadsRecordings**](#PostUploadsRecordings) | **Post** /api/v2/uploads/recordings | Creates presigned url for uploading a recording file |
 | [**PostUploadsWorkforcemanagementHistoricaldataCsv**](#PostUploadsWorkforcemanagementHistoricaldataCsv) | **Post** /api/v2/uploads/workforcemanagement/historicaldata/csv | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
-{: class="table table-striped"}
+
 
 
 ## GetKnowledgeKnowledgebaseUploadsUrlsJob
 
 > [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse) GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
-
 
 
 Get content upload from URL job status
@@ -79,7 +78,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **jobId** | **string**| Upload job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -89,7 +87,6 @@ namespace Example
 ## PostIntegrationsActionDraftFunctionUpload
 
 > [**FunctionUploadResponse**](FunctionUploadResponse) PostIntegrationsActionDraftFunctionUpload (string actionId, FunctionUploadRequest body)
-
 
 
 Create upload presigned URL for draft function package file.
@@ -147,7 +144,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **actionId** | **string**| actionId |  |
 | **body** | [**FunctionUploadRequest**](FunctionUploadRequest)| Input used to request URL upload. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -157,7 +153,6 @@ namespace Example
 ## PostKnowledgeDocumentuploads
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostKnowledgeDocumentuploads (UploadUrlRequest body)
-
 
 
 Creates a presigned URL for uploading a knowledge import file with a set of documents
@@ -211,7 +206,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -221,7 +215,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseUploadsUrlsJobs
 
 > [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
-
 
 
 Create content upload from URL job
@@ -279,7 +272,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest)| uploadRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -289,7 +281,6 @@ namespace Example
 ## PostLanguageunderstandingMinerUploads
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostLanguageunderstandingMinerUploads (string minerId, Object body)
-
 
 
 Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner
@@ -345,7 +336,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **body** | **Object**| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -355,7 +345,6 @@ namespace Example
 ## PostUploadsLearningCoverart
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostUploadsLearningCoverart (LearningCoverArtUploadUrlRequest body)
-
 
 
 Generates pre-signed URL to upload cover art for learning modules
@@ -409,7 +398,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**LearningCoverArtUploadUrlRequest**](LearningCoverArtUploadUrlRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -419,7 +407,6 @@ namespace Example
 ## PostUploadsPublicassetsImages
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostUploadsPublicassetsImages (UploadUrlRequest body)
-
 
 
 Creates presigned url for uploading a public asset image
@@ -473,7 +460,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -483,7 +469,6 @@ namespace Example
 ## PostUploadsRecordings
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostUploadsRecordings (UploadUrlRequest body)
-
 
 
 Creates presigned url for uploading a recording file
@@ -537,7 +522,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -547,7 +531,6 @@ namespace Example
 ## PostUploadsWorkforcemanagementHistoricaldataCsv
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostUploadsWorkforcemanagementHistoricaldataCsv (UploadUrlRequest body)
-
 
 
 Creates presigned url for uploading WFM historical data file. Requires data in csv format.
@@ -601,11 +584,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

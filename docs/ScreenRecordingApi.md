@@ -7,13 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**PostScreenrecordingToken**](#PostScreenrecordingToken) | **Post** /api/v2/screenrecording/token | Sign identifying information for screen recording |
-{: class="table table-striped"}
+
 
 
 ## PostScreenrecordingToken
 
 > [**SignedData**](SignedData) PostScreenrecordingToken (ScreenRecordingUserAuthenticatedInfo body = null)
-
 
 
 Sign identifying information for screen recording
@@ -66,11 +65,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**ScreenRecordingUserAuthenticatedInfo**](ScreenRecordingUserAuthenticatedInfo)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**SignedData**](SignedData)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

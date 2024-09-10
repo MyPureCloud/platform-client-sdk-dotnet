@@ -13,13 +13,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserrecordings**](#GetUserrecordings) | **Get** /api/v2/userrecordings | Get a list of user recordings. |
 | [**GetUserrecordingsSummary**](#GetUserrecordingsSummary) | **Get** /api/v2/userrecordings/summary | Get user recording summary |
 | [**PutUserrecording**](#PutUserrecording) | **Put** /api/v2/userrecordings/{recordingId} | Update a user recording. |
-{: class="table table-striped"}
+
 
 
 ## DeleteUserrecording
 
 > void DeleteUserrecording (string recordingId)
-
 
 
 Delete a user recording.
@@ -71,7 +70,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -81,7 +79,6 @@ void (empty response body)
 ## GetUserrecording
 
 > [**UserRecording**](UserRecording) GetUserrecording (string recordingId, List<string> expand = null)
-
 
 
 Get a user recording.
@@ -136,7 +133,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -147,7 +143,9 @@ namespace Example
 
 > [**DownloadResponse**](DownloadResponse) GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Download a user recording.
 
@@ -205,7 +203,6 @@ namespace Example
 | **recordingId** | **string**| User Recording ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 | **async** | **bool?**| When set to true, api will return 202 response until the recording is ready for download | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -215,7 +212,6 @@ namespace Example
 ## GetUserrecordingTranscoding
 
 > [**DownloadResponse**](DownloadResponse) GetUserrecordingTranscoding (string recordingId, string formatId = null)
-
 
 
 Download a user recording.
@@ -271,7 +267,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -281,7 +276,6 @@ namespace Example
 ## GetUserrecordings
 
 > [**UserRecordingEntityListing**](UserRecordingEntityListing) GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
-
 
 
 Get a list of user recordings.
@@ -338,7 +332,6 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -348,7 +341,6 @@ namespace Example
 ## GetUserrecordingsSummary
 
 > [**FaxSummary**](FaxSummary) GetUserrecordingsSummary ()
-
 
 
 Get user recording summary
@@ -397,7 +389,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**FaxSummary**](FaxSummary)
@@ -406,7 +397,6 @@ This endpoint does require any parameters.
 ## PutUserrecording
 
 > [**UserRecording**](UserRecording) PutUserrecording (string recordingId, UserRecording body, List<string> expand = null)
-
 
 
 Update a user recording.
@@ -463,11 +453,10 @@ namespace Example
 | **recordingId** | **string**| User Recording ID |  |
 | **body** | [**UserRecording**](UserRecording)| UserRecording |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: conversation |
-{: class="table table-striped"}
 
 ### Return type
 
 [**UserRecording**](UserRecording)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

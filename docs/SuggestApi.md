@@ -10,13 +10,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSearchSuggest**](#GetSearchSuggest) | **Get** /api/v2/search/suggest | Suggest resources using the q64 value returned from a previous suggest query. |
 | [**PostSearch**](#PostSearch) | **Post** /api/v2/search | Search resources. |
 | [**PostSearchSuggest**](#PostSearchSuggest) | **Post** /api/v2/search/suggest | Suggest resources. |
-{: class="table table-striped"}
+
 
 
 ## GetSearch
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearch (string q64, List<string> expand = null, bool? profile = null)
-
 
 
 Search using the q64 value returned from a previous search.
@@ -74,7 +73,6 @@ namespace Example
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -84,7 +82,6 @@ namespace Example
 ## GetSearchSuggest
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
-
 
 
 Suggest resources using the q64 value returned from a previous suggest query.
@@ -142,7 +139,6 @@ namespace Example
 | **q64** | **string**| q64 |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation, conversations, transcription, images, addressVerificationDetails |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -152,7 +148,6 @@ namespace Example
 ## PostSearch
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostSearch (SearchRequest body, bool? profile = null)
-
 
 
 Search resources.
@@ -208,7 +203,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SearchRequest**](SearchRequest)| Search request options |  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -218,7 +212,6 @@ namespace Example
 ## PostSearchSuggest
 
 > [**JsonNodeSearchResponse**](JsonNodeSearchResponse) PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
-
 
 
 Suggest resources.
@@ -274,11 +267,10 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**SuggestSearchRequest**](SuggestSearchRequest)| Search request options |  |
 | **profile** | **bool?**| profile | [optional] [default to true] |
-{: class="table table-striped"}
 
 ### Return type
 
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

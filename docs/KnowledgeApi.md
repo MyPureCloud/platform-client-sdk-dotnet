@@ -56,6 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebase**](#PatchKnowledgeKnowledgebase) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
 | [**PatchKnowledgeKnowledgebaseCategory**](#PatchKnowledgeKnowledgebaseCategory) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Update category |
 | [**PatchKnowledgeKnowledgebaseDocument**](#PatchKnowledgeKnowledgebaseDocument) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Update document. |
+| [**PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**](#PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId} | Update feedback on a document |
 | [**PatchKnowledgeKnowledgebaseDocumentVariation**](#PatchKnowledgeKnowledgebaseDocumentVariation) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId} | Update a variation for a document. |
 | [**PatchKnowledgeKnowledgebaseDocumentsSearchSearchId**](#PatchKnowledgeKnowledgebaseDocumentsSearchSearchId) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebaseImportJob**](#PatchKnowledgeKnowledgebaseImportJob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId} | Start import job |
@@ -70,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeGuestSessionDocumentCopies**](#PostKnowledgeGuestSessionDocumentCopies) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies | Indicate that the document was copied by the user. |
 | [**PostKnowledgeGuestSessionDocumentFeedback**](#PostKnowledgeGuestSessionDocumentFeedback) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback | Give feedback on a document |
 | [**PostKnowledgeGuestSessionDocumentViews**](#PostKnowledgeGuestSessionDocumentViews) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views | Create view event for a document. |
+| [**PostKnowledgeGuestSessionDocumentsAnswers**](#PostKnowledgeGuestSessionDocumentsAnswers) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/answers | Answer documents. |
 | [**PostKnowledgeGuestSessionDocumentsPresentations**](#PostKnowledgeGuestSessionDocumentsPresentations) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/presentations | Indicate that documents were presented to the user. |
 | [**PostKnowledgeGuestSessionDocumentsSearch**](#PostKnowledgeGuestSessionDocumentsSearch) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search | Search the documents in a guest session. |
 | [**PostKnowledgeGuestSessionDocumentsSearchSuggestions**](#PostKnowledgeGuestSessionDocumentsSearchSuggestions) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
@@ -81,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseDocumentVersions**](#PostKnowledgeKnowledgebaseDocumentVersions) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Creates or restores a document version. |
 | [**PostKnowledgeKnowledgebaseDocumentViews**](#PostKnowledgeKnowledgebaseDocumentViews) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views | Create view for a document. |
 | [**PostKnowledgeKnowledgebaseDocuments**](#PostKnowledgeKnowledgebaseDocuments) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Create document. |
+| [**PostKnowledgeKnowledgebaseDocumentsAnswers**](#PostKnowledgeKnowledgebaseDocumentsAnswers) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers | Answer documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkRemove**](#PostKnowledgeKnowledgebaseDocumentsBulkRemove) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove | Bulk remove documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsBulkUpdate**](#PostKnowledgeKnowledgebaseDocumentsBulkUpdate) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update | Bulk update documents. |
 | [**PostKnowledgeKnowledgebaseDocumentsPresentations**](#PostKnowledgeKnowledgebaseDocumentsPresentations) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations | Indicate that documents were presented to the user. |
@@ -102,13 +105,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseSearch**](#PostKnowledgeKnowledgebaseSearch) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/search | Search Documents |
 | [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](#PostKnowledgeKnowledgebaseUploadsUrlsJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
 | [**PostKnowledgeKnowledgebases**](#PostKnowledgeKnowledgebases) | **Post** /api/v2/knowledge/knowledgebases | Create new knowledge base |
-{: class="table table-striped"}
+
 
 
 ## DeleteKnowledgeKnowledgebase
 
 > [**KnowledgeBase**](KnowledgeBase) DeleteKnowledgeKnowledgebase (string knowledgeBaseId)
-
 
 
 Delete knowledge base
@@ -162,7 +164,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -172,7 +173,6 @@ namespace Example
 ## DeleteKnowledgeKnowledgebaseCategory
 
 > [**CategoryResponse**](CategoryResponse) DeleteKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId)
-
 
 
 Delete category
@@ -228,7 +228,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **categoryId** | **string**| Category ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -238,7 +237,6 @@ namespace Example
 ## DeleteKnowledgeKnowledgebaseDocument
 
 > void DeleteKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId)
-
 
 
 Delete document.
@@ -293,7 +291,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **documentId** | **string**| Document ID. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -303,7 +300,6 @@ void (empty response body)
 ## DeleteKnowledgeKnowledgebaseDocumentVariation
 
 > void DeleteKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId)
-
 
 
 Delete a variation for a document.
@@ -361,7 +357,6 @@ namespace Example
 | **documentVariationId** | **string**| Globally unique identifier for a document variation. |  |
 | **documentId** | **string**| Globally unique identifier for a document. |  |
 | **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -371,7 +366,6 @@ void (empty response body)
 ## DeleteKnowledgeKnowledgebaseExportJob
 
 > void DeleteKnowledgeKnowledgebaseExportJob (string knowledgeBaseId, string exportJobId)
-
 
 
 Delete export job
@@ -426,7 +420,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **exportJobId** | **string**| Export job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -436,7 +429,6 @@ void (empty response body)
 ## DeleteKnowledgeKnowledgebaseImportJob
 
 > void DeleteKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId)
-
 
 
 Delete import job
@@ -491,7 +483,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **importJobId** | **string**| Import job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -501,7 +492,6 @@ void (empty response body)
 ## DeleteKnowledgeKnowledgebaseLabel
 
 > [**LabelResponse**](LabelResponse) DeleteKnowledgeKnowledgebaseLabel (string knowledgeBaseId, string labelId)
-
 
 
 Delete label
@@ -557,7 +547,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **labelId** | **string**| Label ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -568,7 +557,9 @@ namespace Example
 
 > [**KnowledgeCategory**](KnowledgeCategory) DeleteKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete category
 
@@ -625,7 +616,6 @@ namespace Example
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -636,7 +626,9 @@ namespace Example
 
 > [**KnowledgeDocument**](KnowledgeDocument) DeleteKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete document
 
@@ -693,7 +685,6 @@ namespace Example
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -704,7 +695,9 @@ namespace Example
 
 > void DeleteKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Delete import operation
 
@@ -760,7 +753,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **importId** | **string**| Import ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -770,7 +762,6 @@ void (empty response body)
 ## GetKnowledgeGuestSessionCategories
 
 > [**GuestCategoryResponseListing**](GuestCategoryResponseListing) GetKnowledgeGuestSessionCategories (string sessionId, string before = null, string after = null, string pageSize = null, string parentId = null, bool? isRoot = null, string name = null, string sortBy = null, string expand = null, bool? includeDocumentCount = null)
-
 
 
 Get categories
@@ -835,7 +826,6 @@ namespace Example
 | **sortBy** | **string**| Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically | [optional] [default to Name]<br />**Values**: Name, Hierarchy |
 | **expand** | **string**| The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. | [optional]  |
 | **includeDocumentCount** | **bool?**| If specified, retrieves the number of documents related to category. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -845,7 +835,6 @@ namespace Example
 ## GetKnowledgeGuestSessionDocument
 
 > [**KnowledgeGuestDocumentResponse**](KnowledgeGuestDocumentResponse) GetKnowledgeGuestSessionDocument (string sessionId, string documentId)
-
 
 
 Get a knowledge document by ID.
@@ -894,7 +883,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **documentId** | **string**| Document ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -904,7 +892,6 @@ namespace Example
 ## GetKnowledgeGuestSessionDocuments
 
 > [**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing) GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, int? pageSize = null)
-
 
 
 Get documents.
@@ -955,7 +942,6 @@ namespace Example
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **categoryId** | [**List<string>**](string)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional]  |
 | **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -965,7 +951,6 @@ namespace Example
 ## GetKnowledgeKnowledgebase
 
 > [**KnowledgeBase**](KnowledgeBase) GetKnowledgeKnowledgebase (string knowledgeBaseId)
-
 
 
 Get knowledge base
@@ -1019,7 +1004,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1029,7 +1013,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseCategories
 
 > [**CategoryResponseListing**](CategoryResponseListing) GetKnowledgeKnowledgebaseCategories (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string parentId = null, bool? isRoot = null, string name = null, string sortBy = null, string expand = null, bool? includeDocumentCount = null)
-
 
 
 Get categories
@@ -1101,7 +1084,6 @@ namespace Example
 | **sortBy** | **string**| Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically | [optional] [default to Name]<br />**Values**: Name, Hierarchy |
 | **expand** | **string**| The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. | [optional]  |
 | **includeDocumentCount** | **bool?**| If specified, retrieves the number of documents related to category. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1111,7 +1093,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseCategory
 
 > [**CategoryResponse**](CategoryResponse) GetKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId)
-
 
 
 Get category
@@ -1167,7 +1148,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **categoryId** | **string**| Category ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1177,7 +1157,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocument
 
 > [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse) GetKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId, List<string> expand = null, string state = null)
-
 
 
 Get document.
@@ -1237,7 +1216,6 @@ namespace Example
 | **documentId** | **string**| Document ID. |  |
 | **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. Max No. of variations that can be returned on expand is 20. | [optional] <br />**Values**: category, labels, variations |
 | **state** | **string**| \&quot;when state is \&quot;Draft\&quot;, draft version of the document is returned,otherwise by default published version is returned in the response. | [optional] <br />**Values**: Draft, Published |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1247,7 +1225,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentFeedback
 
 > [**KnowledgeDocumentFeedbackResponseListing**](KnowledgeDocumentFeedbackResponseListing) GetKnowledgeKnowledgebaseDocumentFeedback (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, bool? onlyCommented = null, string documentVersionId = null, string documentVariationId = null, string appType = null, string queryType = null, string userId = null, string queueId = null, string state = null)
-
 
 
 Get a list of feedback records given on a document
@@ -1325,7 +1302,6 @@ namespace Example
 | **userId** | **string**| The ID of the user, who created the feedback, to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
 | **queueId** | **string**| Queue ID to filter by. Supported only if onlyCommented&#x3D;true is set. | [optional]  |
 | **state** | **string**| State to filter by. Supported only if onlyCommented&#x3D;true is set. Default: Final | [optional] <br />**Values**: All, Draft, Final |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1335,7 +1311,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId
 
 > [**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse) GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId (string knowledgeBaseId, string documentId, string feedbackId)
-
 
 
 Get a single feedback record given on a document
@@ -1393,7 +1368,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **documentId** | **string**| Document ID. |  |
 | **feedbackId** | **string**| Feedback ID. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1403,7 +1377,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentVariation
 
 > [**DocumentVariation**](DocumentVariation) GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
-
 
 
 Get a variation for a document.
@@ -1463,7 +1436,6 @@ namespace Example
 | **documentId** | **string**| Globally unique identifier for a document. |  |
 | **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
 | **documentState** | **string**| The state of the document. | [optional] <br />**Values**: Draft, Published |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1473,7 +1445,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentVariations
 
 > [**DocumentVariationListing**](DocumentVariationListing) GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
-
 
 
 Get variations for a document.
@@ -1537,7 +1508,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **documentState** | **string**| The state of the document. | [optional] <br />**Values**: Draft, Published |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1547,7 +1517,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentVersion
 
 > [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion) GetKnowledgeKnowledgebaseDocumentVersion (string knowledgeBaseId, string documentId, string versionId, List<string> expand = null)
-
 
 
 Get document version.
@@ -1607,7 +1576,6 @@ namespace Example
 | **documentId** | **string**| Globally unique identifier for the document. |  |
 | **versionId** | **string**| Globally unique identifier for the document version. |  |
 | **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1617,7 +1585,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentVersionVariation
 
 > [**KnowledgeDocumentVersionVariation**](KnowledgeDocumentVersionVariation) GetKnowledgeKnowledgebaseDocumentVersionVariation (string knowledgeBaseId, string documentId, string versionId, string variationId)
-
 
 
 Get variation for the given document version.
@@ -1677,7 +1644,6 @@ namespace Example
 | **documentId** | **string**| Globally unique identifier for the document. |  |
 | **versionId** | **string**| Globally unique identifier for the document version. |  |
 | **variationId** | **string**| Globally unique identifier for the document version variation. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1687,7 +1653,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentVersionVariations
 
 > [**KnowledgeDocumentVersionVariationListing**](KnowledgeDocumentVersionVariationListing) GetKnowledgeKnowledgebaseDocumentVersionVariations (string knowledgeBaseId, string documentId, string versionId, string before = null, string after = null, string pageSize = null)
-
 
 
 Get variations for the given document version.
@@ -1751,7 +1716,6 @@ namespace Example
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1761,7 +1725,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocumentVersions
 
 > [**KnowledgeDocumentVersionListing**](KnowledgeDocumentVersionListing) GetKnowledgeKnowledgebaseDocumentVersions (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, List<string> expand = null)
-
 
 
 Get document versions.
@@ -1825,7 +1788,6 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1835,7 +1797,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseDocuments
 
 > [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing) GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null, List<string> externalIds = null)
-
 
 
 Get documents.
@@ -1911,7 +1872,6 @@ namespace Example
 | **labelIds** | [**List<string>**](string)| If specified, retrieves documents associated with label ids, comma separated values expected. | [optional]  |
 | **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels, variations |
 | **externalIds** | [**List<string>**](string)| If specified, retrieves documents associated with external ids, comma separated values expected. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1921,7 +1881,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseExportJob
 
 > [**KnowledgeExportJobResponse**](KnowledgeExportJobResponse) GetKnowledgeKnowledgebaseExportJob (string knowledgeBaseId, string exportJobId)
-
 
 
 Get export job report
@@ -1977,7 +1936,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **exportJobId** | **string**| Export job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -1987,7 +1945,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseImportJob
 
 > [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse) GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId, List<string> expand = null)
-
 
 
 Get import job report
@@ -2045,7 +2002,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **importJobId** | **string**| Import job ID |  |
 | **expand** | [**List<string>**](string)| If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. | [optional] <br />**Values**: urls |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2055,7 +2011,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseLabel
 
 > [**LabelResponse**](LabelResponse) GetKnowledgeKnowledgebaseLabel (string knowledgeBaseId, string labelId)
-
 
 
 Get label
@@ -2111,7 +2066,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **labelId** | **string**| Label ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2121,7 +2075,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseLabels
 
 > [**LabelListing**](LabelListing) GetKnowledgeKnowledgebaseLabels (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string name = null, bool? includeDocumentCount = null)
-
 
 
 Get labels
@@ -2185,7 +2138,6 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Filter to return the labels that contains the given phrase in the name. | [optional]  |
 | **includeDocumentCount** | **bool?**| If specified, retrieves the number of documents related to label. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2196,7 +2148,9 @@ namespace Example
 
 > [**CategoryListing**](CategoryListing) GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get categories
 
@@ -2261,7 +2215,6 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Filter to return the categories that starts with the given category name. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2272,7 +2225,9 @@ namespace Example
 
 > [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory) GetKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get category
 
@@ -2329,7 +2284,6 @@ namespace Example
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2340,7 +2294,9 @@ namespace Example
 
 > [**KnowledgeDocument**](KnowledgeDocument) GetKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get document
 
@@ -2397,7 +2353,6 @@ namespace Example
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2408,7 +2363,9 @@ namespace Example
 
 > [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload) GetKnowledgeKnowledgebaseLanguageDocumentUpload (string documentId, string knowledgeBaseId, string languageCode, string uploadId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get document content upload status
 
@@ -2469,7 +2426,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **uploadId** | **string**| UploadId |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2480,7 +2436,9 @@ namespace Example
 
 > [**DocumentListing**](DocumentListing) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get documents
 
@@ -2553,7 +2511,6 @@ namespace Example
 | **sortBy** | **string**| Sort by. | [optional] <br />**Values**: Title, Date |
 | **sortOrder** | **string**| Sort Order. | [optional] <br />**Values**: ASC, ascending, DESC, descending |
 | **documentIds** | [**List<string>**](string)| Comma-separated list of document identifiers to fetch by. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2564,7 +2521,9 @@ namespace Example
 
 > [**KnowledgeImport**](KnowledgeImport) GetKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get import operation report
 
@@ -2621,7 +2580,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **importId** | **string**| Import ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2632,7 +2590,9 @@ namespace Example
 
 > [**KnowledgeTraining**](KnowledgeTraining) GetKnowledgeKnowledgebaseLanguageTraining (string knowledgeBaseId, string languageCode, string trainingId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get training detail
 
@@ -2689,7 +2649,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **trainingId** | **string**| Training ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2700,7 +2659,9 @@ namespace Example
 
 > [**TrainingListing**](TrainingListing) GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get all trainings information for a knowledgebase
 
@@ -2765,7 +2726,6 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **knowledgeDocumentsState** | **string**| Return the training with the specified state of the trained documents. | [optional] <br />**Values**: Draft, Active, Discarded, Archived |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2775,7 +2735,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseOperations
 
 > [**OperationListing**](OperationListing) GetKnowledgeKnowledgebaseOperations (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, List<string> userId = null, List<string> type = null, List<string> status = null, string interval = null, List<string> sourceId = null)
-
 
 
 Get operations
@@ -2847,7 +2806,6 @@ namespace Example
 | **status** | [**List<string>**](string)| If specified, retrieves operations with specified operation status, comma separated values expected. | [optional]  |
 | **interval** | **string**| Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ | [optional]  |
 | **sourceId** | [**List<string>**](string)| If specified, retrieves operations associated with source ids, comma separated values expected. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2857,7 +2815,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseOperationsUsersQuery
 
 > [**OperationCreatorUserResponse**](OperationCreatorUserResponse) GetKnowledgeKnowledgebaseOperationsUsersQuery (string knowledgeBaseId)
-
 
 
 Get ids of operation creator users and oauth clients
@@ -2913,7 +2870,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2923,7 +2879,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseParseJob
 
 > [**KnowledgeParseJobResponse**](KnowledgeParseJobResponse) GetKnowledgeKnowledgebaseParseJob (string knowledgeBaseId, string parseJobId, List<string> expand = null)
-
 
 
 Get parse job report
@@ -2983,7 +2938,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **parseJobId** | **string**| Parse job ID |  |
 | **expand** | [**List<string>**](string)| If expand contains &#39;urls&#39; downloadURL and failedEntitiesURL will be filled. | [optional] <br />**Values**: urls |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -2993,7 +2947,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseUnansweredGroup
 
 > [**UnansweredGroup**](UnansweredGroup) GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null, String dateStart = null, String dateEnd = null)
-
 
 
 Get knowledge base unanswered group for a particular groupId
@@ -3055,7 +3008,6 @@ namespace Example
 | **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
 | **dateStart** | **String**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **dateEnd** | **String**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3065,7 +3017,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup
 
 > [**UnansweredPhraseGroup**](UnansweredPhraseGroup) GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null, String dateStart = null, String dateEnd = null)
-
 
 
 Get knowledge base unanswered phrase group for a particular phraseGroupId
@@ -3129,7 +3080,6 @@ namespace Example
 | **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
 | **dateStart** | **String**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **dateEnd** | **String**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3139,7 +3089,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseUnansweredGroups
 
 > [**UnansweredGroups**](UnansweredGroups) GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null, String dateStart = null, String dateEnd = null)
-
 
 
 Get knowledge base unanswered groups
@@ -3199,7 +3148,6 @@ namespace Example
 | **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
 | **dateStart** | **String**| The start date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **dateEnd** | **String**| The end date to be used for filtering phrases. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3209,7 +3157,6 @@ namespace Example
 ## GetKnowledgeKnowledgebaseUploadsUrlsJob
 
 > [**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse) GetKnowledgeKnowledgebaseUploadsUrlsJob (string knowledgeBaseId, string jobId)
-
 
 
 Get content upload from URL job status
@@ -3267,7 +3214,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **jobId** | **string**| Upload job ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3277,7 +3223,6 @@ namespace Example
 ## GetKnowledgeKnowledgebases
 
 > [**KnowledgeBaseListing**](KnowledgeBaseListing) GetKnowledgeKnowledgebases (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
-
 
 
 Get knowledge bases
@@ -3347,7 +3292,6 @@ namespace Example
 | **published** | **bool?**| Filter by published status. | [optional]  |
 | **sortBy** | **string**| Sort by. | [optional] <br />**Values**: Name, Date |
 | **sortOrder** | **string**| Sort Order. | [optional] <br />**Values**: ASC, ascending, DESC, descending |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3357,7 +3301,6 @@ namespace Example
 ## PatchKnowledgeGuestSessionDocumentsSearchSearchId
 
 > void PatchKnowledgeGuestSessionDocumentsSearchSearchId (string sessionId, string searchId, SearchUpdateRequest body)
-
 
 
 Update search result.
@@ -3407,7 +3350,6 @@ namespace Example
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **searchId** | **string**| Search Result ID |  |
 | **body** | [**SearchUpdateRequest**](SearchUpdateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3417,7 +3359,6 @@ void (empty response body)
 ## PatchKnowledgeKnowledgebase
 
 > [**KnowledgeBase**](KnowledgeBase) PatchKnowledgeKnowledgebase (string knowledgeBaseId, KnowledgeBaseUpdateRequest body)
-
 
 
 Update knowledge base
@@ -3473,7 +3414,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeBaseUpdateRequest**](KnowledgeBaseUpdateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3483,7 +3423,6 @@ namespace Example
 ## PatchKnowledgeKnowledgebaseCategory
 
 > [**CategoryResponse**](CategoryResponse) PatchKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId, CategoryUpdateRequest body)
-
 
 
 Update category
@@ -3541,7 +3480,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **categoryId** | **string**| Category ID |  |
 | **body** | [**CategoryUpdateRequest**](CategoryUpdateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3551,7 +3489,6 @@ namespace Example
 ## PatchKnowledgeKnowledgebaseDocument
 
 > [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse) PatchKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId, KnowledgeDocumentReq body)
-
 
 
 Update document.
@@ -3609,17 +3546,83 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **documentId** | **string**| Document ID. |  |
 | **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse)
 
 
+## PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId
+
+> [**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse) PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId (string knowledgeBaseId, string documentId, string feedbackId, KnowledgeDocumentFeedbackUpdateRequest body = null)
+
+
+Update feedback on a document
+
+Requires ANY permissions: 
+
+* knowledge:feedback:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var feedbackId = feedbackId_example;  // string | Feedback ID.
+            var body = new KnowledgeDocumentFeedbackUpdateRequest(); // KnowledgeDocumentFeedbackUpdateRequest |  (optional) 
+
+            try
+            { 
+                // Update feedback on a document
+                KnowledgeDocumentFeedbackResponse result = apiInstance.PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId, documentId, feedbackId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **feedbackId** | **string**| Feedback ID. |  |
+| **body** | [**KnowledgeDocumentFeedbackUpdateRequest**](KnowledgeDocumentFeedbackUpdateRequest)|  | [optional]  |
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse)
+
+
 ## PatchKnowledgeKnowledgebaseDocumentVariation
 
 > [**DocumentVariation**](DocumentVariation) PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
-
 
 
 Update a variation for a document.
@@ -3679,7 +3682,6 @@ namespace Example
 | **documentId** | **string**| Globally unique identifier for a document. |  |
 | **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
 | **body** | [**DocumentVariation**](DocumentVariation)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3689,7 +3691,6 @@ namespace Example
 ## PatchKnowledgeKnowledgebaseDocumentsSearchSearchId
 
 > void PatchKnowledgeKnowledgebaseDocumentsSearchSearchId (string knowledgeBaseId, string searchId, SearchUpdateRequest body = null)
-
 
 
 Update search result.
@@ -3746,7 +3747,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| The ID of knowledge base containing the documents to query. |  |
 | **searchId** | **string**| Search Result ID |  |
 | **body** | [**SearchUpdateRequest**](SearchUpdateRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3756,7 +3756,6 @@ void (empty response body)
 ## PatchKnowledgeKnowledgebaseImportJob
 
 > [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse) PatchKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId, ImportStatusRequest body)
-
 
 
 Start import job
@@ -3814,7 +3813,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **importJobId** | **string**| Import job ID |  |
 | **body** | [**ImportStatusRequest**](ImportStatusRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3824,7 +3822,6 @@ namespace Example
 ## PatchKnowledgeKnowledgebaseLabel
 
 > [**LabelResponse**](LabelResponse) PatchKnowledgeKnowledgebaseLabel (string knowledgeBaseId, string labelId, LabelUpdateRequest body)
-
 
 
 Update label
@@ -3882,7 +3879,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **labelId** | **string**| Label ID |  |
 | **body** | [**LabelUpdateRequest**](LabelUpdateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3893,7 +3889,9 @@ namespace Example
 
 > [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory) PatchKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update category
 
@@ -3952,7 +3950,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -3963,7 +3960,9 @@ namespace Example
 
 > [**KnowledgeDocument**](KnowledgeDocument) PatchKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update document
 
@@ -4022,7 +4021,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4033,7 +4031,9 @@ namespace Example
 
 > [**DocumentListing**](DocumentListing) PatchKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update documents collection
 
@@ -4090,7 +4090,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**List<KnowledgeDocumentBulkRequest>**](KnowledgeDocumentBulkRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4101,7 +4100,9 @@ namespace Example
 
 > [**KnowledgeImport**](KnowledgeImport) PatchKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Start import operation
 
@@ -4161,7 +4162,6 @@ namespace Example
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **importId** | **string**| Import ID |  |
 | **body** | [**ImportStatusRequest**](ImportStatusRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4171,7 +4171,6 @@ namespace Example
 ## PatchKnowledgeKnowledgebaseParseJob
 
 > void PatchKnowledgeKnowledgebaseParseJob (string knowledgeBaseId, string parseJobId, KnowledgeParseJobRequestPatch body)
-
 
 
 Send update to the parse operation
@@ -4230,7 +4229,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **parseJobId** | **string**| Parse job ID |  |
 | **body** | [**KnowledgeParseJobRequestPatch**](KnowledgeParseJobRequestPatch)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4240,7 +4238,6 @@ void (empty response body)
 ## PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup
 
 > [**UnansweredPhraseGroupUpdateResponse**](UnansweredPhraseGroupUpdateResponse) PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, UnansweredPhraseGroupPatchRequestBody body)
-
 
 
 Update a Knowledge base unanswered phrase group
@@ -4301,7 +4298,6 @@ namespace Example
 | **groupId** | **string**| The ID of the group to be updated. |  |
 | **phraseGroupId** | **string**| The ID of the phraseGroup to be updated. |  |
 | **body** | [**UnansweredPhraseGroupPatchRequestBody**](UnansweredPhraseGroupPatchRequestBody)| Request body of the update unanswered group endpoint. |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4311,7 +4307,6 @@ namespace Example
 ## PostKnowledgeDocumentuploads
 
 > [**UploadUrlResponse**](UploadUrlResponse) PostKnowledgeDocumentuploads (UploadUrlRequest body)
-
 
 
 Creates a presigned URL for uploading a knowledge import file with a set of documents
@@ -4365,7 +4360,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4375,7 +4369,6 @@ namespace Example
 ## PostKnowledgeGuestSessionDocumentCopies
 
 > void PostKnowledgeGuestSessionDocumentCopies (string sessionId, string documentId, KnowledgeGuestDocumentCopy body = null)
-
 
 
 Indicate that the document was copied by the user.
@@ -4425,7 +4418,6 @@ namespace Example
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **documentId** | **string**| Document ID |  |
 | **body** | [**KnowledgeGuestDocumentCopy**](KnowledgeGuestDocumentCopy)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4435,7 +4427,6 @@ void (empty response body)
 ## PostKnowledgeGuestSessionDocumentFeedback
 
 > [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback) PostKnowledgeGuestSessionDocumentFeedback (string sessionId, string documentId, KnowledgeGuestDocumentFeedback body = null)
-
 
 
 Give feedback on a document
@@ -4486,7 +4477,6 @@ namespace Example
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **documentId** | **string**| Document ID. |  |
 | **body** | [**KnowledgeGuestDocumentFeedback**](KnowledgeGuestDocumentFeedback)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4496,7 +4486,6 @@ namespace Example
 ## PostKnowledgeGuestSessionDocumentViews
 
 > void PostKnowledgeGuestSessionDocumentViews (string sessionId, string documentId, KnowledgeGuestDocumentView body = null)
-
 
 
 Create view event for a document.
@@ -4546,17 +4535,72 @@ namespace Example
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **documentId** | **string**| Document ID |  |
 | **body** | [**KnowledgeGuestDocumentView**](KnowledgeGuestDocumentView)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
 
 
+## PostKnowledgeGuestSessionDocumentsAnswers
+
+> [**KnowledgeGuestAnswerDocumentsResponse**](KnowledgeGuestAnswerDocumentsResponse) PostKnowledgeGuestSessionDocumentsAnswers (string sessionId, KnowledgeDocumentsAnswerFilter body)
+
+
+Answer documents.
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentsAnswersExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var body = new KnowledgeDocumentsAnswerFilter(); // KnowledgeDocumentsAnswerFilter | 
+
+            try
+            { 
+                // Answer documents.
+                KnowledgeGuestAnswerDocumentsResponse result = apiInstance.PostKnowledgeGuestSessionDocumentsAnswers(sessionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentsAnswers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **body** | [**KnowledgeDocumentsAnswerFilter**](KnowledgeDocumentsAnswerFilter)|  |  |
+
+### Return type
+
+[**KnowledgeGuestAnswerDocumentsResponse**](KnowledgeGuestAnswerDocumentsResponse)
+
+
 ## PostKnowledgeGuestSessionDocumentsPresentations
 
 > void PostKnowledgeGuestSessionDocumentsPresentations (string sessionId, KnowledgeGuestDocumentPresentation body = null)
-
 
 
 Indicate that documents were presented to the user.
@@ -4604,7 +4648,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **body** | [**KnowledgeGuestDocumentPresentation**](KnowledgeGuestDocumentPresentation)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4614,7 +4657,6 @@ void (empty response body)
 ## PostKnowledgeGuestSessionDocumentsSearch
 
 > [**KnowledgeDocumentGuestSearch**](KnowledgeDocumentGuestSearch) PostKnowledgeGuestSessionDocumentsSearch (string sessionId, List<string> expand = null, KnowledgeDocumentGuestSearchRequest body = null)
-
 
 
 Search the documents in a guest session.
@@ -4665,7 +4707,6 @@ namespace Example
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **expand** | [**List<string>**](string)| Fields, if any, to expand for each document in the search result matching the query. | [optional] <br />**Values**: documentVariations, documentAlternatives, knowledgeBaseLanguageCode |
 | **body** | [**KnowledgeDocumentGuestSearchRequest**](KnowledgeDocumentGuestSearchRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4675,7 +4716,6 @@ namespace Example
 ## PostKnowledgeGuestSessionDocumentsSearchSuggestions
 
 > [**KnowledgeGuestDocumentSuggestion**](KnowledgeGuestDocumentSuggestion) PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null)
-
 
 
 Query the knowledge documents to provide suggestions for auto completion.
@@ -4724,7 +4764,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **body** | [**KnowledgeGuestDocumentSuggestionRequest**](KnowledgeGuestDocumentSuggestionRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4734,7 +4773,6 @@ namespace Example
 ## PostKnowledgeGuestSessions
 
 > [**KnowledgeGuestSession**](KnowledgeGuestSession) PostKnowledgeGuestSessions (KnowledgeGuestSession body)
-
 
 
 Create guest session
@@ -4781,7 +4819,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**KnowledgeGuestSession**](KnowledgeGuestSession)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4791,7 +4828,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseCategories
 
 > [**CategoryResponse**](CategoryResponse) PostKnowledgeKnowledgebaseCategories (string knowledgeBaseId, CategoryCreateRequest body)
-
 
 
 Create new category
@@ -4847,7 +4883,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**CategoryCreateRequest**](CategoryCreateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4857,7 +4892,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentCopies
 
 > void PostKnowledgeKnowledgebaseDocumentCopies (string knowledgeBaseId, string documentId, KnowledgeDocumentCopy body = null)
-
 
 
 Indicate that the document was copied by the user.
@@ -4914,7 +4948,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **documentId** | **string**| Document ID. |  |
 | **body** | [**KnowledgeDocumentCopy**](KnowledgeDocumentCopy)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4924,7 +4957,6 @@ void (empty response body)
 ## PostKnowledgeKnowledgebaseDocumentFeedback
 
 > [**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse) PostKnowledgeKnowledgebaseDocumentFeedback (string knowledgeBaseId, string documentId, KnowledgeDocumentFeedback body = null)
-
 
 
 Give feedback on a document
@@ -4982,7 +5014,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **documentId** | **string**| Document ID. |  |
 | **body** | [**KnowledgeDocumentFeedback**](KnowledgeDocumentFeedback)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -4992,7 +5023,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentVariations
 
 > [**DocumentVariation**](DocumentVariation) PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariation body)
-
 
 
 Create a variation for a document.
@@ -5051,7 +5081,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
 | **documentId** | **string**| Globally unique identifier for the document. |  |
 | **body** | [**DocumentVariation**](DocumentVariation)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5061,7 +5090,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentVersions
 
 > [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion) PostKnowledgeKnowledgebaseDocumentVersions (string knowledgeBaseId, string documentId, KnowledgeDocumentVersion body)
-
 
 
 Creates or restores a document version.
@@ -5119,7 +5147,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
 | **documentId** | **string**| Globally unique identifier for the document. |  |
 | **body** | [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5129,7 +5156,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentViews
 
 > void PostKnowledgeKnowledgebaseDocumentViews (string knowledgeBaseId, string documentId, KnowledgeDocumentView body = null)
-
 
 
 Create view for a document.
@@ -5186,7 +5212,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **documentId** | **string**| Document ID. |  |
 | **body** | [**KnowledgeDocumentView**](KnowledgeDocumentView)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5196,7 +5221,6 @@ void (empty response body)
 ## PostKnowledgeKnowledgebaseDocuments
 
 > [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse) PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body)
-
 
 
 Create document.
@@ -5252,17 +5276,80 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse)
 
 
+## PostKnowledgeKnowledgebaseDocumentsAnswers
+
+> [**KnowledgeAnswerDocumentsResponse**](KnowledgeAnswerDocumentsResponse) PostKnowledgeKnowledgebaseDocumentsAnswers (string knowledgeBaseId, KnowledgeDocumentsAnswerFilter body)
+
+
+Answer documents.
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+* knowledge:documentAnswer:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsAnswersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeDocumentsAnswerFilter(); // KnowledgeDocumentsAnswerFilter | 
+
+            try
+            { 
+                // Answer documents.
+                KnowledgeAnswerDocumentsResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsAnswers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeDocumentsAnswerFilter**](KnowledgeDocumentsAnswerFilter)|  |  |
+
+### Return type
+
+[**KnowledgeAnswerDocumentsResponse**](KnowledgeAnswerDocumentsResponse)
+
+
 ## PostKnowledgeKnowledgebaseDocumentsBulkRemove
 
 > [**BulkResponse**](BulkResponse) PostKnowledgeKnowledgebaseDocumentsBulkRemove (string knowledgeBaseId, KnowledgeDocumentBulkRemoveRequest body)
-
 
 
 Bulk remove documents.
@@ -5320,7 +5407,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeDocumentBulkRemoveRequest**](KnowledgeDocumentBulkRemoveRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5330,7 +5416,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentsBulkUpdate
 
 > [**BulkResponse**](BulkResponse) PostKnowledgeKnowledgebaseDocumentsBulkUpdate (string knowledgeBaseId, KnowledgeDocumentBulkUpdateRequest body)
-
 
 
 Bulk update documents.
@@ -5388,7 +5473,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeDocumentBulkUpdateRequest**](KnowledgeDocumentBulkUpdateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5398,7 +5482,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentsPresentations
 
 > void PostKnowledgeKnowledgebaseDocumentsPresentations (string knowledgeBaseId, KnowledgeDocumentPresentation body = null)
-
 
 
 Indicate that documents were presented to the user.
@@ -5453,7 +5536,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID. |  |
 | **body** | [**KnowledgeDocumentPresentation**](KnowledgeDocumentPresentation)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5463,7 +5545,6 @@ void (empty response body)
 ## PostKnowledgeKnowledgebaseDocumentsQuery
 
 > [**KnowledgeDocumentQueryResponse**](KnowledgeDocumentQueryResponse) PostKnowledgeKnowledgebaseDocumentsQuery (string knowledgeBaseId, List<string> expand = null, KnowledgeDocumentQuery body = null)
-
 
 
 Query for knowledge documents.
@@ -5521,7 +5602,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge Base ID |  |
 | **expand** | [**List<string>**](string)| Fields, if any, to expand for each document in the search result matching the query. | [optional] <br />**Values**: documentVariations, documentAlternatives, knowledgeBaseLanguageCode |
 | **body** | [**KnowledgeDocumentQuery**](KnowledgeDocumentQuery)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5531,7 +5611,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentsSearch
 
 > [**KnowledgeDocumentSearch**](KnowledgeDocumentSearch) PostKnowledgeKnowledgebaseDocumentsSearch (string knowledgeBaseId, List<string> expand = null, KnowledgeDocumentSearchRequest body = null)
-
 
 
 Search the documents in a knowledge base.
@@ -5589,7 +5668,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| The ID of knowledge base containing the documents to query. |  |
 | **expand** | [**List<string>**](string)| Fields, if any, to expand for each document in the search result matching the query. | [optional] <br />**Values**: documentVariations, documentAlternatives, knowledgeBaseLanguageCode |
 | **body** | [**KnowledgeDocumentSearchRequest**](KnowledgeDocumentSearchRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5599,7 +5677,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentsSearchSuggestions
 
 > [**KnowledgeDocumentSuggestion**](KnowledgeDocumentSuggestion) PostKnowledgeKnowledgebaseDocumentsSearchSuggestions (string knowledgeBaseId, KnowledgeDocumentSuggestionRequest body = null)
-
 
 
 Query the knowledge documents to provide suggestions for auto completion.
@@ -5655,7 +5732,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| The ID of knowledge base containing the documents to query. |  |
 | **body** | [**KnowledgeDocumentSuggestionRequest**](KnowledgeDocumentSuggestionRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5665,7 +5741,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd
 
 > [**BulkResponse**](BulkResponse) PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd (string knowledgeBaseId, KnowledgeDocumentBulkVersionAddRequest body)
-
 
 
 Bulk add document versions.
@@ -5723,7 +5798,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeDocumentBulkVersionAddRequest**](KnowledgeDocumentBulkVersionAddRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5733,7 +5807,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseExportJobs
 
 > [**KnowledgeExportJobResponse**](KnowledgeExportJobResponse) PostKnowledgeKnowledgebaseExportJobs (string knowledgeBaseId, KnowledgeExportJobRequest body)
-
 
 
 Create export job
@@ -5789,7 +5862,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeExportJobRequest**](KnowledgeExportJobRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5799,7 +5871,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseImportJobs
 
 > [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse) PostKnowledgeKnowledgebaseImportJobs (string knowledgeBaseId, KnowledgeImportJobRequest body)
-
 
 
 Create import job
@@ -5855,7 +5926,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeImportJobRequest**](KnowledgeImportJobRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5865,7 +5935,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseLabels
 
 > [**LabelResponse**](LabelResponse) PostKnowledgeKnowledgebaseLabels (string knowledgeBaseId, LabelCreateRequest body)
-
 
 
 Create new label
@@ -5921,7 +5990,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**LabelCreateRequest**](LabelCreateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -5932,7 +6000,9 @@ namespace Example
 
 > [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory) PostKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create new category
 
@@ -5989,7 +6059,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6000,7 +6069,9 @@ namespace Example
 
 > [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload) PostKnowledgeKnowledgebaseLanguageDocumentUploads (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentContentUpload body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Upload Article Content
 
@@ -6061,7 +6132,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6072,7 +6142,9 @@ namespace Example
 
 > [**KnowledgeDocument**](KnowledgeDocument) PostKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create document
 
@@ -6129,7 +6201,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6140,7 +6211,9 @@ namespace Example
 
 > [**KnowledgeImport**](KnowledgeImport) PostKnowledgeKnowledgebaseLanguageDocumentsImports (string knowledgeBaseId, string languageCode, KnowledgeImport body)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Create import operation
 
@@ -6197,7 +6270,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **body** | [**KnowledgeImport**](KnowledgeImport)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6208,7 +6280,9 @@ namespace Example
 
 > [**KnowledgeTraining**](KnowledgeTraining) PostKnowledgeKnowledgebaseLanguageTrainingPromote (string knowledgeBaseId, string languageCode, string trainingId)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Promote trained documents from draft state to active.
 
@@ -6265,7 +6339,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
 | **trainingId** | **string**| Training ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6276,7 +6349,9 @@ namespace Example
 
 > [**KnowledgeTraining**](KnowledgeTraining) PostKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Trigger training
 
@@ -6331,7 +6406,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT, ca-ES, tr-TR, sv-SE, fi-FI, nb-NO, da-DK, ja-JP, ar-AE, zh-CN, zh-TW, zh-HK, ko-KR, pl-PL, hi-IN, th-TH, hu-HU, vi-VN, uk-UA |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6341,7 +6415,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseParseJobImport
 
 > void PostKnowledgeKnowledgebaseParseJobImport (string knowledgeBaseId, string parseJobId, KnowledgeParseJobRequestImport body)
-
 
 
 Import the parsed articles
@@ -6400,7 +6473,6 @@ namespace Example
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **parseJobId** | **string**| Parse job ID |  |
 | **body** | [**KnowledgeParseJobRequestImport**](KnowledgeParseJobRequestImport)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6410,7 +6482,6 @@ void (empty response body)
 ## PostKnowledgeKnowledgebaseParseJobs
 
 > [**KnowledgeParseJobResponse**](KnowledgeParseJobResponse) PostKnowledgeKnowledgebaseParseJobs (string knowledgeBaseId, KnowledgeParseJobRequest body)
-
 
 
 Create parse job
@@ -6468,7 +6539,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeParseJobRequest**](KnowledgeParseJobRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6479,7 +6549,9 @@ namespace Example
 
 > [**KnowledgeSearchResponse**](KnowledgeSearchResponse) PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
 
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Search Documents
 
@@ -6534,7 +6606,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**KnowledgeSearchRequest**](KnowledgeSearchRequest)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6544,7 +6615,6 @@ namespace Example
 ## PostKnowledgeKnowledgebaseUploadsUrlsJobs
 
 > [**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse) PostKnowledgeKnowledgebaseUploadsUrlsJobs (string knowledgeBaseId, CreateUploadSourceUrlJobRequest body)
-
 
 
 Create content upload from URL job
@@ -6602,7 +6672,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest)| uploadRequest |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -6612,7 +6681,6 @@ namespace Example
 ## PostKnowledgeKnowledgebases
 
 > [**KnowledgeBase**](KnowledgeBase) PostKnowledgeKnowledgebases (KnowledgeBaseCreateRequest body)
-
 
 
 Create new knowledge base
@@ -6666,11 +6734,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**KnowledgeBaseCreateRequest**](KnowledgeBaseCreateRequest)|  |  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**KnowledgeBase**](KnowledgeBase)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_

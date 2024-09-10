@@ -12,13 +12,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTokensTimeout**](#GetTokensTimeout) | **Get** /api/v2/tokens/timeout | Get the current Idle Token Timeout Value |
 | [**HeadTokensMe**](#HeadTokensMe) | **Head** /api/v2/tokens/me | Verify user token |
 | [**PutTokensTimeout**](#PutTokensTimeout) | **Put** /api/v2/tokens/timeout | Update or Enable/Disable the Idle Token Timeout |
-{: class="table table-striped"}
+
 
 
 ## DeleteToken
 
 > void DeleteToken (string userId)
-
 
 
 Delete all auth tokens for the specified user.
@@ -71,7 +70,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -81,7 +79,6 @@ void (empty response body)
 ## DeleteTokensMe
 
 > void DeleteTokensMe ()
-
 
 
 Delete auth token used to make the request.
@@ -129,7 +126,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -138,7 +134,6 @@ void (empty response body)
 ## GetTokensMe
 
 > [**TokenInfo**](TokenInfo) GetTokensMe (bool? preserveIdleTTL = null)
-
 
 
 Fetch information about the current token
@@ -191,7 +186,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **preserveIdleTTL** | **bool?**| preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
@@ -201,7 +195,6 @@ namespace Example
 ## GetTokensTimeout
 
 > [**IdleTokenTimeout**](IdleTokenTimeout) GetTokensTimeout ()
-
 
 
 Get the current Idle Token Timeout Value
@@ -251,7 +244,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 [**IdleTokenTimeout**](IdleTokenTimeout)
@@ -260,7 +252,6 @@ This endpoint does require any parameters.
 ## HeadTokensMe
 
 > void HeadTokensMe ()
-
 
 
 Verify user token
@@ -308,7 +299,6 @@ namespace Example
 ### Parameters
 This endpoint does require any parameters.
 
-
 ### Return type
 
 void (empty response body)
@@ -317,7 +307,6 @@ void (empty response body)
 ## PutTokensTimeout
 
 > [**IdleTokenTimeout**](IdleTokenTimeout) PutTokensTimeout (IdleTokenTimeout body = null)
-
 
 
 Update or Enable/Disable the Idle Token Timeout
@@ -371,11 +360,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**IdleTokenTimeout**](IdleTokenTimeout)|  | [optional]  |
-{: class="table table-striped"}
 
 ### Return type
 
 [**IdleTokenTimeout**](IdleTokenTimeout)
 
 
-_PureCloudPlatform.Client.V2 214.0.0_
+_PureCloudPlatform.Client.V2 215.0.0_
